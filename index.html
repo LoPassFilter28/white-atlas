@@ -195,7 +195,7 @@
     .format-grid{display:grid;grid-template-columns:1fr 1fr;gap:7px}.format-choice{min-height:52px}
     .export-summary{display:flex;align-items:center;justify-content:space-between;gap:14px;margin:4px 0 12px;padding:13px 14px;border:1px solid var(--line);background:var(--soft)}.export-summary strong{font-size:1rem}.export-summary span{color:var(--muted);font-size:.69rem;text-align:right}.export-action{width:100%;min-height:52px;padding:11px 14px;border:1px solid var(--accent);border-radius:4px;background:var(--accent);color:#fff;font-size:.8rem;font-weight:850}.export-action:disabled{cursor:not-allowed;opacity:.42}.export-action:focus-visible,.export-close:focus-visible{outline:3px solid color-mix(in srgb,var(--focus) 36%,transparent);outline-offset:2px}.export-hint{margin:9px 0 0;color:var(--muted);font-size:.7rem;line-height:1.45;text-align:center}
     .venue-list{border-top:1px solid var(--ink)}
-    .venue{border-bottom:1px solid var(--line);transition:background .18s ease}.venue.open{background:color-mix(in srgb,var(--soft) 70%,transparent)}
+    .venue{border-bottom:1px solid var(--line);transition:background .18s ease;content-visibility:auto;contain-intrinsic-size:auto 220px}.venue.open{background:color-mix(in srgb,var(--soft) 70%,transparent)}
     .venue-list.nearest-reveal .venue{animation:nearest-row-in .34s cubic-bezier(.2,.72,.25,1) both;animation-delay:calc(var(--nearest-order,0) * 14ms)}
     .venue-row{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:stretch}
     .venue-toggle{width:100%;border:0;background:transparent;color:inherit;text-align:left;padding:22px 2px;display:grid;grid-template-columns:42px minmax(0,1fr);gap:14px;align-items:start;transition:background .18s ease}.venue-toggle:active{background:color-mix(in srgb,var(--soft) 74%,transparent)}
@@ -722,7 +722,7 @@
   const EXPORT_FIELD_LABELS={district:'District',priceBand:'Price band',description:'Description',whyGo:'Why go',address:'Address'};
   const exportState={scope:'current',format:'markdown',pdfApplied:false,lastFocus:null,navPressed:null};
   let map=null,mapReady=false,mapLoading=false,mapFailed=false,mapStartupTimer=null,searchFitTimer=null,nearestArrivalTimer=null,nearestRevealTimer=null,copyStatusTimer=null;
-  const $=s=>document.querySelector(s);
+  const $=s=>document.querySelector(s);function debounce(fn,ms){let t=0;return function(...a){clearTimeout(t);t=setTimeout(()=>fn.apply(this,a),ms);};}
   let analyticsRoute='';
   function capturePageView(route){
     if(route===analyticsRoute)return;
@@ -1235,11 +1235,11 @@ function detail(p){
   $('#zoomIn').addEventListener('click',()=>{if(mapReady)map.zoomIn()});
   $('#zoomOut').addEventListener('click',()=>{if(mapReady)map.zoomOut()});
   $('#mapSelection').addEventListener('click',e=>{if(e.target.closest('.selection-close'))closeMapSelection()});
-  $('#search').addEventListener('input',e=>{resetAskLocal();state.query=e.target.value;state.open=null;const heroInput=$('#heroSearch');if(heroInput)heroInput.value=e.target.value;$('#clearSearch').style.display=state.query?'block':'none';render();scheduleSearchFit()});
+  const scheduleSearchRender=debounce(()=>{render();scheduleSearchFit();},200);$('#search').addEventListener('input',e=>{resetAskLocal();state.query=e.target.value;state.open=null;const heroInput=$('#heroSearch');if(heroInput)heroInput.value=e.target.value;$('#clearSearch').style.display=state.query?'block':'none';scheduleSearchRender()});
   $('#clearSearch').addEventListener('click',()=>{resetAskLocal();$('#search').value='';const heroInput=$('#heroSearch');if(heroInput)heroInput.value='';state.query='';state.open=null;$('#clearSearch').style.display='none';render();fitAfterRender();$('#search').focus()});
   const heroSearchInput=$('#heroSearch');
   if(heroSearchInput){
-    heroSearchInput.addEventListener('input',e=>{resetAskLocal();state.query=e.target.value;state.open=null;$('#search').value=e.target.value;$('#clearSearch').style.display=state.query?'block':'none';render();scheduleSearchFit()});
+    heroSearchInput.addEventListener('input',e=>{resetAskLocal();state.query=e.target.value;state.open=null;$('#search').value=e.target.value;$('#clearSearch').style.display=state.query?'block':'none';scheduleSearchRender()});
     heroSearchInput.addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();scrollToBrowse()}});
   }
   function scrollToBrowse(){const smooth=!matchMedia('(prefers-reduced-motion: reduce)').matches;$('#browse')?.scrollIntoView({block:'start',behavior:smooth?'smooth':'auto'})}
