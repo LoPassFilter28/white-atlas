@@ -86,32 +86,11 @@
     .ask-local-copy{padding:clamp(22px,4vw,32px);border-right:1px solid var(--line);display:flex;flex-direction:column;justify-content:center}.ask-local-kicker{margin:0 0 8px;color:var(--accent-ink);font-size:.76rem;font-weight:850}.ask-local h2{margin:0;color:var(--headline);font-size:clamp(1.85rem,4.8vw,3.15rem);line-height:.98;letter-spacing:-.05em}.ask-local-intro{margin:14px 0 0;color:var(--muted);font-size:.9rem;line-height:1.45}
     .ask-guides{padding:clamp(20px,3vw,28px)}.ask-guides-label{margin:0 0 11px;color:var(--muted);font-size:.74rem;font-weight:820}.ask-guide-list{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:1fr 1fr;gap:8px}.ask-guide{min-width:0}.ask-guide:last-child{grid-column:1/-1}.ask-guide button{position:relative;width:100%;height:100%;min-height:108px;padding:13px 34px 13px 13px;border:1px solid var(--line);border-radius:5px;background:var(--bg);color:var(--ink);text-align:left}.ask-guide button::after{content:'→';position:absolute;right:12px;top:12px;color:var(--accent-ink);font-weight:900}.ask-guide button:hover,.ask-guide button:focus-visible{border-color:var(--accent);background:var(--soft);outline:0}.ask-guide button[aria-pressed="true"]{border-color:var(--accent);background:var(--accent);color:#fff}.ask-guide button[aria-pressed="true"]::after,.ask-guide button[aria-pressed="true"] .ask-guide-prompt,.ask-guide button[aria-pressed="true"] .ask-guide-picks{color:#fff}.ask-guide h3{margin:0 0 5px;color:inherit;font-size:.92rem;line-height:1.2;letter-spacing:-.01em}.ask-guide-prompt{display:block;color:var(--muted);font-size:.75rem;line-height:1.35}.ask-guide-picks{display:block;margin-top:6px;color:var(--accent-ink);font-size:.68rem;line-height:1.35}.ask-guide-picks b{font-weight:850}.ask-local-status{min-height:1.2em;margin:11px 0 0;color:var(--accent-ink);font-size:.72rem;font-weight:780}
     .ask-picks-link{grid-column:1/-1;display:flex;align-items:center;justify-content:space-between;gap:18px;border-top:1px solid var(--line);padding:15px clamp(22px,4vw,32px);color:var(--accent-ink);text-decoration:none}.ask-picks-link:hover strong,.ask-picks-link:focus-visible strong{text-decoration:underline;text-underline-offset:3px}.ask-picks-link span{color:var(--muted);font-size:.78rem}.ask-picks-link strong{display:inline-flex;align-items:center;gap:8px;white-space:nowrap;font-size:.84rem}.ask-picks-link strong::after{content:'↓';font-size:1.05rem;color:var(--accent-ink)}
-    .scanner-start{display:none;padding:4px 0 30px;border-bottom:1px solid var(--line)}
-    html.scanner-mode .scanner-start{display:block}
-    html.scanner-mode .app>:not(.mast):not(.scanner-start){display:none!important}
-    html.scanner-mode .mast{padding-bottom:22px;border-bottom:0}
-    html.scanner-mode .mast-row{margin-bottom:34px}
-    html.scanner-mode h1{font-size:clamp(2.55rem,10.5vw,4.8rem);max-width:700px}
-    .scanner-eyebrow{margin:0 0 7px;color:var(--accent-ink);font-size:.72rem;font-weight:850;letter-spacing:.08em;text-transform:uppercase}
-    .scanner-head{display:flex;justify-content:space-between;align-items:end;gap:24px;padding:20px 0 16px;border-top:1px solid var(--ink)}
-    .scanner-head h2{margin:0;max-width:570px;color:var(--headline);font-size:clamp(1.8rem,5.7vw,3.15rem);line-height:.98;letter-spacing:-.045em}
-    .scanner-head p{margin:0;max-width:250px;color:var(--muted);font-size:.8rem;line-height:1.45;text-align:right}
-    .scanner-location{width:100%;min-height:52px;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:11px 14px;border:1px solid var(--accent);background:var(--surface);color:var(--ink);text-align:left;box-shadow:inset 4px 0 0 var(--accent)}
-    .scanner-location strong{display:block;font-size:.86rem}.scanner-location span{display:block;margin-top:2px;color:var(--muted);font-size:.68rem}.scanner-location b{color:var(--accent-ink);font-size:.72rem;white-space:nowrap}
-    .scanner-location:disabled{cursor:wait;opacity:.72}.scanner-location.active{background:var(--accent);color:#fff;box-shadow:none}.scanner-location.active span,.scanner-location.active b{color:#fff}
-    .scanner-location-status{min-height:1.1em;margin:6px 0 0;color:var(--muted);font-size:.67rem}
-    .scanner-picks{margin-top:15px}
-    .scanner-picks-cta{width:100%;min-height:64px;display:flex;align-items:center;justify-content:space-between;gap:18px;padding:14px 16px;border:1px solid var(--accent);background:var(--surface);color:var(--ink);text-align:left;box-shadow:inset 4px 0 0 var(--accent)}
-    .scanner-picks-cta strong{display:block;font-size:.96rem;line-height:1.2}.scanner-picks-cta span{display:block;margin-top:4px;color:var(--muted);font-size:.7rem}.scanner-picks-cta b{color:var(--accent-ink);font-size:.74rem;white-space:nowrap}.scanner-picks-cta:hover,.scanner-picks-cta:focus-visible{background:var(--soft);outline:3px solid color-mix(in srgb,var(--focus) 30%,transparent);outline-offset:2px}
-    .scanner-ask{margin-top:20px;padding:18px;border:1px solid var(--line);background:var(--surface)}
-    .scanner-ask-head{display:flex;align-items:end;justify-content:space-between;gap:18px;margin-bottom:12px}.scanner-ask h3{margin:0;color:var(--headline);font-size:1.4rem;letter-spacing:-.035em}.scanner-ask p{margin:0;color:var(--muted);font-size:.72rem;text-align:right}
-    .scanner-ask-options{display:grid;grid-template-columns:1fr 1fr;gap:8px}.scanner-ask-options button{min-height:48px;padding:9px 11px;border:1px solid var(--line);background:var(--bg);color:var(--ink);font-size:.76rem;font-weight:800;text-align:left}.scanner-ask-options button::after{content:'→';float:right;color:var(--accent-ink)}.scanner-ask-options button:hover,.scanner-ask-options button:focus-visible{border-color:var(--accent);background:var(--soft);outline:0}
-    .scanner-directory{width:100%;min-height:54px;margin-top:12px;padding:12px 16px;border:0;background:var(--accent);color:#fff;font-weight:850;text-align:left}.scanner-directory::after{content:'↓';float:right;font-size:1rem}
     .flashbacks-entry{width:auto;min-height:44px;margin:14px 0 0;padding:8px 12px;display:inline-flex;align-items:center;justify-content:center;gap:8px;border:1px solid var(--line);border-radius:4px;background:var(--surface);color:var(--accent-ink);font-size:.76rem;font-weight:850;text-align:left}
     .flashbacks-entry::after{content:'→';font-size:.96rem}.flashbacks-entry:hover,.flashbacks-entry:focus-visible{border-color:var(--accent);background:var(--soft);outline:3px solid color-mix(in srgb,var(--focus) 30%,transparent);outline-offset:2px}
     .flashbacks{display:none;margin:28px 0;border-top:4px solid var(--headline);background:var(--surface)}
     .flashbacks-pagebar{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:18px 0;background:var(--bg)}.flashbacks-back{min-height:44px;padding:8px 12px;border:1px solid var(--line);border-radius:4px;background:var(--surface);color:var(--ink);font-size:.76rem;font-weight:850}.flashbacks-back:hover,.flashbacks-back:focus-visible{border-color:var(--accent);color:var(--accent-ink);outline:3px solid color-mix(in srgb,var(--focus) 30%,transparent);outline-offset:2px}.flashbacks-pagebar span{color:var(--muted);font-size:.72rem;font-weight:750;text-align:right}
-    body.flashbacks-page .app>:not(.mast):not(.flashbacks):not(.bottom-tabs){display:none!important}body.flashbacks-page .flashbacks{display:block;margin-top:0;box-shadow:none}body.flashbacks-page .flashbacks-head{border-top:1px solid var(--line)}
+    body.flashbacks-page .app>:not(.mast):not(.flashbacks):not(.topbar){display:none!important}body.flashbacks-page .flashbacks{display:block;margin-top:0;box-shadow:none}body.flashbacks-page .flashbacks-head{border-top:1px solid var(--line)}
     .flashbacks-head{display:grid;grid-template-columns:minmax(0,1fr) minmax(260px,.9fr);gap:28px;align-items:end;padding:25px 26px 22px;border:1px solid var(--line);border-top:0;background:var(--soft)}
     .flashbacks-kicker{margin:0 0 7px;color:var(--accent-ink);font-size:.68rem;font-weight:850;letter-spacing:.1em;text-transform:uppercase}.flashbacks h2{margin:0;color:var(--headline);font-size:clamp(2rem,5vw,3.35rem);line-height:.94;letter-spacing:-.05em}.flashbacks-intro{margin:0;color:var(--muted);font-size:.82rem;line-height:1.5}.flashbacks-intro strong{color:var(--ink)}
     .history-tier{border-left:1px solid var(--line);border-right:1px solid var(--line)}.history-tier-title{margin:0;padding:12px 17px 10px;border-bottom:1px solid var(--line);background:var(--headline);color:var(--surface);font-size:.69rem;font-weight:850;letter-spacing:.12em}.history-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));margin:0;padding:0;list-style:none}.history-list li{min-width:0;border-bottom:1px solid var(--line)}.history-list li:nth-child(odd){border-right:1px solid var(--line)}
@@ -128,9 +107,6 @@
     .list-shortcuts{display:grid;grid-template-columns:1fr;gap:8px;margin-top:10px}.list-shortcut{min-height:46px;display:flex;align-items:center;justify-content:space-between;gap:10px;padding:9px 12px;border:1px solid var(--line);border-radius:5px;background:var(--surface);color:var(--accent-ink);font-size:.76rem;font-weight:850;text-align:left}.list-shortcut span{color:var(--muted);font-size:.66rem;font-weight:700}.list-shortcut[aria-pressed="true"]{background:var(--accent);color:#fff}.list-shortcut[aria-pressed="true"] span{color:#fff;opacity:.84}.list-shortcut:hover,.list-shortcut:focus-visible{outline:3px solid color-mix(in srgb,var(--focus) 30%,transparent);outline-offset:2px}
     .category-pills{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:7px;margin-top:10px}.category-pill{min-width:0;min-height:44px;padding:8px 10px;border:1px solid var(--line);border-radius:999px;background:var(--surface);color:var(--muted);font-size:.7rem;font-weight:800;white-space:normal;line-height:1.15;transition:background .18s ease,color .18s ease,border-color .18s ease,transform .12s ease}.category-pill[aria-pressed="true"]{border-color:var(--accent);background:var(--accent);color:#fff}.category-pill:active{transform:translateY(1px)}
     .filters{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:8px}
-    .refine{margin-top:10px;border:1px solid var(--line);background:var(--surface);border-radius:5px}
-    .refine summary{list-style:none;display:flex;align-items:center;justify-content:space-between;min-height:44px;padding:8px 12px;font-size:.78rem;font-weight:850;cursor:pointer}.refine summary::-webkit-details-marker{display:none}.refine summary::after{content:'+';font-size:1rem;color:var(--muted)}.refine[open] summary::after{content:'–'}
-    .refine:not([open]) .smart-filters,.refine:not([open]) .category-groups{display:none}
     .smart-filters{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;padding:0 10px 10px}.smart-filters select{height:52px}
     .category-groups{padding:4px 10px 12px}
     .category-groups-head{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:2px 0 8px;border-bottom:1px solid var(--line)}
@@ -158,8 +134,8 @@
     .location-btn:disabled{cursor:wait;opacity:.72}.location-status{display:block;margin-top:6px;padding-left:1px;font-size:.69rem;color:var(--muted);line-height:1.3}
     .view-btn{display:inline-flex;align-items:center;justify-content:center;gap:7px;min-height:44px;padding:8px 12px;border:1px solid var(--line);border-radius:8px;background:var(--surface);color:var(--ink);font-size:.78rem;font-weight:800}
     .view-btn svg{width:16px;height:16px}
-    .bottom-tabs{position:fixed;left:50%;bottom:max(12px,env(safe-area-inset-bottom));z-index:60;width:min(420px,calc(100% - 24px));display:grid;grid-template-columns:repeat(3,1fr);gap:4px;padding:6px;border:1px solid color-mix(in srgb,var(--line) 82%,transparent);border-radius:20px;background:var(--nav-bg);box-shadow:var(--nav-shadow);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);transform:translateX(-50%)}
-    .bottom-tab{min-width:0;min-height:54px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;border:0;border-radius:14px;background:transparent;color:var(--muted);font-size:.66rem;font-weight:800;letter-spacing:-.01em;transition:background .18s ease,color .18s ease,transform .12s ease}.bottom-tab svg{width:20px;height:20px}.bottom-tab[aria-pressed="true"]{background:var(--accent);color:#fff}.bottom-tab:active{transform:translateY(1px)}.bottom-tab:focus-visible{outline:3px solid color-mix(in srgb,var(--focus) 38%,transparent);outline-offset:1px}
+    
+    
     .map-panel{padding-top:24px}.map-panel[hidden]{display:none}
     .map-head{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-bottom:10px}
     .map-head p{margin:0;color:var(--muted);font-size:.78rem}.map-tools{display:flex;gap:7px;flex-wrap:wrap;justify-content:flex-end}
@@ -241,17 +217,16 @@
     .wordmark-city{display:block;font-size:clamp(4rem,10.4vw,6.9rem);line-height:.72;letter-spacing:-.074em;font-weight:700}.wordmark-fountain{width:100%;height:auto;align-self:center;overflow:visible;color:var(--accent-ink)}.wordmark-fountain path,.wordmark-fountain ellipse{fill:none;stroke:currentColor;stroke-width:2.4;stroke-linecap:round;vector-effect:non-scaling-stroke}.wordmark-local{display:grid;align-self:center;justify-items:start;padding-top:.25em;line-height:.9}.wordmark-local i{color:var(--accent-ink);font-family:"Manrope",ui-sans-serif,sans-serif;font-size:clamp(.72rem,1.55vw,1rem);font-style:normal;font-weight:850;letter-spacing:.35em;text-transform:uppercase}.wordmark-local b{margin-top:.28em;font-size:clamp(1.6rem,3.7vw,2.6rem);font-weight:700;letter-spacing:-.035em;text-transform:uppercase}
     .flashbacks-pagebar-actions,.export-head-actions{display:flex;align-items:center;justify-content:flex-end;gap:10px}.export-head-actions{flex:0 0 auto}
     html[data-theme="dark"] .map-entry{border-color:#6d5529;background:#0f2417}html[data-theme="dark"] .map-entry-icon{border-color:#33503c;background:#1a2f21}html[data-theme="dark"] .map-entry-icon svg,html[data-theme="dark"] .map-entry-label{color:var(--accent-ink)}html[data-theme="dark"] .map-entry-detail{color:var(--muted)}html[data-theme="dark"] .map-entry-action{border-color:#8a682d;background:var(--accent);color:var(--on-accent)}html[data-theme="dark"] .map-entry:hover .map-entry-action,html[data-theme="dark"] .map-entry:focus-visible .map-entry-action{background:#c9a55c}
-    html[data-theme="dark"] .ask-guide button[aria-pressed="true"],html[data-theme="dark"] .scanner-location.active,html[data-theme="dark"] .scanner-directory,html[data-theme="dark"] .list-shortcut[aria-pressed="true"],html[data-theme="dark"] .category-pill[aria-pressed="true"],html[data-theme="dark"] .category-option[aria-pressed="true"],html[data-theme="dark"] .location-btn,html[data-theme="dark"] .bottom-tab[aria-pressed="true"],html[data-theme="dark"] .copy-list:hover,html[data-theme="dark"] .copy-list:focus-visible,html[data-theme="dark"] .export-trigger,html[data-theme="dark"] .selection-toolbar .review-selection,html[data-theme="dark"] .pick-place[aria-pressed="true"],html[data-theme="dark"] .tag.star,html[data-theme="dark"] .tag.bib,html[data-theme="dark"] .quick-directions:hover,html[data-theme="dark"] .quick-directions:focus-visible,html[data-theme="dark"] .copy-place:hover,html[data-theme="dark"] .copy-place:focus-visible,html[data-theme="dark"] .flag-closure:hover,html[data-theme="dark"] .flag-closure:focus-visible,html[data-theme="dark"] .export-chip:has(input:checked),html[data-theme="dark"] .format-choice:has(input:checked),html[data-theme="dark"] .export-action,html[data-theme="dark"] .flashbacks-entry:hover .flashbacks-entry-action,html[data-theme="dark"] .flashbacks-entry:focus-visible .flashbacks-entry-action{color:var(--on-accent)}
-    html[data-theme="dark"] .ask-guide button[aria-pressed="true"]::after,html[data-theme="dark"] .ask-guide button[aria-pressed="true"] .ask-guide-prompt,html[data-theme="dark"] .ask-guide button[aria-pressed="true"] .ask-guide-picks,html[data-theme="dark"] .scanner-location.active span,html[data-theme="dark"] .scanner-location.active b,html[data-theme="dark"] .list-shortcut[aria-pressed="true"] span,html[data-theme="dark"] .location-btn svg,html[data-theme="dark"] .location-btn .nearest-detail{color:var(--on-accent)}
+    html[data-theme="dark"] .ask-guide button[aria-pressed="true"],html[data-theme="dark"] .list-shortcut[aria-pressed="true"],html[data-theme="dark"] .category-pill[aria-pressed="true"],html[data-theme="dark"] .category-option[aria-pressed="true"],html[data-theme="dark"] .location-btn,html[data-theme="dark"] .view-tab[aria-pressed="true"],html[data-theme="dark"] .copy-list:hover,html[data-theme="dark"] .copy-list:focus-visible,html[data-theme="dark"] .export-trigger,html[data-theme="dark"] .selection-toolbar .review-selection,html[data-theme="dark"] .pick-place[aria-pressed="true"],html[data-theme="dark"] .tag.star,html[data-theme="dark"] .tag.bib,html[data-theme="dark"] .quick-directions:hover,html[data-theme="dark"] .quick-directions:focus-visible,html[data-theme="dark"] .copy-place:hover,html[data-theme="dark"] .copy-place:focus-visible,html[data-theme="dark"] .flag-closure:hover,html[data-theme="dark"] .flag-closure:focus-visible,html[data-theme="dark"] .export-chip:has(input:checked),html[data-theme="dark"] .format-choice:has(input:checked),html[data-theme="dark"] .export-action,html[data-theme="dark"] .flashbacks-entry:hover .flashbacks-entry-action,html[data-theme="dark"] .flashbacks-entry:focus-visible .flashbacks-entry-action{color:var(--on-accent)}
+    html[data-theme="dark"] .ask-guide button[aria-pressed="true"]::after,html[data-theme="dark"] .ask-guide button[aria-pressed="true"] .ask-guide-prompt,html[data-theme="dark"] .ask-guide button[aria-pressed="true"] .ask-guide-picks,html[data-theme="dark"] .list-shortcut[aria-pressed="true"] span,html[data-theme="dark"] .location-btn svg,html[data-theme="dark"] .location-btn .nearest-detail{color:var(--on-accent)}
     html[data-theme="dark"] .nearest-action{background:#17130b;color:#c9a55c}html[data-theme="dark"] .location-btn{--nearest-ping:#c9a55c}html[data-theme="dark"] .location-btn.active{background:#14231a;border-color:var(--accent)}html[data-theme="dark"] .location-btn.active .nearest-action{background:var(--accent);color:var(--on-accent)}html[data-theme="dark"] .map-frame{border-color:#33503c;background:#08170e}html[data-theme="dark"] #map:focus-visible{box-shadow:inset 0 0 0 3px var(--focus)}html[data-theme="dark"] .map-brand{border-left-color:var(--accent)}html[data-theme="dark"] .legend-dot{background:var(--accent)}html[data-theme="dark"] .zoom-stack button{border-color:#33503c;background:rgba(8,20,12,.94)}html[data-theme="dark"] .zoom-stack button:active{background:var(--accent);color:var(--on-accent)}html[data-theme="dark"] .map-selection{box-shadow:0 10px 36px rgba(0,0,0,.58)}html[data-theme="dark"] .export-backdrop{background:rgba(4,10,7,.82)}
     html[data-theme="dark"] .history-tier-title{border-color:var(--line);background:#1a2f21;color:var(--accent-ink)}html[data-theme="dark"] .copy-status{background:var(--accent);color:var(--on-accent)}html[data-theme="dark"] option{background:var(--surface);color:var(--ink)}html[data-theme="dark"] .export-sheet{box-shadow:0 26px 90px rgba(0,0,0,.72)}html[data-theme="dark"] .finder{background:color-mix(in srgb,var(--bg) 96%,transparent)}html[data-theme="dark"] .tag.soon{color:var(--muted)}html[data-theme="dark"] .flashbacks{border-top-color:var(--headline)}
     @media(max-width:620px){
       .app{padding-bottom:116px}.mast{padding-top:22px}.mast-row{margin-bottom:46px}.map-entry{grid-template-columns:1fr;margin-top:18px}.map-entry-copy{grid-template-columns:42px minmax(0,1fr);gap:12px;padding:16px}.map-entry-icon{width:42px;height:42px}.map-entry-icon svg{width:23px;height:23px}.map-entry-action{min-width:0;justify-content:space-between;padding:13px 16px;border-left:0;border-top:1px solid rgba(255,255,255,.2)}.venue-row{grid-template-columns:minmax(0,1fr) 70px}.venue-quick-actions{width:68px;margin:9px 0 9px 6px}.quick-directions,.copy-place,.flag-closure{width:68px;min-height:38px;padding:6px 4px;font-size:.61rem}.quick-directions::after{content:' ↗'}.data-out{align-items:flex-start}.data-out-note{max-width:48%}.copy-list{white-space:normal;text-align:center}.ask-local{grid-template-columns:1fr;margin-top:20px}.ask-local-copy{padding:22px 18px;border-right:0;border-bottom:1px solid var(--line)}.ask-guides{padding:18px}.ask-guide-list{grid-template-columns:1fr}.ask-guide:last-child{grid-column:auto}.ask-guide button{min-height:96px}.ask-picks-link{align-items:flex-start;padding:15px 18px}.ask-picks-link span{max-width:105px}.ask-picks-link strong{white-space:normal;text-align:right;justify-content:flex-end}.filters{grid-template-columns:1fr}.smart-filters{grid-template-columns:1fr 1fr}.finder{padding-top:10px}.location-bar{align-items:flex-start}.location-status{padding-top:3px}.map-head{align-items:flex-start}.map-head p{max-width:48%}.map-frame{height:min(62vh,480px);min-height:350px}.map-note{flex-direction:column;gap:4px}.venue-toggle{grid-template-columns:32px minmax(0,1fr);gap:9px;padding:19px 0}.venue-detail{padding-left:41px}.detail-grid{grid-template-columns:1fr;gap:16px}.detail-block.wide{grid-column:auto}.summary{padding-top:22px}.description{font-size:.86rem}.footer{flex-direction:column}.category-pills{display:flex;flex-wrap:wrap;gap:6px}.category-pill{flex:0 0 auto;min-height:42px;padding:8px 11px;font-size:.68rem}
     }
     @media(max-width:620px){
-      .scanner-head{display:block;padding-top:16px}.scanner-head p{max-width:none;margin-top:8px;text-align:left}.scanner-ask-head{display:block}.scanner-ask-head p{margin-top:3px;text-align:left}.scanner-ask-options{grid-template-columns:1fr}.scanner-start{padding-bottom:22px}
       .flashbacks-entry{margin-top:12px}.flashbacks-pagebar{padding:13px 0;align-items:flex-start}.flashbacks-pagebar-actions{flex-direction:column-reverse;align-items:flex-end;gap:7px}.flashbacks-pagebar span{max-width:150px}.flashbacks-pagebar .theme-toggle{min-height:44px;padding:7px 10px}.flashbacks-head{grid-template-columns:1fr;gap:12px;padding:21px 18px 18px}.history-list{grid-template-columns:1fr}.history-list li:nth-child(n){border-right:0}.history-card summary{min-height:50px;padding:12px 15px}.history-body{padding:16px 17px 19px}.venue-history{margin:-6px 41px 14px}.venue-history button span{width:100%;margin-left:0}
-      .bottom-tabs{bottom:max(4px,env(safe-area-inset-bottom));gap:2px;padding:4px}.bottom-tab{min-height:44px;padding-inline:2px;font-size:.6rem;white-space:nowrap}.bottom-tab svg{width:19px;height:19px}
+      
     }
     @media(max-width:620px){
       .wordmark{grid-template-columns:auto 28px 1fr;column-gap:6px}.wordmark-city{font-size:clamp(3.3rem,15vw,4.2rem)}.wordmark-local{padding-top:.1em}.wordmark-local i{font-size:.56rem;letter-spacing:.24em}.wordmark-local b{font-size:1.16rem}
@@ -291,7 +266,7 @@
     .mast h1,.mast .wordmark{color:#fdf6e3}
     .mast .wordmark-local i{color:#c9a55c}.mast .wordmark-fountain{color:#c9a55c}
     .mast .lede{color:rgba(247,239,219,.9)}
-    html.scanner-mode .primary-actions,body.flashbacks-page .primary-actions,html.scanner-mode .mast .location-status,body.flashbacks-page .mast .location-status{display:none}
+    body.flashbacks-page .primary-actions,body.flashbacks-page .mast .location-status{display:none}
     .hero-search{position:relative;margin-top:26px;max-width:660px}
     .hero-search svg{position:absolute;left:16px;top:50%;transform:translateY(-50%);width:21px;height:21px;color:#7c520c;pointer-events:none}
     .hero-search input{width:100%;height:58px;border:1px solid rgba(247,239,219,.45);border-radius:15px;background:rgba(255,253,247,.97);color:#1d2a20;padding:0 58px 0 48px;font-size:1.02rem;font-weight:600;outline:none;box-shadow:0 10px 26px rgba(10,25,15,.28)}
@@ -367,11 +342,11 @@
       .picks-rail{grid-template-columns:repeat(6,minmax(0,1fr))}
     }
     /* Final interaction and overflow hardening. */
-    .theme-toggle,.flashbacks-entry,.flashbacks-back,.refine summary,.map-tool,.zoom-stack button,.selection-close,.selection-toolbar button,.pick-place,.action,.view-btn{min-height:44px}
+    .theme-toggle,.flashbacks-entry,.flashbacks-back,.filters-toggle,.map-tool,.zoom-stack button,.selection-close,.selection-toolbar button,.pick-place,.action,.view-btn{min-height:44px}
     .theme-toggle{padding-block:9px}.map-tool{padding-block:8px}.zoom-stack button{width:44px;height:44px}.selection-close{width:44px;height:44px}
     .quick-directions,.copy-place,.flag-closure,.category-option,.custom-scope-tools button{min-height:44px}
-    .layer-head,.summary,.data-out,.footer,.map-head,.map-note,.scanner-head,.scanner-ask-head{min-width:0}
-    .layer-head>*,.summary>*,.data-out>*,.footer>*,.map-head>*,.map-note>*,.scanner-head>*,.scanner-ask-head>*{min-width:0;overflow-wrap:anywhere}
+    .layer-head,.summary,.data-out,.footer,.map-head,.map-note{min-width:0}
+    .layer-head>*,.summary>*,.data-out>*,.footer>*,.map-head>*,.map-note>*{min-width:0;overflow-wrap:anywhere}
     .venue-row,.venue-toggle,.venue-toggle>span,.venue-quick-actions,.detail-grid,.detail-block,.ask-guide button,.selection-toolbar>*{min-width:0}
     .pick-card-name,.pick-card-meta,.ask-guide-prompt,.ask-guide-picks,.nearest-detail,.history-title,.detail-block p,.footer span,.footer a{overflow-wrap:anywhere}.footer-legal{display:flex;gap:18px;align-items:baseline;flex-wrap:wrap}.footer-details{margin:0}.footer-details summary{cursor:pointer;font-weight:800;text-decoration:underline;text-underline-offset:3px}.footer-details-body{margin-top:10px;max-width:70ch;line-height:1.6}.footer-details-body p{margin:0 0 8px}
     @media(max-width:620px){
@@ -387,8 +362,8 @@
     @media(max-width:360px){.district-rail,.picks-rail{grid-template-columns:1fr}.district-card{min-height:132px}}
     @media(min-width:1024px){
       .app{width:calc(100% - 180px)}
-      .bottom-tabs{left:16px;bottom:24px;width:72px;grid-template-columns:1fr;gap:3px;padding:5px;transform:none;border-radius:18px}
-      .bottom-tab{min-height:58px;border-radius:13px}
+      
+      
     }
     @keyframes sheet-in{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
     @keyframes nearest-radar{0%{opacity:.85;transform:scale(.985)}75%{opacity:.28}100%{opacity:0;transform:scale(1.055)}}
@@ -440,16 +415,52 @@
 </style>
 
 
-<style id="phase2-archive-css">
+<style id="phase3-archive-css">
+/* Phase 3 — one top bar, inline Filters panel, no bottom chrome */
+:root{--topbar-h:65px}
 .archive-title{font-family:"Urbanist","Manrope",ui-sans-serif,sans-serif;font-weight:700;font-size:clamp(2rem,6.5vw,3.2rem);letter-spacing:.02em;line-height:1.05;color:var(--ink);margin:0}
-.archive-nav{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
-.archive-nav a{display:inline-flex;align-items:center;min-height:44px;padding:9px 15px;border:1px solid var(--line);border-radius:999px;color:var(--ink);font-size:.82rem;font-weight:750;text-decoration:none;background:var(--surface)}
-.archive-nav a:hover{border-color:var(--accent)}
+.topbar{position:sticky;top:0;z-index:50;display:flex;align-items:center;gap:8px;padding:6px 8px;border:1px solid color-mix(in srgb,var(--line) 82%,transparent);border-top:0;border-radius:0 0 18px 18px;background:var(--nav-bg);box-shadow:var(--nav-shadow);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px)}
+.topbar-home{display:inline-flex;align-items:center;min-height:44px;padding:8px 10px;border-radius:12px;color:var(--ink);font-weight:850;font-size:.88rem;text-decoration:none;white-space:nowrap}
+.topbar-home:hover{background:var(--soft)}
+.topbar-home:focus-visible{outline:3px solid color-mix(in srgb,var(--focus) 38%,transparent);outline-offset:1px}
+.topbar-title{margin-right:auto;color:var(--muted);font-size:.8rem;font-weight:800;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.view-toggle{display:flex;gap:4px;padding:3px;border:1px solid var(--line);border-radius:14px;background:var(--surface)}
+.view-tab{min-width:0;min-height:44px;display:inline-flex;align-items:center;justify-content:center;gap:6px;padding:8px 13px;border:0;border-radius:11px;background:transparent;color:var(--muted);font-family:inherit;font-size:.74rem;font-weight:800;cursor:pointer;transition:background .18s ease,color .18s ease,transform .12s ease}
+.view-tab svg{width:19px;height:19px}
+.view-tab[aria-pressed="true"]{background:var(--accent);color:#fff}
+.view-tab:active{transform:translateY(1px)}
+.view-tab:focus-visible{outline:3px solid color-mix(in srgb,var(--focus) 38%,transparent);outline-offset:1px}
+.view-tab.export-tab{border:1px solid var(--line);background:var(--surface);color:var(--ink)}
+.view-tab.export-tab[aria-pressed="true"]{background:var(--accent);color:#fff}
+@media(max-width:620px){.topbar-title{display:none}.view-tab{padding:8px 10px}}
+.finder{top:var(--topbar-h)}
+.district-tabs{top:var(--topbar-h)}
+.venue-list,.district-group{scroll-margin-top:132px}
+.summary{scroll-margin-top:132px}
+.app{padding-bottom:56px}
+@media(min-width:1024px){.app{width:auto}}
+.copy-status{bottom:max(24px,env(safe-area-inset-bottom))}
+.filters-panel{margin-top:10px;border:1px solid var(--line);background:var(--surface);border-radius:5px}
+.filters-toggle{display:flex;align-items:center;gap:8px;width:100%;padding:8px 12px;border:0;background:transparent;color:var(--ink);font-family:inherit;font-size:.78rem;font-weight:850;cursor:pointer;text-align:left}
+.filters-state{margin-left:auto;color:var(--accent-ink);font-size:.72rem;font-weight:800}
+.filters-chevron{font-size:1rem;color:var(--muted);transition:transform .18s ease}
+.filters-panel.open .filters-chevron{transform:rotate(45deg)}
+.filters-body{border-top:1px solid var(--line);padding-top:10px}
+.filters-body[hidden]{display:none}
 </style>
 </head>
 <body><a class="skip-link" href="#venueList">Skip to places</a>
   <a class="skip-link" href="#venueList">Skip to venue list</a>
   <main class="app">
+    <header class="topbar">
+      <a class="topbar-home" href="/" aria-label="Back to 407 FYI home">&larr;&nbsp;<span>407 FYI</span></a>
+      <span class="topbar-title">Archive &middot; All 630 places</span>
+      <div class="view-toggle" role="group" aria-label="Browse view">
+        <button class="view-tab" id="listView" type="button" aria-pressed="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M8 6h13M8 12h13M8 18h13"></path><circle cx="3" cy="6" r="1"></circle><circle cx="3" cy="12" r="1"></circle><circle cx="3" cy="18" r="1"></circle></svg><span>List</span></button>
+        <button class="view-tab" id="mapView" type="button" aria-pressed="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m3 6 5-3 8 3 5-3v15l-5 3-8-3-5 3zM8 3v15M16 6v15"></path></svg><span>Map</span></button>
+      </div>
+      <button class="view-tab export-tab" id="exportTab" type="button" aria-pressed="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"></path><path d="m7 10 5 5 5-5"></path><path d="M5 21h14"></path></svg><span>Export</span></button>
+    </header>
     <header class="mast archive-mast">
       <div class="mast-row">
         <div class="mast-count">
@@ -459,8 +470,7 @@
       </div>
       <p class="context">The archive — every place in the guide, in one searchable list.</p>
       <h1 class="archive-title">All 630 places</h1>
-      <p class="lede">Search it, filter it, sort it by distance. For the highlights, start at <a href="/">407 FYI home</a>.</p>
-      <nav class="archive-nav" aria-label="Archive shortcuts"><a href="/">← 407 FYI home</a><a href="#browse">Search &amp; filters</a><a href="/archive.html?flashbacks=1">Flashbacks</a><a href="/archive.html?export=1">Export</a></nav>
+      <p class="lede">Search it, filter it, sort it by distance. For the highlights, start at <a href="/">407 FYI home</a> &mdash; or read the <a href="/#districts">district stories</a>.</p>
       <div class="primary-actions">
         <button class="location-btn" id="locationBtn" type="button" aria-pressed="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="3"></circle><path d="M12 2v3M12 19v3M2 12h3M19 12h3"></path><circle cx="12" cy="12" r="8"></circle></svg><span class="nearest-copy"><span class="nearest-title">Nearest to me</span><span class="nearest-detail">Tap once to see distance on every place</span></span><span class="nearest-action">Find</span></button>
       </div>
@@ -562,16 +572,18 @@
         <button class="category-pill" type="button" data-category-chip="shop" aria-pressed="false">Shop</button>
         <button class="category-pill" type="button" data-category-chip="stay" aria-pressed="false">Stay</button>
       </nav>
-      <details class="refine" id="refineFilters">
-        <summary>Filters</summary>
-        <div class="smart-filters">
-          <div class="select-wrap"><label for="zone">District</label><select id="zone"></select></div>
-          <div class="select-wrap"><label for="occasion">Occasion</label><select id="occasion"><option value="all">Any occasion</option><option value="date">Date night</option><option value="family">Family</option><option value="friends">Friends</option><option value="solo">Solo</option></select></div>
-          <div class="select-wrap"><label for="daypart">When</label><select id="daypart"><option value="all">Any time</option><option value="breakfast">Breakfast</option><option value="brunch">Brunch</option><option value="lunch">Lunch</option><option value="dinner">Dinner</option><option value="late">Late night</option></select></div>
-          <div class="select-wrap"><label for="price">Price</label><select id="price"><option value="all">Any price</option><option value="$">$</option><option value="$$">$$</option><option value="$$$">$$$+</option></select></div>
+      <div class="filters-panel" id="filtersPanel">
+        <button class="filters-toggle" id="filtersToggle" type="button" aria-expanded="false" aria-controls="filtersBody"><span>Filters</span><span class="filters-state" id="filtersState"></span><span class="filters-chevron" aria-hidden="true">+</span></button>
+        <div class="filters-body" id="filtersBody" hidden>
+          <div class="smart-filters">
+                    <div class="select-wrap"><label for="zone">District</label><select id="zone"></select></div>
+                    <div class="select-wrap"><label for="occasion">Occasion</label><select id="occasion"><option value="all">Any occasion</option><option value="date">Date night</option><option value="family">Family</option><option value="friends">Friends</option><option value="solo">Solo</option></select></div>
+                    <div class="select-wrap"><label for="daypart">When</label><select id="daypart"><option value="all">Any time</option><option value="breakfast">Breakfast</option><option value="brunch">Brunch</option><option value="lunch">Lunch</option><option value="dinner">Dinner</option><option value="late">Late night</option></select></div>
+                    <div class="select-wrap"><label for="price">Price</label><select id="price"><option value="all">Any price</option><option value="$">$</option><option value="$$">$$</option><option value="$$$">$$$+</option></select></div>
+                  </div>
+                  <div class="category-groups" id="categoryGroups" role="group" aria-label="Categories grouped by kind"></div>
         </div>
-        <div class="category-groups" id="categoryGroups" role="group" aria-label="Categories grouped by kind"></div>
-      </details>
+      </div>
     </section>
 
     <section class="map-panel" id="mapPanel" aria-label="Map of filtered Orlando places" hidden>
@@ -594,12 +606,7 @@
     </div>
     <nav class="district-tabs" aria-label="Browse by district"><div class="district-tabs-row" id="districtTabs"></div></nav><p id="districtIntro" class="district-intro" hidden></p><section class="venue-list" id="venueList"></section>
     <div class="empty" id="empty" hidden><h2>No exact match.</h2><p>Try a neighborhood, cuisine, landmark type, or broader filter.</p><div id="didYouMean"></div><button id="resetFilters" class="reset-btn" type="button">Reset search &amp; filters</button></div>
-    <nav class="bottom-tabs" aria-label="Primary views">
-      <button class="bottom-tab" id="listView" type="button" aria-pressed="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M8 6h13M8 12h13M8 18h13"></path><circle cx="3" cy="6" r="1"></circle><circle cx="3" cy="12" r="1"></circle><circle cx="3" cy="18" r="1"></circle></svg><span>List</span></button>
-      <button class="bottom-tab" id="mapView" type="button" aria-pressed="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m3 6 5-3 8 3 5-3v15l-5 3-8-3-5 3zM8 3v15M16 6v15"></path></svg><span>Map</span></button>
-      <button class="bottom-tab" id="exportTab" type="button" aria-pressed="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"></path><path d="m7 10 5 5 5-5"></path><path d="M5 21h14"></path></svg><span>Export</span></button>
-    </nav>
-    <div class="cred-strip"><strong><span id="credCount"></span> hand-verified places</strong> · Checked October 2026 · Local Picks are never sponsored · Corrections: <a href="mailto:mail@407.fyi">mail@407.fyi</a></div><footer class="footer"><div class="foot-col"><h3>Districts</h3><ul><li><a href="/winter-park-district-guide.html">Winter Park</a></li><li><a href="/downtown-orlando-district-guide.html">Downtown Orlando</a></li><li><a href="/mills-50-district-guide.html">Mills 50</a></li><li><a href="/milk-district-guide.html">Milk District</a></li><li><a href="/international-drive-district-guide.html">International Drive</a></li><li><a href="/#districts">All 12 districts</a></li></ul></div><div class="foot-col"><h3>About</h3><ul><li><a href="/whats-new.html">What's new</a></li><li><a href="/what-visitors-google-orlando.html">What visitors Google</a></li><li><a href="mailto:mail@407.fyi?subject=407%20FYI%20press">Press &amp; media kit</a></li></ul></div><div class="foot-col foot-main"><span><strong>407 FYI</strong> · Details can change. Confirm before you go.</span><a href="mailto:mail@407.fyi?subject=407%20FYI%20%E2%80%94%20venue%20correction&amp;body=Venue%20name%3A%0AWhat%20changed%3A%0ASource%20or%20details%3A">Flag a closure / suggest an edit</a><span class="aff-disclosure">Affiliate disclosure: some links on this page, including ticket buttons, are sponsored affiliate links. If you book through them, we may earn a commission at no extra cost to you, which helps keep this guide free.</span><nav class="footer-legal"><a href="mailto:mail@407.fyi?subject=407%20FYI%20contact">Contact</a><details class="footer-details"><summary>Privacy Policy</summary><div class="footer-details-body"><p><strong>407 FYI</strong> is a free guide. We don't run accounts and we don't collect your name, email, or phone number.</p><p>What does leave your device: anonymous analytics (page views and taps, via PostHog) and crash reports (via Sentry), so we can keep the guide working. Display preferences like dark mode are stored only in your own browser.</p><p>If you tap "Near me," your location is used on your device to sort venues by distance. It is not stored by us or sold to anyone.</p><p>Ticket, hotel, and dining buttons open partner sites (Viator, GetYourGuide, Hotels.com, inKind). Those sites have their own privacy policies once you leave 407.fyi.</p><p>Questions: <a href="mailto:mail@407.fyi?subject=407%20FYI%20privacy">mail@407.fyi</a>.</p><p><em>Last updated October 2026.</em></p></div></details></nav></div></footer>
+    <div class="cred-strip"><strong><span id="credCount"></span> hand-verified places</strong> · Checked October 2026 · Local Picks are never sponsored · Corrections: <a href="mailto:mail@407.fyi">mail@407.fyi</a></div><footer class="footer"><div class="foot-col"><h3>Districts</h3><ul><li><a href="/winter-park-district-guide.html">Winter Park</a></li><li><a href="/downtown-orlando-district-guide.html">Downtown Orlando</a></li><li><a href="/mills-50-district-guide.html">Mills 50</a></li><li><a href="/milk-district-guide.html">Milk District</a></li><li><a href="/international-drive-district-guide.html">International Drive</a></li><li><a href="/#districts">All 12 districts</a></li></ul></div><div class="foot-col"><h3>About</h3><ul><li><a href="/whats-new.html">What's new</a></li><li><a href="/archive.html?flashbacks=1">Flashbacks</a></li><li><a href="/what-visitors-google-orlando.html">What visitors Google</a></li><li><a href="mailto:mail@407.fyi?subject=407%20FYI%20press">Press &amp; media kit</a></li></ul></div><div class="foot-col foot-main"><span><strong>407 FYI</strong> · Details can change. Confirm before you go.</span><a href="mailto:mail@407.fyi?subject=407%20FYI%20%E2%80%94%20venue%20correction&amp;body=Venue%20name%3A%0AWhat%20changed%3A%0ASource%20or%20details%3A">Flag a closure / suggest an edit</a><span class="aff-disclosure">Affiliate disclosure: some links on this page, including ticket buttons, are sponsored affiliate links. If you book through them, we may earn a commission at no extra cost to you, which helps keep this guide free.</span><nav class="footer-legal"><a href="mailto:mail@407.fyi?subject=407%20FYI%20contact">Contact</a><details class="footer-details"><summary>Privacy Policy</summary><div class="footer-details-body"><p><strong>407 FYI</strong> is a free guide. We don't run accounts and we don't collect your name, email, or phone number.</p><p>What does leave your device: anonymous analytics (page views and taps, via PostHog) and crash reports (via Sentry), so we can keep the guide working. Display preferences like dark mode are stored only in your own browser.</p><p>If you tap "Near me," your location is used on your device to sort venues by distance. It is not stored by us or sold to anyone.</p><p>Ticket, hotel, and dining buttons open partner sites (Viator, GetYourGuide, Hotels.com, inKind). Those sites have their own privacy policies once you leave 407.fyi.</p><p>Questions: <a href="mailto:mail@407.fyi?subject=407%20FYI%20privacy">mail@407.fyi</a>.</p><p><em>Last updated October 2026.</em></p></div></details></nav></div></footer>
   </main>
   <div class="export-layer" id="exportLayer" hidden>
     <button class="export-backdrop" id="exportBackdrop" type="button" aria-label="Close Export Center"></button>
@@ -855,11 +862,10 @@
   }
   let flashbacksReturnY=0;
   function openFlashbacks(historyKey=''){
-    openFullGuide();
     if(!document.body.classList.contains('flashbacks-page'))flashbacksReturnY=window.scrollY;
     if(!$('#exportLayer').hidden)closeExportCenter();
     setViewMode('list');document.body.classList.add('flashbacks-page');capturePageView('guide:flashbacks');
-    document.querySelectorAll('.bottom-tab').forEach(tab=>tab.setAttribute('aria-pressed','false'));
+    document.querySelectorAll('.view-tab').forEach(tab=>tab.setAttribute('aria-pressed','false'));
     const target=historyKey?document.querySelector(`#history-${CSS.escape(historyKey)}`):null;
     requestAnimationFrame(()=>{
       if(target){target.open=true;target.scrollIntoView({block:'start'});target.querySelector('summary')?.focus()}
@@ -977,10 +983,10 @@ function filtered(){
   function openExportCenter(){
     if(state.collection==='picks')exportState.scope='picks';
     const scopeInput=document.querySelector(`[name="exportScope"][value="${exportState.scope}"]`);if(scopeInput)scopeInput.checked=true;
-    exportState.lastFocus=document.activeElement;exportState.navPressed=Array.from(document.querySelectorAll('.bottom-tab')).map(tab=>tab.getAttribute('aria-pressed'));document.querySelectorAll('.bottom-tab').forEach(tab=>tab.setAttribute('aria-pressed',String(tab.id==='exportTab')));const layer=$('#exportLayer');layer.hidden=false;document.body.classList.add('export-open');capturePageView('guide:export');renderExportPreview();requestAnimationFrame(()=>$('#closeExport').focus());
+    exportState.lastFocus=document.activeElement;exportState.navPressed=Array.from(document.querySelectorAll('.view-tab')).map(tab=>tab.getAttribute('aria-pressed'));document.querySelectorAll('.view-tab').forEach(tab=>tab.setAttribute('aria-pressed',String(tab.id==='exportTab')));const layer=$('#exportLayer');layer.hidden=false;document.body.classList.add('export-open');capturePageView('guide:export');renderExportPreview();requestAnimationFrame(()=>$('#closeExport').focus());
   }
   function closeExportCenter(){
-    $('#exportLayer').hidden=true;document.body.classList.remove('export-open');if(exportState.navPressed){document.querySelectorAll('.bottom-tab').forEach((tab,index)=>tab.setAttribute('aria-pressed',exportState.navPressed[index]||'false'));exportState.navPressed=null}capturePageView(`guide:${state.view}`);if(exportState.lastFocus&&document.contains(exportState.lastFocus))exportState.lastFocus.focus();
+    $('#exportLayer').hidden=true;document.body.classList.remove('export-open');if(exportState.navPressed){document.querySelectorAll('.view-tab').forEach((tab,index)=>tab.setAttribute('aria-pressed',exportState.navPressed[index]||'false'));exportState.navPressed=null}capturePageView(`guide:${state.view}`);if(exportState.lastFocus&&document.contains(exportState.lastFocus))exportState.lastFocus.focus();
   }
   const MAP_BOUNDS=[[-81.75,28.25],[-80.7,28.9]];
   function mapPlaces(){return filtered().filter(p=>Number.isFinite(p.lat)&&Number.isFinite(p.lng))}
@@ -1085,26 +1091,8 @@ function filtered(){
     const smooth=!matchMedia('(prefers-reduced-motion: reduce)').matches;
     requestAnimationFrame(()=>$('#browse')?.scrollIntoView({block:'start',behavior:smooth?'smooth':'auto'}));
   }
-  function renderScannerPicks(){
-    const box=$('#scannerPicks');if(!box)return;
-    box.innerHTML=`<button class="scanner-picks-cta" type="button" data-open-picks><span><strong>Browse all ${PICK_ORDER.length} Local Picks</strong><span>Opens the same filtered list used throughout the guide.</span></span><b>See picks →</b></button>`;
-  }
-  function openFullGuide(target){
-    document.documentElement.classList.remove('scanner-mode');
-    if(target)requestAnimationFrame(()=>$(target)?.scrollIntoView({block:'start'}));
-  }
-  function startScannerLocation(){
-    const button=$('#scannerLocation'),status=$('#scannerLocationStatus');
-    if(!navigator.geolocation){status.textContent='Location is unavailable here. The complete local shortlist is still ready.';return}
-    button.disabled=true;button.querySelector('b').textContent='Finding you…';status.textContent='Your browser may ask for location permission.';
-    navigator.geolocation.getCurrentPosition(pos=>{
-      state.position={lat:pos.coords.latitude,lng:pos.coords.longitude};state.sort='distance';button.disabled=false;button.classList.add('active');button.querySelector('strong').textContent='Nearest Local Picks';button.querySelector('span span').textContent='Sorted by approximate straight-line distance.';button.querySelector('b').textContent='Nearest first';status.textContent='Ready: directions use your current starting point.';setLocationControl('Nearest first','Closest places are now at the top','On',true);$('#centerMe').disabled=false;renderScannerPicks();render();
-    },err=>{
-      button.disabled=false;button.querySelector('b').textContent='Try again';const messages={1:'Location permission was denied. The complete local shortlist remains available.',2:'Your location is unavailable. The complete local shortlist remains available.',3:'Location timed out. Tap to try again.'};status.textContent=messages[err.code]||'Location is unavailable. The complete local shortlist remains available.';
-    },{enableHighAccuracy:false,maximumAge:300000,timeout:15000});
-  }
   function showPicksList(){
-    openFullGuide();resetFilters();state.collection='picks';state.open=null;exportState.scope='picks';const scope=document.querySelector('[name="exportScope"][value="picks"]');if(scope)scope.checked=true;setViewMode('list');render();requestAnimationFrame(()=>$('.summary').scrollIntoView({block:'start'}));
+    resetFilters();state.collection='picks';state.open=null;exportState.scope='picks';const scope=document.querySelector('[name="exportScope"][value="picks"]');if(scope)scope.checked=true;setViewMode('list');render();requestAnimationFrame(()=>$('.summary').scrollIntoView({block:'start'}));
   }
   $('#askPicksLink')?.addEventListener('click',e=>{e.preventDefault();showPicksList()});
   function resetAskLocal(){
@@ -1118,15 +1106,14 @@ function filtered(){
   function useLocalPreset(key){
     resetFilters();state.open=null;
     if(LOCAL_GUIDES[key])state.localGuide=key;
-    if(key==='custom')$('#refineFilters').open=true;
+    if(key==='custom')setFiltersPanel(true);
     setViewMode('list');render();
     const button=document.querySelector(`[data-local-preset="${key}"]`);if(button)button.setAttribute('aria-pressed','true');
     const count=filtered().length;
     ($('#askLocalStatus')||{}).textContent=key==='custom'?'Use the occasion, time and price controls below to shape your own shortlist.':`Showing ${count} picks for ${LOCAL_GUIDE_LABELS[key]} below.`;
-    requestAnimationFrame(()=>$(key==='custom'?'#refineFilters':'.summary').scrollIntoView({block:'start'}));
+    requestAnimationFrame(()=>$(key==='custom'?'#filtersPanel':'.summary').scrollIntoView({block:'start'}));
   }
   document.querySelectorAll('[data-local-preset]').forEach(button=>button.addEventListener('click',()=>useLocalPreset(button.dataset.localPreset)));
-  document.querySelectorAll('[data-scanner-preset]').forEach(button=>button.addEventListener('click',()=>{openFullGuide();useLocalPreset(button.dataset.scannerPreset)}));
   function openPick(id){resetFilters();state.open=id;setViewMode('list');render();requestAnimationFrame(()=>document.querySelector(`[data-id="${CSS.escape(id)}"]`)?.scrollIntoView({block:'center'}))}
   function districtKeyOf(p){if(p.district_id)return p.district_id;for(const d of DISTRICTS){if((d.match||[]).includes(p.district))return d.key;}return null;}
 let pendingGroups=null,groupObserver=null;
@@ -1149,7 +1136,7 @@ function render(){
     document.querySelectorAll('[data-district]').forEach(card=>card.setAttribute('aria-pressed',String(card.dataset.district===state.district)));
     document.querySelectorAll('[data-category-chip]').forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.categoryChip===state.category)));
     document.querySelectorAll('[data-category-option]').forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.categoryOption===state.category)));
-    if(state.view==='map')syncMap(false);
+    if(state.view==='map')syncMap(false);syncFiltersState();
   }
   function playNearestArrival(){
     const button=$('#locationBtn'),list=$('#venueList'),reduceMotion=matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -1174,6 +1161,9 @@ function render(){
     PLACES.forEach(p=>{group(p).forEach(key=>{if(grouped[key])grouped[key].add(p.category)})});
     $('#categoryGroups').innerHTML='<div class="category-groups-head"><span class="category-groups-title">Categories</span></div>'+primaries.map(key=>{const cats=[...grouped[key]].sort((a,b)=>a.localeCompare(b));return cats.length?`<section class="category-group"><h4>${CATEGORIES[key]}</h4><div class="category-options">${cats.map(value=>`<button type="button" class="category-option" data-category-option="cat:${esc(value)}" aria-pressed="false">${esc(value)}</button>`).join('')}</div></section>`:''}).join('');
   }
+  function setFiltersPanel(open){const body=$('#filtersBody'),toggle=$('#filtersToggle'),panel=$('#filtersPanel');if(!body||!toggle||!panel)return;body.hidden=!open;toggle.setAttribute('aria-expanded',String(open));panel.classList.toggle('open',open)}
+  function syncFiltersState(){const n=(state.zone!=='all')+(state.occasion!=='all')+(state.daypart!=='all')+(state.price!=='all')+(String(state.category).startsWith('cat:')?1:0);const el=$('#filtersState');if(el)el.textContent=n?`${n} active`:''}
+  $('#filtersToggle')?.addEventListener('click',()=>{const body=$('#filtersBody');setFiltersPanel(!!body&&body.hidden)});
   document.addEventListener('click',e=>{
     const districtCard=e.target.closest('[data-district]');
     if(districtCard){filterToDistrict(districtCard.dataset.district);return}
@@ -1233,7 +1223,7 @@ function render(){
   $('#heroSearchGo')?.addEventListener('click',scrollToBrowse);
   $('#fullList').addEventListener('click',()=>{resetFilters();state.open=null;setViewMode('list');render();requestAnimationFrame(()=>$('.summary').scrollIntoView({block:'start'}))});
   $('#zone').addEventListener('change',e=>{resetAskLocal();state.zone=e.target.value;state.open=null;render();fitAfterRender()});
-  $('#categoryGroups').addEventListener('click',e=>{const button=e.target.closest('[data-category-option]');if(!button)return;resetAskLocal();state.category=state.category===button.dataset.categoryOption?'all':button.dataset.categoryOption;state.open=null;$('#refineFilters').open=false;render();fitAfterRender();requestAnimationFrame(()=>$('.summary').scrollIntoView({block:'start'}))});
+  $('#categoryGroups').addEventListener('click',e=>{const button=e.target.closest('[data-category-option]');if(!button)return;resetAskLocal();state.category=state.category===button.dataset.categoryOption?'all':button.dataset.categoryOption;state.open=null;setFiltersPanel(false);render();fitAfterRender();requestAnimationFrame(()=>$('.summary').scrollIntoView({block:'start'}))});
   $('#occasion').addEventListener('change',e=>{resetAskLocal();state.occasion=e.target.value;state.open=null;render();fitAfterRender()});
   $('#daypart').addEventListener('change',e=>{resetAskLocal();state.daypart=e.target.value;state.open=null;render();fitAfterRender()});
   $('#price').addEventListener('change',e=>{resetAskLocal();state.price=e.target.value;state.open=null;render();fitAfterRender()});
