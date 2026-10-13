@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
     <meta name="color-scheme" content="dark" />
     <title>Mills 50 District Guide · 407 FYI</title>
-    <meta name="description" content="Mills 50 district highlight: Orlando&#x27;s most delicious mile, from Vietnamese pho and hand-pulled noodles to dive bars with legendary status. A scroll presentation from 407 FYI." />
+    <meta name="description" content="Mills 50 district highlight: Orlando&amp;#x27;s most delicious mile, from Vietnamese pho and hand-pulled noodles to dive bars with legendary status. A scroll presentation from 407 FYI." />
     <link rel="canonical" href="https://407.fyi/mills-50-district-guide.html" />
     <meta property="og:title" content="Mills 50 District Guide · 407 FYI" />
-    <meta property="og:description" content="Mills 50 district highlight: Orlando&#x27;s most delicious mile, from Vietnamese pho and hand-pulled noodles to dive bars with legendary status. A scroll presentation from 407 FYI." />
+    <meta property="og:description" content="Mills 50 district highlight: Orlando&amp;#x27;s most delicious mile, from Vietnamese pho and hand-pulled noodles to dive bars with legendary status. A scroll presentation from 407 FYI." />
     <meta property="og:type" content="article" />
     <meta property="og:url" content="https://407.fyi/mills-50-district-guide.html" />
     <meta property="og:image" content="https://407.fyi/img/3e679aa2afd3c52a.webp" />
@@ -195,6 +195,41 @@
       .next-district { font-weight: 700; text-decoration: none; }
       .next-district:hover { text-decoration: underline; }
 
+      /* ---------- Phase 4 · hero photograph (duotone; the type stays the hero) ---------- */
+      .hero-photo { position: absolute; inset: 0; overflow: hidden; }
+      .hero-photo img {
+        width: 100%; height: 100%; display: block; object-fit: cover; object-position: center 38%;
+        filter: grayscale(.5) sepia(.34) hue-rotate(64deg) saturate(.85) brightness(.6) contrast(1.07);
+      }
+      .hero-photo::after {
+        content: ""; position: absolute; inset: 0;
+        background:
+          linear-gradient(180deg, rgba(7, 19, 12, .58) 0%, rgba(7, 19, 12, .30) 36%, rgba(7, 19, 12, .55) 68%, rgba(7, 19, 12, .93) 100%),
+          radial-gradient(ellipse 90% 55% at 50% 108%, rgba(163, 129, 63, .25), transparent 60%);
+      }
+      .hero-in { z-index: 2; }
+      .scroll-cue { z-index: 2; }
+      .hero.has-photo h1, .hero.has-photo .sub, .hero.has-photo .count { text-shadow: 0 2px 30px rgba(4, 10, 6, .6); }
+
+      /* ---------- Phase 4 · flashback panel ---------- */
+      .flashback { max-width: 680px; margin: 0 auto; padding: 9vh var(--pad) 2vh; }
+      .fb-panel {
+        background: var(--surface); border: 1px solid var(--line); border-left: 3px solid var(--accent-ink);
+        border-radius: 18px; padding: clamp(26px, 4.5vw, 40px);
+      }
+      .fb-card h3 {
+        font-family: "Urbanist", sans-serif; font-weight: 800; color: var(--headline);
+        font-size: clamp(1.3rem, 3.2vw, 1.7rem); line-height: 1.22; margin: 0 0 14px;
+      }
+      .fb-card p { margin: 0 0 14px; font-size: 1rem; }
+      .fb-card p:last-child { margin-bottom: 0; }
+      .fb-card .history-reveal { font-weight: 700; color: var(--headline); }
+      .fb-card .history-note { color: var(--muted); }
+      .fb-card .history-source { font-size: .85rem; color: var(--muted); }
+      .fb-card + .fb-card { margin-top: 30px; padding-top: 28px; border-top: 1px solid var(--line); }
+      .fb-more { margin: 18px 2px 0; color: var(--muted); font-size: .92rem; }
+      .photo-credit { font-size: .8rem !important; }
+
       /* ---------- footer ---------- */
       footer { border-top: 1px solid var(--line); margin-top: 4vh; }
       .foot-in { max-width: 860px; margin: 0 auto; padding: 44px var(--pad) 58px; display: grid; gap: 14px; }
@@ -219,12 +254,13 @@
     </style>
   </head>
   <body>
-    <!-- 1 · TITLE SCREEN — type poster on a clean district field -->
+    <!-- 1 · TITLE SCREEN, type poster on a clean district field -->
     <header class="hero" style="background:radial-gradient(ellipse 90% 55% at 50% 108%, rgba(163,127,62,0.28), transparent 60%), linear-gradient(168deg, #142e35, #0c232b 52%, #071318)">
+      
       <div class="hero-in">
         <a class="hero-brand" href="/">407 FYI · A DISTRICT STORY</a>
         <h1>MILLS 50</h1>
-        <p class="sub">Steam first, no apologies — immigrant kitchens, dive bars and band rooms.</p>
+        <p class="sub">Steam first, no apologies, immigrant kitchens, dive bars and band rooms.</p>
         <p class="count">42 hand-verified places · One neighbourhood</p>
       </div>
       <div class="scroll-cue" aria-hidden="true">Scroll</div>
@@ -235,7 +271,7 @@
       <section class="quiet reveal" id="intro">
         <p class="kicker">The District</p>
         <h2>Steam First, No Apologies</h2>
-        <p>Mills 50 does not ease you in—steam first: pho broth rolling from kitchen doors, garlic and star anise over the sidewalk, bass leaking from a bar unchanged since the nineties. Immigrant kitchens, dive bars, band rooms—uninterested in impressing theme parks.</p>
+        <p>Mills 50 does not ease you in, steam first: pho broth rolling from kitchen doors, garlic and star anise over the sidewalk, bass leaking from a bar unchanged since the nineties. Immigrant kitchens, dive bars, band rooms, uninterested in impressing theme parks.</p>
       </section>
       <section class="glide" id="glide-banh-mi-boy" aria-label="Banh Mi Boy">
         <div class="glide-stage" aria-hidden="true">
@@ -261,7 +297,7 @@
           <article class="glide-card reveal">
             <p class="kicker">02 · Japanese</p>
             <h2>Udon Like A Craftsman</h2>
-            <p>Zaru does one thing like a craftsman who never heard of shortcuts: Sanuki-style udon made in house from wheat shipped from Kagawa Prefecture, thick and bouncy. The Nikutama—noodles, seasoned beef, soft egg—is the bowl people cross town for. Slurp loudly.</p>
+            <p>Zaru does one thing like a craftsman who never heard of shortcuts: Sanuki-style udon made in house from wheat shipped from Kagawa Prefecture, thick and bouncy. The Nikutama: noodles, seasoned beef, soft egg, is the bowl people cross town for. Slurp loudly.</p>
             <p class="venue-meta">Zaru · Japanese · $$</p>
             <a class="venue-btn" href="/?venue=zaru">See the venue &rarr;</a>
           </article>
@@ -271,16 +307,16 @@
       <section class="pullquote reveal" id="quote">
         <div>
           <p class="kicker">The Local Test</p>
-          <blockquote><span class="mark">&ldquo;</span>Mills 50 does not ease you in — steam first.<span class="mark">&rdquo;</span></blockquote>
+          <blockquote><span class="mark">&ldquo;</span>Mills 50 does not ease you in, steam first.<span class="mark">&rdquo;</span></blockquote>
         </div>
       </section>
-      <!-- SPLIT — the short list -->
+      <!-- SPLIT, the short list -->
       <section class="split" id="short-list">
         <div class="minimap reveal"><svg class="minimap-art" viewBox="0 0 560 640" role="img" aria-label="Stylised point map of Mills 50 venues: 1 The Guesthouse, 2 Cowboy Curry, 3 Chewy Boba Company"><g><circle class="pt" cx="91" cy="284" r="2.6"/><circle class="pt" cx="64" cy="559" r="2.6"/><circle class="pt" cx="180" cy="514" r="2.6"/><circle class="pt" cx="91" cy="553" r="2.6"/><circle class="pt" cx="91" cy="553" r="2.6"/><circle class="pt" cx="450" cy="591" r="2.6"/><circle class="pt" cx="91" cy="591" r="2.6"/><circle class="pt" cx="91" cy="476" r="2.6"/><circle class="pt" cx="91" cy="476" r="2.6"/><circle class="pt" cx="517" cy="476" r="2.6"/><circle class="pt" cx="69" cy="49" r="2.6"/><circle class="pt" cx="180" cy="591" r="2.6"/><circle class="pt" cx="91" cy="361" r="2.6"/><circle class="pt" cx="552" cy="553" r="2.6"/><circle class="pt" cx="68" cy="553" r="2.6"/><circle class="pt" cx="91" cy="361" r="2.6"/><circle class="pt" cx="91" cy="399" r="2.6"/><circle class="pt" cx="180" cy="591" r="2.6"/><circle class="pt" cx="91" cy="169" r="2.6"/><circle class="pt" cx="91" cy="553" r="2.6"/><circle class="pt" cx="64" cy="559" r="2.6"/><circle class="pt" cx="68" cy="541" r="2.6"/><circle class="pt" cx="103" cy="541" r="2.6"/><circle class="pt" cx="85" cy="171" r="2.6"/><circle class="pt" cx="59" cy="139" r="2.6"/><circle class="pt" cx="410" cy="627" r="2.6"/><circle class="pt" cx="43" cy="141" r="2.6"/><circle class="pt" cx="84" cy="561" r="2.6"/><circle class="pt" cx="91" cy="511" r="2.6"/><circle class="pt" cx="76" cy="373" r="2.6"/><circle class="pt" cx="8" cy="117" r="2.6"/><circle class="pt" cx="78" cy="590" r="2.6"/><circle class="pt" cx="194" cy="392" r="2.6"/><circle class="pt" cx="185" cy="419" r="2.6"/><circle class="pt" cx="281" cy="568" r="2.6"/><circle class="pt" cx="64" cy="559" r="2.6"/><circle class="pt" cx="84" cy="455" r="2.6"/><circle class="pt" cx="85" cy="226" r="2.6"/><circle class="pt" cx="84" cy="43" r="2.6"/></g><g class="marker"><circle cx="64" cy="559" r="13"/><text x="64" y="563">2</text></g><g class="marker"><circle cx="84" cy="175" r="13"/><text x="84" y="179">1</text></g><g class="marker"><circle cx="93" cy="554" r="13"/><text x="93" y="558">3</text></g></svg></div>
         <div class="reveal">
           <p class="kicker">The Short List</p>
           <h2>Three to Start</h2>
-          <p class="lede">Three names to open with &mdash; every other Mills 50 place is in the full list below.</p>
+          <p class="lede">Three names to open with: every other Mills 50 place is in the full list below.</p>
           <a class="ave-row" href="/?venue=the-guesthouse"><span class="n">1</span><span class="who"><b>The Guesthouse</b><span>Restaurant · $$</span></span><span class="arr">&rarr;</span></a>
           <a class="ave-row" href="/?venue=cowboy-curry"><span class="n">2</span><span class="who"><b>Cowboy Curry</b><span>Japanese · $$</span></span><span class="arr">&rarr;</span></a>
           <a class="ave-row" href="/?venue=chewy-boba-company"><span class="n">3</span><span class="who"><b>Chewy Boba Company</b><span>Cafe · $</span></span><span class="arr">&rarr;</span></a>
@@ -308,18 +344,30 @@
           <article class="glide-card reveal">
             <p class="kicker">03 · The Finale</p>
             <h2>Noodle Crawl, Then The Night</h2>
-            <p>Run it locally: banh mi and sugarcane juice at Mills Market for breakfast, a Colonial noodle crawl—pho, roti, udon—in the afternoon. Dinner at Domu, Will's Pub's headliner, and end at Wally's or Tako Cheena, whichever pulls first.</p>
+            <p>Run it locally: banh mi and sugarcane juice at Mills Market for breakfast, a Colonial noodle crawl, pho, roti, udon, in the afternoon. Dinner at Domu, Will's Pub's headliner, and end at Wally's or Tako Cheena, whichever pulls first.</p>
             <p class="venue-meta">Domu · Noodles · $$</p>
             <a class="venue-btn" href="/?venue=domu">See the venue &rarr;</a>
           </article>
         </div>
       </section>
-      <!-- CLOSING — the whole neighbourhood -->
+      <!-- FLASHBACK, the district's history, from the anthology -->
+      <section class="flashback reveal" id="flashback">
+        <p class="kicker">Flashback · Orlando History</p>
+        <div class="fb-panel">
+          <article class="fb-card">
+            <h3>Why is it called Mills 50?</h3>
+            <p class="history-story">It's literally the crossroads: Mills Avenue meets State Road 50 (Colonial Drive), and the neighborhood named itself after the intersection.</p><p class="history-story">Starting in the late 1970s, Vietnamese refugees resettled through Catholic Charities established markets, bakeries, and pho shops there, and the area grew into "Little Saigon", one of Florida's most concentrated Vietnamese business districts.</p><p class="history-note">Local note: you're eating in a neighborhood named after a street corner with a Little Saigon heart.</p>
+            
+          </article>
+        </div>
+        <p class="fb-more">Every district has a past, all 49 stories live in <a href="/archive.html?flashbacks=1">the Flashbacks anthology &rarr;</a></p>
+      </section>
+      <!-- CLOSING, the whole neighbourhood -->
       <section class="closing" id="all-places">
         <div class="reveal">
           <p class="kicker">The Full List</p>
           <h2>That&rsquo;s the story. Here&rsquo;s the whole neighborhood.</h2>
-          <p class="lede">All 42 Mills 50 places from the guide, A&ndash;Z. Tap any name to open its card &mdash; directions, details and booking live there, not in the story.</p>
+          <p class="lede">All 42 Mills 50 places from the guide, A-Z. Tap any name to open its card: directions, details and booking live there, not in the story.</p>
         </div>
         <ul class="ix">
           <li><a href="/?venue=amar-orlando"><span class="ix-name">Amar Orlando</span><span class="ix-meta">Mediterranean · $$</span></a></li>
@@ -374,7 +422,7 @@
     <footer>
       <div class="foot-in">
         <a class="back-link" href="/">&larr; Back to the full guide</a>
-        <p class="brand-line">407 FYI &mdash; an independent Orlando guide. Details can change; confirm before you go.</p>
+        <p class="brand-line">407 FYI, an independent Orlando guide. Details can change; confirm before you go.</p>
         <p>Hand-verified Orlando places · Checked October 2026 · Local Picks are never sponsored · Corrections: <a href="mailto:mail@407.fyi">mail@407.fyi</a></p>
         <p>Some links on 407 FYI are affiliate links. They never affect which places we list, rank, or recommend.</p>
       </div>

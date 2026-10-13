@@ -195,6 +195,41 @@
       .next-district { font-weight: 700; text-decoration: none; }
       .next-district:hover { text-decoration: underline; }
 
+      /* ---------- Phase 4 · hero photograph (duotone; the type stays the hero) ---------- */
+      .hero-photo { position: absolute; inset: 0; overflow: hidden; }
+      .hero-photo img {
+        width: 100%; height: 100%; display: block; object-fit: cover; object-position: center 38%;
+        filter: grayscale(.5) sepia(.34) hue-rotate(64deg) saturate(.85) brightness(.6) contrast(1.07);
+      }
+      .hero-photo::after {
+        content: ""; position: absolute; inset: 0;
+        background:
+          linear-gradient(180deg, rgba(7, 19, 12, .58) 0%, rgba(7, 19, 12, .30) 36%, rgba(7, 19, 12, .55) 68%, rgba(7, 19, 12, .93) 100%),
+          radial-gradient(ellipse 90% 55% at 50% 108%, rgba(163, 129, 63, .25), transparent 60%);
+      }
+      .hero-in { z-index: 2; }
+      .scroll-cue { z-index: 2; }
+      .hero.has-photo h1, .hero.has-photo .sub, .hero.has-photo .count { text-shadow: 0 2px 30px rgba(4, 10, 6, .6); }
+
+      /* ---------- Phase 4 · flashback panel ---------- */
+      .flashback { max-width: 680px; margin: 0 auto; padding: 9vh var(--pad) 2vh; }
+      .fb-panel {
+        background: var(--surface); border: 1px solid var(--line); border-left: 3px solid var(--accent-ink);
+        border-radius: 18px; padding: clamp(26px, 4.5vw, 40px);
+      }
+      .fb-card h3 {
+        font-family: "Urbanist", sans-serif; font-weight: 800; color: var(--headline);
+        font-size: clamp(1.3rem, 3.2vw, 1.7rem); line-height: 1.22; margin: 0 0 14px;
+      }
+      .fb-card p { margin: 0 0 14px; font-size: 1rem; }
+      .fb-card p:last-child { margin-bottom: 0; }
+      .fb-card .history-reveal { font-weight: 700; color: var(--headline); }
+      .fb-card .history-note { color: var(--muted); }
+      .fb-card .history-source { font-size: .85rem; color: var(--muted); }
+      .fb-card + .fb-card { margin-top: 30px; padding-top: 28px; border-top: 1px solid var(--line); }
+      .fb-more { margin: 18px 2px 0; color: var(--muted); font-size: .92rem; }
+      .photo-credit { font-size: .8rem !important; }
+
       /* ---------- footer ---------- */
       footer { border-top: 1px solid var(--line); margin-top: 4vh; }
       .foot-in { max-width: 860px; margin: 0 auto; padding: 44px var(--pad) 58px; display: grid; gap: 14px; }
@@ -219,12 +254,13 @@
     </style>
   </head>
   <body>
-    <!-- 1 · TITLE SCREEN — type poster on a clean district field -->
+    <!-- 1 · TITLE SCREEN, type poster on a clean district field -->
     <header class="hero" style="background:radial-gradient(ellipse 90% 55% at 50% 108%, rgba(178,148,94,0.28), transparent 60%), linear-gradient(168deg, #3a2816, #2a1d10 52%, #171009)">
+      
       <div class="hero-in">
         <a class="hero-brand" href="/">407 FYI · A DISTRICT STORY</a>
         <h1>MILK DISTRICT</h1>
-        <p class="sub">Grit, dairy, great sandwiches — Orlando at its grittiest and tastiest.</p>
+        <p class="sub">Grit, dairy, great sandwiches: Orlando at its grittiest and tastiest.</p>
         <p class="count">20 hand-verified places · One neighbourhood</p>
       </div>
       <div class="scroll-cue" aria-hidden="true">Scroll</div>
@@ -235,7 +271,7 @@
       <section class="quiet reveal" id="intro">
         <p class="kicker">The District</p>
         <h2>Grit, Dairy, Great Sandwiches</h2>
-        <p>The Milk District got its name honestly: the T.G. Lee dairy plant anchoring Robinson Street for a century, its mural cow watching. Around it grew Orlando at its grittiest and tastiest—blocks where sandwich counters have lines and brewers pour nearby.</p>
+        <p>The Milk District got its name honestly: the T.G. Lee dairy plant anchoring Robinson Street for a century, its mural cow watching. Around it grew Orlando at its grittiest and tastiest, blocks where sandwich counters have lines and brewers pour nearby.</p>
       </section>
       <section class="glide" id="glide-beefy-king" aria-label="Beefy King">
         <div class="glide-stage" aria-hidden="true">
@@ -246,7 +282,7 @@
           <article class="glide-card reveal">
             <p class="kicker">01 · Sandwiches</p>
             <h2>Defend It In A Fistfight</h2>
-            <p>Every city has a sandwich shop its people would defend—Orlando's is Beefy King. Since 1968 the Bumby Avenue counter has steamed roast beef onto soft kaiser rolls, Beefy Spuds alongside. It survived an arson fire and came back swinging.</p>
+            <p>Every city has a sandwich shop its people would defend, Orlando's is Beefy King. Since 1968 the Bumby Avenue counter has steamed roast beef onto soft kaiser rolls, Beefy Spuds alongside. It survived an arson fire and came back swinging.</p>
             <p class="venue-meta">Beefy King · Sandwiches · $</p>
             <a class="venue-btn" href="/?venue=beefy-king">See the venue &rarr;</a>
           </article>
@@ -271,16 +307,16 @@
       <section class="pullquote reveal" id="quote">
         <div>
           <p class="kicker">The Local Test</p>
-          <blockquote><span class="mark">&ldquo;</span>Every city has a sandwich shop its people would defend — Orlando’s is Beefy King.<span class="mark">&rdquo;</span></blockquote>
+          <blockquote><span class="mark">&ldquo;</span>Every city has a sandwich shop its people would defend, Orlando’s is Beefy King.<span class="mark">&rdquo;</span></blockquote>
         </div>
       </section>
-      <!-- SPLIT — the short list -->
+      <!-- SPLIT, the short list -->
       <section class="split" id="short-list">
         <div class="minimap reveal"><svg class="minimap-art" viewBox="0 0 560 640" role="img" aria-label="Stylised point map of Milk District venues: 1 Iron Cow, 2 Mengs Kitchen, 3 Black Magic Pizza"><g><circle class="pt" cx="327" cy="174" r="2.6"/><circle class="pt" cx="280" cy="96" r="2.6"/><circle class="pt" cx="517" cy="96" r="2.6"/><circle class="pt" cx="359" cy="174" r="2.6"/><circle class="pt" cx="398" cy="74" r="2.6"/><circle class="pt" cx="43" cy="591" r="2.6"/><circle class="pt" cx="327" cy="174" r="2.6"/><circle class="pt" cx="322" cy="150" r="2.6"/><circle class="pt" cx="346" cy="152" r="2.6"/><circle class="pt" cx="370" cy="241" r="2.6"/><circle class="pt" cx="404" cy="71" r="2.6"/><circle class="pt" cx="344" cy="241" r="2.6"/><circle class="pt" cx="343" cy="49" r="2.6"/><circle class="pt" cx="396" cy="156" r="2.6"/><circle class="pt" cx="309" cy="52" r="2.6"/><circle class="pt" cx="345" cy="49" r="2.6"/><circle class="pt" cx="454" cy="109" r="2.6"/></g><g class="marker"><circle cx="201" cy="96" r="13"/><text x="201" y="100">2</text></g><g class="marker"><circle cx="355" cy="150" r="13"/><text x="355" y="154">1</text></g><g class="marker"><circle cx="332" cy="162" r="13"/><text x="332" y="167">3</text></g></svg></div>
         <div class="reveal">
           <p class="kicker">The Short List</p>
           <h2>Three to Start</h2>
-          <p class="lede">Three names to open with &mdash; every other Milk District place is in the full list below.</p>
+          <p class="lede">Three names to open with: every other Milk District place is in the full list below.</p>
           <a class="ave-row" href="/?venue=iron-cow"><span class="n">1</span><span class="who"><b>Iron Cow</b><span>Restaurant · $$</span></span><span class="arr">&rarr;</span></a>
           <a class="ave-row" href="/?venue=mengs"><span class="n">2</span><span class="who"><b>Mengs Kitchen</b><span>Restaurant · $</span></span><span class="arr">&rarr;</span></a>
           <a class="ave-row" href="/?venue=black-magic-pizza"><span class="n">3</span><span class="who"><b>Black Magic Pizza</b><span>Pizza · $$</span></span><span class="arr">&rarr;</span></a>
@@ -308,18 +344,30 @@
           <article class="glide-card reveal">
             <p class="kicker">03 · The Finale</p>
             <h2>Graze, Pour, Graze Again</h2>
-            <p>Come hungry and walk it: Stasio's namesake sub for lunch, Sideward's taps fifty feet from the tanks, then the Milkhouse as the neighborhood living room. Start early at Se7en Bites—locals know the pot pie line forms before the pie does.</p>
+            <p>Come hungry and walk it: Stasio's namesake sub for lunch, Sideward's taps fifty feet from the tanks, then the Milkhouse as the neighborhood living room. Start early at Se7en Bites, locals know the pot pie line forms before the pie does.</p>
             <p class="venue-meta">Stasio's Italian Deli · Italian · $</p>
             <a class="venue-btn" href="/?venue=stasios">See the venue &rarr;</a>
           </article>
         </div>
       </section>
-      <!-- CLOSING — the whole neighbourhood -->
+      <!-- FLASHBACK, the district's history, from the anthology -->
+      <section class="flashback reveal" id="flashback">
+        <p class="kicker">Flashback · Orlando History</p>
+        <div class="fb-panel">
+          <article class="fb-card">
+            <h3>Why is it called the Milk District?</h3>
+            <p class="history-story">Because of a dairy. The T.G. Lee Dairy plant was founded in 1925, and founder Thomas Gilbert Lee started with a single cow producing milk for Central Florida.</p><p class="history-story">The plant still stands as the district's landmark, and the strip of independent shops and bars around it picked up the nickname. A whole nightlife district, named after one cow.</p><p class="history-note">Local note: one cow. That's the whole origin story.</p>
+            
+          </article>
+        </div>
+        <p class="fb-more">Every district has a past, all 49 stories live in <a href="/archive.html?flashbacks=1">the Flashbacks anthology &rarr;</a></p>
+      </section>
+      <!-- CLOSING, the whole neighbourhood -->
       <section class="closing" id="all-places">
         <div class="reveal">
           <p class="kicker">The Full List</p>
           <h2>That&rsquo;s the story. Here&rsquo;s the whole neighborhood.</h2>
-          <p class="lede">All 20 Milk District places from the guide, A&ndash;Z. Tap any name to open its card &mdash; directions, details and booking live there, not in the story.</p>
+          <p class="lede">All 20 Milk District places from the guide, A-Z. Tap any name to open its card: directions, details and booking live there, not in the story.</p>
         </div>
         <ul class="ix">
           <li><a href="/?venue=bad-ass-sandwich"><span class="ix-name">Bad AS's Sandwich</span><span class="ix-meta">Burgers &amp; sandwiches · $$</span></a></li>
@@ -352,7 +400,7 @@
     <footer>
       <div class="foot-in">
         <a class="back-link" href="/">&larr; Back to the full guide</a>
-        <p class="brand-line">407 FYI &mdash; an independent Orlando guide. Details can change; confirm before you go.</p>
+        <p class="brand-line">407 FYI, an independent Orlando guide. Details can change; confirm before you go.</p>
         <p>Hand-verified Orlando places · Checked October 2026 · Local Picks are never sponsored · Corrections: <a href="mailto:mail@407.fyi">mail@407.fyi</a></p>
         <p>Some links on 407 FYI are affiliate links. They never affect which places we list, rank, or recommend.</p>
       </div>
