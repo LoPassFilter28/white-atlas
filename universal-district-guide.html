@@ -29,30 +29,30 @@
            College Park            : collegiate navy  -> warm bronze
          ============================================================ */
       :root {
-        --grad-a: #050e33;
-        --grad-b: #7c3aed;
-        --grad-mid: #2a1660;
-        --ink: #191233;
-        --ink-soft: #484168;
-        --paper: #f4f3fa;
+        --grad-a: #1b1f33;
+        --grad-b: #7bedb4;
+        --grad-mid: #326049;
+        --ink: #1b3327;
+        --ink-soft: #416854;
+        --paper: #faf6ec;
         --paper-2: #eceaf6;
         --card: #fffefd;
-        --line: rgba(25, 18, 51, 0.14);
-        --gold: #6d28d9;
-        --gold-bright: #a78bfa;
-        --green-deep: #1b1040;
-        --shadow: 0 24px 60px rgba(16, 8, 48, 0.18);
+        --line: rgba(23, 51, 37, 0.14);
+        --gold: #71d9a5;
+        --gold-bright: #9bfacb;
+        --green-deep: #214031;
+        --shadow: 0 24px 60px rgba(22, 48, 35, 0.18);
         color-scheme: light;
       }
       @media (prefers-color-scheme: dark) {
         :root {
           --ink: #efecfc;
-          --ink-soft: #c2bce0;
-          --paper: #070a20;
-          --paper-2: #05081a;
-          --card: #10142e;
-          --line: rgba(239, 236, 252, 0.16);
-          --gold: #a78bfa;
+          --ink-soft: #bce0ce;
+          --paper: #111220;
+          --paper-2: #0e0f1a;
+          --card: #181b2e;
+          --line: rgba(243, 252, 236, 0.16);
+          --gold: #9bfacb;
           --shadow: 0 24px 60px rgba(0, 0, 0, 0.5);
           color-scheme: dark;
         }
@@ -114,13 +114,13 @@
         position: absolute; inset: 0; z-index: -1;
         background:
           linear-gradient(178deg,
-            rgba(5, 14, 51, 0.46) 0%,
-            rgba(5, 14, 51, 0.10) 34%,
-            rgba(10, 8, 48, 0.58) 68%,
-            rgba(4, 6, 26, 0.97) 100%),
+            rgba(23, 51, 37, 0.46) 0%,
+            rgba(23, 51, 37, 0.10) 34%,
+            rgba(22, 48, 35, 0.58) 68%,
+            rgba(12, 26, 19, 0.97) 100%),
           linear-gradient(100deg,
-            rgba(5, 14, 51, 0.55) 0%,
-            rgba(124, 58, 237, 0.20) 78%);
+            rgba(23, 51, 37, 0.55) 0%,
+            rgba(223, 237, 213, 0.20) 78%);
       }
       .hero-inner {
         width: min(1180px, 100% - 2.5rem);
@@ -152,7 +152,7 @@
         line-height: 1.45;
         max-width: 34ch;
         margin: 0;
-        color: #e6e0ff;
+        color: #e0fff0;
       }
       .hero .scroll-cue {
         margin-top: 3.2rem;
@@ -160,7 +160,7 @@
         font-weight: 600;
         letter-spacing: 0.28em;
         text-transform: uppercase;
-        color: rgba(244, 241, 255, 0.75);
+        color: rgba(247, 255, 241, 0.75);
         display: flex; align-items: center; gap: 0.9rem;
       }
       .hero .scroll-cue::after {
@@ -175,7 +175,7 @@
       }
       .band.alt { background: var(--paper-2); }
       .band.gradient {
-        background: linear-gradient(160deg, var(--grad-a) 0%, var(--grad-mid) 58%, #4c1d95 130%);
+        background: linear-gradient(160deg, var(--grad-a) 0%, var(--grad-mid) 58%, #4d9571 130%);
         color: #efeaff;
       }
       .wrap {
@@ -209,7 +209,7 @@
         max-width: 56ch;
         margin: 0;
       }
-      .band.gradient .section-intro { color: #d9d2f5; }
+      .band.gradient .section-intro { color: #d2f5e3; }
 
       /* ---------- intro narrative ---------- */
       .intro-text {
@@ -312,9 +312,9 @@
         padding: 2rem 0;
         border-top: 1px solid var(--line);
       }
-      .band.gradient .day-row { border-top-color: rgba(239, 234, 255, 0.22); }
+      .band.gradient .day-row { border-top-color: rgba(243, 255, 234, 0.22); }
       .day-row:last-child { border-bottom: 1px solid var(--line); }
-      .band.gradient .day-row:last-child { border-bottom-color: rgba(239, 234, 255, 0.22); }
+      .band.gradient .day-row:last-child { border-bottom-color: rgba(243, 255, 234, 0.22); }
       .day-row .when {
         font-family: "Playfair Display", Georgia, serif;
         font-weight: 700;
@@ -337,7 +337,7 @@
       .closing {
         text-align: center;
         padding: clamp(5rem, 12vw, 9rem) 0 clamp(3.5rem, 8vw, 5rem);
-        background: linear-gradient(180deg, var(--paper) 0%, var(--grad-a) 34%, #03061a 100%);
+        background: linear-gradient(180deg, var(--paper) 0%, var(--grad-a) 34%, #0e0f1a 100%);
         color: #efeaff;
       }
       .closing h2 {
@@ -349,7 +349,7 @@
         max-width: 18ch;
       }
       .closing p {
-        color: #cfc8ec;
+        color: #c8ecda;
         max-width: 46ch;
         margin: 0 auto 2.6rem;
         font-size: 1.08rem;
@@ -360,7 +360,7 @@
         font-size: 1.05rem;
         letter-spacing: 0.02em;
         color: #ffffff;
-        background: linear-gradient(120deg, #8b5cf6, var(--grad-b));
+        background: linear-gradient(120deg, #80f6bb, var(--grad-b));
         padding: 1.05rem 2.4rem;
         border-radius: 999px;
         text-decoration: none;
@@ -372,8 +372,8 @@
         box-shadow: 0 24px 48px rgba(0, 0, 0, 0.42);
       }
       footer {
-        background: #03061a;
-        color: rgba(239, 234, 255, 0.62);
+        background: #0e0f1a;
+        color: rgba(243, 255, 234, 0.62);
         text-align: center;
         padding: 0 1.25rem 2.6rem;
         font-size: 0.85rem;
@@ -381,22 +381,22 @@
         text-transform: uppercase;
       }
     </style>
-  <meta property="og:title" content="Universal District Guide · 407 FYI"><meta property="og:description" content="Universal district highlight: CityWalk after dark, Epic Universe, and the chocolate factory that ate a restaurant. A scroll presentation from 407 FYI."><meta property="og:type" content="article"><meta property="og:url" content="https://407.fyi/universal-district-guide.html"><meta name="twitter:card" content="summary"><link rel="icon" href="/favicon.ico" sizes="any"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest"><meta name="theme-color" content="#0a1811"><style>
-.fyi-top{position:relative;z-index:60;background:#0a1811;border-bottom:1px solid #24402f;font-family:Urbanist,system-ui,-apple-system,"Segoe UI",sans-serif}
+  <meta property="og:title" content="Universal District Guide · 407 FYI"><meta property="og:description" content="Universal district highlight: CityWalk after dark, Epic Universe, and the chocolate factory that ate a restaurant. A scroll presentation from 407 FYI."><meta property="og:type" content="article"><meta property="og:url" content="https://407.fyi/universal-district-guide.html"><meta property="og:image" content="https://407.fyi/img/4cf16763628c5546.webp"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="https://407.fyi/img/4cf16763628c5546.webp"><link rel="icon" href="/favicon.ico" sizes="any"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest"><meta name="theme-color" content="#0a1811"><style>
+.fyi-top{position:relative;z-index:60;background:#0c1812;border-bottom:1px solid #24402f;font-family:Urbanist,system-ui,-apple-system,"Segoe UI",sans-serif}
 .fyi-top-in{max-width:1200px;margin:0 auto;padding:12px 20px;display:flex;align-items:center;gap:16px;flex-wrap:wrap}
 .fyi-brand{color:#e8e2d4;text-decoration:none;font-weight:800;letter-spacing:.14em;font-size:1rem}
 .fyi-crumb{color:#9db3a4;font-size:.85rem;display:flex;gap:8px;align-items:center;flex-wrap:wrap}
-.fyi-crumb a{color:#9db3a4;text-decoration:none}.fyi-crumb a:hover{color:#c9a55c}
+.fyi-crumb a{color:#9db3a4;text-decoration:none}.fyi-crumb a:hover{color:#c9a969}
 .fyi-crumb b{color:#e8e2d4;font-weight:600}
-.fyi-top nav{margin-left:auto}.fyi-top nav a{color:#c9a55c;text-decoration:none;font-size:.88rem;font-weight:700}
-.fyi-cred{background:#0d2016;border-bottom:1px solid #24402f;color:#9db3a4;font-family:Urbanist,system-ui,sans-serif;font-size:.82rem}
+.fyi-top nav{margin-left:auto}.fyi-top nav a{color:#c9a969;text-decoration:none;font-size:.88rem;font-weight:700}
+.fyi-cred{background:#112018;border-bottom:1px solid #24402f;color:#9db3a4;font-family:Urbanist,system-ui,sans-serif;font-size:.82rem}
 .fyi-cred-in{max-width:1200px;margin:0 auto;padding:8px 20px}
-.fyi-cred a{color:#c9a55c;text-decoration:none}
-.fyi-foot{background:#0a1811;border-top:1px solid #24402f;color:#9db3a4;font-family:Urbanist,system-ui,-apple-system,"Segoe UI",sans-serif;margin-top:0}
+.fyi-cred a{color:#c9a969;text-decoration:none}
+.fyi-foot{background:#0c1812;border-top:1px solid #24402f;color:#9db3a4;font-family:Urbanist,system-ui,-apple-system,"Segoe UI",sans-serif;margin-top:0}
 .fyi-foot-in{max-width:1200px;margin:0 auto;padding:34px 20px 26px;display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:26px}
 .fyi-foot h3{color:#e8e2d4;font-size:.78rem;letter-spacing:.22em;text-transform:uppercase;margin:0 0 12px}
 .fyi-foot ul{list-style:none;margin:0;padding:0;display:grid;gap:8px;font-size:.9rem}
-.fyi-foot a{color:#9db3a4;text-decoration:none}.fyi-foot a:hover{color:#c9a55c}
+.fyi-foot a{color:#9db3a4;text-decoration:none}.fyi-foot a:hover{color:#c9a969}
 .fyi-foot-base{max-width:1200px;margin:0 auto;padding:0 20px 26px;font-size:.8rem;line-height:1.55}
 </style></head>
   <body><div class="fyi-top"><div class="fyi-top-in"><a class="fyi-brand" href="/">407 FYI</a><span class="fyi-crumb"><a href="/">Guide</a><span aria-hidden="true">/</span><a href="/#districts">Districts</a><span aria-hidden="true">/</span><b aria-current="page">Universal</b></span><nav><a href="/">Full guide</a></nav></div></div><div class="fyi-cred"><div class="fyi-cred-in">Hand-verified Orlando places · Checked October 2026 · Local Picks are never sponsored · Corrections: <a href="mailto:mail@407.fyi">mail@407.fyi</a></div></div>
@@ -565,7 +565,7 @@
     <section class="closing">
       <div class="wrap reveal">
         <h2>Universal is one chapter. The guide has the whole book.</h2>
-        <p>Five hundred plus Orlando spots, picked by locals, organized the way you actually plan a day. Start beyond the gates, then wander.</p>
+        <p>Six hundred plus Orlando spots, picked by locals, organized the way you actually plan a day. Start beyond the gates, then wander.</p>
         <a class="btn-guide" href="/what-visitors-google-orlando.html" target="_blank" rel="noopener">Back to the full guide</a>
       </div>
     </section>
