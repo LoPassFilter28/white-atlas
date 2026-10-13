@@ -21,7 +21,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Urbanist:wght@600;700;800&amp;display=swap" rel="stylesheet" />
     <style>
       /* Night Drive tokens (from the main guide) + district gradient */
-      :root {
+      :root { --scrim: rgba(4,10,6,0.6); --g-panel: #14220f; --g-base: #040a06; --dur-reveal: 900ms; --dur-glide: 1200ms; --dur-ghost: 1400ms; --dur-cue: 2400ms;
         color-scheme: dark;
         --bg: #0a1811; --surface: #122419; --soft: #172a1f; --ink: #f0e8d5;
         --muted: #c6bba2; --line: #2f4a38; --accent: #765b2f; --accent-ink: #d4b573;
@@ -39,14 +39,14 @@
       }
       h1, h2, .display { font-family: "Urbanist", "Manrope", sans-serif; }
       a { color: var(--accent-ink); }
-      a:focus-visible, .venue-btn:focus-visible { outline: 2px solid var(--focus); outline-offset: 3px; }
+      a:focus-visible, .venue-btn:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
       .kicker {
         font-family: "Urbanist", sans-serif; font-weight: 700; letter-spacing: .22em;
-        font-size: .72rem; text-transform: uppercase; color: var(--accent-ink); margin: 0 0 18px;
+        font-size:.72rem; text-transform: uppercase; color: var(--accent-ink); margin: 0 0 18px;
       }
 
       /* ---------- reveal on scroll (armed by JS; content visible without it) ---------- */
-      .reveal-armed .reveal { opacity: 0; transform: translateY(26px); transition: opacity .9s ease, transform .9s ease; }
+      .reveal-armed .reveal { opacity: 0; transform: translateY(26px); transition: opacity var(--dur-reveal) ease, transform var(--dur-reveal) ease; }
       .reveal-armed .reveal.in { opacity: 1; transform: none; }
 
       /* ---------- 1 · title screen ---------- */
@@ -60,7 +60,7 @@
       .hero-in { position: relative; max-width: 900px; }
       .hero-brand {
         font-family: "Urbanist", sans-serif; font-weight: 800; letter-spacing: .3em;
-        font-size: .78rem; color: var(--ink); text-decoration: none; opacity: .85;
+        font-size:.78rem; color: var(--ink); text-decoration: none; opacity: .85;
       }
       .hero h1 {
         margin: 26px 0 8px; font-weight: 800; color: var(--headline);
@@ -70,16 +70,16 @@
         margin: 10px auto 0; max-width: 620px; font-size: clamp(1.05rem, 2.6vw, 1.45rem);
         color: var(--ink); font-weight: 500;
       }
-      .hero .count { margin-top: 30px; color: var(--muted); font-size: .86rem; letter-spacing: .12em; text-transform: uppercase; }
+      .hero .count { margin-top: 30px; color: var(--muted); font-size:.88rem; letter-spacing: .12em; text-transform: uppercase; }
       .scroll-cue {
         position: absolute; left: 50%; bottom: 26px; transform: translateX(-50%);
-        color: var(--muted); font-size: .7rem; letter-spacing: .3em; text-transform: uppercase;
+        color: var(--muted); font-size:.72rem; letter-spacing: .3em; text-transform: uppercase;
         display: grid; justify-items: center; gap: 8px;
       }
       .scroll-cue::after {
         content: ""; width: 1px; height: 44px;
         background: linear-gradient(var(--accent-ink), transparent);
-        animation: cue 2.4s ease-in-out infinite;
+        animation: cue var(--dur-cue) ease-in-out infinite;
       }
       @keyframes cue { 0%, 100% { transform: scaleY(.55); opacity: .4; } 50% { transform: scaleY(1); opacity: 1; } }
 
@@ -96,13 +96,13 @@
       .glide-stage {
         position: sticky; top: 0; height: 100svh; overflow: hidden;
       }
-      .glide-bg { position: absolute; inset: 0; transition: opacity 1.2s ease; }
+      .glide-bg { position: absolute; inset: 0; transition: opacity var(--dur-glide) ease; }
       .glide-bg.b { opacity: 0; }
       .glide.in-view .glide-bg.b { opacity: 1; }
       .glide-bg.a1 { background: radial-gradient(ellipse 80% 60% at 18% 110%, rgba(163,129,63,.35), transparent 62%), linear-gradient(155deg, #10301d, var(--d-a) 58%, #060f09); }
       .glide-bg.b1 { background: radial-gradient(ellipse 80% 60% at 82% -10%, rgba(163,129,63,.30), transparent 60%), linear-gradient(205deg, #143723, var(--d-a) 60%, #050d07); }
-      .glide-bg.a2 { background: radial-gradient(ellipse 75% 55% at 85% 108%, rgba(163,129,63,.26), transparent 60%), linear-gradient(200deg, #0c2416, #081a10 60%, #040a06); }
-      .glide-bg.b2 { background: radial-gradient(ellipse 75% 55% at 12% -8%, rgba(212,181,115,.22), transparent 58%), linear-gradient(160deg, #0e2a19, #07160e 62%, #040a06); }
+      .glide-bg.a2 { background: radial-gradient(ellipse 75% 55% at 85% 108%, rgba(163,129,63,.26), transparent 60%), linear-gradient(200deg, #0c2416, #081a10 60%, var(--g-base)); }
+      .glide-bg.b2 { background: radial-gradient(ellipse 75% 55% at 12% -8%, rgba(212,181,115,.22), transparent 58%), linear-gradient(160deg, #0e2a19, #07160e 62%, var(--g-base)); }
       .glide-bg.a3 { background: radial-gradient(ellipse 90% 65% at 50% 115%, rgba(233,193,121,.42), transparent 64%), linear-gradient(168deg, var(--d-b), #6d5a28 58%, #4a3a17); }
       .glide-bg.b3 { background: radial-gradient(ellipse 90% 65% at 50% -15%, rgba(233,193,121,.30), transparent 60%), linear-gradient(200deg, #55602f, var(--d-c) 62%, #57431a); }
       .ghost {
@@ -110,7 +110,7 @@
         font-family: "Urbanist", sans-serif; font-weight: 800; line-height: 1;
         font-size: clamp(9rem, 34vw, 24rem); color: transparent;
         -webkit-text-stroke: 1.5px rgba(212, 181, 115, .28);
-        transform: translateY(3.5svh); transition: transform 1.4s ease;
+        transform: translateY(3.5svh); transition: transform var(--dur-ghost) ease;
         user-select: none;
       }
       .glide.in-view .ghost { transform: translateY(0); }
@@ -123,11 +123,11 @@
       }
       .glide.flip .glide-card { margin-left: auto; }
       .glide-card h2 { margin: 0 0 14px; font-weight: 800; color: var(--headline); font-size: clamp(1.8rem, 4.6vw, 2.7rem); line-height: 1.1; }
-      .glide-card p { margin: 0 0 22px; font-size: 1.04rem; }
-      .venue-meta { color: var(--muted); font-size: .88rem; font-weight: 600; letter-spacing: .04em; margin: 0 0 14px; }
+      .glide-card p { margin: 0 0 22px; font-size:1.06rem; }
+      .venue-meta { color: var(--muted); font-size:.88rem; font-weight:700; letter-spacing: .04em; margin: 0 0 14px; }
       .venue-btn {
-        display: inline-block; background: var(--accent-ink); color: #14220f; text-decoration: none;
-        font-weight: 800; font-size: .95rem; padding: 13px 22px; border-radius: 999px;
+        display: inline-block; background: var(--accent-ink); color: var(--g-panel); text-decoration: none;
+        font-weight: 800; font-size:.88rem; padding: 13px 22px; border-radius: 999px;
       }
       .venue-btn:hover { background: #e9c179; }
 
@@ -147,17 +147,17 @@
       .minimap-art .ave-line { stroke: var(--d-c); stroke-width: 2; opacity: .4; }
       .minimap-art .ave-label { fill: var(--muted); font-family: "Urbanist", sans-serif; font-size: 12.5px; letter-spacing: .34em; text-anchor: middle; }
       .minimap-art .marker circle { fill: var(--accent-ink); }
-      .minimap-art .marker text { fill: #14220f; font-family: "Urbanist", sans-serif; font-weight: 800; font-size: 13px; text-anchor: middle; }
-      .split .lede { color: var(--muted); margin: 0 0 10px; font-size: 1.02rem; }
+      .minimap-art .marker text { fill: var(--g-panel); font-family: "Urbanist", sans-serif; font-weight: 800; font-size:12.5px; text-anchor: middle; }
+      .split .lede { color: var(--muted); margin: 0 0 10px; font-size:1.06rem; }
       .ave-row {
         display: flex; align-items: baseline; gap: 14px; padding: 17px 4px;
         border-bottom: 1px solid var(--line); text-decoration: none; color: var(--ink);
       }
       .ave-row:first-of-type { border-top: 1px solid var(--line); }
-      .ave-row .n { font-family: "Urbanist", sans-serif; font-weight: 800; color: var(--accent-ink); font-size: .85rem; }
+      .ave-row .n { font-family: "Urbanist", sans-serif; font-weight: 800; color: var(--accent-ink); font-size:.88rem; }
       .ave-row .who { flex: 1; min-width: 0; }
-      .ave-row .who b { display: block; font-family: "Urbanist", sans-serif; font-size: 1.22rem; color: var(--headline); }
-      .ave-row .who span { color: var(--muted); font-size: .9rem; }
+      .ave-row .who b { display: block; font-family: "Urbanist", sans-serif; font-size:1.25rem; color: var(--headline); }
+      .ave-row .who span { color: var(--muted); font-size:.88rem; }
       .ave-row .arr { color: var(--accent-ink); font-weight: 800; }
       .ave-row:hover .who b { color: var(--accent-ink); }
 
@@ -165,30 +165,30 @@
       .grid-sec { max-width: 1120px; margin: 0 auto; padding: 6vh var(--pad) 15vh; }
       .tiles { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 30px; }
       .tile {
-        display: block; background: var(--surface); border: 1px solid var(--line); border-radius: 18px;
+        display: block; background: var(--surface); border: 1px solid var(--line); border-radius: 20px;
         padding: clamp(22px, 3.4vw, 32px); text-decoration: none; color: var(--ink);
       }
       .tile:hover { border-color: var(--accent-ink); }
       .tile b { display: block; font-family: "Urbanist", sans-serif; font-weight: 800; font-size: clamp(1.25rem, 2.6vw, 1.6rem); line-height: 1.2; color: var(--headline); margin-bottom: 8px; }
-      .tile p { margin: 0 0 14px; color: var(--muted); font-size: .98rem; }
+      .tile p { margin: 0 0 14px; color: var(--muted); font-size:1.06rem; }
       .tile .venue-meta { margin: 0; }
 
       /* ---------- closing: the whole neighbourhood ---------- */
       .closing { max-width: 860px; margin: 0 auto; padding: 15vh var(--pad) 9vh; }
-      .closing .lede { color: var(--muted); font-size: 1.05rem; margin: 0 0 8px; max-width: 560px; }
+      .closing .lede { color: var(--muted); font-size:1.06rem; margin: 0 0 8px; max-width: 560px; }
       .ix { list-style: none; margin: 34px 0 0; padding: 0; }
       .ix a {
         display: flex; align-items: baseline; justify-content: space-between; gap: 16px;
         padding: 11px 2px; border-bottom: 1px solid var(--line); text-decoration: none;
       }
-      .ix-name { font-weight: 600; color: var(--ink); }
-      .ix-meta { color: var(--muted); font-size: .85rem; text-align: right; white-space: nowrap; }
+      .ix-name { font-weight:700; color: var(--ink); }
+      .ix-meta { color: var(--muted); font-size:.88rem; text-align: right; white-space: nowrap; }
       .ix a:hover .ix-name { color: var(--accent-ink); }
       @media (min-width: 780px) { .ix { columns: 2; column-gap: 54px; } .ix li { break-inside: avoid; } }
       .handoff { margin-top: 52px; display: grid; gap: 18px; justify-items: start; }
       .btn-big {
-        display: inline-block; background: var(--accent-ink); color: #14220f; text-decoration: none;
-        font-family: "Urbanist", sans-serif; font-weight: 800; font-size: 1.05rem;
+        display: inline-block; background: var(--accent-ink); color: var(--g-panel); text-decoration: none;
+        font-family: "Urbanist", sans-serif; font-weight: 800; font-size:1.06rem;
         padding: 16px 28px; border-radius: 999px;
       }
       .btn-big:hover { background: #e9c179; }
@@ -209,33 +209,33 @@
       }
       .hero-in { z-index: 2; }
       .scroll-cue { z-index: 2; }
-      .hero.has-photo h1, .hero.has-photo .sub, .hero.has-photo .count { text-shadow: 0 2px 30px rgba(4, 10, 6, .6); }
+      .hero.has-photo h1, .hero.has-photo .sub, .hero.has-photo .count { text-shadow: 0 2px 30px var(--scrim); }
 
       /* ---------- Phase 4 · flashback panel ---------- */
       .flashback { max-width: 680px; margin: 0 auto; padding: 9vh var(--pad) 2vh; }
       .fb-panel {
         background: var(--surface); border: 1px solid var(--line); border-left: 3px solid var(--accent-ink);
-        border-radius: 18px; padding: clamp(26px, 4.5vw, 40px);
+        border-radius: 20px; padding: clamp(26px, 4.5vw, 40px);
       }
       .fb-card h3 {
         font-family: "Urbanist", sans-serif; font-weight: 800; color: var(--headline);
         font-size: clamp(1.3rem, 3.2vw, 1.7rem); line-height: 1.22; margin: 0 0 14px;
       }
-      .fb-card p { margin: 0 0 14px; font-size: 1rem; }
+      .fb-card p { margin: 0 0 14px; font-size:1.06rem; }
       .fb-card p:last-child { margin-bottom: 0; }
       .fb-card .history-reveal { font-weight: 700; color: var(--headline); }
       .fb-card .history-note { color: var(--muted); }
-      .fb-card .history-source { font-size: .85rem; color: var(--muted); }
+      .fb-card .history-source { font-size:.88rem; color: var(--muted); }
       .fb-card + .fb-card { margin-top: 30px; padding-top: 28px; border-top: 1px solid var(--line); }
-      .fb-more { margin: 18px 2px 0; color: var(--muted); font-size: .92rem; }
-      .photo-credit { font-size: .8rem !important; }
+      .fb-more { margin: 18px 2px 0; color: var(--muted); font-size:.88rem; }
+      .photo-credit { font-size:.78rem !important; }
 
       /* ---------- footer ---------- */
       footer { border-top: 1px solid var(--line); margin-top: 4vh; }
       .foot-in { max-width: 860px; margin: 0 auto; padding: 44px var(--pad) 58px; display: grid; gap: 14px; }
       .back-link { font-weight: 700; text-decoration: none; }
       .back-link:hover { text-decoration: underline; }
-      .foot-in p { margin: 0; color: var(--muted); font-size: .88rem; max-width: 640px; }
+      .foot-in p { margin: 0; color: var(--muted); font-size:.88rem; max-width: 640px; }
       .foot-in .brand-line { color: var(--ink); font-weight: 700; }
 
       @media (max-width: 760px) {
@@ -251,7 +251,9 @@
         .glide-bg, .ghost, .scroll-cue::after { transition: none !important; animation: none !important; }
         .reveal-armed .reveal { opacity: 1 !important; transform: none !important; transition: none !important; }
       }
-    </style>
+    
+.venue-btn:active{filter:brightness(.92)}
+</style>
   </head>
   <body>
     <!-- 1 · TITLE SCREEN, type poster on a clean district field -->
@@ -423,7 +425,6 @@
           <li><a href="/?venue=nigels-bananas"><span class="ix-name">Nigel's Bananas</span><span class="ix-meta">Sweets · $</span></a></li>
           <li><a href="/?venue=oak-and-stone-wp"><span class="ix-name">Oak &amp; Stone</span><span class="ix-meta">Pizza · $$</span></a></li>
           <li><a href="/?venue=pannullos-italian"><span class="ix-name">Pannullo's Italian Restaurant</span><span class="ix-meta">Italian · $$</span></a></li>
-          <li><a href="/?venue=park-avenue-winter-park"><span class="ix-name">Park Avenue Historic District</span><span class="ix-meta">Parks &amp; outdoors · $$</span></a></li>
           <li><a href="/?venue=park-avenue-pizza"><span class="ix-name">Park Avenue Pizza</span><span class="ix-meta">Pizza · $$</span></a></li>
           <li><a href="/?venue=pepes-cantina"><span class="ix-name">Pepe's Cantina</span><span class="ix-meta">Mexican · $$</span></a></li>
           <li><a href="/?venue=perlas-pizza"><span class="ix-name">Perla's Pizza, Vinyl Records &amp; Cocktail Bar</span><span class="ix-meta">Pizza · $$</span></a></li>
