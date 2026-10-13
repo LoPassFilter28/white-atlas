@@ -4,15 +4,15 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="color-scheme" content="light dark">
-  <title>407 FYI</title>
+  <title>407 FYI — Orlando Restaurants, Landmarks &amp; New Openings</title>
   <meta name="description" content="Explore Orlando restaurants, coffee shops, nightlife spots, attractions, hotels and local landmarks, organized by district, occasion and price.">
   <link rel="canonical" href="https://407.fyi/">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="407 FYI">
   <meta property="og:title" content="407 FYI — Orlando restaurants, landmarks and new openings">
   <meta property="og:description" content="A local field guide to Orlando: 606 hand-verified restaurants, bars, coffee shops, attractions, and hotels across 12 districts.">
-  <meta property="og:url" content="https://407.fyi/">
-  <meta name="twitter:card" content="summary">
+  <meta property="og:url" content="https://407.fyi/"><meta property="og:image" content="https://407.fyi/og-image.png"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="https://407.fyi/og-image.png">
+  
   <meta name="twitter:title" content="407 FYI — Orlando restaurants, landmarks and new openings">
   <meta name="twitter:description" content="A local field guide to Orlando: 606 hand-verified restaurants, bars, coffee shops, attractions, and hotels across 12 districts.">
   <script>
@@ -430,6 +430,13 @@
  .venue .description{display:block!important}
  body{background:#fff;color:#000}
 }
+
+.pop-chips span{color:rgba(243,234,210,.68)}
+.pop-chips button{background:rgba(255,255,255,.07);color:#f3ead2;border-color:rgba(243,234,210,.35)}
+.pop-chips button:hover{border-color:#c9a55c;background:rgba(201,165,92,.16)}
+.mast-disclosure{color:rgba(243,234,210,.8)!important}
+.tease-cap{display:none!important}
+@media (max-width:640px){.pick-card{min-height:0;padding:12px 14px;gap:4px}.pick-card-go{margin-top:6px}}
 </style></head>
 <body><a class="skip-link" href="#venueList">Skip to places</a>
   <a class="skip-link" href="#venueList">Skip to venue list</a>
@@ -1369,6 +1376,7 @@ function clickDistrict(key){var t=tabs().filter(function(b){return tabKey(b)===k
 function chipVal(b){return b.dataset.categoryChip||b.dataset.category||b.value||""}
 function activeChip(){var c=$$("[data-category-chip]").filter(function(b){return b.getAttribute("aria-pressed")==="true"})[0];return c?chipVal(c):""}
 function clickCategory(v){var c=$$("[data-category-chip]").filter(function(b){return chipVal(b)===v})[0];if(c){c.click();return true}return false}
+function capTeasers(root){var ts=$$('#venueList .venue-history',root);ts.forEach(function(t,i){t.classList.toggle('tease-cap',i>=2)})}
 function stampUpdated(root){$$("article.venue[data-id]",root).forEach(function(a){if(UPDATED[a.dataset.id]&&!a.querySelector(".upd-tag")){var t=a.querySelector(".venue-title");if(t){var s=document.createElement("span");s.className="upd-tag";s.textContent="Updated Oct 2026";t.appendChild(s)}}})}
 function updateIntro(){var el=$("#districtIntro");if(!el)return;var k=activeKey();var txt=INTROS[k]||"";if(txt){el.textContent=txt;el.hidden=false}else{el.hidden=true}}
 var syncT=null;
@@ -1379,8 +1387,8 @@ function init(){
   var cc=$("#credCount");if(cc&&typeof PLACES!=="undefined")cc.textContent=PLACES.length;
   var dt=$("#districtsTitle");if(dt&&typeof DISTRICTS!=="undefined"){var s=document.createElement("span");s.className="sec-count";s.textContent=DISTRICTS.length+" districts";dt.appendChild(s)}
   var pt=$("#picksRailTitle");if(pt){var n=$$("#picksRail > *").length;if(n){var s2=document.createElement("span");s2.className="sec-count";s2.textContent=n+" picks";pt.appendChild(s2)}}
-  stampUpdated(document);
-  var list=$("#venueList");if(list)new MutationObserver(function(){stampUpdated(list)}).observe(list,{childList:true});
+  stampUpdated(document);capTeasers(document);
+  var list=$("#venueList");if(list)new MutationObserver(function(){stampUpdated(list);capTeasers(list)}).observe(list,{childList:true});
   var params=new URLSearchParams(location.search);var mem=null;try{mem=JSON.parse(localStorage.getItem("fyi-filters-v1")||"null")}catch(e){}
   var d=params.get("district")||(mem&&mem.d)||"",c=params.get("cat")||(mem&&mem.c)||"",q=params.get("q")||(mem&&mem.q)||"";
   if(d&&d!=="all")clickDistrict(d);if(c)clickCategory(c);if(q)setQuery(q);
