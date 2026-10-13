@@ -1,601 +1,378 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="dark">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-    <meta name="color-scheme" content="light dark" />
-    <link rel="icon" href="data:," />
+    <meta name="color-scheme" content="dark" />
     <title>Ivanhoe Village District Guide · 407 FYI</title>
-    <meta name="description" content="Ivanhoe Village district highlight: lakeside mornings and brewery afternoons in Orlando's easygoing creative quarter. A scroll presentation from 407 FYI." />
+    <meta name="description" content="Ivanhoe Village district highlight: lakeside mornings and brewery afternoons in Orlando&#x27;s easygoing creative quarter. A scroll presentation from 407 FYI." />
+    <link rel="canonical" href="https://407.fyi/ivanhoe-village-district-guide.html" />
+    <meta property="og:title" content="Ivanhoe Village District Guide · 407 FYI" />
+    <meta property="og:description" content="Ivanhoe Village district highlight: lakeside mornings and brewery afternoons in Orlando&#x27;s easygoing creative quarter. A scroll presentation from 407 FYI." />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://407.fyi/ivanhoe-village-district-guide.html" />
+    <meta property="og:image" content="https://407.fyi/img/6aee8655a542c511.webp" />
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;0,900;1,500&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Urbanist:wght@600;700;800&amp;display=swap" rel="stylesheet" />
     <style>
-      /* ============================================================
-         DISTRICT GRADIENT SYSTEM · 407 FYI rollouts
-         Each district site gets its own two-stop dusk gradient.
-         Swap the --grad-a / --grad-b tokens per district:
-           Winter Park             : deep oak green   -> warm amber gold
-           Disney Springs          : lagoon teal      -> coral sunset
-           Milk District           : dairy cream rose -> tangerine
-           Thornton Park           : brick rust       -> lake dusk plum
-           Mills 50                : jade             -> orchid violet
-           Ivanhoe Village (here)  : lake blue        -> lavender dusk
-           Downtown                : skyline slate    -> electric amber
-           I-Drive                 : neon teal        -> sunset magenta
-           Lake Nona               : modern aqua      -> soft lime
-           Universal               : midnight blue    -> volcano orange
-           Audubon Park            : garden green     -> marigold
-           College Park            : collegiate navy  -> warm bronze
-         ============================================================ */
+      /* Night Drive tokens (from the main guide) + district gradient */
       :root {
-        --grad-a: #526e44;
-        --grad-b: #a5d08f;
-        --grad-mid: #769e62;
-        --ink: #2b3923;
-        --ink-soft: #526b45;
-        --paper: #f6f7f0;
-        --paper-2: #e8ebf6;
-        --card: #fdfdff;
-        --line: rgba(29, 57, 34, 0.14);
-        --gold: #6b9e52;
-        --gold-bright: #cef2bc;
-        --green-deep: #2f3f27;
-        --shadow: 0 24px 60px rgba(29, 64, 35, 0.16);
-        color-scheme: light;
+        color-scheme: dark;
+        --bg: #0a1811; --surface: #122419; --soft: #172a1f; --ink: #f0e8d5;
+        --muted: #c6bba2; --line: #2f4a38; --accent: #765b2f; --accent-ink: #d4b573;
+        --headline: #f6edd6; --focus: #d4b573;
+        --d-a: #1f2513; --d-b: #4d552c; --d-c: #ad8745;
+        --h1vw: 11.2vw;
+        --pad: clamp(20px, 5vw, 40px);
       }
-      @media (prefers-color-scheme: dark) {
-        :root {
-          --ink: #eceaf6;
-          --ink-soft: #c2d4b9;
-          --paper: #182014;
-          --paper-2: #1c2618;
-          --card: #263320;
-          --line: rgba(239, 246, 234, 0.16);
-          --gold: #cef2bc;
-          --shadow: 0 24px 60px rgba(0, 0, 0, 0.45);
-          color-scheme: dark;
-        }
-      }
-
       * { box-sizing: border-box; }
       html { scroll-behavior: smooth; }
       body {
-        margin: 0;
-        font-family: "Public Sans", system-ui, sans-serif;
-        background: var(--paper);
-        color: var(--ink);
-        line-height: 1.6;
+        margin: 0; background: var(--bg); color: var(--ink);
+        font-family: "Manrope", system-ui, sans-serif; line-height: 1.6;
         overflow-x: hidden;
       }
-      img { display: block; max-width: 100%; }
-
-      .serif { font-family: "Playfair Display", Georgia, serif; }
-
-      /* ---------- fade-in on scroll (the only animation) ----------
-         Content is visible by default. The script at the end of the
-         body arms the hidden start state only once its observer is
-         running, then fades each block in as it scrolls into view.
-         If the script never runs, the full story still renders. */
-      .reveal-armed .reveal {
-        opacity: 0;
-        transform: translateY(26px);
-        transition: opacity 0.9s ease, transform 0.9s ease;
-      }
-      .reveal-armed .reveal.in { opacity: 1; transform: none; }
-      @media print {
-        .reveal { opacity: 1 !important; transform: none !important; }
-      }
-      @media (prefers-reduced-motion: reduce) {
-        html { scroll-behavior: auto; }
-        .reveal { opacity: 1; transform: none; transition: none; }
-      }
-
-      /* ---------- hero ---------- */
-      .hero {
-        position: relative;
-        min-height: 100svh;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
-        color: #f2eefc;
-        isolation: isolate;
-        overflow: hidden;
-      }
-      .hero-media {
-        position: absolute; inset: 0; z-index: -2;
-      }
-      .hero-media img {
-        width: 100%; height: 100%;
-        object-fit: cover; object-position: center 42%;
-      }
-      .hero::after {
-        content: "";
-        position: absolute; inset: 0; z-index: -1;
-        background:
-          linear-gradient(178deg,
-            rgba(30, 66, 36, 0.40) 0%,
-            rgba(30, 66, 36, 0.08) 34%,
-            rgba(33, 74, 40, 0.52) 68%,
-            rgba(17, 38, 21, 0.96) 100%),
-          linear-gradient(100deg,
-            rgba(30, 66, 36, 0.55) 0%,
-            rgba(143, 208, 154, 0.16) 78%);
-      }
-      .hero-inner {
-        width: min(1180px, 100% - 2.5rem);
-        margin-inline: auto;
-        padding: 7rem 0 4.5rem;
-      }
+      h1, h2, .display { font-family: "Urbanist", "Manrope", sans-serif; }
+      a { color: var(--accent-ink); }
+      a:focus-visible, .venue-btn:focus-visible { outline: 2px solid var(--focus); outline-offset: 3px; }
       .kicker {
-        font-size: 0.78rem;
-        font-weight: 700;
-        letter-spacing: 0.32em;
-        text-transform: uppercase;
-        color: var(--gold-bright);
-        margin: 0 0 1.4rem;
+        font-family: "Urbanist", sans-serif; font-weight: 700; letter-spacing: .22em;
+        font-size: .72rem; text-transform: uppercase; color: var(--accent-ink); margin: 0 0 18px;
+      }
+
+      /* ---------- reveal on scroll (armed by JS; content visible without it) ---------- */
+      .reveal-armed .reveal { opacity: 0; transform: translateY(26px); transition: opacity .9s ease, transform .9s ease; }
+      .reveal-armed .reveal.in { opacity: 1; transform: none; }
+
+      /* ---------- 1 · title screen ---------- */
+      .hero {
+        position: relative; min-height: 100svh; display: grid; place-items: center;
+        text-align: center; overflow: hidden; padding: 64px var(--pad);
+        background:
+          radial-gradient(ellipse 90% 55% at 50% 108%, rgba(163, 129, 63, .28), transparent 60%),
+          linear-gradient(168deg, #0d2818 0%, var(--d-a) 52%, #07130c 100%);
+      }
+      .hero-in { position: relative; max-width: 900px; }
+      .hero-brand {
+        font-family: "Urbanist", sans-serif; font-weight: 800; letter-spacing: .3em;
+        font-size: .78rem; color: var(--ink); text-decoration: none; opacity: .85;
       }
       .hero h1 {
-        font-family: "Playfair Display", Georgia, serif;
-        font-weight: 900;
-        font-size: clamp(3.6rem, 13.5vw, 10.5rem);
-        line-height: 0.95;
-        letter-spacing: -0.01em;
-        margin: 0 0 1.6rem;
-        text-wrap: balance;
+        margin: 26px 0 8px; font-weight: 800; color: var(--headline);
+        font-size: clamp(1.9rem, var(--h1vw), 9.5rem); line-height: .98; letter-spacing: .01em;
       }
-      .hero .subline {
-        font-family: "Playfair Display", Georgia, serif;
-        font-style: italic;
-        font-weight: 500;
-        font-size: clamp(1.25rem, 3.4vw, 1.9rem);
-        line-height: 1.45;
-        max-width: 36ch;
-        margin: 0;
-        color: #e9e2f8;
+      .hero .sub {
+        margin: 10px auto 0; max-width: 620px; font-size: clamp(1.05rem, 2.6vw, 1.45rem);
+        color: var(--ink); font-weight: 500;
       }
-      .hero .scroll-cue {
-        margin-top: 3.2rem;
-        font-size: 0.72rem;
-        font-weight: 600;
-        letter-spacing: 0.28em;
-        text-transform: uppercase;
-        color: rgba(244, 252, 238, 0.75);
-        display: flex; align-items: center; gap: 0.9rem;
+      .hero .count { margin-top: 30px; color: var(--muted); font-size: .86rem; letter-spacing: .12em; text-transform: uppercase; }
+      .scroll-cue {
+        position: absolute; left: 50%; bottom: 26px; transform: translateX(-50%);
+        color: var(--muted); font-size: .7rem; letter-spacing: .3em; text-transform: uppercase;
+        display: grid; justify-items: center; gap: 8px;
       }
-      .hero .scroll-cue::after {
-        content: "";
-        width: 64px; height: 1px;
-        background: linear-gradient(90deg, var(--gold-bright), transparent);
+      .scroll-cue::after {
+        content: ""; width: 1px; height: 44px;
+        background: linear-gradient(var(--accent-ink), transparent);
+        animation: cue 2.4s ease-in-out infinite;
       }
+      @keyframes cue { 0%, 100% { transform: scaleY(.55); opacity: .4; } 50% { transform: scaleY(1); opacity: 1; } }
 
-      /* ---------- sections ---------- */
-      .band {
-        padding: clamp(4.5rem, 11vw, 8.5rem) 0;
+      /* ---------- quiet text blocks ---------- */
+      .quiet { max-width: 680px; margin: 0 auto; padding: 17vh var(--pad); }
+      .quiet h2, .split h2, .grid-sec h2, .closing h2 {
+        margin: 0 0 20px; font-weight: 800; color: var(--headline);
+        font-size: clamp(2rem, 5.6vw, 3.2rem); line-height: 1.08;
       }
-      .band.alt { background: var(--paper-2); }
-      .band.gradient {
-        background: linear-gradient(160deg, var(--grad-a) 0%, var(--grad-mid) 58%, #769e62 130%);
-        color: #efeafb;
-      }
-      .wrap {
-        width: min(1180px, 100% - 2.5rem);
-        margin-inline: auto;
-      }
-      .narrow { max-width: 800px; }
+      .quiet p { font-size: clamp(1.05rem, 2.2vw, 1.22rem); color: var(--ink); margin: 0; }
 
-      .section-tag {
-        font-size: 0.74rem;
-        font-weight: 700;
-        letter-spacing: 0.3em;
-        text-transform: uppercase;
-        color: var(--gold);
-        margin: 0 0 1.1rem;
+      /* ---------- glideshow panels ---------- */
+      .glide { position: relative; }
+      .glide-stage {
+        position: sticky; top: 0; height: 100svh; overflow: hidden;
       }
-      .band.gradient .section-tag { color: var(--gold-bright); }
+      .glide-bg { position: absolute; inset: 0; transition: opacity 1.2s ease; }
+      .glide-bg.b { opacity: 0; }
+      .glide.in-view .glide-bg.b { opacity: 1; }
+      .glide-bg.a1 { background: radial-gradient(ellipse 80% 60% at 18% 110%, rgba(163,129,63,.35), transparent 62%), linear-gradient(155deg, #10301d, var(--d-a) 58%, #060f09); }
+      .glide-bg.b1 { background: radial-gradient(ellipse 80% 60% at 82% -10%, rgba(163,129,63,.30), transparent 60%), linear-gradient(205deg, #143723, var(--d-a) 60%, #050d07); }
+      .glide-bg.a2 { background: radial-gradient(ellipse 75% 55% at 85% 108%, rgba(163,129,63,.26), transparent 60%), linear-gradient(200deg, #0c2416, #081a10 60%, #040a06); }
+      .glide-bg.b2 { background: radial-gradient(ellipse 75% 55% at 12% -8%, rgba(212,181,115,.22), transparent 58%), linear-gradient(160deg, #0e2a19, #07160e 62%, #040a06); }
+      .glide-bg.a3 { background: radial-gradient(ellipse 90% 65% at 50% 115%, rgba(233,193,121,.42), transparent 64%), linear-gradient(168deg, var(--d-b), #6d5a28 58%, #4a3a17); }
+      .glide-bg.b3 { background: radial-gradient(ellipse 90% 65% at 50% -15%, rgba(233,193,121,.30), transparent 60%), linear-gradient(200deg, #55602f, var(--d-c) 62%, #57431a); }
+      .ghost {
+        position: absolute; top: 4svh; right: 2vw; margin: 0;
+        font-family: "Urbanist", sans-serif; font-weight: 800; line-height: 1;
+        font-size: clamp(9rem, 34vw, 24rem); color: transparent;
+        -webkit-text-stroke: 1.5px rgba(212, 181, 115, .28);
+        transform: translateY(3.5svh); transition: transform 1.4s ease;
+        user-select: none;
+      }
+      .glide.in-view .ghost { transform: translateY(0); }
+      .glide.flip .ghost { right: auto; left: 2vw; }
+      .glide-cardwrap { position: relative; z-index: 2; margin-top: -58svh; padding: 0 var(--pad) 16svh; }
+      .glide-card {
+        max-width: 540px; background: rgba(18, 36, 25, .92); border: 1px solid var(--line);
+        border-radius: 20px; padding: clamp(26px, 4.5vw, 42px);
+        box-shadow: 0 30px 70px rgba(0, 0, 0, .5); backdrop-filter: blur(6px);
+      }
+      .glide.flip .glide-card { margin-left: auto; }
+      .glide-card h2 { margin: 0 0 14px; font-weight: 800; color: var(--headline); font-size: clamp(1.8rem, 4.6vw, 2.7rem); line-height: 1.1; }
+      .glide-card p { margin: 0 0 22px; font-size: 1.04rem; }
+      .venue-meta { color: var(--muted); font-size: .88rem; font-weight: 600; letter-spacing: .04em; margin: 0 0 14px; }
+      .venue-btn {
+        display: inline-block; background: var(--accent-ink); color: #14220f; text-decoration: none;
+        font-weight: 800; font-size: .95rem; padding: 13px 22px; border-radius: 999px;
+      }
+      .venue-btn:hover { background: #e9c179; }
 
-      h2.section-title {
-        font-family: "Playfair Display", Georgia, serif;
-        font-weight: 700;
-        font-size: clamp(2.6rem, 7.5vw, 4.6rem);
-        line-height: 1.02;
-        margin: 0 0 1.4rem;
-        letter-spacing: -0.01em;
+      /* ---------- pull quote ---------- */
+      .pullquote { min-height: 94svh; display: grid; place-items: center; text-align: center; padding: 12vh var(--pad); }
+      .pullquote blockquote {
+        margin: 0; max-width: 880px; font-family: "Urbanist", sans-serif; font-weight: 700;
+        font-size: clamp(1.9rem, 6.2vw, 3.7rem); line-height: 1.22; color: var(--headline);
       }
-      .section-intro {
-        font-size: clamp(1.12rem, 2.6vw, 1.4rem);
-        line-height: 1.65;
-        color: var(--ink-soft);
-        max-width: 56ch;
-        margin: 0;
-      }
-      .band.gradient .section-intro { color: #ddf2d2; }
+      .pullquote .mark { color: var(--accent-ink); }
 
-      /* ---------- intro narrative ---------- */
-      .intro-text {
-        font-family: "Playfair Display", Georgia, serif;
-        font-weight: 500;
-        font-size: clamp(1.55rem, 4.4vw, 2.6rem);
-        line-height: 1.42;
-        margin: 0;
-        text-wrap: pretty;
+      /* ---------- split: short list + point map ---------- */
+      .split { max-width: 1120px; margin: 0 auto; padding: 15vh var(--pad); display: grid; grid-template-columns: 1fr 1fr; gap: clamp(28px, 5vw, 64px); align-items: center; }
+      .minimap { background: var(--surface); border: 1px solid var(--line); border-radius: 20px; padding: 14px; }
+      .minimap-art { display: block; width: 100%; height: auto; }
+      .minimap-art .pt { fill: var(--accent-ink); opacity: .35; }
+      .minimap-art .ave-line { stroke: var(--d-c); stroke-width: 2; opacity: .4; }
+      .minimap-art .ave-label { fill: var(--muted); font-family: "Urbanist", sans-serif; font-size: 12.5px; letter-spacing: .34em; text-anchor: middle; }
+      .minimap-art .marker circle { fill: var(--accent-ink); }
+      .minimap-art .marker text { fill: #14220f; font-family: "Urbanist", sans-serif; font-weight: 800; font-size: 13px; text-anchor: middle; }
+      .split .lede { color: var(--muted); margin: 0 0 10px; font-size: 1.02rem; }
+      .ave-row {
+        display: flex; align-items: baseline; gap: 14px; padding: 17px 4px;
+        border-bottom: 1px solid var(--line); text-decoration: none; color: var(--ink);
       }
-      .intro-text .accent { color: var(--gold); font-style: italic; }
+      .ave-row:first-of-type { border-top: 1px solid var(--line); }
+      .ave-row .n { font-family: "Urbanist", sans-serif; font-weight: 800; color: var(--accent-ink); font-size: .85rem; }
+      .ave-row .who { flex: 1; min-width: 0; }
+      .ave-row .who b { display: block; font-family: "Urbanist", sans-serif; font-size: 1.22rem; color: var(--headline); }
+      .ave-row .who span { color: var(--muted); font-size: .9rem; }
+      .ave-row .arr { color: var(--accent-ink); font-weight: 800; }
+      .ave-row:hover .who b { color: var(--accent-ink); }
 
-      /* ---------- spotlight cards ---------- */
-      .spotlights {
-        margin-top: clamp(2.8rem, 7vw, 4.5rem);
-        display: grid;
-        gap: clamp(2.6rem, 6vw, 4rem);
+      /* ---------- typographic grid ---------- */
+      .grid-sec { max-width: 1120px; margin: 0 auto; padding: 6vh var(--pad) 15vh; }
+      .tiles { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 30px; }
+      .tile {
+        display: block; background: var(--surface); border: 1px solid var(--line); border-radius: 18px;
+        padding: clamp(22px, 3.4vw, 32px); text-decoration: none; color: var(--ink);
       }
-      .spot {
-        display: grid;
-        gap: 0;
-        background: var(--card);
-        border: 1px solid var(--line);
-        border-radius: 20px;
-        overflow: hidden;
-        box-shadow: var(--shadow);
-      }
-      .spot figure {
-        margin: 0;
-        aspect-ratio: 16 / 10;
-        overflow: hidden;
-      }
-      .spot figure img {
-        width: 100%; height: 100%;
-        object-fit: cover;
-      }
-      .spot .spot-body {
-        padding: clamp(1.6rem, 4.5vw, 2.6rem);
-      }
-      .spot .meta {
-        display: flex; flex-wrap: wrap; align-items: center; gap: 0.6rem 0.9rem;
-        font-size: 0.76rem; font-weight: 700;
-        letter-spacing: 0.18em; text-transform: uppercase;
-        color: var(--gold);
-        margin: 0 0 0.7rem;
-      }
-      .spot .meta .dot { color: var(--ink-soft); letter-spacing: 0; }
-      .spot h3 {
-        font-family: "Playfair Display", Georgia, serif;
-        font-weight: 700;
-        font-size: clamp(1.7rem, 4.6vw, 2.4rem);
-        line-height: 1.12;
-        margin: 0 0 0.9rem;
-      }
-      .spot p {
-        margin: 0;
-        font-size: 1.02rem;
-        line-height: 1.72;
-        color: var(--ink-soft);
-        max-width: 62ch;
-      }
-      @media (min-width: 900px) {
-        .spot { grid-template-columns: 1.05fr 1fr; }
-        .spot figure { aspect-ratio: auto; min-height: 340px; }
-        .spot.flip figure { order: 2; }
-        .spot .spot-body { display: flex; flex-direction: column; justify-content: center; }
-      }
+      .tile:hover { border-color: var(--accent-ink); }
+      .tile b { display: block; font-family: "Urbanist", sans-serif; font-weight: 800; font-size: clamp(1.25rem, 2.6vw, 1.6rem); line-height: 1.2; color: var(--headline); margin-bottom: 8px; }
+      .tile p { margin: 0 0 14px; color: var(--muted); font-size: .98rem; }
+      .tile .venue-meta { margin: 0; }
 
-      /* compact grid for the two-up sections */
-      .spot-grid {
-        margin-top: clamp(2.8rem, 7vw, 4.5rem);
-        display: grid;
-        gap: 1.6rem;
+      /* ---------- closing: the whole neighbourhood ---------- */
+      .closing { max-width: 860px; margin: 0 auto; padding: 15vh var(--pad) 9vh; }
+      .closing .lede { color: var(--muted); font-size: 1.05rem; margin: 0 0 8px; max-width: 560px; }
+      .ix { list-style: none; margin: 34px 0 0; padding: 0; }
+      .ix a {
+        display: flex; align-items: baseline; justify-content: space-between; gap: 16px;
+        padding: 11px 2px; border-bottom: 1px solid var(--line); text-decoration: none;
       }
-      @media (min-width: 760px) {
-        .spot-grid { grid-template-columns: repeat(3, 1fr); gap: 1.8rem; }
-        .spot-grid .spot { grid-template-columns: 1fr; }
-        .spot-grid .spot figure { aspect-ratio: 4 / 3; min-height: 0; order: 0; }
-        .spot-grid .spot .spot-body { padding: 1.7rem; justify-content: flex-start; }
-        .spot-grid .spot h3 { font-size: 1.55rem; }
-        .spot-grid .spot:first-child { grid-column: 1 / -1; grid-template-columns: 1.05fr 1fr; }
-        .spot-grid .spot:first-child figure { aspect-ratio: auto; min-height: 320px; }
-        .spot-grid .spot:first-child .spot-body { padding: clamp(1.6rem, 4.5vw, 2.6rem); justify-content: center; }
-        .spot-grid .spot:first-child h3 { font-size: clamp(1.7rem, 4.6vw, 2.4rem); }
+      .ix-name { font-weight: 600; color: var(--ink); }
+      .ix-meta { color: var(--muted); font-size: .85rem; text-align: right; white-space: nowrap; }
+      .ix a:hover .ix-name { color: var(--accent-ink); }
+      @media (min-width: 780px) { .ix { columns: 2; column-gap: 54px; } .ix li { break-inside: avoid; } }
+      .handoff { margin-top: 52px; display: grid; gap: 18px; justify-items: start; }
+      .btn-big {
+        display: inline-block; background: var(--accent-ink); color: #14220f; text-decoration: none;
+        font-family: "Urbanist", sans-serif; font-weight: 800; font-size: 1.05rem;
+        padding: 16px 28px; border-radius: 999px;
       }
-      /* two-card variant: even pair, no orphan column */
-      @media (min-width: 760px) {
-        .spot-grid.duo { grid-template-columns: 1fr 1fr; }
-        .spot-grid.duo .spot:first-child { grid-column: auto; grid-template-columns: 1fr; }
-        .spot-grid.duo .spot:first-child figure { aspect-ratio: 4 / 3; min-height: 0; }
-        .spot-grid.duo .spot:first-child .spot-body { padding: 1.7rem; justify-content: flex-start; }
-        .spot-grid.duo .spot:first-child h3 { font-size: 1.55rem; }
-      }
+      .btn-big:hover { background: #e9c179; }
+      .next-district { font-weight: 700; text-decoration: none; }
+      .next-district:hover { text-decoration: underline; }
 
-      /* ---------- itinerary ---------- */
-      .day-rows { margin-top: clamp(2.6rem, 6vw, 4rem); display: grid; gap: 0; }
-      .day-row {
-        display: grid;
-        gap: 0.4rem;
-        padding: 2rem 0;
-        border-top: 1px solid var(--line);
-      }
-      .band.gradient .day-row { border-top-color: rgba(241, 251, 234, 0.25); }
-      .day-row:last-child { border-bottom: 1px solid var(--line); }
-      .band.gradient .day-row:last-child { border-bottom-color: rgba(241, 251, 234, 0.25); }
-      .day-row .when {
-        font-family: "Playfair Display", Georgia, serif;
-        font-weight: 700;
-        font-style: italic;
-        font-size: clamp(1.9rem, 5.5vw, 3rem);
-        line-height: 1;
-        color: var(--gold-bright);
-      }
-      .day-row .what {
-        font-size: clamp(1.15rem, 3vw, 1.5rem);
-        line-height: 1.5;
-        margin: 0;
-        max-width: 46ch;
-      }
-      @media (min-width: 760px) {
-        .day-row { grid-template-columns: 240px 1fr; align-items: baseline; gap: 2rem; }
-      }
+      /* ---------- footer ---------- */
+      footer { border-top: 1px solid var(--line); margin-top: 4vh; }
+      .foot-in { max-width: 860px; margin: 0 auto; padding: 44px var(--pad) 58px; display: grid; gap: 14px; }
+      .back-link { font-weight: 700; text-decoration: none; }
+      .back-link:hover { text-decoration: underline; }
+      .foot-in p { margin: 0; color: var(--muted); font-size: .88rem; max-width: 640px; }
+      .foot-in .brand-line { color: var(--ink); font-weight: 700; }
 
-      /* ---------- closing ---------- */
-      .closing {
-        text-align: center;
-        padding: clamp(5rem, 12vw, 9rem) 0 clamp(3.5rem, 8vw, 5rem);
-        background: linear-gradient(180deg, var(--paper) 0%, var(--grad-a) 34%, #192215 100%);
-        color: #efeafb;
+      @media (max-width: 760px) {
+        .split { grid-template-columns: 1fr; }
+        .tiles { grid-template-columns: 1fr; }
+        .glide-cardwrap { margin-top: -46svh; }
       }
-      .closing h2 {
-        font-family: "Playfair Display", Georgia, serif;
-        font-weight: 700;
-        font-size: clamp(2.4rem, 7vw, 4.2rem);
-        line-height: 1.05;
-        margin: 0 auto 1.2rem;
-        max-width: 18ch;
-      }
-      .closing p {
-        color: #d1eac4;
-        max-width: 46ch;
-        margin: 0 auto 2.6rem;
-        font-size: 1.08rem;
-      }
-      .btn-guide {
-        display: inline-block;
-        font-weight: 700;
-        font-size: 1.05rem;
-        letter-spacing: 0.02em;
-        color: #26381d;
-        background: linear-gradient(120deg, var(--gold-bright), var(--grad-b));
-        padding: 1.05rem 2.4rem;
-        border-radius: 999px;
-        text-decoration: none;
-        box-shadow: 0 18px 40px rgba(0, 0, 0, 0.35);
-        transition: transform 0.25s ease, box-shadow 0.25s ease;
-      }
-      .btn-guide:hover, .btn-guide:focus-visible {
-        transform: translateY(-2px);
-        box-shadow: 0 24px 48px rgba(0, 0, 0, 0.42);
-      }
-      footer {
-        background: #192215;
-        color: rgba(241, 251, 234, 0.62);
-        text-align: center;
-        padding: 0 1.25rem 2.6rem;
-        font-size: 0.85rem;
-        letter-spacing: 0.14em;
-        text-transform: uppercase;
+      @media print { .reveal { opacity: 1 !important; transform: none !important; } }
+      @media (prefers-reduced-motion: reduce) {
+        html { scroll-behavior: auto; }
+        .glide-stage { position: static; height: 52svh; }
+        .glide-cardwrap { margin-top: 0; padding-top: 30px; }
+        .glide-bg, .ghost, .scroll-cue::after { transition: none !important; animation: none !important; }
+        .reveal-armed .reveal { opacity: 1 !important; transform: none !important; transition: none !important; }
       }
     </style>
-  <meta property="og:title" content="Ivanhoe Village District Guide · 407 FYI"><meta property="og:description" content="Ivanhoe Village district highlight: lakeside mornings and brewery afternoons in Orlando&#x27;s easygoing creative quarter. A scroll presentation from 407 FYI."><meta property="og:type" content="article"><meta property="og:url" content="https://407.fyi/ivanhoe-village-district-guide.html"><meta property="og:image" content="https://407.fyi/img/6aee8655a542c511.webp"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="https://407.fyi/img/6aee8655a542c511.webp"><link rel="icon" href="/favicon.ico" sizes="any"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest"><meta name="theme-color" content="#0a1811"><style>
-.fyi-top{position:relative;z-index:60;background:#0c1812;border-bottom:1px solid #24402f;font-family:Urbanist,system-ui,-apple-system,"Segoe UI",sans-serif}
-.fyi-top-in{max-width:1200px;margin:0 auto;padding:12px 20px;display:flex;align-items:center;gap:16px;flex-wrap:wrap}
-.fyi-brand{color:#e8e2d4;text-decoration:none;font-weight:800;letter-spacing:.14em;font-size:1rem}
-.fyi-crumb{color:#9db3a4;font-size:.85rem;display:flex;gap:8px;align-items:center;flex-wrap:wrap}
-.fyi-crumb a{color:#9db3a4;text-decoration:none}.fyi-crumb a:hover{color:#c9a969}
-.fyi-crumb b{color:#e8e2d4;font-weight:600}
-.fyi-top nav{margin-left:auto}.fyi-top nav a{color:#c9a969;text-decoration:none;font-size:.88rem;font-weight:700}
-.fyi-cred{background:#112018;border-bottom:1px solid #24402f;color:#9db3a4;font-family:Urbanist,system-ui,sans-serif;font-size:.82rem}
-.fyi-cred-in{max-width:1200px;margin:0 auto;padding:8px 20px}
-.fyi-cred a{color:#c9a969;text-decoration:none}
-.fyi-foot{background:#0c1812;border-top:1px solid #24402f;color:#9db3a4;font-family:Urbanist,system-ui,-apple-system,"Segoe UI",sans-serif;margin-top:0}
-.fyi-foot-in{max-width:1200px;margin:0 auto;padding:34px 20px 26px;display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:26px}
-.fyi-foot h3{color:#e8e2d4;font-size:.78rem;letter-spacing:.22em;text-transform:uppercase;margin:0 0 12px}
-.fyi-foot ul{list-style:none;margin:0;padding:0;display:grid;gap:8px;font-size:.9rem}
-.fyi-foot a{color:#9db3a4;text-decoration:none}.fyi-foot a:hover{color:#c9a969}
-.fyi-foot-base{max-width:1200px;margin:0 auto;padding:0 20px 26px;font-size:.8rem;line-height:1.55}
-</style><style>.spot{position:relative}.spot-go{display:inline-flex;margin-top:10px;font-weight:700;font-size:.85rem;color:var(--accent-ink,#7c520c);text-decoration:none;border-bottom:2px solid currentColor;padding-bottom:1px}.spot-go::after{content:"";position:absolute;inset:0}</style>
-</head>
-  <body><div class="fyi-top"><div class="fyi-top-in"><a class="fyi-brand" href="/">407 FYI</a><span class="fyi-crumb"><a href="/">Guide</a><span aria-hidden="true">/</span><a href="/#districts">Districts</a><span aria-hidden="true">/</span><b aria-current="page">Ivanhoe Village</b></span><nav><a href="/">Full guide</a></nav></div></div><div class="fyi-cred"><div class="fyi-cred-in">Hand-verified Orlando places · Checked October 2026 · Local Picks are never sponsored · Corrections: <a href="mailto:mail@407.fyi">mail@407.fyi</a></div></div>
-
-    <!-- HERO -->
-    <header class="hero">
-      <div class="hero-media">
-        <img src="img/6aee8655a542c511.webp" alt="Two paddlers in a clear kayak on Lake Ivanhoe at sunset, the downtown Orlando skyline across the calm water" fetchpriority="high" />
+  </head>
+  <body>
+    <!-- 1 · TITLE SCREEN — type poster on a clean district field -->
+    <header class="hero" style="background:radial-gradient(ellipse 90% 55% at 50% 108%, rgba(173,135,69,0.28), transparent 60%), linear-gradient(168deg, #293018, #1f2513 52%, #11140a)">
+      <div class="hero-in">
+        <a class="hero-brand" href="/">407 FYI · A DISTRICT STORY</a>
+        <h1>IVANHOE VILLAGE</h1>
+        <p class="sub">Orlando with its guard down — brunch, vintage racks and a brewery by the lake.</p>
+        <p class="count">17 hand-verified places · One neighbourhood</p>
       </div>
-      <div class="hero-inner">
-        <p class="kicker">407 FYI · District Highlights</p>
-        <h1>Ivanhoe Village</h1>
-        <p class="subline">Lakeside mornings and brewery afternoons: Ivanhoe Village is Orlando's easygoing creative quarter.</p>
-        <p class="scroll-cue">Scroll the story</p>
-      </div>
+      <div class="scroll-cue" aria-hidden="true">Scroll</div>
     </header>
 
-    <!-- INTRO -->
-    <section class="band">
-      <div class="wrap narrow reveal">
-        <p class="intro-text">Nobody stumbles into Ivanhoe Village by accident. You end up here because someone who loves this city grabbed your sleeve and said, trust me, <span class="accent">the lake</span>. Then the village does the rest: brunch plates landing at White Wolf, vintage racks and tiny shops up Orange Avenue, a brewery pouring two blocks from the water. It is Orlando with its guard down, the version locals keep for themselves and share only with people they actually like.</p>
-      </div>
-    </section>
-
-    <!-- THE ICONS -->
-    <section class="band alt">
-      <div class="wrap">
+    <main>
+      <!-- 2 · QUIET INTRO -->
+      <section class="quiet reveal" id="intro">
+        <p class="kicker">The District</p>
+        <h2>Orlando With Its Guard Down</h2>
+        <p>Nobody stumbles into Ivanhoe Village by accident—someone who loves this city grabs your sleeve: trust me, the lake. Then brunch at White Wolf, vintage racks up Orange Avenue and a brewery near the water do the rest.</p>
+      </section>
+      <section class="glide" id="glide-white-wolf" aria-label="White Wolf Cafe">
+        <div class="glide-stage" aria-hidden="true">
+          <div class="glide-bg" style="background:radial-gradient(ellipse 80% 60% at 18% 110%, rgba(173,135,69,0.35), transparent 62%), linear-gradient(155deg, #363d20, #1f2513 58%, #10120a)"></div><div class="glide-bg b" style="background:radial-gradient(ellipse 80% 60% at 82% -10%, rgba(173,135,69,0.3), transparent 60%), linear-gradient(205deg, #3d4423, #1f2513 60%, #0e1109)"></div>
+          <p class="ghost">01</p>
+        </div>
+        <div class="glide-cardwrap">
+          <article class="glide-card reveal">
+            <p class="kicker">01 · Cafe</p>
+            <h2>Morning Ritual, Southern Comfort</h2>
+            <p>White Wolf is the village's morning ritual: Crab Cakes Benedict regulars dream about, French toast worth the trip, a famous cinnamon bun, cheese grits and country fried chicken behind it. Art-filled, warm, staffed like neighbors—the day started right.</p>
+            <p class="venue-meta">White Wolf Cafe · Cafe · $$</p>
+            <a class="venue-btn" href="/?venue=white-wolf">See the venue &rarr;</a>
+          </article>
+        </div>
+      </section>
+      <!-- PULL QUOTE -->
+      <section class="pullquote reveal" id="quote">
+        <div>
+          <p class="kicker">The Local Test</p>
+          <blockquote><span class="mark">&ldquo;</span>Nobody stumbles into Ivanhoe Village by accident — someone who loves this city grabs your sleeve: trust me, the lake.<span class="mark">&rdquo;</span></blockquote>
+        </div>
+      </section>
+      <!-- SPLIT — the short list -->
+      <section class="split" id="short-list">
+        <div class="minimap reveal"><svg class="minimap-art" viewBox="0 0 560 640" role="img" aria-label="Stylised point map of Ivanhoe Village venues: 1 Barkhaven, 2 Beginner Sushi-Making Class, 3 4 Hens Creole Kitchen"><g><circle class="pt" cx="445" cy="304" r="2.6"/><circle class="pt" cx="404" cy="49" r="2.6"/><circle class="pt" cx="321" cy="527" r="2.6"/><circle class="pt" cx="321" cy="527" r="2.6"/><circle class="pt" cx="311" cy="586" r="2.6"/><circle class="pt" cx="311" cy="542" r="2.6"/><circle class="pt" cx="311" cy="542" r="2.6"/><circle class="pt" cx="311" cy="542" r="2.6"/><circle class="pt" cx="311" cy="542" r="2.6"/><circle class="pt" cx="311" cy="542" r="2.6"/><circle class="pt" cx="311" cy="542" r="2.6"/><circle class="pt" cx="311" cy="542" r="2.6"/><circle class="pt" cx="43" cy="406" r="2.6"/><circle class="pt" cx="333" cy="511" r="2.6"/></g><g class="marker"><circle cx="517" cy="591" r="13"/><text x="517" y="596">1</text></g><g class="marker"><circle cx="311" cy="542" r="13"/><text x="311" y="547">3</text></g><g class="marker"><circle cx="333" cy="511" r="13"/><text x="333" y="516">2</text></g></svg></div>
         <div class="reveal">
-          <p class="section-tag">Start Here</p>
-          <h2 class="section-title">The Icons</h2>
-          <p class="section-intro">The rooms the neighborhood runs on.</p>
+          <p class="kicker">The Short List</p>
+          <h2>Three to Start</h2>
+          <p class="lede">Three names to open with &mdash; every other Ivanhoe Village place is in the full list below.</p>
+          <a class="ave-row" href="/?venue=barkhaven"><span class="n">1</span><span class="who"><b>Barkhaven</b><span>Burgers · $$</span></span><span class="arr">&rarr;</span></a>
+          <a class="ave-row" href="/?venue=sushi-making-class"><span class="n">2</span><span class="who"><b>Beginner Sushi-Making Class</b><span>Attractions · $$</span></span><span class="arr">&rarr;</span></a>
+          <a class="ave-row" href="/?venue=4-hens-creole-kitchen"><span class="n">3</span><span class="who"><b>4 Hens Creole Kitchen</b><span>Creole kitchen · $$</span></span><span class="arr">&rarr;</span></a>
         </div>
-
-        <div class="spotlights">
-          <article class="spot reveal">
-            <figure>
-              <img src="img/18cbad6f79adcac6.webp" alt="A waffle sandwich stacked with a fried egg and bacon beside seasoned home fries at White Wolf Cafe" />
-            </figure>
-            <div class="spot-body">
-              <p class="meta"><span>Cafe</span><span class="dot">·</span><span>$$</span></p>
-              <h3>White Wolf Cafe</h3>
-              <p>This is Ivanhoe Village's morning ritual. White Wolf does Southern comfort the way it should be done: the Crab Cakes Benedict that regulars dream about, French toast worth the trip alone, and a cinnamon bun famous across the neighborhood. Cheese grits, home fries, country fried chicken, the whole honest lineup. The room is art-filled and warm, the staff treats you like a neighbor, and brunch here feels like the day already started right.</p>
-            </div>
-          <a class="spot-go" href="/?venue=white-wolf">See it in the guide &rarr;</a></article>
-
-          <article class="spot flip reveal">
-            <figure>
-              <img src="img/10165e2fb3e81250.webp" alt="Inside the Ivanhoe Park Brewing taproom, with barrel tables, warm wood paneling and the brewhouse behind glass" />
-            </figure>
-            <div class="spot-body">
-              <p class="meta"><span>Brewery</span><span class="dot">·</span><span>$$</span></p>
-              <h3>Ivanhoe Park Brewing Company</h3>
-              <p>Tucked into the historic Ivanhoe District, this independent brewery pours its heart into every pint. The story runs deep: the name honors Lake Ivanhoe founder George Russell and the old Joyland amusement park that once stood here. The beer follows suit with personality, from the crisp Park Hopp'r pilsner to the bold Tupac ShaPorter. The reclaimed-wood taproom and dog-friendly beer garden hum with neighborhood energy, and the rotating taps keep locals coming back to see what is new.</p>
-            </div>
-          <a class="spot-go" href="/?venue=ivanhoe-park-brewing-company">See it in the guide &rarr;</a></article>
-
-          <article class="spot reveal">
-            <figure>
-              <img src="img/5861d190b61f7619.webp" alt="The brick patio at Santiago's Bodega after dark, diners at tables under red umbrellas beside the hand painted wooden sign" />
-            </figure>
-            <div class="spot-body">
-              <p class="meta"><span>Tapas</span><span class="dot">·</span><span>$$</span></p>
-              <h3>Santiago's Bodega</h3>
-              <p>Every neighborhood keeps one table where the night properly starts, and on Virginia Drive it is Santiago's. The tapas arrive the way they should, small plate by small plate: patatas bravas with real heat, saganaki still sizzling, lamb chops kissed by the grill. Sangria flows red and white, the patio glows under the palms, and nobody at your table is in a hurry to leave. Order one more plate. Everyone always orders one more plate.</p>
-            </div>
-          <a class="spot-go" href="/?district=ivanhoe-village">See the district in the guide &rarr;</a></article>
-        </div>
-      </div>
-    </section>
-
-    <!-- THE CREATIVE QUARTER -->
-    <section class="band">
-      <div class="wrap">
+      </section>
+      <!-- TYPOGRAPHIC GRID -->
+      <section class="grid-sec" id="more-names">
         <div class="reveal">
-          <p class="section-tag">Made By Hand</p>
-          <h2 class="section-title">The Creative Quarter</h2>
-          <p class="section-intro">Galleries, vintage shops, and studios: the village wears its art on its sleeve.</p>
+          <p class="kicker">Go Deep · Burgers &amp; sandwiches</p>
+          <h2>More Names to Know</h2>
         </div>
-
-        <div class="spot-grid duo">
-          <article class="spot reveal">
-            <figure>
-              <img src="img/e55cdbee665ab6e3.webp" alt="A working studio at FAVO filled wall to wall with large, colorful pop art paintings" />
-            </figure>
-            <div class="spot-body">
-              <p class="meta"><span>Artist Studios</span><span class="dot">·</span><span>Free to wander</span></p>
-              <h3>FAVO · Faith Arts Village Orlando</h3>
-              <p>FAVO took a tired old roadside motel on Colonial Drive and turned its rooms into working art studios, more than twenty-five of them strung around a courtyard. Painters, printmakers, sculptors and mixed media artists make real work behind those motel doors, and on First Friday nights the whole place swings open: doors wide, new work on the walls, neighbors drifting through with drinks in hand. This is the creative quarter with its sleeves rolled up.</p>
-            </div>
-          <a class="spot-go" href="/?district=ivanhoe-village">See the district in the guide &rarr;</a></article>
-
-          <article class="spot reveal">
-            <figure>
-              <img src="img/75c8db0d0a6b74e8.webp" alt="The white brick storefront of YAY Tiny Shop with its green awnings and hanging sign on North Orange Avenue" />
-            </figure>
-            <div class="spot-body">
-              <p class="meta"><span>Gift Shop</span><span class="dot">·</span><span>$$</span></p>
-              <h3>YAY Tiny Shop</h3>
-              <p>Two hundred and fifty square feet. That is the entire store, and somehow it is enough. YAY Tiny Shop packs its white brick corner on Orange Avenue with Jellycat plush, Paddywax candles, cards and small batch goods from local makers, four shoppers at a time, elbow to elbow and grinning. The shelves are stocked with whatever made the owner smile that week, and it shows. You stop in for a birthday card and leave with a bag of small joys for three different people. Tiny is the whole point.</p>
-            </div>
-          <a class="spot-go" href="/?district=ivanhoe-village">See the district in the guide &rarr;</a></article>
+        <div class="tiles">
+          <a class="tile reveal" href="/?venue=barkhaven"><b>Barkhaven</b><p>The one rule at BarkHaven is that your dog has as much fun as you do.</p><p class="venue-meta">Burgers · $$</p></a>
+          <a class="tile reveal" href="/?venue=palm-beach"><b>Palm Beach Meats</b><p>Florida's only all-Wagyu shop and restaurant, now on South Orange.</p><p class="venue-meta">Deli · $$$</p></a>
+          <a class="tile reveal" href="/?venue=smash-dunk"><b>Smash Dunk</b><p>Smash Dunk runs a full-court press on the smash burger, and the Lay-Up, chopped bacon under a pour of house cheddar sauce, is its signature play.</p><p class="venue-meta">Smash burgers · $$</p></a>
         </div>
-      </div>
-    </section>
-
-    <!-- LAKE LIFE -->
-    <section class="band alt">
-      <div class="wrap">
+      </section>
+      <section class="glide" id="glide-ivanhoe-park-brewing-company" aria-label="Ivanhoe Park Brewing Company">
+        <div class="glide-stage" aria-hidden="true">
+          <div class="glide-bg" style="background:radial-gradient(ellipse 90% 65% at 50% 115%, rgba(198,171,125,0.42), transparent 64%), linear-gradient(168deg, #4d552c, #82703a 58%, #685129)"></div><div class="glide-bg b" style="background:radial-gradient(ellipse 90% 65% at 50% -15%, rgba(198,171,125,0.3), transparent 60%), linear-gradient(200deg, #6a6434, #ad8745 62%, #6b542b)"></div>
+          <p class="ghost">02</p>
+        </div>
+        <div class="glide-cardwrap">
+          <article class="glide-card reveal">
+            <p class="kicker">02 · The Finale</p>
+            <h2>A Pint With Deep Roots</h2>
+            <p>Ivanhoe Park Brewing pours heart into every pint, its name honoring Lake Ivanhoe founder George Russell and old Joyland amusement park. Park Hopp'r pilsner to Tupac ShaPorter, reclaimed wood, dog-friendly beer garden, rotating taps—locals keep returning.</p>
+            <p class="venue-meta">Ivanhoe Park Brewing Company · Brewery · $$</p>
+            <a class="venue-btn" href="/?venue=ivanhoe-park-brewing-company">See the venue &rarr;</a>
+          </article>
+        </div>
+      </section>
+      <section class="quiet reveal">
+        <p class="kicker">Run It Like a Local</p>
+        <h2>Lake First, Tapas Last</h2>
+        <p>Brunch at White Wolf, a slow walk to glassy water, a clear kayak on Lake Ivanhoe, studio doors along Orange Avenue. Evening: tapas at Santiago's as sky goes lavender, then a brewery pint—the neighborhood, start to finish.</p>
+      </section>
+      <!-- CLOSING — the whole neighbourhood -->
+      <section class="closing" id="all-places">
         <div class="reveal">
-          <p class="section-tag">On The Water</p>
-          <h2 class="section-title">Lake Life</h2>
-          <p class="section-intro">Lake Ivanhoe anchors it all: paddleboards, sunset walks, and the calmest water in the city.</p>
+          <p class="kicker">The Full List</p>
+          <h2>That&rsquo;s the story. Here&rsquo;s the whole neighborhood.</h2>
+          <p class="lede">All 17 Ivanhoe Village places from the guide, A&ndash;Z. Tap any name to open its card &mdash; directions, details and booking live there, not in the story.</p>
         </div>
-
-        <div class="spot-grid duo">
-          <article class="spot reveal">
-            <figure>
-              <img src="img/212fdcd46e3910d7.webp" alt="Two paddlers gliding in a clear kayak through lily pads on Lake Ivanhoe with Epic Paddle Adventures" />
-            </figure>
-            <div class="spot-body">
-              <p class="meta"><span>Clear Kayaks &amp; Paddleboards</span><span class="dot">·</span><span>$$</span></p>
-              <h3>Epic Paddle Adventures</h3>
-              <p>The clear kayaks change everything. Epic Paddle Adventures launches from the Lake Ivanhoe boat ramp and puts you on spring-fed water so transparent you can watch the lake floor slide by under your hull. Paddle the chain of lakes: downtown skyline ahead, quiet coves full of herons behind, grand shoreline homes at the far end. Come back at golden hour for the sunset paddle, or after dark, when the boats light up and glow across the water. Beginners welcome. Dogs too.</p>
-            </div>
-          <a class="spot-go" href="/?district=ivanhoe-village">See the district in the guide &rarr;</a></article>
-
-          <article class="spot reveal">
-            <figure>
-              <img src="img/48c6d18713d04194.webp" alt="The grassy cypress shoreline of Gaston Edwards Park curving along the calm edge of Lake Ivanhoe" />
-            </figure>
-            <div class="spot-body">
-              <p class="meta"><span>Lakeside Park</span><span class="dot">·</span><span>Free</span></p>
-              <h3>Gaston Edwards Park</h3>
-              <p>Gaston Edwards Park is the village front porch: a green stretch of Lake Ivanhoe shoreline with a playground, sand volleyball courts, picnic shade and the boat ramp where the paddlers put in. Locals walk the water's edge at golden hour, when the downtown skyline catches the light across the lake and the whole surface turns to copper. Bring a coffee, bring the dog, take the long way around. Nobody on this shoreline is checking a clock.</p>
-            </div>
-          <a class="spot-go" href="/?district=ivanhoe-village">See the district in the guide &rarr;</a></article>
+        <ul class="ix">
+          <li><a href="/?venue=4-hens-creole-kitchen"><span class="ix-name">4 Hens Creole Kitchen</span><span class="ix-meta">Latin &amp; Caribbean · $$</span></a></li>
+          <li><a href="/?venue=barkhaven"><span class="ix-name">Barkhaven</span><span class="ix-meta">Burgers &amp; sandwiches · $$</span></a></li>
+          <li><a href="/?venue=sushi-making-class"><span class="ix-name">Beginner Sushi-Making Class</span><span class="ix-meta">Attractions · $$</span></a></li>
+          <li><a href="/?venue=brews-and-bites-tour"><span class="ix-name">Brews and Bites Walking Tour</span><span class="ix-meta">Attractions · $$</span></a></li>
+          <li><a href="/?venue=cfh-orlando"><span class="ix-name">CFH Orlando</span><span class="ix-meta">Bars &amp; lounges · $$</span></a></li>
+          <li><a href="/?venue=city-food-hall"><span class="ix-name">City Food Hall</span><span class="ix-meta">Markets &amp; shops · $$</span></a></li>
+          <li><a href="/?venue=dona-pepa"><span class="ix-name">Doña Pepa</span><span class="ix-meta">Mexican · $$</span></a></li>
+          <li><a href="/?venue=egg-dose"><span class="ix-name">Egg Dose</span><span class="ix-meta">Breakfast &amp; brunch · $$</span></a></li>
+          <li><a href="/?venue=ivanhoe-park-brewing-company"><span class="ix-name">Ivanhoe Park Brewing Company</span><span class="ix-meta">Breweries · $$</span></a></li>
+          <li><a href="/?venue=ivanhoe-village-food-tour"><span class="ix-name">Ivanhoe Village Food Tour</span><span class="ix-meta">Attractions · $$$</span></a></li>
+          <li><a href="/?venue=lukes-new-york-bagels"><span class="ix-name">Luke's New York Bagels</span><span class="ix-meta">Bakeries · $$</span></a></li>
+          <li><a href="/?venue=orlando-science-center"><span class="ix-name">Orlando Science Center &amp; The Dome</span><span class="ix-meta">Museums &amp; landmarks · $$</span></a></li>
+          <li><a href="/?venue=palm-beach"><span class="ix-name">Palm Beach Meats</span><span class="ix-meta">Burgers &amp; sandwiches · $$$</span></a></li>
+          <li><a href="/?venue=smash-dunk"><span class="ix-name">Smash Dunk</span><span class="ix-meta">Burgers &amp; sandwiches · $$</span></a></li>
+          <li><a href="/?venue=the-pinery"><span class="ix-name">The Pinery</span><span class="ix-meta">American · $$$</span></a></li>
+          <li><a href="/?venue=white-wolf"><span class="ix-name">White Wolf Cafe</span><span class="ix-meta">Coffee &amp; cafes · $$</span></a></li>
+          <li><a href="/?venue=yakuza-sushi"><span class="ix-name">Yakuza Sushi</span><span class="ix-meta">Japanese &amp; sushi · $$</span></a></li>
+        </ul>
+        <div class="handoff reveal">
+          <a class="btn-big" href="/?district=ivanhoe-village">All 17 Ivanhoe Village places &rarr;</a>
+          <a class="next-district" href="/downtown-orlando-district-guide.html">Next district story: Downtown Orlando &rarr;</a>
         </div>
+      </section>
+    </main>
+    <footer>
+      <div class="foot-in">
+        <a class="back-link" href="/">&larr; Back to the full guide</a>
+        <p class="brand-line">407 FYI &mdash; an independent Orlando guide. Details can change; confirm before you go.</p>
+        <p>Hand-verified Orlando places · Checked October 2026 · Local Picks are never sponsored · Corrections: <a href="mailto:mail@407.fyi">mail@407.fyi</a></p>
+        <p>Some links on 407 FYI are affiliate links. They never affect which places we list, rank, or recommend.</p>
       </div>
-    </section>
-
-    <!-- MAKE A DAY OF IT -->
-    <section class="band gradient">
-      <div class="wrap">
-        <div class="reveal">
-          <p class="section-tag">The Itinerary</p>
-          <h2 class="section-title">Make a day of it</h2>
-        </div>
-        <div class="day-rows">
-          <div class="day-row reveal">
-            <span class="when">Morning</span>
-            <p class="what">Brunch at White Wolf, then a slow walk down to the lake while the water is still glass.</p>
-          </div>
-          <div class="day-row reveal">
-            <span class="when">Afternoon</span>
-            <p class="what">Clear kayak on Lake Ivanhoe, then studio doors and vintage racks: FAVO, YAY, and every little shop on Orange Avenue.</p>
-          </div>
-          <div class="day-row reveal">
-            <span class="when">Evening</span>
-            <p class="what">Tapas at Santiago's as the sky goes lavender, then a pint at Ivanhoe Park Brewing. The neighborhood, start to finish.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CLOSING -->
-    <section class="closing">
-      <div class="wrap reveal">
-        <h2>Ivanhoe Village is one chapter. The guide has the whole book.</h2>
-        <p>Six hundred plus Orlando spots, picked by locals, organized the way you actually plan a day. Start at the lake, then wander.</p>
-        <a class="btn-guide" href="/">Back to the full guide</a>
-      </div>
-    </section>
-    <footer>Part of 407 FYI</footer>
+    </footer>
 
     <script>
       (function () {
-        var els = document.querySelectorAll(".reveal");
-        if (!("IntersectionObserver" in window)) return;
-        document.documentElement.classList.add("reveal-armed");
+        var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+        if (reduce || !("IntersectionObserver" in window)) return;
+        /* Arm hidden start states only once the observer is running;
+           without JS (or with reduced motion) everything renders. */
+        document.body.classList.add("reveal-armed");
         var io = new IntersectionObserver(function (entries) {
-          entries.forEach(function (entry) {
-            if (entry.isIntersecting) {
-              entry.target.classList.add("in");
-              io.unobserve(entry.target);
-            }
+          entries.forEach(function (e) {
+            if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); }
           });
         }, { threshold: 0.12, rootMargin: "0px 0px -6% 0px" });
-        els.forEach(function (el) { io.observe(el); });
-        /* If nothing has scrolled after a beat, the viewer is a static
-           render (full-page capture, embed snapshot): show everything.
-           Real scrollers keep their fades, driven by the observer. */
+        document.querySelectorAll(".reveal").forEach(function (el) { io.observe(el); });
+        /* Glide stages: toggle the cross-fade layer while a panel is on screen. */
+        var gio = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) {
+            e.target.classList.toggle("in-view", e.isIntersecting);
+          });
+        }, { threshold: 0.08 });
+        document.querySelectorAll(".glide").forEach(function (el) { gio.observe(el); });
+        /* Static-render safety (full-page capture / embed snapshot):
+           if nothing has scrolled shortly after load, show everything. */
         setTimeout(function () {
           if (window.scrollY < 10) {
-            els.forEach(function (el) { el.classList.add("in"); });
+            document.querySelectorAll(".reveal").forEach(function (el) { el.classList.add("in"); });
             io.disconnect();
           }
-        }, 1000);
+        }, 1200);
       })();
     </script>
-  <div class="fyi-foot"><div class="fyi-foot-in"><div><h3>Districts</h3><ul><li><a href="/winter-park-district-guide.html">Winter Park</a></li><li><a href="/downtown-orlando-district-guide.html">Downtown Orlando</a></li><li><a href="/mills-50-district-guide.html">Mills 50</a></li><li><a href="/milk-district-guide.html">Milk District</a></li><li><a href="/international-drive-district-guide.html">International Drive</a></li><li><a href="/">All districts in the full guide</a></li></ul></div><div><h3>About</h3><ul><li><a href="/whats-new.html">What's new</a></li><li><a href="/what-visitors-google-orlando.html">What visitors Google</a></li><li><a href="mailto:mail@407.fyi?subject=407%20FYI%20press">Press &amp; media kit</a></li></ul></div><div><h3>Contact</h3><ul><li><a href="mailto:mail@407.fyi">mail@407.fyi</a></li><li><a href="mailto:mail@407.fyi?subject=407%20FYI%20—%20venue%20correction">Flag a closure / suggest an edit</a></li></ul></div><div><h3>Disclosures</h3><ul><li>Some links on 407 FYI are affiliate links. They never affect which places we list, rank, or recommend.</li></ul></div></div><div class="fyi-foot-base">407 FYI — an independent Orlando guide. Details can change; confirm before you go.</div></div></body>
+  </body>
 </html>

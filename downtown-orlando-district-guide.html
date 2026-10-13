@@ -1,616 +1,423 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="dark">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-    <meta name="color-scheme" content="light dark" />
-    <link rel="icon" href="data:," />
+    <meta name="color-scheme" content="dark" />
     <title>Downtown Orlando District Guide · 407 FYI</title>
     <meta name="description" content="Downtown Orlando district highlight: a lake that anchors it all, a performing arts center with real gravity, and bars worth the skyline view. A scroll presentation from 407 FYI." />
+    <link rel="canonical" href="https://407.fyi/downtown-orlando-district-guide.html" />
+    <meta property="og:title" content="Downtown Orlando District Guide · 407 FYI" />
+    <meta property="og:description" content="Downtown Orlando district highlight: a lake that anchors it all, a performing arts center with real gravity, and bars worth the skyline view. A scroll presentation from 407 FYI." />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://407.fyi/downtown-orlando-district-guide.html" />
+    <meta property="og:image" content="https://407.fyi/img/f1daafc686cc1158.webp" />
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;0,900;1,500&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Urbanist:wght@600;700;800&amp;display=swap" rel="stylesheet" />
     <style>
-      /* ============================================================
-         DISTRICT GRADIENT SYSTEM · 407 FYI rollouts
-         Each district site gets its own two-stop dusk gradient.
-         Swap the --grad-a / --grad-b tokens per district:
-           Winter Park             : deep oak green   -> warm amber gold
-           Disney Springs          : lagoon teal      -> coral sunset
-           Milk District           : dairy cream rose -> tangerine
-           Thornton Park           : brick rust       -> lake dusk plum
-           Mills 50                : jade             -> orchid violet
-           Ivanhoe Village         : lake blue-green  -> antique gold
-           Downtown (this page)    : skyline navy     -> sunset orange
-           I-Drive                 : neon teal        -> sunset magenta
-           Lake Nona               : modern aqua      -> soft lime
-           Universal               : midnight blue    -> volcano orange
-           Audubon Park            : garden green     -> marigold
-           College Park            : collegiate navy  -> warm bronze
-         ============================================================ */
+      /* Night Drive tokens (from the main guide) + district gradient */
       :root {
-        --grad-a: #1e293a;
-        --grad-b: #e8a579;
-        --grad-mid: #364b68;
-        --ink: #1c2431;
-        --ink-soft: #47536a;
-        --paper: #f8f5f0;
-        --paper-2: #f0e9df;
-        --card: #fffdf9;
-        --line: rgba(28, 49, 31, 0.14);
-        --gold: #c28965;
-        --gold-bright: #f5b57f;
-        --shadow: 0 24px 60px rgba(26, 58, 31, 0.18);
-        color-scheme: light;
+        color-scheme: dark;
+        --bg: #0a1811; --surface: #122419; --soft: #172a1f; --ink: #f0e8d5;
+        --muted: #c6bba2; --line: #2f4a38; --accent: #765b2f; --accent-ink: #d4b573;
+        --headline: #f6edd6; --focus: #d4b573;
+        --d-a: #0d1711; --d-b: #333f27; --d-c: #a3813f;
+        --h1vw: 10.5vw;
+        --pad: clamp(20px, 5vw, 40px);
       }
-      @media (prefers-color-scheme: dark) {
-        :root {
-          --ink: #f0e9dc;
-          --ink-soft: #c3bda9;
-          --paper: #131a24;
-          --paper-2: #111620;
-          --card: #1c2636;
-          --line: rgba(240, 233, 220, 0.16);
-          --gold: #f5b57f;
-          --shadow: 0 24px 60px rgba(0, 0, 0, 0.45);
-          color-scheme: dark;
-        }
-      }
-
       * { box-sizing: border-box; }
       html { scroll-behavior: smooth; }
       body {
-        margin: 0;
-        font-family: "Public Sans", system-ui, sans-serif;
-        background: var(--paper);
-        color: var(--ink);
-        line-height: 1.6;
+        margin: 0; background: var(--bg); color: var(--ink);
+        font-family: "Manrope", system-ui, sans-serif; line-height: 1.6;
         overflow-x: hidden;
       }
-      img { display: block; max-width: 100%; }
-
-      .serif { font-family: "Playfair Display", Georgia, serif; }
-
-      /* ---------- fade-in on scroll (the only animation) ----------
-         Content is visible by default. The script at the end of the
-         body arms the hidden start state only once its observer is
-         running, then fades each block in as it scrolls into view.
-         If the script never runs, the full story still renders. */
-      .reveal-armed .reveal {
-        opacity: 0;
-        transform: translateY(26px);
-        transition: opacity 0.9s ease, transform 0.9s ease;
-      }
-      .reveal-armed .reveal.in { opacity: 1; transform: none; }
-      @media print {
-        .reveal { opacity: 1 !important; transform: none !important; }
-      }
-      @media (prefers-reduced-motion: reduce) {
-        html { scroll-behavior: auto; }
-        .reveal { opacity: 1; transform: none; transition: none; }
-      }
-
-      /* ---------- hero ---------- */
-      .hero {
-        position: relative;
-        min-height: 100svh;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
-        color: #fdf6ea;
-        isolation: isolate;
-        overflow: hidden;
-      }
-      .hero-media {
-        position: absolute; inset: 0; z-index: -2;
-      }
-      .hero-media img {
-        width: 100%; height: 100%;
-        object-fit: cover; object-position: center 42%;
-      }
-      .hero::after {
-        content: "";
-        position: absolute; inset: 0; z-index: -1;
-        background:
-          linear-gradient(178deg,
-            rgba(26, 58, 31, 0.46) 0%,
-            rgba(26, 58, 31, 0.10) 34%,
-            rgba(26, 58, 31, 0.58) 68%,
-            rgba(14, 32, 17, 0.97) 100%),
-          linear-gradient(100deg,
-            rgba(26, 58, 31, 0.55) 0%,
-            rgba(232, 165, 121, 0.16) 78%);
-      }
-      .hero-inner {
-        width: min(1180px, 100% - 2.5rem);
-        margin-inline: auto;
-        padding: 7rem 0 4.5rem;
-      }
+      h1, h2, .display { font-family: "Urbanist", "Manrope", sans-serif; }
+      a { color: var(--accent-ink); }
+      a:focus-visible, .venue-btn:focus-visible { outline: 2px solid var(--focus); outline-offset: 3px; }
       .kicker {
-        font-size: 0.78rem;
-        font-weight: 700;
-        letter-spacing: 0.32em;
-        text-transform: uppercase;
-        color: var(--gold-bright);
-        margin: 0 0 1.4rem;
+        font-family: "Urbanist", sans-serif; font-weight: 700; letter-spacing: .22em;
+        font-size: .72rem; text-transform: uppercase; color: var(--accent-ink); margin: 0 0 18px;
+      }
+
+      /* ---------- reveal on scroll (armed by JS; content visible without it) ---------- */
+      .reveal-armed .reveal { opacity: 0; transform: translateY(26px); transition: opacity .9s ease, transform .9s ease; }
+      .reveal-armed .reveal.in { opacity: 1; transform: none; }
+
+      /* ---------- 1 · title screen ---------- */
+      .hero {
+        position: relative; min-height: 100svh; display: grid; place-items: center;
+        text-align: center; overflow: hidden; padding: 64px var(--pad);
+        background:
+          radial-gradient(ellipse 90% 55% at 50% 108%, rgba(163, 129, 63, .28), transparent 60%),
+          linear-gradient(168deg, #0d2818 0%, var(--d-a) 52%, #07130c 100%);
+      }
+      .hero-in { position: relative; max-width: 900px; }
+      .hero-brand {
+        font-family: "Urbanist", sans-serif; font-weight: 800; letter-spacing: .3em;
+        font-size: .78rem; color: var(--ink); text-decoration: none; opacity: .85;
       }
       .hero h1 {
-        font-family: "Playfair Display", Georgia, serif;
-        font-weight: 900;
-        font-size: clamp(3.6rem, 13.5vw, 10.5rem);
-        line-height: 0.94;
-        letter-spacing: -0.01em;
-        margin: 0 0 1.6rem;
-        text-wrap: balance;
+        margin: 26px 0 8px; font-weight: 800; color: var(--headline);
+        font-size: clamp(1.9rem, var(--h1vw), 9.5rem); line-height: .98; letter-spacing: .01em;
       }
-      .hero .subline {
-        font-family: "Playfair Display", Georgia, serif;
-        font-style: italic;
-        font-weight: 500;
-        font-size: clamp(1.25rem, 3.4vw, 1.9rem);
-        line-height: 1.45;
-        max-width: 36ch;
-        margin: 0;
-        color: #f6e8d2;
+      .hero .sub {
+        margin: 10px auto 0; max-width: 620px; font-size: clamp(1.05rem, 2.6vw, 1.45rem);
+        color: var(--ink); font-weight: 500;
       }
-      .hero .scroll-cue {
-        margin-top: 3.2rem;
-        font-size: 0.72rem;
-        font-weight: 600;
-        letter-spacing: 0.28em;
-        text-transform: uppercase;
-        color: rgba(253, 246, 234, 0.78);
-        display: flex; align-items: center; gap: 0.9rem;
+      .hero .count { margin-top: 30px; color: var(--muted); font-size: .86rem; letter-spacing: .12em; text-transform: uppercase; }
+      .scroll-cue {
+        position: absolute; left: 50%; bottom: 26px; transform: translateX(-50%);
+        color: var(--muted); font-size: .7rem; letter-spacing: .3em; text-transform: uppercase;
+        display: grid; justify-items: center; gap: 8px;
       }
-      .hero .scroll-cue::after {
-        content: "";
-        width: 64px; height: 1px;
-        background: linear-gradient(90deg, var(--gold-bright), transparent);
+      .scroll-cue::after {
+        content: ""; width: 1px; height: 44px;
+        background: linear-gradient(var(--accent-ink), transparent);
+        animation: cue 2.4s ease-in-out infinite;
       }
+      @keyframes cue { 0%, 100% { transform: scaleY(.55); opacity: .4; } 50% { transform: scaleY(1); opacity: 1; } }
 
-      /* ---------- sections ---------- */
-      .band {
-        padding: clamp(4.5rem, 11vw, 8.5rem) 0;
+      /* ---------- quiet text blocks ---------- */
+      .quiet { max-width: 680px; margin: 0 auto; padding: 17vh var(--pad); }
+      .quiet h2, .split h2, .grid-sec h2, .closing h2 {
+        margin: 0 0 20px; font-weight: 800; color: var(--headline);
+        font-size: clamp(2rem, 5.6vw, 3.2rem); line-height: 1.08;
       }
-      .band.alt { background: var(--paper-2); }
-      .band.gradient {
-        background: linear-gradient(160deg, var(--grad-a) 0%, var(--grad-mid) 56%, #96684e 135%);
-        color: #f7eedd;
-      }
-      .wrap {
-        width: min(1180px, 100% - 2.5rem);
-        margin-inline: auto;
-      }
-      .narrow { max-width: 800px; }
+      .quiet p { font-size: clamp(1.05rem, 2.2vw, 1.22rem); color: var(--ink); margin: 0; }
 
-      .section-tag {
-        font-size: 0.74rem;
-        font-weight: 700;
-        letter-spacing: 0.3em;
-        text-transform: uppercase;
-        color: var(--gold);
-        margin: 0 0 1.1rem;
+      /* ---------- glideshow panels ---------- */
+      .glide { position: relative; }
+      .glide-stage {
+        position: sticky; top: 0; height: 100svh; overflow: hidden;
       }
-      .band.gradient .section-tag { color: var(--gold-bright); }
+      .glide-bg { position: absolute; inset: 0; transition: opacity 1.2s ease; }
+      .glide-bg.b { opacity: 0; }
+      .glide.in-view .glide-bg.b { opacity: 1; }
+      .glide-bg.a1 { background: radial-gradient(ellipse 80% 60% at 18% 110%, rgba(163,129,63,.35), transparent 62%), linear-gradient(155deg, #10301d, var(--d-a) 58%, #060f09); }
+      .glide-bg.b1 { background: radial-gradient(ellipse 80% 60% at 82% -10%, rgba(163,129,63,.30), transparent 60%), linear-gradient(205deg, #143723, var(--d-a) 60%, #050d07); }
+      .glide-bg.a2 { background: radial-gradient(ellipse 75% 55% at 85% 108%, rgba(163,129,63,.26), transparent 60%), linear-gradient(200deg, #0c2416, #081a10 60%, #040a06); }
+      .glide-bg.b2 { background: radial-gradient(ellipse 75% 55% at 12% -8%, rgba(212,181,115,.22), transparent 58%), linear-gradient(160deg, #0e2a19, #07160e 62%, #040a06); }
+      .glide-bg.a3 { background: radial-gradient(ellipse 90% 65% at 50% 115%, rgba(233,193,121,.42), transparent 64%), linear-gradient(168deg, var(--d-b), #6d5a28 58%, #4a3a17); }
+      .glide-bg.b3 { background: radial-gradient(ellipse 90% 65% at 50% -15%, rgba(233,193,121,.30), transparent 60%), linear-gradient(200deg, #55602f, var(--d-c) 62%, #57431a); }
+      .ghost {
+        position: absolute; top: 4svh; right: 2vw; margin: 0;
+        font-family: "Urbanist", sans-serif; font-weight: 800; line-height: 1;
+        font-size: clamp(9rem, 34vw, 24rem); color: transparent;
+        -webkit-text-stroke: 1.5px rgba(212, 181, 115, .28);
+        transform: translateY(3.5svh); transition: transform 1.4s ease;
+        user-select: none;
+      }
+      .glide.in-view .ghost { transform: translateY(0); }
+      .glide.flip .ghost { right: auto; left: 2vw; }
+      .glide-cardwrap { position: relative; z-index: 2; margin-top: -58svh; padding: 0 var(--pad) 16svh; }
+      .glide-card {
+        max-width: 540px; background: rgba(18, 36, 25, .92); border: 1px solid var(--line);
+        border-radius: 20px; padding: clamp(26px, 4.5vw, 42px);
+        box-shadow: 0 30px 70px rgba(0, 0, 0, .5); backdrop-filter: blur(6px);
+      }
+      .glide.flip .glide-card { margin-left: auto; }
+      .glide-card h2 { margin: 0 0 14px; font-weight: 800; color: var(--headline); font-size: clamp(1.8rem, 4.6vw, 2.7rem); line-height: 1.1; }
+      .glide-card p { margin: 0 0 22px; font-size: 1.04rem; }
+      .venue-meta { color: var(--muted); font-size: .88rem; font-weight: 600; letter-spacing: .04em; margin: 0 0 14px; }
+      .venue-btn {
+        display: inline-block; background: var(--accent-ink); color: #14220f; text-decoration: none;
+        font-weight: 800; font-size: .95rem; padding: 13px 22px; border-radius: 999px;
+      }
+      .venue-btn:hover { background: #e9c179; }
 
-      h2.section-title {
-        font-family: "Playfair Display", Georgia, serif;
-        font-weight: 700;
-        font-size: clamp(2.6rem, 7.5vw, 4.6rem);
-        line-height: 1.02;
-        margin: 0 0 1.4rem;
-        letter-spacing: -0.01em;
+      /* ---------- pull quote ---------- */
+      .pullquote { min-height: 94svh; display: grid; place-items: center; text-align: center; padding: 12vh var(--pad); }
+      .pullquote blockquote {
+        margin: 0; max-width: 880px; font-family: "Urbanist", sans-serif; font-weight: 700;
+        font-size: clamp(1.9rem, 6.2vw, 3.7rem); line-height: 1.22; color: var(--headline);
       }
-      .section-intro {
-        font-size: clamp(1.12rem, 2.6vw, 1.4rem);
-        line-height: 1.65;
-        color: var(--ink-soft);
-        max-width: 56ch;
-        margin: 0;
-      }
-      .band.gradient .section-intro { color: #e8d8bc; }
+      .pullquote .mark { color: var(--accent-ink); }
 
-      /* ---------- intro narrative ---------- */
-      .intro-text {
-        font-family: "Playfair Display", Georgia, serif;
-        font-weight: 500;
-        font-size: clamp(1.55rem, 4.4vw, 2.6rem);
-        line-height: 1.42;
-        margin: 0;
-        text-wrap: pretty;
+      /* ---------- split: short list + point map ---------- */
+      .split { max-width: 1120px; margin: 0 auto; padding: 15vh var(--pad); display: grid; grid-template-columns: 1fr 1fr; gap: clamp(28px, 5vw, 64px); align-items: center; }
+      .minimap { background: var(--surface); border: 1px solid var(--line); border-radius: 20px; padding: 14px; }
+      .minimap-art { display: block; width: 100%; height: auto; }
+      .minimap-art .pt { fill: var(--accent-ink); opacity: .35; }
+      .minimap-art .ave-line { stroke: var(--d-c); stroke-width: 2; opacity: .4; }
+      .minimap-art .ave-label { fill: var(--muted); font-family: "Urbanist", sans-serif; font-size: 12.5px; letter-spacing: .34em; text-anchor: middle; }
+      .minimap-art .marker circle { fill: var(--accent-ink); }
+      .minimap-art .marker text { fill: #14220f; font-family: "Urbanist", sans-serif; font-weight: 800; font-size: 13px; text-anchor: middle; }
+      .split .lede { color: var(--muted); margin: 0 0 10px; font-size: 1.02rem; }
+      .ave-row {
+        display: flex; align-items: baseline; gap: 14px; padding: 17px 4px;
+        border-bottom: 1px solid var(--line); text-decoration: none; color: var(--ink);
       }
-      .intro-text .accent { color: var(--gold); font-style: italic; }
+      .ave-row:first-of-type { border-top: 1px solid var(--line); }
+      .ave-row .n { font-family: "Urbanist", sans-serif; font-weight: 800; color: var(--accent-ink); font-size: .85rem; }
+      .ave-row .who { flex: 1; min-width: 0; }
+      .ave-row .who b { display: block; font-family: "Urbanist", sans-serif; font-size: 1.22rem; color: var(--headline); }
+      .ave-row .who span { color: var(--muted); font-size: .9rem; }
+      .ave-row .arr { color: var(--accent-ink); font-weight: 800; }
+      .ave-row:hover .who b { color: var(--accent-ink); }
 
-      /* ---------- spotlight cards ---------- */
-      .spotlights {
-        margin-top: clamp(2.8rem, 7vw, 4.5rem);
-        display: grid;
-        gap: clamp(2.6rem, 6vw, 4rem);
+      /* ---------- typographic grid ---------- */
+      .grid-sec { max-width: 1120px; margin: 0 auto; padding: 6vh var(--pad) 15vh; }
+      .tiles { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 30px; }
+      .tile {
+        display: block; background: var(--surface); border: 1px solid var(--line); border-radius: 18px;
+        padding: clamp(22px, 3.4vw, 32px); text-decoration: none; color: var(--ink);
       }
-      .spot {
-        display: grid;
-        gap: 0;
-        background: var(--card);
-        border: 1px solid var(--line);
-        border-radius: 20px;
-        overflow: hidden;
-        box-shadow: var(--shadow);
-      }
-      .spot figure {
-        margin: 0;
-        aspect-ratio: 16 / 10;
-        overflow: hidden;
-      }
-      .spot figure img {
-        width: 100%; height: 100%;
-        object-fit: cover;
-      }
-      .spot .spot-body {
-        padding: clamp(1.6rem, 4.5vw, 2.6rem);
-      }
-      .spot .meta {
-        display: flex; flex-wrap: wrap; align-items: center; gap: 0.6rem 0.9rem;
-        font-size: 0.76rem; font-weight: 700;
-        letter-spacing: 0.18em; text-transform: uppercase;
-        color: var(--gold);
-        margin: 0 0 0.7rem;
-      }
-      .spot .meta .dot { color: var(--ink-soft); letter-spacing: 0; }
-      .spot h3 {
-        font-family: "Playfair Display", Georgia, serif;
-        font-weight: 700;
-        font-size: clamp(1.7rem, 4.6vw, 2.4rem);
-        line-height: 1.12;
-        margin: 0 0 0.9rem;
-      }
-      .spot p {
-        margin: 0;
-        font-size: 1.02rem;
-        line-height: 1.72;
-        color: var(--ink-soft);
-        max-width: 62ch;
-      }
-      @media (min-width: 900px) {
-        .spot { grid-template-columns: 1.05fr 1fr; }
-        .spot figure { aspect-ratio: auto; min-height: 340px; }
-        .spot.flip figure { order: 2; }
-        .spot .spot-body { display: flex; flex-direction: column; justify-content: center; }
-      }
+      .tile:hover { border-color: var(--accent-ink); }
+      .tile b { display: block; font-family: "Urbanist", sans-serif; font-weight: 800; font-size: clamp(1.25rem, 2.6vw, 1.6rem); line-height: 1.2; color: var(--headline); margin-bottom: 8px; }
+      .tile p { margin: 0 0 14px; color: var(--muted); font-size: .98rem; }
+      .tile .venue-meta { margin: 0; }
 
-      /* compact grid for the multi-up sections */
-      .spot-grid {
-        margin-top: clamp(2.8rem, 7vw, 4.5rem);
-        display: grid;
-        gap: 1.6rem;
+      /* ---------- closing: the whole neighbourhood ---------- */
+      .closing { max-width: 860px; margin: 0 auto; padding: 15vh var(--pad) 9vh; }
+      .closing .lede { color: var(--muted); font-size: 1.05rem; margin: 0 0 8px; max-width: 560px; }
+      .ix { list-style: none; margin: 34px 0 0; padding: 0; }
+      .ix a {
+        display: flex; align-items: baseline; justify-content: space-between; gap: 16px;
+        padding: 11px 2px; border-bottom: 1px solid var(--line); text-decoration: none;
       }
-      @media (min-width: 760px) {
-        .spot-grid { grid-template-columns: repeat(3, 1fr); gap: 1.8rem; }
-        .spot-grid .spot { grid-template-columns: 1fr; }
-        .spot-grid .spot figure { aspect-ratio: 4 / 3; min-height: 0; order: 0; }
-        .spot-grid .spot .spot-body { padding: 1.7rem; justify-content: flex-start; }
-        .spot-grid .spot h3 { font-size: 1.55rem; }
-        .spot-grid .spot:first-child { grid-column: 1 / -1; grid-template-columns: 1.05fr 1fr; }
-        .spot-grid .spot:first-child figure { aspect-ratio: auto; min-height: 320px; }
-        .spot-grid .spot:first-child .spot-body { padding: clamp(1.6rem, 4.5vw, 2.6rem); justify-content: center; }
-        .spot-grid .spot:first-child h3 { font-size: clamp(1.7rem, 4.6vw, 2.4rem); }
+      .ix-name { font-weight: 600; color: var(--ink); }
+      .ix-meta { color: var(--muted); font-size: .85rem; text-align: right; white-space: nowrap; }
+      .ix a:hover .ix-name { color: var(--accent-ink); }
+      @media (min-width: 780px) { .ix { columns: 2; column-gap: 54px; } .ix li { break-inside: avoid; } }
+      .handoff { margin-top: 52px; display: grid; gap: 18px; justify-items: start; }
+      .btn-big {
+        display: inline-block; background: var(--accent-ink); color: #14220f; text-decoration: none;
+        font-family: "Urbanist", sans-serif; font-weight: 800; font-size: 1.05rem;
+        padding: 16px 28px; border-radius: 999px;
       }
+      .btn-big:hover { background: #e9c179; }
+      .next-district { font-weight: 700; text-decoration: none; }
+      .next-district:hover { text-decoration: underline; }
 
-      /* two-up variant for the after dark section */
-      @media (min-width: 760px) {
-        .spot-grid.two { grid-template-columns: repeat(2, 1fr); }
-        .spot-grid.two .spot:first-child { grid-column: auto; grid-template-columns: 1fr; }
-        .spot-grid.two .spot:first-child figure { aspect-ratio: 4 / 3; min-height: 0; }
-        .spot-grid.two .spot:first-child .spot-body { padding: 1.7rem; justify-content: flex-start; }
-        .spot-grid.two .spot:first-child h3 { font-size: 1.55rem; }
-      }
+      /* ---------- footer ---------- */
+      footer { border-top: 1px solid var(--line); margin-top: 4vh; }
+      .foot-in { max-width: 860px; margin: 0 auto; padding: 44px var(--pad) 58px; display: grid; gap: 14px; }
+      .back-link { font-weight: 700; text-decoration: none; }
+      .back-link:hover { text-decoration: underline; }
+      .foot-in p { margin: 0; color: var(--muted); font-size: .88rem; max-width: 640px; }
+      .foot-in .brand-line { color: var(--ink); font-weight: 700; }
 
-      /* ---------- itinerary ---------- */
-      .day-rows { margin-top: clamp(2.6rem, 6vw, 4rem); display: grid; gap: 0; }
-      .day-row {
-        display: grid;
-        gap: 0.4rem;
-        padding: 2rem 0;
-        border-top: 1px solid rgba(247, 238, 221, 0.22);
+      @media (max-width: 760px) {
+        .split { grid-template-columns: 1fr; }
+        .tiles { grid-template-columns: 1fr; }
+        .glide-cardwrap { margin-top: -46svh; }
       }
-      .day-row:last-child { border-bottom: 1px solid rgba(247, 238, 221, 0.22); }
-      .day-row .when {
-        font-family: "Playfair Display", Georgia, serif;
-        font-weight: 700;
-        font-style: italic;
-        font-size: clamp(1.9rem, 5.5vw, 3rem);
-        line-height: 1;
-        color: var(--gold-bright);
-      }
-      .day-row .what {
-        font-size: clamp(1.15rem, 3vw, 1.5rem);
-        line-height: 1.5;
-        margin: 0;
-        max-width: 46ch;
-      }
-      @media (min-width: 760px) {
-        .day-row {
-          grid-template-columns: minmax(280px, max-content) minmax(0, 1fr);
-          align-items: baseline;
-          gap: 2.5rem;
-        }
-        .day-row .when { white-space: nowrap; }
-        .day-row .what { min-width: 0; }
-      }
-
-      /* ---------- closing ---------- */
-      .closing {
-        text-align: center;
-        padding: clamp(5rem, 12vw, 9rem) 0 clamp(3.5rem, 8vw, 5rem);
-        background: linear-gradient(180deg, var(--paper) 0%, var(--grad-a) 34%, #0f141c 100%);
-        color: #f7eedd;
-      }
-      .closing h2 {
-        font-family: "Playfair Display", Georgia, serif;
-        font-weight: 700;
-        font-size: clamp(2.4rem, 7vw, 4.2rem);
-        line-height: 1.05;
-        margin: 0 auto 1.2rem;
-        max-width: 18ch;
-      }
-      .closing p {
-        color: #ddd0b4;
-        max-width: 46ch;
-        margin: 0 auto 2.6rem;
-        font-size: 1.08rem;
-      }
-      .btn-guide {
-        display: inline-block;
-        font-weight: 700;
-        font-size: 1.05rem;
-        letter-spacing: 0.02em;
-        color: #231a12;
-        background: linear-gradient(120deg, var(--gold-bright), var(--grad-b));
-        padding: 1.05rem 2.4rem;
-        border-radius: 999px;
-        text-decoration: none;
-        box-shadow: 0 18px 40px rgba(0, 0, 0, 0.35);
-        transition: transform 0.25s ease, box-shadow 0.25s ease;
-      }
-      .btn-guide:hover, .btn-guide:focus-visible {
-        transform: translateY(-2px);
-        box-shadow: 0 24px 48px rgba(0, 0, 0, 0.42);
-      }
-      footer {
-        background: #0f141c;
-        color: rgba(247, 238, 221, 0.62);
-        text-align: center;
-        padding: 0 1.25rem 2.6rem;
-        font-size: 0.85rem;
-        letter-spacing: 0.14em;
-        text-transform: uppercase;
+      @media print { .reveal { opacity: 1 !important; transform: none !important; } }
+      @media (prefers-reduced-motion: reduce) {
+        html { scroll-behavior: auto; }
+        .glide-stage { position: static; height: 52svh; }
+        .glide-cardwrap { margin-top: 0; padding-top: 30px; }
+        .glide-bg, .ghost, .scroll-cue::after { transition: none !important; animation: none !important; }
+        .reveal-armed .reveal { opacity: 1 !important; transform: none !important; transition: none !important; }
       }
     </style>
-  <meta property="og:title" content="Downtown Orlando District Guide · 407 FYI"><meta property="og:description" content="Downtown Orlando district highlight: a lake that anchors it all, a performing arts center with real gravity, and bars worth the skyline view. A scroll presentation from 407 FYI."><meta property="og:type" content="article"><meta property="og:url" content="https://407.fyi/downtown-orlando-district-guide.html"><meta property="og:image" content="https://407.fyi/img/f1daafc686cc1158.webp"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="https://407.fyi/img/f1daafc686cc1158.webp"><link rel="icon" href="/favicon.ico" sizes="any"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest"><meta name="theme-color" content="#0a1811"><style>
-.fyi-top{position:relative;z-index:60;background:#0c1812;border-bottom:1px solid #24402f;font-family:Urbanist,system-ui,-apple-system,"Segoe UI",sans-serif}
-.fyi-top-in{max-width:1200px;margin:0 auto;padding:12px 20px;display:flex;align-items:center;gap:16px;flex-wrap:wrap}
-.fyi-brand{color:#e8e2d4;text-decoration:none;font-weight:800;letter-spacing:.14em;font-size:1rem}
-.fyi-crumb{color:#9db3a4;font-size:.85rem;display:flex;gap:8px;align-items:center;flex-wrap:wrap}
-.fyi-crumb a{color:#9db3a4;text-decoration:none}.fyi-crumb a:hover{color:#c9a969}
-.fyi-crumb b{color:#e8e2d4;font-weight:600}
-.fyi-top nav{margin-left:auto}.fyi-top nav a{color:#c9a969;text-decoration:none;font-size:.88rem;font-weight:700}
-.fyi-cred{background:#112018;border-bottom:1px solid #24402f;color:#9db3a4;font-family:Urbanist,system-ui,sans-serif;font-size:.82rem}
-.fyi-cred-in{max-width:1200px;margin:0 auto;padding:8px 20px}
-.fyi-cred a{color:#c9a969;text-decoration:none}
-.fyi-foot{background:#0c1812;border-top:1px solid #24402f;color:#9db3a4;font-family:Urbanist,system-ui,-apple-system,"Segoe UI",sans-serif;margin-top:0}
-.fyi-foot-in{max-width:1200px;margin:0 auto;padding:34px 20px 26px;display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:26px}
-.fyi-foot h3{color:#e8e2d4;font-size:.78rem;letter-spacing:.22em;text-transform:uppercase;margin:0 0 12px}
-.fyi-foot ul{list-style:none;margin:0;padding:0;display:grid;gap:8px;font-size:.9rem}
-.fyi-foot a{color:#9db3a4;text-decoration:none}.fyi-foot a:hover{color:#c9a969}
-.fyi-foot-base{max-width:1200px;margin:0 auto;padding:0 20px 26px;font-size:.8rem;line-height:1.55}
-</style><style>.spot{position:relative}.spot-go{display:inline-flex;margin-top:10px;font-weight:700;font-size:.85rem;color:var(--accent-ink,#7c520c);text-decoration:none;border-bottom:2px solid currentColor;padding-bottom:1px}.spot-go::after{content:"";position:absolute;inset:0}</style>
-</head>
-  <body><div class="fyi-top"><div class="fyi-top-in"><a class="fyi-brand" href="/">407 FYI</a><span class="fyi-crumb"><a href="/">Guide</a><span aria-hidden="true">/</span><a href="/#districts">Districts</a><span aria-hidden="true">/</span><b aria-current="page">Downtown Orlando</b></span><nav><a href="/">Full guide</a></nav></div></div><div class="fyi-cred"><div class="fyi-cred-in">Hand-verified Orlando places · Checked October 2026 · Local Picks are never sponsored · Corrections: <a href="mailto:mail@407.fyi">mail@407.fyi</a></div></div>
-
-    <!-- HERO -->
-    <header class="hero">
-      <div class="hero-media">
-        <img src="img/f1daafc686cc1158.webp" alt="The downtown Orlando skyline at dusk across Lake Eola, the fountain lit and throwing color into the water" fetchpriority="high" />
+  </head>
+  <body>
+    <!-- 1 · TITLE SCREEN — type poster on a clean district field -->
+    <header class="hero" style="background:radial-gradient(ellipse 90% 55% at 50% 108%, rgba(163,129,63,0.28), transparent 60%), linear-gradient(168deg, #152016, #0d1711 52%, #070d09)">
+      <div class="hero-in">
+        <a class="hero-brand" href="/">407 FYI · A DISTRICT STORY</a>
+        <h1>DOWNTOWN ORLANDO</h1>
+        <p class="sub">Skyline with a heartbeat — towers over a swan-filled lake.</p>
+        <p class="count">51 hand-verified places · One neighbourhood</p>
       </div>
-      <div class="hero-inner">
-        <p class="kicker">407 FYI · District Highlights</p>
-        <h1>Downtown Orlando</h1>
-        <p class="subline">The city proper: a lake that anchors it all, a performing arts center with real gravity, and bars worth the skyline view.</p>
-        <p class="scroll-cue">Scroll the story</p>
-      </div>
+      <div class="scroll-cue" aria-hidden="true">Scroll</div>
     </header>
 
-    <!-- INTRO -->
-    <section class="band">
-      <div class="wrap narrow reveal">
-        <p class="intro-text">Downtown is where Orlando clocks in, and somewhere along the way it learned to stay out late. Towers rise over a <span class="accent">lake full of swans</span>, Church Street hums under string lights, and the kitchens here cook for people who actually live in this city. Skip the turnstiles for one day. This is the Orlando residents brag about: a skyline, a heartbeat, and a dinner reservation worth keeping.</p>
-      </div>
-    </section>
-
-    <!-- THE ICONS -->
-    <section class="band alt">
-      <div class="wrap">
+    <main>
+      <!-- 2 · QUIET INTRO -->
+      <section class="quiet reveal" id="intro">
+        <p class="kicker">The District</p>
+        <h2>Skyline With A Heartbeat</h2>
+        <p>Downtown is where Orlando clocks in, and somewhere along the way it learned to stay out late. Towers rise over a swan-filled lake, Church Street hums under string lights, kitchens cook for people who actually live here.</p>
+      </section>
+      <section class="glide" id="glide-lake-eola" aria-label="Lake Eola Park &amp; Linton E. Allen Memorial Fountain">
+        <div class="glide-stage" aria-hidden="true">
+          <div class="glide-bg" style="background:radial-gradient(ellipse 80% 60% at 18% 110%, rgba(163,129,63,0.35), transparent 62%), linear-gradient(155deg, #202b1c, #0d1711 58%, #060c08)"></div><div class="glide-bg b" style="background:radial-gradient(ellipse 80% 60% at 82% -10%, rgba(163,129,63,0.3), transparent 60%), linear-gradient(205deg, #26311f, #0d1711 60%, #060a08)"></div>
+          <p class="ghost">01</p>
+        </div>
+        <div class="glide-cardwrap">
+          <article class="glide-card reveal">
+            <p class="kicker">01 · Park</p>
+            <h2>The Lake In Orlando's Dreams</h2>
+            <p>Swans glide past paddle boats, the fountain throws light into the skyline, the 0.9-mile loop might be the city's most walked path. Come for a stroll, stay for an amphitheater concert, linger for the Sunday farmers market.</p>
+            <p class="venue-meta">Lake Eola Park &amp; Linton E. Allen Memorial Fountain · Park · $</p>
+            <a class="venue-btn" href="/?venue=lake-eola">See the venue &rarr;</a>
+          </article>
+        </div>
+      </section>
+      <section class="glide flip" id="glide-reyes" aria-label="Reyes Mezcaleria">
+        <div class="glide-stage" aria-hidden="true">
+          <div class="glide-bg" style="background:radial-gradient(ellipse 75% 55% at 85% 108%, rgba(163,129,63,0.26), transparent 60%), linear-gradient(200deg, #0a120e, #080e0b 60%, #050806)"></div><div class="glide-bg b" style="background:radial-gradient(ellipse 75% 55% at 12% -8%, rgba(186,160,111,0.22), transparent 58%), linear-gradient(160deg, #1a2519, #090f0b 62%, #050806)"></div>
+          <p class="ghost">02</p>
+        </div>
+        <div class="glide-cardwrap">
+          <article class="glide-card reveal">
+            <p class="kicker">02 · Mexican</p>
+            <h2>Agave, Soul, Real Depth</h2>
+            <p>Chef Wendy Lopez, a Michoacán native, cooks the Mexico she grew up with alongside 150-plus agave spirits. Founded in 2017 by Good Salt Restaurant Group to honor Mexico's cuisine, spirits and culture, Reyes hums with intention in plate and pour.</p>
+            <p class="venue-meta">Reyes Mezcaleria · Mexican · $$</p>
+            <a class="venue-btn" href="/?venue=reyes">See the venue &rarr;</a>
+          </article>
+        </div>
+      </section>
+      <!-- PULL QUOTE -->
+      <section class="pullquote reveal" id="quote">
+        <div>
+          <p class="kicker">The Local Test</p>
+          <blockquote><span class="mark">&ldquo;</span>Downtown is where Orlando clocks in, and somewhere along the way it learned to stay out late.<span class="mark">&rdquo;</span></blockquote>
+        </div>
+      </section>
+      <!-- SPLIT — the short list -->
+      <section class="split" id="short-list">
+        <div class="minimap reveal"><svg class="minimap-art" viewBox="0 0 560 640" role="img" aria-label="Stylised point map of Downtown Orlando venues: 1 The Robinson Cocktail Room, 2 Fixtion Restaurant &amp; Bar, 3 Wall Street Plaza"><g><circle class="pt" cx="432" cy="509" r="2.6"/><circle class="pt" cx="404" cy="608" r="2.6"/><circle class="pt" cx="512" cy="394" r="2.6"/><circle class="pt" cx="347" cy="443" r="2.6"/><circle class="pt" cx="361" cy="351" r="2.6"/><circle class="pt" cx="376" cy="542" r="2.6"/><circle class="pt" cx="205" cy="575" r="2.6"/><circle class="pt" cx="319" cy="542" r="2.6"/><circle class="pt" cx="517" cy="378" r="2.6"/><circle class="pt" cx="335" cy="8" r="2.6"/><circle class="pt" cx="376" cy="49" r="2.6"/><circle class="pt" cx="208" cy="330" r="2.6"/><circle class="pt" cx="347" cy="476" r="2.6"/><circle class="pt" cx="319" cy="213" r="2.6"/><circle class="pt" cx="347" cy="476" r="2.6"/><circle class="pt" cx="347" cy="246" r="2.6"/><circle class="pt" cx="552" cy="428" r="2.6"/><circle class="pt" cx="340" cy="489" r="2.6"/><circle class="pt" cx="350" cy="504" r="2.6"/><circle class="pt" cx="336" cy="422" r="2.6"/><circle class="pt" cx="301" cy="521" r="2.6"/><circle class="pt" cx="357" cy="313" r="2.6"/><circle class="pt" cx="279" cy="465" r="2.6"/><circle class="pt" cx="8" cy="519" r="2.6"/><circle class="pt" cx="394" cy="441" r="2.6"/><circle class="pt" cx="43" cy="509" r="2.6"/><circle class="pt" cx="353" cy="432" r="2.6"/><circle class="pt" cx="8" cy="557" r="2.6"/><circle class="pt" cx="430" cy="632" r="2.6"/><circle class="pt" cx="521" cy="8" r="2.6"/><circle class="pt" cx="395" cy="415" r="2.6"/><circle class="pt" cx="382" cy="495" r="2.6"/><circle class="pt" cx="386" cy="502" r="2.6"/><circle class="pt" cx="340" cy="441" r="2.6"/><circle class="pt" cx="356" cy="477" r="2.6"/><circle class="pt" cx="342" cy="507" r="2.6"/><circle class="pt" cx="349" cy="442" r="2.6"/><circle class="pt" cx="341" cy="415" r="2.6"/><circle class="pt" cx="381" cy="591" r="2.6"/><circle class="pt" cx="465" cy="482" r="2.6"/><circle class="pt" cx="369" cy="513" r="2.6"/><circle class="pt" cx="340" cy="489" r="2.6"/><circle class="pt" cx="342" cy="509" r="2.6"/><circle class="pt" cx="340" cy="542" r="2.6"/><circle class="pt" cx="336" cy="525" r="2.6"/><circle class="pt" cx="126" cy="581" r="2.6"/><circle class="pt" cx="336" cy="525" r="2.6"/><circle class="pt" cx="205" cy="575" r="2.6"/></g><g class="marker"><circle cx="353" cy="464" r="13"/><text x="353" y="468">2</text></g><g class="marker"><circle cx="360" cy="457" r="13"/><text x="360" y="461">3</text></g><g class="marker"><circle cx="380" cy="495" r="13"/><text x="380" y="499">1</text></g></svg></div>
         <div class="reveal">
-          <p class="section-tag">Start Here</p>
-          <h2 class="section-title">The Icons</h2>
-          <p class="section-intro">The anchors of downtown, the reasons the skyline matters.</p>
+          <p class="kicker">The Short List</p>
+          <h2>Three to Start</h2>
+          <p class="lede">Three names to open with &mdash; every other Downtown Orlando place is in the full list below.</p>
+          <a class="ave-row" href="/?venue=robinson-cocktail-room"><span class="n">1</span><span class="who"><b>The Robinson Cocktail Room</b><span>Cocktails · $$</span></span><span class="arr">&rarr;</span></a>
+          <a class="ave-row" href="/?venue=fixtion"><span class="n">2</span><span class="who"><b>Fixtion Restaurant &amp; Bar</b><span>Bar · $$</span></span><span class="arr">&rarr;</span></a>
+          <a class="ave-row" href="/?venue=wall-street-plaza"><span class="n">3</span><span class="who"><b>Wall Street Plaza</b><span>Restaurant · $$</span></span><span class="arr">&rarr;</span></a>
         </div>
-
-        <div class="spotlights">
-          <article class="spot reveal">
-            <figure>
-              <img src="img/f406c9c80c9261ce.webp" alt="The Lake Eola fountain spraying high over the water, a swan gliding in front of the downtown skyline" />
-            </figure>
-            <div class="spot-body">
-              <p class="meta"><span>Park</span><span class="dot">·</span><span>$</span></p>
-              <h3>Lake Eola Park &amp; Fountain</h3>
-              <p>This is the lake Orlando sees in its dreams. The swans glide past the paddle boats, the fountain throws light and water into the downtown skyline, and the 0.9 mile loop around the shore might be the most walked path in the city. Come for a slow stroll, stay for a concert under the stars in the Walt Disney Amphitheater, and linger for the Sunday farmers market. Few places gather a whole city the way this park does.</p>
-            </div>
-          <a class="spot-go" href="/?venue=lake-eola">See it in the guide &rarr;</a></article>
-
-          <article class="spot flip reveal">
-            <figure>
-              <img src="img/8b42ce288de2b484.webp" alt="The Dr. Phillips Center glowing at dusk, its wave shaped canopy lit above the glass facade and the front lawn" />
-            </figure>
-            <div class="spot-body">
-              <p class="meta"><span>Performing Arts</span><span class="dot">·</span><span>$$$</span></p>
-              <h3>Dr. Phillips Center for the Performing Arts</h3>
-              <p>For decades Orlando proved it could fill stadiums, but nobody knew if it could fill a concert hall night after night. Then Dr. Phillips Center opened in 2014 and answered that question for good. Broadway tours light up the Walt Disney Theater, Steinmetz Hall pours out symphony sound with pristine acoustics, and the Judson's Live cabaret room keeps the late nights intimate. This is the two block stretch where Orlando found its cultural heartbeat.</p>
-            </div>
-          <a class="spot-go" href="/?venue=dr-phillips-center">See it in the guide &rarr;</a></article>
-
-          <article class="spot reveal">
-            <figure>
-              <img src="img/6e578d7ea1805078.webp" alt="The long agave bar and sunlit dining room inside Reyes Mezcaleria, globe lights hanging over the counter" />
-            </figure>
-            <div class="spot-body">
-              <p class="meta"><span>Mexican</span><span class="dot">·</span><span>$$</span></p>
-              <h3>Reyes Mezcaleria</h3>
-              <p>Chef Wendy Lopez, a Michoacán native, cooks the Mexico she grew up with and pours it alongside more than 150 agave spirits, and the whole room hums with that kind of intention. The Good Salt Restaurant Group, the family behind some of Orlando's most loved dining rooms, founded Reyes in 2017 with one mission: honor the cuisine, the spirits, and the culture of Mexico. Every plate feels rooted, every pour feels considered. This is Mexican cooking with soul and a bar with real depth.</p>
-            </div>
-          <a class="spot-go" href="/?venue=reyes">See it in the guide &rarr;</a></article>
-        </div>
-      </div>
-    </section>
-
-    <!-- THE TABLES THAT MATTER -->
-    <section class="band">
-      <div class="wrap">
+      </section>
+      <!-- TYPOGRAPHIC GRID -->
+      <section class="grid-sec" id="more-names">
         <div class="reveal">
-          <p class="section-tag">The Serious Kitchens</p>
-          <h2 class="section-title">The tables that matter</h2>
-          <p class="section-intro">Downtown eats serious: chophouses, sushi counters, and kitchens with something to prove.</p>
+          <p class="kicker">Go Deep · Bars &amp; lounges</p>
+          <h2>More Names to Know</h2>
         </div>
-
-        <div class="spot-grid">
-          <article class="spot reveal">
-            <figure>
-              <img src="img/e525db47b2604b87.webp" alt="The dining room at Kres Chophouse, lamp lit tables and booths beneath the deep red wall of the 1930s Kress building" />
-            </figure>
-            <div class="spot-body">
-              <p class="meta"><span>Steakhouse</span><span class="dot">·</span><span>$$$</span></p>
-              <h3>Kres Chophouse</h3>
-              <p>Every serious downtown starts with a chophouse, and Orlando's answers to the name Kres. Inside the 1930s Kress building on Church Street, the prime beef is aged in house and cut to order, the filet shows up wearing a Wellington, and the room pairs old bones with a modern pulse. It is the reservation locals make when the night actually matters, and it has been for a long time.</p>
-            </div>
-          <a class="spot-go" href="/?venue=kres">See it in the guide &rarr;</a></article>
-
-          <article class="spot reveal">
-            <figure>
-              <img src="img/1b2dc1255061c7e5.webp" alt="The handroll counter at Sushi Saint, a long pale wood bar lined with black stools under a wood slat ceiling" />
-            </figure>
-            <div class="spot-body">
-              <p class="meta"><span>Sushi · Handrolls</span><span class="dot">·</span><span>$$</span></p>
-              <h3>Sushi Saint</h3>
-              <p>Chef Michael Collantes built his name on a ten seat omakase across town, then gave downtown something looser and louder: a handroll bar in Creative Village where the temaki land crisp, warm, and one at a time. Michelin noticed fast, handing Sushi Saint a Bib Gourmand within months of opening. Sit at the counter, order the set, and eat each roll the second it hits your hand.</p>
-            </div>
-          <a class="spot-go" href="/?venue=sushi-saint">See it in the guide &rarr;</a></article>
-
-          <article class="spot reveal">
-            <figure>
-              <img src="img/cc47246dc29514b4.webp" alt="The dining room at The Boheme, floral banquettes and petal chandeliers under deep teal curtains" />
-            </figure>
-            <div class="spot-body">
-              <p class="meta"><span>Modern European</span><span class="dot">·</span><span>$$$</span></p>
-              <h3>The Boheme</h3>
-              <p>Some dining rooms feed you. The Boheme performs. Tucked inside the Grand Bohemian on Orange Avenue, it pairs French revival cooking with live jazz drifting in from the Bösendorfer Lounge, where the grand piano is the real deal and the art on the walls is gallery grade. Order the beef tenderloin, linger over the Black Bee Honey cheesecake, and let the evening run long. Downtown dresses up here.</p>
-            </div>
-          <a class="spot-go" href="/?district=downtown">See the district in the guide &rarr;</a></article>
+        <div class="tiles">
+          <a class="tile reveal" href="/?venue=independent-bar"><b>Barbarella Orlando</b><p>If downtown Orlando has a clubhouse for people who still buy records and argue about setlists, this is it.</p><p class="venue-meta">Bar · $</p></a>
+          <a class="tile reveal" href="/?venue=celine"><b>Celine Orlando</b><p>Celine is downtown's answer to the question of where the night goes when it wants options.</p><p class="venue-meta">Cocktails · $$$</p></a>
+          <a class="tile reveal" href="/?venue=corona-cigar-company-diamond-crown-lounge"><b>Corona Cigar Company &amp; Diamond Crown Lounge</b><p>Walk in and the scale hits you first: more than two million cigars in stock, brands from over a dozen countries, and rare vintage pre-embargo Cubans…</p><p class="venue-meta">Cocktails · $$</p></a>
+          <a class="tile reveal" href="/?venue=delaneys-tavern"><b>Delaney's Tavern</b><p>On the ground floor of the boutique Delaney Hotel, this SoDo tavern has been the neighborhood's special-occasion answer since 2019, and it earned the…</p><p class="venue-meta">Tavern · $$</p></a>
         </div>
-      </div>
-    </section>
-
-    <!-- AFTER DARK DOWNTOWN -->
-    <section class="band alt">
-      <div class="wrap">
+      </section>
+      <section class="glide" id="glide-kres" aria-label="Kres Chophouse">
+        <div class="glide-stage" aria-hidden="true">
+          <div class="glide-bg" style="background:radial-gradient(ellipse 90% 65% at 50% 115%, rgba(191,167,121,0.42), transparent 64%), linear-gradient(168deg, #333f27, #716334 58%, #624d26)"></div><div class="glide-bg b" style="background:radial-gradient(ellipse 90% 65% at 50% -15%, rgba(191,167,121,0.3), transparent 60%), linear-gradient(200deg, #55532e, #a3813f 62%, #655027)"></div>
+          <p class="ghost">03</p>
+        </div>
+        <div class="glide-cardwrap">
+          <article class="glide-card reveal">
+            <p class="kicker">03 · The Finale</p>
+            <h2>Loop, Matinee, Nightcap</h2>
+            <p>Locals run it in acts: the Eola loop before the heat, a Dr. Phillips matinee in the afternoon, Church Street as lights come on. Kres for dinner inside the 1930s Kress building, then Hanson's for the nightcap—get the password first.</p>
+            <p class="venue-meta">Kres Chophouse · Steakhouse · $$$$</p>
+            <a class="venue-btn" href="/?venue=kres">See the venue &rarr;</a>
+          </article>
+        </div>
+      </section>
+      <!-- CLOSING — the whole neighbourhood -->
+      <section class="closing" id="all-places">
         <div class="reveal">
-          <p class="section-tag">When the Offices Empty</p>
-          <h2 class="section-title">After dark downtown</h2>
-          <p class="section-intro">Rooftops, cocktail dens, and live rooms: the city after the offices empty out.</p>
+          <p class="kicker">The Full List</p>
+          <h2>That&rsquo;s the story. Here&rsquo;s the whole neighborhood.</h2>
+          <p class="lede">All 51 Downtown Orlando places from the guide, A&ndash;Z. Tap any name to open its card &mdash; directions, details and booking live there, not in the story.</p>
         </div>
-
-        <div class="spot-grid two">
-          <article class="spot reveal">
-            <figure>
-              <img src="img/35210abf6f3e76e2.webp" alt="A fire table burning on the AC Sky Bar terrace at sunset, the sky going orange over the city below" />
-            </figure>
-            <div class="spot-body">
-              <p class="meta"><span>Rooftop Bar</span><span class="dot">·</span><span>$$</span></p>
-              <h3>AC Sky Bar</h3>
-              <p>Eighteen floors up on Garland Avenue, AC Sky Bar is where downtown goes to watch itself glow. The terrace wraps around the top of the AC Hotel, fire tables flicker against the glass, and the whole skyline pours out in front of you. Order the Sunset Margarita and a plate of Spanish tapas, time it for golden hour, and try to name a better seat in the city. You will not.</p>
-            </div>
-          <a class="spot-go" href="/?district=downtown">See the district in the guide &rarr;</a></article>
-
-          <article class="spot reveal">
-            <figure>
-              <img src="img/cceb5dfbd9df77de.webp" alt="A bartender shaking a cocktail behind the brick backed bar at Hanson's Shoe Repair, bottles lining the shelves" />
-            </figure>
-            <div class="spot-body">
-              <p class="meta"><span>Speakeasy</span><span class="dot">·</span><span>$$</span></p>
-              <h3>Hanson's Shoe Repair</h3>
-              <p>There is no sign, and that is the point. Hanson's Shoe Repair hides on the top floor of one of downtown's oldest buildings on Pine Street, and getting in takes the nightly password. Inside: bare brick, a century of patina, live jazz some nights, and bartenders who treat an Old Fashioned like a sworn oath. It is small, it is secretive, and it pours some of the best drinks in Orlando.</p>
-            </div>
-          <a class="spot-go" href="/?district=downtown">See the district in the guide &rarr;</a></article>
+        <ul class="ix">
+          <li><a href="/?venue=aero-rooftop-bar-lounge"><span class="ix-name">Aero Rooftop Bar &amp; Lounge</span><span class="ix-meta">Nightlife &amp; music · $$</span></a></li>
+          <li><a href="/?venue=aura-night-club"><span class="ix-name">Aura Night Club</span><span class="ix-meta">Nightlife &amp; music · $$</span></a></li>
+          <li><a href="/?venue=independent-bar"><span class="ix-name">Barbarella Orlando</span><span class="ix-meta">Bars &amp; lounges · $</span></a></li>
+          <li><a href="/?venue=bento-asian-kitchen-downtown"><span class="ix-name">BENTO Asian Kitchen + Sushi</span><span class="ix-meta">Japanese &amp; sushi · $$</span></a></li>
+          <li><a href="/?venue=broken-strings-brewery"><span class="ix-name">Broken Strings Taproom</span><span class="ix-meta">Breweries · $$</span></a></li>
+          <li><a href="/?venue=celine"><span class="ix-name">Celine Orlando</span><span class="ix-meta">Bars &amp; lounges · $$$</span></a></li>
+          <li><a href="/?venue=corona-cigar-company-diamond-crown-lounge"><span class="ix-name">Corona Cigar Company &amp; Diamond Crown Lounge</span><span class="ix-meta">Bars &amp; lounges · $$</span></a></li>
+          <li><a href="/?venue=crepe-delicious"><span class="ix-name">Crepe Delicious</span><span class="ix-meta">Sweets · $$</span></a></li>
+          <li><a href="/?venue=cuban-american-cafe"><span class="ix-name">Cuban American Cafe</span><span class="ix-meta">Latin &amp; Caribbean · $</span></a></li>
+          <li><a href="/?venue=deeply-coffee"><span class="ix-name">Deeply Coffee</span><span class="ix-meta">Coffee &amp; cafes · $$</span></a></li>
+          <li><a href="/?venue=delaneys-tavern"><span class="ix-name">Delaney's Tavern</span><span class="ix-meta">Bars &amp; lounges · $$</span></a></li>
+          <li><a href="/?venue=downtown-food-tour"><span class="ix-name">Downtown Food Tour</span><span class="ix-meta">Attractions · $$$</span></a></li>
+          <li><a href="/?venue=dr-phillips-center"><span class="ix-name">Dr. Phillips Center for the Performing Arts</span><span class="ix-meta">Restaurants · $$$</span></a></li>
+          <li><a href="/?venue=elixir-kitchen-bar"><span class="ix-name">Elixir Kitchen and Bar</span><span class="ix-meta">Bars &amp; lounges · $$</span></a></li>
+          <li><a href="/?venue=eola-food-hall"><span class="ix-name">Eola Food Hall</span><span class="ix-meta">Markets &amp; shops · $</span></a></li>
+          <li><a href="/?venue=euphoria-downtown"><span class="ix-name">Euphoria Downtown</span><span class="ix-meta">Bars &amp; lounges · $$$</span></a></li>
+          <li><a href="/?venue=fettuccine-pasta-class"><span class="ix-name">Fettuccine Pasta-Making Class</span><span class="ix-meta">Attractions · $$</span></a></li>
+          <li><a href="/?venue=fixtion"><span class="ix-name">Fixtion Restaurant &amp; Bar</span><span class="ix-meta">Bars &amp; lounges · $$</span></a></li>
+          <li><a href="/?venue=fratelli-s-italian-restaurant"><span class="ix-name">Fratelli's Italian Restaurant</span><span class="ix-meta">Italian · $$</span></a></li>
+          <li><a href="/?venue=imperial"><span class="ix-name">Imperial Wine Bar</span><span class="ix-meta">Bars &amp; lounges · $$</span></a></li>
+          <li><a href="/?venue=inter-co-stadium"><span class="ix-name">Inter&amp;Co Stadium</span><span class="ix-meta">Restaurants · $$</span></a></li>
+          <li><a href="/?venue=jesse-s-rib-shack"><span class="ix-name">Jesse's Rib Shack</span><span class="ix-meta">BBQ · $$</span></a></li>
+          <li><a href="/?venue=jiangs-kitchen"><span class="ix-name">Jiang's Kitchen</span><span class="ix-meta">Chinese &amp; hot pot · $$</span></a></li>
+          <li><a href="/?venue=june-orlando"><span class="ix-name">June</span><span class="ix-meta">Mexican · $$$</span></a></li>
+          <li><a href="/?venue=kabooki-downtown"><span class="ix-name">Kabooki Sushi Downtown</span><span class="ix-meta">Japanese &amp; sushi · $$$$</span></a></li>
+          <li><a href="/?venue=kia-center"><span class="ix-name">Kia Center (formerly Amway Center)</span><span class="ix-meta">Attractions · $$$$</span></a></li>
+          <li><a href="/?venue=kres"><span class="ix-name">Kres Chophouse</span><span class="ix-meta">Fine dining &amp; steak · $$$$</span></a></li>
+          <li><a href="/?venue=lake-eola"><span class="ix-name">Lake Eola Park &amp; Linton E. Allen Memorial Fountain</span><span class="ix-meta">Bars &amp; lounges · $</span></a></li>
+          <li><a href="/?venue=mochiry"><span class="ix-name">Mochiry</span><span class="ix-meta">Sweets · $</span></a></li>
+          <li><a href="/?venue=nic-luc"><span class="ix-name">Nic &amp; Luc</span><span class="ix-meta">Breakfast &amp; brunch · $$</span></a></li>
+          <li><a href="/?venue=noir-bar"><span class="ix-name">Noir Bar</span><span class="ix-meta">Bars &amp; lounges · $$$</span></a></li>
+          <li><a href="/?venue=noodle-shawty"><span class="ix-name">Noodle Shawty</span><span class="ix-meta">Noodles &amp; Southeast Asian · $$</span></a></li>
+          <li><a href="/?venue=nuris"><span class="ix-name">Nuri's</span><span class="ix-meta">Bars &amp; lounges · $$</span></a></li>
+          <li><a href="/?venue=magic-pregame-experience"><span class="ix-name">Orlando Magic Pregame Warmups &amp; Dining Experience</span><span class="ix-meta">Attractions · $$$$</span></a></li>
+          <li><a href="/?venue=papi-smashd-burger"><span class="ix-name">Papi Smash'd Burger</span><span class="ix-meta">Burgers &amp; sandwiches · $$</span></a></li>
+          <li><a href="/?venue=proper-orlando"><span class="ix-name">Proper Orlando</span><span class="ix-meta">Nightlife &amp; music · $$</span></a></li>
+          <li><a href="/?venue=ramen-making-class"><span class="ix-name">Ramen-Making Class</span><span class="ix-meta">Attractions · $$</span></a></li>
+          <li><a href="/?venue=reeves-sports-bar"><span class="ix-name">Reeves Sports Bar</span><span class="ix-meta">Bars &amp; lounges · $$</span></a></li>
+          <li><a href="/?venue=reyes"><span class="ix-name">Reyes Mezcaleria</span><span class="ix-meta">Mexican · $$</span></a></li>
+          <li><a href="/?venue=rivals-activity-bar"><span class="ix-name">Rivals Activity Bar</span><span class="ix-meta">Bars &amp; lounges · $$</span></a></li>
+          <li><a href="/?venue=sly-fox"><span class="ix-name">Sly Fox</span><span class="ix-meta">Burgers &amp; sandwiches · $$</span></a></li>
+          <li><a href="/?venue=solita-tacos-margaritas"><span class="ix-name">Solita Tacos &amp; Margaritas</span><span class="ix-meta">Mexican · $$</span></a></li>
+          <li><a href="/?venue=sushi-saint"><span class="ix-name">Sushi Saint</span><span class="ix-meta">Japanese &amp; sushi · $$$</span></a></li>
+          <li><a href="/?venue=the-beacham"><span class="ix-name">The Beacham &amp; The Social</span><span class="ix-meta">Restaurants · $$$</span></a></li>
+          <li><a href="/?venue=the-monroe"><span class="ix-name">The Monroe</span><span class="ix-meta">Bars &amp; lounges · $$$</span></a></li>
+          <li><a href="/?venue=robinson-cocktail-room"><span class="ix-name">The Robinson Cocktail Room</span><span class="ix-meta">Bars &amp; lounges · $$</span></a></li>
+          <li><a href="/?venue=the-social"><span class="ix-name">The Social</span><span class="ix-meta">Nightlife &amp; music · $$</span></a></li>
+          <li><a href="/?venue=vanguard"><span class="ix-name">The Vanguard</span><span class="ix-meta">Nightlife &amp; music · $$$</span></a></li>
+          <li><a href="/?venue=tier-nightclub"><span class="ix-name">Tier Nightclub</span><span class="ix-meta">Nightlife &amp; music · $$$</span></a></li>
+          <li><a href="/?venue=wall-street-plaza"><span class="ix-name">Wall Street Plaza</span><span class="ix-meta">Restaurants · $$</span></a></li>
+          <li><a href="/?venue=yaz-orlando"><span class="ix-name">Yaz Orlando</span><span class="ix-meta">Bars &amp; lounges · $$</span></a></li>
+        </ul>
+        <div class="handoff reveal">
+          <a class="btn-big" href="/?district=downtown">All 51 Downtown Orlando places &rarr;</a>
+          <a class="next-district" href="/international-drive-district-guide.html">Next district story: International Drive &rarr;</a>
         </div>
+      </section>
+    </main>
+    <footer>
+      <div class="foot-in">
+        <a class="back-link" href="/">&larr; Back to the full guide</a>
+        <p class="brand-line">407 FYI &mdash; an independent Orlando guide. Details can change; confirm before you go.</p>
+        <p>Hand-verified Orlando places · Checked October 2026 · Local Picks are never sponsored · Corrections: <a href="mailto:mail@407.fyi">mail@407.fyi</a></p>
+        <p>Some links on 407 FYI are affiliate links. They never affect which places we list, rank, or recommend.</p>
       </div>
-    </section>
-
-    <!-- MAKE A DAY OF IT -->
-    <section class="band gradient">
-      <div class="wrap">
-        <div class="reveal">
-          <p class="section-tag">The Itinerary</p>
-          <h2 class="section-title">Make a day of it</h2>
-        </div>
-        <div class="day-rows">
-          <div class="day-row reveal">
-            <span class="when">Morning</span>
-            <p class="what">The Eola loop before the heat. Swans, skyline, coffee in hand.</p>
-          </div>
-          <div class="day-row reveal">
-            <span class="when">Afternoon</span>
-            <p class="what">A Dr. Phillips matinee, then Church Street as the lights come on.</p>
-          </div>
-          <div class="day-row reveal">
-            <span class="when">Evening</span>
-            <p class="what">Kres for dinner, Hanson's for the nightcap. Get the password first.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CLOSING -->
-    <section class="closing">
-      <div class="wrap reveal">
-        <h2>Downtown is one chapter. The guide has the whole book.</h2>
-        <p>Six hundred plus Orlando spots, picked by locals, organized the way you actually plan a day. Start with Downtown, then wander.</p>
-        <a class="btn-guide" href="/">Back to the full guide</a>
-      </div>
-    </section>
-    <footer>Part of 407 FYI</footer>
+    </footer>
 
     <script>
       (function () {
-        var els = document.querySelectorAll(".reveal");
-        if (!("IntersectionObserver" in window)) return;
-        document.documentElement.classList.add("reveal-armed");
+        var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+        if (reduce || !("IntersectionObserver" in window)) return;
+        /* Arm hidden start states only once the observer is running;
+           without JS (or with reduced motion) everything renders. */
+        document.body.classList.add("reveal-armed");
         var io = new IntersectionObserver(function (entries) {
-          entries.forEach(function (entry) {
-            if (entry.isIntersecting) {
-              entry.target.classList.add("in");
-              io.unobserve(entry.target);
-            }
+          entries.forEach(function (e) {
+            if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); }
           });
         }, { threshold: 0.12, rootMargin: "0px 0px -6% 0px" });
-        els.forEach(function (el) { io.observe(el); });
-        /* If nothing has scrolled after a beat, the viewer is a static
-           render (full-page capture, embed snapshot): show everything.
-           Real scrollers keep their fades, driven by the observer. */
+        document.querySelectorAll(".reveal").forEach(function (el) { io.observe(el); });
+        /* Glide stages: toggle the cross-fade layer while a panel is on screen. */
+        var gio = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) {
+            e.target.classList.toggle("in-view", e.isIntersecting);
+          });
+        }, { threshold: 0.08 });
+        document.querySelectorAll(".glide").forEach(function (el) { gio.observe(el); });
+        /* Static-render safety (full-page capture / embed snapshot):
+           if nothing has scrolled shortly after load, show everything. */
         setTimeout(function () {
           if (window.scrollY < 10) {
-            els.forEach(function (el) { el.classList.add("in"); });
+            document.querySelectorAll(".reveal").forEach(function (el) { el.classList.add("in"); });
             io.disconnect();
           }
-        }, 1000);
+        }, 1200);
       })();
     </script>
-  <div class="fyi-foot"><div class="fyi-foot-in"><div><h3>Districts</h3><ul><li><a href="/winter-park-district-guide.html">Winter Park</a></li><li><a href="/downtown-orlando-district-guide.html">Downtown Orlando</a></li><li><a href="/mills-50-district-guide.html">Mills 50</a></li><li><a href="/milk-district-guide.html">Milk District</a></li><li><a href="/international-drive-district-guide.html">International Drive</a></li><li><a href="/">All districts in the full guide</a></li></ul></div><div><h3>About</h3><ul><li><a href="/whats-new.html">What's new</a></li><li><a href="/what-visitors-google-orlando.html">What visitors Google</a></li><li><a href="mailto:mail@407.fyi?subject=407%20FYI%20press">Press &amp; media kit</a></li></ul></div><div><h3>Contact</h3><ul><li><a href="mailto:mail@407.fyi">mail@407.fyi</a></li><li><a href="mailto:mail@407.fyi?subject=407%20FYI%20—%20venue%20correction">Flag a closure / suggest an edit</a></li></ul></div><div><h3>Disclosures</h3><ul><li>Some links on 407 FYI are affiliate links. They never affect which places we list, rank, or recommend.</li></ul></div></div><div class="fyi-foot-base">407 FYI — an independent Orlando guide. Details can change; confirm before you go.</div></div></body>
+  </body>
 </html>

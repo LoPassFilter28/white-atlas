@@ -1,590 +1,444 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="dark">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-    <meta name="color-scheme" content="light dark" />
-    <link rel="icon" href="data:," />
+    <meta name="color-scheme" content="dark" />
     <title>International Drive District Guide · 407 FYI</title>
     <meta name="description" content="International Drive district highlight: supper clubs, sky-high wheels, dinner shows, and the most gloriously over-the-top strip in Florida. A scroll presentation from 407 FYI." />
+    <link rel="canonical" href="https://407.fyi/international-drive-district-guide.html" />
+    <meta property="og:title" content="International Drive District Guide · 407 FYI" />
+    <meta property="og:description" content="International Drive district highlight: supper clubs, sky-high wheels, dinner shows, and the most gloriously over-the-top strip in Florida. A scroll presentation from 407 FYI." />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://407.fyi/international-drive-district-guide.html" />
+    <meta property="og:image" content="https://407.fyi/img/8e2833dd0136cea6.webp" />
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;0,900;1,500&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Urbanist:wght@600;700;800&amp;display=swap" rel="stylesheet" />
     <style>
-      /* ============================================================
-         DISTRICT GRADIENT SYSTEM · 407 FYI rollouts
-         Each district site gets its own two-stop dusk gradient.
-         Swap the --grad-a / --grad-b tokens per district:
-           Winter Park             : deep oak green   -> warm amber gold
-           Disney Springs          : lagoon teal      -> coral sunset
-           Milk District           : dairy cream rose -> tangerine
-           Thornton Park           : brick rust       -> lake dusk plum
-           Mills 50                : jade               -> orchid violet
-           Ivanhoe Village         : lake blue-green  -> antique gold
-           Downtown                : skyline slate    -> electric amber
-           I-Drive (this page)     : deep plum        -> bright coral
-           Lake Nona               : modern aqua      -> soft lime
-           Universal               : midnight blue    -> volcano orange
-           Audubon Park            : garden green     -> marigold
-           College Park            : collegiate navy  -> warm bronze
-         ============================================================ */
+      /* Night Drive tokens (from the main guide) + district gradient */
       :root {
-        --grad-a: #1f2e18;
-        --grad-b: #ff9b85;
-        --grad-mid: #7b5f40;
-        --ink: #2b2116;
-        --ink-soft: #5d4350;
-        --paper: #fdf6f0;
-        --paper-2: #f9e9e2;
-        --card: #fffaf6;
-        --line: rgba(19, 43, 23, 0.14);
-        --gold: #d6816f;
-        --gold-bright: #ffa785;
-        --shadow: 0 24px 60px rgba(21, 46, 25, 0.18);
-        color-scheme: light;
+        color-scheme: dark;
+        --bg: #0a1811; --surface: #122419; --soft: #172a1f; --ink: #f0e8d5;
+        --muted: #c6bba2; --line: #2f4a38; --accent: #765b2f; --accent-ink: #d4b573;
+        --headline: #f6edd6; --focus: #d4b573;
+        --d-a: #26150b; --d-b: #71401f; --d-c: #bd9049;
+        --h1vw: 8.9vw;
+        --pad: clamp(20px, 5vw, 40px);
       }
-      @media (prefers-color-scheme: dark) {
-        :root {
-          --ink: #fbeee4;
-          --ink-soft: #dcbfb2;
-          --paper: #10180c;
-          --paper-2: #120e09;
-          --card: #1a2614;
-          --line: rgba(251, 238, 228, 0.16);
-          --gold: #ffa785;
-          --shadow: 0 24px 60px rgba(0, 0, 0, 0.5);
-          color-scheme: dark;
-        }
-      }
-
       * { box-sizing: border-box; }
       html { scroll-behavior: smooth; }
       body {
-        margin: 0;
-        font-family: "Public Sans", system-ui, sans-serif;
-        background: var(--paper);
-        color: var(--ink);
-        line-height: 1.6;
+        margin: 0; background: var(--bg); color: var(--ink);
+        font-family: "Manrope", system-ui, sans-serif; line-height: 1.6;
         overflow-x: hidden;
       }
-      img { display: block; max-width: 100%; }
-
-      .serif { font-family: "Playfair Display", Georgia, serif; }
-
-      /* ---------- fade-in on scroll (the only animation) ----------
-         Content is visible by default. The script at the end of the
-         body arms the hidden start state only once its observer is
-         running, then fades each block in as it scrolls into view.
-         If the script never runs, the full story still renders. */
-      .reveal-armed .reveal {
-        opacity: 0;
-        transform: translateY(26px);
-        transition: opacity 0.9s ease, transform 0.9s ease;
-      }
-      .reveal-armed .reveal.in { opacity: 1; transform: none; }
-      @media print {
-        .reveal { opacity: 1 !important; transform: none !important; }
-      }
-      @media (prefers-reduced-motion: reduce) {
-        html { scroll-behavior: auto; }
-        .reveal { opacity: 1; transform: none; transition: none; }
-      }
-
-      /* ---------- hero ---------- */
-      .hero {
-        position: relative;
-        min-height: 100svh;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
-        color: #fff3ea;
-        isolation: isolate;
-        overflow: hidden;
-      }
-      .hero-media {
-        position: absolute; inset: 0; z-index: -2;
-      }
-      .hero-media img {
-        width: 100%; height: 100%;
-        object-fit: cover; object-position: center 42%;
-      }
-      .hero::after {
-        content: "";
-        position: absolute; inset: 0; z-index: -1;
-        background:
-          linear-gradient(178deg,
-            rgba(21, 46, 25, 0.46) 0%,
-            rgba(21, 46, 25, 0.10) 34%,
-            rgba(21, 46, 25, 0.58) 68%,
-            rgba(12, 26, 14, 0.97) 100%),
-          linear-gradient(100deg,
-            rgba(21, 46, 25, 0.55) 0%,
-            rgba(255, 155, 133, 0.16) 78%);
-      }
-      .hero-inner {
-        width: min(1180px, 100% - 2.5rem);
-        margin-inline: auto;
-        padding: 7rem 0 4.5rem;
-      }
+      h1, h2, .display { font-family: "Urbanist", "Manrope", sans-serif; }
+      a { color: var(--accent-ink); }
+      a:focus-visible, .venue-btn:focus-visible { outline: 2px solid var(--focus); outline-offset: 3px; }
       .kicker {
-        font-size: 0.78rem;
-        font-weight: 700;
-        letter-spacing: 0.32em;
-        text-transform: uppercase;
-        color: var(--gold-bright);
-        margin: 0 0 1.4rem;
+        font-family: "Urbanist", sans-serif; font-weight: 700; letter-spacing: .22em;
+        font-size: .72rem; text-transform: uppercase; color: var(--accent-ink); margin: 0 0 18px;
+      }
+
+      /* ---------- reveal on scroll (armed by JS; content visible without it) ---------- */
+      .reveal-armed .reveal { opacity: 0; transform: translateY(26px); transition: opacity .9s ease, transform .9s ease; }
+      .reveal-armed .reveal.in { opacity: 1; transform: none; }
+
+      /* ---------- 1 · title screen ---------- */
+      .hero {
+        position: relative; min-height: 100svh; display: grid; place-items: center;
+        text-align: center; overflow: hidden; padding: 64px var(--pad);
+        background:
+          radial-gradient(ellipse 90% 55% at 50% 108%, rgba(163, 129, 63, .28), transparent 60%),
+          linear-gradient(168deg, #0d2818 0%, var(--d-a) 52%, #07130c 100%);
+      }
+      .hero-in { position: relative; max-width: 900px; }
+      .hero-brand {
+        font-family: "Urbanist", sans-serif; font-weight: 800; letter-spacing: .3em;
+        font-size: .78rem; color: var(--ink); text-decoration: none; opacity: .85;
       }
       .hero h1 {
-        font-family: "Playfair Display", Georgia, serif;
-        font-weight: 900;
-        font-size: clamp(3.4rem, 12.5vw, 9.5rem);
-        line-height: 0.95;
-        letter-spacing: -0.01em;
-        margin: 0 0 1.6rem;
-        text-wrap: balance;
+        margin: 26px 0 8px; font-weight: 800; color: var(--headline);
+        font-size: clamp(1.9rem, var(--h1vw), 9.5rem); line-height: .98; letter-spacing: .01em;
       }
-      .hero .subline {
-        font-family: "Playfair Display", Georgia, serif;
-        font-style: italic;
-        font-weight: 500;
-        font-size: clamp(1.25rem, 3.4vw, 1.9rem);
-        line-height: 1.45;
-        max-width: 34ch;
-        margin: 0;
-        color: #ffe3d2;
+      .hero .sub {
+        margin: 10px auto 0; max-width: 620px; font-size: clamp(1.05rem, 2.6vw, 1.45rem);
+        color: var(--ink); font-weight: 500;
       }
-      .hero .scroll-cue {
-        margin-top: 3.2rem;
-        font-size: 0.72rem;
-        font-weight: 600;
-        letter-spacing: 0.28em;
-        text-transform: uppercase;
-        color: rgba(255, 243, 234, 0.78);
-        display: flex; align-items: center; gap: 0.9rem;
+      .hero .count { margin-top: 30px; color: var(--muted); font-size: .86rem; letter-spacing: .12em; text-transform: uppercase; }
+      .scroll-cue {
+        position: absolute; left: 50%; bottom: 26px; transform: translateX(-50%);
+        color: var(--muted); font-size: .7rem; letter-spacing: .3em; text-transform: uppercase;
+        display: grid; justify-items: center; gap: 8px;
       }
-      .hero .scroll-cue::after {
-        content: "";
-        width: 64px; height: 1px;
-        background: linear-gradient(90deg, var(--gold-bright), transparent);
+      .scroll-cue::after {
+        content: ""; width: 1px; height: 44px;
+        background: linear-gradient(var(--accent-ink), transparent);
+        animation: cue 2.4s ease-in-out infinite;
       }
+      @keyframes cue { 0%, 100% { transform: scaleY(.55); opacity: .4; } 50% { transform: scaleY(1); opacity: 1; } }
 
-      /* ---------- sections ---------- */
-      .band {
-        padding: clamp(4.5rem, 11vw, 8.5rem) 0;
+      /* ---------- quiet text blocks ---------- */
+      .quiet { max-width: 680px; margin: 0 auto; padding: 17vh var(--pad); }
+      .quiet h2, .split h2, .grid-sec h2, .closing h2 {
+        margin: 0 0 20px; font-weight: 800; color: var(--headline);
+        font-size: clamp(2rem, 5.6vw, 3.2rem); line-height: 1.08;
       }
-      .band.alt { background: var(--paper-2); }
-      .band.gradient {
-        background: linear-gradient(160deg, var(--grad-a) 0%, var(--grad-mid) 58%, #b0635c 130%);
-        color: #ffeedd;
-      }
-      .wrap {
-        width: min(1180px, 100% - 2.5rem);
-        margin-inline: auto;
-      }
-      .narrow { max-width: 800px; }
+      .quiet p { font-size: clamp(1.05rem, 2.2vw, 1.22rem); color: var(--ink); margin: 0; }
 
-      .section-tag {
-        font-size: 0.74rem;
-        font-weight: 700;
-        letter-spacing: 0.3em;
-        text-transform: uppercase;
-        color: var(--gold);
-        margin: 0 0 1.1rem;
+      /* ---------- glideshow panels ---------- */
+      .glide { position: relative; }
+      .glide-stage {
+        position: sticky; top: 0; height: 100svh; overflow: hidden;
       }
-      .band.gradient .section-tag { color: var(--gold-bright); }
+      .glide-bg { position: absolute; inset: 0; transition: opacity 1.2s ease; }
+      .glide-bg.b { opacity: 0; }
+      .glide.in-view .glide-bg.b { opacity: 1; }
+      .glide-bg.a1 { background: radial-gradient(ellipse 80% 60% at 18% 110%, rgba(163,129,63,.35), transparent 62%), linear-gradient(155deg, #10301d, var(--d-a) 58%, #060f09); }
+      .glide-bg.b1 { background: radial-gradient(ellipse 80% 60% at 82% -10%, rgba(163,129,63,.30), transparent 60%), linear-gradient(205deg, #143723, var(--d-a) 60%, #050d07); }
+      .glide-bg.a2 { background: radial-gradient(ellipse 75% 55% at 85% 108%, rgba(163,129,63,.26), transparent 60%), linear-gradient(200deg, #0c2416, #081a10 60%, #040a06); }
+      .glide-bg.b2 { background: radial-gradient(ellipse 75% 55% at 12% -8%, rgba(212,181,115,.22), transparent 58%), linear-gradient(160deg, #0e2a19, #07160e 62%, #040a06); }
+      .glide-bg.a3 { background: radial-gradient(ellipse 90% 65% at 50% 115%, rgba(233,193,121,.42), transparent 64%), linear-gradient(168deg, var(--d-b), #6d5a28 58%, #4a3a17); }
+      .glide-bg.b3 { background: radial-gradient(ellipse 90% 65% at 50% -15%, rgba(233,193,121,.30), transparent 60%), linear-gradient(200deg, #55602f, var(--d-c) 62%, #57431a); }
+      .ghost {
+        position: absolute; top: 4svh; right: 2vw; margin: 0;
+        font-family: "Urbanist", sans-serif; font-weight: 800; line-height: 1;
+        font-size: clamp(9rem, 34vw, 24rem); color: transparent;
+        -webkit-text-stroke: 1.5px rgba(212, 181, 115, .28);
+        transform: translateY(3.5svh); transition: transform 1.4s ease;
+        user-select: none;
+      }
+      .glide.in-view .ghost { transform: translateY(0); }
+      .glide.flip .ghost { right: auto; left: 2vw; }
+      .glide-cardwrap { position: relative; z-index: 2; margin-top: -58svh; padding: 0 var(--pad) 16svh; }
+      .glide-card {
+        max-width: 540px; background: rgba(18, 36, 25, .92); border: 1px solid var(--line);
+        border-radius: 20px; padding: clamp(26px, 4.5vw, 42px);
+        box-shadow: 0 30px 70px rgba(0, 0, 0, .5); backdrop-filter: blur(6px);
+      }
+      .glide.flip .glide-card { margin-left: auto; }
+      .glide-card h2 { margin: 0 0 14px; font-weight: 800; color: var(--headline); font-size: clamp(1.8rem, 4.6vw, 2.7rem); line-height: 1.1; }
+      .glide-card p { margin: 0 0 22px; font-size: 1.04rem; }
+      .venue-meta { color: var(--muted); font-size: .88rem; font-weight: 600; letter-spacing: .04em; margin: 0 0 14px; }
+      .venue-btn {
+        display: inline-block; background: var(--accent-ink); color: #14220f; text-decoration: none;
+        font-weight: 800; font-size: .95rem; padding: 13px 22px; border-radius: 999px;
+      }
+      .venue-btn:hover { background: #e9c179; }
 
-      h2.section-title {
-        font-family: "Playfair Display", Georgia, serif;
-        font-weight: 700;
-        font-size: clamp(2.6rem, 7.5vw, 4.6rem);
-        line-height: 1.02;
-        margin: 0 0 1.4rem;
-        letter-spacing: -0.01em;
+      /* ---------- pull quote ---------- */
+      .pullquote { min-height: 94svh; display: grid; place-items: center; text-align: center; padding: 12vh var(--pad); }
+      .pullquote blockquote {
+        margin: 0; max-width: 880px; font-family: "Urbanist", sans-serif; font-weight: 700;
+        font-size: clamp(1.9rem, 6.2vw, 3.7rem); line-height: 1.22; color: var(--headline);
       }
-      .section-intro {
-        font-size: clamp(1.12rem, 2.6vw, 1.4rem);
-        line-height: 1.65;
-        color: var(--ink-soft);
-        max-width: 56ch;
-        margin: 0;
-      }
-      .band.gradient .section-intro { color: #f3cfc0; }
+      .pullquote .mark { color: var(--accent-ink); }
 
-      /* ---------- intro narrative ---------- */
-      .intro-text {
-        font-family: "Playfair Display", Georgia, serif;
-        font-weight: 500;
-        font-size: clamp(1.55rem, 4.4vw, 2.6rem);
-        line-height: 1.42;
-        margin: 0;
-        text-wrap: pretty;
+      /* ---------- split: short list + point map ---------- */
+      .split { max-width: 1120px; margin: 0 auto; padding: 15vh var(--pad); display: grid; grid-template-columns: 1fr 1fr; gap: clamp(28px, 5vw, 64px); align-items: center; }
+      .minimap { background: var(--surface); border: 1px solid var(--line); border-radius: 20px; padding: 14px; }
+      .minimap-art { display: block; width: 100%; height: auto; }
+      .minimap-art .pt { fill: var(--accent-ink); opacity: .35; }
+      .minimap-art .ave-line { stroke: var(--d-c); stroke-width: 2; opacity: .4; }
+      .minimap-art .ave-label { fill: var(--muted); font-family: "Urbanist", sans-serif; font-size: 12.5px; letter-spacing: .34em; text-anchor: middle; }
+      .minimap-art .marker circle { fill: var(--accent-ink); }
+      .minimap-art .marker text { fill: #14220f; font-family: "Urbanist", sans-serif; font-weight: 800; font-size: 13px; text-anchor: middle; }
+      .split .lede { color: var(--muted); margin: 0 0 10px; font-size: 1.02rem; }
+      .ave-row {
+        display: flex; align-items: baseline; gap: 14px; padding: 17px 4px;
+        border-bottom: 1px solid var(--line); text-decoration: none; color: var(--ink);
       }
-      .intro-text .accent { color: var(--gold); font-style: italic; }
+      .ave-row:first-of-type { border-top: 1px solid var(--line); }
+      .ave-row .n { font-family: "Urbanist", sans-serif; font-weight: 800; color: var(--accent-ink); font-size: .85rem; }
+      .ave-row .who { flex: 1; min-width: 0; }
+      .ave-row .who b { display: block; font-family: "Urbanist", sans-serif; font-size: 1.22rem; color: var(--headline); }
+      .ave-row .who span { color: var(--muted); font-size: .9rem; }
+      .ave-row .arr { color: var(--accent-ink); font-weight: 800; }
+      .ave-row:hover .who b { color: var(--accent-ink); }
 
-      /* ---------- spotlight cards ---------- */
-      .spotlights {
-        margin-top: clamp(2.8rem, 7vw, 4.5rem);
-        display: grid;
-        gap: clamp(2.6rem, 6vw, 4rem);
+      /* ---------- typographic grid ---------- */
+      .grid-sec { max-width: 1120px; margin: 0 auto; padding: 6vh var(--pad) 15vh; }
+      .tiles { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 30px; }
+      .tile {
+        display: block; background: var(--surface); border: 1px solid var(--line); border-radius: 18px;
+        padding: clamp(22px, 3.4vw, 32px); text-decoration: none; color: var(--ink);
       }
-      .spot {
-        display: grid;
-        gap: 0;
-        background: var(--card);
-        border: 1px solid var(--line);
-        border-radius: 20px;
-        overflow: hidden;
-        box-shadow: var(--shadow);
-      }
-      .spot figure {
-        margin: 0;
-        aspect-ratio: 16 / 10;
-        overflow: hidden;
-      }
-      .spot figure img {
-        width: 100%; height: 100%;
-        object-fit: cover;
-      }
-      .spot .spot-body {
-        padding: clamp(1.6rem, 4.5vw, 2.6rem);
-      }
-      .spot .meta {
-        display: flex; flex-wrap: wrap; align-items: center; gap: 0.6rem 0.9rem;
-        font-size: 0.76rem; font-weight: 700;
-        letter-spacing: 0.18em; text-transform: uppercase;
-        color: var(--gold);
-        margin: 0 0 0.7rem;
-      }
-      .spot .meta .dot { color: var(--ink-soft); letter-spacing: 0; }
-      .spot h3 {
-        font-family: "Playfair Display", Georgia, serif;
-        font-weight: 700;
-        font-size: clamp(1.7rem, 4.6vw, 2.4rem);
-        line-height: 1.12;
-        margin: 0 0 0.9rem;
-      }
-      .spot p {
-        margin: 0;
-        font-size: 1.02rem;
-        line-height: 1.72;
-        color: var(--ink-soft);
-        max-width: 62ch;
-      }
-      @media (min-width: 900px) {
-        .spot { grid-template-columns: 1.05fr 1fr; }
-        .spot figure { aspect-ratio: auto; min-height: 340px; }
-        .spot.flip figure { order: 2; }
-        .spot .spot-body { display: flex; flex-direction: column; justify-content: center; }
-      }
+      .tile:hover { border-color: var(--accent-ink); }
+      .tile b { display: block; font-family: "Urbanist", sans-serif; font-weight: 800; font-size: clamp(1.25rem, 2.6vw, 1.6rem); line-height: 1.2; color: var(--headline); margin-bottom: 8px; }
+      .tile p { margin: 0 0 14px; color: var(--muted); font-size: .98rem; }
+      .tile .venue-meta { margin: 0; }
 
-      /* compact grid for the two-up sections */
-      .spot-grid {
-        margin-top: clamp(2.8rem, 7vw, 4.5rem);
-        display: grid;
-        gap: 1.6rem;
+      /* ---------- closing: the whole neighbourhood ---------- */
+      .closing { max-width: 860px; margin: 0 auto; padding: 15vh var(--pad) 9vh; }
+      .closing .lede { color: var(--muted); font-size: 1.05rem; margin: 0 0 8px; max-width: 560px; }
+      .ix { list-style: none; margin: 34px 0 0; padding: 0; }
+      .ix a {
+        display: flex; align-items: baseline; justify-content: space-between; gap: 16px;
+        padding: 11px 2px; border-bottom: 1px solid var(--line); text-decoration: none;
       }
-      @media (min-width: 760px) {
-        .spot-grid { grid-template-columns: repeat(2, 1fr); gap: 1.8rem; }
-        .spot-grid .spot { grid-template-columns: 1fr; }
-        .spot-grid .spot figure { aspect-ratio: 4 / 3; min-height: 0; order: 0; }
-        .spot-grid .spot .spot-body { padding: 1.7rem; justify-content: flex-start; }
-        .spot-grid .spot h3 { font-size: 1.55rem; }
-        .spot-grid .spot:first-child { grid-column: 1 / -1; grid-template-columns: 1.05fr 1fr; }
-        .spot-grid .spot:first-child figure { aspect-ratio: auto; min-height: 320px; }
-        .spot-grid .spot:first-child .spot-body { padding: clamp(1.6rem, 4.5vw, 2.6rem); justify-content: center; }
-        .spot-grid .spot:first-child h3 { font-size: clamp(1.7rem, 4.6vw, 2.4rem); }
+      .ix-name { font-weight: 600; color: var(--ink); }
+      .ix-meta { color: var(--muted); font-size: .85rem; text-align: right; white-space: nowrap; }
+      .ix a:hover .ix-name { color: var(--accent-ink); }
+      @media (min-width: 780px) { .ix { columns: 2; column-gap: 54px; } .ix li { break-inside: avoid; } }
+      .handoff { margin-top: 52px; display: grid; gap: 18px; justify-items: start; }
+      .btn-big {
+        display: inline-block; background: var(--accent-ink); color: #14220f; text-decoration: none;
+        font-family: "Urbanist", sans-serif; font-weight: 800; font-size: 1.05rem;
+        padding: 16px 28px; border-radius: 999px;
       }
+      .btn-big:hover { background: #e9c179; }
+      .next-district { font-weight: 700; text-decoration: none; }
+      .next-district:hover { text-decoration: underline; }
 
-      /* ---------- itinerary ---------- */
-      .day-rows { margin-top: clamp(2.6rem, 6vw, 4rem); display: grid; gap: 0; }
-      .day-row {
-        display: grid;
-        gap: 0.4rem;
-        padding: 2rem 0;
-        border-top: 1px solid rgba(255, 238, 221, 0.25);
-      }
-      .day-row:last-child { border-bottom: 1px solid rgba(255, 238, 221, 0.25); }
-      .day-row .when {
-        font-family: "Playfair Display", Georgia, serif;
-        font-weight: 700;
-        font-style: italic;
-        font-size: clamp(1.9rem, 5.5vw, 3rem);
-        line-height: 1;
-        color: var(--gold-bright);
-      }
-      .day-row .what {
-        font-size: clamp(1.15rem, 3vw, 1.5rem);
-        line-height: 1.5;
-        margin: 0;
-        max-width: 46ch;
-      }
-      @media (min-width: 760px) {
-        .day-row { grid-template-columns: 240px 1fr; align-items: baseline; gap: 2rem; }
-      }
+      /* ---------- footer ---------- */
+      footer { border-top: 1px solid var(--line); margin-top: 4vh; }
+      .foot-in { max-width: 860px; margin: 0 auto; padding: 44px var(--pad) 58px; display: grid; gap: 14px; }
+      .back-link { font-weight: 700; text-decoration: none; }
+      .back-link:hover { text-decoration: underline; }
+      .foot-in p { margin: 0; color: var(--muted); font-size: .88rem; max-width: 640px; }
+      .foot-in .brand-line { color: var(--ink); font-weight: 700; }
 
-      /* ---------- closing ---------- */
-      .closing {
-        text-align: center;
-        padding: clamp(5rem, 12vw, 9rem) 0 clamp(3.5rem, 8vw, 5rem);
-        background: linear-gradient(180deg, var(--paper) 0%, var(--grad-a) 34%, #120e09 100%);
-        color: #ffeedd;
+      @media (max-width: 760px) {
+        .split { grid-template-columns: 1fr; }
+        .tiles { grid-template-columns: 1fr; }
+        .glide-cardwrap { margin-top: -46svh; }
       }
-      .closing h2 {
-        font-family: "Playfair Display", Georgia, serif;
-        font-weight: 700;
-        font-size: clamp(2.4rem, 7vw, 4.2rem);
-        line-height: 1.05;
-        margin: 0 auto 1.2rem;
-        max-width: 18ch;
-      }
-      .closing p {
-        color: #eccdbc;
-        max-width: 46ch;
-        margin: 0 auto 2.6rem;
-        font-size: 1.08rem;
-      }
-      .btn-guide {
-        display: inline-block;
-        font-weight: 700;
-        font-size: 1.05rem;
-        letter-spacing: 0.02em;
-        color: #2b2116;
-        background: linear-gradient(120deg, var(--gold-bright), var(--grad-b));
-        padding: 1.05rem 2.4rem;
-        border-radius: 999px;
-        text-decoration: none;
-        box-shadow: 0 18px 40px rgba(0, 0, 0, 0.35);
-        transition: transform 0.25s ease, box-shadow 0.25s ease;
-      }
-      .btn-guide:hover, .btn-guide:focus-visible {
-        transform: translateY(-2px);
-        box-shadow: 0 24px 48px rgba(0, 0, 0, 0.42);
-      }
-      footer {
-        background: #120e09;
-        color: rgba(255, 238, 221, 0.62);
-        text-align: center;
-        padding: 0 1.25rem 2.6rem;
-        font-size: 0.85rem;
-        letter-spacing: 0.14em;
-        text-transform: uppercase;
+      @media print { .reveal { opacity: 1 !important; transform: none !important; } }
+      @media (prefers-reduced-motion: reduce) {
+        html { scroll-behavior: auto; }
+        .glide-stage { position: static; height: 52svh; }
+        .glide-cardwrap { margin-top: 0; padding-top: 30px; }
+        .glide-bg, .ghost, .scroll-cue::after { transition: none !important; animation: none !important; }
+        .reveal-armed .reveal { opacity: 1 !important; transform: none !important; transition: none !important; }
       }
     </style>
-  <meta property="og:title" content="International Drive District Guide · 407 FYI"><meta property="og:description" content="International Drive district highlight: supper clubs, sky-high wheels, dinner shows, and the most gloriously over-the-top strip in Florida. A scroll presentation from 407 FYI."><meta property="og:type" content="article"><meta property="og:url" content="https://407.fyi/international-drive-district-guide.html"><meta property="og:image" content="https://407.fyi/img/8e2833dd0136cea6.webp"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="https://407.fyi/img/8e2833dd0136cea6.webp"><link rel="icon" href="/favicon.ico" sizes="any"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest"><meta name="theme-color" content="#0a1811"><style>
-.fyi-top{position:relative;z-index:60;background:#0c1812;border-bottom:1px solid #24402f;font-family:Urbanist,system-ui,-apple-system,"Segoe UI",sans-serif}
-.fyi-top-in{max-width:1200px;margin:0 auto;padding:12px 20px;display:flex;align-items:center;gap:16px;flex-wrap:wrap}
-.fyi-brand{color:#e8e2d4;text-decoration:none;font-weight:800;letter-spacing:.14em;font-size:1rem}
-.fyi-crumb{color:#9db3a4;font-size:.85rem;display:flex;gap:8px;align-items:center;flex-wrap:wrap}
-.fyi-crumb a{color:#9db3a4;text-decoration:none}.fyi-crumb a:hover{color:#c9a969}
-.fyi-crumb b{color:#e8e2d4;font-weight:600}
-.fyi-top nav{margin-left:auto}.fyi-top nav a{color:#c9a969;text-decoration:none;font-size:.88rem;font-weight:700}
-.fyi-cred{background:#112018;border-bottom:1px solid #24402f;color:#9db3a4;font-family:Urbanist,system-ui,sans-serif;font-size:.82rem}
-.fyi-cred-in{max-width:1200px;margin:0 auto;padding:8px 20px}
-.fyi-cred a{color:#c9a969;text-decoration:none}
-.fyi-foot{background:#0c1812;border-top:1px solid #24402f;color:#9db3a4;font-family:Urbanist,system-ui,-apple-system,"Segoe UI",sans-serif;margin-top:0}
-.fyi-foot-in{max-width:1200px;margin:0 auto;padding:34px 20px 26px;display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:26px}
-.fyi-foot h3{color:#e8e2d4;font-size:.78rem;letter-spacing:.22em;text-transform:uppercase;margin:0 0 12px}
-.fyi-foot ul{list-style:none;margin:0;padding:0;display:grid;gap:8px;font-size:.9rem}
-.fyi-foot a{color:#9db3a4;text-decoration:none}.fyi-foot a:hover{color:#c9a969}
-.fyi-foot-base{max-width:1200px;margin:0 auto;padding:0 20px 26px;font-size:.8rem;line-height:1.55}
-</style><style>.spot{position:relative}.spot-go{display:inline-flex;margin-top:10px;font-weight:700;font-size:.85rem;color:var(--accent-ink,#7c520c);text-decoration:none;border-bottom:2px solid currentColor;padding-bottom:1px}.spot-go::after{content:"";position:absolute;inset:0}</style>
-</head>
-  <body><div class="fyi-top"><div class="fyi-top-in"><a class="fyi-brand" href="/">407 FYI</a><span class="fyi-crumb"><a href="/">Guide</a><span aria-hidden="true">/</span><a href="/#districts">Districts</a><span aria-hidden="true">/</span><b aria-current="page">International Drive</b></span><nav><a href="/">Full guide</a></nav></div></div><div class="fyi-cred"><div class="fyi-cred-in">Hand-verified Orlando places · Checked October 2026 · Local Picks are never sponsored · Corrections: <a href="mailto:mail@407.fyi">mail@407.fyi</a></div></div>
-
-    <!-- HERO -->
-    <header class="hero">
-      <div class="hero-media">
-        <img src="img/8e2833dd0136cea6.webp" alt="The Orlando Eye glowing purple and magenta above the International Drive strip at night" fetchpriority="high" />
+  </head>
+  <body>
+    <!-- 1 · TITLE SCREEN — type poster on a clean district field -->
+    <header class="hero" style="background:radial-gradient(ellipse 90% 55% at 50% 108%, rgba(189,144,73,0.28), transparent 60%), linear-gradient(168deg, #361e0f, #26150b 52%, #150c06)">
+      <div class="hero-in">
+        <a class="hero-brand" href="/">407 FYI · A DISTRICT STORY</a>
+        <h1>INTERNATIONAL DRIVE</h1>
+        <p class="sub">Florida does night bigger — dinner shows, sky wheels, neon to read by.</p>
+        <p class="count">72 hand-verified places · One neighbourhood</p>
       </div>
-      <div class="hero-inner">
-        <p class="kicker">407 FYI · District Highlights</p>
-        <h1>International Drive</h1>
-        <p class="subline">I-Drive after dark: supper clubs, sky-high wheels, and the most gloriously over-the-top strip in Florida.</p>
-        <p class="scroll-cue">Scroll the story</p>
-      </div>
+      <div class="scroll-cue" aria-hidden="true">Scroll</div>
     </header>
 
-    <!-- INTRO -->
-    <section class="band">
-      <div class="wrap narrow reveal">
-        <p class="intro-text">Every city has a street it shows off, and Orlando's <span class="accent">glows</span>. International Drive started as the support road for a theme park empire, then refused to stay in its lane: dinner shows, sky wheels, upside-down houses, and enough neon to read by. Locals joke about the traffic and then drive over anyway, because when the sun drops and the strip lights up, nowhere in Florida does a night out bigger.</p>
-      </div>
-    </section>
-
-    <!-- THE ICONS -->
-    <section class="band alt">
-      <div class="wrap">
+    <main>
+      <!-- 2 · QUIET INTRO -->
+      <section class="quiet reveal" id="intro">
+        <p class="kicker">The District</p>
+        <h2>Florida Does Night Bigger</h2>
+        <p>Every city has a street it shows off—Orlando's glows. International Drive started as a theme park support road, then refused its lane: dinner shows, sky wheels, upside-down houses, neon to read by. Locals joke about traffic, then drive over anyway.</p>
+      </section>
+      <section class="glide" id="glide-icon-park" aria-label="ICON Park &amp; The Orlando Eye">
+        <div class="glide-stage" aria-hidden="true">
+          <div class="glide-bg" style="background:radial-gradient(ellipse 80% 60% at 18% 110%, rgba(189,144,73,0.35), transparent 62%), linear-gradient(155deg, #4c2a15, #26150b 58%, #130a06)"></div><div class="glide-bg b" style="background:radial-gradient(ellipse 80% 60% at 82% -10%, rgba(189,144,73,0.3), transparent 60%), linear-gradient(205deg, #573118, #26150b 60%, #110905)"></div>
+          <p class="ghost">01</p>
+        </div>
+        <div class="glide-cardwrap">
+          <article class="glide-card reveal">
+            <p class="kicker">01 · Park</p>
+            <h2>Four Hundred Feet Up</h2>
+            <p>ICON Park's 400-foot wheel lifts you for a slow, twenty-minute soar with Orlando in every direction. Below: SEA LIFE's ocean tunnel, Madame Tussauds, live music at Tin Roof, SlingShot launching the brave skyward. No gates—just wander in.</p>
+            <p class="venue-meta">ICON Park &amp; The Orlando Eye · Park · $$</p>
+            <a class="venue-btn" href="/?venue=icon-park">See the venue &rarr;</a>
+          </article>
+        </div>
+      </section>
+      <section class="glide flip" id="glide-mangos" aria-label="Mango&#x27;s Tropical Cafe">
+        <div class="glide-stage" aria-hidden="true">
+          <div class="glide-bg" style="background:radial-gradient(ellipse 75% 55% at 85% 108%, rgba(189,144,73,0.26), transparent 60%), linear-gradient(200deg, #1e1109, #180d07 60%, #0d0704)"></div><div class="glide-bg b" style="background:radial-gradient(ellipse 75% 55% at 12% -8%, rgba(206,172,118,0.22), transparent 58%), linear-gradient(160deg, #402412, #190e07 62%, #0d0704)"></div>
+          <p class="ghost">02</p>
+        </div>
+        <div class="glide-cardwrap">
+          <article class="glide-card reveal">
+            <p class="kicker">02 · Latin</p>
+            <h2>Dinner Becomes The Nightclub</h2>
+            <p>Mango's rebuilt its South Beach Ocean Drive legend bigger on I-Drive: supper-club dining under live Latin music, dancers and handcrafted cocktails, then the whole building becomes the nightclub. Dinner, a show and a dance floor were never separate plans here.</p>
+            <p class="venue-meta">Mango's Tropical Cafe · Latin · $$$</p>
+            <a class="venue-btn" href="/?venue=mangos">See the venue &rarr;</a>
+          </article>
+        </div>
+      </section>
+      <!-- PULL QUOTE -->
+      <section class="pullquote reveal" id="quote">
+        <div>
+          <p class="kicker">The Local Test</p>
+          <blockquote><span class="mark">&ldquo;</span>Every city has a street it shows off — Orlando’s glows.<span class="mark">&rdquo;</span></blockquote>
+        </div>
+      </section>
+      <!-- SPLIT — the short list -->
+      <section class="split" id="short-list">
+        <div class="minimap reveal"><svg class="minimap-art" viewBox="0 0 560 640" role="img" aria-label="Stylised point map of International Drive venues: 1 Tom&#x27;s Watch Bar, 2 Baires Grill, 3 Andretti Indoor Karting and Games"><g><circle class="pt" cx="426" cy="240" r="2.6"/><circle class="pt" cx="496" cy="148" r="2.6"/><circle class="pt" cx="458" cy="251" r="2.6"/><circle class="pt" cx="496" cy="148" r="2.6"/><circle class="pt" cx="426" cy="272" r="2.6"/><circle class="pt" cx="458" cy="253" r="2.6"/><circle class="pt" cx="452" cy="220" r="2.6"/><circle class="pt" cx="455" cy="208" r="2.6"/><circle class="pt" cx="452" cy="317" r="2.6"/><circle class="pt" cx="455" cy="208" r="2.6"/><circle class="pt" cx="458" cy="251" r="2.6"/><circle class="pt" cx="496" cy="148" r="2.6"/><circle class="pt" cx="452" cy="317" r="2.6"/><circle class="pt" cx="449" cy="304" r="2.6"/><circle class="pt" cx="469" cy="571" r="2.6"/><circle class="pt" cx="552" cy="256" r="2.6"/><circle class="pt" cx="452" cy="317" r="2.6"/><circle class="pt" cx="459" cy="252" r="2.6"/><circle class="pt" cx="507" cy="49" r="2.6"/><circle class="pt" cx="455" cy="183" r="2.6"/><circle class="pt" cx="414" cy="214" r="2.6"/><circle class="pt" cx="398" cy="193" r="2.6"/><circle class="pt" cx="398" cy="193" r="2.6"/><circle class="pt" cx="495" cy="130" r="2.6"/><circle class="pt" cx="403" cy="218" r="2.6"/><circle class="pt" cx="503" cy="133" r="2.6"/><circle class="pt" cx="454" cy="247" r="2.6"/><circle class="pt" cx="450" cy="221" r="2.6"/><circle class="pt" cx="552" cy="8" r="2.6"/><circle class="pt" cx="455" cy="249" r="2.6"/><circle class="pt" cx="461" cy="591" r="2.6"/><circle class="pt" cx="452" cy="317" r="2.6"/><circle class="pt" cx="422" cy="205" r="2.6"/><circle class="pt" cx="476" cy="377" r="2.6"/><circle class="pt" cx="43" cy="632" r="2.6"/><circle class="pt" cx="439" cy="225" r="2.6"/><circle class="pt" cx="517" cy="87" r="2.6"/><circle class="pt" cx="495" cy="107" r="2.6"/><circle class="pt" cx="450" cy="312" r="2.6"/><circle class="pt" cx="476" cy="462" r="2.6"/><circle class="pt" cx="490" cy="430" r="2.6"/><circle class="pt" cx="482" cy="495" r="2.6"/><circle class="pt" cx="456" cy="242" r="2.6"/><circle class="pt" cx="451" cy="320" r="2.6"/><circle class="pt" cx="460" cy="248" r="2.6"/><circle class="pt" cx="458" cy="252" r="2.6"/><circle class="pt" cx="453" cy="221" r="2.6"/><circle class="pt" cx="452" cy="299" r="2.6"/><circle class="pt" cx="458" cy="195" r="2.6"/><circle class="pt" cx="455" cy="272" r="2.6"/><circle class="pt" cx="459" cy="228" r="2.6"/><circle class="pt" cx="450" cy="319" r="2.6"/><circle class="pt" cx="476" cy="462" r="2.6"/><circle class="pt" cx="476" cy="462" r="2.6"/><circle class="pt" cx="502" cy="133" r="2.6"/><circle class="pt" cx="493" cy="133" r="2.6"/><circle class="pt" cx="457" cy="171" r="2.6"/><circle class="pt" cx="476" cy="462" r="2.6"/><circle class="pt" cx="403" cy="283" r="2.6"/><circle class="pt" cx="468" cy="362" r="2.6"/><circle class="pt" cx="8" cy="632" r="2.6"/><circle class="pt" cx="8" cy="8" r="2.6"/><circle class="pt" cx="458" cy="251" r="2.6"/><circle class="pt" cx="458" cy="251" r="2.6"/><circle class="pt" cx="458" cy="251" r="2.6"/><circle class="pt" cx="456" cy="242" r="2.6"/><circle class="pt" cx="455" cy="531" r="2.6"/><circle class="pt" cx="455" cy="531" r="2.6"/><circle class="pt" cx="455" cy="531" r="2.6"/></g><g class="marker"><circle cx="450" cy="215" r="13"/><text x="450" y="220">2</text></g><g class="marker"><circle cx="451" cy="215" r="13"/><text x="451" y="220">1</text></g><g class="marker"><circle cx="471" cy="309" r="13"/><text x="471" y="313">3</text></g></svg></div>
         <div class="reveal">
-          <p class="section-tag">Start Here</p>
-          <h2 class="section-title">The Icons</h2>
-          <p class="section-intro">The heavy hitters of the strip.</p>
+          <p class="kicker">The Short List</p>
+          <h2>Three to Start</h2>
+          <p class="lede">Three names to open with &mdash; every other International Drive place is in the full list below.</p>
+          <a class="ave-row" href="/?venue=toms-watch-bar-orlando"><span class="n">1</span><span class="who"><b>Tom's Watch Bar</b><span>Bar · $$</span></span><span class="arr">&rarr;</span></a>
+          <a class="ave-row" href="/?venue=baires-grill-orlando"><span class="n">2</span><span class="who"><b>Baires Grill</b><span>Restaurant · $$</span></span><span class="arr">&rarr;</span></a>
+          <a class="ave-row" href="/?venue=andretti-indoor-karting-orlando"><span class="n">3</span><span class="who"><b>Andretti Indoor Karting and Games</b><span>Attraction · $$</span></span><span class="arr">&rarr;</span></a>
         </div>
-
-        <div class="spotlights">
-          <article class="spot reveal">
-            <figure>
-              <img src="img/ea9c5a09a0a2604a.webp" alt="The Orlando Eye lit in rainbow colors above the ICON Park fountains at night" />
-            </figure>
-            <div class="spot-body">
-              <p class="meta"><span>Park</span><span class="dot">·</span><span>$$</span></p>
-              <h3>ICON Park &amp; The Orlando Eye</h3>
-              <p>The whole I-Drive night skyline has a new compass point. ICON Park's 400-foot wheel lifts you above the city for a slow, twenty-minute soar with Orlando spread out in every direction, and the ground below keeps the energy going: SEA LIFE's ocean tunnel, Madame Tussauds, live music at Tin Roof, and SlingShot launching the brave 450 feet straight up. No gates, no ticket to wander in, just a park that keeps giving you reasons to stay.</p>
-            </div>
-          <a class="spot-go" href="/?venue=icon-park">See it in the guide &rarr;</a></article>
-
-          <article class="spot flip reveal">
-            <figure>
-              <img src="img/97af3e27de608469.webp" alt="The neon lit art deco entrance of Mango's Tropical Cafe on International Drive at night, with a crowd at the valet" />
-            </figure>
-            <div class="spot-body">
-              <p class="meta"><span>Latin</span><span class="dot">·</span><span>$$$</span></p>
-              <h3>Mango's Tropical Cafe</h3>
-              <p>Ask anyone who came for dinner and stayed till close. Mango's Tropical Cafe took everything it learned on South Beach's Ocean Drive and rebuilt it bigger on International Drive, and the legend grew with the room. Supper-club dining under a waterfall of live Latin music, dancers, and handcrafted cocktails, then the whole building becomes the nightclub. It's the only spot on I-Drive where dinner, a show, and a dance floor were never separate plans.</p>
-            </div>
-          <a class="spot-go" href="/?venue=mangos">See it in the guide &rarr;</a></article>
-
-          <article class="spot reveal">
-            <figure>
-              <img src="img/ff137e3226755da2.webp" alt="A driver in a green and black electric go-kart racing on the indoor track at Andretti Indoor Karting" />
-            </figure>
-            <div class="spot-body">
-              <p class="meta"><span>Attraction</span><span class="dot">·</span><span>$$</span></p>
-              <h3>Andretti Indoor Karting and Games</h3>
-              <p>Named for racing legend Mario Andretti, this 150,000-square-foot entertainment palace lives up to the family name. Electric go-karts rocket around multiple indoor tracks at 35 mph, and the rest is just as stacked: a two-level laser tag arena, 120 arcade games, boutique bowling, VR experiences, pro F1 racing simulators, and an extreme ropes course with curved ziplines. The restaurant and full bar keep the fuel going, and the walls carry racing memorabilia that honors the name on the door. Birthday-party headquarters, corporate-event legend, or just a very fast Saturday.</p>
-            </div>
-          <a class="spot-go" href="/?venue=andretti-indoor-karting-orlando">See it in the guide &rarr;</a></article>
-        </div>
-      </div>
-    </section>
-
-    <!-- DINNER AND A SHOW -->
-    <section class="band">
-      <div class="wrap">
+      </section>
+      <!-- TYPOGRAPHIC GRID -->
+      <section class="grid-sec" id="more-names">
         <div class="reveal">
-          <p class="section-tag">Eatertainment</p>
-          <h2 class="section-title">Dinner and a show</h2>
-          <p class="section-intro">Eatertainment is the local religion: dinner with a side of spectacle.</p>
+          <p class="kicker">Go Deep · Attractions</p>
+          <h2>More Names to Know</h2>
         </div>
-
-        <div class="spot-grid">
-          <article class="spot reveal">
-            <figure>
-              <img src="img/8e9ce4e914a084e7.webp" alt="The full size pirate galleon anchored in the indoor lagoon at Pirates Dinner Adventure, ringed by dining decks" />
-            </figure>
-            <div class="spot-body">
-              <p class="meta"><span>Dinner Show</span><span class="dot">·</span><span>$$</span></p>
-              <h3>Pirates Dinner Adventure</h3>
-              <p>Only on I-Drive would dinner come with a naval battle. Pirates Dinner Adventure floats a full-size 18th-century Spanish galleon in a 300,000-gallon indoor lagoon, then fills it with sword fights, aerial stunts, cannon fire, and a crew of singing renegades led by Captain Sebastian the Black. You eat a three-course feast from your own ship in the surrounding arena, cheer for your pirate, and might get pulled into the action. Subtle? Never. That's the point.</p>
-            </div>
-          <a class="spot-go" href="/?venue=pirates-dinner-adventure">See it in the guide &rarr;</a></article>
-
-          <article class="spot reveal">
-            <figure>
-              <img src="img/177b09ff4f50c666.webp" alt="Tony Brent performing on stage in a leopard print jacket during the Outta Control Magic Comedy Dinner Show" />
-            </figure>
-            <div class="spot-body">
-              <p class="meta"><span>Dinner Show</span><span class="dot">·</span><span>$</span></p>
-              <h3>The Outta Control Magic Comedy Dinner Show</h3>
-              <p>Inside the upside-down house at WonderWorks, one man runs the funniest dinner show on the strip. Tony Brent does it all himself: close-up magic, mind reading, impersonations, improv comedy, even a Houdini straightjacket escape, while the kitchen keeps unlimited hand-tossed pizza, salad, and dessert coming. The theater seats about 125, so every seat is close and nobody is safe from becoming part of the act. The Travel Channel named it one of America's best magic shows.</p>
-            </div>
-          <a class="spot-go" href="/?venue=outta-control-magic-show">See it in the guide &rarr;</a></article>
+        <div class="tiles">
+          <a class="tile reveal" href="/?venue=andretti-indoor-karting-orlando"><b>Andretti Indoor Karting and Games</b><p>A 150,000-square-foot indoor racing and games hall on Universal Boulevard, named for Mario Andretti and built around electric go-karts that run 35…</p><p class="venue-meta">Attraction · $$</p></a>
+          <a class="tile reveal" href="/?venue=blue-man-group"><b>Blue Man Group</b><p>Paint drums splatter in rhythm, tubes thump overhead, and without a word three blue performers pull the audience into the joke.</p><p class="venue-meta">Restaurant · $$$</p></a>
+          <a class="tile reveal" href="/?venue=caribbean-moonshine-distillery-tour"><b>Caribbean Moonshine Distillery Tour</b><p>Copper catches the light, a mash scent hangs sweet in the room, and the pour at the end tastes different once you have seen where it rested.</p><p class="venue-meta">Attractions · $$</p></a>
+          <a class="tile reveal" href="/?venue=dezerland-park-orlando"><b>Dezerland Park Orlando</b><p>Rain or shine, Dezerland delivers the most fun per square foot on I-Drive.</p><p class="venue-meta">Attraction · $$</p></a>
         </div>
-      </div>
-    </section>
-
-    <!-- THE ATTRACTIONS MILE -->
-    <section class="band alt">
-      <div class="wrap">
+      </section>
+      <section class="glide" id="glide-pirates-dinner-adventure" aria-label="Pirates Dinner Adventure">
+        <div class="glide-stage" aria-hidden="true">
+          <div class="glide-bg" style="background:radial-gradient(ellipse 90% 65% at 50% 115%, rgba(209,177,128,0.42), transparent 64%), linear-gradient(168deg, #71401f, #9b6c36 58%, #71562c)"></div><div class="glide-bg b" style="background:radial-gradient(ellipse 90% 65% at 50% -15%, rgba(209,177,128,0.3), transparent 60%), linear-gradient(200deg, #88582c, #bd9049 62%, #75592d)"></div>
+          <p class="ghost">03</p>
+        </div>
+        <div class="glide-cardwrap">
+          <article class="glide-card reveal">
+            <p class="kicker">03 · The Finale</p>
+            <h2>Oddities By Day, Pirates By Night</h2>
+            <p>Run it unhurried: big breakfast, a daylight lap of the strip, WonderWorks and Ripley's back to back in afternoon air conditioning. Evening is dinner with pirates, the Wheel after dark, then Mango's until the music says stop.</p>
+            <p class="venue-meta">Pirates Dinner Adventure · Attractions · $$$</p>
+            <a class="venue-btn" href="/?venue=pirates-dinner-adventure">See the venue &rarr;</a>
+          </article>
+        </div>
+      </section>
+      <!-- CLOSING — the whole neighbourhood -->
+      <section class="closing" id="all-places">
         <div class="reveal">
-          <p class="section-tag">Beyond the Parks</p>
-          <h2 class="section-title">The attractions mile</h2>
-          <p class="section-intro">Beyond the parks: the weird, wild, wonderful stuff that makes I-Drive I-Drive.</p>
+          <p class="kicker">The Full List</p>
+          <h2>That&rsquo;s the story. Here&rsquo;s the whole neighborhood.</h2>
+          <p class="lede">All 72 International Drive places from the guide, A&ndash;Z. Tap any name to open its card &mdash; directions, details and booking live there, not in the story.</p>
         </div>
-
-        <div class="spot-grid">
-          <article class="spot reveal">
-            <figure>
-              <img src="img/6582535ba2e7bacf.webp" alt="The WonderWorks building on International Drive, flipped upside down with its roof on the ground" />
-            </figure>
-            <div class="spot-body">
-              <p class="meta"><span>Attraction</span><span class="dot">·</span><span>$$</span></p>
-              <h3>WonderWorks</h3>
-              <p>You cannot miss it: a whole building landed upside down on its roof, palm trees pointing at the pavement. WonderWorks plays it as Professor Wonder's secret lab, ripped loose by an experiment gone wrong, and inside are more than 100 hands-on exhibits: feel hurricane-force winds, design a roller coaster and ride your own creation, lie on a bed of nails, land a space shuttle. It is science class run by showmen, and the dinner show upstairs keeps the night going.</p>
-            </div>
-          <a class="spot-go" href="/?venue=wonderworks-orlando">See it in the guide &rarr;</a></article>
-
-          <article class="spot reveal">
-            <figure>
-              <img src="img/dae03781706ec3c4.webp" alt="The cracked, tilting facade of Ripley's Believe It or Not! in Orlando, built to look like it is sinking into a sinkhole" />
-            </figure>
-            <div class="spot-body">
-              <p class="meta"><span>Attraction</span><span class="dot">·</span><span>$$</span></p>
-              <h3>Ripley's Believe It or Not!</h3>
-              <p>The building looks like it is sinking into a sinkhole, which is exactly the joke: Florida's most famous odditorium leans like the ground gave up. Inside, sixteen galleries of oddities Robert Ripley collected from every corner of the planet: shrunken heads, a vampire hunting kit, artwork spun from candy, illusions that bend the room around you. It has been an I-Drive rite of passage for generations. Go in skeptical. Come out a believer, or at least grinning.</p>
-            </div>
-          <a class="spot-go" href="/?district=i-drive">See the district in the guide &rarr;</a></article>
+        <ul class="ix">
+          <li><a href="/?venue=all-inclusive-pass-kennedy"><span class="ix-name">All-Inclusive Pass with Kennedy Space Center</span><span class="ix-meta">Parks &amp; outdoors · $$$$</span></a></li>
+          <li><a href="/?venue=american-social"><span class="ix-name">American Social</span><span class="ix-meta">American · $$</span></a></li>
+          <li><a href="/?venue=andretti-indoor-karting-orlando"><span class="ix-name">Andretti Indoor Karting and Games</span><span class="ix-meta">Attractions · $$</span></a></li>
+          <li><a href="/?venue=aphrodisiaco"><span class="ix-name">Aphrodisiaco</span><span class="ix-meta">Bars &amp; lounges · $$$</span></a></li>
+          <li><a href="/?venue=aquatica-orlando"><span class="ix-name">Aquatica Orlando</span><span class="ix-meta">Parks &amp; outdoors · $$$</span></a></li>
+          <li><a href="/?venue=arte-museum"><span class="ix-name">Arte Museum</span><span class="ix-meta">Museums &amp; landmarks · $$</span></a></li>
+          <li><a href="/?venue=bb-hotel-orlando-idrive"><span class="ix-name">B&amp;B HOTEL Orlando International Drive</span><span class="ix-meta">Hotels · $$</span></a></li>
+          <li><a href="/?venue=baires-grill-orlando"><span class="ix-name">Baires Grill</span><span class="ix-meta">Restaurants · $$</span></a></li>
+          <li><a href="/?venue=ben-jerry-s"><span class="ix-name">Ben &amp; Jerry's</span><span class="ix-meta">Sweets · $</span></a></li>
+          <li><a href="/?venue=blue-man-group"><span class="ix-name">Blue Man Group</span><span class="ix-meta">Attractions · $$$</span></a></li>
+          <li><a href="/?venue=boba-club"><span class="ix-name">Boba Club</span><span class="ix-meta">Coffee &amp; cafes · $</span></a></li>
+          <li><a href="/?venue=bruster-s-real-ice-cream"><span class="ix-name">Bruster's Real Ice Cream</span><span class="ix-meta">Sweets · $</span></a></li>
+          <li><a href="/?venue=camila-s-brazilian-restaurant"><span class="ix-name">Camila's Brazilian Restaurant</span><span class="ix-meta">Restaurants · $$</span></a></li>
+          <li><a href="/?venue=caribbean-moonshine-distillery-tour"><span class="ix-name">Caribbean Moonshine Distillery Tour</span><span class="ix-meta">Attractions · $$</span></a></li>
+          <li><a href="/?venue=casa-mezcal"><span class="ix-name">Casa Mezcal</span><span class="ix-meta">Mexican · $$</span></a></li>
+          <li><a href="/?venue=chathams"><span class="ix-name">Chathams Place</span><span class="ix-meta">Fine dining &amp; steak · $$$$</span></a></li>
+          <li><a href="/?venue=christini-s-ristorante-italiano"><span class="ix-name">Christini's Ristorante Italiano</span><span class="ix-meta">Italian · $$</span></a></li>
+          <li><a href="/?venue=coco-key-water-park"><span class="ix-name">CoCo Key Water Park</span><span class="ix-meta">Parks &amp; outdoors · $</span></a></li>
+          <li><a href="/?venue=dezerland-park-orlando"><span class="ix-name">Dezerland Park Orlando</span><span class="ix-meta">Attractions · $$</span></a></li>
+          <li><a href="/?venue=discovery-cove"><span class="ix-name">Discovery Cove</span><span class="ix-meta">Parks &amp; outdoors · $$$$</span></a></li>
+          <li><a href="/?venue=divina-carne"><span class="ix-name">Divina Carne</span><span class="ix-meta">Fine dining &amp; steak · $$</span></a></li>
+          <li><a href="/?venue=expedition-odyssey-seaworld"><span class="ix-name">Expedition Odyssey: Fire &amp; Ice</span><span class="ix-meta">Attractions · $$$$</span></a></li>
+          <li><a href="/?venue=first-watch"><span class="ix-name">First Watch</span><span class="ix-meta">Breakfast &amp; brunch · $</span></a></li>
+          <li><a href="/?venue=fun-spot-america-orlando"><span class="ix-name">Fun Spot America</span><span class="ix-meta">Attractions · $$</span></a></li>
+          <li><a href="/?venue=gelato-lacarraia"><span class="ix-name">Gelato LaCarraia</span><span class="ix-meta">Sweets · $$</span></a></li>
+          <li><a href="/?venue=go-city-explorer-pass"><span class="ix-name">Go City Explorer Pass</span><span class="ix-meta">Parks &amp; outdoors · $$</span></a></li>
+          <li><a href="/?venue=hilton-pool-pass"><span class="ix-name">Hilton Orlando Pool Pass</span><span class="ix-meta">Parks &amp; outdoors · $$</span></a></li>
+          <li><a href="/?venue=icon-park"><span class="ix-name">ICON Park &amp; The Orlando Eye</span><span class="ix-meta">Parks &amp; outdoors · $$</span></a></li>
+          <li><a href="/?venue=kavas-tacos-tequila"><span class="ix-name">Kavas Tacos &amp; Tequila</span><span class="ix-meta">Mexican · $$</span></a></li>
+          <li><a href="/?venue=kobe-japanese-steakhouse"><span class="ix-name">Kobe Japanese Steakhouse</span><span class="ix-meta">Japanese &amp; sushi · $</span></a></li>
+          <li><a href="/?venue=mangos"><span class="ix-name">Mango's Tropical Cafe</span><span class="ix-meta">Latin &amp; Caribbean · $$$</span></a></li>
+          <li><a href="/?venue=melt-n-dip"><span class="ix-name">Melt N Dip</span><span class="ix-meta">Sweets · $$</span></a></li>
+          <li><a href="/?venue=moon-wok"><span class="ix-name">Moon Wok Kitchen &amp; Lounge</span><span class="ix-meta">Chinese &amp; hot pot · $$</span></a></li>
+          <li><a href="/?venue=moonshine-mixology-class"><span class="ix-name">Moonshine Mixology Class</span><span class="ix-meta">Attractions · $$</span></a></li>
+          <li><a href="/?venue=mosonori"><span class="ix-name">Mosonori</span><span class="ix-meta">Japanese &amp; sushi · $$</span></a></li>
+          <li><a href="/?venue=museum-of-ice-cream"><span class="ix-name">Museum of Ice Cream</span><span class="ix-meta">Sweets · $$</span></a></li>
+          <li><a href="/?venue=museum-of-illusions-orlando"><span class="ix-name">Museum of Illusions Orlando</span><span class="ix-meta">Museums &amp; landmarks · $$</span></a></li>
+          <li><a href="/?venue=nikitta-orlando"><span class="ix-name">Nikitta</span><span class="ix-meta">Japanese &amp; sushi · $$$</span></a></li>
+          <li><a href="/?venue=nile-ethiopian"><span class="ix-name">Nile Ethiopian</span><span class="ix-meta">Restaurants · $$</span></a></li>
+          <li><a href="/?venue=nomikai"><span class="ix-name">Nomikai by Sushi Saint</span><span class="ix-meta">Japanese &amp; sushi · $$$</span></a></li>
+          <li><a href="/?venue=oshucks-karaoke-bar"><span class="ix-name">O'Shucks Karaoke Bar</span><span class="ix-meta">Bars &amp; lounges · $$</span></a></li>
+          <li><a href="/?venue=omni-resort-pool-pass"><span class="ix-name">Omni Orlando Resort Pool Pass</span><span class="ix-meta">Parks &amp; outdoors · $$</span></a></li>
+          <li><a href="/?venue=orlando-essentials-pass"><span class="ix-name">Orlando Essentials Pass</span><span class="ix-meta">Parks &amp; outdoors · $$$</span></a></li>
+          <li><a href="/?venue=orlando-helicopter-tours"><span class="ix-name">Orlando Helicopter Tours</span><span class="ix-meta">Attractions · $$$$</span></a></li>
+          <li><a href="/?venue=orlando-international-premium-outlets"><span class="ix-name">Orlando International Premium Outlets</span><span class="ix-meta">Markets &amp; shops · $$</span></a></li>
+          <li><a href="/?venue=pierogi-one"><span class="ix-name">Pierogi One</span><span class="ix-meta">Restaurants · $</span></a></li>
+          <li><a href="/?venue=pirates-dinner-adventure"><span class="ix-name">Pirates Dinner Adventure</span><span class="ix-meta">Attractions · $$$</span></a></li>
+          <li><a href="/?venue=caribbean-moonshine-bottling-tour"><span class="ix-name">Premium Caribbean Moonshine Bottling Tour</span><span class="ix-meta">Attractions · $$</span></a></li>
+          <li><a href="/?venue=rocco-s-tacos-tequila-bar"><span class="ix-name">Rocco's Tacos &amp; Tequila Bar</span><span class="ix-meta">Mexican · $$</span></a></li>
+          <li><a href="/?venue=schakolad-chocolate-factory"><span class="ix-name">Schakolad Chocolate Factory</span><span class="ix-meta">Sweets · $$</span></a></li>
+          <li><a href="/?venue=sea-life-orlando-aquarium"><span class="ix-name">SEA LIFE Orlando Aquarium</span><span class="ix-meta">Attractions · $$</span></a></li>
+          <li><a href="/?venue=seaquest-legends-of-the-deep"><span class="ix-name">SEAQuest: Legends of the Deep</span><span class="ix-meta">Attractions · $$$$</span></a></li>
+          <li><a href="/?venue=seasons-52"><span class="ix-name">Seasons 52</span><span class="ix-meta">Bars &amp; lounges · $$$</span></a></li>
+          <li><a href="/?venue=seaworld-howl-o-scream"><span class="ix-name">SeaWorld Howl-O-Scream</span><span class="ix-meta">Attractions · $$</span></a></li>
+          <li><a href="/?venue=seaworld-orlando"><span class="ix-name">SeaWorld Orlando</span><span class="ix-meta">Parks &amp; outdoors · $$$$</span></a></li>
+          <li><a href="/?venue=sfihas-international-drive"><span class="ix-name">Sfiha's International Drive</span><span class="ix-meta">Mediterranean · $</span></a></li>
+          <li><a href="/?venue=shake-shack-i-drive"><span class="ix-name">Shake Shack I-Drive</span><span class="ix-meta">Burgers &amp; sandwiches · $</span></a></li>
+          <li><a href="/?venue=society-park"><span class="ix-name">Society Park</span><span class="ix-meta">Parks &amp; outdoors · $$</span></a></li>
+          <li><a href="/?venue=speakeasy-murder-mystery"><span class="ix-name">Speakeasy Murder Mystery Dinner Show</span><span class="ix-meta">Attractions · $$$</span></a></li>
+          <li><a href="/?venue=still-lounge"><span class="ix-name">Still Lounge by Dre and Snoop</span><span class="ix-meta">Bars &amp; lounges · $$$</span></a></li>
+          <li><a href="/?venue=taffers-tavern"><span class="ix-name">Taffer's Tavern</span><span class="ix-meta">Bars &amp; lounges · $$</span></a></li>
+          <li><a href="/?venue=taverna-opa"><span class="ix-name">Taverna Opa</span><span class="ix-meta">Mediterranean · $$</span></a></li>
+          <li><a href="/?venue=the-escape-game-orlando"><span class="ix-name">The Escape Game Orlando</span><span class="ix-meta">Attractions · $$</span></a></li>
+          <li><a href="/?venue=grove-resort-water-park"><span class="ix-name">The Grove Resort Water Park Day Pass</span><span class="ix-meta">Parks &amp; outdoors · $$</span></a></li>
+          <li><a href="/?venue=outta-control-magic-show"><span class="ix-name">The Outta Control Magic Dinner Show</span><span class="ix-meta">Attractions · $$$</span></a></li>
+          <li><a href="/?venue=toms-watch-bar-orlando"><span class="ix-name">Tom's Watch Bar</span><span class="ix-meta">Bars &amp; lounges · $$</span></a></li>
+          <li><a href="/?venue=twenty-pho-hour"><span class="ix-name">Twenty Pho Hour</span><span class="ix-meta">Noodles &amp; Southeast Asian · $$</span></a></li>
+          <li><a href="/?venue=villatel-orlando-resort"><span class="ix-name">Villatel Orlando Resort</span><span class="ix-meta">Hotels · $$$</span></a></li>
+          <li><a href="/?venue=wonderworks-orlando"><span class="ix-name">WonderWorks Orlando</span><span class="ix-meta">Attractions · $$</span></a></li>
+          <li><a href="/?venue=yard-house"><span class="ix-name">Yard House</span><span class="ix-meta">Restaurants · $</span></a></li>
+          <li><a href="/?venue=yh-seafood-clubhouse"><span class="ix-name">YH Seafood Clubhouse</span><span class="ix-meta">Seafood · $$</span></a></li>
+          <li><a href="/?venue=zukku-san-orlando"><span class="ix-name">Zukku-San Sushi Bar &amp; Grill</span><span class="ix-meta">Japanese &amp; sushi · $$$</span></a></li>
+        </ul>
+        <div class="handoff reveal">
+          <a class="btn-big" href="/?district=i-drive">All 72 International Drive places &rarr;</a>
+          <a class="next-district" href="/lake-nona-district-guide.html">Next district story: Lake Nona &rarr;</a>
         </div>
+      </section>
+    </main>
+    <footer>
+      <div class="foot-in">
+        <a class="back-link" href="/">&larr; Back to the full guide</a>
+        <p class="brand-line">407 FYI &mdash; an independent Orlando guide. Details can change; confirm before you go.</p>
+        <p>Hand-verified Orlando places · Checked October 2026 · Local Picks are never sponsored · Corrections: <a href="mailto:mail@407.fyi">mail@407.fyi</a></p>
+        <p>Some links on 407 FYI are affiliate links. They never affect which places we list, rank, or recommend.</p>
       </div>
-    </section>
-
-    <!-- MAKE A DAY OF IT -->
-    <section class="band gradient">
-      <div class="wrap">
-        <div class="reveal">
-          <p class="section-tag">The Itinerary</p>
-          <h2 class="section-title">Make a day of it</h2>
-        </div>
-        <div class="day-rows">
-          <div class="day-row reveal">
-            <span class="when">Morning</span>
-            <p class="what">Start slow. Big breakfast, strong coffee, and a daylight lap down the strip, when you can take in how gloriously extra it all is.</p>
-          </div>
-          <div class="day-row reveal">
-            <span class="when">Afternoon</span>
-            <p class="what">WonderWorks and Ripley's back to back. Oddities, illusions, and air conditioning: the holy trinity of an Orlando afternoon.</p>
-          </div>
-          <div class="day-row reveal">
-            <span class="when">Evening</span>
-            <p class="what">Dinner with pirates, the Wheel after dark, then Mango's until the music says stop. It will not say stop early.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CLOSING -->
-    <section class="closing">
-      <div class="wrap reveal">
-        <h2>International Drive is one chapter. The guide has the whole book.</h2>
-        <p>Six hundred plus Orlando spots, picked by locals, from supper clubs to neighborhood dives. Start on the strip, then wander.</p>
-        <a class="btn-guide" href="/">Back to the full guide</a>
-      </div>
-    </section>
-    <footer>Part of 407 FYI</footer>
+    </footer>
 
     <script>
       (function () {
-        var els = document.querySelectorAll(".reveal");
-        if (!("IntersectionObserver" in window)) return;
-        document.documentElement.classList.add("reveal-armed");
+        var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+        if (reduce || !("IntersectionObserver" in window)) return;
+        /* Arm hidden start states only once the observer is running;
+           without JS (or with reduced motion) everything renders. */
+        document.body.classList.add("reveal-armed");
         var io = new IntersectionObserver(function (entries) {
-          entries.forEach(function (entry) {
-            if (entry.isIntersecting) {
-              entry.target.classList.add("in");
-              io.unobserve(entry.target);
-            }
+          entries.forEach(function (e) {
+            if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); }
           });
         }, { threshold: 0.12, rootMargin: "0px 0px -6% 0px" });
-        els.forEach(function (el) { io.observe(el); });
-        /* If nothing has scrolled after a beat, the viewer is a static
-           render (full-page capture, embed snapshot): show everything.
-           Real scrollers keep their fades, driven by the observer. */
+        document.querySelectorAll(".reveal").forEach(function (el) { io.observe(el); });
+        /* Glide stages: toggle the cross-fade layer while a panel is on screen. */
+        var gio = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) {
+            e.target.classList.toggle("in-view", e.isIntersecting);
+          });
+        }, { threshold: 0.08 });
+        document.querySelectorAll(".glide").forEach(function (el) { gio.observe(el); });
+        /* Static-render safety (full-page capture / embed snapshot):
+           if nothing has scrolled shortly after load, show everything. */
         setTimeout(function () {
           if (window.scrollY < 10) {
-            els.forEach(function (el) { el.classList.add("in"); });
+            document.querySelectorAll(".reveal").forEach(function (el) { el.classList.add("in"); });
             io.disconnect();
           }
-        }, 1000);
+        }, 1200);
       })();
     </script>
-  <div class="fyi-foot"><div class="fyi-foot-in"><div><h3>Districts</h3><ul><li><a href="/winter-park-district-guide.html">Winter Park</a></li><li><a href="/downtown-orlando-district-guide.html">Downtown Orlando</a></li><li><a href="/mills-50-district-guide.html">Mills 50</a></li><li><a href="/milk-district-guide.html">Milk District</a></li><li><a href="/international-drive-district-guide.html">International Drive</a></li><li><a href="/">All districts in the full guide</a></li></ul></div><div><h3>About</h3><ul><li><a href="/whats-new.html">What's new</a></li><li><a href="/what-visitors-google-orlando.html">What visitors Google</a></li><li><a href="mailto:mail@407.fyi?subject=407%20FYI%20press">Press &amp; media kit</a></li></ul></div><div><h3>Contact</h3><ul><li><a href="mailto:mail@407.fyi">mail@407.fyi</a></li><li><a href="mailto:mail@407.fyi?subject=407%20FYI%20—%20venue%20correction">Flag a closure / suggest an edit</a></li></ul></div><div><h3>Disclosures</h3><ul><li>Some links on 407 FYI are affiliate links. They never affect which places we list, rank, or recommend.</li></ul></div></div><div class="fyi-foot-base">407 FYI — an independent Orlando guide. Details can change; confirm before you go.</div></div></body>
+  </body>
 </html>

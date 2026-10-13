@@ -1,559 +1,384 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="dark">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-    <meta name="color-scheme" content="light dark" />
-    <link rel="icon" href="data:," />
+    <meta name="color-scheme" content="dark" />
     <title>College Park District Guide · 407 FYI</title>
     <meta name="description" content="College Park district highlight: Edgewater Drive at golden hour, hand rolled pasta, birria with a cult following, and the pub where the whole neighborhood lands. A scroll presentation from 407 FYI." />
+    <link rel="canonical" href="https://407.fyi/college-park-district-guide.html" />
+    <meta property="og:title" content="College Park District Guide · 407 FYI" />
+    <meta property="og:description" content="College Park district highlight: Edgewater Drive at golden hour, hand rolled pasta, birria with a cult following, and the pub where the whole neighborhood lands. A scroll presentation from 407 FYI." />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://407.fyi/college-park-district-guide.html" />
+    <meta property="og:image" content="https://407.fyi/img/cb7200f1f01e1bc7.webp" />
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;0,900;1,500&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Urbanist:wght@600;700;800&amp;display=swap" rel="stylesheet" />
     <style>
-      /* ============================================================
-         DISTRICT GRADIENT SYSTEM · 407 FYI rollouts
-         College Park (this page): brick red -> golden-hour amber
-         Main-street dusk identity.
-         ============================================================ */
+      /* Night Drive tokens (from the main guide) + district gradient */
       :root {
-        --grad-a: #57332d;
-        --grad-b: #e8bb79;
-        --grad-mid: #9a6150;
-        --ink: #2e1f18;
-        --ink-soft: #5d4030;
-        --paper: #fbf3e6;
-        --paper-2: #f5e8d3;
-        --card: #fffaf1;
-        --line: rgba(46, 31, 24, 0.14);
-        --gold: #b0845c;
-        --gold-bright: #f2c67e;
-        --shadow: 0 24px 60px rgba(74, 49, 38, 0.18);
-        color-scheme: light;
+        color-scheme: dark;
+        --bg: #0a1811; --surface: #122419; --soft: #172a1f; --ink: #f0e8d5;
+        --muted: #c6bba2; --line: #2f4a38; --accent: #765b2f; --accent-ink: #d4b573;
+        --headline: #f6edd6; --focus: #d4b573;
+        --d-a: #201110; --d-b: #583622; --d-c: #a87f40;
+        --h1vw: 13.5vw;
+        --pad: clamp(20px, 5vw, 40px);
       }
-      @media (prefers-color-scheme: dark) {
-        :root {
-          --ink: #f6ead3;
-          --ink-soft: #d3bda0;
-          --paper: #221612;
-          --paper-2: #1a110e;
-          --card: #33231b;
-          --line: rgba(246, 234, 211, 0.16);
-          --gold: #f2c67e;
-          --shadow: 0 24px 60px rgba(0, 0, 0, 0.45);
-          color-scheme: dark;
-        }
-      }
-
       * { box-sizing: border-box; }
       html { scroll-behavior: smooth; }
       body {
-        margin: 0;
-        font-family: "Public Sans", system-ui, sans-serif;
-        background: var(--paper);
-        color: var(--ink);
-        line-height: 1.6;
+        margin: 0; background: var(--bg); color: var(--ink);
+        font-family: "Manrope", system-ui, sans-serif; line-height: 1.6;
         overflow-x: hidden;
       }
-      img { display: block; max-width: 100%; }
-
-      /* ---------- fade-in on scroll (the only animation) ---------- */
-      .reveal-armed .reveal {
-        opacity: 0;
-        transform: translateY(26px);
-        transition: opacity 0.9s ease, transform 0.9s ease;
-      }
-      .reveal-armed .reveal.in { opacity: 1; transform: none; }
-      @media print {
-        .reveal { opacity: 1 !important; transform: none !important; }
-      }
-      @media (prefers-reduced-motion: reduce) {
-        html { scroll-behavior: auto; }
-        .reveal { opacity: 1; transform: none; transition: none; }
-      }
-
-      /* ---------- hero ---------- */
-      .hero {
-        position: relative;
-        min-height: 100svh;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
-        color: #fdf3e0;
-        isolation: isolate;
-        overflow: hidden;
-      }
-      .hero-media { position: absolute; inset: 0; z-index: -2; }
-      .hero-media img {
-        width: 100%; height: 100%;
-        object-fit: cover; object-position: center 42%;
-      }
-      .hero::after {
-        content: "";
-        position: absolute; inset: 0; z-index: -1;
-        background:
-          linear-gradient(178deg,
-            rgba(87, 51, 45, 0.40) 0%,
-            rgba(87, 51, 45, 0.08) 34%,
-            rgba(87, 51, 45, 0.55) 68%,
-            rgba(43, 27, 22, 0.96) 100%),
-          linear-gradient(100deg,
-            rgba(87, 51, 45, 0.55) 0%,
-            rgba(232, 187, 121, 0.16) 78%);
-      }
-      .hero-inner {
-        width: min(1180px, 100% - 2.5rem);
-        margin-inline: auto;
-        padding: 7rem 0 4.5rem;
-      }
+      h1, h2, .display { font-family: "Urbanist", "Manrope", sans-serif; }
+      a { color: var(--accent-ink); }
+      a:focus-visible, .venue-btn:focus-visible { outline: 2px solid var(--focus); outline-offset: 3px; }
       .kicker {
-        font-size: 0.78rem;
-        font-weight: 700;
-        letter-spacing: 0.32em;
-        text-transform: uppercase;
-        color: var(--gold-bright);
-        margin: 0 0 1.4rem;
+        font-family: "Urbanist", sans-serif; font-weight: 700; letter-spacing: .22em;
+        font-size: .72rem; text-transform: uppercase; color: var(--accent-ink); margin: 0 0 18px;
+      }
+
+      /* ---------- reveal on scroll (armed by JS; content visible without it) ---------- */
+      .reveal-armed .reveal { opacity: 0; transform: translateY(26px); transition: opacity .9s ease, transform .9s ease; }
+      .reveal-armed .reveal.in { opacity: 1; transform: none; }
+
+      /* ---------- 1 · title screen ---------- */
+      .hero {
+        position: relative; min-height: 100svh; display: grid; place-items: center;
+        text-align: center; overflow: hidden; padding: 64px var(--pad);
+        background:
+          radial-gradient(ellipse 90% 55% at 50% 108%, rgba(163, 129, 63, .28), transparent 60%),
+          linear-gradient(168deg, #0d2818 0%, var(--d-a) 52%, #07130c 100%);
+      }
+      .hero-in { position: relative; max-width: 900px; }
+      .hero-brand {
+        font-family: "Urbanist", sans-serif; font-weight: 800; letter-spacing: .3em;
+        font-size: .78rem; color: var(--ink); text-decoration: none; opacity: .85;
       }
       .hero h1 {
-        font-family: "Playfair Display", Georgia, serif;
-        font-weight: 900;
-        font-size: clamp(4.2rem, 15vw, 11.5rem);
-        line-height: 0.92;
-        letter-spacing: -0.01em;
-        margin: 0 0 1.6rem;
-        text-wrap: balance;
+        margin: 26px 0 8px; font-weight: 800; color: var(--headline);
+        font-size: clamp(1.9rem, var(--h1vw), 9.5rem); line-height: .98; letter-spacing: .01em;
       }
-      .hero .subline {
-        font-family: "Playfair Display", Georgia, serif;
-        font-style: italic;
-        font-weight: 500;
-        font-size: clamp(1.25rem, 3.4vw, 1.9rem);
-        line-height: 1.45;
-        max-width: 36ch;
-        margin: 0;
-        color: #f8ead0;
+      .hero .sub {
+        margin: 10px auto 0; max-width: 620px; font-size: clamp(1.05rem, 2.6vw, 1.45rem);
+        color: var(--ink); font-weight: 500;
       }
-      .hero .scroll-cue {
-        margin-top: 3.2rem;
-        font-size: 0.72rem;
-        font-weight: 600;
-        letter-spacing: 0.28em;
-        text-transform: uppercase;
-        color: rgba(253, 243, 224, 0.75);
-        display: flex; align-items: center; gap: 0.9rem;
+      .hero .count { margin-top: 30px; color: var(--muted); font-size: .86rem; letter-spacing: .12em; text-transform: uppercase; }
+      .scroll-cue {
+        position: absolute; left: 50%; bottom: 26px; transform: translateX(-50%);
+        color: var(--muted); font-size: .7rem; letter-spacing: .3em; text-transform: uppercase;
+        display: grid; justify-items: center; gap: 8px;
       }
-      .hero .scroll-cue::after {
-        content: "";
-        width: 64px; height: 1px;
-        background: linear-gradient(90deg, var(--gold-bright), transparent);
+      .scroll-cue::after {
+        content: ""; width: 1px; height: 44px;
+        background: linear-gradient(var(--accent-ink), transparent);
+        animation: cue 2.4s ease-in-out infinite;
       }
+      @keyframes cue { 0%, 100% { transform: scaleY(.55); opacity: .4; } 50% { transform: scaleY(1); opacity: 1; } }
 
-      /* ---------- sections ---------- */
-      .band { padding: clamp(4.5rem, 11vw, 8.5rem) 0; }
-      .band.alt { background: var(--paper-2); }
-      .band.gradient {
-        background: linear-gradient(160deg, var(--grad-a) 0%, var(--grad-mid) 58%, #a88157 130%);
-        color: #f9efdb;
+      /* ---------- quiet text blocks ---------- */
+      .quiet { max-width: 680px; margin: 0 auto; padding: 17vh var(--pad); }
+      .quiet h2, .split h2, .grid-sec h2, .closing h2 {
+        margin: 0 0 20px; font-weight: 800; color: var(--headline);
+        font-size: clamp(2rem, 5.6vw, 3.2rem); line-height: 1.08;
       }
-      .wrap {
-        width: min(1180px, 100% - 2.5rem);
-        margin-inline: auto;
-      }
-      .narrow { max-width: 800px; }
+      .quiet p { font-size: clamp(1.05rem, 2.2vw, 1.22rem); color: var(--ink); margin: 0; }
 
-      .section-tag {
-        font-size: 0.74rem;
-        font-weight: 700;
-        letter-spacing: 0.3em;
-        text-transform: uppercase;
-        color: var(--gold);
-        margin: 0 0 1.1rem;
+      /* ---------- glideshow panels ---------- */
+      .glide { position: relative; }
+      .glide-stage {
+        position: sticky; top: 0; height: 100svh; overflow: hidden;
       }
-      .band.gradient .section-tag { color: var(--gold-bright); }
+      .glide-bg { position: absolute; inset: 0; transition: opacity 1.2s ease; }
+      .glide-bg.b { opacity: 0; }
+      .glide.in-view .glide-bg.b { opacity: 1; }
+      .glide-bg.a1 { background: radial-gradient(ellipse 80% 60% at 18% 110%, rgba(163,129,63,.35), transparent 62%), linear-gradient(155deg, #10301d, var(--d-a) 58%, #060f09); }
+      .glide-bg.b1 { background: radial-gradient(ellipse 80% 60% at 82% -10%, rgba(163,129,63,.30), transparent 60%), linear-gradient(205deg, #143723, var(--d-a) 60%, #050d07); }
+      .glide-bg.a2 { background: radial-gradient(ellipse 75% 55% at 85% 108%, rgba(163,129,63,.26), transparent 60%), linear-gradient(200deg, #0c2416, #081a10 60%, #040a06); }
+      .glide-bg.b2 { background: radial-gradient(ellipse 75% 55% at 12% -8%, rgba(212,181,115,.22), transparent 58%), linear-gradient(160deg, #0e2a19, #07160e 62%, #040a06); }
+      .glide-bg.a3 { background: radial-gradient(ellipse 90% 65% at 50% 115%, rgba(233,193,121,.42), transparent 64%), linear-gradient(168deg, var(--d-b), #6d5a28 58%, #4a3a17); }
+      .glide-bg.b3 { background: radial-gradient(ellipse 90% 65% at 50% -15%, rgba(233,193,121,.30), transparent 60%), linear-gradient(200deg, #55602f, var(--d-c) 62%, #57431a); }
+      .ghost {
+        position: absolute; top: 4svh; right: 2vw; margin: 0;
+        font-family: "Urbanist", sans-serif; font-weight: 800; line-height: 1;
+        font-size: clamp(9rem, 34vw, 24rem); color: transparent;
+        -webkit-text-stroke: 1.5px rgba(212, 181, 115, .28);
+        transform: translateY(3.5svh); transition: transform 1.4s ease;
+        user-select: none;
+      }
+      .glide.in-view .ghost { transform: translateY(0); }
+      .glide.flip .ghost { right: auto; left: 2vw; }
+      .glide-cardwrap { position: relative; z-index: 2; margin-top: -58svh; padding: 0 var(--pad) 16svh; }
+      .glide-card {
+        max-width: 540px; background: rgba(18, 36, 25, .92); border: 1px solid var(--line);
+        border-radius: 20px; padding: clamp(26px, 4.5vw, 42px);
+        box-shadow: 0 30px 70px rgba(0, 0, 0, .5); backdrop-filter: blur(6px);
+      }
+      .glide.flip .glide-card { margin-left: auto; }
+      .glide-card h2 { margin: 0 0 14px; font-weight: 800; color: var(--headline); font-size: clamp(1.8rem, 4.6vw, 2.7rem); line-height: 1.1; }
+      .glide-card p { margin: 0 0 22px; font-size: 1.04rem; }
+      .venue-meta { color: var(--muted); font-size: .88rem; font-weight: 600; letter-spacing: .04em; margin: 0 0 14px; }
+      .venue-btn {
+        display: inline-block; background: var(--accent-ink); color: #14220f; text-decoration: none;
+        font-weight: 800; font-size: .95rem; padding: 13px 22px; border-radius: 999px;
+      }
+      .venue-btn:hover { background: #e9c179; }
 
-      h2.section-title {
-        font-family: "Playfair Display", Georgia, serif;
-        font-weight: 700;
-        font-size: clamp(2.6rem, 7.5vw, 4.6rem);
-        line-height: 1.02;
-        margin: 0 0 1.4rem;
-        letter-spacing: -0.01em;
+      /* ---------- pull quote ---------- */
+      .pullquote { min-height: 94svh; display: grid; place-items: center; text-align: center; padding: 12vh var(--pad); }
+      .pullquote blockquote {
+        margin: 0; max-width: 880px; font-family: "Urbanist", sans-serif; font-weight: 700;
+        font-size: clamp(1.9rem, 6.2vw, 3.7rem); line-height: 1.22; color: var(--headline);
       }
-      .section-intro {
-        font-size: clamp(1.12rem, 2.6vw, 1.4rem);
-        line-height: 1.65;
-        color: var(--ink-soft);
-        max-width: 56ch;
-        margin: 0;
-      }
-      .band.gradient .section-intro { color: #eeddc0; }
+      .pullquote .mark { color: var(--accent-ink); }
 
-      /* ---------- intro narrative ---------- */
-      .intro-text {
-        font-family: "Playfair Display", Georgia, serif;
-        font-weight: 500;
-        font-size: clamp(1.55rem, 4.4vw, 2.6rem);
-        line-height: 1.42;
-        margin: 0;
-        text-wrap: pretty;
+      /* ---------- split: short list + point map ---------- */
+      .split { max-width: 1120px; margin: 0 auto; padding: 15vh var(--pad); display: grid; grid-template-columns: 1fr 1fr; gap: clamp(28px, 5vw, 64px); align-items: center; }
+      .minimap { background: var(--surface); border: 1px solid var(--line); border-radius: 20px; padding: 14px; }
+      .minimap-art { display: block; width: 100%; height: auto; }
+      .minimap-art .pt { fill: var(--accent-ink); opacity: .35; }
+      .minimap-art .ave-line { stroke: var(--d-c); stroke-width: 2; opacity: .4; }
+      .minimap-art .ave-label { fill: var(--muted); font-family: "Urbanist", sans-serif; font-size: 12.5px; letter-spacing: .34em; text-anchor: middle; }
+      .minimap-art .marker circle { fill: var(--accent-ink); }
+      .minimap-art .marker text { fill: #14220f; font-family: "Urbanist", sans-serif; font-weight: 800; font-size: 13px; text-anchor: middle; }
+      .split .lede { color: var(--muted); margin: 0 0 10px; font-size: 1.02rem; }
+      .ave-row {
+        display: flex; align-items: baseline; gap: 14px; padding: 17px 4px;
+        border-bottom: 1px solid var(--line); text-decoration: none; color: var(--ink);
       }
-      .intro-text .accent { color: var(--gold); font-style: italic; }
+      .ave-row:first-of-type { border-top: 1px solid var(--line); }
+      .ave-row .n { font-family: "Urbanist", sans-serif; font-weight: 800; color: var(--accent-ink); font-size: .85rem; }
+      .ave-row .who { flex: 1; min-width: 0; }
+      .ave-row .who b { display: block; font-family: "Urbanist", sans-serif; font-size: 1.22rem; color: var(--headline); }
+      .ave-row .who span { color: var(--muted); font-size: .9rem; }
+      .ave-row .arr { color: var(--accent-ink); font-weight: 800; }
+      .ave-row:hover .who b { color: var(--accent-ink); }
 
-      /* ---------- spotlight cards ---------- */
-      .spotlights {
-        margin-top: clamp(2.8rem, 7vw, 4.5rem);
-        display: grid;
-        gap: clamp(2.6rem, 6vw, 4rem);
+      /* ---------- typographic grid ---------- */
+      .grid-sec { max-width: 1120px; margin: 0 auto; padding: 6vh var(--pad) 15vh; }
+      .tiles { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 30px; }
+      .tile {
+        display: block; background: var(--surface); border: 1px solid var(--line); border-radius: 18px;
+        padding: clamp(22px, 3.4vw, 32px); text-decoration: none; color: var(--ink);
       }
-      .spot {
-        display: grid;
-        gap: 0;
-        background: var(--card);
-        border: 1px solid var(--line);
-        border-radius: 20px;
-        overflow: hidden;
-        box-shadow: var(--shadow);
-      }
-      .spot figure {
-        margin: 0;
-        aspect-ratio: 16 / 10;
-        overflow: hidden;
-      }
-      .spot figure img {
-        width: 100%; height: 100%;
-        object-fit: cover;
-      }
-      .spot .spot-body { padding: clamp(1.6rem, 4.5vw, 2.6rem); }
-      .spot .meta {
-        display: flex; flex-wrap: wrap; align-items: center; gap: 0.6rem 0.9rem;
-        font-size: 0.76rem; font-weight: 700;
-        letter-spacing: 0.18em; text-transform: uppercase;
-        color: var(--gold);
-        margin: 0 0 0.7rem;
-      }
-      .spot .meta .dot { color: var(--ink-soft); letter-spacing: 0; }
-      .spot h3 {
-        font-family: "Playfair Display", Georgia, serif;
-        font-weight: 700;
-        font-size: clamp(1.7rem, 4.6vw, 2.4rem);
-        line-height: 1.12;
-        margin: 0 0 0.9rem;
-      }
-      .spot p {
-        margin: 0;
-        font-size: 1.02rem;
-        line-height: 1.72;
-        color: var(--ink-soft);
-        max-width: 62ch;
-      }
-      @media (min-width: 900px) {
-        .spot { grid-template-columns: 1.05fr 1fr; }
-        .spot figure { aspect-ratio: auto; min-height: 340px; }
-        .spot.flip figure { order: 2; }
-        .spot .spot-body { display: flex; flex-direction: column; justify-content: center; }
-      }
+      .tile:hover { border-color: var(--accent-ink); }
+      .tile b { display: block; font-family: "Urbanist", sans-serif; font-weight: 800; font-size: clamp(1.25rem, 2.6vw, 1.6rem); line-height: 1.2; color: var(--headline); margin-bottom: 8px; }
+      .tile p { margin: 0 0 14px; color: var(--muted); font-size: .98rem; }
+      .tile .venue-meta { margin: 0; }
 
-      /* two-up grid for the researched sections */
-      .spot-grid {
-        margin-top: clamp(2.8rem, 7vw, 4.5rem);
-        display: grid;
-        gap: 1.6rem;
+      /* ---------- closing: the whole neighbourhood ---------- */
+      .closing { max-width: 860px; margin: 0 auto; padding: 15vh var(--pad) 9vh; }
+      .closing .lede { color: var(--muted); font-size: 1.05rem; margin: 0 0 8px; max-width: 560px; }
+      .ix { list-style: none; margin: 34px 0 0; padding: 0; }
+      .ix a {
+        display: flex; align-items: baseline; justify-content: space-between; gap: 16px;
+        padding: 11px 2px; border-bottom: 1px solid var(--line); text-decoration: none;
       }
-      @media (min-width: 760px) {
-        .spot-grid { grid-template-columns: 1fr 1fr; gap: 1.8rem; }
-        .spot-grid .spot { grid-template-columns: 1fr; }
-        .spot-grid .spot figure { aspect-ratio: 4 / 3; min-height: 0; order: 0; }
-        .spot-grid .spot .spot-body { padding: 1.7rem; justify-content: flex-start; }
-        .spot-grid .spot h3 { font-size: 1.55rem; }
+      .ix-name { font-weight: 600; color: var(--ink); }
+      .ix-meta { color: var(--muted); font-size: .85rem; text-align: right; white-space: nowrap; }
+      .ix a:hover .ix-name { color: var(--accent-ink); }
+      @media (min-width: 780px) { .ix { columns: 2; column-gap: 54px; } .ix li { break-inside: avoid; } }
+      .handoff { margin-top: 52px; display: grid; gap: 18px; justify-items: start; }
+      .btn-big {
+        display: inline-block; background: var(--accent-ink); color: #14220f; text-decoration: none;
+        font-family: "Urbanist", sans-serif; font-weight: 800; font-size: 1.05rem;
+        padding: 16px 28px; border-radius: 999px;
       }
+      .btn-big:hover { background: #e9c179; }
+      .next-district { font-weight: 700; text-decoration: none; }
+      .next-district:hover { text-decoration: underline; }
 
-      /* ---------- itinerary ---------- */
-      .day-rows { margin-top: clamp(2.6rem, 6vw, 4rem); display: grid; gap: 0; }
-      .day-row {
-        display: grid;
-        gap: 0.4rem;
-        padding: 2rem 0;
-        border-top: 1px solid rgba(249, 239, 219, 0.25);
-      }
-      .day-row:last-child { border-bottom: 1px solid rgba(249, 239, 219, 0.25); }
-      .day-row .when {
-        font-family: "Playfair Display", Georgia, serif;
-        font-weight: 700;
-        font-style: italic;
-        font-size: clamp(1.9rem, 5.5vw, 3rem);
-        line-height: 1;
-        color: var(--gold-bright);
-      }
-      .day-row .what {
-        font-size: clamp(1.15rem, 3vw, 1.5rem);
-        line-height: 1.5;
-        margin: 0;
-        max-width: 46ch;
-      }
-      @media (min-width: 760px) {
-        .day-row { grid-template-columns: 240px 1fr; align-items: baseline; gap: 2rem; }
-      }
+      /* ---------- footer ---------- */
+      footer { border-top: 1px solid var(--line); margin-top: 4vh; }
+      .foot-in { max-width: 860px; margin: 0 auto; padding: 44px var(--pad) 58px; display: grid; gap: 14px; }
+      .back-link { font-weight: 700; text-decoration: none; }
+      .back-link:hover { text-decoration: underline; }
+      .foot-in p { margin: 0; color: var(--muted); font-size: .88rem; max-width: 640px; }
+      .foot-in .brand-line { color: var(--ink); font-weight: 700; }
 
-      /* ---------- closing ---------- */
-      .closing {
-        text-align: center;
-        padding: clamp(5rem, 12vw, 9rem) 0 clamp(3.5rem, 8vw, 5rem);
-        background: linear-gradient(180deg, var(--paper) 0%, var(--grad-a) 34%, #2b1b16 100%);
-        color: #f9efdb;
+      @media (max-width: 760px) {
+        .split { grid-template-columns: 1fr; }
+        .tiles { grid-template-columns: 1fr; }
+        .glide-cardwrap { margin-top: -46svh; }
       }
-      .closing h2 {
-        font-family: "Playfair Display", Georgia, serif;
-        font-weight: 700;
-        font-size: clamp(2.4rem, 7vw, 4.2rem);
-        line-height: 1.05;
-        margin: 0 auto 1.2rem;
-        max-width: 18ch;
-      }
-      .closing p {
-        color: #e6d3b4;
-        max-width: 46ch;
-        margin: 0 auto 2.6rem;
-        font-size: 1.08rem;
-      }
-      .btn-guide {
-        display: inline-block;
-        font-weight: 700;
-        font-size: 1.05rem;
-        letter-spacing: 0.02em;
-        color: #33211b;
-        background: linear-gradient(120deg, var(--gold-bright), var(--grad-b));
-        padding: 1.05rem 2.4rem;
-        border-radius: 999px;
-        text-decoration: none;
-        box-shadow: 0 18px 40px rgba(0, 0, 0, 0.35);
-        transition: transform 0.25s ease, box-shadow 0.25s ease;
-      }
-      .btn-guide:hover, .btn-guide:focus-visible {
-        transform: translateY(-2px);
-        box-shadow: 0 24px 48px rgba(0, 0, 0, 0.42);
-      }
-      footer {
-        background: #2b1b16;
-        color: rgba(249, 239, 219, 0.62);
-        text-align: center;
-        padding: 0 1.25rem 2.6rem;
-        font-size: 0.85rem;
-        letter-spacing: 0.14em;
-        text-transform: uppercase;
+      @media print { .reveal { opacity: 1 !important; transform: none !important; } }
+      @media (prefers-reduced-motion: reduce) {
+        html { scroll-behavior: auto; }
+        .glide-stage { position: static; height: 52svh; }
+        .glide-cardwrap { margin-top: 0; padding-top: 30px; }
+        .glide-bg, .ghost, .scroll-cue::after { transition: none !important; animation: none !important; }
+        .reveal-armed .reveal { opacity: 1 !important; transform: none !important; transition: none !important; }
       }
     </style>
-  <meta property="og:title" content="College Park District Guide · 407 FYI"><meta property="og:description" content="College Park district highlight: Edgewater Drive at golden hour, hand rolled pasta, birria with a cult following, and the pub where the whole neighborhood lands. A scroll presentation from 407 FYI."><meta property="og:type" content="article"><meta property="og:url" content="https://407.fyi/college-park-district-guide.html"><meta property="og:image" content="https://407.fyi/img/cb7200f1f01e1bc7.webp"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="https://407.fyi/img/cb7200f1f01e1bc7.webp"><link rel="icon" href="/favicon.ico" sizes="any"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest"><meta name="theme-color" content="#0a1811"><style>
-.fyi-top{position:relative;z-index:60;background:#0c1812;border-bottom:1px solid #24402f;font-family:Urbanist,system-ui,-apple-system,"Segoe UI",sans-serif}
-.fyi-top-in{max-width:1200px;margin:0 auto;padding:12px 20px;display:flex;align-items:center;gap:16px;flex-wrap:wrap}
-.fyi-brand{color:#e8e2d4;text-decoration:none;font-weight:800;letter-spacing:.14em;font-size:1rem}
-.fyi-crumb{color:#9db3a4;font-size:.85rem;display:flex;gap:8px;align-items:center;flex-wrap:wrap}
-.fyi-crumb a{color:#9db3a4;text-decoration:none}.fyi-crumb a:hover{color:#c9a969}
-.fyi-crumb b{color:#e8e2d4;font-weight:600}
-.fyi-top nav{margin-left:auto}.fyi-top nav a{color:#c9a969;text-decoration:none;font-size:.88rem;font-weight:700}
-.fyi-cred{background:#112018;border-bottom:1px solid #24402f;color:#9db3a4;font-family:Urbanist,system-ui,sans-serif;font-size:.82rem}
-.fyi-cred-in{max-width:1200px;margin:0 auto;padding:8px 20px}
-.fyi-cred a{color:#c9a969;text-decoration:none}
-.fyi-foot{background:#0c1812;border-top:1px solid #24402f;color:#9db3a4;font-family:Urbanist,system-ui,-apple-system,"Segoe UI",sans-serif;margin-top:0}
-.fyi-foot-in{max-width:1200px;margin:0 auto;padding:34px 20px 26px;display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:26px}
-.fyi-foot h3{color:#e8e2d4;font-size:.78rem;letter-spacing:.22em;text-transform:uppercase;margin:0 0 12px}
-.fyi-foot ul{list-style:none;margin:0;padding:0;display:grid;gap:8px;font-size:.9rem}
-.fyi-foot a{color:#9db3a4;text-decoration:none}.fyi-foot a:hover{color:#c9a969}
-.fyi-foot-base{max-width:1200px;margin:0 auto;padding:0 20px 26px;font-size:.8rem;line-height:1.55}
-</style><style>.spot{position:relative}.spot-go{display:inline-flex;margin-top:10px;font-weight:700;font-size:.85rem;color:var(--accent-ink,#7c520c);text-decoration:none;border-bottom:2px solid currentColor;padding-bottom:1px}.spot-go::after{content:"";position:absolute;inset:0}</style>
-</head>
-  <body><div class="fyi-top"><div class="fyi-top-in"><a class="fyi-brand" href="/">407 FYI</a><span class="fyi-crumb"><a href="/">Guide</a><span aria-hidden="true">/</span><a href="/#districts">Districts</a><span aria-hidden="true">/</span><b aria-current="page">College Park</b></span><nav><a href="/">Full guide</a></nav></div></div><div class="fyi-cred"><div class="fyi-cred-in">Hand-verified Orlando places · Checked October 2026 · Local Picks are never sponsored · Corrections: <a href="mailto:mail@407.fyi">mail@407.fyi</a></div></div>
-
-    <!-- HERO -->
-    <header class="hero">
-      <div class="hero-media">
-        <img src="img/cb7200f1f01e1bc7.webp" alt="The brick College Park entrance sign beneath live oaks draped in Spanish moss" fetchpriority="high" />
+  </head>
+  <body>
+    <!-- 1 · TITLE SCREEN — type poster on a clean district field -->
+    <header class="hero" style="background:radial-gradient(ellipse 90% 55% at 50% 108%, rgba(168,127,64,0.28), transparent 60%), linear-gradient(168deg, #2c1914, #201110 52%, #120909)">
+      <div class="hero-in">
+        <a class="hero-brand" href="/">407 FYI · A DISTRICT STORY</a>
+        <h1>COLLEGE PARK</h1>
+        <p class="sub">Main Street at walking pace — Edgewater Drive and a string of lakes.</p>
+        <p class="count">12 hand-verified places · One neighbourhood</p>
       </div>
-      <div class="hero-inner">
-        <p class="kicker">407 FYI · District Highlights</p>
-        <h1>College Park</h1>
-        <p class="subline">Edgewater Drive does it all: hand-rolled pasta, birria with a cult following, and the pub where the whole neighborhood lands.</p>
-        <p class="scroll-cue">Scroll the story</p>
-      </div>
+      <div class="scroll-cue" aria-hidden="true">Scroll</div>
     </header>
 
-    <!-- INTRO -->
-    <section class="band">
-      <div class="wrap narrow reveal">
-        <p class="intro-text">College Park never needed a theme to feel like a destination. It has <span class="accent">Edgewater Drive</span>, a string of lakes, and neighbors who know exactly where their table is. This is Orlando at walking pace: bungalows and brick storefronts, dinner that turns into dessert two doors down, and mornings that start with pancakes and strong coffee. Small, proud, and deliciously self contained, it rewards anyone who slows down.</p>
-      </div>
-    </section>
-
-    <!-- THE ICONS -->
-    <section class="band alt">
-      <div class="wrap">
+    <main>
+      <!-- 2 · QUIET INTRO -->
+      <section class="quiet reveal" id="intro">
+        <p class="kicker">The District</p>
+        <h2>Main Street, Walking Pace</h2>
+        <p>College Park never needed a theme: Edgewater Drive, a string of lakes, neighbors who know exactly where their table is. Bungalows, brick storefronts, dinner turning into dessert two doors down, mornings of pancakes and strong coffee.</p>
+      </section>
+      <section class="glide" id="glide-turci-pasta" aria-label="Turci Pasta">
+        <div class="glide-stage" aria-hidden="true">
+          <div class="glide-bg" style="background:radial-gradient(ellipse 80% 60% at 18% 110%, rgba(168,127,64,0.35), transparent 62%), linear-gradient(155deg, #3c2419, #201110 58%, #100808)"></div><div class="glide-bg b" style="background:radial-gradient(ellipse 80% 60% at 82% -10%, rgba(168,127,64,0.3), transparent 60%), linear-gradient(205deg, #44291c, #201110 60%, #0e0807)"></div>
+          <p class="ghost">01</p>
+        </div>
+        <div class="glide-cardwrap">
+          <article class="glide-card reveal">
+            <p class="kicker">01 · Italian</p>
+            <h2>Hand-Rolled Through The Window</h2>
+            <p>Watching pasta roll through Turci's window is half the magic. This little Italian jewel hand-makes everything daily: purple sweet potato gnocchi, black truffle ravioli, pear ravioli poached in wine, lasagna like a grandmother runs the kitchen. End with cannoli.</p>
+            <p class="venue-meta">Turci Pasta · Italian · $$</p>
+            <a class="venue-btn" href="/?venue=turci-pasta">See the venue &rarr;</a>
+          </article>
+        </div>
+      </section>
+      <section class="glide flip" id="glide-ollies-public-house" aria-label="Ollie&#x27;s Public House">
+        <div class="glide-stage" aria-hidden="true">
+          <div class="glide-bg" style="background:radial-gradient(ellipse 75% 55% at 85% 108%, rgba(168,127,64,0.26), transparent 60%), linear-gradient(200deg, #1a0e0d, #140b0a 60%, #0b0606)"></div><div class="glide-bg b" style="background:radial-gradient(ellipse 75% 55% at 12% -8%, rgba(190,159,112,0.22), transparent 58%), linear-gradient(160deg, #341e16, #150b0b 62%, #0b0606)"></div>
+          <p class="ghost">02</p>
+        </div>
+        <div class="glide-cardwrap">
+          <article class="glide-card reveal">
+            <p class="kicker">02 · Pub</p>
+            <h2>Where The Neighborhood Lands</h2>
+            <p>Ask College Park where it goes for everything at once: Ollie's. Rotating craft beer, thirty-plus TVs, live music, a big covered patio where dogs get water and cold cuts by name. The Legend sandwich is the regulars' order.</p>
+            <p class="venue-meta">Ollie's Public House · Pub · $$</p>
+            <a class="venue-btn" href="/?venue=ollies-public-house">See the venue &rarr;</a>
+          </article>
+        </div>
+      </section>
+      <!-- PULL QUOTE -->
+      <section class="pullquote reveal" id="quote">
+        <div>
+          <p class="kicker">The Local Test</p>
+          <blockquote><span class="mark">&ldquo;</span>College Park never needed a theme.<span class="mark">&rdquo;</span></blockquote>
+        </div>
+      </section>
+      <!-- SPLIT — the short list -->
+      <section class="split" id="short-list">
+        <div class="minimap reveal"><svg class="minimap-art" viewBox="0 0 560 640" role="img" aria-label="Stylised point map of College Park venues: 1 Great Southern Box Co. Food Hall &amp; Bar, 2 Blue Coast Burrito, 3 Croissant Gourmet"><g><circle class="pt" cx="503" cy="346" r="2.6"/><circle class="pt" cx="288" cy="49" r="2.6"/><circle class="pt" cx="503" cy="495" r="2.6"/><circle class="pt" cx="204" cy="490" r="2.6"/><circle class="pt" cx="503" cy="198" r="2.6"/><circle class="pt" cx="430" cy="97" r="2.6"/><circle class="pt" cx="497" cy="313" r="2.6"/><circle class="pt" cx="517" cy="447" r="2.6"/><circle class="pt" cx="511" cy="591" r="2.6"/></g><g class="marker"><circle cx="43" cy="517" r="13"/><text x="43" y="521">1</text></g><g class="marker"><circle cx="517" cy="445" r="13"/><text x="517" y="449">3</text></g><g class="marker"><circle cx="170" cy="458" r="13"/><text x="170" y="462">2</text></g></svg></div>
         <div class="reveal">
-          <p class="section-tag">Start Here</p>
-          <h2 class="section-title">The Icons</h2>
-          <p class="section-intro">The Edgewater Drive hall of fame.</p>
+          <p class="kicker">The Short List</p>
+          <h2>Three to Start</h2>
+          <p class="lede">Three names to open with &mdash; every other College Park place is in the full list below.</p>
+          <a class="ave-row" href="/?venue=great-southern-box-co"><span class="n">1</span><span class="who"><b>Great Southern Box Co. Food Hall &amp; Bar</b><span>American · $$</span></span><span class="arr">&rarr;</span></a>
+          <a class="ave-row" href="/?venue=blue-coast-burrito"><span class="n">2</span><span class="who"><b>Blue Coast Burrito</b><span>Burrito shop · $</span></span><span class="arr">&rarr;</span></a>
+          <a class="ave-row" href="/?venue=croissant-gourmet"><span class="n">3</span><span class="who"><b>Croissant Gourmet</b><span>Bakery · $</span></span><span class="arr">&rarr;</span></a>
         </div>
-
-        <div class="spotlights">
-          <article class="spot reveal">
-            <figure>
-              <img src="img/7dde29f7200e6363.webp" alt="A tray of crisp tacos with dipping sauces, lime, and a red michelada at QuesaLoco" />
-            </figure>
-            <div class="spot-body">
-              <p class="meta"><span>Restaurant</span><span class="dot">·</span><span>$$</span></p>
-              <h3>QuesaLoco</h3>
-              <p>QuesaLoco started as a food truck with lines that wrapped around the block on Friday nights, and now the brick-and-mortar on Fairbanks Ave carries that same joyful chaos. This is birria country: the quesabirria tacos fold beef and cheese into a crisp tortilla built for dunking in rich consommé, and the birria ramen takes that obsession somewhere brand new. Add loco elote on a stick, birria pizza for the undecided, and a menu that reads like a greatest-hits list of Mexican street food. Go expecting noise, flavor, and no regrets.</p>
-            </div>
-          <a class="spot-go" href="/?venue=quesa-loco">See it in the guide &rarr;</a></article>
-
-          <article class="spot flip reveal">
-            <figure>
-              <img src="img/952bce97a0495bbf.webp" alt="A gloved hand lifting freshly cut ribbons of handmade pasta beside a pasta machine at Turci Pasta" />
-            </figure>
-            <div class="spot-body">
-              <p class="meta"><span>Italian</span><span class="dot">·</span><span>$$</span></p>
-              <h3>Turci Pasta</h3>
-              <p>Watching fresh pasta get rolled through the pasta window at Turci Pasta is half the magic of dinner here. College Park's little Italian jewel makes everything by hand, every day: purple sweet potato gnocchi, black truffle ravioli, pear ravioli poached in wine, lasagna that tastes like someone's grandmother still runs the kitchen. Cozy, romantic, the kind of room where dates and anniversaries feel inevitable. Order the cannoli at the end and thank me later.</p>
-            </div>
-          <a class="spot-go" href="/?venue=turci-pasta">See it in the guide &rarr;</a></article>
-
-          <article class="spot reveal">
-            <figure>
-              <img src="img/6ef5b8a0d2e41bb4.webp" alt="The covered patio at Ollie's Public House filled with tables, red stools, and neighbors at dusk" />
-            </figure>
-            <div class="spot-body">
-              <p class="meta"><span>Pub</span><span class="dot">·</span><span>$$</span></p>
-              <h3>Ollie's Public House</h3>
-              <p>Ask College Park where the neighborhood goes when it wants everything at once, and they will point you to Ollie's. This Edgewater Drive public house pairs a rotating craft beer list with more than thirty TVs, live music, and a big covered patio where dogs get water and cold cuts by name. The Legend sandwich and the Wall Street Reuben are the plates regulars swear by, the bar food runs deep and satisfying, and a rotating Good Bite menu item gives back to a local cause. It is the room where weeknights are never boring.</p>
-            </div>
-          <a class="spot-go" href="/?venue=ollies-public-house">See it in the guide &rarr;</a></article>
-        </div>
-      </div>
-    </section>
-
-    <!-- THE MAIN STREET -->
-    <section class="band">
-      <div class="wrap">
+      </section>
+      <!-- TYPOGRAPHIC GRID -->
+      <section class="grid-sec" id="more-names">
         <div class="reveal">
-          <p class="section-tag">The Main Street</p>
-          <h2 class="section-title">The Main Street</h2>
-          <p class="section-intro">Edgewater Drive is the whole show: walk it, eat it, repeat.</p>
+          <p class="kicker">Keep Going</p>
+          <h2>More Names to Know</h2>
         </div>
-
-        <div class="spot-grid">
-          <article class="spot reveal">
-            <figure>
-              <img src="img/82b191eb8f180431.webp" alt="An overhead spread of handmade pastas, clams, lamb chops, and burrata with glasses of red wine at Adriatico Trattoria Italiana" />
-            </figure>
-            <div class="spot-body">
-              <p class="meta"><span>Italian</span><span class="dot">·</span><span>$$</span></p>
-              <h3>Adriatico Trattoria Italiana</h3>
-              <p>Ask College Park for its quiet showstopper and regulars lower their voices for Adriatico. A husband and wife team runs this small Edgewater Drive trattoria like a dinner party in Abruzzo: he cooks, she runs the room, and everything arrives made from scratch. The spaghetti with clams tastes like the coast, the grouper earns its regulars, and the torta della nonna closes the night exactly right. Book ahead. The room is tiny on purpose.</p>
-            </div>
-          <a class="spot-go" href="/?district=college-park">See the district in the guide &rarr;</a></article>
-
-          <article class="spot reveal">
-            <figure>
-              <img src="img/fe744b8ffe6c9b99.webp" alt="The long white ice cream counter with a glass display case inside The Soda Fountain" />
-            </figure>
-            <div class="spot-body">
-              <p class="meta"><span>Ice Cream Shop</span><span class="dot">·</span><span>$</span></p>
-              <h3>The Soda Fountain</h3>
-              <p>Every main street needs a sugar rush with a backstory, and College Park has The Soda Fountain. Step up to the long white counter on Edgewater Drive for locally made ice cream piled into sundaes with names like the Zoo and the Apocalypto, plus floats and shakes that taste like childhood ordered correctly. Kids press against the case, regulars know their scoop, and nobody leaves in a bad mood. It is impossible. Science has checked.</p>
-            </div>
-          <a class="spot-go" href="/?district=college-park">See the district in the guide &rarr;</a></article>
+        <div class="tiles">
+          <a class="tile reveal" href="/?venue=great-southern-box-co"><b>Great Southern Box Co. Food Hall &amp; Bar</b><p>A 1930s citrus crate warehouse, restored to celebrate the immigrant cuisine that makes Orlando delicious.</p><p class="venue-meta">American · $$</p></a>
+          <a class="tile reveal" href="/?venue=blue-coast-burrito"><b>Blue Coast Burrito</b><p>The Packing District got its first Florida Blue Coast Burrito and it quickly became a neighborhood lunch favorite.</p><p class="venue-meta">Burrito shop · $</p></a>
+          <a class="tile reveal" href="/?venue=croissant-gourmet"><b>Croissant Gourmet</b><p>A little piece of France from two French brothers, Francois a classically trained pâtissier with Champs-Élysées kitchens on his resume.</p><p class="venue-meta">Bakery · $</p></a>
+          <a class="tile reveal" href="/?venue=cups-pups"><b>Cups and Pups</b><p>From a roadside cart to an airstream to this bright Edgewater Drive shop, Cups and Pups has grown up without losing its charm.</p><p class="venue-meta">Coffee Shop · $</p></a>
         </div>
-      </div>
-    </section>
-
-    <!-- MORNING ON THE DRIVE -->
-    <section class="band alt">
-      <div class="wrap">
+      </section>
+      <section class="glide" id="glide-quesa-loco" aria-label="QuesaLoco">
+        <div class="glide-stage" aria-hidden="true">
+          <div class="glide-bg" style="background:radial-gradient(ellipse 90% 65% at 50% 115%, rgba(194,165,121,0.42), transparent 64%), linear-gradient(168deg, #583622, #845e32 58%, #654c26)"></div><div class="glide-bg b" style="background:radial-gradient(ellipse 90% 65% at 50% -15%, rgba(194,165,121,0.3), transparent 60%), linear-gradient(200deg, #704c2b, #a87f40 62%, #684f28)"></div>
+          <p class="ghost">03</p>
+        </div>
+        <div class="glide-cardwrap">
+          <article class="glide-card reveal">
+            <p class="kicker">03 · The Finale</p>
+            <h2>Pancakes To Patio Nightcap</h2>
+            <p>Run it College Park style: Shakers cinnamon roll pancakes, Foxtail coffee to make it official, Edgewater Drive end to end, a Soda Fountain sundae. Evening is QuesaLoco birria or Turci pasta, ending on Ollie's patio.</p>
+            <p class="venue-meta">QuesaLoco · Restaurant · $$</p>
+            <a class="venue-btn" href="/?venue=quesa-loco">See the venue &rarr;</a>
+          </article>
+        </div>
+      </section>
+      <!-- CLOSING — the whole neighbourhood -->
+      <section class="closing" id="all-places">
         <div class="reveal">
-          <p class="section-tag">First Light</p>
-          <h2 class="section-title">Morning on the Drive</h2>
-          <p class="section-intro">Coffee, bakeries, and the farmers market: College Park wakes up delicious.</p>
+          <p class="kicker">The Full List</p>
+          <h2>That&rsquo;s the story. Here&rsquo;s the whole neighborhood.</h2>
+          <p class="lede">All 12 College Park places from the guide, A&ndash;Z. Tap any name to open its card &mdash; directions, details and booking live there, not in the story.</p>
         </div>
-
-        <div class="spot-grid">
-          <article class="spot reveal">
-            <figure>
-              <img src="img/4e845aea98ead4b9.webp" alt="A toasted sandwich plate with coleslaw at Shakers American Cafe" />
-            </figure>
-            <div class="spot-body">
-              <p class="meta"><span>American Cafe</span><span class="dot">·</span><span>$</span></p>
-              <h3>Shakers American Cafe</h3>
-              <p>Shakers is the breakfast room College Park treats like a birthright. The walls wear a famous collection of salt and pepper shakers, the coffee lands fast and hot, and the cinnamon roll pancakes have ended more arguments than any mediator in Orlando. Order the bacon avocado omelette if you want the table to go quiet, or the maple glazed pork belly benedict if you want it to applaud. Arrive hungry. Leave planning tomorrow.</p>
-            </div>
-          <a class="spot-go" href="/?venue=shakers-american-cafe">See it in the guide &rarr;</a></article>
-
-          <article class="spot reveal">
-            <figure>
-              <img src="img/26505498fcbb55c6.webp" alt="The storefront and covered patio tables of Foxtail Coffee Co. in College Park" />
-            </figure>
-            <div class="spot-body">
-              <p class="meta"><span>Coffee Shop</span><span class="dot">·</span><span>$</span></p>
-              <h3>Foxtail Coffee</h3>
-              <p>Foxtail Coffee is where Edgewater Drive starts its day on purpose. The College Park shop pours locally roasted coffee in a warm room of wood and metal, with a covered patio made for slow starts and laptop marathons alike. Order a flat white, add a scoop from the Kelly's Homemade Ice Cream counter sharing the space, and watch the neighborhood file in like it is roll call. Morning people are made here, not born.</p>
-            </div>
-          <a class="spot-go" href="/?venue=foxtail-coffee">See it in the guide &rarr;</a></article>
+        <ul class="ix">
+          <li><a href="/?venue=blue-coast-burrito"><span class="ix-name">Blue Coast Burrito</span><span class="ix-meta">Mexican · $</span></a></li>
+          <li><a href="/?venue=croissant-gourmet"><span class="ix-name">Croissant Gourmet</span><span class="ix-meta">Bakeries · $</span></a></li>
+          <li><a href="/?venue=cups-pups"><span class="ix-name">Cups and Pups</span><span class="ix-meta">Coffee &amp; cafes · $</span></a></li>
+          <li><a href="/?venue=everoak"><span class="ix-name">Everoak Farm</span><span class="ix-meta">Markets &amp; shops · $</span></a></li>
+          <li><a href="/?venue=great-southern-box-co"><span class="ix-name">Great Southern Box Co. Food Hall &amp; Bar</span><span class="ix-meta">American · $$</span></a></li>
+          <li><a href="/?venue=ollies-public-house"><span class="ix-name">Ollie's Public House</span><span class="ix-meta">Bars &amp; lounges · $$</span></a></li>
+          <li><a href="/?venue=quesa-loco"><span class="ix-name">QuesaLoco</span><span class="ix-meta">Restaurants · $$</span></a></li>
+          <li><a href="/?venue=shakers-american-cafe"><span class="ix-name">Shakers American Cafe</span><span class="ix-meta">American · $$</span></a></li>
+          <li><a href="/?venue=the-current-seafood-counter"><span class="ix-name">The Current Seafood Counter</span><span class="ix-meta">Seafood · $$</span></a></li>
+          <li><a href="/?venue=turci-pasta"><span class="ix-name">Turci Pasta</span><span class="ix-meta">Italian · $$</span></a></li>
+          <li><a href="/?venue=walters-tavern"><span class="ix-name">Walter's Tavern</span><span class="ix-meta">Bars &amp; lounges · $$</span></a></li>
+          <li><a href="/?venue=zeytin"><span class="ix-name">Zeytin Turkish Cuisine</span><span class="ix-meta">Mediterranean · $$</span></a></li>
+        </ul>
+        <div class="handoff reveal">
+          <a class="btn-big" href="/?district=college-park">All 12 College Park places &rarr;</a>
+          <a class="next-district" href="/winter-park-district-guide.html">Next district story: Winter Park &rarr;</a>
         </div>
+      </section>
+    </main>
+    <footer>
+      <div class="foot-in">
+        <a class="back-link" href="/">&larr; Back to the full guide</a>
+        <p class="brand-line">407 FYI &mdash; an independent Orlando guide. Details can change; confirm before you go.</p>
+        <p>Hand-verified Orlando places · Checked October 2026 · Local Picks are never sponsored · Corrections: <a href="mailto:mail@407.fyi">mail@407.fyi</a></p>
+        <p>Some links on 407 FYI are affiliate links. They never affect which places we list, rank, or recommend.</p>
       </div>
-    </section>
-
-    <!-- MAKE A DAY OF IT -->
-    <section class="band gradient">
-      <div class="wrap">
-        <div class="reveal">
-          <p class="section-tag">The Itinerary</p>
-          <h2 class="section-title">Make a day of it</h2>
-        </div>
-        <div class="day-rows">
-          <div class="day-row reveal">
-            <span class="when">Morning</span>
-            <p class="what">Shakers for cinnamon roll pancakes, then Foxtail for the coffee that makes it official.</p>
-          </div>
-          <div class="day-row reveal">
-            <span class="when">Afternoon</span>
-            <p class="what">Walk Edgewater Drive end to end, boutiques to bookshops, and finish with a sundae at The Soda Fountain.</p>
-          </div>
-          <div class="day-row reveal">
-            <span class="when">Evening</span>
-            <p class="what">Birria at QuesaLoco or pasta at Turci. Either way, end the night on the patio at Ollie's.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CLOSING -->
-    <section class="closing">
-      <div class="wrap reveal">
-        <h2>College Park is one chapter. The guide has the whole book.</h2>
-        <p>Six hundred plus Orlando spots, picked by locals, organized the way you actually plan a day. Start on Edgewater Drive, then wander.</p>
-        <a class="btn-guide" href="/">Back to the full guide</a>
-      </div>
-    </section>
-    <footer>Part of 407 FYI</footer>
+    </footer>
 
     <script>
       (function () {
-        var els = document.querySelectorAll(".reveal");
-        if (!("IntersectionObserver" in window)) return;
-        document.documentElement.classList.add("reveal-armed");
+        var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+        if (reduce || !("IntersectionObserver" in window)) return;
+        /* Arm hidden start states only once the observer is running;
+           without JS (or with reduced motion) everything renders. */
+        document.body.classList.add("reveal-armed");
         var io = new IntersectionObserver(function (entries) {
-          entries.forEach(function (entry) {
-            if (entry.isIntersecting) {
-              entry.target.classList.add("in");
-              io.unobserve(entry.target);
-            }
+          entries.forEach(function (e) {
+            if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); }
           });
         }, { threshold: 0.12, rootMargin: "0px 0px -6% 0px" });
-        els.forEach(function (el) { io.observe(el); });
+        document.querySelectorAll(".reveal").forEach(function (el) { io.observe(el); });
+        /* Glide stages: toggle the cross-fade layer while a panel is on screen. */
+        var gio = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) {
+            e.target.classList.toggle("in-view", e.isIntersecting);
+          });
+        }, { threshold: 0.08 });
+        document.querySelectorAll(".glide").forEach(function (el) { gio.observe(el); });
+        /* Static-render safety (full-page capture / embed snapshot):
+           if nothing has scrolled shortly after load, show everything. */
         setTimeout(function () {
           if (window.scrollY < 10) {
-            els.forEach(function (el) { el.classList.add("in"); });
+            document.querySelectorAll(".reveal").forEach(function (el) { el.classList.add("in"); });
             io.disconnect();
           }
-        }, 1000);
+        }, 1200);
       })();
     </script>
-  <div class="fyi-foot"><div class="fyi-foot-in"><div><h3>Districts</h3><ul><li><a href="/winter-park-district-guide.html">Winter Park</a></li><li><a href="/downtown-orlando-district-guide.html">Downtown Orlando</a></li><li><a href="/mills-50-district-guide.html">Mills 50</a></li><li><a href="/milk-district-guide.html">Milk District</a></li><li><a href="/international-drive-district-guide.html">International Drive</a></li><li><a href="/">All districts in the full guide</a></li></ul></div><div><h3>About</h3><ul><li><a href="/whats-new.html">What's new</a></li><li><a href="/what-visitors-google-orlando.html">What visitors Google</a></li><li><a href="mailto:mail@407.fyi?subject=407%20FYI%20press">Press &amp; media kit</a></li></ul></div><div><h3>Contact</h3><ul><li><a href="mailto:mail@407.fyi">mail@407.fyi</a></li><li><a href="mailto:mail@407.fyi?subject=407%20FYI%20—%20venue%20correction">Flag a closure / suggest an edit</a></li></ul></div><div><h3>Disclosures</h3><ul><li>Some links on 407 FYI are affiliate links. They never affect which places we list, rank, or recommend.</li></ul></div></div><div class="fyi-foot-base">407 FYI — an independent Orlando guide. Details can change; confirm before you go.</div></div></body>
+  </body>
 </html>
