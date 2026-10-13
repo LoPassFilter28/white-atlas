@@ -195,6 +195,41 @@
       .next-district { font-weight: 700; text-decoration: none; }
       .next-district:hover { text-decoration: underline; }
 
+      /* ---------- Phase 4 · hero photograph (duotone; the type stays the hero) ---------- */
+      .hero-photo { position: absolute; inset: 0; overflow: hidden; }
+      .hero-photo img {
+        width: 100%; height: 100%; display: block; object-fit: cover; object-position: center 38%;
+        filter: grayscale(.5) sepia(.34) hue-rotate(64deg) saturate(.85) brightness(.6) contrast(1.07);
+      }
+      .hero-photo::after {
+        content: ""; position: absolute; inset: 0;
+        background:
+          linear-gradient(180deg, rgba(7, 19, 12, .58) 0%, rgba(7, 19, 12, .30) 36%, rgba(7, 19, 12, .55) 68%, rgba(7, 19, 12, .93) 100%),
+          radial-gradient(ellipse 90% 55% at 50% 108%, rgba(163, 129, 63, .25), transparent 60%);
+      }
+      .hero-in { z-index: 2; }
+      .scroll-cue { z-index: 2; }
+      .hero.has-photo h1, .hero.has-photo .sub, .hero.has-photo .count { text-shadow: 0 2px 30px rgba(4, 10, 6, .6); }
+
+      /* ---------- Phase 4 · flashback panel ---------- */
+      .flashback { max-width: 680px; margin: 0 auto; padding: 9vh var(--pad) 2vh; }
+      .fb-panel {
+        background: var(--surface); border: 1px solid var(--line); border-left: 3px solid var(--accent-ink);
+        border-radius: 18px; padding: clamp(26px, 4.5vw, 40px);
+      }
+      .fb-card h3 {
+        font-family: "Urbanist", sans-serif; font-weight: 800; color: var(--headline);
+        font-size: clamp(1.3rem, 3.2vw, 1.7rem); line-height: 1.22; margin: 0 0 14px;
+      }
+      .fb-card p { margin: 0 0 14px; font-size: 1rem; }
+      .fb-card p:last-child { margin-bottom: 0; }
+      .fb-card .history-reveal { font-weight: 700; color: var(--headline); }
+      .fb-card .history-note { color: var(--muted); }
+      .fb-card .history-source { font-size: .85rem; color: var(--muted); }
+      .fb-card + .fb-card { margin-top: 30px; padding-top: 28px; border-top: 1px solid var(--line); }
+      .fb-more { margin: 18px 2px 0; color: var(--muted); font-size: .92rem; }
+      .photo-credit { font-size: .8rem !important; }
+
       /* ---------- footer ---------- */
       footer { border-top: 1px solid var(--line); margin-top: 4vh; }
       .foot-in { max-width: 860px; margin: 0 auto; padding: 44px var(--pad) 58px; display: grid; gap: 14px; }
@@ -219,12 +254,13 @@
     </style>
   </head>
   <body>
-    <!-- 1 · TITLE SCREEN — type poster on a clean district field -->
-    <header class="hero" style="background:radial-gradient(ellipse 90% 55% at 50% 108%, rgba(189,144,73,0.28), transparent 60%), linear-gradient(168deg, #361e0f, #26150b 52%, #150c06)">
+    <!-- 1 · TITLE SCREEN, type poster on a clean district field -->
+    <header class="hero has-photo" style="background:radial-gradient(ellipse 90% 55% at 50% 108%, rgba(189,144,73,0.28), transparent 60%), linear-gradient(168deg, #361e0f, #26150b 52%, #150c06)">
+      <div class="hero-photo"><img src="assets/hero-i-drive.jpg" alt="The Wheel at ICON Park lit purple at night above the International Drive storefronts" style="object-position:center 30%;" fetchpriority="high" decoding="async" /></div>
       <div class="hero-in">
         <a class="hero-brand" href="/">407 FYI · A DISTRICT STORY</a>
         <h1>INTERNATIONAL DRIVE</h1>
-        <p class="sub">Florida does night bigger — dinner shows, sky wheels, neon to read by.</p>
+        <p class="sub">Florida does night bigger: dinner shows, sky wheels, neon to read by.</p>
         <p class="count">72 hand-verified places · One neighbourhood</p>
       </div>
       <div class="scroll-cue" aria-hidden="true">Scroll</div>
@@ -235,7 +271,7 @@
       <section class="quiet reveal" id="intro">
         <p class="kicker">The District</p>
         <h2>Florida Does Night Bigger</h2>
-        <p>Every city has a street it shows off—Orlando's glows. International Drive started as a theme park support road, then refused its lane: dinner shows, sky wheels, upside-down houses, neon to read by. Locals joke about traffic, then drive over anyway.</p>
+        <p>Every city has a street it shows off, Orlando's glows. International Drive started as a theme park support road, then refused its lane: dinner shows, sky wheels, upside-down houses, neon to read by. Locals joke about traffic, then drive over anyway.</p>
       </section>
       <section class="glide" id="glide-icon-park" aria-label="ICON Park &amp; The Orlando Eye">
         <div class="glide-stage" aria-hidden="true">
@@ -246,7 +282,7 @@
           <article class="glide-card reveal">
             <p class="kicker">01 · Park</p>
             <h2>Four Hundred Feet Up</h2>
-            <p>ICON Park's 400-foot wheel lifts you for a slow, twenty-minute soar with Orlando in every direction. Below: SEA LIFE's ocean tunnel, Madame Tussauds, live music at Tin Roof, SlingShot launching the brave skyward. No gates—just wander in.</p>
+            <p>ICON Park's 400-foot wheel lifts you for a slow, twenty-minute soar with Orlando in every direction. Below: SEA LIFE's ocean tunnel, Madame Tussauds, live music at Tin Roof, SlingShot launching the brave skyward. No gates, just wander in.</p>
             <p class="venue-meta">ICON Park &amp; The Orlando Eye · Park · $$</p>
             <a class="venue-btn" href="/?venue=icon-park">See the venue &rarr;</a>
           </article>
@@ -271,16 +307,16 @@
       <section class="pullquote reveal" id="quote">
         <div>
           <p class="kicker">The Local Test</p>
-          <blockquote><span class="mark">&ldquo;</span>Every city has a street it shows off — Orlando’s glows.<span class="mark">&rdquo;</span></blockquote>
+          <blockquote><span class="mark">&ldquo;</span>Every city has a street it shows off, Orlando’s glows.<span class="mark">&rdquo;</span></blockquote>
         </div>
       </section>
-      <!-- SPLIT — the short list -->
+      <!-- SPLIT, the short list -->
       <section class="split" id="short-list">
         <div class="minimap reveal"><svg class="minimap-art" viewBox="0 0 560 640" role="img" aria-label="Stylised point map of International Drive venues: 1 Tom&#x27;s Watch Bar, 2 Baires Grill, 3 Andretti Indoor Karting and Games"><g><circle class="pt" cx="426" cy="240" r="2.6"/><circle class="pt" cx="496" cy="148" r="2.6"/><circle class="pt" cx="458" cy="251" r="2.6"/><circle class="pt" cx="496" cy="148" r="2.6"/><circle class="pt" cx="426" cy="272" r="2.6"/><circle class="pt" cx="458" cy="253" r="2.6"/><circle class="pt" cx="452" cy="220" r="2.6"/><circle class="pt" cx="455" cy="208" r="2.6"/><circle class="pt" cx="452" cy="317" r="2.6"/><circle class="pt" cx="455" cy="208" r="2.6"/><circle class="pt" cx="458" cy="251" r="2.6"/><circle class="pt" cx="496" cy="148" r="2.6"/><circle class="pt" cx="452" cy="317" r="2.6"/><circle class="pt" cx="449" cy="304" r="2.6"/><circle class="pt" cx="469" cy="571" r="2.6"/><circle class="pt" cx="552" cy="256" r="2.6"/><circle class="pt" cx="452" cy="317" r="2.6"/><circle class="pt" cx="459" cy="252" r="2.6"/><circle class="pt" cx="507" cy="49" r="2.6"/><circle class="pt" cx="455" cy="183" r="2.6"/><circle class="pt" cx="414" cy="214" r="2.6"/><circle class="pt" cx="398" cy="193" r="2.6"/><circle class="pt" cx="398" cy="193" r="2.6"/><circle class="pt" cx="495" cy="130" r="2.6"/><circle class="pt" cx="403" cy="218" r="2.6"/><circle class="pt" cx="503" cy="133" r="2.6"/><circle class="pt" cx="454" cy="247" r="2.6"/><circle class="pt" cx="450" cy="221" r="2.6"/><circle class="pt" cx="552" cy="8" r="2.6"/><circle class="pt" cx="455" cy="249" r="2.6"/><circle class="pt" cx="461" cy="591" r="2.6"/><circle class="pt" cx="452" cy="317" r="2.6"/><circle class="pt" cx="422" cy="205" r="2.6"/><circle class="pt" cx="476" cy="377" r="2.6"/><circle class="pt" cx="43" cy="632" r="2.6"/><circle class="pt" cx="439" cy="225" r="2.6"/><circle class="pt" cx="517" cy="87" r="2.6"/><circle class="pt" cx="495" cy="107" r="2.6"/><circle class="pt" cx="450" cy="312" r="2.6"/><circle class="pt" cx="476" cy="462" r="2.6"/><circle class="pt" cx="490" cy="430" r="2.6"/><circle class="pt" cx="482" cy="495" r="2.6"/><circle class="pt" cx="456" cy="242" r="2.6"/><circle class="pt" cx="451" cy="320" r="2.6"/><circle class="pt" cx="460" cy="248" r="2.6"/><circle class="pt" cx="458" cy="252" r="2.6"/><circle class="pt" cx="453" cy="221" r="2.6"/><circle class="pt" cx="452" cy="299" r="2.6"/><circle class="pt" cx="458" cy="195" r="2.6"/><circle class="pt" cx="455" cy="272" r="2.6"/><circle class="pt" cx="459" cy="228" r="2.6"/><circle class="pt" cx="450" cy="319" r="2.6"/><circle class="pt" cx="476" cy="462" r="2.6"/><circle class="pt" cx="476" cy="462" r="2.6"/><circle class="pt" cx="502" cy="133" r="2.6"/><circle class="pt" cx="493" cy="133" r="2.6"/><circle class="pt" cx="457" cy="171" r="2.6"/><circle class="pt" cx="476" cy="462" r="2.6"/><circle class="pt" cx="403" cy="283" r="2.6"/><circle class="pt" cx="468" cy="362" r="2.6"/><circle class="pt" cx="8" cy="632" r="2.6"/><circle class="pt" cx="8" cy="8" r="2.6"/><circle class="pt" cx="458" cy="251" r="2.6"/><circle class="pt" cx="458" cy="251" r="2.6"/><circle class="pt" cx="458" cy="251" r="2.6"/><circle class="pt" cx="456" cy="242" r="2.6"/><circle class="pt" cx="455" cy="531" r="2.6"/><circle class="pt" cx="455" cy="531" r="2.6"/><circle class="pt" cx="455" cy="531" r="2.6"/></g><g class="marker"><circle cx="450" cy="215" r="13"/><text x="450" y="220">2</text></g><g class="marker"><circle cx="451" cy="215" r="13"/><text x="451" y="220">1</text></g><g class="marker"><circle cx="471" cy="309" r="13"/><text x="471" y="313">3</text></g></svg></div>
         <div class="reveal">
           <p class="kicker">The Short List</p>
           <h2>Three to Start</h2>
-          <p class="lede">Three names to open with &mdash; every other International Drive place is in the full list below.</p>
+          <p class="lede">Three names to open with: every other International Drive place is in the full list below.</p>
           <a class="ave-row" href="/?venue=toms-watch-bar-orlando"><span class="n">1</span><span class="who"><b>Tom's Watch Bar</b><span>Bar · $$</span></span><span class="arr">&rarr;</span></a>
           <a class="ave-row" href="/?venue=baires-grill-orlando"><span class="n">2</span><span class="who"><b>Baires Grill</b><span>Restaurant · $$</span></span><span class="arr">&rarr;</span></a>
           <a class="ave-row" href="/?venue=andretti-indoor-karting-orlando"><span class="n">3</span><span class="who"><b>Andretti Indoor Karting and Games</b><span>Attraction · $$</span></span><span class="arr">&rarr;</span></a>
@@ -314,12 +350,29 @@
           </article>
         </div>
       </section>
-      <!-- CLOSING — the whole neighbourhood -->
+      <!-- FLASHBACK, the district's history, from the anthology -->
+      <section class="flashback reveal" id="flashback">
+        <p class="kicker">Flashback · Orlando History</p>
+        <div class="fb-panel">
+          <article class="fb-card">
+            <h3>Was the water park invented on International Drive?</h3>
+            <p class="history-story">Basically, yes. Wet 'n Wild debuted on I-Drive on March 13, 1977, founded by SeaWorld creator George Millay, who quit SeaWorld to build it. Most industry experts consider it the first true water park: the first to combine wave pools, slides, and splash zones in one place.</p><p class="history-story">Disney's River Country debuted a year earlier, but Wet 'n Wild defined the formula. It ran 39 years before closing to make way for Volcano Bay.</p><p class="history-note">Local note: every water park on this road is a cover version of the original.</p>
+            
+          </article>
+          <article class="fb-card">
+            <h3>The Convention Center Tourists Paid For</h3>
+            <p class="history-story">The Orange County Convention Center opened in February 1983, with the Boston Pops playing its grand opening. It was funded by a 2% tax on hotel rooms that county voters approved in 1978. Visitors literally paid for the building. Today it's the second-largest convention center in the country, with more than 110 hotels within three miles of it.</p>
+            
+          </article>
+        </div>
+        <p class="fb-more">Every district has a past, all 49 stories live in <a href="/archive.html?flashbacks=1">the Flashbacks anthology &rarr;</a></p>
+      </section>
+      <!-- CLOSING, the whole neighbourhood -->
       <section class="closing" id="all-places">
         <div class="reveal">
           <p class="kicker">The Full List</p>
           <h2>That&rsquo;s the story. Here&rsquo;s the whole neighborhood.</h2>
-          <p class="lede">All 72 International Drive places from the guide, A&ndash;Z. Tap any name to open its card &mdash; directions, details and booking live there, not in the story.</p>
+          <p class="lede">All 72 International Drive places from the guide, A-Z. Tap any name to open its card: directions, details and booking live there, not in the story.</p>
         </div>
         <ul class="ix">
           <li><a href="/?venue=all-inclusive-pass-kennedy"><span class="ix-name">All-Inclusive Pass with Kennedy Space Center</span><span class="ix-meta">Parks &amp; outdoors · $$$$</span></a></li>
@@ -404,9 +457,10 @@
     <footer>
       <div class="foot-in">
         <a class="back-link" href="/">&larr; Back to the full guide</a>
-        <p class="brand-line">407 FYI &mdash; an independent Orlando guide. Details can change; confirm before you go.</p>
+        <p class="brand-line">407 FYI, an independent Orlando guide. Details can change; confirm before you go.</p>
         <p>Hand-verified Orlando places · Checked October 2026 · Local Picks are never sponsored · Corrections: <a href="mailto:mail@407.fyi">mail@407.fyi</a></p>
         <p>Some links on 407 FYI are affiliate links. They never affect which places we list, rank, or recommend.</p>
+        <p class="photo-credit">Hero photograph: <a href="https://commons.wikimedia.org/wiki/File:Orlando_%22Eye%22_Ferris_Wheel_01.jpg" target="_blank" rel="noopener">&ldquo;The &lsquo;Big Eye&rsquo; on International Drive&rdquo;</a> by ADellaGuardia, released into the public domain (<a href="http://creativecommons.org/publicdomain/zero/1.0/deed.en" target="_blank" rel="noopener">CC0</a>), via Wikimedia Commons. Cropped, resized and colour-treated for this page.</p>
       </div>
     </footer>
 

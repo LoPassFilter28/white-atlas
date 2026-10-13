@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
     <meta name="color-scheme" content="dark" />
     <title>Ivanhoe Village District Guide · 407 FYI</title>
-    <meta name="description" content="Ivanhoe Village district highlight: lakeside mornings and brewery afternoons in Orlando&#x27;s easygoing creative quarter. A scroll presentation from 407 FYI." />
+    <meta name="description" content="Ivanhoe Village district highlight: lakeside mornings and brewery afternoons in Orlando&amp;#x27;s easygoing creative quarter. A scroll presentation from 407 FYI." />
     <link rel="canonical" href="https://407.fyi/ivanhoe-village-district-guide.html" />
     <meta property="og:title" content="Ivanhoe Village District Guide · 407 FYI" />
-    <meta property="og:description" content="Ivanhoe Village district highlight: lakeside mornings and brewery afternoons in Orlando&#x27;s easygoing creative quarter. A scroll presentation from 407 FYI." />
+    <meta property="og:description" content="Ivanhoe Village district highlight: lakeside mornings and brewery afternoons in Orlando&amp;#x27;s easygoing creative quarter. A scroll presentation from 407 FYI." />
     <meta property="og:type" content="article" />
     <meta property="og:url" content="https://407.fyi/ivanhoe-village-district-guide.html" />
     <meta property="og:image" content="https://407.fyi/img/6aee8655a542c511.webp" />
@@ -195,6 +195,41 @@
       .next-district { font-weight: 700; text-decoration: none; }
       .next-district:hover { text-decoration: underline; }
 
+      /* ---------- Phase 4 · hero photograph (duotone; the type stays the hero) ---------- */
+      .hero-photo { position: absolute; inset: 0; overflow: hidden; }
+      .hero-photo img {
+        width: 100%; height: 100%; display: block; object-fit: cover; object-position: center 38%;
+        filter: grayscale(.5) sepia(.34) hue-rotate(64deg) saturate(.85) brightness(.6) contrast(1.07);
+      }
+      .hero-photo::after {
+        content: ""; position: absolute; inset: 0;
+        background:
+          linear-gradient(180deg, rgba(7, 19, 12, .58) 0%, rgba(7, 19, 12, .30) 36%, rgba(7, 19, 12, .55) 68%, rgba(7, 19, 12, .93) 100%),
+          radial-gradient(ellipse 90% 55% at 50% 108%, rgba(163, 129, 63, .25), transparent 60%);
+      }
+      .hero-in { z-index: 2; }
+      .scroll-cue { z-index: 2; }
+      .hero.has-photo h1, .hero.has-photo .sub, .hero.has-photo .count { text-shadow: 0 2px 30px rgba(4, 10, 6, .6); }
+
+      /* ---------- Phase 4 · flashback panel ---------- */
+      .flashback { max-width: 680px; margin: 0 auto; padding: 9vh var(--pad) 2vh; }
+      .fb-panel {
+        background: var(--surface); border: 1px solid var(--line); border-left: 3px solid var(--accent-ink);
+        border-radius: 18px; padding: clamp(26px, 4.5vw, 40px);
+      }
+      .fb-card h3 {
+        font-family: "Urbanist", sans-serif; font-weight: 800; color: var(--headline);
+        font-size: clamp(1.3rem, 3.2vw, 1.7rem); line-height: 1.22; margin: 0 0 14px;
+      }
+      .fb-card p { margin: 0 0 14px; font-size: 1rem; }
+      .fb-card p:last-child { margin-bottom: 0; }
+      .fb-card .history-reveal { font-weight: 700; color: var(--headline); }
+      .fb-card .history-note { color: var(--muted); }
+      .fb-card .history-source { font-size: .85rem; color: var(--muted); }
+      .fb-card + .fb-card { margin-top: 30px; padding-top: 28px; border-top: 1px solid var(--line); }
+      .fb-more { margin: 18px 2px 0; color: var(--muted); font-size: .92rem; }
+      .photo-credit { font-size: .8rem !important; }
+
       /* ---------- footer ---------- */
       footer { border-top: 1px solid var(--line); margin-top: 4vh; }
       .foot-in { max-width: 860px; margin: 0 auto; padding: 44px var(--pad) 58px; display: grid; gap: 14px; }
@@ -219,12 +254,13 @@
     </style>
   </head>
   <body>
-    <!-- 1 · TITLE SCREEN — type poster on a clean district field -->
-    <header class="hero" style="background:radial-gradient(ellipse 90% 55% at 50% 108%, rgba(173,135,69,0.28), transparent 60%), linear-gradient(168deg, #293018, #1f2513 52%, #11140a)">
+    <!-- 1 · TITLE SCREEN, type poster on a clean district field -->
+    <header class="hero has-photo" style="background:radial-gradient(ellipse 90% 55% at 50% 108%, rgba(173,135,69,0.28), transparent 60%), linear-gradient(168deg, #293018, #1f2513 52%, #11140a)">
+      <div class="hero-photo"><img src="assets/hero-ivanhoe-village.jpg" alt="Lake Ivanhoe Park: moss-draped oaks, a brick street and the lake beyond the trees" style="object-position:center 28%;" fetchpriority="high" decoding="async" /></div>
       <div class="hero-in">
         <a class="hero-brand" href="/">407 FYI · A DISTRICT STORY</a>
         <h1>IVANHOE VILLAGE</h1>
-        <p class="sub">Orlando with its guard down — brunch, vintage racks and a brewery by the lake.</p>
+        <p class="sub">Orlando with its guard down, brunch, vintage racks and a brewery by the lake.</p>
         <p class="count">17 hand-verified places · One neighbourhood</p>
       </div>
       <div class="scroll-cue" aria-hidden="true">Scroll</div>
@@ -235,7 +271,7 @@
       <section class="quiet reveal" id="intro">
         <p class="kicker">The District</p>
         <h2>Orlando With Its Guard Down</h2>
-        <p>Nobody stumbles into Ivanhoe Village by accident—someone who loves this city grabs your sleeve: trust me, the lake. Then brunch at White Wolf, vintage racks up Orange Avenue and a brewery near the water do the rest.</p>
+        <p>Nobody stumbles into Ivanhoe Village by accident, someone who loves this city grabs your sleeve: trust me, the lake. Then brunch at White Wolf, vintage racks up Orange Avenue and a brewery near the water do the rest.</p>
       </section>
       <section class="glide" id="glide-white-wolf" aria-label="White Wolf Cafe">
         <div class="glide-stage" aria-hidden="true">
@@ -246,7 +282,7 @@
           <article class="glide-card reveal">
             <p class="kicker">01 · Cafe</p>
             <h2>Morning Ritual, Southern Comfort</h2>
-            <p>White Wolf is the village's morning ritual: Crab Cakes Benedict regulars dream about, French toast worth the trip, a famous cinnamon bun, cheese grits and country fried chicken behind it. Art-filled, warm, staffed like neighbors—the day started right.</p>
+            <p>White Wolf is the village's morning ritual: Crab Cakes Benedict regulars dream about, French toast worth the trip, a famous cinnamon bun, cheese grits and country fried chicken behind it. Art-filled, warm, staffed like neighbors, the day started right.</p>
             <p class="venue-meta">White Wolf Cafe · Cafe · $$</p>
             <a class="venue-btn" href="/?venue=white-wolf">See the venue &rarr;</a>
           </article>
@@ -256,16 +292,16 @@
       <section class="pullquote reveal" id="quote">
         <div>
           <p class="kicker">The Local Test</p>
-          <blockquote><span class="mark">&ldquo;</span>Nobody stumbles into Ivanhoe Village by accident — someone who loves this city grabs your sleeve: trust me, the lake.<span class="mark">&rdquo;</span></blockquote>
+          <blockquote><span class="mark">&ldquo;</span>Nobody stumbles into Ivanhoe Village by accident, someone who loves this city grabs your sleeve: trust me, the lake.<span class="mark">&rdquo;</span></blockquote>
         </div>
       </section>
-      <!-- SPLIT — the short list -->
+      <!-- SPLIT, the short list -->
       <section class="split" id="short-list">
         <div class="minimap reveal"><svg class="minimap-art" viewBox="0 0 560 640" role="img" aria-label="Stylised point map of Ivanhoe Village venues: 1 Barkhaven, 2 Beginner Sushi-Making Class, 3 4 Hens Creole Kitchen"><g><circle class="pt" cx="445" cy="304" r="2.6"/><circle class="pt" cx="404" cy="49" r="2.6"/><circle class="pt" cx="321" cy="527" r="2.6"/><circle class="pt" cx="321" cy="527" r="2.6"/><circle class="pt" cx="311" cy="586" r="2.6"/><circle class="pt" cx="311" cy="542" r="2.6"/><circle class="pt" cx="311" cy="542" r="2.6"/><circle class="pt" cx="311" cy="542" r="2.6"/><circle class="pt" cx="311" cy="542" r="2.6"/><circle class="pt" cx="311" cy="542" r="2.6"/><circle class="pt" cx="311" cy="542" r="2.6"/><circle class="pt" cx="311" cy="542" r="2.6"/><circle class="pt" cx="43" cy="406" r="2.6"/><circle class="pt" cx="333" cy="511" r="2.6"/></g><g class="marker"><circle cx="517" cy="591" r="13"/><text x="517" y="596">1</text></g><g class="marker"><circle cx="311" cy="542" r="13"/><text x="311" y="547">3</text></g><g class="marker"><circle cx="333" cy="511" r="13"/><text x="333" y="516">2</text></g></svg></div>
         <div class="reveal">
           <p class="kicker">The Short List</p>
           <h2>Three to Start</h2>
-          <p class="lede">Three names to open with &mdash; every other Ivanhoe Village place is in the full list below.</p>
+          <p class="lede">Three names to open with: every other Ivanhoe Village place is in the full list below.</p>
           <a class="ave-row" href="/?venue=barkhaven"><span class="n">1</span><span class="who"><b>Barkhaven</b><span>Burgers · $$</span></span><span class="arr">&rarr;</span></a>
           <a class="ave-row" href="/?venue=sushi-making-class"><span class="n">2</span><span class="who"><b>Beginner Sushi-Making Class</b><span>Attractions · $$</span></span><span class="arr">&rarr;</span></a>
           <a class="ave-row" href="/?venue=4-hens-creole-kitchen"><span class="n">3</span><span class="who"><b>4 Hens Creole Kitchen</b><span>Creole kitchen · $$</span></span><span class="arr">&rarr;</span></a>
@@ -292,7 +328,7 @@
           <article class="glide-card reveal">
             <p class="kicker">02 · The Finale</p>
             <h2>A Pint With Deep Roots</h2>
-            <p>Ivanhoe Park Brewing pours heart into every pint, its name honoring Lake Ivanhoe founder George Russell and old Joyland amusement park. Park Hopp'r pilsner to Tupac ShaPorter, reclaimed wood, dog-friendly beer garden, rotating taps—locals keep returning.</p>
+            <p>Ivanhoe Park Brewing pours heart into every pint, its name honoring Lake Ivanhoe founder George Russell and old Joyland amusement park. Park Hopp'r pilsner to Tupac ShaPorter, reclaimed wood, dog-friendly beer garden, rotating taps, locals keep returning.</p>
             <p class="venue-meta">Ivanhoe Park Brewing Company · Brewery · $$</p>
             <a class="venue-btn" href="/?venue=ivanhoe-park-brewing-company">See the venue &rarr;</a>
           </article>
@@ -301,14 +337,26 @@
       <section class="quiet reveal">
         <p class="kicker">Run It Like a Local</p>
         <h2>Lake First, Tapas Last</h2>
-        <p>Brunch at White Wolf, a slow walk to glassy water, a clear kayak on Lake Ivanhoe, studio doors along Orange Avenue. Evening: tapas at Santiago's as sky goes lavender, then a brewery pint—the neighborhood, start to finish.</p>
+        <p>Brunch at White Wolf, a slow walk to glassy water, a clear kayak on Lake Ivanhoe, studio doors along Orange Avenue. Evening: tapas at Santiago's as sky goes lavender, then a brewery pint, the neighborhood, start to finish.</p>
       </section>
-      <!-- CLOSING — the whole neighbourhood -->
+      <!-- FLASHBACK, the district's history, from the anthology -->
+      <section class="flashback reveal" id="flashback">
+        <p class="kicker">Flashback · Orlando History</p>
+        <div class="fb-panel">
+          <article class="fb-card">
+            <h3>Why is Lake Ivanhoe named after a knight?</h3>
+            <p class="history-story">After Sir Walter Scott's 1819 novel Ivanhoe. Early landowner F.N. Abbott named the lake for the Saxon knight, and around the same time, neighbor John W. Childress named nearby Lake Adair after his wife.</p><p class="history-story">So one lake is literature and the next one is a love letter.</p><p class="history-note">Local note: two lakes, one medieval novel, one marriage. Orlando's original romantics.</p>
+            
+          </article>
+        </div>
+        <p class="fb-more">Every district has a past, all 49 stories live in <a href="/archive.html?flashbacks=1">the Flashbacks anthology &rarr;</a></p>
+      </section>
+      <!-- CLOSING, the whole neighbourhood -->
       <section class="closing" id="all-places">
         <div class="reveal">
           <p class="kicker">The Full List</p>
           <h2>That&rsquo;s the story. Here&rsquo;s the whole neighborhood.</h2>
-          <p class="lede">All 17 Ivanhoe Village places from the guide, A&ndash;Z. Tap any name to open its card &mdash; directions, details and booking live there, not in the story.</p>
+          <p class="lede">All 17 Ivanhoe Village places from the guide, A-Z. Tap any name to open its card: directions, details and booking live there, not in the story.</p>
         </div>
         <ul class="ix">
           <li><a href="/?venue=4-hens-creole-kitchen"><span class="ix-name">4 Hens Creole Kitchen</span><span class="ix-meta">Latin &amp; Caribbean · $$</span></a></li>
@@ -338,9 +386,10 @@
     <footer>
       <div class="foot-in">
         <a class="back-link" href="/">&larr; Back to the full guide</a>
-        <p class="brand-line">407 FYI &mdash; an independent Orlando guide. Details can change; confirm before you go.</p>
+        <p class="brand-line">407 FYI, an independent Orlando guide. Details can change; confirm before you go.</p>
         <p>Hand-verified Orlando places · Checked October 2026 · Local Picks are never sponsored · Corrections: <a href="mailto:mail@407.fyi">mail@407.fyi</a></p>
         <p>Some links on 407 FYI are affiliate links. They never affect which places we list, rank, or recommend.</p>
+        <p class="photo-credit">Hero photograph: <a href="https://commons.wikimedia.org/wiki/File:Orlando_FL_Lake_Ivanhoe_Res_HD_park01.jpg" target="_blank" rel="noopener">&ldquo;Lake Ivanhoe Park&rdquo;</a> by Ebyabe, <a href="https://creativecommons.org/licenses/by-sa/3.0" target="_blank" rel="noopener">CC BY-SA 3.0</a>, via Wikimedia Commons. Cropped, resized and colour-treated for this page; the treated version is shared under the same licence.</p>
       </div>
     </footer>
 

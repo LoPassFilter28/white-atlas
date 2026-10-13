@@ -195,6 +195,41 @@
       .next-district { font-weight: 700; text-decoration: none; }
       .next-district:hover { text-decoration: underline; }
 
+      /* ---------- Phase 4 · hero photograph (duotone; the type stays the hero) ---------- */
+      .hero-photo { position: absolute; inset: 0; overflow: hidden; }
+      .hero-photo img {
+        width: 100%; height: 100%; display: block; object-fit: cover; object-position: center 38%;
+        filter: grayscale(.5) sepia(.34) hue-rotate(64deg) saturate(.85) brightness(.6) contrast(1.07);
+      }
+      .hero-photo::after {
+        content: ""; position: absolute; inset: 0;
+        background:
+          linear-gradient(180deg, rgba(7, 19, 12, .58) 0%, rgba(7, 19, 12, .30) 36%, rgba(7, 19, 12, .55) 68%, rgba(7, 19, 12, .93) 100%),
+          radial-gradient(ellipse 90% 55% at 50% 108%, rgba(163, 129, 63, .25), transparent 60%);
+      }
+      .hero-in { z-index: 2; }
+      .scroll-cue { z-index: 2; }
+      .hero.has-photo h1, .hero.has-photo .sub, .hero.has-photo .count { text-shadow: 0 2px 30px rgba(4, 10, 6, .6); }
+
+      /* ---------- Phase 4 · flashback panel ---------- */
+      .flashback { max-width: 680px; margin: 0 auto; padding: 9vh var(--pad) 2vh; }
+      .fb-panel {
+        background: var(--surface); border: 1px solid var(--line); border-left: 3px solid var(--accent-ink);
+        border-radius: 18px; padding: clamp(26px, 4.5vw, 40px);
+      }
+      .fb-card h3 {
+        font-family: "Urbanist", sans-serif; font-weight: 800; color: var(--headline);
+        font-size: clamp(1.3rem, 3.2vw, 1.7rem); line-height: 1.22; margin: 0 0 14px;
+      }
+      .fb-card p { margin: 0 0 14px; font-size: 1rem; }
+      .fb-card p:last-child { margin-bottom: 0; }
+      .fb-card .history-reveal { font-weight: 700; color: var(--headline); }
+      .fb-card .history-note { color: var(--muted); }
+      .fb-card .history-source { font-size: .85rem; color: var(--muted); }
+      .fb-card + .fb-card { margin-top: 30px; padding-top: 28px; border-top: 1px solid var(--line); }
+      .fb-more { margin: 18px 2px 0; color: var(--muted); font-size: .92rem; }
+      .photo-credit { font-size: .8rem !important; }
+
       /* ---------- footer ---------- */
       footer { border-top: 1px solid var(--line); margin-top: 4vh; }
       .foot-in { max-width: 860px; margin: 0 auto; padding: 44px var(--pad) 58px; display: grid; gap: 14px; }
@@ -219,12 +254,13 @@
     </style>
   </head>
   <body>
-    <!-- 1 · TITLE SCREEN — type poster on a clean district field -->
+    <!-- 1 · TITLE SCREEN, type poster on a clean district field -->
     <header class="hero" style="background:radial-gradient(ellipse 90% 55% at 50% 108%, rgba(168,127,64,0.28), transparent 60%), linear-gradient(168deg, #2c1914, #201110 52%, #120909)">
+      
       <div class="hero-in">
         <a class="hero-brand" href="/">407 FYI · A DISTRICT STORY</a>
         <h1>COLLEGE PARK</h1>
-        <p class="sub">Main Street at walking pace — Edgewater Drive and a string of lakes.</p>
+        <p class="sub">Main Street at walking pace: Edgewater Drive and a string of lakes.</p>
         <p class="count">12 hand-verified places · One neighbourhood</p>
       </div>
       <div class="scroll-cue" aria-hidden="true">Scroll</div>
@@ -274,13 +310,13 @@
           <blockquote><span class="mark">&ldquo;</span>College Park never needed a theme.<span class="mark">&rdquo;</span></blockquote>
         </div>
       </section>
-      <!-- SPLIT — the short list -->
+      <!-- SPLIT, the short list -->
       <section class="split" id="short-list">
         <div class="minimap reveal"><svg class="minimap-art" viewBox="0 0 560 640" role="img" aria-label="Stylised point map of College Park venues: 1 Great Southern Box Co. Food Hall &amp; Bar, 2 Blue Coast Burrito, 3 Croissant Gourmet"><g><circle class="pt" cx="503" cy="346" r="2.6"/><circle class="pt" cx="288" cy="49" r="2.6"/><circle class="pt" cx="503" cy="495" r="2.6"/><circle class="pt" cx="204" cy="490" r="2.6"/><circle class="pt" cx="503" cy="198" r="2.6"/><circle class="pt" cx="430" cy="97" r="2.6"/><circle class="pt" cx="497" cy="313" r="2.6"/><circle class="pt" cx="517" cy="447" r="2.6"/><circle class="pt" cx="511" cy="591" r="2.6"/></g><g class="marker"><circle cx="43" cy="517" r="13"/><text x="43" y="521">1</text></g><g class="marker"><circle cx="517" cy="445" r="13"/><text x="517" y="449">3</text></g><g class="marker"><circle cx="170" cy="458" r="13"/><text x="170" y="462">2</text></g></svg></div>
         <div class="reveal">
           <p class="kicker">The Short List</p>
           <h2>Three to Start</h2>
-          <p class="lede">Three names to open with &mdash; every other College Park place is in the full list below.</p>
+          <p class="lede">Three names to open with: every other College Park place is in the full list below.</p>
           <a class="ave-row" href="/?venue=great-southern-box-co"><span class="n">1</span><span class="who"><b>Great Southern Box Co. Food Hall &amp; Bar</b><span>American · $$</span></span><span class="arr">&rarr;</span></a>
           <a class="ave-row" href="/?venue=blue-coast-burrito"><span class="n">2</span><span class="who"><b>Blue Coast Burrito</b><span>Burrito shop · $</span></span><span class="arr">&rarr;</span></a>
           <a class="ave-row" href="/?venue=croissant-gourmet"><span class="n">3</span><span class="who"><b>Croissant Gourmet</b><span>Bakery · $</span></span><span class="arr">&rarr;</span></a>
@@ -314,12 +350,24 @@
           </article>
         </div>
       </section>
-      <!-- CLOSING — the whole neighbourhood -->
+      <!-- FLASHBACK, the district's history, from the anthology -->
+      <section class="flashback reveal" id="flashback">
+        <p class="kicker">Flashback · Orlando History</p>
+        <div class="fb-panel">
+          <article class="fb-card">
+            <h3>Why are College Park streets named after colleges?</h3>
+            <p class="history-story">It was a 1920s sales gimmick. Developers named the streets Princeton, Harvard, Yale, Dartmouth, and Stetson specifically to sell building lots during the Florida Land Boom, an Ivy League address for your new bungalow.</p><p class="history-story">The neighborhood was platted starting in 1921 on the shore of Lake Ivanhoe, and the collegiate branding worked so well the post office made "College Park" official decades later.</p><p class="history-note">Local note: every street sign here is a hundred-year-old real-estate ad.</p>
+            
+          </article>
+        </div>
+        <p class="fb-more">Every district has a past, all 49 stories live in <a href="/archive.html?flashbacks=1">the Flashbacks anthology &rarr;</a></p>
+      </section>
+      <!-- CLOSING, the whole neighbourhood -->
       <section class="closing" id="all-places">
         <div class="reveal">
           <p class="kicker">The Full List</p>
           <h2>That&rsquo;s the story. Here&rsquo;s the whole neighborhood.</h2>
-          <p class="lede">All 12 College Park places from the guide, A&ndash;Z. Tap any name to open its card &mdash; directions, details and booking live there, not in the story.</p>
+          <p class="lede">All 12 College Park places from the guide, A-Z. Tap any name to open its card: directions, details and booking live there, not in the story.</p>
         </div>
         <ul class="ix">
           <li><a href="/?venue=blue-coast-burrito"><span class="ix-name">Blue Coast Burrito</span><span class="ix-meta">Mexican · $</span></a></li>
@@ -344,7 +392,7 @@
     <footer>
       <div class="foot-in">
         <a class="back-link" href="/">&larr; Back to the full guide</a>
-        <p class="brand-line">407 FYI &mdash; an independent Orlando guide. Details can change; confirm before you go.</p>
+        <p class="brand-line">407 FYI, an independent Orlando guide. Details can change; confirm before you go.</p>
         <p>Hand-verified Orlando places · Checked October 2026 · Local Picks are never sponsored · Corrections: <a href="mailto:mail@407.fyi">mail@407.fyi</a></p>
         <p>Some links on 407 FYI are affiliate links. They never affect which places we list, rank, or recommend.</p>
       </div>

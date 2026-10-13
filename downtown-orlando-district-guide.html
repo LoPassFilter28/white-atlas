@@ -195,6 +195,41 @@
       .next-district { font-weight: 700; text-decoration: none; }
       .next-district:hover { text-decoration: underline; }
 
+      /* ---------- Phase 4 · hero photograph (duotone; the type stays the hero) ---------- */
+      .hero-photo { position: absolute; inset: 0; overflow: hidden; }
+      .hero-photo img {
+        width: 100%; height: 100%; display: block; object-fit: cover; object-position: center 38%;
+        filter: grayscale(.5) sepia(.34) hue-rotate(64deg) saturate(.85) brightness(.6) contrast(1.07);
+      }
+      .hero-photo::after {
+        content: ""; position: absolute; inset: 0;
+        background:
+          linear-gradient(180deg, rgba(7, 19, 12, .58) 0%, rgba(7, 19, 12, .30) 36%, rgba(7, 19, 12, .55) 68%, rgba(7, 19, 12, .93) 100%),
+          radial-gradient(ellipse 90% 55% at 50% 108%, rgba(163, 129, 63, .25), transparent 60%);
+      }
+      .hero-in { z-index: 2; }
+      .scroll-cue { z-index: 2; }
+      .hero.has-photo h1, .hero.has-photo .sub, .hero.has-photo .count { text-shadow: 0 2px 30px rgba(4, 10, 6, .6); }
+
+      /* ---------- Phase 4 · flashback panel ---------- */
+      .flashback { max-width: 680px; margin: 0 auto; padding: 9vh var(--pad) 2vh; }
+      .fb-panel {
+        background: var(--surface); border: 1px solid var(--line); border-left: 3px solid var(--accent-ink);
+        border-radius: 18px; padding: clamp(26px, 4.5vw, 40px);
+      }
+      .fb-card h3 {
+        font-family: "Urbanist", sans-serif; font-weight: 800; color: var(--headline);
+        font-size: clamp(1.3rem, 3.2vw, 1.7rem); line-height: 1.22; margin: 0 0 14px;
+      }
+      .fb-card p { margin: 0 0 14px; font-size: 1rem; }
+      .fb-card p:last-child { margin-bottom: 0; }
+      .fb-card .history-reveal { font-weight: 700; color: var(--headline); }
+      .fb-card .history-note { color: var(--muted); }
+      .fb-card .history-source { font-size: .85rem; color: var(--muted); }
+      .fb-card + .fb-card { margin-top: 30px; padding-top: 28px; border-top: 1px solid var(--line); }
+      .fb-more { margin: 18px 2px 0; color: var(--muted); font-size: .92rem; }
+      .photo-credit { font-size: .8rem !important; }
+
       /* ---------- footer ---------- */
       footer { border-top: 1px solid var(--line); margin-top: 4vh; }
       .foot-in { max-width: 860px; margin: 0 auto; padding: 44px var(--pad) 58px; display: grid; gap: 14px; }
@@ -219,12 +254,13 @@
     </style>
   </head>
   <body>
-    <!-- 1 · TITLE SCREEN — type poster on a clean district field -->
-    <header class="hero" style="background:radial-gradient(ellipse 90% 55% at 50% 108%, rgba(163,129,63,0.28), transparent 60%), linear-gradient(168deg, #152016, #0d1711 52%, #070d09)">
+    <!-- 1 · TITLE SCREEN, type poster on a clean district field -->
+    <header class="hero has-photo" style="background:radial-gradient(ellipse 90% 55% at 50% 108%, rgba(163,129,63,0.28), transparent 60%), linear-gradient(168deg, #152016, #0d1711 52%, #070d09)">
+      <div class="hero-photo"><img src="assets/hero-downtown.jpg" alt="The Lake Eola fountain and the downtown Orlando skyline seen across the lake" style="object-position:center 38%;" fetchpriority="high" decoding="async" /></div>
       <div class="hero-in">
         <a class="hero-brand" href="/">407 FYI · A DISTRICT STORY</a>
         <h1>DOWNTOWN ORLANDO</h1>
-        <p class="sub">Skyline with a heartbeat — towers over a swan-filled lake.</p>
+        <p class="sub">Skyline with a heartbeat, towers over a swan-filled lake.</p>
         <p class="count">51 hand-verified places · One neighbourhood</p>
       </div>
       <div class="scroll-cue" aria-hidden="true">Scroll</div>
@@ -274,13 +310,13 @@
           <blockquote><span class="mark">&ldquo;</span>Downtown is where Orlando clocks in, and somewhere along the way it learned to stay out late.<span class="mark">&rdquo;</span></blockquote>
         </div>
       </section>
-      <!-- SPLIT — the short list -->
+      <!-- SPLIT, the short list -->
       <section class="split" id="short-list">
         <div class="minimap reveal"><svg class="minimap-art" viewBox="0 0 560 640" role="img" aria-label="Stylised point map of Downtown Orlando venues: 1 The Robinson Cocktail Room, 2 Fixtion Restaurant &amp; Bar, 3 Wall Street Plaza"><g><circle class="pt" cx="432" cy="509" r="2.6"/><circle class="pt" cx="404" cy="608" r="2.6"/><circle class="pt" cx="512" cy="394" r="2.6"/><circle class="pt" cx="347" cy="443" r="2.6"/><circle class="pt" cx="361" cy="351" r="2.6"/><circle class="pt" cx="376" cy="542" r="2.6"/><circle class="pt" cx="205" cy="575" r="2.6"/><circle class="pt" cx="319" cy="542" r="2.6"/><circle class="pt" cx="517" cy="378" r="2.6"/><circle class="pt" cx="335" cy="8" r="2.6"/><circle class="pt" cx="376" cy="49" r="2.6"/><circle class="pt" cx="208" cy="330" r="2.6"/><circle class="pt" cx="347" cy="476" r="2.6"/><circle class="pt" cx="319" cy="213" r="2.6"/><circle class="pt" cx="347" cy="476" r="2.6"/><circle class="pt" cx="347" cy="246" r="2.6"/><circle class="pt" cx="552" cy="428" r="2.6"/><circle class="pt" cx="340" cy="489" r="2.6"/><circle class="pt" cx="350" cy="504" r="2.6"/><circle class="pt" cx="336" cy="422" r="2.6"/><circle class="pt" cx="301" cy="521" r="2.6"/><circle class="pt" cx="357" cy="313" r="2.6"/><circle class="pt" cx="279" cy="465" r="2.6"/><circle class="pt" cx="8" cy="519" r="2.6"/><circle class="pt" cx="394" cy="441" r="2.6"/><circle class="pt" cx="43" cy="509" r="2.6"/><circle class="pt" cx="353" cy="432" r="2.6"/><circle class="pt" cx="8" cy="557" r="2.6"/><circle class="pt" cx="430" cy="632" r="2.6"/><circle class="pt" cx="521" cy="8" r="2.6"/><circle class="pt" cx="395" cy="415" r="2.6"/><circle class="pt" cx="382" cy="495" r="2.6"/><circle class="pt" cx="386" cy="502" r="2.6"/><circle class="pt" cx="340" cy="441" r="2.6"/><circle class="pt" cx="356" cy="477" r="2.6"/><circle class="pt" cx="342" cy="507" r="2.6"/><circle class="pt" cx="349" cy="442" r="2.6"/><circle class="pt" cx="341" cy="415" r="2.6"/><circle class="pt" cx="381" cy="591" r="2.6"/><circle class="pt" cx="465" cy="482" r="2.6"/><circle class="pt" cx="369" cy="513" r="2.6"/><circle class="pt" cx="340" cy="489" r="2.6"/><circle class="pt" cx="342" cy="509" r="2.6"/><circle class="pt" cx="340" cy="542" r="2.6"/><circle class="pt" cx="336" cy="525" r="2.6"/><circle class="pt" cx="126" cy="581" r="2.6"/><circle class="pt" cx="336" cy="525" r="2.6"/><circle class="pt" cx="205" cy="575" r="2.6"/></g><g class="marker"><circle cx="353" cy="464" r="13"/><text x="353" y="468">2</text></g><g class="marker"><circle cx="360" cy="457" r="13"/><text x="360" y="461">3</text></g><g class="marker"><circle cx="380" cy="495" r="13"/><text x="380" y="499">1</text></g></svg></div>
         <div class="reveal">
           <p class="kicker">The Short List</p>
           <h2>Three to Start</h2>
-          <p class="lede">Three names to open with &mdash; every other Downtown Orlando place is in the full list below.</p>
+          <p class="lede">Three names to open with: every other Downtown Orlando place is in the full list below.</p>
           <a class="ave-row" href="/?venue=robinson-cocktail-room"><span class="n">1</span><span class="who"><b>The Robinson Cocktail Room</b><span>Cocktails · $$</span></span><span class="arr">&rarr;</span></a>
           <a class="ave-row" href="/?venue=fixtion"><span class="n">2</span><span class="who"><b>Fixtion Restaurant &amp; Bar</b><span>Bar · $$</span></span><span class="arr">&rarr;</span></a>
           <a class="ave-row" href="/?venue=wall-street-plaza"><span class="n">3</span><span class="who"><b>Wall Street Plaza</b><span>Restaurant · $$</span></span><span class="arr">&rarr;</span></a>
@@ -308,18 +344,35 @@
           <article class="glide-card reveal">
             <p class="kicker">03 · The Finale</p>
             <h2>Loop, Matinee, Nightcap</h2>
-            <p>Locals run it in acts: the Eola loop before the heat, a Dr. Phillips matinee in the afternoon, Church Street as lights come on. Kres for dinner inside the 1930s Kress building, then Hanson's for the nightcap—get the password first.</p>
+            <p>Locals run it in acts: the Eola loop before the heat, a Dr. Phillips matinee in the afternoon, Church Street as lights come on. Kres for dinner inside the 1930s Kress building, then Hanson's for the nightcap, get the password first.</p>
             <p class="venue-meta">Kres Chophouse · Steakhouse · $$$$</p>
             <a class="venue-btn" href="/?venue=kres">See the venue &rarr;</a>
           </article>
         </div>
       </section>
-      <!-- CLOSING — the whole neighbourhood -->
+      <!-- FLASHBACK, the district's history, from the anthology -->
+      <section class="flashback reveal" id="flashback">
+        <p class="kicker">Flashback · Orlando History</p>
+        <div class="fb-panel">
+          <article class="fb-card">
+            <h3>Does Lake Eola have two fountains?</h3>
+            <p class="history-reveal">Yes: and almost nobody notices the second one.</p><p class="history-story">The famous fountain gets the photos, but the smaller Sperry Fountain has flowed in the southwest corner for over a century. It was funded by E.F. Sperry, Orlando's mayor in 1914, who donated the shoreline land to finish the park, and championed women's voting rights when that was still controversial.</p><p class="history-note">Local note: walk the southwest corner of the lake and find the fountain everyone misses.</p>
+            
+          </article>
+          <article class="fb-card">
+            <h3>Why does downtown Orlando look frozen in the 1920s?</h3>
+            <p class="history-story">Because it nearly was. Florida's 1921-25 land boom inflated property values fivefold, and Orange County issued a $7 million bond in 1926 for 86 road projects. Then the bust came in 1926 (hurricanes, then the Depression) and building permits cratered from $8.3 million in 1926 to under $2 million by the end of 1927.</p><p class="history-story">The towers that rose in the boom, the Angebilt, the San Juan, stood as the skyline for decades. The 1927 courthouse that now houses the Orange County Regional History Center is a surviving artifact of the boom's civic ambition.</p><p class="history-note">Local note: the skyline you're looking at is a boom-time time capsule.</p>
+            
+          </article>
+        </div>
+        <p class="fb-more">Every district has a past, all 49 stories live in <a href="/archive.html?flashbacks=1">the Flashbacks anthology &rarr;</a></p>
+      </section>
+      <!-- CLOSING, the whole neighbourhood -->
       <section class="closing" id="all-places">
         <div class="reveal">
           <p class="kicker">The Full List</p>
           <h2>That&rsquo;s the story. Here&rsquo;s the whole neighborhood.</h2>
-          <p class="lede">All 51 Downtown Orlando places from the guide, A&ndash;Z. Tap any name to open its card &mdash; directions, details and booking live there, not in the story.</p>
+          <p class="lede">All 51 Downtown Orlando places from the guide, A-Z. Tap any name to open its card: directions, details and booking live there, not in the story.</p>
         </div>
         <ul class="ix">
           <li><a href="/?venue=aero-rooftop-bar-lounge"><span class="ix-name">Aero Rooftop Bar &amp; Lounge</span><span class="ix-meta">Nightlife &amp; music · $$</span></a></li>
@@ -349,7 +402,7 @@
           <li><a href="/?venue=kabooki-downtown"><span class="ix-name">Kabooki Sushi Downtown</span><span class="ix-meta">Japanese &amp; sushi · $$$$</span></a></li>
           <li><a href="/?venue=kia-center"><span class="ix-name">Kia Center (formerly Amway Center)</span><span class="ix-meta">Attractions · $$$$</span></a></li>
           <li><a href="/?venue=kres"><span class="ix-name">Kres Chophouse</span><span class="ix-meta">Fine dining &amp; steak · $$$$</span></a></li>
-          <li><a href="/?venue=lake-eola"><span class="ix-name">Lake Eola Park &amp; Linton E. Allen Memorial Fountain</span><span class="ix-meta">Bars &amp; lounges · $</span></a></li>
+          <li><a href="/?venue=lake-eola"><span class="ix-name">Lake Eola Park &amp; Linton E. Allen Memorial Fountain</span><span class="ix-meta">Parks &amp; outdoors · $</span></a></li>
           <li><a href="/?venue=mochiry"><span class="ix-name">Mochiry</span><span class="ix-meta">Sweets · $</span></a></li>
           <li><a href="/?venue=nic-luc"><span class="ix-name">Nic &amp; Luc</span><span class="ix-meta">Breakfast &amp; brunch · $$</span></a></li>
           <li><a href="/?venue=noir-bar"><span class="ix-name">Noir Bar</span><span class="ix-meta">Bars &amp; lounges · $$$</span></a></li>
@@ -383,9 +436,10 @@
     <footer>
       <div class="foot-in">
         <a class="back-link" href="/">&larr; Back to the full guide</a>
-        <p class="brand-line">407 FYI &mdash; an independent Orlando guide. Details can change; confirm before you go.</p>
+        <p class="brand-line">407 FYI, an independent Orlando guide. Details can change; confirm before you go.</p>
         <p>Hand-verified Orlando places · Checked October 2026 · Local Picks are never sponsored · Corrections: <a href="mailto:mail@407.fyi">mail@407.fyi</a></p>
         <p>Some links on 407 FYI are affiliate links. They never affect which places we list, rank, or recommend.</p>
+        <p class="photo-credit">Hero photograph: <a href="https://commons.wikimedia.org/wiki/File:Lake_Eola_and_Orlando_Skyline_seen_in_2024.jpg" target="_blank" rel="noopener">&ldquo;Lake Eola and Orlando Skyline&rdquo;</a> by JER3L1337, <a href="https://creativecommons.org/licenses/by/4.0" target="_blank" rel="noopener">CC BY 4.0</a>, via Wikimedia Commons. Cropped, resized and colour-treated for this page.</p>
       </div>
     </footer>
 
