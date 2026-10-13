@@ -398,8 +398,40 @@
     @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
   .brand-407{font-family:"Urbanist","Manrope",ui-sans-serif,sans-serif;font-weight:700;font-size:clamp(2.5rem,8vw,5rem);letter-spacing:.06em;line-height:1;white-space:nowrap;color:var(--ink)}</style>
   <script>if(/^(?:driver|chris)$/i.test(new URLSearchParams(location.search).get('d')||''))document.documentElement.classList.add('scanner-mode');</script>
-</head>
-<body>
+<link rel="icon" href="/favicon.ico" sizes="any"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest"><meta name="theme-color" content="#0a1811"><script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebSite", "name": "407 FYI", "url": "https://407.fyi/", "description": "Orlando restaurants, landmarks and new openings \u2014 606 hand-verified places across 12 districts."}, {"@type": "ItemList", "name": "407 FYI district guides", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Winter Park District Guide", "url": "https://407.fyi/winter-park-district-guide.html"}, {"@type": "ListItem", "position": 2, "name": "Downtown Orlando District Guide", "url": "https://407.fyi/downtown-orlando-district-guide.html"}, {"@type": "ListItem", "position": 3, "name": "Mills 50 District Guide", "url": "https://407.fyi/mills-50-district-guide.html"}, {"@type": "ListItem", "position": 4, "name": "Milk District District Guide", "url": "https://407.fyi/milk-district-guide.html"}, {"@type": "ListItem", "position": 5, "name": "Thornton Park District Guide", "url": "https://407.fyi/thornton-park-district-guide.html"}, {"@type": "ListItem", "position": 6, "name": "Ivanhoe Village District Guide", "url": "https://407.fyi/ivanhoe-village-district-guide.html"}, {"@type": "ListItem", "position": 7, "name": "Disney Springs District Guide", "url": "https://407.fyi/disney-springs-district-guide.html"}, {"@type": "ListItem", "position": 8, "name": "International Drive District Guide", "url": "https://407.fyi/international-drive-district-guide.html"}, {"@type": "ListItem", "position": 9, "name": "Universal District Guide", "url": "https://407.fyi/universal-district-guide.html"}, {"@type": "ListItem", "position": 10, "name": "Lake Nona District Guide", "url": "https://407.fyi/lake-nona-district-guide.html"}, {"@type": "ListItem", "position": 11, "name": "College Park District Guide", "url": "https://407.fyi/college-park-district-guide.html"}, {"@type": "ListItem", "position": 12, "name": "Audubon Park District Guide", "url": "https://407.fyi/audubon-park-district-guide.html"}]}]}</script><style id="polish-css">
+.skip-link{position:absolute;left:-999px;top:0;background:var(--bronze,#c9a55c);color:#141b12;padding:10px 16px;z-index:200;font-weight:700;border-radius:0 0 10px 0}
+.skip-link:focus{left:0}
+.sec-count{display:inline-block;margin-left:10px;padding:2px 10px;border:1px solid var(--line);border-radius:999px;font-size:.74rem;font-weight:700;color:var(--muted);vertical-align:middle;letter-spacing:.04em}
+.layer-head h2{letter-spacing:.005em}
+.cred-strip{max-width:1200px;margin:34px auto 0;padding:14px 22px;border:1px solid var(--line);border-radius:12px;color:var(--muted);font-size:.88rem;line-height:1.55}
+.cred-strip strong{color:var(--text)} .cred-strip a{color:var(--bronze,#c9a55c)}
+.upd-tag{display:inline-block;margin-left:8px;padding:1px 8px;border-radius:999px;background:rgba(201,165,92,.16);color:var(--bronze,#c9a55c);font-size:.66rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;vertical-align:middle}
+.pop-chips{flex-basis:100%;display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-top:4px}
+.pop-chips span{font-size:.8rem;color:var(--muted);letter-spacing:.06em;text-transform:uppercase}
+.pop-chips button{border:1px solid var(--line);background:var(--surface);color:var(--text);border-radius:999px;padding:7px 14px;font-size:.86rem;cursor:pointer;min-height:36px}
+.pop-chips button:hover{border-color:var(--bronze,#c9a55c)}
+.primary-actions{flex-wrap:wrap}
+.district-intro{max-width:1200px;margin:10px auto 0;padding:0 22px;color:var(--muted);font-size:.95rem;line-height:1.6}
+#didYouMean{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin-top:12px}
+#didYouMean button{border:1px solid var(--bronze,#c9a55c);background:transparent;color:var(--text);border-radius:999px;padding:7px 14px;cursor:pointer}
+.empty .reset-btn{margin-top:14px;border:1px solid var(--line);background:var(--surface);color:var(--text);border-radius:999px;padding:9px 18px;cursor:pointer;font-weight:700}
+.footer{display:grid;grid-template-columns:1fr 1fr 2fr;gap:26px;align-items:start}
+.foot-col h3{font-size:.76rem;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);margin:0 0 10px}
+.foot-col ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.foot-col a{text-decoration:none}
+@media (max-width:1023.98px){
+ .district-rail,.picks-rail{grid-auto-flow:row;grid-template-columns:repeat(2,1fr);overflow:visible;scroll-snap-type:none;padding-bottom:4px}
+ .district-card,.pick-card{min-height:0}
+}
+@media (max-width:640px){.footer{grid-template-columns:1fr}}
+:focus-visible{outline:2px solid var(--bronze,#c9a55c);outline-offset:2px}
+@media print{
+ .district-tabs,.primary-actions,.pop-chips,.export-trigger,.copy-list,.fyi-exportbar,.selection-toolbar{display:none!important}
+ .venue .description{display:block!important}
+ body{background:#fff;color:#000}
+}
+</style></head>
+<body><a class="skip-link" href="#venueList">Skip to places</a>
   <a class="skip-link" href="#venueList">Skip to venue list</a>
   <main class="app">
     <header class="mast">
@@ -418,7 +450,7 @@
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-4-4"></path></svg>
           <input id="heroSearch" type="search" placeholder="Search places…" autocomplete="off" aria-label="Search all Orlando places">
           <button class="hero-search-go" id="heroSearchGo" type="button" aria-label="Go to search results">→</button>
-        </div>
+        </div><div class="pop-chips" id="popChips"><span>Popular</span><button type="button" data-q="coffee">Coffee</button><button type="button" data-q="live music">Live music</button><button type="button" data-q="date night">Date night</button><button type="button" data-q="brunch">Brunch</button><button type="button" data-q="family">Family</button></div>
         <button class="location-btn" id="locationBtn" type="button" aria-pressed="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="3"></circle><path d="M12 2v3M12 19v3M2 12h3M19 12h3"></path><circle cx="12" cy="12" r="8"></circle></svg><span class="nearest-copy"><span class="nearest-title">Nearest to me</span><span class="nearest-detail">Tap once to see distance on every place</span></span><span class="nearest-action">Find</span></button>
       </div>
       <span class="location-status" id="locationStatus" role="status">Location is requested only when you tap. Approximate distance stays in this session.</span>
@@ -448,7 +480,7 @@
       <button class="scanner-directory" id="scannerDirectory" type="button">Browse the full directory</button>
     </section>
 
-    <section class="layer districts-layer" aria-labelledby="districtsTitle">
+    <section class="layer districts-layer" id="districts" aria-labelledby="districtsTitle">
       <div class="layer-head">
         <div><h2 id="districtsTitle">Districts</h2><p>Start with a neighborhood. Each card narrows the guide below to that district.</p></div>
       </div>
@@ -615,14 +647,14 @@
       <p class="data-out-note">Copy the current list, or export a clean shortlist.</p>
       <div class="data-out-actions"><button class="copy-list" id="copyCurrentView" type="button" aria-label="Copy">Copy</button><button class="export-trigger" id="openExport" type="button">Export</button></div>
     </div>
-    <nav class="district-tabs" aria-label="Browse by district"><div class="district-tabs-row" id="districtTabs"></div></nav><section class="venue-list" id="venueList"></section>
-    <div class="empty" id="empty" hidden><h2>No exact match.</h2><p>Try a neighborhood, cuisine, landmark type, or broader filter.</p></div>
+    <nav class="district-tabs" aria-label="Browse by district"><div class="district-tabs-row" id="districtTabs"></div></nav><p id="districtIntro" class="district-intro" hidden></p><section class="venue-list" id="venueList"></section>
+    <div class="empty" id="empty" hidden><h2>No exact match.</h2><p>Try a neighborhood, cuisine, landmark type, or broader filter.</p><div id="didYouMean"></div><button id="resetFilters" class="reset-btn" type="button">Reset search &amp; filters</button></div>
     <nav class="bottom-tabs" aria-label="Primary views">
       <button class="bottom-tab" id="listView" type="button" aria-pressed="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M8 6h13M8 12h13M8 18h13"></path><circle cx="3" cy="6" r="1"></circle><circle cx="3" cy="12" r="1"></circle><circle cx="3" cy="18" r="1"></circle></svg><span>List</span></button>
       <button class="bottom-tab" id="mapView" type="button" aria-pressed="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m3 6 5-3 8 3 5-3v15l-5 3-8-3-5 3zM8 3v15M16 6v15"></path></svg><span>Map</span></button>
       <button class="bottom-tab" id="exportTab" type="button" aria-pressed="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"></path><path d="m7 10 5 5 5-5"></path><path d="M5 21h14"></path></svg><span>Export</span></button>
     </nav>
-    <footer class="footer"><span><strong>407 FYI</strong> · Details can change. Confirm before you go.</span><a href="mailto:mail@407.fyi?subject=407%20FYI%20%E2%80%94%20venue%20correction&amp;body=Venue%20name%3A%0AWhat%20changed%3A%0ASource%20or%20details%3A">Flag a closure / suggest an edit</a><span class="aff-disclosure">Affiliate disclosure: some links on this page, including ticket buttons, are sponsored affiliate links. If you book through them, we may earn a commission at no extra cost to you, which helps keep this guide free.</span><nav class="footer-legal"><a href="mailto:mail@407.fyi?subject=407%20FYI%20contact">Contact</a><details class="footer-details"><summary>Privacy Policy</summary><div class="footer-details-body"><p><strong>407 FYI</strong> is a free guide. We don't run accounts and we don't collect your name, email, or phone number.</p><p>What does leave your device: anonymous analytics (page views and taps, via PostHog) and crash reports (via Sentry), so we can keep the guide working. Display preferences like dark mode are stored only in your own browser.</p><p>If you tap "Near me," your location is used on your device to sort venues by distance. It is not stored by us or sold to anyone.</p><p>Ticket, hotel, and dining buttons open partner sites (Viator, GetYourGuide, Hotels.com, inKind). Those sites have their own privacy policies once you leave 407.fyi.</p><p>Questions: <a href="mailto:mail@407.fyi?subject=407%20FYI%20privacy">mail@407.fyi</a>.</p><p><em>Last updated October 2026.</em></p></div></details></nav></footer>
+    <div class="cred-strip"><strong><span id="credCount"></span> hand-verified places</strong> · Checked October 2026 · Local Picks are never sponsored · Corrections: <a href="mailto:mail@407.fyi">mail@407.fyi</a></div><footer class="footer"><div class="foot-col"><h3>Districts</h3><ul><li><a href="/winter-park-district-guide.html">Winter Park</a></li><li><a href="/downtown-orlando-district-guide.html">Downtown Orlando</a></li><li><a href="/mills-50-district-guide.html">Mills 50</a></li><li><a href="/milk-district-guide.html">Milk District</a></li><li><a href="/international-drive-district-guide.html">International Drive</a></li><li><a href="/#districts">All 12 districts</a></li></ul></div><div class="foot-col"><h3>About</h3><ul><li><a href="/whats-new.html">What's new</a></li><li><a href="/what-visitors-google-orlando.html">What visitors Google</a></li><li><a href="mailto:mail@407.fyi?subject=407%20FYI%20press">Press &amp; media kit</a></li></ul></div><div class="foot-col foot-main"><span><strong>407 FYI</strong> · Details can change. Confirm before you go.</span><a href="mailto:mail@407.fyi?subject=407%20FYI%20%E2%80%94%20venue%20correction&amp;body=Venue%20name%3A%0AWhat%20changed%3A%0ASource%20or%20details%3A">Flag a closure / suggest an edit</a><span class="aff-disclosure">Affiliate disclosure: some links on this page, including ticket buttons, are sponsored affiliate links. If you book through them, we may earn a commission at no extra cost to you, which helps keep this guide free.</span><nav class="footer-legal"><a href="mailto:mail@407.fyi?subject=407%20FYI%20contact">Contact</a><details class="footer-details"><summary>Privacy Policy</summary><div class="footer-details-body"><p><strong>407 FYI</strong> is a free guide. We don't run accounts and we don't collect your name, email, or phone number.</p><p>What does leave your device: anonymous analytics (page views and taps, via PostHog) and crash reports (via Sentry), so we can keep the guide working. Display preferences like dark mode are stored only in your own browser.</p><p>If you tap "Near me," your location is used on your device to sort venues by distance. It is not stored by us or sold to anyone.</p><p>Ticket, hotel, and dining buttons open partner sites (Viator, GetYourGuide, Hotels.com, inKind). Those sites have their own privacy policies once you leave 407.fyi.</p><p>Questions: <a href="mailto:mail@407.fyi?subject=407%20FYI%20privacy">mail@407.fyi</a>.</p><p><em>Last updated October 2026.</em></p></div></details></nav></div></footer>
   </main>
   <div class="export-layer" id="exportLayer" hidden>
     <button class="export-backdrop" id="exportBackdrop" type="button" aria-label="Close Export Center"></button>
@@ -1308,5 +1340,60 @@ function render(){
   setupFilters();render();
   </script>
 
+<script id="polish-js">
+(function(){
+"use strict";
+var $=function(s,r){return (r||document).querySelector(s)};
+var $$=function(s,r){return Array.prototype.slice.call((r||document).querySelectorAll(s))};
+var INTROS={
+"winter-park":"Brick streets, oak canopy, and the Chain of Lakes. Park Avenue shopping and dining, museums, and the scenic boat tour — Orlando's polished original suburb.",
+"disney-springs":"Disney's open-air dining and shopping district — no park ticket needed. Big-name restaurants, live music, and an evening stroll.",
+"milk-district":"East Orlando's food-and-drink strip along Robinson and Bumby — bars, bakeries, and local staples with dairy-farm roots.",
+"thornton-park":"Brick streets just east of Lake Eola — wine bars, patios, and some of downtown's most-loved dinner spots in a few walkable blocks.",
+"mills-50":"Orlando's eclectic corridor along Mills and Colonial — Vietnamese restaurants, vintage shops, bars, and murals. The city's most international half-mile.",
+"ivanhoe-village":"Antique rows and lake views along Orange Avenue, north of downtown — vintage stores, the Loch Haven museums, and easygoing bars.",
+"downtown":"The civic core around Lake Eola — theaters, arenas, skyline dining, and game-night energy. Start here for a first night in the city.",
+"i-drive":"The visitor corridor — attractions, dinner shows, and ICON Park along International Drive. Tourist Orlando at full volume.",
+"lake-nona":"Orlando's planned southeast — Medical City, new restaurants, and wide modern streets near the airport.",
+"universal":"Universal Orlando and CityWalk — park days that end with dinner, drinks, and live music on the walkway.",
+"college-park":"Edgewater Drive's neighborhood strip, northwest of downtown — long-running local restaurants, cafés, and pubs.",
+"audubon-park":"The Garden District, east of downtown — East End Market, Leu Gardens, and a tight cluster of beloved local spots.",
+"more":"Everything beyond the twelve districts — suburbs, small towns, and day trips, from Sanford to Winter Garden."};
+var UPDATED={};["kappo-tsan","swine-sons","sushi-saint","toojays","the-current-seafood-countersanford","gentrys-bbq","qreate-coffee","paloma-coffee-co","polynesian-fire-luau-kissimmee","revolution-off-road-atv","orlando-science-center","expedition-odyssey-seaworld","nona-adventure-park","the-escape-game-orlando","jiangs-kitchen-mills50","la-palette-artisan-ice-pops"].forEach(function(id){UPDATED[id]=1});
+function lev(a,b){a=a.toLowerCase();b=b.toLowerCase();var m=a.length,n=b.length;if(!m)return n;if(!n)return m;var d=[];for(var i=0;i<=m;i++)d[i]=[i];for(var j=0;j<=n;j++)d[0][j]=j;for(i=1;i<=m;i++)for(j=1;j<=n;j++)d[i][j]=Math.min(d[i-1][j]+1,d[i][j-1]+1,d[i-1][j-1]+(a[i-1]===b[j-1]?0:1));return d[m][n]}
+function setQuery(q){["#heroSearch","#search"].forEach(function(id){var el=$(id);if(el&&el.value!==q){el.value=q;el.dispatchEvent(new Event("input",{bubbles:true}))}})}
+function tabs(){return $$("#districtTabs .district-tab")}
+function tabKey(b){return b.dataset.dtab||b.dataset.tab||b.dataset.districtTab||b.dataset.key||b.dataset.district||""}
+function activeKey(){var t=tabs().filter(function(b){return b.getAttribute("aria-pressed")==="true"||b.getAttribute("aria-selected")==="true"||b.classList.contains("active")})[0];return t?tabKey(t):"all"}
+function clickDistrict(key){var t=tabs().filter(function(b){return tabKey(b)===key})[0];if(t){t.click();return true}var c=$('.district-filter[data-district="'+key+'"]');if(c){c.click();return true}return false}
+function chipVal(b){return b.dataset.categoryChip||b.dataset.category||b.value||""}
+function activeChip(){var c=$$("[data-category-chip]").filter(function(b){return b.getAttribute("aria-pressed")==="true"})[0];return c?chipVal(c):""}
+function clickCategory(v){var c=$$("[data-category-chip]").filter(function(b){return chipVal(b)===v})[0];if(c){c.click();return true}return false}
+function stampUpdated(root){$$("article.venue[data-id]",root).forEach(function(a){if(UPDATED[a.dataset.id]&&!a.querySelector(".upd-tag")){var t=a.querySelector(".venue-title");if(t){var s=document.createElement("span");s.className="upd-tag";s.textContent="Updated Oct 2026";t.appendChild(s)}}})}
+function updateIntro(){var el=$("#districtIntro");if(!el)return;var k=activeKey();var txt=INTROS[k]||"";if(txt){el.textContent=txt;el.hidden=false}else{el.hidden=true}}
+var syncT=null;
+function syncURL(){clearTimeout(syncT);syncT=setTimeout(function(){var d=activeKey(),c=activeChip(),q=($("#search")||{}).value||($("#heroSearch")||{}).value||"";var p=new URLSearchParams();if(d&&d!=="all")p.set("district",d);if(c)p.set("cat",c);if(q)p.set("q",q);var qs=p.toString();try{history.replaceState(null,"",qs?("?"+qs):location.pathname)}catch(e){}try{localStorage.setItem("fyi-filters-v1",JSON.stringify({d:d,c:c,q:q}))}catch(e){}updateIntro()},350)}
+function suggestions(q){if(!q||typeof PLACES==="undefined")return[];var names=PLACES.map(function(p){return p.name});var ds=PLACES.map(function(p){return p.district});var all=names.concat(ds.filter(function(v,i){return ds.indexOf(v)===i}));var maxD=Math.max(2,Math.floor(q.length/3));var scored=all.map(function(n){return{n:n,d:lev(q,n)}}).filter(function(x){return x.d<=maxD||x.n.toLowerCase().indexOf(q.toLowerCase())===0}).sort(function(a,b){return a.d-b.d});var out=[];scored.forEach(function(x){if(out.indexOf(x.n)<0)out.push(x.n)});return out.slice(0,3)}
+function fillDidYouMean(){var box=$("#didYouMean");if(!box)return;box.innerHTML="";var q=($("#search")||{}).value||($("#heroSearch")||{}).value||"";var s=suggestions(q);if(!s.length)return;var lab=document.createElement("span");lab.textContent="Did you mean:";lab.style.cssText="align-self:center;color:var(--muted);font-size:.88rem";box.appendChild(lab);s.forEach(function(n){var b=document.createElement("button");b.type="button";b.textContent=n;b.addEventListener("click",function(){setQuery(n);var l=$("#venueList");if(l)l.scrollIntoView({behavior:"smooth",block:"start"})});box.appendChild(b)})}
+function init(){
+  var cc=$("#credCount");if(cc&&typeof PLACES!=="undefined")cc.textContent=PLACES.length;
+  var dt=$("#districtsTitle");if(dt&&typeof DISTRICTS!=="undefined"){var s=document.createElement("span");s.className="sec-count";s.textContent=DISTRICTS.length+" districts";dt.appendChild(s)}
+  var pt=$("#picksRailTitle");if(pt){var n=$$("#picksRail > *").length;if(n){var s2=document.createElement("span");s2.className="sec-count";s2.textContent=n+" picks";pt.appendChild(s2)}}
+  stampUpdated(document);
+  var list=$("#venueList");if(list)new MutationObserver(function(){stampUpdated(list)}).observe(list,{childList:true});
+  var params=new URLSearchParams(location.search);var mem=null;try{mem=JSON.parse(localStorage.getItem("fyi-filters-v1")||"null")}catch(e){}
+  var d=params.get("district")||(mem&&mem.d)||"",c=params.get("cat")||(mem&&mem.c)||"",q=params.get("q")||(mem&&mem.q)||"";
+  if(d&&d!=="all")clickDistrict(d);if(c)clickCategory(c);if(q)setQuery(q);
+  updateIntro();
+  document.addEventListener("click",function(e){if(e.target.closest("#districtTabs,[data-category-chip],[data-district]"))syncURL()});
+  document.addEventListener("input",function(e){if(e.target.id==="search"||e.target.id==="heroSearch")syncURL()});
+  var pc=$("#popChips");if(pc)pc.addEventListener("click",function(e){var b=e.target.closest("button[data-q]");if(!b)return;setQuery(b.dataset.q);var l=$("#venueList");if(l)l.scrollIntoView({behavior:"smooth",block:"start"})});
+  var rf=$("#resetFilters");if(rf)rf.addEventListener("click",function(){setQuery("");if(activeKey()!=="all")clickDistrict("all");var ac=activeChip();if(ac)clickCategory(ac);syncURL()});
+  var em=$("#empty");if(em)new MutationObserver(function(){if(!em.hidden)fillDidYouMean()}).observe(em,{attributes:true,attributeFilter:["hidden"]});
+  var row=$("#districtTabs");if(row)row.addEventListener("keydown",function(e){if(["ArrowRight","ArrowLeft","Home","End"].indexOf(e.key)<0)return;var t=tabs();if(!t.length)return;var i=t.indexOf(document.activeElement);if(i<0)return;e.preventDefault();var n=e.key==="Home"?0:e.key==="End"?t.length-1:(i+(e.key==="ArrowRight"?1:-1)+t.length)%t.length;t[n].focus();t[n].click()});
+}
+if(document.readyState==="complete")init();else window.addEventListener("load",init);
+})();
+</script>
 </body>
 </html>
