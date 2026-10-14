@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="en" data-theme="dark">
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-    <meta name="color-scheme" content="dark" />
+    <meta name="color-scheme" content="light dark" />
     <title>Mills 50 District Guide · 407 FYI</title>
     <meta name="description" content="Mills 50 district highlight: Orlando&amp;#x27;s most delicious mile, from Vietnamese pho and hand-pulled noodles to dive bars with legendary status. A scroll presentation from 407 FYI." />
     <link rel="canonical" href="https://407.fyi/mills-50-district-guide.html" />
@@ -19,6 +19,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Urbanist:wght@600;700;800&amp;display=swap" rel="stylesheet" />
+    <script>
+      try {
+        const savedTheme = localStorage.getItem('white-atlas-theme');
+        document.documentElement.dataset.theme = savedTheme === 'light' || savedTheme === 'dark' ? savedTheme : 'dark';
+      } catch (error) {
+        document.documentElement.dataset.theme = 'dark';
+      }
+    </script>
     <style>
       /* Night Drive tokens (from the main guide) + district gradient */
       :root { --scrim: rgba(4,10,6,0.6); --g-panel: #14220f; --g-base: #040a06; --dur-reveal: 900ms; --dur-glide: 1200ms; --dur-ghost: 1400ms; --dur-cue: 2400ms;
@@ -51,7 +59,7 @@
 
       /* ---------- 1 · title screen ---------- */
       .hero {
-        position: relative; min-height: 100svh; display: grid; place-items: center;
+        position: relative; min-height: min(100svh, 960px); display: grid; place-items: center;
         text-align: center; overflow: hidden; padding: 64px var(--pad);
         background:
           radial-gradient(ellipse 90% 55% at 50% 108%, rgba(163, 129, 63, .28), transparent 60%),
@@ -84,7 +92,7 @@
       @keyframes cue { 0%, 100% { transform: scaleY(.55); opacity: .4; } 50% { transform: scaleY(1); opacity: 1; } }
 
       /* ---------- quiet text blocks ---------- */
-      .quiet { max-width: 680px; margin: 0 auto; padding: 17vh var(--pad); }
+      .quiet { max-width: 680px; margin: 0 auto; padding: clamp(72px, 17vh, 170px) var(--pad); }
       .quiet h2, .split h2, .grid-sec h2, .closing h2 {
         margin: 0 0 20px; font-weight: 800; color: var(--headline);
         font-size: clamp(2rem, 5.6vw, 3.2rem); line-height: 1.08;
@@ -106,7 +114,7 @@
       .glide-bg.a3 { background: radial-gradient(ellipse 90% 65% at 50% 115%, rgba(233,193,121,.42), transparent 64%), linear-gradient(168deg, var(--d-b), #6d5a28 58%, #4a3a17); }
       .glide-bg.b3 { background: radial-gradient(ellipse 90% 65% at 50% -15%, rgba(233,193,121,.30), transparent 60%), linear-gradient(200deg, #55602f, var(--d-c) 62%, #57431a); }
       .ghost {
-        position: absolute; top: 4svh; right: 2vw; margin: 0;
+        position: absolute; top: 4svh; right: max(2vw, calc((100vw - 1560px) / 2 + 32px)); margin: 0;
         font-family: "Urbanist", sans-serif; font-weight: 800; line-height: 1;
         font-size: clamp(9rem, 34vw, 24rem); color: transparent;
         -webkit-text-stroke: 1.5px rgba(212, 181, 115, .28);
@@ -114,8 +122,8 @@
         user-select: none;
       }
       .glide.in-view .ghost { transform: translateY(0); }
-      .glide.flip .ghost { right: auto; left: 2vw; }
-      .glide-cardwrap { position: relative; z-index: 2; margin-top: -58svh; padding: 0 var(--pad) 16svh; }
+      .glide.flip .ghost { right: auto; left: max(2vw, calc((100vw - 1560px) / 2 + 32px)); }
+      .glide-cardwrap { position: relative; z-index: 2; margin-top: -58svh; padding: 0 max(var(--pad), calc((100vw - 1560px) / 2 + 40px)) 16svh; }
       .glide-card {
         max-width: 540px; background: rgba(18, 36, 25, .92); border: 1px solid var(--line);
         border-radius: 20px; padding: clamp(26px, 4.5vw, 42px);
@@ -132,7 +140,7 @@
       .venue-btn:hover { background: #e9c179; }
 
       /* ---------- pull quote ---------- */
-      .pullquote { min-height: 94svh; display: grid; place-items: center; text-align: center; padding: 12vh var(--pad); }
+      .pullquote { min-height: min(94svh, 820px); display: grid; place-items: center; text-align: center; padding: clamp(64px, 12vh, 140px) var(--pad); }
       .pullquote blockquote {
         margin: 0; max-width: 880px; font-family: "Urbanist", sans-serif; font-weight: 700;
         font-size: clamp(1.9rem, 6.2vw, 3.7rem); line-height: 1.22; color: var(--headline);
@@ -140,7 +148,7 @@
       .pullquote .mark { color: var(--accent-ink); }
 
       /* ---------- split: short list + point map ---------- */
-      .split { max-width: 1120px; margin: 0 auto; padding: 15vh var(--pad); display: grid; grid-template-columns: 1fr 1fr; gap: clamp(28px, 5vw, 64px); align-items: center; }
+      .split { max-width: 1120px; margin: 0 auto; padding: clamp(72px, 15vh, 150px) var(--pad); display: grid; grid-template-columns: 1fr 1fr; gap: clamp(28px, 5vw, 64px); align-items: center; }
       .minimap { background: var(--surface); border: 1px solid var(--line); border-radius: 20px; padding: 14px; }
       .minimap-art { display: block; width: 100%; height: auto; }
       .minimap-art .pt { fill: var(--accent-ink); opacity: .35; }
@@ -162,7 +170,7 @@
       .ave-row:hover .who b { color: var(--accent-ink); }
 
       /* ---------- typographic grid ---------- */
-      .grid-sec { max-width: 1120px; margin: 0 auto; padding: 6vh var(--pad) 15vh; }
+      .grid-sec { max-width: 1120px; margin: 0 auto; padding: clamp(40px, 6vh, 64px) var(--pad) clamp(72px, 15vh, 150px); }
       .tiles { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 30px; }
       .tile {
         display: block; background: var(--surface); border: 1px solid var(--line); border-radius: 20px;
@@ -174,7 +182,7 @@
       .tile .venue-meta { margin: 0; }
 
       /* ---------- closing: the whole neighbourhood ---------- */
-      .closing { max-width: 860px; margin: 0 auto; padding: 15vh var(--pad) 9vh; }
+      .closing { max-width: 860px; margin: 0 auto; padding: clamp(72px, 15vh, 150px) var(--pad) clamp(48px, 9vh, 90px); }
       .closing .lede { color: var(--muted); font-size:1.06rem; margin: 0 0 8px; max-width: 560px; }
       .ix { list-style: none; margin: 34px 0 0; padding: 0; }
       .ix a {
@@ -196,7 +204,7 @@
       .next-district:hover { text-decoration: underline; }
 
       /* ---------- Phase 4 · hero photograph (duotone; the type stays the hero) ---------- */
-      .hero-photo { position: absolute; inset: 0; overflow: hidden; }
+      .hero-photo { position: absolute; top: 0; bottom: 0; left: 50%; transform: translateX(-50%); width: min(100%, 2200px); overflow: hidden; }
       .hero-photo img {
         width: 100%; height: 100%; display: block; object-fit: cover; object-position: center 38%;
         filter: grayscale(.5) sepia(.34) hue-rotate(64deg) saturate(.85) brightness(.6) contrast(1.07);
@@ -212,7 +220,7 @@
       .hero.has-photo h1, .hero.has-photo .sub, .hero.has-photo .count { text-shadow: 0 2px 30px var(--scrim); }
 
       /* ---------- Phase 4 · flashback panel ---------- */
-      .flashback { max-width: 680px; margin: 0 auto; padding: 9vh var(--pad) 2vh; }
+      .flashback { max-width: 680px; margin: 0 auto; padding: clamp(48px, 9vh, 90px) var(--pad) 2vh; }
       .fb-panel {
         background: var(--surface); border: 1px solid var(--line); border-left: 3px solid var(--accent-ink);
         border-radius: 20px; padding: clamp(26px, 4.5vw, 40px);
@@ -237,6 +245,7 @@
       .back-link:hover { text-decoration: underline; }
       .foot-in p { margin: 0; color: var(--muted); font-size:.88rem; max-width: 640px; }
       .foot-in .brand-line { color: var(--ink); font-weight: 700; }
+      .foot-in a { display: inline-block; padding: 12px 0; }
 
       @media (max-width: 760px) {
         .split { grid-template-columns: 1fr; }
@@ -253,6 +262,64 @@
       }
     
 .venue-btn:active{filter:brightness(.92)}
+
+      /* ---------- Desktop containment: ultra-wide composition frame ---------- */
+      @media (min-width: 1561px) {
+        .glide-bg.a1 { background: radial-gradient(900px 620px at calc(50% - 520px) 110%, rgba(163,129,63,.35), transparent 62%), linear-gradient(155deg, #10301d, var(--d-a) 58%, #060f09); }
+        .glide-bg.b1 { background: radial-gradient(900px 620px at calc(50% + 400px) -10%, rgba(163,129,63,.30), transparent 60%), linear-gradient(205deg, #143723, var(--d-a) 60%, #050d07); }
+        .glide-bg.a2 { background: radial-gradient(900px 620px at calc(50% + 445px) 108%, rgba(163,129,63,.26), transparent 60%), linear-gradient(200deg, #0c2416, #081a10 60%, var(--g-base)); }
+        .glide-bg.b2 { background: radial-gradient(900px 620px at calc(50% - 605px) -8%, rgba(212,181,115,.22), transparent 58%), linear-gradient(160deg, #0e2a19, #07160e 62%, var(--g-base)); }
+        .glide-bg.a3 { background: radial-gradient(1100px 700px at 50% 115%, rgba(233,193,121,.42), transparent 64%), linear-gradient(168deg, var(--d-b), #6d5a28 58%, #4a3a17); }
+        .glide-bg.b3 { background: radial-gradient(1100px 700px at 50% -15%, rgba(233,193,121,.30), transparent 60%), linear-gradient(200deg, #55602f, var(--d-c) 62%, #57431a); }
+      }
+      @media (min-width: 2201px) {
+        .hero-photo::after {
+          background:
+            linear-gradient(90deg, rgba(7, 19, 12, .88) 0, rgba(7, 19, 12, 0) 150px, rgba(7, 19, 12, 0) calc(100% - 150px), rgba(7, 19, 12, .88) 100%),
+            linear-gradient(180deg, rgba(7, 19, 12, .58) 0%, rgba(7, 19, 12, .30) 36%, rgba(7, 19, 12, .55) 68%, rgba(7, 19, 12, .93) 100%),
+            radial-gradient(ellipse 90% 55% at 50% 108%, rgba(163, 129, 63, .25), transparent 60%);
+        }
+        .hero:not(.has-photo)::before {
+          content: ""; position: absolute; top: 0; bottom: 0; left: 50%; transform: translateX(-50%);
+          width: 2200px; pointer-events: none;
+          background: radial-gradient(ellipse 62% 55% at 50% 108%, rgba(163, 129, 63, .22), transparent 60%);
+        }
+      }
+
+      /* ---------- Light theme: app-page tokens, district hues mixed toward the light ground ---------- */
+      html[data-theme="light"] {
+        color-scheme: light;
+        --bg: #faf6ec; --surface: #fffdf7; --soft: #f3ecd7; --ink: #1d2a20;
+        --muted: #4c5a45; --line: #ddd3ba; --accent: #8a5f0e; --accent-ink: #7c520c;
+        --headline: #123524; --focus: #8a5f0e; --g-base: #e9e1c9;
+      }
+      html[data-theme="light"] .hero {
+        background:
+          radial-gradient(ellipse 90% 55% at 50% 108%, rgba(163, 129, 63, .30), transparent 60%),
+          linear-gradient(168deg, color-mix(in srgb, var(--d-a) 24%, #faf6ec) 0%, color-mix(in srgb, var(--d-a) 42%, #faf6ec) 52%, color-mix(in srgb, var(--d-a) 16%, #faf6ec) 100%) !important;
+      }
+      html[data-theme="light"] .hero.has-photo {
+        --ink: #f0e8d5; --headline: #f6edd6; --muted: #c6bba2; --accent-ink: #d4b573; --focus: #d4b573;
+      }
+      html[data-theme="light"] .glide-bg.a1 { background: radial-gradient(ellipse 80% 60% at 18% 110%, rgba(163,129,63,.30), transparent 62%), linear-gradient(155deg, color-mix(in srgb, var(--d-a) 30%, #faf6ec), color-mix(in srgb, var(--d-a) 46%, #faf6ec) 58%, color-mix(in srgb, var(--d-a) 22%, #faf6ec)); }
+      html[data-theme="light"] .glide-bg.b1 { background: radial-gradient(ellipse 80% 60% at 82% -10%, rgba(163,129,63,.26), transparent 60%), linear-gradient(205deg, color-mix(in srgb, var(--d-a) 34%, #faf6ec), color-mix(in srgb, var(--d-a) 48%, #faf6ec) 60%, color-mix(in srgb, var(--d-a) 24%, #faf6ec)); }
+      html[data-theme="light"] .glide-bg.a2 { background: radial-gradient(ellipse 75% 55% at 85% 108%, rgba(163,129,63,.24), transparent 60%), linear-gradient(200deg, color-mix(in srgb, var(--d-a) 26%, #faf6ec), color-mix(in srgb, var(--d-a) 20%, #faf6ec) 60%, color-mix(in srgb, var(--d-a) 12%, #faf6ec)); }
+      html[data-theme="light"] .glide-bg.b2 { background: radial-gradient(ellipse 75% 55% at 12% -8%, rgba(212,181,115,.32), transparent 58%), linear-gradient(160deg, color-mix(in srgb, var(--d-a) 28%, #faf6ec), color-mix(in srgb, var(--d-a) 18%, #faf6ec) 62%, color-mix(in srgb, var(--d-a) 12%, #faf6ec)); }
+      html[data-theme="light"] .glide-bg.a3 { background: radial-gradient(ellipse 90% 65% at 50% 115%, rgba(190,150,70,.38), transparent 64%), linear-gradient(168deg, color-mix(in srgb, var(--d-b) 62%, #f6ead0), #cdb27c 58%, color-mix(in srgb, var(--d-b) 45%, #e6d3a3)); }
+      html[data-theme="light"] .glide-bg.b3 { background: radial-gradient(ellipse 90% 65% at 50% -15%, rgba(190,150,70,.30), transparent 60%), linear-gradient(200deg, color-mix(in srgb, var(--d-c) 40%, #faf6ec), color-mix(in srgb, var(--d-c) 55%, #faf6ec) 62%, color-mix(in srgb, var(--d-b) 38%, #e9dcbc)); }
+      html[data-theme="light"] .ghost { -webkit-text-stroke: 1.5px rgba(124, 82, 12, .42); }
+      html[data-theme="light"] .glide-card { background: rgba(255, 253, 247, .94); box-shadow: 0 30px 70px rgba(29, 42, 32, .22); }
+      html[data-theme="light"] .venue-btn, html[data-theme="light"] .btn-big { background: var(--accent); color: #fff; }
+      html[data-theme="light"] .venue-btn:hover, html[data-theme="light"] .btn-big:hover { background: var(--accent-ink); }
+      html[data-theme="light"] .minimap-art .marker text { fill: #fffdf7; }
+      @media (min-width: 1561px) {
+        html[data-theme="light"] .glide-bg.a1 { background: radial-gradient(900px 620px at calc(50% - 520px) 110%, rgba(163,129,63,.30), transparent 62%), linear-gradient(155deg, color-mix(in srgb, var(--d-a) 30%, #faf6ec), color-mix(in srgb, var(--d-a) 46%, #faf6ec) 58%, color-mix(in srgb, var(--d-a) 22%, #faf6ec)); }
+        html[data-theme="light"] .glide-bg.b1 { background: radial-gradient(900px 620px at calc(50% + 400px) -10%, rgba(163,129,63,.26), transparent 60%), linear-gradient(205deg, color-mix(in srgb, var(--d-a) 34%, #faf6ec), color-mix(in srgb, var(--d-a) 48%, #faf6ec) 60%, color-mix(in srgb, var(--d-a) 24%, #faf6ec)); }
+        html[data-theme="light"] .glide-bg.a2 { background: radial-gradient(900px 620px at calc(50% + 445px) 108%, rgba(163,129,63,.24), transparent 60%), linear-gradient(200deg, color-mix(in srgb, var(--d-a) 26%, #faf6ec), color-mix(in srgb, var(--d-a) 20%, #faf6ec) 60%, color-mix(in srgb, var(--d-a) 12%, #faf6ec)); }
+        html[data-theme="light"] .glide-bg.b2 { background: radial-gradient(900px 620px at calc(50% - 605px) -8%, rgba(212,181,115,.32), transparent 58%), linear-gradient(160deg, color-mix(in srgb, var(--d-a) 28%, #faf6ec), color-mix(in srgb, var(--d-a) 18%, #faf6ec) 62%, color-mix(in srgb, var(--d-a) 12%, #faf6ec)); }
+        html[data-theme="light"] .glide-bg.a3 { background: radial-gradient(1100px 700px at 50% 115%, rgba(190,150,70,.38), transparent 64%), linear-gradient(168deg, color-mix(in srgb, var(--d-b) 62%, #f6ead0), #cdb27c 58%, color-mix(in srgb, var(--d-b) 45%, #e6d3a3)); }
+        html[data-theme="light"] .glide-bg.b3 { background: radial-gradient(1100px 700px at 50% -15%, rgba(190,150,70,.30), transparent 60%), linear-gradient(200deg, color-mix(in srgb, var(--d-c) 40%, #faf6ec), color-mix(in srgb, var(--d-c) 55%, #faf6ec) 62%, color-mix(in srgb, var(--d-b) 38%, #e9dcbc)); }
+      }
 </style>
   </head>
   <body>

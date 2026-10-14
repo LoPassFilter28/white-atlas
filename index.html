@@ -26,13 +26,16 @@
         methods.forEach(function(method){posthog[method]=function(){posthog.push([method].concat(Array.prototype.slice.call(arguments)));};});
         posthog._i.push([apiKey,config]);
         var script=document.createElement('script');script.async=true;script.crossOrigin='anonymous';script.src='https://us-assets.i.posthog.com/static/array.js';
-        var first=document.getElementsByTagName('script')[0];first.parentNode.insertBefore(script,first);
+        var bootAnalytics=function(){if(script.__booted)return;script.__booted=1;var first=document.getElementsByTagName('script')[0];first.parentNode.insertBefore(script,first);};
+        if(document.readyState==='complete')setTimeout(bootAnalytics,0);
+        else window.addEventListener('load',function(){if(window.requestIdleCallback)requestIdleCallback(bootAnalytics,{timeout:1500});else setTimeout(bootAnalytics,800);});
+        setTimeout(bootAnalytics,5000);
       };
     })(document,window.posthog||[]);
     posthog.init('phc_ssbVHvYyPrCFgTJoceofoN6b3pq5AnEomyXyEKM7RAAw',{api_host:'https://us.posthog.com',person_profiles:'identified_only',capture_pageview:false,autocapture:false,disable_session_recording:true,persistence:'memory'});
   </script>
-  <script>window.sentryOnLoad=function(){Sentry.init({dsn:'https://f495bc21189760867d05ab72bc9287fd@o4512236062113792.ingest.us.sentry.io/4512236064473088',sendDefaultPii:false});};</script>
-  <script src="https://js.sentry-cdn.com/f495bc21189760867d05ab72bc9287fd.min.js" crossorigin="anonymous" defer></script>
+  <script>window.sentryOnLoad=function(){Sentry.init({dsn:'https://f495bc21189760867d05ab72bc9287fd@o4512236062113792.ingest.us.sentry.io/4512236064473088',sendDefaultPii:false});};
+  window.addEventListener('load',function(){var s=document.createElement('script');s.src='https://js.sentry-cdn.com/f495bc21189760867d05ab72bc9287fd.min.js';s.crossOrigin='anonymous';document.head.appendChild(s);});</script>
   <script>
     try {
       const savedTheme=localStorage.getItem('white-atlas-theme');
@@ -261,6 +264,8 @@
     }
     @media(max-width:360px){.mast-count .theme-toggle{width:42px;padding:8px}.mast-count .theme-toggle-text{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}}
     .print-sheet{display:none}
+    :focus-visible{outline:3px solid var(--focus);outline-offset:2px}
+    .footer a{display:inline-block;padding:12px 0}
     @media print{
       @page{margin:.55in .58in}
       :root,html[data-theme="dark"]{color-scheme:light;--bg:#fff;--surface:#fff;--ink:#1d2a20;--muted:#4c5a45;--line:#ddd3ba;--accent:#8a5f0e;--accent-ink:#7c520c;--headline:#123524;--soft:#f3ecd7;--badge:#eee4c8;--focus:#8a5f0e;--on-accent:#fff}
@@ -810,6 +815,24 @@ function scenarioPool(key){
   const sc=SCENARIOS[key];if(!sc)return [];
   return PLACES.filter(p=>(p.tags||[]).includes(sc.tag)&&occasions(p).includes(sc.occ));
 }
+/* Acclaim signal from the record itself (fix round 2026-10-14): Michelin
+   tags and badges, award language in the description, top price band.
+   Used to lead the date-night shortlist with the places a visitor asking
+   for a special occasion actually means. Same signals as the archive
+   search ranking. */
+function acclaimSignal(p){
+  const t=p.tags||[];let s=0;
+  if(t.includes('michelin-star'))s+=3;else if(t.includes('bib-gourmand'))s+=2;else if(t.includes('michelin-recommended'))s+=1.5;
+  if(t.some(x=>x.includes('michelin')&&x!=='michelin-star'&&x!=='michelin-recommended'&&x!=='bib-gourmand'))s+=1;
+  const d=publicDescription(p).toLowerCase();
+  if(d.includes('michelin star'))s+=2;
+  if(d.includes('five diamond'))s+=2;
+  if(d.includes('most decorated'))s+=1;
+  if(d.includes('award'))s+=1;
+  const runs=String(p.price||'').match(/\$+/g)||[];if(runs.some(r=>r.length>=4))s+=1;
+  return s;
+}
+const SCENARIO_SEE_ALL={convention:'/archive.html?q=convention',family:'/archive.html?occasion=family','date-night':'/archive.html?occasion=date',groups:'/archive.html?occasion=friends'};
 document.querySelectorAll('[data-scenario]').forEach(button=>button.addEventListener('click',()=>{
   const key=button.dataset.scenario,status=$('#askStatus'),box=$('#askResults');
   if(activeScenario===key){
@@ -818,10 +841,11 @@ document.querySelectorAll('[data-scenario]').forEach(button=>button.addEventList
   }
   activeScenario=key;
   document.querySelectorAll('[data-scenario]').forEach(b=>b.setAttribute('aria-pressed',String(b===button)));
-  const pool=scenarioPool(key),sc=SCENARIOS[key];
+  let pool=scenarioPool(key);const sc=SCENARIOS[key];
+  if(key==='date-night'){const pickRank=id=>{const i=PICK_ORDER.indexOf(id);return i<0?999:i};pool=pool.slice().sort((a,b)=>acclaimSignal(b)-acclaimSignal(a)||pickRank(a.id)-pickRank(b.id));}
   status.textContent=`${pool.length} ${pool.length===1?'place fits':'places fit'} ${sc.label}: showing the first ${Math.min(8,pool.length)}.`;
   box.innerHTML=pool.slice(0,8).map(p=>`<a class="ask-result" href="/archive.html?venue=${esc(p.id)}"><span class="ask-result-name">${esc(p.name)}</span><span class="ask-result-meta">${esc(p.category)} · ${esc(specificArea(p))}</span><span class="ask-result-price">${esc(displayPrice(p))}</span></a>`).join('')
-    +(pool.length>8?`<a class="ask-result ask-result-more" href="/archive.html">See all ${pool.length} in the full guide →</a>`:'');
+    +(pool.length>8?`<a class="ask-result ask-result-more" href="${SCENARIO_SEE_ALL[key]||'/archive.html'}">See all ${pool.length} in the full guide →</a>`:'');
 }));
 /* reveal on scroll (same pattern as the guide) */
 if('IntersectionObserver'in window){const revealObserver=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('inview');revealObserver.unobserve(entry.target)}}),{threshold:.06});document.querySelectorAll('.reveal').forEach(el=>revealObserver.observe(el))}

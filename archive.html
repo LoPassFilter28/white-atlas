@@ -24,13 +24,16 @@
         methods.forEach(function(method){posthog[method]=function(){posthog.push([method].concat(Array.prototype.slice.call(arguments)));};});
         posthog._i.push([apiKey,config]);
         var script=document.createElement('script');script.async=true;script.crossOrigin='anonymous';script.src='https://us-assets.i.posthog.com/static/array.js';
-        var first=document.getElementsByTagName('script')[0];first.parentNode.insertBefore(script,first);
+        var bootAnalytics=function(){if(script.__booted)return;script.__booted=1;var first=document.getElementsByTagName('script')[0];first.parentNode.insertBefore(script,first);};
+        if(document.readyState==='complete')setTimeout(bootAnalytics,0);
+        else window.addEventListener('load',function(){if(window.requestIdleCallback)requestIdleCallback(bootAnalytics,{timeout:1500});else setTimeout(bootAnalytics,800);});
+        setTimeout(bootAnalytics,5000);
       };
     })(document,window.posthog||[]);
     posthog.init('phc_ssbVHvYyPrCFgTJoceofoN6b3pq5AnEomyXyEKM7RAAw',{api_host:'https://us.posthog.com',person_profiles:'identified_only',capture_pageview:false,autocapture:false,disable_session_recording:true,persistence:'memory'});
   </script>
-  <script>window.sentryOnLoad=function(){Sentry.init({dsn:'https://f495bc21189760867d05ab72bc9287fd@o4512236062113792.ingest.us.sentry.io/4512236064473088',sendDefaultPii:false});};</script>
-  <script src="https://js.sentry-cdn.com/f495bc21189760867d05ab72bc9287fd.min.js" crossorigin="anonymous" defer></script>
+  <script>window.sentryOnLoad=function(){Sentry.init({dsn:'https://f495bc21189760867d05ab72bc9287fd@o4512236062113792.ingest.us.sentry.io/4512236064473088',sendDefaultPii:false});};
+  window.addEventListener('load',function(){var s=document.createElement('script');s.src='https://js.sentry-cdn.com/f495bc21189760867d05ab72bc9287fd.min.js';s.crossOrigin='anonymous';document.head.appendChild(s);});</script>
   <script>
     try {
       const savedTheme=localStorage.getItem('white-atlas-theme');
@@ -496,6 +499,7 @@ body{background:#fff;color:#1d2a20;font-family:"Manrope",ui-sans-serif,sans-seri
 @media (max-width:1023.98px){.district-card,.pick-card{min-height:0}}
 @media (max-width:640px){.footer{grid-template-columns:1fr}}
 :focus-visible{outline:3px solid var(--focus);outline-offset:2px}
+.footer a{display:inline-block;padding:12px 0}
 @media print{.district-tabs,.export-trigger,.copy-list{display:none!important}
 .venue .description{display:block!important}
 body{background:#fff;color:#000}}
@@ -520,7 +524,7 @@ body{background:#fff;color:#000}}
 .view-tab.export-tab[aria-pressed="true"]{background:var(--accent);color:var(--on-accent)}
 @media(max-width:620px){.topbar-title{display:none}
 .view-tab{padding:8px 10px}}
-.finder{top:var(--topbar-h)}
+.finder{position:relative;top:auto}
 .district-tabs{top:var(--topbar-h)}
 .venue-list,.district-group{scroll-margin-top:132px}
 .summary{scroll-margin-top:132px}
@@ -847,14 +851,99 @@ html:not([data-theme="dark"]) .upd-tag{color:#7c520c;background:rgba(124,82,12,.
     }
     return d[a.length][b.length];
   }
+  /* Ranked search (fix round 2026-10-14). Replaces the flat term-contains
+     matcher: terms now match per field with word-level rules (stem equality,
+     guarded substring, field-aware fuzzy), the occasions, dayparts and price
+     fields are part of the searched text, and filtered() orders results by
+     the field-weighted score computed here. Inclusion still requires every
+     hard term to match somewhere; quality words (best, acclaimed, ...) only
+     rank, they never gate. */
+  const SEARCH_FIELDS=[
+    ['name',100],['categoryDetail',60],['category',55],['tags',45],['district',40],
+    ['occasions',40],['dayparts',35],['address',25],['price',20],['area',12],['description',10]
+  ];
+  const OCCASION_WORDS={date:'date night romantic anniversary special occasion celebration couples honeymoon',family:'family kids children child friendly',friends:'friends group groups gathering party',solo:'solo alone quiet',convention:'convention conference business event groups'};
+  const DAYPART_WORDS={breakfast:'breakfast morning',brunch:'brunch',lunch:'lunch',dinner:'dinner evening supper',late:'late night tonight evening'};
+  function priceWords(p){
+    if(String(p.price||'').toLowerCase()==='free')return 'free no cost';
+    const runs=String(p.price||'').match(/\$+/g)||[];const n=runs.reduce((m,r)=>Math.max(m,r.length),0);
+    if(n>=4)return 'fine dining luxury upscale expensive splurge special occasion';
+    if(n===3)return 'upscale expensive fine dining';
+    if(n===2)return 'moderate mid range';
+    if(n===1)return 'cheap budget affordable inexpensive value deals';
+    return '';
+  }
+  const stemWord=w=>w.length>3&&w.endsWith('s')?w.slice(0,-1):w;
+  const TERM_EXPANSIONS={dinner:['dining','supper'],dining:['dinner'],cheap:['budget','affordable','inexpensive','value'],kid:['kids','family','children'],kids:['kid','family','children'],children:['kids','family'],tonight:['late','evening','dinner'],ride:['tour'],tour:['ride'],eats:['food','dining']};
+  const STOP_TERMS=new Set(['the','a','an','and','or','of','to','in','near','me','my','for','with','at','on','by','from','where','what','find','some','any','things','thing','do','does']);
+  const SOFT_TERMS=new Set(['best','top','acclaimed','finest','great','famous','popular','favorite','favourite','most','renowned','celebrated']);
+  const ACCLAIM_TERMS=new Set(['anniversary','acclaimed','celebration','celebrate','occasion','best','finest','fancy','luxury','michelin','decorated','award','awards','romantic']);
+  function acclaimSignal(p){
+    const t=p.tags||[];let s=0;
+    if(t.includes('michelin-star'))s+=3;else if(t.includes('bib-gourmand'))s+=2;else if(t.includes('michelin-recommended'))s+=1.5;
+    if(t.some(x=>x.includes('michelin')&&x!=='michelin-star'&&x!=='michelin-recommended'&&x!=='bib-gourmand'))s+=1;
+    const d=publicDescription(p).toLowerCase();
+    if(d.includes('michelin star'))s+=2;
+    if(d.includes('five diamond'))s+=2;
+    if(d.includes('most decorated'))s+=1;
+    if(d.includes('award'))s+=1;
+    const runs=String(p.price||'').match(/\$+/g)||[];if(runs.some(r=>r.length>=4))s+=1;
+    return s;
+  }
+  let searchIndex=null,searchIndexFor=null;
+  function buildSearchIndex(){
+    if(searchIndexFor===PLACES)return searchIndex;
+    searchIndexFor=PLACES;
+    searchIndex=PLACES.map(p=>{
+      const raw={name:p.name||'',categoryDetail:p.categoryDetail||'',category:p.category||'',tags:(p.tags||[]).join(' '),district:p.district||'',area:specificArea(p),address:p.address||'',description:publicDescription(p),
+        occasions:occasions(p).map(o=>OCCASION_WORDS[o]||o).join(' '),dayparts:dayparts(p).map(d=>DAYPART_WORDS[d]||d).join(' '),price:priceWords(p)};
+      const fields={};
+      for(const [key]of SEARCH_FIELDS){const text=normalizeSearch(raw[key]);fields[key]={text,words:text?text.split(' '):[]};}
+      return {fields,acclaim:acclaimSignal(p)};
+    });
+    return searchIndex;
+  }
+  function termLevel(term,words,isName){
+    const st=stemWord(term);let best=0;
+    const allow=isName?(term.length>=5?2:term.length>=4?1:0):(term.length>=8?2:term.length>=4?1:0);
+    for(const word of words){
+      if(stemWord(word)===st)return 3;
+      if(best<2&&term.length>=4&&(word.includes(term)||(word.length>=4&&term.includes(word)&&word.length>=term.length-1)))best=2;
+      else if(best<1&&allow&&Math.abs(term.length-word.length)<=allow&&editDistance(term,word)<=allow)best=1;
+    }
+    return best;
+  }
+  const LEVEL_FACTOR={0:0,1:0.3,2:0.55,3:1};
+  function scorePlace(pi,query){
+    const entry=buildSearchIndex()[pi];if(!entry)return -1;
+    const q=normalizeSearch(query);if(!q)return 0;
+    let terms=q.split(' ').filter(t=>!STOP_TERMS.has(t));
+    if(!terms.length)terms=q.split(' ');
+    const hard=terms.filter(t=>!SOFT_TERMS.has(t)),soft=terms.filter(t=>SOFT_TERMS.has(t));
+    let score=0,phraseField=0;
+    for(const [key,weight]of SEARCH_FIELDS){if(entry.fields[key].text.includes(q))phraseField=Math.max(phraseField,weight);}
+    const termScore=term=>{
+      let best=-1;
+      const candidates=[term,...(TERM_EXPANSIONS[stemWord(term)]||TERM_EXPANSIONS[term]||[])];
+      for(const [key,weight]of SEARCH_FIELDS){
+        const words=entry.fields[key].words;if(!words.length)continue;
+        let level=0;for(const cand of candidates){const l=termLevel(cand,words,key==='name');if(l>level)level=l;if(level===3)break;}
+        if(level>0)best=Math.max(best,weight*LEVEL_FACTOR[level]);
+      }
+      return best;
+    };
+    for(const term of hard){const s=termScore(term);if(s<0)return -1;score+=s;}
+    let softHit=false;
+    for(const term of soft){const s=termScore(term);if(s>=0){softHit=true;score+=s;}}
+    if(!hard.length&&!softHit&&entry.acclaim<=0)return -1;
+    if(phraseField)score+=phraseField*1.2;
+    if(terms.some(t=>ACCLAIM_TERMS.has(t)||ACCLAIM_TERMS.has(stemWord(t))))score+=entry.acclaim*12;
+    else if(terms.includes('date')&&terms.includes('night'))score+=entry.acclaim*3;
+    return score;
+  }
   function matchesQuery(p,query){
-    const q=normalizeSearch(query),text=normalizeSearch(hay(p));if(!q||text.includes(q))return true;
-    const words=text.split(' '),terms=q.split(' ');
-    return terms.every(term=>words.some(word=>{
-      if(word.includes(term)||(term.length>3&&word.length>=4&&term.includes(word)))return true;
-      if(term.length<4||Math.abs(term.length-word.length)>2)return false;
-      return editDistance(term,word)<=(term.length>=8?2:1);
-    }));
+    const q=normalizeSearch(query);if(!q)return true;
+    return scorePlace(PLACES.indexOf(p),query)>=0;
   }
   function primaryCategory(p){
     if(p.primary)return p.primary;
@@ -1013,9 +1102,21 @@ function filtered(){
       &&categoryMatches(p,state.category)
       &&(state.occasion==='all'||occasions(p).includes(state.occasion))
       &&(state.daypart==='all'||dayparts(p).includes(state.daypart))
-      &&(state.price==='all'||priceBand(p)===state.price)
-      &&matchesQuery(p,q));
-    if(state.sort==='distance'&&state.position)list.sort((a,b)=>distanceMiles(a)-distanceMiles(b));
+      &&(state.price==='all'||priceBand(p)===state.price));
+    if(q){
+      const scored=[];
+      for(const p of list){const i=PLACES.indexOf(p);const s=scorePlace(i,q);if(s>=0)scored.push({p,i,s});}
+      if(state.sort==='distance'&&state.position)scored.sort((a,b)=>distanceMiles(a.p)-distanceMiles(b.p));
+      else scored.sort((a,b)=>b.s-a.s||a.i-b.i);
+      return scored.map(x=>x.p);
+    }
+    if(state.sort==='distance'&&state.position){list.sort((a,b)=>distanceMiles(a)-distanceMiles(b));return list;}
+    if(state.occasion==='date'){
+      const idx=buildSearchIndex();
+      const scored=list.map(p=>{const i=PLACES.indexOf(p);return {p,i,s:idx[i].acclaim};});
+      scored.sort((a,b)=>b.s-a.s||a.i-b.i);
+      return scored.map(x=>x.p);
+    }
     return list;
   }
   function cleanMarkdown(value){return String(value||'').replace(/\s+/g,' ').trim()}
@@ -1298,7 +1399,9 @@ function render(){
     const mapPlace=e.target.closest('[data-show-place]');
     if(mapPlace){captureVenueOpen(mapPlace.dataset.showPlace,'map');state.open=mapPlace.dataset.showPlace;setViewMode('list');render();requestAnimationFrame(()=>document.querySelector(`[data-id="${CSS.escape(state.open)}"]`)?.scrollIntoView({block:'center'}));return}
     const toggle=e.target.closest('[data-toggle]');
-    if(toggle){const opening=state.open!==toggle.dataset.toggle;state.open=opening?toggle.dataset.toggle:null;render();if(opening){captureVenueOpen(toggle.dataset.toggle,state.view);document.querySelector(`[data-id="${CSS.escape(state.open)}"]`).scrollIntoView({block:'nearest'})}return}
+    if(toggle){const id=toggle.dataset.toggle,opening=state.open!==id;state.open=opening?id:null;render();if(opening){captureVenueOpen(id,state.view);document.querySelector(`[data-id="${CSS.escape(id)}"]`)?.scrollIntoView({block:'nearest'})}
+      if(document.activeElement===document.body)requestAnimationFrame(()=>{const btn=document.querySelector(`[data-toggle="${CSS.escape(id)}"]`);if(btn)btn.focus({preventScroll:true})});
+      return}
   });
   document.addEventListener('click',e=>{
     const a=e.target.closest('a[href]');if(!a||!/^https?:/.test(a.href))return;
@@ -1439,7 +1542,7 @@ function capTeasers(root){var ts=$$('#venueList .venue-history',root);ts.forEach
 function stampUpdated(root){$$("article.venue[data-id]",root).forEach(function(a){if(UPDATED[a.dataset.id]&&!a.querySelector(".upd-tag")){var t=a.querySelector(".venue-title");if(t){var s=document.createElement("span");s.className="upd-tag";s.textContent="Updated Oct 2026";t.appendChild(s)}}})}
 function updateIntro(){var el=$("#districtIntro");if(!el)return;var k=activeKey();var txt=INTROS[k]||"";if(txt){el.textContent=txt;el.hidden=false}else{el.hidden=true}}
 var syncT=null;var lastSyncedDistrict=null,popApply=false;
-function syncURL(){clearTimeout(syncT);syncT=setTimeout(function(){var d=activeKey(),c=activeChip(),q=($("#search")||{}).value||($("#heroSearch")||{}).value||"";var p=new URLSearchParams();if(d&&d!=="all")p.set("district",d);if(c)p.set("cat",c);if(q)p.set("q",q);var qs=p.toString();var url=qs?("?"+qs):location.pathname;try{if(!popApply&&lastSyncedDistrict!==null&&d!==lastSyncedDistrict)history.pushState(null,"",url);else history.replaceState(null,"",url)}catch(e){}lastSyncedDistrict=d;try{localStorage.setItem("fyi-filters-v1",JSON.stringify({d:d,c:c,q:q}))}catch(e){}updateIntro()},350)}
+function syncURL(){clearTimeout(syncT);syncT=setTimeout(function(){var d=activeKey(),c=activeChip(),q=($("#search")||{}).value||($("#heroSearch")||{}).value||"";var z=($("#zone")||{}).value||"all",o=($("#occasion")||{}).value||"all",dp=($("#daypart")||{}).value||"all",pr=($("#price")||{}).value||"all";var fcb=$$("[data-category-option]").filter(function(b){return b.getAttribute("aria-pressed")==="true"})[0];var fc=fcb?fcb.dataset.categoryOption:"";var p=new URLSearchParams();if(d&&d!=="all")p.set("district",d);if(c)p.set("cat",c);if(q)p.set("q",q);var qs=p.toString();var url=qs?("?"+qs):location.pathname;try{if(!popApply&&lastSyncedDistrict!==null&&d!==lastSyncedDistrict)history.pushState(null,"",url);else history.replaceState(null,"",url)}catch(e){}lastSyncedDistrict=d;try{localStorage.setItem("fyi-filters-v1",JSON.stringify({d:d,c:c,q:q,z:z,o:o,dp:dp,pr:pr,fc:fc}))}catch(e){}updateIntro()},350)}
 function suggestions(q){if(!q||typeof PLACES==="undefined")return[];var names=PLACES.map(function(p){return p.name});var ds=PLACES.map(function(p){return p.district});var all=names.concat(ds.filter(function(v,i){return ds.indexOf(v)===i}));var maxD=Math.max(2,Math.floor(q.length/3));var scored=all.map(function(n){return{n:n,d:lev(q,n)}}).filter(function(x){return x.d<=maxD||x.n.toLowerCase().indexOf(q.toLowerCase())===0}).sort(function(a,b){return a.d-b.d});var out=[];scored.forEach(function(x){if(out.indexOf(x.n)<0)out.push(x.n)});return out.slice(0,3)}
 function fillDidYouMean(){var box=$("#didYouMean");if(!box)return;box.innerHTML="";var q=($("#search")||{}).value||($("#heroSearch")||{}).value||"";var s=suggestions(q);if(!s.length)return;var lab=document.createElement("span");lab.textContent="Did you mean:";lab.style.cssText="align-self:center;color:var(--muted);font-size:.88rem";box.appendChild(lab);s.forEach(function(n){var b=document.createElement("button");b.type="button";b.textContent=n;b.addEventListener("click",function(){setQuery(n);var l=$("#venueList");if(l)l.scrollIntoView({behavior:"smooth",block:"start"})});box.appendChild(b)})}
 function init(){
@@ -1449,14 +1552,20 @@ function init(){
   stampUpdated(document);capTeasers(document);
   var list=$("#venueList");if(list)new MutationObserver(function(){stampUpdated(list);capTeasers(list)}).observe(list,{childList:true});
   var params=new URLSearchParams(location.search);var mem=null;try{mem=JSON.parse(localStorage.getItem("fyi-filters-v1")||"null")}catch(e){}
+  if(params.has("occasion"))mem=null;
   var d=params.get("district")||(mem&&mem.d)||"",c=params.get("cat")||(mem&&mem.c)||"",q=params.get("q")||(mem&&mem.q)||"";
   if(d&&d!=="all")clickDistrict(d);if(c)clickCategory(c);if(q)setQuery(q);
+  var selVals={zone:params.get("zone")||(mem&&mem.z)||"",occasion:params.get("occasion")||(mem&&mem.o)||"",daypart:params.get("daypart")||(mem&&mem.dp)||"",price:params.get("price")||(mem&&mem.pr)||""};
+  Object.keys(selVals).forEach(function(id){var el=document.getElementById(id),v=selVals[id];if(el&&v&&el.value!==v&&Array.prototype.some.call(el.options,function(op){return op.value===v})){el.value=v;el.dispatchEvent(new Event("change",{bubbles:true}))}});
+  var fcv=(mem&&mem.fc)||"";if(fcv&&!c){var ob=$$("[data-category-option]").filter(function(b){return b.dataset.categoryOption===fcv})[0];if(ob&&ob.getAttribute("aria-pressed")!=="true")ob.click()}
     var vp=params.get("venue");if(vp&&typeof PLACES!=="undefined"&&PLACES.some(function(p){return p.id===vp})){setTimeout(function(){try{openPick(vp);var pp=PLACES.find(function(p){return p.id===vp});var kk=(typeof districtKeyOf==="function"&&pp)?(districtKeyOf(pp)||"more"):null;if(kk&&typeof fillDistrictSection==="function")fillDistrictSection(kk);requestAnimationFrame(function(){var el=document.querySelector('[data-id="'+vp+'"]');if(el)el.scrollIntoView({block:"center"})})}catch(e){}},90)}
   updateIntro();
   document.addEventListener("click",function(e){if(e.target.closest("#districtTabs,[data-category-chip],[data-district]"))syncURL()});
   document.addEventListener("input",function(e){if(e.target.id==="search"||e.target.id==="heroSearch")syncURL()});
+  document.addEventListener("change",function(e){if(["zone","occasion","daypart","price"].indexOf(e.target.id)>=0)syncURL()});
+  document.addEventListener("click",function(e){if(e.target.closest("[data-category-option]"))syncURL()});
   lastSyncedDistrict=activeKey();syncURL();
-  window.addEventListener("popstate",function(){var pp=new URLSearchParams(location.search);popApply=true;var nd=pp.get("district")||"all";if(nd!==activeKey())clickDistrict(nd);var nc=pp.get("cat")||"";var ac=activeChip();if(nc!==ac){if(ac)clickCategory(ac);if(nc)clickCategory(nc)}var nq=pp.get("q")||"";var cq=($("#search")||{}).value||($("#heroSearch")||{}).value||"";if(nq!==cq)setQuery(nq);setTimeout(function(){popApply=false},700)});
+  window.addEventListener("popstate",function(){var pp=new URLSearchParams(location.search);popApply=true;var nd=pp.get("district")||"all";if(nd!==activeKey())clickDistrict(nd);var nc=pp.get("cat")||"";var ac=activeChip();if(nc!==ac){if(ac)clickCategory(ac);if(nc)clickCategory(nc)}var nq=pp.get("q")||"";var cq=($("#search")||{}).value||($("#heroSearch")||{}).value||"";if(nq!==cq)setQuery(nq);var no=pp.get("occasion")||"all",oe=$("#occasion");if(oe&&oe.value!==no&&Array.prototype.some.call(oe.options,function(op){return op.value===no})){oe.value=no;oe.dispatchEvent(new Event("change",{bubbles:true}))}setTimeout(function(){popApply=false},700)});
   var pc=$("#popChips");if(pc)pc.addEventListener("click",function(e){var b=e.target.closest("button[data-q]");if(!b)return;setQuery(b.dataset.q);var l=$("#venueList");if(l)l.scrollIntoView({behavior:"smooth",block:"start"})});
   var rf=$("#resetFilters");if(rf)rf.addEventListener("click",function(){setQuery("");if(activeKey()!=="all")clickDistrict("all");var ac=activeChip();if(ac)clickCategory(ac);syncURL()});
   var em=$("#empty");if(em)new MutationObserver(function(){if(!em.hidden)fillDidYouMean()}).observe(em,{attributes:true,attributeFilter:["hidden"]});
