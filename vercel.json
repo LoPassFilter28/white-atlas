@@ -1,13 +1,1 @@
-{
-  "headers": [
-    {
-      "source": "/(.*)",
-      "headers": [
-        { "key": "X-Content-Type-Options", "value": "nosniff" },
-        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
-        { "key": "X-Frame-Options", "value": "SAMEORIGIN" },
-        { "key": "Permissions-Policy", "value": "geolocation=(self), camera=(), microphone=()" }
-      ]
-    }
-  ]
-}
+{"headers":[{"headers":[{"key":"X-Content-Type-Options","value":"nosniff"},{"key":"Referrer-Policy","value":"strict-origin-when-cross-origin"},{"key":"X-Frame-Options","value":"SAMEORIGIN"},{"key":"Permissions-Policy","value":"geolocation=(self), camera=(), microphone=()"}],"source":"/(.*)"}],"redirects":[{"destination":"https://407.fyi/:path*","has":[{"type":"host","value":"www.407.fyi"}],"permanent":true,"source":"/:path*"}]}

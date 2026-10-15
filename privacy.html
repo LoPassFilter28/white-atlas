@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="color-scheme" content="light dark" />
+    <title>Privacy · 407 FYI</title>
+    <meta name="description" content="The 407 FYI privacy page, in plain terms: no accounts and no personal details collected, analytics via PostHog, crash reports via Sentry, and the outside servers the site loads, named." />
+    <link rel="canonical" href="https://407.fyi/privacy.html" />
+    <meta property="og:title" content="Privacy · 407 FYI" />
+    <meta property="og:description" content="No accounts, no personal details collected, and the outside servers the site loads, named. The 407 FYI privacy page, in plain terms." />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://407.fyi/privacy.html" />
+    <meta property="og:image" content="https://407.fyi/og-image.png" />
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Urbanist:wght@600;700;800&amp;display=swap" rel="stylesheet" />
+    <script>
+      try {
+        const savedTheme = localStorage.getItem('white-atlas-theme');
+        document.documentElement.dataset.theme = savedTheme === 'light' || savedTheme === 'dark' ? savedTheme : 'dark';
+      } catch (error) {
+        document.documentElement.dataset.theme = 'dark';
+      }
+    </script>
+    <style>
+      /* Night Drive tokens (from the district guides) */
+      :root {
+        color-scheme: dark;
+        --bg: #0a1811; --surface: #122419; --soft: #172a1f; --ink: #f0e8d5;
+        --muted: #c6bba2; --line: #2f4a38; --accent: #765b2f; --accent-ink: #d4b573;
+        --headline: #f6edd6; --focus: #d4b573;
+        --d-a: #14231a; --d-b: #3a5a35; --d-c: #bd9049;
+        --pad: clamp(20px, 5vw, 40px);
+      }
+      * { box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
+      body {
+        margin: 0; background: var(--bg); color: var(--ink);
+        font-family: "Manrope", system-ui, sans-serif; line-height: 1.6;
+        overflow-x: hidden;
+      }
+      h1, h2, h3, .display { font-family: "Urbanist", "Manrope", sans-serif; }
+      a { color: var(--accent-ink); }
+      a:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
+      .kicker {
+        font-family: "Urbanist", sans-serif; font-weight: 700; letter-spacing: .22em;
+        font-size: .72rem; text-transform: uppercase; color: var(--accent-ink); margin: 0 0 14px;
+      }
+
+      /* ---------- hero ---------- */
+      .hero {
+        position: relative; padding: clamp(64px, 13vh, 130px) var(--pad) clamp(48px, 9vh, 84px);
+        background: radial-gradient(ellipse 90% 55% at 50% 112%, rgba(189,144,73,.26), transparent 60%),
+          linear-gradient(168deg, #1d3325, #14231a 55%, #0a1811);
+        border-bottom: 1px solid var(--line);
+      }
+      .hero-in { max-width: 860px; margin: 0 auto; }
+      .crumbs { font-size: .8rem; color: var(--muted); margin: 0 0 26px; }
+      .crumbs a { font-weight: 700; }
+      .hero-brand {
+        font-family: "Urbanist", sans-serif; font-weight: 700; letter-spacing: .22em;
+        font-size: .72rem; text-transform: uppercase; color: var(--accent-ink); text-decoration: none;
+      }
+      .hero h1 {
+        font-size: clamp(2.6rem, 8.5vw, 5.2rem); line-height: .98; letter-spacing: .01em;
+        color: var(--headline); margin: 18px 0 16px; text-transform: uppercase;
+      }
+      .hero .sub { font-size: clamp(1.05rem, 2.6vw, 1.3rem); color: var(--ink); max-width: 620px; margin: 0 0 10px; }
+      .hero .fine { color: var(--muted); max-width: 620px; margin: 0; }
+      .anchor-nav { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 30px; }
+      .anchor-nav a {
+        border: 1px solid var(--line); border-radius: 999px; padding: 8px 14px;
+        font-size: .82rem; font-weight: 700; text-decoration: none; background: rgba(255,255,255,.03);
+        min-height: 42px; display: inline-flex; align-items: center;
+      }
+      .anchor-nav a:hover { border-color: var(--accent-ink); }
+
+      /* ---------- sections ---------- */
+      main { display: block; }
+      .sec { max-width: 860px; margin: 0 auto; padding: clamp(52px, 9vh, 88px) var(--pad) 0; }
+      .sec h2 { font-size: clamp(1.7rem, 4.6vw, 2.4rem); line-height: 1.12; color: var(--headline); margin: 0 0 16px; }
+      .sec .lede { color: var(--muted); font-size: 1.04rem; max-width: 640px; margin: 0 0 26px; }
+      .sec p { max-width: 68ch; }
+      .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 14px; margin: 22px 0 6px; }
+      .card {
+        background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 20px;
+      }
+      .card h3 { margin: 0 0 6px; font-size: 1.12rem; color: var(--headline); }
+      .card .addr { font-weight: 800; color: var(--accent-ink); margin: 0 0 10px; font-size: .98rem; }
+      .card p { margin: 0; color: var(--muted); font-size: .94rem; }
+      .cols { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 22px 0 6px; }
+      @media (max-width: 680px) { .cols { grid-template-columns: 1fr; } }
+      .panel { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 20px 22px; }
+      .panel h3 { margin: 0 0 12px; font-size: 1.05rem; color: var(--headline); }
+      .panel ul, .plain-list { margin: 0; padding-left: 18px; }
+      .panel li, .plain-list li { margin-bottom: 9px; }
+      .panel li:last-child, .plain-list li:last-child { margin-bottom: 0; }
+      .note {
+        border-left: 3px solid var(--accent-ink); background: var(--soft);
+        padding: 14px 18px; border-radius: 0 12px 12px 0; margin: 22px 0 6px; max-width: 68ch;
+      }
+      .note p { margin: 0; }
+      .venue-links { list-style: none; margin: 0; padding: 0; }
+      .venue-links li { margin-bottom: 10px; }
+      .venue-links a { font-weight: 800; text-underline-offset: 3px; }
+      .venue-links span { color: var(--muted); }
+
+      /* ---------- jobs ---------- */
+      .job-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 14px; margin-top: 22px; }
+      .job { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 20px 22px; }
+      .job h3 { margin: 0 0 6px; font-size: 1.08rem; color: var(--headline); }
+      .job p { margin: 0 0 12px; color: var(--muted); font-size: .94rem; }
+      .job ul { list-style: none; margin: 0 0 14px; padding: 0; }
+      .job li { margin-bottom: 7px; }
+      .job li a { font-weight: 800; text-underline-offset: 3px; }
+      .job .browse { font-size: .86rem; font-weight: 800; text-transform: uppercase; letter-spacing: .08em; }
+
+      /* ---------- what to avoid ---------- */
+      .avoid { border-top: 1px solid var(--line); padding: 24px 0 6px; }
+      .avoid h3 { margin: 0 0 10px; font-size: 1.18rem; color: var(--headline); }
+      .avoid p { margin: 0 0 8px; max-width: 68ch; }
+      .avoid strong { color: var(--accent-ink); }
+      .flags { display: flex; flex-wrap: wrap; gap: 8px; margin: 18px 0 6px; }
+      .flags span {
+        border: 1px solid var(--accent); border-radius: 999px; padding: 7px 13px;
+        font-size: .85rem; font-weight: 700; color: var(--accent-ink); background: rgba(255,255,255,.03);
+      }
+      .rules { margin: 16px 0 0; padding-left: 20px; max-width: 68ch; }
+      .rules li { margin-bottom: 10px; }
+
+      .handoff { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 30px; }
+      .btn-big {
+        display: inline-flex; align-items: center; min-height: 52px; padding: 12px 22px;
+        background: var(--accent); color: #fff; font-weight: 800; border-radius: 999px; text-decoration: none;
+      }
+      .btn-big:hover { background: var(--accent-ink); color: #1d2a20; }
+      .btn-ghost {
+        display: inline-flex; align-items: center; min-height: 52px; padding: 12px 22px;
+        border: 1px solid var(--line); color: var(--accent-ink); font-weight: 800; border-radius: 999px; text-decoration: none;
+      }
+
+      footer { border-top: 1px solid var(--line); margin-top: clamp(52px, 9vh, 88px); }
+      .foot-in { max-width: 860px; margin: 0 auto; padding: 34px var(--pad) 44px; color: var(--muted); font-size: .9rem; }
+      .foot-in p { margin: 0 0 9px; }
+      .back-link { font-weight: 800; display: inline-block; margin-bottom: 16px; }
+      .brand-line { color: var(--ink); font-weight: 700; }
+
+      /* ---------- Light theme: app-page tokens ---------- */
+      html[data-theme="light"] {
+        color-scheme: light;
+        --bg: #faf6ec; --surface: #fffdf7; --soft: #f3ecd7; --ink: #1d2a20;
+        --muted: #4c5a45; --line: #ddd3ba; --accent: #8a5f0e; --accent-ink: #7c520c;
+        --headline: #123524; --focus: #8a5f0e;
+      }
+      html[data-theme="light"] .hero {
+        background: radial-gradient(ellipse 90% 55% at 50% 112%, rgba(163,129,63,.30), transparent 60%),
+          linear-gradient(168deg, color-mix(in srgb, var(--d-a) 24%, #faf6ec), color-mix(in srgb, var(--d-a) 40%, #faf6ec) 55%, color-mix(in srgb, var(--d-a) 14%, #faf6ec));
+      }
+      html[data-theme="light"] .anchor-nav a, html[data-theme="light"] .flags span { background: rgba(29,42,32,.04); }
+      html[data-theme="light"] .btn-big { background: var(--accent); color: #fff; }
+      html[data-theme="light"] .btn-big:hover { background: var(--accent-ink); color: #fff; }
+
+      @media print { .anchor-nav { display: none; } }
+      @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+    </style>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"ItemList","name":"407 FYI places: Orlando Convention","numberOfItems":33,"itemListElement":[{"@type":"ListItem","position":1,"item":{"@type":"LocalBusiness","name":"Hyatt Regency Orlando","address":{"@type":"PostalAddress","streetAddress":"9801 International Dr","addressLocality":"Orlando","addressRegion":"FL","postalCode":"32819","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":28.428,"longitude":-81.46901},"priceRange":"$$$","category":"Hotels","url":"https://407.fyi/archive.html?venue=hyatt-regency-orlando"}},{"@type":"ListItem","position":2,"item":{"@type":"LocalBusiness","name":"Rosen Centre","address":{"@type":"PostalAddress","streetAddress":"9840 International Dr","addressLocality":"Orlando","addressRegion":"FL","postalCode":"32819","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":28.42205,"longitude":-81.46487},"priceRange":"$$","category":"Hotels","url":"https://407.fyi/archive.html?venue=rosen-centre"}},{"@type":"ListItem","position":3,"item":{"@type":"LocalBusiness","name":"Rosen Plaza","address":{"@type":"PostalAddress","streetAddress":"9700 International Dr","addressLocality":"Orlando","addressRegion":"FL","postalCode":"32819","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":28.43092,"longitude":-81.47127},"priceRange":"$$","category":"Hotels","url":"https://407.fyi/archive.html?venue=rosen-plaza"}},{"@type":"ListItem","position":4,"item":{"@type":"LocalBusiness","name":"Hilton Orlando","address":{"@type":"PostalAddress","streetAddress":"6001 Destination Pkwy","addressLocality":"Orlando","addressRegion":"FL","postalCode":"32819","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":28.42484,"longitude":-81.459},"priceRange":"$$$","category":"Hotels","url":"https://407.fyi/archive.html?venue=hilton-orlando"}},{"@type":"ListItem","position":5,"item":{"@type":"LocalBusiness","name":"Big Fin Seafood Kitchen","address":{"@type":"PostalAddress","streetAddress":"8046 Via Dellagio Way","addressLocality":"Orlando","addressRegion":"FL","postalCode":"32819","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":28.45052,"longitude":-81.49456},"priceRange":"$$$","category":"Seafood","url":"https://407.fyi/archive.html?venue=big-fin-seafood-kitchen"}},{"@type":"ListItem","position":6,"item":{"@type":"LocalBusiness","name":"Maggiano's Little Italy","address":{"@type":"PostalAddress","streetAddress":"9101 International Dr","addressLocality":"Orlando","addressRegion":"FL","postalCode":"32819","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":28.43299,"longitude":-81.47087},"priceRange":"$$","category":"Italian","url":"https://407.fyi/archive.html?venue=maggiano-s-pointe-orlando"}},{"@type":"ListItem","position":7,"item":{"@type":"LocalBusiness","name":"Café Tu Tu Tango","address":{"@type":"PostalAddress","streetAddress":"8625 International Dr","addressLocality":"Orlando","addressRegion":"FL","postalCode":"32819","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":28.44035,"longitude":-81.47002},"priceRange":"$$","category":"Restaurants","url":"https://407.fyi/archive.html?venue=cafe-tu-tu-tango"}},{"@type":"ListItem","position":8,"item":{"@type":"LocalBusiness","name":"Yard House","address":{"@type":"PostalAddress","streetAddress":"8367 International Dr","addressLocality":"Orlando","addressRegion":"FL","postalCode":"32819","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":28.44355,"longitude":-81.46992},"priceRange":"$","category":"American","url":"https://407.fyi/archive.html?venue=yard-house"}},{"@type":"ListItem","position":9,"item":{"@type":"LocalBusiness","name":"Rocco's Tacos & Tequila Bar","address":{"@type":"PostalAddress","streetAddress":"7468 W Sand Lake Rd","addressLocality":"Orlando","addressRegion":"FL","postalCode":"32819","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":28.44904,"longitude":-81.48433},"priceRange":"$$","category":"Mexican","url":"https://407.fyi/archive.html?venue=rocco-s-tacos-tequila-bar"}},{"@type":"ListItem","position":10,"item":{"@type":"LocalBusiness","name":"Norman's Orlando","address":{"@type":"PostalAddress","streetAddress":"7924 Via Dellagio Way","addressLocality":"Orlando","addressRegion":"FL","postalCode":"32819","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":28.45052,"longitude":-81.49178},"priceRange":"$$$$","category":"Fine dining & steak","url":"https://407.fyi/archive.html?venue=norman-s-orlando"}},{"@type":"ListItem","position":11,"item":{"@type":"LocalBusiness","name":"The Capital Grille","address":{"@type":"PostalAddress","streetAddress":"9101 International Dr","addressLocality":"Orlando","addressRegion":"FL","postalCode":"32819","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":28.43299,"longitude":-81.47087},"priceRange":"$$$$","category":"Fine dining & steak","url":"https://407.fyi/archive.html?venue=the-capital-grille-pointe-orlando"}},{"@type":"ListItem","position":12,"item":{"@type":"LocalBusiness","name":"Christini's Ristorante Italiano","address":{"@type":"PostalAddress","streetAddress":"7600 Dr Phillips Blvd","addressLocality":"Orlando","addressRegion":"FL","postalCode":"32819","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":28.45223,"longitude":-81.48999},"priceRange":"$$","category":"Italian","url":"https://407.fyi/archive.html?venue=christini-s-ristorante-italiano"}},{"@type":"ListItem","position":13,"item":{"@type":"LocalBusiness","name":"Chathams Place","address":{"@type":"PostalAddress","streetAddress":"Chatham's Place, 7575 Dr Phillips Blvd, Orlando, FL 32819-5149","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":28.44,"longitude":-81.48},"priceRange":"$$$$","category":"Fine dining & steak","url":"https://407.fyi/archive.html?venue=chathams"}},{"@type":"ListItem","position":14,"item":{"@type":"LocalBusiness","name":"Fleming's Prime Steakhouse & Wine Bar","address":{"@type":"PostalAddress","streetAddress":"8030 Via Dellagio Way","addressLocality":"Orlando","addressRegion":"FL","postalCode":"32819","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":28.45065,"longitude":-81.49421},"priceRange":"$$$$","category":"Fine dining & steak","url":"https://407.fyi/archive.html?venue=fleming-s-prime-steakhouse-sand-lake"}},{"@type":"ListItem","position":15,"item":{"@type":"LocalBusiness","name":"Keke's Breakfast Cafe","address":{"@type":"PostalAddress","streetAddress":"4192 Conroy Rd","addressLocality":"Orlando","addressRegion":"FL","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":28.4882,"longitude":-81.42965},"priceRange":"$","category":"Breakfast & brunch","url":"https://407.fyi/archive.html?venue=keke-s-breakfast-cafe"}},{"@type":"ListItem","position":16,"item":{"@type":"LocalBusiness","name":"Le Café de Paris","address":{"@type":"PostalAddress","streetAddress":"5170 Dr Phillips Blvd","addressLocality":"Orlando","addressRegion":"FL","postalCode":"32819","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":28.49041,"longitude":-81.49142},"priceRange":"$$","category":"Coffee & cafes","url":"https://407.fyi/archive.html?venue=le-cafe-de-paris"}},{"@type":"ListItem","position":17,"item":{"@type":"LocalBusiness","name":"Hash House A Go Go","address":{"@type":"PostalAddress","streetAddress":"5350 International Dr","addressLocality":"Orlando","addressRegion":"FL","postalCode":"32819","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":28.46241,"longitude":-81.45083},"priceRange":"$$","category":"Breakfast & brunch","url":"https://407.fyi/archive.html?venue=hash-house-a-go-go-orlando"}},{"@type":"ListItem","position":18,"item":{"@type":"LocalBusiness","name":"First Watch","address":{"@type":"PostalAddress","streetAddress":"11951 International Drive South Ste A","addressLocality":"Orlando","addressRegion":"FL","postalCode":"32821","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":28.39054,"longitude":-81.46797},"priceRange":"$","category":"Breakfast & brunch","url":"https://407.fyi/archive.html?venue=first-watch"}},{"@type":"ListItem","position":19,"item":{"@type":"LocalBusiness","name":"The Whiskey","address":{"@type":"PostalAddress","streetAddress":"7563 W Sand Lake Rd","addressLocality":"Orlando","addressRegion":"FL","postalCode":"32819","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":28.45056,"longitude":-81.48617},"priceRange":"$$","category":"Bars & lounges","url":"https://407.fyi/archive.html?venue=the-whiskey"}},{"@type":"ListItem","position":20,"item":{"@type":"LocalBusiness","name":"Vines by H","address":{"@type":"PostalAddress","streetAddress":"7533 W Sand Lake Rd","addressLocality":"Orlando","addressRegion":"FL","postalCode":"32819","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":28.45062,"longitude":-81.48527},"priceRange":"$$$","category":"Fine dining & steak","url":"https://407.fyi/archive.html?venue=vines-by-h"}},{"@type":"ListItem","position":21,"item":{"@type":"LocalBusiness","name":"Ole Red Orlando","address":{"@type":"PostalAddress","streetAddress":"8417 International Dr","addressLocality":"Orlando","addressRegion":"FL","postalCode":"32819","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":28.4429,"longitude":-81.4699},"priceRange":"$$","category":"Bars & lounges","url":"https://407.fyi/archive.html?venue=ole-red-orlando"}},{"@type":"ListItem","position":22,"item":{"@type":"LocalBusiness","name":"Tom's Watch Bar","address":{"@type":"PostalAddress","streetAddress":"8050 International Dr, Suite 1000","addressLocality":"Orlando","addressRegion":"FL","postalCode":"32819","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":28.448788,"longitude":-81.47128},"priceRange":"$$","category":"Bars & lounges","url":"https://407.fyi/archive.html?venue=toms-watch-bar-orlando"}},{"@type":"ListItem","position":23,"item":{"@type":"LocalBusiness","name":"Mango's Tropical Cafe","address":{"@type":"PostalAddress","streetAddress":"Mango's Tropical Cafe, 8126 International Dr, Orlando, FL 32819-9323","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":28.448,"longitude":-81.471},"priceRange":"$$$","category":"Latin & Caribbean","url":"https://407.fyi/archive.html?venue=mangos"}},{"@type":"ListItem","position":24,"item":{"@type":"LocalBusiness","name":"ICON Park & The Orlando Eye","address":{"@type":"PostalAddress","streetAddress":"8375 International Dr","addressLocality":"Orlando","addressRegion":"FL","postalCode":"32819","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":28.443,"longitude":-81.469},"priceRange":"$$","category":"Attractions","url":"https://407.fyi/archive.html?venue=icon-park"}},{"@type":"ListItem","position":25,"item":{"@type":"LocalBusiness","name":"Madame Tussauds Orlando","address":{"@type":"PostalAddress","streetAddress":"8387 International Dr","addressLocality":"Orlando","addressRegion":"FL","postalCode":"32819","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":28.44386,"longitude":-81.46856},"priceRange":"$$","category":"Attractions","url":"https://407.fyi/archive.html?venue=madame-tussauds-orlando"}},{"@type":"ListItem","position":26,"item":{"@type":"LocalBusiness","name":"WonderWorks Orlando","address":{"@type":"PostalAddress","streetAddress":"9067 International Dr","addressLocality":"Orlando","addressRegion":"FL","postalCode":"32819","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":28.43382,"longitude":-81.47149},"priceRange":"$$","category":"Attractions","url":"https://407.fyi/archive.html?venue=wonderworks-orlando"}},{"@type":"ListItem","position":27,"item":{"@type":"LocalBusiness","name":"Andretti Indoor Karting and Games","address":{"@type":"PostalAddress","streetAddress":"9299 Universal Blvd","addressLocality":"Orlando","addressRegion":"FL","postalCode":"32819","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":28.43434,"longitude":-81.46418},"priceRange":"$$","category":"Attractions","url":"https://407.fyi/archive.html?venue=andretti-indoor-karting-orlando"}},{"@type":"ListItem","position":28,"item":{"@type":"LocalBusiness","name":"Dezerland Park Orlando","address":{"@type":"PostalAddress","streetAddress":"5250 International Dr","addressLocality":"Orlando","addressRegion":"FL","postalCode":"32819","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":28.46861,"longitude":-81.44808},"priceRange":"$$","category":"Attractions","url":"https://407.fyi/archive.html?venue=dezerland-park-orlando"}},{"@type":"ListItem","position":29,"item":{"@type":"LocalBusiness","name":"Disney Character Warehouse","address":{"@type":"PostalAddress","streetAddress":"4969 International Dr","addressLocality":"Orlando","addressRegion":"FL","postalCode":"32819","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":28.4754,"longitude":-81.45081},"priceRange":"$","category":"Markets & shops","url":"https://407.fyi/archive.html?venue=disney-character-warehouse"}},{"@type":"ListItem","position":30,"item":{"@type":"LocalBusiness","name":"Orlando International Premium Outlets","address":{"@type":"PostalAddress","streetAddress":"4951 International Dr","addressLocality":"Orlando","addressRegion":"FL","postalCode":"32819","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":28.474603,"longitude":-81.451547},"priceRange":"$$","category":"Markets & shops","url":"https://407.fyi/archive.html?venue=orlando-international-premium-outlets"}},{"@type":"ListItem","position":31,"item":{"@type":"LocalBusiness","name":"Orlando Vineland Premium Outlets","address":{"@type":"PostalAddress","streetAddress":"8200 Vineland Ave","addressLocality":"Orlando","addressRegion":"FL","postalCode":"32821","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":28.387177,"longitude":-81.49237},"priceRange":"$$","category":"Markets & shops","url":"https://407.fyi/archive.html?venue=orlando-vineland-premium-outlets"}},{"@type":"ListItem","position":32,"item":{"@type":"LocalBusiness","name":"Lake Buena Vista Factory Stores","address":{"@type":"PostalAddress","streetAddress":"15657 S Apopka Vineland Rd","addressLocality":"Orlando","addressRegion":"FL","postalCode":"32821","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":28.35067,"longitude":-81.48765},"priceRange":"$$","category":"Markets & shops","url":"https://407.fyi/archive.html?venue=lake-buena-vista-factory-stores"}},{"@type":"ListItem","position":33,"item":{"@type":"LocalBusiness","name":"Orlando Outlet Marketplace","address":{"@type":"PostalAddress","streetAddress":"5269 International Dr","addressLocality":"Orlando","addressRegion":"FL","postalCode":"32819","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":28.46807,"longitude":-81.45241},"priceRange":"$$","category":"Markets & shops","url":"https://407.fyi/archive.html?venue=orlando-outlet-marketplace"}}]}</script>
+  </head>
+  <body>
+    <header class="hero">
+      <div class="hero-in">
+        <p class="crumbs"><a href="/">407 FYI</a> · Privacy</p>
+        <a class="hero-brand" href="/">407 FYI · Privacy</a>
+        <h1>Privacy, in plain terms</h1>
+        <p class="sub">407 FYI is a free guide with no accounts and nothing to sign up for. This page says exactly what leaves your device when you use it, and what never does.</p>
+        <nav class="anchor-nav" aria-label="On this page">
+          <a href="#collect">What we collect</a>
+          <a href="#analytics">Analytics</a>
+          <a href="#crashes">Crash reports</a>
+          <a href="#servers">Map and fonts</a>
+          <a href="#device">Your browser</a>
+          <a href="#partners">Partner sites</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="sec" id="collect">
+        <p class="kicker">The Short Version</p>
+        <h2>We do not collect who you are</h2>
+        <p class="lede">We don't run accounts and we don't collect your name, email, or phone number. There is no sign-up, no login, and no comment system anywhere in the guide.</p>
+        <p>If you email us a correction, we see the address you wrote from, because that is how email works. Nothing on the site itself asks you for personal details.</p>
+      </section>
+
+      <section class="sec" id="analytics">
+        <p class="kicker">Analytics</p>
+        <h2>What the counters see</h2>
+        <p class="lede">We use PostHog to count how the guide is used: page views and taps, which places get opened, which outbound buttons get tapped, and the words typed into the finder's search box.</p>
+        <p>Search words are recorded as text, because a search for brunch and a search for wheelchair access tell us different things about what to fix first. Analytics runs without accounts, sets no advertising trackers, and is never sold or handed to an advertising network.</p>
+      </section>
+
+      <section class="sec" id="crashes">
+        <p class="kicker">Crash Reports</p>
+        <h2>When something breaks</h2>
+        <p class="lede">Crash reports go through Sentry. They tell us what broke and on what kind of device, so we can fix it.</p>
+        <p>The reports are configured to carry no personal data: no names, no email addresses, no form entries, nothing you typed.</p>
+      </section>
+
+      <section class="sec" id="servers">
+        <p class="kicker">Other Servers</p>
+        <h2>The map and the fonts</h2>
+        <p class="lede">Two parts of the site load files from other people's servers, and any server that sends your device a file can see its internet address. Both are named here rather than buried.</p>
+        <p>If you open the map view in the finder, the map tiles load from OpenStreetMap's servers. The site's web fonts currently load from Google Fonts. Self-hosting those fonts is on our list, and this page will change when it happens.</p>
+      </section>
+
+      <section class="sec" id="device">
+        <p class="kicker">Your Browser</p>
+        <h2>What stays on your device</h2>
+        <p class="lede">Your display preference, light or dark, and your finder filter settings are stored in your own browser so the guide remembers them between visits. They never leave your device.</p>
+        <p>If you tap "Near me," your location is used on your device to sort places by distance. It is not stored by us, not sent to our analytics, and not sold to anyone.</p>
+      </section>
+
+      <section class="sec" id="partners">
+        <p class="kicker">Leaving the Guide</p>
+        <h2>Partner sites</h2>
+        <p class="lede">Ticket, hotel, and dining buttons open partner sites, including Viator, GetYourGuide, Hotels.com, and inKind.</p>
+        <p>Once you leave 407 FYI, those sites run under their own privacy policies, not this one. Questions about anything on this page go to the same inbox as corrections: <a href="mailto:mail@407.fyi?subject=407%20FYI%20privacy">mail@407.fyi</a>.</p>
+        <p><em>Last updated October 2026.</em></p>
+      </section>
+    </main>
+
+    <footer>
+      <div class="foot-in">
+        <a class="back-link" href="/">&larr; Back to the full guide</a>
+        <p class="brand-line">407 FYI, an independent Orlando guide. Details can change; confirm before you go.</p>
+        <p>Hand-verified Orlando places · Checked October 2026 · Local Picks are never sponsored · Corrections: <a href="mailto:mail@407.fyi">mail@407.fyi</a></p>
+        <p>Some links on 407 FYI are affiliate or referral links. We may earn a commission or credit at no extra cost to you. They never affect which places we list, rank, or recommend.</p>
+        <p><a href="/privacy.html">Privacy</a></p>
+      </div>
+    </footer>
+  </body>
+</html>

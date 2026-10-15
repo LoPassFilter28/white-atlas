@@ -5,9 +5,11 @@
 ## Main pages
 
 - [407 FYI home](https://407.fyi/): The full guide: search all 647 venues by name, category, district, price, and occasion (family, date night, groups, convention).
-- [Orlando convention guide](https://407.fyi/convention.html): The convention center companion: the concourses and connected hotels, parking and logistics, and convention picks around International Drive.
 - [The full finder](https://407.fyi/archive.html): Search and filter all 647 venues by name, category, district, price, and occasion, with a map view.
+- [Orlando convention guide](https://407.fyi/convention.html): The convention center companion: the concourses and connected hotels, parking and logistics, and convention picks around International Drive.
 - [What's new](https://407.fyi/whats-new.html): Recent additions and changes to the guide.
+- [Links](https://407.fyi/links.html): The short link page: the full guide, what is new, and the district guides in one list.
+- [Privacy](https://407.fyi/privacy.html): What 407 FYI collects and what it does not, in plain terms.
 
 ## District guides
 
@@ -24,6 +26,41 @@
 - [Audubon Park](https://407.fyi/audubon-park-district-guide.html)
 - [College Park](https://407.fyi/college-park-district-guide.html)
 
+## District finder pages
+
+- [Downtown Orlando finder page](https://407.fyi/downtown-orlando-finder.html)
+- [Winter Park finder page](https://407.fyi/winter-park-finder.html)
+- [International Drive finder page](https://407.fyi/international-drive-finder.html)
+- [Mills 50 finder page](https://407.fyi/mills-50-finder.html)
+- [Milk District finder page](https://407.fyi/milk-district-finder.html)
+- [Thornton Park finder page](https://407.fyi/thornton-park-finder.html)
+- [Ivanhoe Village finder page](https://407.fyi/ivanhoe-village-finder.html)
+- [Disney Springs finder page](https://407.fyi/disney-springs-finder.html)
+- [Universal finder page](https://407.fyi/universal-finder.html)
+- [Lake Nona finder page](https://407.fyi/lake-nona-finder.html)
+- [Audubon Park finder page](https://407.fyi/audubon-park-finder.html)
+- [College Park finder page](https://407.fyi/college-park-finder.html)
+- [Disney Area finder page](https://407.fyi/disney-area-finder.html)
+- [UCF finder page](https://407.fyi/ucf-finder.html)
+- [Kissimmee finder page](https://407.fyi/kissimmee-finder.html)
+- [Baldwin Park finder page](https://407.fyi/baldwin-park-finder.html)
+- [Winter Garden finder page](https://407.fyi/winter-garden-finder.html)
+- [Sanford finder page](https://407.fyi/sanford-finder.html)
+- [Maitland finder page](https://407.fyi/maitland-finder.html)
+- [Oviedo finder page](https://407.fyi/oviedo-finder.html)
+- [Hourglass finder page](https://407.fyi/hourglass-finder.html)
+- [SoDo finder page](https://407.fyi/sodo-finder.html)
+- [More Orlando finder page](https://407.fyi/more-orlando-finder.html)
+
+## Scenario guides
+
+- [Family on I-Drive](https://407.fyi/i-drive-family-guide.html)
+- [Date night on I-Drive](https://407.fyi/i-drive-date-night-guide.html)
+- [Groups on I-Drive](https://407.fyi/i-drive-groups-guide.html)
+- [Groups downtown](https://407.fyi/downtown-groups-guide.html)
+- [Date night in Winter Park](https://407.fyi/winter-park-date-night-guide.html)
+- [Family at Universal](https://407.fyi/universal-family-guide.html)
+
 ## Data
 
 - [Venue dataset (JSON)](https://407.fyi/places.json): The machine-readable dataset behind the guide: name, district, category, price, address, description, and tags for all 647 venues.
@@ -32,4 +69,4 @@
 ## About
 
 - Contact and correction reports: mail@407.fyi
-- 407 FYI is independent and is not affiliated with the venues it lists. Affiliate links, where present, attach only to tourist attraction listings and never affect which venues are picked or how they are ordered.
+- 407 FYI is independent and is not affiliated with the venues it lists. Affiliate and referral links attach to attraction, dining, and hotel listings and never affect which places are listed or their order.
