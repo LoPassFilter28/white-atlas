@@ -16,9 +16,8 @@
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <link rel="manifest" href="/site.webmanifest" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Urbanist:wght@600;700;800&amp;display=swap" rel="stylesheet" />
+    <link rel="preload" href="/fonts/manrope-latin.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="/fonts/fonts.css" />
     <script>
       try {
         const savedTheme = localStorage.getItem('white-atlas-theme');
@@ -213,8 +212,8 @@
       <section class="sec" id="servers">
         <p class="kicker">Other Servers</p>
         <h2>The map and the fonts</h2>
-        <p class="lede">Two parts of the site load files from other people's servers, and any server that sends your device a file can see its internet address. Both are named here rather than buried.</p>
-        <p>If you open the map view in the finder, the map tiles load from OpenStreetMap's servers. The site's web fonts currently load from Google Fonts. Self-hosting those fonts is on our list, and this page will change when it happens.</p>
+        <p class="lede">One part of the site loads files from another organization's servers, and any server that sends your device a file can see its internet address. It is named here rather than buried.</p>
+        <p>If you open the map view in the finder, the map tiles load from OpenStreetMap's servers. The site's web fonts are self-hosted: the font files load from this site's own server, so your browser does not contact a font service to display them.</p>
       </section>
 
       <section class="sec" id="device">
