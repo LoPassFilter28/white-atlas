@@ -147,14 +147,7 @@
       .pullquote .mark { color: var(--accent-ink); }
 
       /* ---------- split: short list + point map ---------- */
-      .split { max-width: 1120px; margin: 0 auto; padding: clamp(72px, 15vh, 150px) var(--pad); display: grid; grid-template-columns: 1fr 1fr; gap: clamp(28px, 5vw, 64px); align-items: center; }
-      .minimap { background: var(--surface); border: 1px solid var(--line); border-radius: 20px; padding: 14px; }
-      .minimap-art { display: block; width: 100%; height: auto; }
-      .minimap-art .pt { fill: var(--accent-ink); opacity: .35; }
-      .minimap-art .ave-line { stroke: var(--d-c); stroke-width: 2; opacity: .4; }
-      .minimap-art .ave-label { fill: var(--muted); font-family: "Urbanist", sans-serif; font-size: 12.5px; letter-spacing: .34em; text-anchor: middle; }
-      .minimap-art .marker circle { fill: var(--accent-ink); }
-      .minimap-art .marker text { fill: var(--g-panel); font-family: "Urbanist", sans-serif; font-weight: 800; font-size:12.5px; text-anchor: middle; }
+      .split { max-width: 820px; margin: 0 auto; padding: clamp(72px, 15vh, 150px) var(--pad); display: grid; grid-template-columns: 1fr; gap: clamp(28px, 5vw, 64px); align-items: center; }
       .split .lede { color: var(--muted); margin: 0 0 10px; font-size:1.06rem; }
       .ave-row {
         display: flex; align-items: baseline; gap: 14px; padding: 17px 4px;
@@ -310,7 +303,7 @@
       html[data-theme="light"] .glide-card { background: rgba(255, 253, 247, .94); box-shadow: 0 30px 70px rgba(29, 42, 32, .22); }
       html[data-theme="light"] .venue-btn, html[data-theme="light"] .btn-big { background: var(--accent); color: #fff; }
       html[data-theme="light"] .venue-btn:hover, html[data-theme="light"] .btn-big:hover { background: var(--accent-ink); }
-      html[data-theme="light"] .minimap-art .marker text { fill: #fffdf7; }
+      html[data-theme="light"]
       @media (min-width: 1561px) {
         html[data-theme="light"] .glide-bg.a1 { background: radial-gradient(900px 620px at calc(50% - 520px) 110%, rgba(163,129,63,.30), transparent 62%), linear-gradient(155deg, color-mix(in srgb, var(--d-a) 30%, #faf6ec), color-mix(in srgb, var(--d-a) 46%, #faf6ec) 58%, color-mix(in srgb, var(--d-a) 22%, #faf6ec)); }
         html[data-theme="light"] .glide-bg.b1 { background: radial-gradient(900px 620px at calc(50% + 400px) -10%, rgba(163,129,63,.26), transparent 60%), linear-gradient(205deg, color-mix(in srgb, var(--d-a) 34%, #faf6ec), color-mix(in srgb, var(--d-a) 48%, #faf6ec) 60%, color-mix(in srgb, var(--d-a) 24%, #faf6ec)); }
@@ -387,7 +380,6 @@
 
       <!-- 6 · SPLIT, the Avenue itself -->
       <section class="split" id="avenue">
-        <div class="minimap reveal"><svg class="minimap-art" viewBox="0 0 560 640" role="img" aria-label="Stylised point map of Park Avenue venues: 1 Prato, 2 The Glass Knife, 3 Casa Feliz"><line class="ave-line" x1="298" y1="38" x2="298" y2="602"/><text class="ave-label" transform="rotate(-90 286 320)" x="286" y="320">PARK AVENUE</text><g><circle class="pt" cx="304" cy="333" r="2.6"/><circle class="pt" cx="323" cy="486" r="2.6"/><circle class="pt" cx="304" cy="205" r="2.6"/><circle class="pt" cx="190" cy="461" r="2.6"/><circle class="pt" cx="310" cy="370" r="2.6"/><circle class="pt" cx="323" cy="358" r="2.6"/><circle class="pt" cx="323" cy="333" r="2.6"/><circle class="pt" cx="91" cy="398" r="2.6"/><circle class="pt" cx="323" cy="486" r="2.6"/><circle class="pt" cx="29" cy="505" r="2.6"/><circle class="pt" cx="133" cy="410" r="2.6"/><circle class="pt" cx="247" cy="410" r="2.6"/><circle class="pt" cx="204" cy="338" r="2.6"/><circle class="pt" cx="361" cy="282" r="2.6"/><circle class="pt" cx="323" cy="486" r="2.6"/><circle class="pt" cx="305" cy="222" r="2.6"/><circle class="pt" cx="308" cy="293" r="2.6"/><circle class="pt" cx="307" cy="321" r="2.6"/><circle class="pt" cx="313" cy="384" r="2.6"/><circle class="pt" cx="305" cy="222" r="2.6"/><circle class="pt" cx="370" cy="344" r="2.6"/><circle class="pt" cx="444" cy="321" r="2.6"/><circle class="pt" cx="279" cy="343" r="2.6"/><circle class="pt" cx="306" cy="341" r="2.6"/><circle class="pt" cx="306" cy="358" r="2.6"/><circle class="pt" cx="48" cy="295" r="2.6"/><circle class="pt" cx="202" cy="414" r="2.6"/><circle class="pt" cx="183" cy="420" r="2.6"/><circle class="pt" cx="308" cy="328" r="2.6"/><circle class="pt" cx="307" cy="303" r="2.6"/><circle class="pt" cx="314" cy="358" r="2.6"/><circle class="pt" cx="309" cy="357" r="2.6"/><circle class="pt" cx="308" cy="390" r="2.6"/><circle class="pt" cx="210" cy="335" r="2.6"/><circle class="pt" cx="42" cy="313" r="2.6"/><circle class="pt" cx="40" cy="297" r="2.6"/><circle class="pt" cx="305" cy="296" r="2.6"/><circle class="pt" cx="306" cy="330" r="2.6"/><circle class="pt" cx="71" cy="176" r="2.6"/><circle class="pt" cx="319" cy="284" r="2.6"/><circle class="pt" cx="80" cy="404" r="2.6"/><circle class="pt" cx="24" cy="281" r="2.6"/><circle class="pt" cx="311" cy="290" r="2.6"/><circle class="pt" cx="307" cy="338" r="2.6"/><circle class="pt" cx="310" cy="282" r="2.6"/><circle class="pt" cx="275" cy="268" r="2.6"/><circle class="pt" cx="78" cy="556" r="2.6"/><circle class="pt" cx="308" cy="253" r="2.6"/><circle class="pt" cx="23" cy="540" r="2.6"/><circle class="pt" cx="214" cy="343" r="2.6"/><circle class="pt" cx="317" cy="398" r="2.6"/><circle class="pt" cx="44" cy="303" r="2.6"/><circle class="pt" cx="45" cy="392" r="2.6"/><circle class="pt" cx="197" cy="344" r="2.6"/><circle class="pt" cx="30" cy="381" r="2.6"/><circle class="pt" cx="305" cy="223" r="2.6"/></g><g class="marker"><circle cx="304" cy="307" r="13"/><text x="304" y="312">1</text></g><g class="marker"><circle cx="133" cy="486" r="13"/><text x="133" y="491">2</text></g><g class="marker"><circle cx="329" cy="142" r="13"/><text x="329" y="146">3</text></g></svg></div>
         <div class="reveal">
           <p class="kicker">On Foot</p>
           <h2>The Avenue Itself</h2>

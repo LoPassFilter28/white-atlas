@@ -147,14 +147,7 @@
       .pullquote .mark { color: var(--accent-ink); }
 
       /* ---------- split: short list + point map ---------- */
-      .split { max-width: 1120px; margin: 0 auto; padding: clamp(72px, 15vh, 150px) var(--pad); display: grid; grid-template-columns: 1fr 1fr; gap: clamp(28px, 5vw, 64px); align-items: center; }
-      .minimap { background: var(--surface); border: 1px solid var(--line); border-radius: 20px; padding: 14px; }
-      .minimap-art { display: block; width: 100%; height: auto; }
-      .minimap-art .pt { fill: var(--accent-ink); opacity: .35; }
-      .minimap-art .ave-line { stroke: var(--d-c); stroke-width: 2; opacity: .4; }
-      .minimap-art .ave-label { fill: var(--muted); font-family: "Urbanist", sans-serif; font-size: 12.5px; letter-spacing: .34em; text-anchor: middle; }
-      .minimap-art .marker circle { fill: var(--accent-ink); }
-      .minimap-art .marker text { fill: var(--g-panel); font-family: "Urbanist", sans-serif; font-weight: 800; font-size:12.5px; text-anchor: middle; }
+      .split { max-width: 820px; margin: 0 auto; padding: clamp(72px, 15vh, 150px) var(--pad); display: grid; grid-template-columns: 1fr; gap: clamp(28px, 5vw, 64px); align-items: center; }
       .split .lede { color: var(--muted); margin: 0 0 10px; font-size:1.06rem; }
       .ave-row {
         display: flex; align-items: baseline; gap: 14px; padding: 17px 4px;
@@ -310,7 +303,7 @@
       html[data-theme="light"] .glide-card { background: rgba(255, 253, 247, .94); box-shadow: 0 30px 70px rgba(29, 42, 32, .22); }
       html[data-theme="light"] .venue-btn, html[data-theme="light"] .btn-big { background: var(--accent); color: #fff; }
       html[data-theme="light"] .venue-btn:hover, html[data-theme="light"] .btn-big:hover { background: var(--accent-ink); }
-      html[data-theme="light"] .minimap-art .marker text { fill: #fffdf7; }
+      html[data-theme="light"]
       @media (min-width: 1561px) {
         html[data-theme="light"] .glide-bg.a1 { background: radial-gradient(900px 620px at calc(50% - 520px) 110%, rgba(163,129,63,.30), transparent 62%), linear-gradient(155deg, color-mix(in srgb, var(--d-a) 30%, #faf6ec), color-mix(in srgb, var(--d-a) 46%, #faf6ec) 58%, color-mix(in srgb, var(--d-a) 22%, #faf6ec)); }
         html[data-theme="light"] .glide-bg.b1 { background: radial-gradient(900px 620px at calc(50% + 400px) -10%, rgba(163,129,63,.26), transparent 60%), linear-gradient(205deg, color-mix(in srgb, var(--d-a) 34%, #faf6ec), color-mix(in srgb, var(--d-a) 48%, #faf6ec) 60%, color-mix(in srgb, var(--d-a) 24%, #faf6ec)); }
@@ -381,7 +374,6 @@
       </section>
       <!-- SPLIT, the short list -->
       <section class="split" id="short-list">
-        <div class="minimap reveal"><svg class="minimap-art" viewBox="0 0 560 640" role="img" aria-label="Stylised point map of Downtown Orlando venues: 1 The Robinson Cocktail Room, 2 Fixtion Restaurant &amp; Bar, 3 Wall Street Plaza"><g><circle class="pt" cx="432" cy="509" r="2.6"/><circle class="pt" cx="404" cy="608" r="2.6"/><circle class="pt" cx="512" cy="394" r="2.6"/><circle class="pt" cx="347" cy="443" r="2.6"/><circle class="pt" cx="361" cy="351" r="2.6"/><circle class="pt" cx="376" cy="542" r="2.6"/><circle class="pt" cx="205" cy="575" r="2.6"/><circle class="pt" cx="319" cy="542" r="2.6"/><circle class="pt" cx="517" cy="378" r="2.6"/><circle class="pt" cx="335" cy="8" r="2.6"/><circle class="pt" cx="376" cy="49" r="2.6"/><circle class="pt" cx="208" cy="330" r="2.6"/><circle class="pt" cx="347" cy="476" r="2.6"/><circle class="pt" cx="319" cy="213" r="2.6"/><circle class="pt" cx="347" cy="476" r="2.6"/><circle class="pt" cx="347" cy="246" r="2.6"/><circle class="pt" cx="552" cy="428" r="2.6"/><circle class="pt" cx="340" cy="489" r="2.6"/><circle class="pt" cx="350" cy="504" r="2.6"/><circle class="pt" cx="336" cy="422" r="2.6"/><circle class="pt" cx="301" cy="521" r="2.6"/><circle class="pt" cx="357" cy="313" r="2.6"/><circle class="pt" cx="279" cy="465" r="2.6"/><circle class="pt" cx="8" cy="519" r="2.6"/><circle class="pt" cx="394" cy="441" r="2.6"/><circle class="pt" cx="43" cy="509" r="2.6"/><circle class="pt" cx="353" cy="432" r="2.6"/><circle class="pt" cx="8" cy="557" r="2.6"/><circle class="pt" cx="430" cy="632" r="2.6"/><circle class="pt" cx="521" cy="8" r="2.6"/><circle class="pt" cx="395" cy="415" r="2.6"/><circle class="pt" cx="382" cy="495" r="2.6"/><circle class="pt" cx="386" cy="502" r="2.6"/><circle class="pt" cx="340" cy="441" r="2.6"/><circle class="pt" cx="356" cy="477" r="2.6"/><circle class="pt" cx="342" cy="507" r="2.6"/><circle class="pt" cx="349" cy="442" r="2.6"/><circle class="pt" cx="341" cy="415" r="2.6"/><circle class="pt" cx="381" cy="591" r="2.6"/><circle class="pt" cx="465" cy="482" r="2.6"/><circle class="pt" cx="369" cy="513" r="2.6"/><circle class="pt" cx="340" cy="489" r="2.6"/><circle class="pt" cx="342" cy="509" r="2.6"/><circle class="pt" cx="340" cy="542" r="2.6"/><circle class="pt" cx="336" cy="525" r="2.6"/><circle class="pt" cx="126" cy="581" r="2.6"/><circle class="pt" cx="336" cy="525" r="2.6"/><circle class="pt" cx="205" cy="575" r="2.6"/></g><g class="marker"><circle cx="353" cy="464" r="13"/><text x="353" y="468">2</text></g><g class="marker"><circle cx="360" cy="457" r="13"/><text x="360" y="461">3</text></g><g class="marker"><circle cx="380" cy="495" r="13"/><text x="380" y="499">1</text></g></svg></div>
         <div class="reveal">
           <p class="kicker">The Short List</p>
           <h2>Three to Start</h2>
