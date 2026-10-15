@@ -1,0 +1,35 @@
+# 407 FYI
+
+> 407 FYI is an independent, locally run guide to Orlando, Florida. It lists 647 hand-verified restaurants, bars, coffee shops, attractions, shops, and hotels across Orlando and its neighborhoods, written in a local's voice for visitors and residents. Local Picks are 100 percent editorial and unsponsored. The guide deliberately does not list opening hours.
+
+## Main pages
+
+- [407 FYI home](https://407.fyi/): The full guide: search all 647 venues by name, category, district, price, and occasion (family, date night, groups, convention).
+- [Orlando convention guide](https://407.fyi/convention.html): The convention center companion: the concourses and connected hotels, parking and logistics, and convention picks around International Drive.
+- [What visitors Google about Orlando](https://407.fyi/what-visitors-google-orlando.html): Answers to the questions visitors actually search for, grounded in the guide's venue data.
+- [What's new](https://407.fyi/whats-new.html): Recent additions and changes to the guide.
+
+## District guides
+
+- [Downtown Orlando](https://407.fyi/downtown-orlando-district-guide.html)
+- [Winter Park](https://407.fyi/winter-park-district-guide.html)
+- [Disney Springs](https://407.fyi/disney-springs-district-guide.html)
+- [International Drive](https://407.fyi/international-drive-district-guide.html)
+- [Mills 50](https://407.fyi/mills-50-district-guide.html)
+- [Milk District](https://407.fyi/milk-district-guide.html)
+- [Thornton Park](https://407.fyi/thornton-park-district-guide.html)
+- [Ivanhoe Village](https://407.fyi/ivanhoe-village-district-guide.html)
+- [Lake Nona](https://407.fyi/lake-nona-district-guide.html)
+- [Universal area](https://407.fyi/universal-district-guide.html)
+- [Audubon Park](https://407.fyi/audubon-park-district-guide.html)
+- [College Park](https://407.fyi/college-park-district-guide.html)
+
+## Data
+
+- [Venue dataset (JSON)](https://407.fyi/places.json): The machine-readable dataset behind the guide: name, district, category, price, address, description, and tags for all 647 venues.
+- [Sitemap](https://407.fyi/sitemap.xml)
+
+## About
+
+- Contact and correction reports: mail@407.fyi
+- 407 FYI is independent and is not affiliated with the venues it lists. Affiliate links, where present, attach only to tourist attraction listings and never affect which venues are picked or how they are ordered.
