@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
     <meta name="color-scheme" content="light dark" />
     <title>SoDo Finder &middot; 407 FYI</title>
-    <meta name="description" content="The 407 FYI finder page for SoDo: every hand-verified place in the district with full cards, addresses, descriptions and directions." />
+    <meta name="description" content="South of downtown, Orange Avenue does the work. The full SoDo list with full cards, addresses, descriptions and directions, on 407 FYI." />
     <link rel="canonical" href="https://407.fyi/sodo-finder.html" />
     <meta property="og:title" content="SoDo Finder &middot; 407 FYI" />
-    <meta property="og:description" content="The 407 FYI finder page for SoDo: every hand-verified place in the district with full cards, addresses, descriptions and directions." />
+    <meta property="og:description" content="South of downtown, Orange Avenue does the work. The full SoDo list with full cards, addresses, descriptions and directions, on 407 FYI." />
     <meta property="og:type" content="article" />
     <meta property="og:url" content="https://407.fyi/sodo-finder.html" />
     <meta property="og:image" content="https://407.fyi/og-image.png" />
@@ -16,6 +16,7 @@
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <link rel="manifest" href="/site.webmanifest" />
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"407 FYI","item":"https://407.fyi/"},{"@type":"ListItem","position":2,"name":"SoDo","item":"https://407.fyi/sodo-finder.html"}]}</script>
     <link rel="preload" href="/fonts/manrope-latin.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="stylesheet" href="/fonts/fonts.css" />
 <script>
@@ -199,26 +200,67 @@
       .strip a:hover { border-color: var(--accent-ink); }
       .strip a[aria-current="page"] { border-color: var(--accent-ink); color: var(--headline); }
       html[data-theme="light"] .badge, html[data-theme="light"] .strip a { background: rgba(29,42,32,.04); }
+      /* ---------- Phase 4 additions ---------- */
+      .crumbs [aria-current="page"] { color: var(--ink); font-weight: 700; }
+      .grouphead {
+        font-family: "Urbanist", sans-serif; font-size: 1.35rem; color: var(--headline);
+        margin: 30px 0 0; letter-spacing: .01em;
+      }
+      .vlist .grouphead:first-child { margin-top: 0; }
+      .checked {
+        max-width: 860px; margin: 0 auto; padding: 34px var(--pad) 64px;
+        color: var(--muted); font-size: .85rem;
+      }
     </style>
     <script type="application/ld+json">{"@context":"https://schema.org","@type":"ItemList","name":"407 FYI places: SoDo","numberOfItems":7,"itemListElement":[{"@type":"ListItem","position":1,"item":{"@type":"LocalBusiness","name":"Peach Valley Cafe","address":{"@type":"PostalAddress","streetAddress":"Peach Valley Cafe, 2849 S Orange Ave, Orlando, FL 32806-5403","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":28.55,"longitude":-81.37},"priceRange":"$$","category":"Breakfast & brunch","url":"https://407.fyi/archive.html?venue=peach-valley"}},{"@type":"ListItem","position":2,"item":{"@type":"LocalBusiness","name":"MOOYAH Burgers, Fries & Shakes","address":{"@type":"PostalAddress","streetAddress":"3155 S Orange Ave","addressLocality":"Orlando","addressRegion":"FL","postalCode":"32806","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":28.50859,"longitude":-81.37477},"priceRange":"$","category":"Burgers & sandwiches","url":"https://407.fyi/archive.html?venue=mooyah-burgers-fries-shakes"}},{"@type":"ListItem","position":3,"item":{"@type":"LocalBusiness","name":"The Juicy Crab","address":{"@type":"PostalAddress","streetAddress":"296 E Michigan St","addressLocality":"Orlando","addressRegion":"FL","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":28.51209,"longitude":-81.37423},"priceRange":"$","category":"Seafood","url":"https://407.fyi/archive.html?venue=the-juicy-crab"}},{"@type":"ListItem","position":4,"item":{"@type":"LocalBusiness","name":"Clean Eatz","address":{"@type":"PostalAddress","streetAddress":"Clean Eatz, 2205 Orange Ave S, Orlando, FL 32806-3038","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":28.51724,"longitude":-81.37611},"priceRange":"$$","category":"Restaurants","url":"https://407.fyi/archive.html?venue=clean-eatz"}},{"@type":"ListItem","position":5,"item":{"@type":"LocalBusiness","name":"Rockpit Brewing","address":{"@type":"PostalAddress","streetAddress":"Rockpit Brewing, 10 W Illiana St, Orlando, FL 32806-4408, United States","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":28.51077,"longitude":-81.3769},"priceRange":"$$","category":"Breweries","url":"https://407.fyi/archive.html?venue=rockpit-brewing"}},{"@type":"ListItem","position":6,"item":{"@type":"LocalBusiness","name":"The Smoothie Room","address":{"@type":"PostalAddress","streetAddress":"The Smoothie Room, 25 W Crystal Lake St, Orlando, FL 32806-4403, United States","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":28.51522,"longitude":-81.37768},"priceRange":"$$","category":"Coffee & cafes","url":"https://407.fyi/archive.html?venue=the-smoothie-room"}},{"@type":"ListItem","position":7,"item":{"@type":"LocalBusiness","name":"Zaza Cuban Comfort Food","address":{"@type":"PostalAddress","streetAddress":"1621 S Orange Ave","addressLocality":"Orlando","addressRegion":"FL","postalCode":"32806","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":28.525,"longitude":-81.376},"priceRange":"$","category":"Latin & Caribbean","url":"https://407.fyi/archive.html?venue=zaza-cuban-comfort-food"}}]}</script>
   </head>
   <body>
     <header class="hero">
       <div class="hero-in">
-        <p class="crumbs"><a href="/">407 FYI</a> &middot; District Finder</p>
+        <p class="crumbs"><a href="/">407 FYI</a> &middot; <span aria-current="page">SoDo</span></p>
         <a class="hero-brand" href="/">407 FYI &middot; A District Finder</a>
         <h1>SoDo</h1>
-        <p class="sub">SoDo, south of downtown along Orange Avenue: coffee first, then breakfast and burgers.</p>
+        <p class="sub">South of downtown, Orange Avenue does the work. Coffee and breakfast start the list, burgers and seafood follow, all along the South Orange Avenue corridor locals shorthand as SoDo, the city&#x27;s Downtown South Main Street. It is a drive-to district built for locals&#x27; routines rather than visitors&#x27; itineraries.</p>
         <p class="count">7 hand-verified places</p>
         <nav class="anchor-nav" aria-label="On this page">
+          <a href="#top-picks">Top picks</a>
           <a href="#places">The places</a>
-          <a href="#districts">All districts</a>
+          <a href="#nearby">Nearby districts</a>
           <a href="/archive.html?district=sodo">Open in the full finder</a>
         </nav>
       </div>
     </header>
 
     <main>
+      <section class="sec" id="top-picks">
+        <p class="kicker">Top Picks</p>
+        <h2>Where to start in SoDo</h2>
+        <p class="lede">New to the district? Start with these three, then work down the full list below.</p>
+        <div class="vlist">
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=clean-eatz">Clean Eatz</a></h3>
+          <p class="meta">Restaurants &middot; $$</p>
+          <p class="addr">Clean Eatz, 2205 Orange Ave S, Orlando, FL 32806-3038</p>
+          <p class="desc">Healthy food rarely gets to keep this much flavor, but this SoDo cafe tries. Clean Eatz builds bowls to order and serves a Bang Bang Shrimp Wrap, Monterey Chicken, and buffalo chicken wraps in tomato-basil tortillas. Weekly meal plans and grab-and-go cases cover dinners beyond the visit. Every menu item lists its calories, so you can choose with the numbers in front of you. Come here when you want a health-food lunch that stays informed rather than guilty, and practical enough to repeat during a busy week.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=Clean+Eatz+Clean+Eatz%2C+2205+Orange+Ave+S%2C+Orlando%2C+FL+32806-3038" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=mooyah-burgers-fries-shakes">MOOYAH Burgers, Fries &amp; Shakes</a></h3>
+          <p class="meta">Burgers &amp; sandwiches &middot; $</p>
+          <p class="addr">3155 S Orange Ave, Orlando, FL 32806</p>
+          <p class="desc">The name promises three things, and SoDo&#x27;s MOOYAH builds its meal around all of them. Certified Angus Beef burgers are built to order, hand cut fries arrive hot and salty, and buns bake fresh daily. Hand spun shakes use real ice cream, the Double Diablo brings heat, and the Bacon Hot Jam Burger is the house favorite. Sweet potato fries have a following of their own, and the room stays fresh, fast, and family friendly. Choose MOOYAH when the burger craving hits and a shake belongs in the same order.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=MOOYAH+Burgers%2C+Fries+%26+Shakes+3155+S+Orange+Ave%2C+Orlando%2C+FL+32806" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=peach-valley">Peach Valley Cafe</a></h3>
+          <p class="meta">Breakfast &amp; brunch &middot; $$</p>
+          <p class="addr">Peach Valley Cafe, 2849 S Orange Ave, Orlando, FL 32806-5403</p>
+          <p class="desc">Hot apple fritters arrive first, and patience gets tested immediately. Peach Valley has served Central Florida as a neighborhood brunch answer since 2001, a local chain that still cooks like a name is on the sign. Chicken and waffles come with blueberry butter and Cajun spiked syrup, and shrimp and grits taste of the low country. A sunlit porch suits slow mornings and big crews around the table. Choose it when everyone at your table needs a plate that feels made for them, from fritters to grits and back again.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=Peach+Valley+Cafe+Peach+Valley+Cafe%2C+2849+S+Orange+Ave%2C+Orlando%2C+FL+32806-5403" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        </div>
+      </section>
+
       <section class="sec" id="places">
         <p class="kicker">The Full List</p>
         <h2>Every place in SoDo</h2>
@@ -276,39 +318,29 @@
         </div>
       </section>
 
-      <section class="sec" id="districts">
-        <p class="kicker">Keep Going</p>
-        <h2>Every district has a finder page</h2>
-        <p class="lede">One page per district, generated from the same hand-verified dataset as the full guide.</p>
-        <nav class="strip" aria-label="District finder pages">
-          <a href="/winter-park-finder.html">Winter Park</a>
-          <a href="/disney-springs-finder.html">Disney Springs</a>
-          <a href="/milk-district-finder.html">Milk District</a>
-          <a href="/thornton-park-finder.html">Thornton Park</a>
-          <a href="/mills-50-finder.html">Mills 50</a>
-          <a href="/ivanhoe-village-finder.html">Ivanhoe Village</a>
-          <a href="/downtown-orlando-finder.html">Downtown Orlando</a>
-          <a href="/international-drive-finder.html">International Drive</a>
-          <a href="/lake-nona-finder.html">Lake Nona</a>
-          <a href="/universal-finder.html">Universal</a>
-          <a href="/audubon-park-finder.html">Audubon Park</a>
-          <a href="/college-park-finder.html">College Park</a>
-          <a href="/more-orlando-finder.html">More Orlando</a>
-          <a href="/disney-area-finder.html">Disney Area</a>
-          <a href="/ucf-finder.html">UCF</a>
-          <a href="/kissimmee-finder.html">Kissimmee</a>
-          <a href="/baldwin-park-finder.html">Baldwin Park</a>
-          <a href="/winter-garden-finder.html">Winter Garden</a>
-          <a href="/sanford-finder.html">Sanford</a>
-          <a href="/maitland-finder.html">Maitland</a>
-          <a href="/oviedo-finder.html">Oviedo</a>
-          <a href="/hourglass-finder.html">Hourglass</a>
-          <a href="/sodo-finder.html" aria-current="page">SoDo</a>
-        </nav>
+      <section class="sec" id="map">
+        <p class="kicker">On the Map</p>
+        <h2>SoDo on the map</h2>
+        <p class="lede">The full finder plots every place on this list on its map, with filters for category, price and occasion alongside.</p>
         <div class="handoff">
-          <a class="btn-ghost" href="/archive.html?district=sodo">SoDo in the full finder</a>
+          <a class="btn-ghost" href="/archive.html?district=sodo">See SoDo on the map</a>
         </div>
       </section>
+
+      <section class="sec" id="nearby">
+        <p class="kicker">Keep Going</p>
+        <h2>Nearby districts</h2>
+        <p class="lede">The closest district lists to SoDo, by geography. Every district has a finder page, and the full set lives in the finder.</p>
+        <nav class="strip" aria-label="Nearby district finder pages">
+          <a href="/downtown-orlando-finder.html">Downtown Orlando</a>
+          <a href="/thornton-park-finder.html">Thornton Park</a>
+          <a href="/hourglass-finder.html">Hourglass</a>
+          <a href="/milk-district-finder.html">Milk District</a>
+        </nav>
+        <div class="handoff">
+        </div>
+      </section>
+      <p class="checked">List last checked October 2026</p>
     </main>
 
 <footer>

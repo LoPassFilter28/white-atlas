@@ -16,6 +16,7 @@
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <link rel="manifest" href="/site.webmanifest" />
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"407 FYI","item":"https://407.fyi/"},{"@type":"ListItem","position":2,"name":"Universal","item":"https://407.fyi/universal-finder.html"}]}</script>
     <link rel="preload" href="/fonts/manrope-latin.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="stylesheet" href="/fonts/fonts.css" />
 <script>
@@ -199,25 +200,66 @@
       .strip a:hover { border-color: var(--accent-ink); }
       .strip a[aria-current="page"] { border-color: var(--accent-ink); color: var(--headline); }
       html[data-theme="light"] .badge, html[data-theme="light"] .strip a { background: rgba(29,42,32,.04); }
+      /* ---------- Phase 4 additions ---------- */
+      .crumbs [aria-current="page"] { color: var(--ink); font-weight: 700; }
+      .grouphead {
+        font-family: "Urbanist", sans-serif; font-size: 1.35rem; color: var(--headline);
+        margin: 30px 0 0; letter-spacing: .01em;
+      }
+      .vlist .grouphead:first-child { margin-top: 0; }
+      .checked {
+        max-width: 860px; margin: 0 auto; padding: 34px var(--pad) 64px;
+        color: var(--muted); font-size: .85rem;
+      }
     </style>
   </head>
   <body>
     <header class="hero">
       <div class="hero-in">
-        <p class="crumbs"><a href="/">407 FYI</a> &middot; District Finder</p>
+        <p class="crumbs"><a href="/">407 FYI</a> &middot; <span aria-current="page">Universal</span></p>
         <a class="hero-brand" href="/">407 FYI &middot; A District Finder</a>
         <h1>Universal</h1>
         <p class="sub">Parks by day, CityWalk by dark, two trips in one.</p>
         <p class="count">24 hand-verified places</p>
         <nav class="anchor-nav" aria-label="On this page">
+          <a href="#top-picks">Top picks</a>
           <a href="#places">The places</a>
-          <a href="#districts">All districts</a>
+          <a href="#nearby">Nearby districts</a>
           <a href="/archive.html?district=universal">Open in the full finder</a>
         </nav>
       </div>
     </header>
 
     <main>
+      <section class="sec" id="top-picks">
+        <p class="kicker">Top Picks</p>
+        <h2>Where to start in Universal</h2>
+        <p class="lede">New to the district? Start with these three, then work down the full list below.</p>
+        <div class="vlist">
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=beths-burger-bar">Beth&#x27;s Burger Bar</a></h3>
+          <p class="meta">Burgers &amp; sandwiches &middot; $$</p>
+          <p class="addr">Beth&#x27;s Burger Bar, 9938 Universal Blvd, Orlando, FL 32819-8702, United States</p>
+          <p class="desc">Beth Steele built the burger joint of her dreams, and the room keeps that big kid energy. At Beth&#x27;s Burger Bar you build your burger your way, from patty to last pickle, inside a late night diner setting. Signature stacks go wild with a peanut butter burger, a mac and cheese burger, and a pizza burger for the brave. Board games line the shelves, bingo nights fill the calendar, and fridges stock beer for the table. Choose Beth&#x27;s when playful, loud customization matters more to you than a quiet, classic burger script.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=Beth%27s+Burger+Bar+Beth%27s+Burger+Bar%2C+9938+Universal+Blvd%2C+Orlando%2C+FL+32819-8702%2C+United+States" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=bubba-gump-shrimp-co">Bubba Gump Shrimp Co.</a></h3>
+          <p class="meta">Seafood &middot; $</p>
+          <p class="addr">6000 Universal Blvd Ste 735, Orlando, FL 32819</p>
+          <p class="desc">Shrimp arrives every way Bubba named in the movie, with trivia under your plate. Bubba Gump serves fried shrimp, coconut shrimp, peel-and-eat shrimp, and shrimp mac and cheese at Universal CityWalk. Southern comfort covers other appetites: baby back ribs, fried chicken, and homemade desserts. Staff keep the show going throughout the meal. Take the photo in the Forrest Gump running shoes out front and find the bus bench. It is touristy, knows it, and serves shrimp that is genuinely good. Give in to the theme completely.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=Bubba+Gump+Shrimp+Co.+6000+Universal+Blvd+Ste+735%2C+Orlando%2C+FL+32819" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=cold-stone-creamery">Cold Stone Creamery</a></h3>
+          <p class="meta">Sweets &middot; $</p>
+          <p class="addr">6000 Universal Blvd, Orlando, FL</p>
+          <p class="desc">Dessert becomes theater on a frozen granite slab at CityWalk. Cold Stone crew members fold mix-ins into fresh-churned ice cream in front of you, sometimes singing while they work. Your Creation can press birthday cake pieces, brownie chunks, candy, and fruit into every fold, exactly to order. The shop is small and seating sits outside, so grab a cup and stroll CityWalk with it. Brownie a la Cold Stone, a hot brownie under cold scoops, suits a long park night. Come for customization performed at the counter.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=Cold+Stone+Creamery+6000+Universal+Blvd%2C+Orlando%2C+FL" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        </div>
+      </section>
+
       <section class="sec" id="places">
         <p class="kicker">The Full List</p>
         <h2>Every place in Universal</h2>
@@ -394,40 +436,30 @@
         </div>
       </section>
 
-      <section class="sec" id="districts">
+      <section class="sec" id="map">
+        <p class="kicker">On the Map</p>
+        <h2>Universal on the map</h2>
+        <p class="lede">The full finder plots every place on this list on its map, with filters for category, price and occasion alongside.</p>
+        <div class="handoff">
+          <a class="btn-ghost" href="/archive.html?district=universal">See Universal on the map</a>
+        </div>
+      </section>
+
+      <section class="sec" id="nearby">
         <p class="kicker">Keep Going</p>
-        <h2>Every district has a finder page</h2>
-        <p class="lede">One page per district, generated from the same hand-verified dataset as the full guide.</p>
-        <nav class="strip" aria-label="District finder pages">
-          <a href="/winter-park-finder.html">Winter Park</a>
-          <a href="/disney-springs-finder.html">Disney Springs</a>
-          <a href="/milk-district-finder.html">Milk District</a>
-          <a href="/thornton-park-finder.html">Thornton Park</a>
-          <a href="/mills-50-finder.html">Mills 50</a>
-          <a href="/ivanhoe-village-finder.html">Ivanhoe Village</a>
-          <a href="/downtown-orlando-finder.html">Downtown Orlando</a>
+        <h2>Nearby districts</h2>
+        <p class="lede">The closest district lists to Universal, by geography. Every district has a finder page, and the full set lives in the finder.</p>
+        <nav class="strip" aria-label="Nearby district finder pages">
           <a href="/international-drive-finder.html">International Drive</a>
-          <a href="/lake-nona-finder.html">Lake Nona</a>
-          <a href="/universal-finder.html" aria-current="page">Universal</a>
-          <a href="/audubon-park-finder.html">Audubon Park</a>
-          <a href="/college-park-finder.html">College Park</a>
           <a href="/more-orlando-finder.html">More Orlando</a>
-          <a href="/disney-area-finder.html">Disney Area</a>
-          <a href="/ucf-finder.html">UCF</a>
-          <a href="/kissimmee-finder.html">Kissimmee</a>
-          <a href="/baldwin-park-finder.html">Baldwin Park</a>
-          <a href="/winter-garden-finder.html">Winter Garden</a>
-          <a href="/sanford-finder.html">Sanford</a>
-          <a href="/maitland-finder.html">Maitland</a>
-          <a href="/oviedo-finder.html">Oviedo</a>
-          <a href="/hourglass-finder.html">Hourglass</a>
+          <a href="/disney-springs-finder.html">Disney Springs</a>
           <a href="/sodo-finder.html">SoDo</a>
         </nav>
         <div class="handoff">
           <a class="btn-big" href="/universal-district-guide.html">Read the Universal story</a>
-          <a class="btn-ghost" href="/archive.html?district=universal">Universal in the full finder</a>
         </div>
       </section>
+      <p class="checked">List last checked October 2026</p>
     </main>
 
 <footer>

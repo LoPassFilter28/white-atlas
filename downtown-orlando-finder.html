@@ -16,6 +16,7 @@
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <link rel="manifest" href="/site.webmanifest" />
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"407 FYI","item":"https://407.fyi/"},{"@type":"ListItem","position":2,"name":"Downtown Orlando","item":"https://407.fyi/downtown-orlando-finder.html"}]}</script>
     <link rel="preload" href="/fonts/manrope-latin.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="stylesheet" href="/fonts/fonts.css" />
 <script>
@@ -199,25 +200,73 @@
       .strip a:hover { border-color: var(--accent-ink); }
       .strip a[aria-current="page"] { border-color: var(--accent-ink); color: var(--headline); }
       html[data-theme="light"] .badge, html[data-theme="light"] .strip a { background: rgba(29,42,32,.04); }
+      /* ---------- Phase 4 additions ---------- */
+      .crumbs [aria-current="page"] { color: var(--ink); font-weight: 700; }
+      .grouphead {
+        font-family: "Urbanist", sans-serif; font-size: 1.35rem; color: var(--headline);
+        margin: 30px 0 0; letter-spacing: .01em;
+      }
+      .vlist .grouphead:first-child { margin-top: 0; }
+      .checked {
+        max-width: 860px; margin: 0 auto; padding: 34px var(--pad) 64px;
+        color: var(--muted); font-size: .85rem;
+      }
     </style>
   </head>
   <body>
     <header class="hero">
       <div class="hero-in">
-        <p class="crumbs"><a href="/">407 FYI</a> &middot; District Finder</p>
+        <p class="crumbs"><a href="/">407 FYI</a> &middot; <span aria-current="page">Downtown Orlando</span></p>
         <a class="hero-brand" href="/">407 FYI &middot; A District Finder</a>
         <h1>Downtown Orlando</h1>
         <p class="sub">Skyline with a heartbeat, towers over a swan-filled lake.</p>
         <p class="count">49 hand-verified places</p>
         <nav class="anchor-nav" aria-label="On this page">
+          <a href="#top-picks">Top picks</a>
           <a href="#places">The places</a>
-          <a href="#districts">All districts</a>
+          <a href="#nearby">Nearby districts</a>
           <a href="/archive.html?district=downtown">Open in the full finder</a>
         </nav>
       </div>
     </header>
 
     <main>
+      <section class="sec" id="top-picks">
+        <p class="kicker">Top Picks</p>
+        <h2>Top picks in Downtown Orlando</h2>
+        <p class="lede">Start here: the Local Picks for this district, the places we would send a friend to first. The same cards lead the full list below.</p>
+        <div class="vlist">
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=robinson-cocktail-room">The Robinson Cocktail Room</a> <span class="badge">Local Pick</span></h3>
+          <p class="meta">Bars &amp; lounges &middot; $$</p>
+          <p class="addr">63 E Pine St, Orlando, FL 32801</p>
+          <p class="desc">Espresso by day gives way to disco, salsa, and a crowded dance floor. The Robinson Cocktail Room on Pine Street pours real espresso and iced lattes as a cafe, then turns into a joyful nighttime room where dancing carries the schedule. Drinks range from a proper espresso martini to the Dancing Queen, while chili relleno and tamales give you reason to stay past the first round. You do not need to know how to dance before you arrive. The room will make you want to learn.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=The+Robinson+Cocktail+Room+63+E+Pine+St%2C+Orlando%2C+FL+32801" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=fixtion">Fixtion Restaurant &amp; Bar</a> <span class="badge">Local Pick</span></h3>
+          <p class="meta">American &middot; $$</p>
+          <p class="addr">15 N Orange Ave, Orlando, FL 32801</p>
+          <p class="desc">One downtown address shape shifts through the day without losing its thread. Fixtion serves lunch built on comfort food with personality: a Wall Street turkey club, chimichurri skirt steak, and an espresso martini regulars name as the strongest downtown. Game day brings a 200 inch LED screen and fourteen TVs, then the room turns after dark into a nightclub with bottle service and DJs. Arrive for lunch, a match, or the late shift, and the building has a version ready for you.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=Fixtion+Restaurant+%26+Bar+15+N+Orange+Ave%2C+Orlando%2C+FL+32801" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=wall-street-plaza">Wall Street Plaza</a> <span class="badge">Local Pick</span></h3>
+          <p class="meta">Nightlife &amp; music &middot; $$</p>
+          <p class="addr">25 Wall St, Orlando, FL 32801</p>
+          <p class="desc">Eight venues share one legendary downtown block, and on a Saturday night the whole street belongs to the party. Wall Street Plaza has been the beating heart of downtown Orlando since 1995: the Cantina pouring the famous house margarita, Rodeo spinning country, intimate corners like the Hen House, and concert stages that pull real crowds. You never have to leave the block, which is the whole appeal for a group with mixed tastes. Come hungry, come ready to move, and let the block decide where your night goes.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=Wall+Street+Plaza+25+Wall+St%2C+Orlando%2C+FL+32801" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=elixir-kitchen-bar">Elixir Kitchen and Bar</a> <span class="badge">Local Pick</span></h3>
+          <p class="meta">Bars &amp; lounges &middot; $$</p>
+          <p class="addr">9 W Washington St, Orlando, FL 32801</p>
+          <p class="desc">Some downtown bars chase visitors, while Elixir feels owned by the neighborhood. Set in one of downtown Orlando&#x27;s original buildings, it runs a from scratch gastropub kitchen where the short rib grilled cheese and chicken and waffles earned their reputations one regular at a time. The patio gets called downtown&#x27;s best kept secret by fans, and the energy shifts after sunset as the night crowd takes over. Order something honest, grab a patio seat, and plan to stay longer than one drink.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=Elixir+Kitchen+and+Bar+9+W+Washington+St%2C+Orlando%2C+FL+32801" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        </div>
+      </section>
+
       <section class="sec" id="places">
         <p class="kicker">The Full List</p>
         <h2>Every place in Downtown Orlando</h2>
@@ -569,40 +618,30 @@
         </div>
       </section>
 
-      <section class="sec" id="districts">
+      <section class="sec" id="map">
+        <p class="kicker">On the Map</p>
+        <h2>Downtown Orlando on the map</h2>
+        <p class="lede">The full finder plots every place on this list on its map, with filters for category, price and occasion alongside.</p>
+        <div class="handoff">
+          <a class="btn-ghost" href="/archive.html?district=downtown">See Downtown Orlando on the map</a>
+        </div>
+      </section>
+
+      <section class="sec" id="nearby">
         <p class="kicker">Keep Going</p>
-        <h2>Every district has a finder page</h2>
-        <p class="lede">One page per district, generated from the same hand-verified dataset as the full guide.</p>
-        <nav class="strip" aria-label="District finder pages">
-          <a href="/winter-park-finder.html">Winter Park</a>
-          <a href="/disney-springs-finder.html">Disney Springs</a>
-          <a href="/milk-district-finder.html">Milk District</a>
+        <h2>Nearby districts</h2>
+        <p class="lede">The closest district lists to Downtown Orlando, by geography. Every district has a finder page, and the full set lives in the finder.</p>
+        <nav class="strip" aria-label="Nearby district finder pages">
           <a href="/thornton-park-finder.html">Thornton Park</a>
           <a href="/mills-50-finder.html">Mills 50</a>
-          <a href="/ivanhoe-village-finder.html">Ivanhoe Village</a>
-          <a href="/downtown-orlando-finder.html" aria-current="page">Downtown Orlando</a>
-          <a href="/international-drive-finder.html">International Drive</a>
-          <a href="/lake-nona-finder.html">Lake Nona</a>
-          <a href="/universal-finder.html">Universal</a>
-          <a href="/audubon-park-finder.html">Audubon Park</a>
-          <a href="/college-park-finder.html">College Park</a>
-          <a href="/more-orlando-finder.html">More Orlando</a>
-          <a href="/disney-area-finder.html">Disney Area</a>
-          <a href="/ucf-finder.html">UCF</a>
-          <a href="/kissimmee-finder.html">Kissimmee</a>
-          <a href="/baldwin-park-finder.html">Baldwin Park</a>
-          <a href="/winter-garden-finder.html">Winter Garden</a>
-          <a href="/sanford-finder.html">Sanford</a>
-          <a href="/maitland-finder.html">Maitland</a>
-          <a href="/oviedo-finder.html">Oviedo</a>
-          <a href="/hourglass-finder.html">Hourglass</a>
           <a href="/sodo-finder.html">SoDo</a>
+          <a href="/ivanhoe-village-finder.html">Ivanhoe Village</a>
         </nav>
         <div class="handoff">
           <a class="btn-big" href="/downtown-orlando-district-guide.html">Read the Downtown Orlando story</a>
-          <a class="btn-ghost" href="/archive.html?district=downtown">Downtown Orlando in the full finder</a>
         </div>
       </section>
+      <p class="checked">List last checked October 2026</p>
     </main>
 
 <footer>
