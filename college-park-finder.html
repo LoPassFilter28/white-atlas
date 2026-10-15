@@ -1,0 +1,352 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="color-scheme" content="light dark" />
+    <title>College Park Finder &middot; 407 FYI</title>
+    <meta name="description" content="The 407 FYI finder page for College Park: every hand-verified place in the district with full cards, addresses, descriptions and directions." />
+    <link rel="canonical" href="https://407.fyi/college-park-finder.html" />
+    <meta property="og:title" content="College Park Finder &middot; 407 FYI" />
+    <meta property="og:description" content="The 407 FYI finder page for College Park: every hand-verified place in the district with full cards, addresses, descriptions and directions." />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://407.fyi/college-park-finder.html" />
+    <meta property="og:image" content="https://407.fyi/og-image.png" />
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Urbanist:wght@600;700;800&amp;display=swap" rel="stylesheet" />
+<script>
+      try {
+        const savedTheme = localStorage.getItem('white-atlas-theme');
+        document.documentElement.dataset.theme = savedTheme === 'light' || savedTheme === 'dark' ? savedTheme : 'dark';
+      } catch (error) {
+        document.documentElement.dataset.theme = 'dark';
+      }
+    </script>
+    <style>
+      /* Night Drive tokens (from the district guides) */
+      :root {
+        color-scheme: dark;
+        --bg: #0a1811; --surface: #122419; --soft: #172a1f; --ink: #f0e8d5;
+        --muted: #c6bba2; --line: #2f4a38; --accent: #765b2f; --accent-ink: #d4b573;
+        --headline: #f6edd6; --focus: #d4b573;
+        --d-a: #14231a; --d-b: #3a5a35; --d-c: #bd9049;
+        --pad: clamp(20px, 5vw, 40px);
+      }
+      * { box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
+      body {
+        margin: 0; background: var(--bg); color: var(--ink);
+        font-family: "Manrope", system-ui, sans-serif; line-height: 1.6;
+        overflow-x: hidden;
+      }
+      h1, h2, h3, .display { font-family: "Urbanist", "Manrope", sans-serif; }
+      a { color: var(--accent-ink); }
+      a:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
+      .kicker {
+        font-family: "Urbanist", sans-serif; font-weight: 700; letter-spacing: .22em;
+        font-size: .72rem; text-transform: uppercase; color: var(--accent-ink); margin: 0 0 14px;
+      }
+
+      /* ---------- hero ---------- */
+      .hero {
+        position: relative; padding: clamp(64px, 13vh, 130px) var(--pad) clamp(48px, 9vh, 84px);
+        background: radial-gradient(ellipse 90% 55% at 50% 112%, rgba(189,144,73,.26), transparent 60%),
+          linear-gradient(168deg, #1d3325, #14231a 55%, #0a1811);
+        border-bottom: 1px solid var(--line);
+      }
+      .hero-in { max-width: 860px; margin: 0 auto; }
+      .crumbs { font-size: .8rem; color: var(--muted); margin: 0 0 26px; }
+      .crumbs a { font-weight: 700; }
+      .hero-brand {
+        font-family: "Urbanist", sans-serif; font-weight: 700; letter-spacing: .22em;
+        font-size: .72rem; text-transform: uppercase; color: var(--accent-ink); text-decoration: none;
+      }
+      .hero h1 {
+        font-size: clamp(2.6rem, 8.5vw, 5.2rem); line-height: .98; letter-spacing: .01em;
+        color: var(--headline); margin: 18px 0 16px; text-transform: uppercase;
+      }
+      .hero .sub { font-size: clamp(1.05rem, 2.6vw, 1.3rem); color: var(--ink); max-width: 620px; margin: 0 0 10px; }
+      .hero .fine { color: var(--muted); max-width: 620px; margin: 0; }
+      .anchor-nav { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 30px; }
+      .anchor-nav a {
+        border: 1px solid var(--line); border-radius: 999px; padding: 8px 14px;
+        font-size: .82rem; font-weight: 700; text-decoration: none; background: rgba(255,255,255,.03);
+        min-height: 42px; display: inline-flex; align-items: center;
+      }
+      .anchor-nav a:hover { border-color: var(--accent-ink); }
+
+      /* ---------- sections ---------- */
+      main { display: block; }
+      .sec { max-width: 860px; margin: 0 auto; padding: clamp(52px, 9vh, 88px) var(--pad) 0; }
+      .sec h2 { font-size: clamp(1.7rem, 4.6vw, 2.4rem); line-height: 1.12; color: var(--headline); margin: 0 0 16px; }
+      .sec .lede { color: var(--muted); font-size: 1.04rem; max-width: 640px; margin: 0 0 26px; }
+      .sec p { max-width: 68ch; }
+      .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 14px; margin: 22px 0 6px; }
+      .card {
+        background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 20px;
+      }
+      .card h3 { margin: 0 0 6px; font-size: 1.12rem; color: var(--headline); }
+      .card .addr { font-weight: 800; color: var(--accent-ink); margin: 0 0 10px; font-size: .98rem; }
+      .card p { margin: 0; color: var(--muted); font-size: .94rem; }
+      .cols { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 22px 0 6px; }
+      @media (max-width: 680px) { .cols { grid-template-columns: 1fr; } }
+      .panel { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 20px 22px; }
+      .panel h3 { margin: 0 0 12px; font-size: 1.05rem; color: var(--headline); }
+      .panel ul, .plain-list { margin: 0; padding-left: 18px; }
+      .panel li, .plain-list li { margin-bottom: 9px; }
+      .panel li:last-child, .plain-list li:last-child { margin-bottom: 0; }
+      .note {
+        border-left: 3px solid var(--accent-ink); background: var(--soft);
+        padding: 14px 18px; border-radius: 0 12px 12px 0; margin: 22px 0 6px; max-width: 68ch;
+      }
+      .note p { margin: 0; }
+      .venue-links { list-style: none; margin: 0; padding: 0; }
+      .venue-links li { margin-bottom: 10px; }
+      .venue-links a { font-weight: 800; text-underline-offset: 3px; }
+      .venue-links span { color: var(--muted); }
+
+      /* ---------- jobs ---------- */
+      .job-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 14px; margin-top: 22px; }
+      .job { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 20px 22px; }
+      .job h3 { margin: 0 0 6px; font-size: 1.08rem; color: var(--headline); }
+      .job p { margin: 0 0 12px; color: var(--muted); font-size: .94rem; }
+      .job ul { list-style: none; margin: 0 0 14px; padding: 0; }
+      .job li { margin-bottom: 7px; }
+      .job li a { font-weight: 800; text-underline-offset: 3px; }
+      .job .browse { font-size: .86rem; font-weight: 800; text-transform: uppercase; letter-spacing: .08em; }
+
+      /* ---------- what to avoid ---------- */
+      .avoid { border-top: 1px solid var(--line); padding: 24px 0 6px; }
+      .avoid h3 { margin: 0 0 10px; font-size: 1.18rem; color: var(--headline); }
+      .avoid p { margin: 0 0 8px; max-width: 68ch; }
+      .avoid strong { color: var(--accent-ink); }
+      .flags { display: flex; flex-wrap: wrap; gap: 8px; margin: 18px 0 6px; }
+      .flags span {
+        border: 1px solid var(--accent); border-radius: 999px; padding: 7px 13px;
+        font-size: .85rem; font-weight: 700; color: var(--accent-ink); background: rgba(255,255,255,.03);
+      }
+      .rules { margin: 16px 0 0; padding-left: 20px; max-width: 68ch; }
+      .rules li { margin-bottom: 10px; }
+
+      .handoff { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 30px; }
+      .btn-big {
+        display: inline-flex; align-items: center; min-height: 52px; padding: 12px 22px;
+        background: var(--accent); color: #fff; font-weight: 800; border-radius: 999px; text-decoration: none;
+      }
+      .btn-big:hover { background: var(--accent-ink); color: #1d2a20; }
+      .btn-ghost {
+        display: inline-flex; align-items: center; min-height: 52px; padding: 12px 22px;
+        border: 1px solid var(--line); color: var(--accent-ink); font-weight: 800; border-radius: 999px; text-decoration: none;
+      }
+
+      footer { border-top: 1px solid var(--line); margin-top: clamp(52px, 9vh, 88px); }
+      .foot-in { max-width: 860px; margin: 0 auto; padding: 34px var(--pad) 44px; color: var(--muted); font-size: .9rem; }
+      .foot-in p { margin: 0 0 9px; }
+      .back-link { font-weight: 800; display: inline-block; margin-bottom: 16px; }
+      .brand-line { color: var(--ink); font-weight: 700; }
+
+      /* ---------- Light theme: app-page tokens ---------- */
+      html[data-theme="light"] {
+        color-scheme: light;
+        --bg: #faf6ec; --surface: #fffdf7; --soft: #f3ecd7; --ink: #1d2a20;
+        --muted: #4c5a45; --line: #ddd3ba; --accent: #8a5f0e; --accent-ink: #7c520c;
+        --headline: #123524; --focus: #8a5f0e;
+      }
+      html[data-theme="light"] .hero {
+        background: radial-gradient(ellipse 90% 55% at 50% 112%, rgba(163,129,63,.30), transparent 60%),
+          linear-gradient(168deg, color-mix(in srgb, var(--d-a) 24%, #faf6ec), color-mix(in srgb, var(--d-a) 40%, #faf6ec) 55%, color-mix(in srgb, var(--d-a) 14%, #faf6ec));
+      }
+      html[data-theme="light"] .anchor-nav a, html[data-theme="light"] .flags span { background: rgba(29,42,32,.04); }
+      html[data-theme="light"] .btn-big { background: var(--accent); color: #fff; }
+      html[data-theme="light"] .btn-big:hover { background: var(--accent-ink); color: #fff; }
+
+      @media print { .anchor-nav { display: none; } }
+      @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+    
+      /* ---------- finder pages (Seam 2 additions) ---------- */
+      .count {
+        font-family: "Urbanist", sans-serif; font-weight: 700; letter-spacing: .14em;
+        font-size: .8rem; text-transform: uppercase; color: var(--accent-ink); margin: 0;
+      }
+      .vlist { display: grid; gap: 14px; margin-top: 22px; }
+      .vcard {
+        background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 20px 22px;
+      }
+      .vcard h3 { margin: 0 0 4px; font-size: 1.15rem; color: var(--headline); }
+      .vcard h3 a { color: var(--headline); text-decoration: none; }
+      .vcard h3 a:hover { color: var(--accent-ink); text-decoration: underline; text-underline-offset: 3px; }
+      .badge {
+        display: inline-block; vertical-align: middle; margin-left: 8px;
+        border: 1px solid var(--accent); border-radius: 999px; padding: 2px 9px;
+        font-family: "Manrope", sans-serif; font-size: .68rem; font-weight: 800;
+        letter-spacing: .08em; text-transform: uppercase; color: var(--accent-ink);
+        background: rgba(255,255,255,.03); white-space: nowrap;
+      }
+      .vcard .meta { margin: 0 0 2px; font-weight: 800; color: var(--accent-ink); font-size: .92rem; }
+      .vcard .addr { margin: 0 0 8px; color: var(--muted); font-size: .9rem; }
+      .vcard .desc { margin: 0 0 10px; max-width: 68ch; }
+      .vcard .dirs { margin: 0; font-size: .88rem; font-weight: 800; }
+      .strip { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 22px; }
+      .strip a {
+        border: 1px solid var(--line); border-radius: 999px; padding: 8px 14px;
+        font-size: .82rem; font-weight: 700; text-decoration: none; background: rgba(255,255,255,.03);
+        min-height: 42px; display: inline-flex; align-items: center;
+      }
+      .strip a:hover { border-color: var(--accent-ink); }
+      .strip a[aria-current="page"] { border-color: var(--accent-ink); color: var(--headline); }
+      html[data-theme="light"] .badge, html[data-theme="light"] .strip a { background: rgba(29,42,32,.04); }
+    </style>
+  </head>
+  <body>
+    <header class="hero">
+      <div class="hero-in">
+        <p class="crumbs"><a href="/">407 FYI</a> &middot; District Finder</p>
+        <a class="hero-brand" href="/">407 FYI &middot; A District Finder</a>
+        <h1>College Park</h1>
+        <p class="sub">Main Street at walking pace: Edgewater Drive and a string of lakes.</p>
+        <p class="count">11 hand-verified places</p>
+        <nav class="anchor-nav" aria-label="On this page">
+          <a href="#places">The places</a>
+          <a href="#districts">All districts</a>
+          <a href="/archive.html?district=college-park">Open in the full finder</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="sec" id="places">
+        <p class="kicker">The Full List</p>
+        <h2>Every place in College Park</h2>
+        <p class="lede">Full cards for the whole district, Local Picks first, then A to Z. Every name opens its listing in the full finder, where the map, filters and export live.</p>
+        <div class="vlist">
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=quesa-loco">QuesaLoco</a> <span class="badge">Local Pick</span></h3>
+          <p class="meta">Mexican &middot; $$</p>
+          <p class="addr">971 W Fairbanks Ave, Orlando, FL 32804</p>
+          <p class="desc">Lines wrapped around the block on Friday nights when QuesaLoco was still a food truck, and the brick-and-mortar on Fairbanks Ave carries that same joyful chaos. You are in birria country here: quesabirria tacos fold beef and cheese into a crisp tortilla built for dunking in rich consommé, and birria ramen takes that obsession somewhere new. Loco elote on a stick, birria pizza for the undecided, and a menu that reads like a greatest-hits list of Mexican street food complete the picture. Go expecting noise and flavor.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=QuesaLoco+971+W+Fairbanks+Ave%2C+Orlando%2C+FL+32804" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=blue-coast-burrito">Blue Coast Burrito</a></h3>
+          <p class="meta">Mexican &middot; $</p>
+          <p class="addr">2311 N Orange Blossom Trl, Orlando, FL 32804</p>
+          <p class="desc">The Packing District&#x27;s first Florida Blue Coast Burrito became a neighborhood lunch favorite quickly. Build a burrito or bowl with Baja style fish, queso and the pineapple salsa people keep recommending. Baja fruit tea is the drink regulars point you toward, prices stay friendly and the patio welcomes dogs. Everything lands fresh, keeping the fast casual format honest. Choose it for a family lunch where custom orders solve the table and the dog does not have to stay home.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=Blue+Coast+Burrito+2311+N+Orange+Blossom+Trl%2C+Orlando%2C+FL+32804" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=cups-pups">Cups and Pups</a></h3>
+          <p class="meta">Coffee &amp; cafes &middot; $</p>
+          <p class="addr">2413 Edgewater Dr, Orlando, FL 32804</p>
+          <p class="desc">A roadside cart grew into an airstream, then into a bright Edgewater Drive shop, without losing its charm. Cups and Pups builds its menu on joy: a Honey Nut Cheerio Latte that tastes like the bottom of the cereal bowl, a Brown Sugar Pop Tart Latte, and lavender cold brew. Rotating seasonal creations use Lineage Coffee as the base for the drinks. The dog friendly patio lets you order from your seat without leaving your pup, and the dog face logo cutout inside invites photos. Choose it for a laptop friendly, tail friendly College Park ritual.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=Cups+and+Pups+2413+Edgewater+Dr%2C+Orlando%2C+FL+32804" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=everoak">Everoak Farm</a></h3>
+          <p class="meta">Markets &amp; shops &middot; $</p>
+          <p class="addr">Everoak Farm, 2335 Carrington Dr, Orlando, FL 32807</p>
+          <p class="desc">Three acres, ten minutes from downtown, are growing food the slow and deliberate way. Husband and wife team Mike and Nikki Garcia run Everoak as a regenerative, biointensive family farm with no sprays, bees working the rows and pasture raised chickens roaming. Certified Naturally Grown produce comes from living soil, and their Saturday market gathers fellow small businesses beside the farm stand. Their CSA feeds seventy local families, and harvests reach restaurant menus across town. Start here to taste where Orlando farm to table begins.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=Everoak+Farm+Everoak+Farm%2C+2335+Carrington+Dr%2C+Orlando%2C+FL+32807" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=great-southern-box-co">Great Southern Box Co. Food Hall &amp; Bar</a></h3>
+          <p class="meta">Markets &amp; shops &middot; $$</p>
+          <p class="addr">The Great Southern Box Company, 2105 N Orange Blossom Trl, Orlando, FL 32804</p>
+          <p class="desc">A 1930s citrus crate warehouse in the Packing District now holds a world of counters. Great Southern Box Company lines up Antica&#x27;s Neapolitan pizza, voted best in town, with Fui Yo&#x27;s birria tacos and real consomme, Kayos Jamaican jerk and oxtail, Braza&#x27;s Brazilian steakhouse plates, Kabab 2 Go&#x27;s Lebanese shawarma, Bangkok style Thai street food and A Lo Cubano&#x27;s pressed sandwiches. Order at the counters, get a text when food is ready and drink at the central bar or Walter&#x27;s Tavern. Free garage parking makes bringing the crew easy.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=Great+Southern+Box+Co.+Food+Hall+%26+Bar+The+Great+Southern+Box+Company%2C+2105+N+Orange+Blossom+Trl%2C+Orlando%2C+FL+32804" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=ollies-public-house">Ollie&#x27;s Public House</a></h3>
+          <p class="meta">Bars &amp; lounges &middot; $$</p>
+          <p class="addr">Ollie&#x27;s Public House, 3400 Edgewater Dr, Orlando, FL 32804-3602, United States</p>
+          <p class="desc">College Park asks for everything at once, and Ollie&#x27;s tries to hand it over. The Edgewater Drive public house pairs a rotating craft beer list with more than thirty TVs, live music, and a big covered patio where dogs get water and cold cuts by name. Regulars swear by the Legend sandwich and the Wall Street Reuben, bar food runs deep, and a rotating Good Bite menu item gives back to a local cause. Pick it when a weeknight needs a room that refuses to be boring.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=Ollie%27s+Public+House+Ollie%27s+Public+House%2C+3400+Edgewater+Dr%2C+Orlando%2C+FL+32804-3602%2C+United+States" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=shakers-american-cafe">Shakers American Cafe</a></h3>
+          <p class="meta">American &middot; $$</p>
+          <p class="addr">Shakers American Cafe, 1308 Edgewater Dr, Orlando, FL 32804-6351, United States</p>
+          <p class="desc">There is no such thing as a quiet breakfast at Shakers. The cozy College Park cottage hums around walls crowded with thousands of salt-and-pepper shakers donated by regulars since 1993, and the room feels like a neighborhood clubhouse that happens to serve the cinnamon roll pancakes Orlando dreams about. Order them, fluffy and glazed with that familiar cinnamon swirl, or go savory with an omelet and the potato pancake regulars swear by. Friendly, old-school, and gone by midafternoon. That is the deal, and it is a good one.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=Shakers+American+Cafe+Shakers+American+Cafe%2C+1308+Edgewater+Dr%2C+Orlando%2C+FL+32804-6351%2C+United+States" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=the-current-seafood-counter">The Current Seafood Counter</a></h3>
+          <p class="meta">Seafood &middot; $$</p>
+          <p class="addr">The Current Seafood Counter, 2425 Edgewater Dr, Orlando, FL 32804-5303, United States</p>
+          <p class="desc">A Northeast-style seafood counter keeps its formula simple and honest. The Current serves fresh, responsibly sourced seafood with counter-service ease and cooking that made New England transplants homesick. The blackened mahi sandwich is described as a Sanford legend in the making, clam chowder tastes like a weekend up north, and the lobster roll needs no translation. Flavors stay direct, portions practical, and the room relaxed. Go hungry when you want mahi, chowder, and a lobster roll that translate cold-water comfort into a Central Florida lunch.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=The+Current+Seafood+Counter+The+Current+Seafood+Counter%2C+2425+Edgewater+Dr%2C+Orlando%2C+FL+32804-5303%2C+United+States" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=turci-pasta">Turci Pasta</a></h3>
+          <p class="meta">Italian &middot; $$</p>
+          <p class="addr">Turci Pasta, 2120 Edgewater Dr, Orlando, FL 32804</p>
+          <p class="desc">Watching fresh pasta get rolled through the pasta window at Turci Pasta is half the magic of dinner here. College Park&#x27;s little Italian jewel makes everything by hand, every day: purple sweet potato gnocchi, black truffle ravioli, pear ravioli poached in wine, lasagna that tastes like someone&#x27;s grandmother still runs the kitchen. Cozy, romantic, the kind of room where dates and anniversaries feel inevitable. Order the cannoli at the end.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=Turci+Pasta+Turci+Pasta%2C+2120+Edgewater+Dr%2C+Orlando%2C+FL+32804" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=walters-tavern">Walter&#x27;s Tavern</a></h3>
+          <p class="meta">Bars &amp; lounges &middot; $$</p>
+          <p class="addr">2105 N Orange Blossom Trl, Orlando, FL 32804</p>
+          <p class="desc">Game day finally gets a proper Packing District home at Walter&#x27;s Tavern. Named for citrus heir Walter Simmons Phillips, the tavern sits inside the historic Great Southern Box Company food hall. Fifteen plus screens and a massive video wall make every seat a good seat for the play in front of you. The cocktail program uses fresh juice with nothing pre mixed, and a house Orange Lager is brewed for the room. Order pizza, wings, or a birria crunchwrap from hall vendors straight to your table and stay put for the whole game.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=Walter%27s+Tavern+2105+N+Orange+Blossom+Trl%2C+Orlando%2C+FL+32804" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=zeytin">Zeytin Turkish Cuisine</a></h3>
+          <p class="meta">Mediterranean &middot; $$</p>
+          <p class="addr">Zeytin Turkish Cuisine, 4439 Edgewater Dr, Orlando, FL 32804-1229</p>
+          <p class="desc">Everything from scratch, every meat halal and a reservation required: Zeytin runs on intention. The family run Turkish room on Edgewater Drive in College Park starts you with pillowy lavash and a tray of dips. Move to Iskender kebab or lamb doner pide, then save room for knafeh baked to order with shredded wheat, sweet cheese and pistachios. Chef Z and his wife Michele turn first timers into regulars. Cozy and lantern lit, it rewards planning ahead.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=Zeytin+Turkish+Cuisine+Zeytin+Turkish+Cuisine%2C+4439+Edgewater+Dr%2C+Orlando%2C+FL+32804-1229" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        </div>
+      </section>
+
+      <section class="sec" id="districts">
+        <p class="kicker">Keep Going</p>
+        <h2>Every district has a finder page</h2>
+        <p class="lede">One page per district, generated from the same hand-verified dataset as the full guide.</p>
+        <nav class="strip" aria-label="District finder pages">
+          <a href="/winter-park-finder.html">Winter Park</a>
+          <a href="/disney-springs-finder.html">Disney Springs</a>
+          <a href="/milk-district-finder.html">Milk District</a>
+          <a href="/thornton-park-finder.html">Thornton Park</a>
+          <a href="/mills-50-finder.html">Mills 50</a>
+          <a href="/ivanhoe-village-finder.html">Ivanhoe Village</a>
+          <a href="/downtown-orlando-finder.html">Downtown Orlando</a>
+          <a href="/international-drive-finder.html">International Drive</a>
+          <a href="/lake-nona-finder.html">Lake Nona</a>
+          <a href="/universal-finder.html">Universal</a>
+          <a href="/audubon-park-finder.html">Audubon Park</a>
+          <a href="/college-park-finder.html" aria-current="page">College Park</a>
+          <a href="/more-orlando-finder.html">More Orlando</a>
+          <a href="/disney-area-finder.html">Disney Area</a>
+          <a href="/ucf-finder.html">UCF</a>
+          <a href="/kissimmee-finder.html">Kissimmee</a>
+          <a href="/baldwin-park-finder.html">Baldwin Park</a>
+          <a href="/winter-garden-finder.html">Winter Garden</a>
+          <a href="/sanford-finder.html">Sanford</a>
+          <a href="/maitland-finder.html">Maitland</a>
+          <a href="/oviedo-finder.html">Oviedo</a>
+          <a href="/hourglass-finder.html">Hourglass</a>
+          <a href="/sodo-finder.html">SoDo</a>
+        </nav>
+        <div class="handoff">
+          <a class="btn-big" href="/college-park-district-guide.html">Read the College Park story</a>
+          <a class="btn-ghost" href="/archive.html?district=college-park">College Park in the full finder</a>
+        </div>
+      </section>
+    </main>
+
+<footer>
+      <div class="foot-in">
+        <a class="back-link" href="/">&larr; Back to the full guide</a>
+        <p class="brand-line">407 FYI, an independent Orlando guide. Details can change; confirm before you go.</p>
+        <p>Hand-verified Orlando places · Checked October 2026 · Local Picks are never sponsored · Corrections: <a href="mailto:mail@407.fyi">mail@407.fyi</a></p>
+        <p>Some links on 407 FYI are affiliate links. They never affect which places we list, rank, or recommend.</p>
+      </div>
+    </footer>
+  </body>
+</html>

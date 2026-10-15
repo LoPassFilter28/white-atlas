@@ -1,0 +1,401 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="color-scheme" content="light dark" />
+    <title>Kissimmee Finder &middot; 407 FYI</title>
+    <meta name="description" content="The 407 FYI finder page for Kissimmee: every hand-verified place in the district with full cards, addresses, descriptions and directions." />
+    <link rel="canonical" href="https://407.fyi/kissimmee-finder.html" />
+    <meta property="og:title" content="Kissimmee Finder &middot; 407 FYI" />
+    <meta property="og:description" content="The 407 FYI finder page for Kissimmee: every hand-verified place in the district with full cards, addresses, descriptions and directions." />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://407.fyi/kissimmee-finder.html" />
+    <meta property="og:image" content="https://407.fyi/og-image.png" />
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Urbanist:wght@600;700;800&amp;display=swap" rel="stylesheet" />
+<script>
+      try {
+        const savedTheme = localStorage.getItem('white-atlas-theme');
+        document.documentElement.dataset.theme = savedTheme === 'light' || savedTheme === 'dark' ? savedTheme : 'dark';
+      } catch (error) {
+        document.documentElement.dataset.theme = 'dark';
+      }
+    </script>
+    <style>
+      /* Night Drive tokens (from the district guides) */
+      :root {
+        color-scheme: dark;
+        --bg: #0a1811; --surface: #122419; --soft: #172a1f; --ink: #f0e8d5;
+        --muted: #c6bba2; --line: #2f4a38; --accent: #765b2f; --accent-ink: #d4b573;
+        --headline: #f6edd6; --focus: #d4b573;
+        --d-a: #14231a; --d-b: #3a5a35; --d-c: #bd9049;
+        --pad: clamp(20px, 5vw, 40px);
+      }
+      * { box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
+      body {
+        margin: 0; background: var(--bg); color: var(--ink);
+        font-family: "Manrope", system-ui, sans-serif; line-height: 1.6;
+        overflow-x: hidden;
+      }
+      h1, h2, h3, .display { font-family: "Urbanist", "Manrope", sans-serif; }
+      a { color: var(--accent-ink); }
+      a:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
+      .kicker {
+        font-family: "Urbanist", sans-serif; font-weight: 700; letter-spacing: .22em;
+        font-size: .72rem; text-transform: uppercase; color: var(--accent-ink); margin: 0 0 14px;
+      }
+
+      /* ---------- hero ---------- */
+      .hero {
+        position: relative; padding: clamp(64px, 13vh, 130px) var(--pad) clamp(48px, 9vh, 84px);
+        background: radial-gradient(ellipse 90% 55% at 50% 112%, rgba(189,144,73,.26), transparent 60%),
+          linear-gradient(168deg, #1d3325, #14231a 55%, #0a1811);
+        border-bottom: 1px solid var(--line);
+      }
+      .hero-in { max-width: 860px; margin: 0 auto; }
+      .crumbs { font-size: .8rem; color: var(--muted); margin: 0 0 26px; }
+      .crumbs a { font-weight: 700; }
+      .hero-brand {
+        font-family: "Urbanist", sans-serif; font-weight: 700; letter-spacing: .22em;
+        font-size: .72rem; text-transform: uppercase; color: var(--accent-ink); text-decoration: none;
+      }
+      .hero h1 {
+        font-size: clamp(2.6rem, 8.5vw, 5.2rem); line-height: .98; letter-spacing: .01em;
+        color: var(--headline); margin: 18px 0 16px; text-transform: uppercase;
+      }
+      .hero .sub { font-size: clamp(1.05rem, 2.6vw, 1.3rem); color: var(--ink); max-width: 620px; margin: 0 0 10px; }
+      .hero .fine { color: var(--muted); max-width: 620px; margin: 0; }
+      .anchor-nav { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 30px; }
+      .anchor-nav a {
+        border: 1px solid var(--line); border-radius: 999px; padding: 8px 14px;
+        font-size: .82rem; font-weight: 700; text-decoration: none; background: rgba(255,255,255,.03);
+        min-height: 42px; display: inline-flex; align-items: center;
+      }
+      .anchor-nav a:hover { border-color: var(--accent-ink); }
+
+      /* ---------- sections ---------- */
+      main { display: block; }
+      .sec { max-width: 860px; margin: 0 auto; padding: clamp(52px, 9vh, 88px) var(--pad) 0; }
+      .sec h2 { font-size: clamp(1.7rem, 4.6vw, 2.4rem); line-height: 1.12; color: var(--headline); margin: 0 0 16px; }
+      .sec .lede { color: var(--muted); font-size: 1.04rem; max-width: 640px; margin: 0 0 26px; }
+      .sec p { max-width: 68ch; }
+      .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 14px; margin: 22px 0 6px; }
+      .card {
+        background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 20px;
+      }
+      .card h3 { margin: 0 0 6px; font-size: 1.12rem; color: var(--headline); }
+      .card .addr { font-weight: 800; color: var(--accent-ink); margin: 0 0 10px; font-size: .98rem; }
+      .card p { margin: 0; color: var(--muted); font-size: .94rem; }
+      .cols { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 22px 0 6px; }
+      @media (max-width: 680px) { .cols { grid-template-columns: 1fr; } }
+      .panel { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 20px 22px; }
+      .panel h3 { margin: 0 0 12px; font-size: 1.05rem; color: var(--headline); }
+      .panel ul, .plain-list { margin: 0; padding-left: 18px; }
+      .panel li, .plain-list li { margin-bottom: 9px; }
+      .panel li:last-child, .plain-list li:last-child { margin-bottom: 0; }
+      .note {
+        border-left: 3px solid var(--accent-ink); background: var(--soft);
+        padding: 14px 18px; border-radius: 0 12px 12px 0; margin: 22px 0 6px; max-width: 68ch;
+      }
+      .note p { margin: 0; }
+      .venue-links { list-style: none; margin: 0; padding: 0; }
+      .venue-links li { margin-bottom: 10px; }
+      .venue-links a { font-weight: 800; text-underline-offset: 3px; }
+      .venue-links span { color: var(--muted); }
+
+      /* ---------- jobs ---------- */
+      .job-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 14px; margin-top: 22px; }
+      .job { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 20px 22px; }
+      .job h3 { margin: 0 0 6px; font-size: 1.08rem; color: var(--headline); }
+      .job p { margin: 0 0 12px; color: var(--muted); font-size: .94rem; }
+      .job ul { list-style: none; margin: 0 0 14px; padding: 0; }
+      .job li { margin-bottom: 7px; }
+      .job li a { font-weight: 800; text-underline-offset: 3px; }
+      .job .browse { font-size: .86rem; font-weight: 800; text-transform: uppercase; letter-spacing: .08em; }
+
+      /* ---------- what to avoid ---------- */
+      .avoid { border-top: 1px solid var(--line); padding: 24px 0 6px; }
+      .avoid h3 { margin: 0 0 10px; font-size: 1.18rem; color: var(--headline); }
+      .avoid p { margin: 0 0 8px; max-width: 68ch; }
+      .avoid strong { color: var(--accent-ink); }
+      .flags { display: flex; flex-wrap: wrap; gap: 8px; margin: 18px 0 6px; }
+      .flags span {
+        border: 1px solid var(--accent); border-radius: 999px; padding: 7px 13px;
+        font-size: .85rem; font-weight: 700; color: var(--accent-ink); background: rgba(255,255,255,.03);
+      }
+      .rules { margin: 16px 0 0; padding-left: 20px; max-width: 68ch; }
+      .rules li { margin-bottom: 10px; }
+
+      .handoff { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 30px; }
+      .btn-big {
+        display: inline-flex; align-items: center; min-height: 52px; padding: 12px 22px;
+        background: var(--accent); color: #fff; font-weight: 800; border-radius: 999px; text-decoration: none;
+      }
+      .btn-big:hover { background: var(--accent-ink); color: #1d2a20; }
+      .btn-ghost {
+        display: inline-flex; align-items: center; min-height: 52px; padding: 12px 22px;
+        border: 1px solid var(--line); color: var(--accent-ink); font-weight: 800; border-radius: 999px; text-decoration: none;
+      }
+
+      footer { border-top: 1px solid var(--line); margin-top: clamp(52px, 9vh, 88px); }
+      .foot-in { max-width: 860px; margin: 0 auto; padding: 34px var(--pad) 44px; color: var(--muted); font-size: .9rem; }
+      .foot-in p { margin: 0 0 9px; }
+      .back-link { font-weight: 800; display: inline-block; margin-bottom: 16px; }
+      .brand-line { color: var(--ink); font-weight: 700; }
+
+      /* ---------- Light theme: app-page tokens ---------- */
+      html[data-theme="light"] {
+        color-scheme: light;
+        --bg: #faf6ec; --surface: #fffdf7; --soft: #f3ecd7; --ink: #1d2a20;
+        --muted: #4c5a45; --line: #ddd3ba; --accent: #8a5f0e; --accent-ink: #7c520c;
+        --headline: #123524; --focus: #8a5f0e;
+      }
+      html[data-theme="light"] .hero {
+        background: radial-gradient(ellipse 90% 55% at 50% 112%, rgba(163,129,63,.30), transparent 60%),
+          linear-gradient(168deg, color-mix(in srgb, var(--d-a) 24%, #faf6ec), color-mix(in srgb, var(--d-a) 40%, #faf6ec) 55%, color-mix(in srgb, var(--d-a) 14%, #faf6ec));
+      }
+      html[data-theme="light"] .anchor-nav a, html[data-theme="light"] .flags span { background: rgba(29,42,32,.04); }
+      html[data-theme="light"] .btn-big { background: var(--accent); color: #fff; }
+      html[data-theme="light"] .btn-big:hover { background: var(--accent-ink); color: #fff; }
+
+      @media print { .anchor-nav { display: none; } }
+      @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+    
+      /* ---------- finder pages (Seam 2 additions) ---------- */
+      .count {
+        font-family: "Urbanist", sans-serif; font-weight: 700; letter-spacing: .14em;
+        font-size: .8rem; text-transform: uppercase; color: var(--accent-ink); margin: 0;
+      }
+      .vlist { display: grid; gap: 14px; margin-top: 22px; }
+      .vcard {
+        background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 20px 22px;
+      }
+      .vcard h3 { margin: 0 0 4px; font-size: 1.15rem; color: var(--headline); }
+      .vcard h3 a { color: var(--headline); text-decoration: none; }
+      .vcard h3 a:hover { color: var(--accent-ink); text-decoration: underline; text-underline-offset: 3px; }
+      .badge {
+        display: inline-block; vertical-align: middle; margin-left: 8px;
+        border: 1px solid var(--accent); border-radius: 999px; padding: 2px 9px;
+        font-family: "Manrope", sans-serif; font-size: .68rem; font-weight: 800;
+        letter-spacing: .08em; text-transform: uppercase; color: var(--accent-ink);
+        background: rgba(255,255,255,.03); white-space: nowrap;
+      }
+      .vcard .meta { margin: 0 0 2px; font-weight: 800; color: var(--accent-ink); font-size: .92rem; }
+      .vcard .addr { margin: 0 0 8px; color: var(--muted); font-size: .9rem; }
+      .vcard .desc { margin: 0 0 10px; max-width: 68ch; }
+      .vcard .dirs { margin: 0; font-size: .88rem; font-weight: 800; }
+      .strip { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 22px; }
+      .strip a {
+        border: 1px solid var(--line); border-radius: 999px; padding: 8px 14px;
+        font-size: .82rem; font-weight: 700; text-decoration: none; background: rgba(255,255,255,.03);
+        min-height: 42px; display: inline-flex; align-items: center;
+      }
+      .strip a:hover { border-color: var(--accent-ink); }
+      .strip a[aria-current="page"] { border-color: var(--accent-ink); color: var(--headline); }
+      html[data-theme="light"] .badge, html[data-theme="light"] .strip a { background: rgba(29,42,32,.04); }
+    </style>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"ItemList","name":"407 FYI places: Kissimmee","numberOfItems":18,"itemListElement":[{"@type":"ListItem","position":1,"item":{"@type":"LocalBusiness","name":"Salt & Cellar","address":{"@type":"PostalAddress","streetAddress":"Salt & the Cellar by Akira Back, 3001 Sherberth Rd, Kissimmee, FL 34747-1787","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":28.33,"longitude":-81.58},"priceRange":"$$$","category":"Restaurants","url":"https://407.fyi/archive.html?venue=salt-cellar"}},{"@type":"ListItem","position":2,"item":{"@type":"LocalBusiness","name":"Metro Diner (Kissimmee)","address":{"@type":"PostalAddress","streetAddress":"2714 Osceola Pkwy","addressLocality":"Kissimmee","addressRegion":"FL","postalCode":"34741","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":28.34126,"longitude":-81.43262},"priceRange":"$","category":"Breakfast & brunch","url":"https://407.fyi/archive.html?venue=metro-diner"}},{"@type":"ListItem","position":3,"item":{"@type":"LocalBusiness","name":"Puro Dulzor by Karolene","address":{"@type":"PostalAddress","streetAddress":"1354 E Vine St","addressLocality":"Kissimmee","addressRegion":"FL","postalCode":"34744","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":28.30303,"longitude":-81.39015},"priceRange":"$","category":"Breakfast & brunch","url":"https://407.fyi/archive.html?venue=puro-dulzor-by-karolene"}},{"@type":"ListItem","position":4,"item":{"@type":"LocalBusiness","name":"Main Street Pizza","address":{"@type":"PostalAddress","streetAddress":"16 Broadway","addressLocality":"Kissimmee","addressRegion":"FL","postalCode":"34741","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":28.29207,"longitude":-81.40735},"priceRange":"$$","category":"Pizza","url":"https://407.fyi/archive.html?venue=main-street-pizza"}},{"@type":"ListItem","position":5,"item":{"@type":"LocalBusiness","name":"World Food Trucks","address":{"@type":"PostalAddress","streetAddress":"5811 W Irlo Bronson Memorial Hwy","addressLocality":"Kissimmee","addressRegion":"FL","postalCode":"34746","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":28.33354,"longitude":-81.51694},"priceRange":"$$","category":"Markets & shops","url":"https://407.fyi/archive.html?venue=world-food-trucks"}},{"@type":"ListItem","position":6,"item":{"@type":"LocalBusiness","name":"Reunion Resort & Golf Club","address":{"@type":"PostalAddress","streetAddress":"7593 Gathering Dr","addressLocality":"Kissimmee","addressRegion":"FL","postalCode":"34747","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":28.27044,"longitude":-81.58928},"priceRange":"$$","category":"Hotels","url":"https://407.fyi/archive.html?venue=reunion-resort-golf-club"}},{"@type":"ListItem","position":7,"item":{"@type":"LocalBusiness","name":"1881 Restaurant & Bar","address":{"@type":"PostalAddress","streetAddress":"1881 Restaurant, 308 Broadway, Kissimmee, FL 34741-5718","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":28.29419,"longitude":-81.40499},"priceRange":"$$","category":"Mediterranean","url":"https://407.fyi/archive.html?venue=1881-restaurant"}},{"@type":"ListItem","position":8,"item":{"@type":"LocalBusiness","name":"Pienezza Pizza","address":{"@type":"PostalAddress","streetAddress":"Pienezza Pizza, 3236 N John Young Pkwy, Kissimmee, FL 34741-7549, United States","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":28.34662,"longitude":-81.42215},"priceRange":"$$","category":"Pizza","url":"https://407.fyi/archive.html?venue=pienezza-pizza"}},{"@type":"ListItem","position":9,"item":{"@type":"LocalBusiness","name":"Tropico Mofongo","address":{"@type":"PostalAddress","streetAddress":"Tropico Mofongo, 3160 Vineland Rd, Kissimmee, FL 34746-4657, United States","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":28.34244,"longitude":-81.48463},"priceRange":"$$","category":"Latin & Caribbean","url":"https://407.fyi/archive.html?venue=tropico-mofongo"}},{"@type":"ListItem","position":10,"item":{"@type":"LocalBusiness","name":"Lazy Dog","address":{"@type":"PostalAddress","streetAddress":"8019 W Irlo Bronson Memorial Hwy","addressLocality":"Kissimmee","addressRegion":"FL","postalCode":"34747","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":28.34767,"longitude":-81.61489},"priceRange":"$$","category":"American","url":"https://407.fyi/archive.html?venue=lazy-dog"}},{"@type":"ListItem","position":11,"item":{"@type":"LocalBusiness","name":"The Jersey Spot Pizza and Pasta","address":{"@type":"PostalAddress","streetAddress":"The Jersey Spot Pizza and Pasta, 1137 W Columbia Ave, Kissimmee, FL 34741-3202, United States","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":28.30846,"longitude":-81.41474},"priceRange":"$$","category":"Pizza","url":"https://407.fyi/archive.html?venue=the-jersey-spot-pizza-and-pasta"}},{"@type":"ListItem","position":12,"item":{"@type":"LocalBusiness","name":"The Wilson","address":{"@type":"PostalAddress","streetAddress":"The Wilson, 225 Celebration Pl, Kissimmee, FL 34747-4601, United States","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":28.3312,"longitude":-81.5385},"priceRange":"$$","category":"American","url":"https://407.fyi/archive.html?venue=the-wilson"}},{"@type":"ListItem","position":13,"item":{"@type":"LocalBusiness","name":"King O Falafel","address":{"@type":"PostalAddress","streetAddress":"King O Falafel, 5045 W Irlo Bronson Memorial Hwy, Kissimmee, FL 34746-5345, United States","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":28.33359,"longitude":-81.48636},"priceRange":"$$","category":"Mediterranean","url":"https://407.fyi/archive.html?venue=king-o-falafel"}},{"@type":"ListItem","position":14,"item":{"@type":"LocalBusiness","name":"Kamayan Grill","address":{"@type":"PostalAddress","streetAddress":"Kamayan Grill, 7868 W Irlo Bronson Memorial Hwy, Kissimmee, FL 34747-1738, United States","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":28.34098,"longitude":-81.59997},"priceRange":"$$","category":"Restaurants","url":"https://407.fyi/archive.html?venue=kamayan-grill"}},{"@type":"ListItem","position":15,"item":{"@type":"LocalBusiness","name":"Medieval Times Dinner & Tournament","address":{"@type":"PostalAddress","streetAddress":"4510 W Vine St","addressLocality":"Kissimmee","addressRegion":"FL","postalCode":"34746","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":28.2966,"longitude":-81.4357},"priceRange":"$$$","category":"Attractions","url":"https://407.fyi/archive.html?venue=medieval-times-orlando"}},{"@type":"ListItem","position":16,"item":{"@type":"LocalBusiness","name":"Boggy Creek Airboat Adventures","address":{"@type":"PostalAddress","streetAddress":"2001 E Southport Rd","addressLocality":"Kissimmee","addressRegion":"FL","postalCode":"34746","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":28.2456,"longitude":-81.4704},"priceRange":"$$","category":"Attractions","url":"https://407.fyi/archive.html?venue=boggy-creek-airboat-adventures"}},{"@type":"ListItem","position":17,"item":{"@type":"LocalBusiness","name":"Polynesian Fire Luau","address":{"@type":"PostalAddress","streetAddress":"4740 W Irlo Bronson Memorial Hwy","addressLocality":"Kissimmee","addressRegion":"FL","postalCode":"34746","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":28.32437,"longitude":-81.47145},"priceRange":"$$$","category":"Attractions","url":"https://407.fyi/archive.html?venue=polynesian-fire-luau-kissimmee"}},{"@type":"ListItem","position":18,"item":{"@type":"LocalBusiness","name":"Brazi Burger","address":{"@type":"PostalAddress","streetAddress":"5405 W Irlo Bronson Memorial Hwy","addressLocality":"Kissimmee","addressRegion":"FL","postalCode":"34746","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":28.33482,"longitude":-81.50096},"priceRange":"$$","category":"Burgers & sandwiches","url":"https://407.fyi/archive.html?venue=brazi-burger-kissimmee"}}]}</script>
+  </head>
+  <body>
+    <header class="hero">
+      <div class="hero-in">
+        <p class="crumbs"><a href="/">407 FYI</a> &middot; District Finder</p>
+        <a class="hero-brand" href="/">407 FYI &middot; A District Finder</a>
+        <h1>Kissimmee</h1>
+        <p class="sub">Kissimmee, south of the theme parks: family restaurants, pizza and roadside attractions.</p>
+        <p class="count">18 hand-verified places</p>
+        <nav class="anchor-nav" aria-label="On this page">
+          <a href="#places">The places</a>
+          <a href="#districts">All districts</a>
+          <a href="/archive.html?district=kissimmee">Open in the full finder</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="sec" id="places">
+        <p class="kicker">The Full List</p>
+        <h2>Every place in Kissimmee</h2>
+        <p class="lede">Full cards for the whole district, Local Picks first, then A to Z. Every name opens its listing in the full finder, where the map, filters and export live.</p>
+        <div class="vlist">
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=1881-restaurant">1881 Restaurant &amp; Bar</a></h3>
+          <p class="meta">Mediterranean &middot; $$</p>
+          <p class="addr">1881 Restaurant, 308 Broadway, Kissimmee, FL 34741-5718</p>
+          <p class="desc">Downtown Kissimmee hides an Uzbek, Turkish and Mediterranean kitchen inside a historic hardware building. The 1881 Restaurant and Bar fills the Makinson Hardware building on Broadway with steaming manti dumplings, hand pulled lagman noodles and fragrant pilaf studded with beef and lamb. A mixed grill is built for the table, and a full bar plus welcoming outdoor seating round out the room. Come curious and order dishes you cannot pronounce yet. Few corners of Central Florida cooking feel this unexpected.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=1881+Restaurant+%26+Bar+1881+Restaurant%2C+308+Broadway%2C+Kissimmee%2C+FL+34741-5718" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=boggy-creek-airboat-adventures">Boggy Creek Airboat Adventures</a></h3>
+          <p class="meta">Attractions &middot; $$</p>
+          <p class="addr">2001 E Southport Rd, Kissimmee, FL 34746</p>
+          <p class="desc">Boggy Creek runs airboats out onto East Lake Tohopekaliga, and the ride is pure Florida: the boat skims across open water at speed, then slows into the marsh grass where the captain spots gators, turtles, and wading birds most visitors would never notice. The 30-minute and hour-long tours are the core, but the night tours, when the guides sweep spotlights across the water and the gator eyes light up red, are the ones people talk about for years. Arrive early for the Native American village and the gem-mining sluice if you have kids in tow.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=Boggy+Creek+Airboat+Adventures+2001+E+Southport+Rd%2C+Kissimmee%2C+FL+34746" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=brazi-burger-kissimmee">Brazi Burger</a></h3>
+          <p class="meta">Burgers &amp; sandwiches &middot; $$</p>
+          <p class="addr">5405 W Irlo Bronson Memorial Hwy, Kissimmee, FL 34746</p>
+          <p class="desc">Brazilian burgers change the script in Kissimmee, especially after the usual burger routine. This Irlo Bronson outpost of a Brazilian burger spot from Orlando runs evenings and makes everything to order. X-Brazi, the house special, and the Picanha sandwich stand out first on the menu. The hot dog menu adds a curveball, especially the catupiry version, for American burger joint skeptics at the table. Portions justify the price and keep the order feeling substantial. Choose Brazi Burger when you want a made to order evening stop that trades the standard patty formula for Brazilian confidence.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=Brazi+Burger+5405+W+Irlo+Bronson+Memorial+Hwy%2C+Kissimmee%2C+FL+34746" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=kamayan-grill">Kamayan Grill</a></h3>
+          <p class="meta">Restaurants &middot; $$</p>
+          <p class="addr">Kamayan Grill, 7868 W Irlo Bronson Memorial Hwy, Kissimmee, FL 34747-1738, United States</p>
+          <p class="desc">Filipino food is made for sharing, and this Kissimmee kitchen treats that as a promise. Kamayan Grill is family-run and serves traditional favorites with conviction: crispy pata, sizzling sisig, adobo, and kare-kare with thick peanut sauce. Halo-halo finishes the meal, and ordering a bilao lets the whole table eat generously. The cozy room adds live music and karaoke some nights, plus an in-house bakery turning out Filipino breads and desserts. Bring people who like passing plates, and let hospitality carry the evening.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=Kamayan+Grill+Kamayan+Grill%2C+7868+W+Irlo+Bronson+Memorial+Hwy%2C+Kissimmee%2C+FL+34747-1738%2C+United+States" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=king-o-falafel">King O Falafel</a></h3>
+          <p class="meta">Mediterranean &middot; $$</p>
+          <p class="addr">King O Falafel, 5045 W Irlo Bronson Memorial Hwy, Kissimmee, FL 34746-5345, United States</p>
+          <p class="desc">Since January 2009, this Kissimmee kitchen has fried falafel to a deep golden crunch and grilled shawarma over real fire. The neighborhood never left, and the combination platter explains the loyalty: kifta, chicken and lamb shawarma over yellow rice kissed with saffron, sumac and parsley. Start with red lentil soup and end with pistachio baklava and Middle Eastern coffee. The storefront stays unassuming while the flavors do the opposite. Order the platter first and learn the menu from there.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=King+O+Falafel+King+O+Falafel%2C+5045+W+Irlo+Bronson+Memorial+Hwy%2C+Kissimmee%2C+FL+34746-5345%2C+United+States" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=lazy-dog">Lazy Dog</a></h3>
+          <p class="meta">American &middot; $$</p>
+          <p class="addr">8019 W Irlo Bronson Memorial Hwy, Kissimmee, FL 34747</p>
+          <p class="desc">The name is a promise Lazy Dog keeps. This warm, lodge-style spot on Irlo Bronson is the rare restaurant that treats your dog like a guest, with a dog meal on the menu and a patio firepit to lounge around. The humans get comfort food done right: Mom&#x27;s Chicken Pot Pie is the signature everyone raves about, the bison burger brings a lean richness, and the bacon old fashioned brings the party. Family nights, weekend brunch, and a whole lot of welcome.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=Lazy+Dog+8019+W+Irlo+Bronson+Memorial+Hwy%2C+Kissimmee%2C+FL+34747" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=main-street-pizza">Main Street Pizza</a></h3>
+          <p class="meta">Pizza &middot; $$</p>
+          <p class="addr">16 Broadway, Kissimmee, FL 34741</p>
+          <p class="desc">Downtown Kissimmee&#x27;s answer to New York-style pizza does not hold back. The slices are famously bigger than your face, the handcrafted pies use fresh ingredients and old-school recipes, and the menu has real personality: the Buffalo Chicken with its white base, and the Colorado, which piles pepperoni, bacon, chicken tenders, mozzarella sticks and fries onto one pie. Do not skip the nitrogen ice cream for dessert. For a neighborhood pizza joint with one genuinely over-the-top signature pie, Main Street delivers the full performance.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=Main+Street+Pizza+16+Broadway%2C+Kissimmee%2C+FL+34741" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=medieval-times-orlando">Medieval Times Dinner &amp; Tournament</a></h3>
+          <p class="meta">Attractions &middot; $$$</p>
+          <p class="addr">4510 W Vine St, Kissimmee, FL 34746</p>
+          <p class="desc">No forks, no problem, you tear into roasted chicken and tomato bisque with your hands while knights charge on horseback below your cheering section. Medieval Times in Kissimmee serves a four-course feast inside a castle arena where jousting decides the night. It lands well with kids and groups who will actually shout: pick your section, lean into the cheering, and eat as it comes. Tourist Trail: Worth it: the bisque and the jousting carry it, even if you have seen it once.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=Medieval+Times+Dinner+%26+Tournament+4510+W+Vine+St%2C+Kissimmee%2C+FL+34746" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=metro-diner">Metro Diner (Kissimmee)</a></h3>
+          <p class="meta">Breakfast &amp; brunch &middot; $</p>
+          <p class="addr">2714 Osceola Pkwy, Kissimmee, FL 34741</p>
+          <p class="desc">A great diner does comfort food without irony, and Metro Diner has practiced since Jacksonville in 1992. Now a Florida institution, the Kissimmee room serves fried chicken and waffles, cinnamon roll pancakes that draw weekend lines, and biscuits with sausage gravy exactly as they should arrive. All day breakfast, hearty sandwiches, and fried chicken done right fill out the menu, all served with genuine warmth. Bring visitors here when you want to show them what a diner is supposed to be, without dressing the idea up at all.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=Metro+Diner+%28Kissimmee%29+2714+Osceola+Pkwy%2C+Kissimmee%2C+FL+34741" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=pienezza-pizza">Pienezza Pizza</a></h3>
+          <p class="meta">Pizza &middot; $$</p>
+          <p class="addr">Pienezza Pizza, 3236 N John Young Pkwy, Kissimmee, FL 34741-7549, United States</p>
+          <p class="desc">Generations of Brooklyn tradition set the table at this family-owned Kissimmee pizzeria, and you can taste the borough in every fold of the crust. Beyond the classic round pies, the signatures tell the story: the Hey Brooklyn, the Crazy Margherita, a Sicilian Flag layered with red and white sauces, and a Grandma&#x27;s pie that regulars swear transports them straight to the city. A second spot in Downtown Orlando&#x27;s Creative Village spreads the family further. Order the Grandma&#x27;s first if you want the regulars&#x27; argument in edible form.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=Pienezza+Pizza+Pienezza+Pizza%2C+3236+N+John+Young+Pkwy%2C+Kissimmee%2C+FL+34741-7549%2C+United+States" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=polynesian-fire-luau-kissimmee">Polynesian Fire Luau</a></h3>
+          <p class="meta">Attractions &middot; $$$</p>
+          <p class="addr">4740 W Irlo Bronson Memorial Hwy, Kissimmee, FL 34746</p>
+          <p class="desc">Drums roll as fire-knife performers spin light in the dark and dancers move from hula to fast Tahitian beats. The Polynesian Fire Luau in Kissimmee on the 192 corridor starts with a tropical buffet, then builds into a show with audience participation woven in. It is an easy evening for families who want dinner handled: eat first, settle in, and let the kids get pulled into the fun. Tourist Trail: Do it like a local: book the show night, not another I-Drive dinner.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=Polynesian+Fire+Luau+4740+W+Irlo+Bronson+Memorial+Hwy%2C+Kissimmee%2C+FL+34746" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=puro-dulzor-by-karolene">Puro Dulzor by Karolene</a></h3>
+          <p class="meta">Breakfast &amp; brunch &middot; $</p>
+          <p class="addr">1354 E Vine St, Kissimmee, FL 34744</p>
+          <p class="desc">Pure sweetness is the name translated, and the Kissimmee kitchen earns it starting with the coffee. People rave about the coffee first, then you stay for Puerto Rican breakfast: a towering Tripleta sandwich, crisp empanadillas, and crema de maiz like abuela made it. A mayorca stuffed with Nutella gives you the sweet finish. The room feels like a cozy island kitchen, and the team treats you like family from the first visit. Choose Puro Dulzor when you want warmth, coffee, and breakfast with a Puerto Rican heartbeat.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=Puro+Dulzor+by+Karolene+1354+E+Vine+St%2C+Kissimmee%2C+FL+34744" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=reunion-resort-golf-club">Reunion Resort &amp; Golf Club</a></h3>
+          <p class="meta">Hotels &middot; $$</p>
+          <p class="addr">7593 Gathering Dr, Kissimmee, FL 34747</p>
+          <p class="desc">Three signature courses drawn by Palmer, Watson and Nicklaus, and each one feels like its own world of fairways. But Reunion is bigger than golf: sprawling villas and vacation homes, a water park with lazy river and slides, tennis and pickleball, and the rooftop restaurant Eleven where you can watch fireworks bloom over the parks. Bring the buddies for the tee times, bring the whole family for everything else, and never once feel like leaving the gates.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=Reunion+Resort+%26+Golf+Club+7593+Gathering+Dr%2C+Kissimmee%2C+FL+34747" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=salt-cellar">Salt &amp; Cellar</a></h3>
+          <p class="meta">Restaurants &middot; $$$</p>
+          <p class="addr">Salt &amp; the Cellar by Akira Back, 3001 Sherberth Rd, Kissimmee, FL 34747-1787</p>
+          <p class="desc">Low light does real work here, making an evening feel like an occasion early. Inside the Ette Hotel in Kissimmee, chef Akira Back&#x27;s Salt &amp; Cellar moves across steakhouse, Mediterranean, and Japanese-leaning Asian flavors. Table lamps, smart service, and a polished, dim room set the tone before courses land. Guests talk about the Sunday afternoon tea long after a visit. The kitchen carries the confidence of a chef who has cooked on big stages. Pick it for a date night south of Disney that delivers on its lighting.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=Salt+%26+Cellar+Salt+%26+the+Cellar+by+Akira+Back%2C+3001+Sherberth+Rd%2C+Kissimmee%2C+FL+34747-1787" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=the-jersey-spot-pizza-and-pasta">The Jersey Spot Pizza and Pasta</a></h3>
+          <p class="meta">Pizza &middot; $$</p>
+          <p class="addr">The Jersey Spot Pizza and Pasta, 1137 W Columbia Ave, Kissimmee, FL 34741-3202, United States</p>
+          <p class="desc">Kissimmee gets a Garden State answer to the great pizza debate. The Jersey Spot is a small, family-run joint serving thin-crust, New Jersey-style pies with a proper fold. Pasta earns equal praise from regulars: penne alla vodka, spaghetti and meatballs that get raved about, and garlic knots people call to die for. Wings are a sleeper hit too. Friendly staff and a clean family room complete the picture. Come here when you want pizza that reminds transplants of home, plus a pasta order worth sharing.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=The+Jersey+Spot+Pizza+and+Pasta+The+Jersey+Spot+Pizza+and+Pasta%2C+1137+W+Columbia+Ave%2C+Kissimmee%2C+FL+34741-3202%2C+United+States" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=the-wilson">The Wilson</a></h3>
+          <p class="meta">American &middot; $$</p>
+          <p class="addr">The Wilson, 225 Celebration Pl, Kissimmee, FL 34747-4601, United States</p>
+          <p class="desc">Tucked inside the Meliá Orlando Celebration, The Wilson feels like a coastal bistro that traded the ocean for a palm-framed pool. The room runs on seasonal cocktails and stone-oven pizzas, but the burgers are the quiet headline: double-patty, bacon-jam-laced, the kind you think about the next day. Ask for a table in the Backyard, where umbrellas float over the patio and the whole afternoon softens. It is the rare hotel restaurant locals claim as their own.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=The+Wilson+The+Wilson%2C+225+Celebration+Pl%2C+Kissimmee%2C+FL+34747-4601%2C+United+States" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=tropico-mofongo">Tropico Mofongo</a></h3>
+          <p class="meta">Latin &amp; Caribbean &middot; $$</p>
+          <p class="addr">Tropico Mofongo, 3160 Vineland Rd, Kissimmee, FL 34746-4657, United States</p>
+          <p class="desc">The name is the menu&#x27;s thesis in Kissimmee: plantains, chicharron and garlic, pounded into mofongo. Tropico Mofongo serves it under pernil, shrimp or all three in the Mofongo Trio, which locals call the best in town. The bright, cheerful room keeps music upbeat, the pernil sandwich with pickled onions works as a sleeper hit, and regulars insist the mojitos and margaritas are the area&#x27;s finest. Generous portions and Puerto Rican soul make it worth choosing deliberately.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=Tropico+Mofongo+Tropico+Mofongo%2C+3160+Vineland+Rd%2C+Kissimmee%2C+FL+34746-4657%2C+United+States" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=world-food-trucks">World Food Trucks</a></h3>
+          <p class="meta">Markets &amp; shops &middot; $$</p>
+          <p class="addr">5811 W Irlo Bronson Memorial Hwy, Kissimmee, FL 34746</p>
+          <p class="desc">A parking lot in Kissimmee works like a passport you can eat your way through. More than a hundred food trucks from more than twenty countries line the park, putting Latin American spice beside Asian flavors and Caribbean comfort beside street food you had not craved yet. Live entertainment keeps families and night owls circling, parking is free and the lot hums late into the night. The atmosphere feels like a block party with a world map. Come hungry and leave with a list for next time.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=World+Food+Trucks+5811+W+Irlo+Bronson+Memorial+Hwy%2C+Kissimmee%2C+FL+34746" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        </div>
+      </section>
+
+      <section class="sec" id="districts">
+        <p class="kicker">Keep Going</p>
+        <h2>Every district has a finder page</h2>
+        <p class="lede">One page per district, generated from the same hand-verified dataset as the full guide.</p>
+        <nav class="strip" aria-label="District finder pages">
+          <a href="/winter-park-finder.html">Winter Park</a>
+          <a href="/disney-springs-finder.html">Disney Springs</a>
+          <a href="/milk-district-finder.html">Milk District</a>
+          <a href="/thornton-park-finder.html">Thornton Park</a>
+          <a href="/mills-50-finder.html">Mills 50</a>
+          <a href="/ivanhoe-village-finder.html">Ivanhoe Village</a>
+          <a href="/downtown-orlando-finder.html">Downtown Orlando</a>
+          <a href="/international-drive-finder.html">International Drive</a>
+          <a href="/lake-nona-finder.html">Lake Nona</a>
+          <a href="/universal-finder.html">Universal</a>
+          <a href="/audubon-park-finder.html">Audubon Park</a>
+          <a href="/college-park-finder.html">College Park</a>
+          <a href="/more-orlando-finder.html">More Orlando</a>
+          <a href="/disney-area-finder.html">Disney Area</a>
+          <a href="/ucf-finder.html">UCF</a>
+          <a href="/kissimmee-finder.html" aria-current="page">Kissimmee</a>
+          <a href="/baldwin-park-finder.html">Baldwin Park</a>
+          <a href="/winter-garden-finder.html">Winter Garden</a>
+          <a href="/sanford-finder.html">Sanford</a>
+          <a href="/maitland-finder.html">Maitland</a>
+          <a href="/oviedo-finder.html">Oviedo</a>
+          <a href="/hourglass-finder.html">Hourglass</a>
+          <a href="/sodo-finder.html">SoDo</a>
+        </nav>
+        <div class="handoff">
+          <a class="btn-ghost" href="/archive.html?district=kissimmee">Kissimmee in the full finder</a>
+        </div>
+      </section>
+    </main>
+
+<footer>
+      <div class="foot-in">
+        <a class="back-link" href="/">&larr; Back to the full guide</a>
+        <p class="brand-line">407 FYI, an independent Orlando guide. Details can change; confirm before you go.</p>
+        <p>Hand-verified Orlando places · Checked October 2026 · Local Picks are never sponsored · Corrections: <a href="mailto:mail@407.fyi">mail@407.fyi</a></p>
+        <p>Some links on 407 FYI are affiliate links. They never affect which places we list, rank, or recommend.</p>
+      </div>
+    </footer>
+  </body>
+</html>

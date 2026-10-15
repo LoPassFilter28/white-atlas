@@ -1,0 +1,457 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="color-scheme" content="light dark" />
+    <title>UCF Finder &middot; 407 FYI</title>
+    <meta name="description" content="The 407 FYI finder page for UCF: every hand-verified place in the district with full cards, addresses, descriptions and directions." />
+    <link rel="canonical" href="https://407.fyi/ucf-finder.html" />
+    <meta property="og:title" content="UCF Finder &middot; 407 FYI" />
+    <meta property="og:description" content="The 407 FYI finder page for UCF: every hand-verified place in the district with full cards, addresses, descriptions and directions." />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://407.fyi/ucf-finder.html" />
+    <meta property="og:image" content="https://407.fyi/og-image.png" />
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Urbanist:wght@600;700;800&amp;display=swap" rel="stylesheet" />
+<script>
+      try {
+        const savedTheme = localStorage.getItem('white-atlas-theme');
+        document.documentElement.dataset.theme = savedTheme === 'light' || savedTheme === 'dark' ? savedTheme : 'dark';
+      } catch (error) {
+        document.documentElement.dataset.theme = 'dark';
+      }
+    </script>
+    <style>
+      /* Night Drive tokens (from the district guides) */
+      :root {
+        color-scheme: dark;
+        --bg: #0a1811; --surface: #122419; --soft: #172a1f; --ink: #f0e8d5;
+        --muted: #c6bba2; --line: #2f4a38; --accent: #765b2f; --accent-ink: #d4b573;
+        --headline: #f6edd6; --focus: #d4b573;
+        --d-a: #14231a; --d-b: #3a5a35; --d-c: #bd9049;
+        --pad: clamp(20px, 5vw, 40px);
+      }
+      * { box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
+      body {
+        margin: 0; background: var(--bg); color: var(--ink);
+        font-family: "Manrope", system-ui, sans-serif; line-height: 1.6;
+        overflow-x: hidden;
+      }
+      h1, h2, h3, .display { font-family: "Urbanist", "Manrope", sans-serif; }
+      a { color: var(--accent-ink); }
+      a:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
+      .kicker {
+        font-family: "Urbanist", sans-serif; font-weight: 700; letter-spacing: .22em;
+        font-size: .72rem; text-transform: uppercase; color: var(--accent-ink); margin: 0 0 14px;
+      }
+
+      /* ---------- hero ---------- */
+      .hero {
+        position: relative; padding: clamp(64px, 13vh, 130px) var(--pad) clamp(48px, 9vh, 84px);
+        background: radial-gradient(ellipse 90% 55% at 50% 112%, rgba(189,144,73,.26), transparent 60%),
+          linear-gradient(168deg, #1d3325, #14231a 55%, #0a1811);
+        border-bottom: 1px solid var(--line);
+      }
+      .hero-in { max-width: 860px; margin: 0 auto; }
+      .crumbs { font-size: .8rem; color: var(--muted); margin: 0 0 26px; }
+      .crumbs a { font-weight: 700; }
+      .hero-brand {
+        font-family: "Urbanist", sans-serif; font-weight: 700; letter-spacing: .22em;
+        font-size: .72rem; text-transform: uppercase; color: var(--accent-ink); text-decoration: none;
+      }
+      .hero h1 {
+        font-size: clamp(2.6rem, 8.5vw, 5.2rem); line-height: .98; letter-spacing: .01em;
+        color: var(--headline); margin: 18px 0 16px; text-transform: uppercase;
+      }
+      .hero .sub { font-size: clamp(1.05rem, 2.6vw, 1.3rem); color: var(--ink); max-width: 620px; margin: 0 0 10px; }
+      .hero .fine { color: var(--muted); max-width: 620px; margin: 0; }
+      .anchor-nav { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 30px; }
+      .anchor-nav a {
+        border: 1px solid var(--line); border-radius: 999px; padding: 8px 14px;
+        font-size: .82rem; font-weight: 700; text-decoration: none; background: rgba(255,255,255,.03);
+        min-height: 42px; display: inline-flex; align-items: center;
+      }
+      .anchor-nav a:hover { border-color: var(--accent-ink); }
+
+      /* ---------- sections ---------- */
+      main { display: block; }
+      .sec { max-width: 860px; margin: 0 auto; padding: clamp(52px, 9vh, 88px) var(--pad) 0; }
+      .sec h2 { font-size: clamp(1.7rem, 4.6vw, 2.4rem); line-height: 1.12; color: var(--headline); margin: 0 0 16px; }
+      .sec .lede { color: var(--muted); font-size: 1.04rem; max-width: 640px; margin: 0 0 26px; }
+      .sec p { max-width: 68ch; }
+      .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 14px; margin: 22px 0 6px; }
+      .card {
+        background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 20px;
+      }
+      .card h3 { margin: 0 0 6px; font-size: 1.12rem; color: var(--headline); }
+      .card .addr { font-weight: 800; color: var(--accent-ink); margin: 0 0 10px; font-size: .98rem; }
+      .card p { margin: 0; color: var(--muted); font-size: .94rem; }
+      .cols { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 22px 0 6px; }
+      @media (max-width: 680px) { .cols { grid-template-columns: 1fr; } }
+      .panel { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 20px 22px; }
+      .panel h3 { margin: 0 0 12px; font-size: 1.05rem; color: var(--headline); }
+      .panel ul, .plain-list { margin: 0; padding-left: 18px; }
+      .panel li, .plain-list li { margin-bottom: 9px; }
+      .panel li:last-child, .plain-list li:last-child { margin-bottom: 0; }
+      .note {
+        border-left: 3px solid var(--accent-ink); background: var(--soft);
+        padding: 14px 18px; border-radius: 0 12px 12px 0; margin: 22px 0 6px; max-width: 68ch;
+      }
+      .note p { margin: 0; }
+      .venue-links { list-style: none; margin: 0; padding: 0; }
+      .venue-links li { margin-bottom: 10px; }
+      .venue-links a { font-weight: 800; text-underline-offset: 3px; }
+      .venue-links span { color: var(--muted); }
+
+      /* ---------- jobs ---------- */
+      .job-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 14px; margin-top: 22px; }
+      .job { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 20px 22px; }
+      .job h3 { margin: 0 0 6px; font-size: 1.08rem; color: var(--headline); }
+      .job p { margin: 0 0 12px; color: var(--muted); font-size: .94rem; }
+      .job ul { list-style: none; margin: 0 0 14px; padding: 0; }
+      .job li { margin-bottom: 7px; }
+      .job li a { font-weight: 800; text-underline-offset: 3px; }
+      .job .browse { font-size: .86rem; font-weight: 800; text-transform: uppercase; letter-spacing: .08em; }
+
+      /* ---------- what to avoid ---------- */
+      .avoid { border-top: 1px solid var(--line); padding: 24px 0 6px; }
+      .avoid h3 { margin: 0 0 10px; font-size: 1.18rem; color: var(--headline); }
+      .avoid p { margin: 0 0 8px; max-width: 68ch; }
+      .avoid strong { color: var(--accent-ink); }
+      .flags { display: flex; flex-wrap: wrap; gap: 8px; margin: 18px 0 6px; }
+      .flags span {
+        border: 1px solid var(--accent); border-radius: 999px; padding: 7px 13px;
+        font-size: .85rem; font-weight: 700; color: var(--accent-ink); background: rgba(255,255,255,.03);
+      }
+      .rules { margin: 16px 0 0; padding-left: 20px; max-width: 68ch; }
+      .rules li { margin-bottom: 10px; }
+
+      .handoff { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 30px; }
+      .btn-big {
+        display: inline-flex; align-items: center; min-height: 52px; padding: 12px 22px;
+        background: var(--accent); color: #fff; font-weight: 800; border-radius: 999px; text-decoration: none;
+      }
+      .btn-big:hover { background: var(--accent-ink); color: #1d2a20; }
+      .btn-ghost {
+        display: inline-flex; align-items: center; min-height: 52px; padding: 12px 22px;
+        border: 1px solid var(--line); color: var(--accent-ink); font-weight: 800; border-radius: 999px; text-decoration: none;
+      }
+
+      footer { border-top: 1px solid var(--line); margin-top: clamp(52px, 9vh, 88px); }
+      .foot-in { max-width: 860px; margin: 0 auto; padding: 34px var(--pad) 44px; color: var(--muted); font-size: .9rem; }
+      .foot-in p { margin: 0 0 9px; }
+      .back-link { font-weight: 800; display: inline-block; margin-bottom: 16px; }
+      .brand-line { color: var(--ink); font-weight: 700; }
+
+      /* ---------- Light theme: app-page tokens ---------- */
+      html[data-theme="light"] {
+        color-scheme: light;
+        --bg: #faf6ec; --surface: #fffdf7; --soft: #f3ecd7; --ink: #1d2a20;
+        --muted: #4c5a45; --line: #ddd3ba; --accent: #8a5f0e; --accent-ink: #7c520c;
+        --headline: #123524; --focus: #8a5f0e;
+      }
+      html[data-theme="light"] .hero {
+        background: radial-gradient(ellipse 90% 55% at 50% 112%, rgba(163,129,63,.30), transparent 60%),
+          linear-gradient(168deg, color-mix(in srgb, var(--d-a) 24%, #faf6ec), color-mix(in srgb, var(--d-a) 40%, #faf6ec) 55%, color-mix(in srgb, var(--d-a) 14%, #faf6ec));
+      }
+      html[data-theme="light"] .anchor-nav a, html[data-theme="light"] .flags span { background: rgba(29,42,32,.04); }
+      html[data-theme="light"] .btn-big { background: var(--accent); color: #fff; }
+      html[data-theme="light"] .btn-big:hover { background: var(--accent-ink); color: #fff; }
+
+      @media print { .anchor-nav { display: none; } }
+      @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+    
+      /* ---------- finder pages (Seam 2 additions) ---------- */
+      .count {
+        font-family: "Urbanist", sans-serif; font-weight: 700; letter-spacing: .14em;
+        font-size: .8rem; text-transform: uppercase; color: var(--accent-ink); margin: 0;
+      }
+      .vlist { display: grid; gap: 14px; margin-top: 22px; }
+      .vcard {
+        background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 20px 22px;
+      }
+      .vcard h3 { margin: 0 0 4px; font-size: 1.15rem; color: var(--headline); }
+      .vcard h3 a { color: var(--headline); text-decoration: none; }
+      .vcard h3 a:hover { color: var(--accent-ink); text-decoration: underline; text-underline-offset: 3px; }
+      .badge {
+        display: inline-block; vertical-align: middle; margin-left: 8px;
+        border: 1px solid var(--accent); border-radius: 999px; padding: 2px 9px;
+        font-family: "Manrope", sans-serif; font-size: .68rem; font-weight: 800;
+        letter-spacing: .08em; text-transform: uppercase; color: var(--accent-ink);
+        background: rgba(255,255,255,.03); white-space: nowrap;
+      }
+      .vcard .meta { margin: 0 0 2px; font-weight: 800; color: var(--accent-ink); font-size: .92rem; }
+      .vcard .addr { margin: 0 0 8px; color: var(--muted); font-size: .9rem; }
+      .vcard .desc { margin: 0 0 10px; max-width: 68ch; }
+      .vcard .dirs { margin: 0; font-size: .88rem; font-weight: 800; }
+      .strip { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 22px; }
+      .strip a {
+        border: 1px solid var(--line); border-radius: 999px; padding: 8px 14px;
+        font-size: .82rem; font-weight: 700; text-decoration: none; background: rgba(255,255,255,.03);
+        min-height: 42px; display: inline-flex; align-items: center;
+      }
+      .strip a:hover { border-color: var(--accent-ink); }
+      .strip a[aria-current="page"] { border-color: var(--accent-ink); color: var(--headline); }
+      html[data-theme="light"] .badge, html[data-theme="light"] .strip a { background: rgba(29,42,32,.04); }
+    </style>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"ItemList","name":"407 FYI places: UCF","numberOfItems":26,"itemListElement":[{"@type":"ListItem","position":1,"item":{"@type":"LocalBusiness","name":"Luminescent","address":{"@type":"PostalAddress","streetAddress":"Luminescent, 12286 E Colonial Dr, Orlando, FL 32826-4709","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":28.55,"longitude":-81.35},"priceRange":"$$","category":"Bars & lounges","url":"https://407.fyi/archive.html?venue=luminescent"}},{"@type":"ListItem","position":2,"item":{"@type":"LocalBusiness","name":"Lazy Moon Pizza","address":{"@type":"PostalAddress","streetAddress":"11551 University Blvd","addressLocality":"Orlando","addressRegion":"FL","postalCode":"32817","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":28.5983402,"longitude":-81.2194613},"priceRange":"$","category":"Pizza","url":"https://407.fyi/archive.html?venue=lazy-moon-pizza-ucf"}},{"@type":"ListItem","position":3,"item":{"@type":"LocalBusiness","name":"Ice & Bites Cafe","address":{"@type":"PostalAddress","streetAddress":"3402 Technological Ave Ste 220","addressLocality":"Orlando","addressRegion":"FL","postalCode":"32817","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":28.59821,"longitude":-81.22106},"priceRange":"$$","category":"Coffee & cafes","url":"https://407.fyi/archive.html?venue=ice-bites-cafe"}},{"@type":"ListItem","position":4,"item":{"@type":"LocalBusiness","name":"Bar Louie (Plaza on University)","address":{"@type":"PostalAddress","streetAddress":"4100 N Alafaya Trail","addressLocality":"Orlando","addressRegion":"FL","postalCode":"32826","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":28.59983,"longitude":-81.20821},"priceRange":"$$","category":"Bars & lounges","url":"https://407.fyi/archive.html?venue=bar-louie"}},{"@type":"ListItem","position":5,"item":{"@type":"LocalBusiness","name":"Goodfella's Pizzeria","address":{"@type":"PostalAddress","streetAddress":"11873 E Colonial Dr","addressLocality":"Orlando","addressRegion":"FL","postalCode":"32826","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":28.56835,"longitude":-81.20575},"priceRange":"$$","category":"Pizza","url":"https://407.fyi/archive.html?venue=goodfella-s-pizzeria"}},{"@type":"ListItem","position":6,"item":{"@type":"LocalBusiness","name":"Bora Bora Smoothie Cafe (UCF)","address":{"@type":"PostalAddress","streetAddress":"10065 University Blvd","addressLocality":"Orlando","addressRegion":"FL","postalCode":"32817","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":28.5994,"longitude":-81.24353},"priceRange":"$","category":"Sweets","url":"https://407.fyi/archive.html?venue=bora-bora-smoothie-cafe"}},{"@type":"ListItem","position":7,"item":{"@type":"LocalBusiness","name":"Southern Steer Butcher (Orlando)","address":{"@type":"PostalAddress","streetAddress":"11024 W Colonial Dr","addressLocality":"Ocoee","addressRegion":"FL","postalCode":"34761","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":28.55108,"longitude":-81.54257},"priceRange":"$","category":"Markets & shops","url":"https://407.fyi/archive.html?venue=southern-steer-butcher"}},{"@type":"ListItem","position":8,"item":{"@type":"LocalBusiness","name":"Viet-Nomz","address":{"@type":"PostalAddress","streetAddress":"11798 E Colonial Dr","addressLocality":"Orlando","addressRegion":"FL","postalCode":"32817","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":28.56549,"longitude":-81.20839},"priceRange":"$$","category":"Noodles & Southeast Asian","url":"https://407.fyi/archive.html?venue=viet-nomz"}},{"@type":"ListItem","position":9,"item":{"@type":"LocalBusiness","name":"Omelet Bar","address":{"@type":"PostalAddress","streetAddress":"12250 Strategy Blvd Ste 401","addressLocality":"Orlando","addressRegion":"FL","postalCode":"32817","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":28.59986,"longitude":-81.20877},"priceRange":"$","category":"Breakfast & brunch","url":"https://407.fyi/archive.html?venue=omelet-bar"}},{"@type":"ListItem","position":10,"item":{"@type":"LocalBusiness","name":"Insomnia Cookies","address":{"@type":"PostalAddress","streetAddress":"12101 University Blvd","addressLocality":"Orlando","addressRegion":"FL","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":28.5982,"longitude":-81.20927},"priceRange":"$","category":"Bakeries","url":"https://407.fyi/archive.html?venue=insomnia-cookies"}},{"@type":"ListItem","position":11,"item":{"@type":"LocalBusiness","name":"Jeremiah's Italian Ice","address":{"@type":"PostalAddress","streetAddress":"877 N Alafaya Trl","addressLocality":"Orlando","addressRegion":"FL","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":28.55733,"longitude":-81.20535},"priceRange":"$","category":"Sweets","url":"https://407.fyi/archive.html?venue=jeremiah-s-italian-ice"}},{"@type":"ListItem","position":12,"item":{"@type":"LocalBusiness","name":"TJ's Seafood Shack","address":{"@type":"PostalAddress","streetAddress":"12231 E Colonial Dr Ste 230","addressLocality":"Orlando","addressRegion":"FL","postalCode":"32826","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":28.56779,"longitude":-81.19591},"priceRange":"$","category":"Seafood","url":"https://407.fyi/archive.html?venue=tj-s-seafood-shack"}},{"@type":"ListItem","position":13,"item":{"@type":"LocalBusiness","name":"Blaze Pizza","address":{"@type":"PostalAddress","streetAddress":"4100 N Alafaya Trl","addressLocality":"Orlando","addressRegion":"FL","postalCode":"32826","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":28.59983,"longitude":-81.20821},"priceRange":"$","category":"Pizza","url":"https://407.fyi/archive.html?venue=blaze-pizza"}},{"@type":"ListItem","position":14,"item":{"@type":"LocalBusiness","name":"Junior Colombian Burger","address":{"@type":"PostalAddress","streetAddress":"11875 E Colonial Dr","addressLocality":"Orlando","addressRegion":"FL","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":28.56824,"longitude":-81.20588},"priceRange":"$","category":"Burgers & sandwiches","url":"https://407.fyi/archive.html?venue=junior-colombian-burger"}},{"@type":"ListItem","position":15,"item":{"@type":"LocalBusiness","name":"Bento Sushi","address":{"@type":"PostalAddress","streetAddress":"Bento Sushi, 12715 Pegasus Dr, Orlando, FL 32816-8030","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":28.60204,"longitude":-81.20023},"priceRange":"$$","category":"Japanese & sushi","url":"https://407.fyi/archive.html?venue=bento-sushi"}},{"@type":"ListItem","position":16,"item":{"@type":"LocalBusiness","name":"Fujiyama Sushi","address":{"@type":"PostalAddress","streetAddress":"Fujiyama Sushi, 10153 University Blvd","addressLocality":"Orlando","addressRegion":"FL","postalCode":"32817","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":28.59846,"longitude":-81.24247},"priceRange":"$$","category":"Japanese & sushi","url":"https://407.fyi/archive.html?venue=fujiyama-sushi"}},{"@type":"ListItem","position":17,"item":{"@type":"LocalBusiness","name":"White Rabbit Dessert Experience","address":{"@type":"PostalAddress","streetAddress":"White Rabbit Dessert Experience, 875 N Alafaya Trl, Orlando, FL 32828-7049","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":28.55722,"longitude":-81.20532},"priceRange":"$$","category":"Sweets","url":"https://407.fyi/archive.html?venue=white-rabbit-dessert-experience"}},{"@type":"ListItem","position":18,"item":{"@type":"LocalBusiness","name":"Kyuramen X Tbaar- Ucf","address":{"@type":"PostalAddress","streetAddress":"Kyuramen X Tbaar- Ucf, 3402 Technological Ave, Orlando, FL 32817-1402","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":28.59821,"longitude":-81.22106},"priceRange":"$$","category":"Noodles & Southeast Asian","url":"https://407.fyi/archive.html?venue=kyuramen-x-tbaar-ucf"}},{"@type":"ListItem","position":19,"item":{"@type":"LocalBusiness","name":"Smokey Jay's BBQ","address":{"@type":"PostalAddress","streetAddress":"Smokey Jay's BBQ, 9318 E Colonial Dr, Orlando, FL 32817-4100","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":28.56741,"longitude":-81.25846},"priceRange":"$$","category":"BBQ","url":"https://407.fyi/archive.html?venue=smokey-jays-bbq"}},{"@type":"ListItem","position":20,"item":{"@type":"LocalBusiness","name":"TT Crepes","address":{"@type":"PostalAddress","streetAddress":"TT Crepes, 10681 E Colonial Dr, Orlando, FL 32817-4470","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":28.57088,"longitude":-81.23051},"priceRange":"$$","category":"Chinese","url":"https://407.fyi/archive.html?venue=tt-crepes"}},{"@type":"ListItem","position":21,"item":{"@type":"LocalBusiness","name":"Taqueria las Cazuelas","address":{"@type":"PostalAddress","streetAddress":"Taqueria las Cazuelas, 10360 E Colonial Dr, Orlando, FL 32817-4364, United States","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":28.56914,"longitude":-81.23624},"priceRange":"$$","category":"Mexican","url":"https://407.fyi/archive.html?venue=taqueria-las-cazuelas"}},{"@type":"ListItem","position":22,"item":{"@type":"LocalBusiness","name":"Domu Chibi Ramen","address":{"@type":"PostalAddress","streetAddress":"Domu Chibi Ramen, 869 N Alafaya Trl, Orlando, FL 32828-7049, United States","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":28.55714,"longitude":-81.20536},"priceRange":"$$","category":"Noodles & Southeast Asian","url":"https://407.fyi/archive.html?venue=domu-chibi-ramen"}},{"@type":"ListItem","position":23,"item":{"@type":"LocalBusiness","name":"The Spice Indian Grill","address":{"@type":"PostalAddress","streetAddress":"The Spice Indian Grill, 4498 Alafaya Trl N, Orlando, FL 32817, United States","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":28.60615,"longitude":-81.20934},"priceRange":"$$","category":"Indian","url":"https://407.fyi/archive.html?venue=the-spice-indian-grill"}},{"@type":"ListItem","position":24,"item":{"@type":"LocalBusiness","name":"Wine 4 Oysters","address":{"@type":"PostalAddress","streetAddress":"Wine 4 Oysters, 1957 Alafaya Trl S, Orlando, FL 32828-8732, United States","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":28.5257,"longitude":-81.19308},"priceRange":"$$","category":"Seafood","url":"https://407.fyi/archive.html?venue=wine-4-oysters"}},{"@type":"ListItem","position":25,"item":{"@type":"LocalBusiness","name":"Knight Library","address":{"@type":"PostalAddress","streetAddress":"11448 University Blvd","addressLocality":"Orlando","addressRegion":"FL","postalCode":"32817","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":28.59706,"longitude":-81.22193},"priceRange":"$","category":"Bars & lounges","url":"https://407.fyi/archive.html?venue=knight-library"}},{"@type":"ListItem","position":26,"item":{"@type":"LocalBusiness","name":"On Tap","address":{"@type":"PostalAddress","streetAddress":"10028 University Blvd","addressLocality":"Orlando","addressRegion":"FL","postalCode":"32817","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":28.59631,"longitude":-81.24351},"priceRange":"$","category":"Bars & lounges","url":"https://407.fyi/archive.html?venue=on-tap-ucf"}}]}</script>
+  </head>
+  <body>
+    <header class="hero">
+      <div class="hero-in">
+        <p class="crumbs"><a href="/">407 FYI</a> &middot; District Finder</p>
+        <a class="hero-brand" href="/">407 FYI &middot; A District Finder</a>
+        <h1>UCF</h1>
+        <p class="sub">Orlando&#x27;s east side around the University of Central Florida, where the list runs to bars, pizza and sweets.</p>
+        <p class="count">26 hand-verified places</p>
+        <nav class="anchor-nav" aria-label="On this page">
+          <a href="#places">The places</a>
+          <a href="#districts">All districts</a>
+          <a href="/archive.html?district=ucf">Open in the full finder</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="sec" id="places">
+        <p class="kicker">The Full List</p>
+        <h2>Every place in UCF</h2>
+        <p class="lede">Full cards for the whole district, Local Picks first, then A to Z. Every name opens its listing in the full finder, where the map, filters and export live.</p>
+        <div class="vlist">
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=bar-louie">Bar Louie (Plaza on University)</a></h3>
+          <p class="meta">Bars &amp; lounges &middot; $$</p>
+          <p class="addr">4100 N Alafaya Trail, Orlando, FL 32826</p>
+          <p class="desc">A gastropub next to the UCF crowd knows its regulars by their orders. Bar Louie at Plaza on University built its following on the Bourbon BBQ Burger and the Voodoo Pasta, dishes people return for by name. The Royal Red Sangria has a small fan club, cinnamon donut holes are the sleeper order, and craft cocktails keep the bar busy late. Choose it for game night with friends or a patio date when you want neighborhood energy without driving across town.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=Bar+Louie+%28Plaza+on+University%29+4100+N+Alafaya+Trail%2C+Orlando%2C+FL+32826" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=bento-sushi">Bento Sushi</a></h3>
+          <p class="meta">Japanese &amp; sushi &middot; $$</p>
+          <p class="addr">Bento Sushi, 12715 Pegasus Dr, Orlando, FL 32816-8030</p>
+          <p class="desc">BENTO&#x27;s pan-Asian kitchens are Orlando&#x27;s reliable answer to the question of where everyone can agree. Sushi rolls cut fresh, poke bowls built your way, hearty bento boxes with teriyaki and katsu, Thai curries for the spice-seekers, plus boba teas to finish. Fast, friendly, and generous with portions, the kind of spot that works for a quick lunch, a family dinner, or the group chat that could never pick a place.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=Bento+Sushi+Bento+Sushi%2C+12715+Pegasus+Dr%2C+Orlando%2C+FL+32816-8030" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=blaze-pizza">Blaze Pizza</a></h3>
+          <p class="meta">Pizza &middot; $</p>
+          <p class="addr">4100 N Alafaya Trl, Orlando, FL 32826</p>
+          <p class="desc">Pizza by the assembly line, done right. You walk the line pointing at more than thirty toppings, the dough is made from scratch, and a blazing hot oven turns your build into a crisp, leopard-spotted pie in minutes. Vegans, keto loyalists and picky kids all walk out with exactly the pizza they pictured, which is the whole design. Fast food with a pizzaiolo&#x27;s conscience sounds like a contradiction, but the crust crackle is the proof. Blaze suits a group whose members refuse to share one topping list.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=Blaze+Pizza+4100+N+Alafaya+Trl%2C+Orlando%2C+FL+32826" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=bora-bora-smoothie-cafe">Bora Bora Smoothie Cafe (UCF)</a></h3>
+          <p class="meta">Sweets &middot; $</p>
+          <p class="addr">10065 University Blvd, Orlando, FL 32817</p>
+          <p class="desc">Near campus, the tropics hit first in color and scent. Bora Bora built its name on crepes and towering signature drinks, and both land like dessert should. Pistachio and Dubai chocolate crepes are the ones people talk about, while the Unicorn strawberry-mango drink brings pure theater in a cup. Acai bowls, croffles, and fresh fruit fill out a menu that treats sweetness like a craft. Students and sweet tooths orbit the UCF spot for the sugar rush alone. Come when dessert should feel playful and oversized.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=Bora+Bora+Smoothie+Cafe+%28UCF%29+10065+University+Blvd%2C+Orlando%2C+FL+32817" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=domu-chibi-ramen">Domu Chibi Ramen</a></h3>
+          <p class="meta">Noodles &amp; Southeast Asian &middot; $$</p>
+          <p class="addr">Domu Chibi Ramen, 869 N Alafaya Trl, Orlando, FL 32828-7049, United States</p>
+          <p class="desc">DOMU&#x27;s fast-casual little sibling brings the house-made noodles and broths east to Waterford Lakes, and the quality carries the family name. Six varieties run from classic tonkotsu to butter miso and a solid vegan option, and the Japanese Curry Ramen with tonkatsu is the move for the indecisive. The boneless wing bites have their own fan club, the pork katsu sando is no joke, and self-order kiosks in a modern room keep everything easy. Choose Chibi for real ramen craft without the original&#x27;s waitlist pressure.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=Domu+Chibi+Ramen+Domu+Chibi+Ramen%2C+869+N+Alafaya+Trl%2C+Orlando%2C+FL+32828-7049%2C+United+States" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=fujiyama-sushi">Fujiyama Sushi</a></h3>
+          <p class="meta">Japanese &amp; sushi &middot; $$</p>
+          <p class="addr">Fujiyama Sushi, 10153 University Blvd, Orlando, FL 32817</p>
+          <p class="desc">A UCF-area staple for sushi that respects both your cravings and your wallet. The menu covers both routes without forcing a choice. Volcano rolls, Philly rolls, teppan lunches sizzling on the griddle, bento boxes packed with teriyaki and tempura, plus tempura cheesecake for the finish. The room is unfussy and friendly, the fish is fresh, and it&#x27;s the rare sushi spot that works just as well for a study-break lunch as for a full dinner with friends.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=Fujiyama+Sushi+Fujiyama+Sushi%2C+10153+University+Blvd%2C+Orlando%2C+FL+32817" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=goodfella-s-pizzeria">Goodfella&#x27;s Pizzeria</a></h3>
+          <p class="meta">Pizza &middot; $$</p>
+          <p class="addr">11873 E Colonial Dr, Orlando, FL 32826</p>
+          <p class="desc">Real New York pizza arrived in Alafaya with families who ran an Italian deli in Queens for over fifteen years before moving to Florida. Goodfella&#x27;s is family owned to the bone, with staff who have been there for years and customers who drive across town for a taste of home. The New York-style pies have the proper fold and snap, the Goodfella&#x27;s Special loads it all on, and the garlic knots are the kind people order by the dozen. Cannoli and tiramisu close it. Friday night, done right.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=Goodfella%27s+Pizzeria+11873+E+Colonial+Dr%2C+Orlando%2C+FL+32826" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=ice-bites-cafe">Ice &amp; Bites Cafe</a></h3>
+          <p class="meta">Coffee &amp; cafes &middot; $$</p>
+          <p class="addr">3402 Technological Ave Ste 220, Orlando, FL 32817</p>
+          <p class="desc">Dessert becomes a playground near UCF, and students have clearly noticed. Ice &amp; Bites builds around taiyaki, warm fish-shaped waffle cones holding ice cream in taro, lavender, green tea, and coffee, finished with toppings you pick. Sno brings ribbons of shaved ice dressed with fruit and mochi. The famous affogato cloud pours espresso over cotton candy until it melts into ice cream below. The room stays whimsical and cozy, made for lingering over board games. Bring your sweet tooth, your camera, and friends who linger.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=Ice+%26+Bites+Cafe+3402+Technological+Ave+Ste+220%2C+Orlando%2C+FL+32817" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=insomnia-cookies">Insomnia Cookies</a></h3>
+          <p class="meta">Bakeries &middot; $</p>
+          <p class="addr">12101 University Blvd, Orlando, FL</p>
+          <p class="desc">Warm cookies at your door solve a very specific UCF craving. Insomnia Cookies leans on delivery and gooey classics straight from the oven: chocolate chunk, double chocolate, and a salted caramel deluxe. The Cookiewich, two cookies pressed around ice cream, is the bold order, and vegan options widen the table. Nothing here pretends to be more than comfort delivered warm, which is precisely why it works near campus. Order it when the night needs dessert without a plan, a drive, or dishes afterward.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=Insomnia+Cookies+12101+University+Blvd%2C+Orlando%2C+FL" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=jeremiah-s-italian-ice">Jeremiah&#x27;s Italian Ice</a></h3>
+          <p class="meta">Sweets &middot; $</p>
+          <p class="addr">877 N Alafaya Trl, Orlando, FL</p>
+          <p class="desc">Born in Orlando in 1996, Jeremiah&#x27;s turned Italian ice into a Florida rite of summer. The Gelati layers Italian ice with creamy soft-serve in more than forty flavors, from mango and cotton candy to sea salted caramel and the famous Scoop Froggy Frog. Shops stay bright, lines move fast, and the J-List rewards regulars who return through the heat. The format is simple, cold, and built for repeat visits. Choose a Gelati when you want Orlando-born dessert that cools you down without slowing the day.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=Jeremiah%27s+Italian+Ice+877+N+Alafaya+Trl%2C+Orlando%2C+FL" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=junior-colombian-burger">Junior Colombian Burger</a></h3>
+          <p class="meta">Burgers &amp; sandwiches &middot; $</p>
+          <p class="addr">11875 E Colonial Dr, Orlando, FL</p>
+          <p class="desc">Colombian street food hijacks the American burger here, and the result refuses to be quiet. The Explosion Burger stacks plantain, mozzarella, egg, corn, and potato sticks into something glorious and unapologetic. The Triple piles crushed chips and house pineapple sauce, while the Burger Dog goes full Bogota with pineapple and pink sauce. Papas locas, homemade empanadas, and signature garlic and pink sauces cover the rest of the table. Open late for night owls, it earns the line locals use when they call it the best burger in Orlando.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=Junior+Colombian+Burger+11875+E+Colonial+Dr%2C+Orlando%2C+FL" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=knight-library">Knight Library</a></h3>
+          <p class="meta">Bars &amp; lounges &middot; $</p>
+          <p class="addr">11448 University Blvd, Orlando, FL 32817</p>
+          <p class="desc">UCF&#x27;s legendary college bar sits on University Boulevard directly across from campus, and it runs on a simple formula. Cheap drinks, a big patio and DJ nights pull the whole student crowd across the street. Knight Library is not a craft-cocktail room and does not pretend to be. It is the loud, easy, everybody-you-know-is-here kind of bar that defines a college town&#x27;s nightlife, priced for a student budget and built for groups spilling out onto the patio. Go with classmates, not with cocktail expectations.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=Knight+Library+11448+University+Blvd%2C+Orlando%2C+FL+32817" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=kyuramen-x-tbaar-ucf">Kyuramen X Tbaar- Ucf</a></h3>
+          <p class="meta">Noodles &amp; Southeast Asian &middot; $$</p>
+          <p class="addr">Kyuramen X Tbaar- Ucf, 3402 Technological Ave, Orlando, FL 32817-1402</p>
+          <p class="desc">Ramen comes with a side of theater near UCF. The bowls are the main act: Tokyo tonkotsu shoyu, Kyushu spicy tonkotsu, the yin-yang bowl with two broths in one, plus fluffy tonkotsu omurice and pork belly bao. The room leans playful, with treehouse-like seating, private honeycomb booths and curtain-drawn date tables that make dinner feel staged in a good way. Finish with TBaar bubble tea or matcha pudding. Choose Kyuramen when the group wants a photogenic ramen night near campus, not just a quick bowl.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=Kyuramen+X+Tbaar-+Ucf+Kyuramen+X+Tbaar-+Ucf%2C+3402+Technological+Ave%2C+Orlando%2C+FL+32817-1402" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=lazy-moon-pizza-ucf">Lazy Moon Pizza</a></h3>
+          <p class="meta">Pizza &middot; $</p>
+          <p class="addr">11551 University Blvd, Orlando, FL 32817</p>
+          <p class="desc">A slice bigger than your head is the Lazy Moon promise, and generations of UCF students have tested it. A divey, sticker-plastered institution, it has served 30-inch pies and massive by-the-slice wedges near campus since 2004, with flavors you will not find elsewhere: the Cuban, the mustard-based El Fidel and the buffalo-chicken Buff. Craft beer, late nights and a whole lot of napkins complete the ritual. It is not pretty, and it never needed to be. Eat, drink and be lazy is the operating principle here.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=Lazy+Moon+Pizza+11551+University+Blvd%2C+Orlando%2C+FL+32817" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=luminescent">Luminescent</a></h3>
+          <p class="meta">Bars &amp; lounges &middot; $$</p>
+          <p class="addr">Luminescent, 12286 E Colonial Dr, Orlando, FL 32826-4709</p>
+          <p class="desc">East Orlando&#x27;s day-to-night dream. Luminescent runs a dual life that actually works: a polished, Indian-influenced coffee bar by day, a craft cocktail lounge after dark, all wrapped around a deep-green bar in a room people call impeccable. The drinks are where it gets special, a Keral&#x27;s Kulfi built on pistachio cold foam and soan papdi, traditional chā, affogatos with real kulfi ice cream, plus pistachio, cardamom, and rose water weaving through both the espresso and the cocktails. Come in the morning to work, come back at night to unwind. A rare two-visit place.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=Luminescent+Luminescent%2C+12286+E+Colonial+Dr%2C+Orlando%2C+FL+32826-4709" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=omelet-bar">Omelet Bar</a></h3>
+          <p class="meta">Breakfast &amp; brunch &middot; $</p>
+          <p class="addr">12250 Strategy Blvd Ste 401, Orlando, FL 32817</p>
+          <p class="desc">Morning becomes an event near UCF when the omelet itself is built to order. Omelet Bar lets you build from a fresh bar of fillings or go bold with signatures. The Bostonian stuffs lobster inside and finishes with lobster bisque, while the carne frittata pairs smoked brisket with sausage gravy. Bread bowls, benedicts, a chicken and waffle flight, and beignets round out a menu built to convert first timers. Choose it when you want brunch with range, from a custom omelet to a flight worth sharing with the table.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=Omelet+Bar+12250+Strategy+Blvd+Ste+401%2C+Orlando%2C+FL+32817" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=on-tap-ucf">On Tap</a></h3>
+          <p class="meta">Bars &amp; lounges &middot; $</p>
+          <p class="addr">10028 University Blvd, Orlando, FL 32817</p>
+          <p class="desc">Student budgets and televised games shape the entire playbook on University Boulevard. On Tap is a casual bar in the heart of UCF country, built for groups that build as the night goes on. Drinks stay priced for a student wallet, the games stay on, and nobody needs a complicated decision to start the evening. It knows exactly what it is, and on this stretch of east Orlando that clarity is the job. Walk in with a group and let the late night crowd carry the rest.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=On+Tap+10028+University+Blvd%2C+Orlando%2C+FL+32817" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=smokey-jays-bbq">Smokey Jay&#x27;s BBQ</a></h3>
+          <p class="meta">BBQ &middot; $$</p>
+          <p class="addr">Smokey Jay&#x27;s BBQ, 9318 E Colonial Dr, Orlando, FL 32817-4100</p>
+          <p class="desc">Good bark takes time, and the pit starts before dawn here. Smokey Jay&#x27;s smokes over real wood until the bark and smoke ring are right, serving ribs described as fall off the bone, tender pulled pork, and brisket loaded fries. Collard greens, candied yams, and homemade mac and cheese fill out the plate, with red velvet cake at the end. The family run operation has a devoted following and stays open until sold out, so earlier is the safer plan.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=Smokey+Jay%27s+BBQ+Smokey+Jay%27s+BBQ%2C+9318+E+Colonial+Dr%2C+Orlando%2C+FL+32817-4100" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=southern-steer-butcher">Southern Steer Butcher (Orlando)</a></h3>
+          <p class="meta">Markets &amp; shops &middot; $</p>
+          <p class="addr">11024 W Colonial Dr, Ocoee, FL 34761</p>
+          <p class="desc">Grocery store meat counters have a higher standard to meet in Ocoee. Southern Steer is family owned, serious about guest service and focused on sourcing, with all natural, humanely processed meat now dry aged in house. Staff walk you through the case, teach you how to cook what you buy and may talk you into the armadillo eggs. Part butcher, part neighborhood food school, it rewards the drive out Colonial. Go when you want advice with the cut, not just a package.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=Southern+Steer+Butcher+%28Orlando%29+11024+W+Colonial+Dr%2C+Ocoee%2C+FL+34761" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=taqueria-las-cazuelas">Taqueria las Cazuelas</a></h3>
+          <p class="meta">Mexican &middot; $$</p>
+          <p class="addr">Taqueria las Cazuelas, 10360 E Colonial Dr, Orlando, FL 32817-4364, United States</p>
+          <p class="desc">A beloved Eastside story starts with the original Las Cazuelas, which built a devoted following on authentic home-style Mexican cooking. The family opened this taco-centric outpost on East Colonial, and the magic carried over. Tacos come double-wrapped in soft corn tortillas with onion and cilantro: birria, carne asada, al pastor and carnitas, with a house red sauce that regulars warn is potent. Weekend menudo keeps the loyalists coming back, and every plate tastes like a kitchen that genuinely loves feeding you. It is the East Colonial stop for home-style tacos without pretense.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=Taqueria+las+Cazuelas+Taqueria+las+Cazuelas%2C+10360+E+Colonial+Dr%2C+Orlando%2C+FL+32817-4364%2C+United+States" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=the-spice-indian-grill">The Spice Indian Grill</a></h3>
+          <p class="meta">Indian &middot; $$</p>
+          <p class="addr">The Spice Indian Grill, 4498 Alafaya Trl N, Orlando, FL 32817, United States</p>
+          <p class="desc">Near UCF, Spice Indian Grill has quietly become the neighborhood&#x27;s Indian go-to. The lunch buffet lets you graze through the classics, chicken tikka masala, saag, crispy gobi manchurian, and that garlic naan that keeps coming until you say stop. The food is not Americanized, regulars note the heat is honest, so ask questions and trust the staff. Cool off with a mango lassi and finish with the sugar-dusted dough balls. Comforting, generous, and priced for a student crowd.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=The+Spice+Indian+Grill+The+Spice+Indian+Grill%2C+4498+Alafaya+Trl+N%2C+Orlando%2C+FL+32817%2C+United+States" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=tj-s-seafood-shack">TJ&#x27;s Seafood Shack</a></h3>
+          <p class="meta">Seafood &middot; $</p>
+          <p class="addr">12231 E Colonial Dr Ste 230, Orlando, FL 32826</p>
+          <p class="desc">An Oviedo shack turned a strip plaza into a little piece of the Gulf. TJ&#x27;s Seafood Shack mixes beach signs and bucket lights with fresh-catch confidence. Mahi tacos draw regular praise, a shrimp po&#x27; boy carries house-made remoulade, and hushpuppies arrive crisp outside with honey drizzled over them. Mahi dip keeps people dreaming between visits, and even the Angus burger earns respect. A cook who clearly loves the fryer completes the recipe. Come for casual seafood that works because the basics are handled with care.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=TJ%27s+Seafood+Shack+12231+E+Colonial+Dr+Ste+230%2C+Orlando%2C+FL+32826" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=tt-crepes">TT Crepes</a></h3>
+          <p class="meta">Chinese &middot; $$</p>
+          <p class="addr">TT Crepes, 10681 E Colonial Dr, Orlando, FL 32817-4470</p>
+          <p class="desc">A supermarket counter can hide the best kind of surprise when the menu stays small. Inside Mei Supermarket in Union Park, TT Crepes focuses on jianbing, the Chinese street crepe with crisp, egg laced crunch. Scallion pancakes get done right beside it, and regulars know exactly what they are getting from the dialed in flavors. The counter stays unassuming and free of pretension from the first order. Choose TT Crepes when you want a focused street food stop where crunch, egg, and scallion do the talking.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=TT+Crepes+TT+Crepes%2C+10681+E+Colonial+Dr%2C+Orlando%2C+FL+32817-4470" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=viet-nomz">Viet-Nomz</a></h3>
+          <p class="meta">Noodles &amp; Southeast Asian &middot; $$</p>
+          <p class="addr">11798 E Colonial Dr, Orlando, FL 32817</p>
+          <p class="desc">Orlando&#x27;s first fast-casual Vietnamese spot started with three friends who wanted great pho on the go, and it became a local chain. The King Pho bowl is built for serious appetites, the NOMZ-ster bowl packs grilled meats and garden vegetables, and the street fare keeps things playful: banh mi, bao, Nuoc-Nom wings and Wa-Pho fries. A fresh herb bar lets you finish your own bowl, and the Vietnamese coffee, including the matcha version, is dangerously good. It is the easy east-side answer when pho cannot wait.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=Viet-Nomz+11798+E+Colonial+Dr%2C+Orlando%2C+FL+32817" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=white-rabbit-dessert-experience">White Rabbit Dessert Experience</a></h3>
+          <p class="meta">Sweets &middot; $$</p>
+          <p class="addr">White Rabbit Dessert Experience, 875 N Alafaya Trl, Orlando, FL 32828-7049</p>
+          <p class="desc">Dessert becomes a full evening out in Waterford Lakes if you follow the rabbit. White Rabbit offers over 100 made-to-order creations from a modern open kitchen: waffles, crepes, towering sundaes, cakes, and brownies, crowned with homemade ice cream made fresh daily. The space is designed for indulgence, and an espresso bar keeps adults happy while the table decides. Variety is the practical draw for mixed groups. Visit when dessert deserves its own plan, not an afterthought squeezed in after dinner elsewhere in Orlando.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=White+Rabbit+Dessert+Experience+White+Rabbit+Dessert+Experience%2C+875+N+Alafaya+Trl%2C+Orlando%2C+FL+32828-7049" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=wine-4-oysters">Wine 4 Oysters</a></h3>
+          <p class="meta">Seafood &middot; $$</p>
+          <p class="addr">Wine 4 Oysters, 1957 Alafaya Trl S, Orlando, FL 32828-8732, United States</p>
+          <p class="desc">The name states the pairing strategy plainly: wine, oysters, and the marriage between them. Wine 4 Oysters is an East Orlando spot run by two people who spent over a decade traveling the world in search of oyster preparations. The menu reads like a passport: Brest oysters from France, steamed oysters from Japan, spicy Hong Kong style, Oysters Rockefeller, and caviar-topped oysters, each with a suggested wine. Raw, baked, or broiled, the room turns romantic. Choose it for a date night built around shells.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=Wine+4+Oysters+Wine+4+Oysters%2C+1957+Alafaya+Trl+S%2C+Orlando%2C+FL+32828-8732%2C+United+States" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        </div>
+      </section>
+
+      <section class="sec" id="districts">
+        <p class="kicker">Keep Going</p>
+        <h2>Every district has a finder page</h2>
+        <p class="lede">One page per district, generated from the same hand-verified dataset as the full guide.</p>
+        <nav class="strip" aria-label="District finder pages">
+          <a href="/winter-park-finder.html">Winter Park</a>
+          <a href="/disney-springs-finder.html">Disney Springs</a>
+          <a href="/milk-district-finder.html">Milk District</a>
+          <a href="/thornton-park-finder.html">Thornton Park</a>
+          <a href="/mills-50-finder.html">Mills 50</a>
+          <a href="/ivanhoe-village-finder.html">Ivanhoe Village</a>
+          <a href="/downtown-orlando-finder.html">Downtown Orlando</a>
+          <a href="/international-drive-finder.html">International Drive</a>
+          <a href="/lake-nona-finder.html">Lake Nona</a>
+          <a href="/universal-finder.html">Universal</a>
+          <a href="/audubon-park-finder.html">Audubon Park</a>
+          <a href="/college-park-finder.html">College Park</a>
+          <a href="/more-orlando-finder.html">More Orlando</a>
+          <a href="/disney-area-finder.html">Disney Area</a>
+          <a href="/ucf-finder.html" aria-current="page">UCF</a>
+          <a href="/kissimmee-finder.html">Kissimmee</a>
+          <a href="/baldwin-park-finder.html">Baldwin Park</a>
+          <a href="/winter-garden-finder.html">Winter Garden</a>
+          <a href="/sanford-finder.html">Sanford</a>
+          <a href="/maitland-finder.html">Maitland</a>
+          <a href="/oviedo-finder.html">Oviedo</a>
+          <a href="/hourglass-finder.html">Hourglass</a>
+          <a href="/sodo-finder.html">SoDo</a>
+        </nav>
+        <div class="handoff">
+          <a class="btn-ghost" href="/archive.html?district=ucf">UCF in the full finder</a>
+        </div>
+      </section>
+    </main>
+
+<footer>
+      <div class="foot-in">
+        <a class="back-link" href="/">&larr; Back to the full guide</a>
+        <p class="brand-line">407 FYI, an independent Orlando guide. Details can change; confirm before you go.</p>
+        <p>Hand-verified Orlando places · Checked October 2026 · Local Picks are never sponsored · Corrections: <a href="mailto:mail@407.fyi">mail@407.fyi</a></p>
+        <p>Some links on 407 FYI are affiliate links. They never affect which places we list, rank, or recommend.</p>
+      </div>
+    </footer>
+  </body>
+</html>

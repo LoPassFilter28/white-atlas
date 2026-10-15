@@ -1,0 +1,352 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="color-scheme" content="light dark" />
+    <title>Oviedo Finder &middot; 407 FYI</title>
+    <meta name="description" content="The 407 FYI finder page for Oviedo: every hand-verified place in the district with full cards, addresses, descriptions and directions." />
+    <link rel="canonical" href="https://407.fyi/oviedo-finder.html" />
+    <meta property="og:title" content="Oviedo Finder &middot; 407 FYI" />
+    <meta property="og:description" content="The 407 FYI finder page for Oviedo: every hand-verified place in the district with full cards, addresses, descriptions and directions." />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://407.fyi/oviedo-finder.html" />
+    <meta property="og:image" content="https://407.fyi/og-image.png" />
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Urbanist:wght@600;700;800&amp;display=swap" rel="stylesheet" />
+<script>
+      try {
+        const savedTheme = localStorage.getItem('white-atlas-theme');
+        document.documentElement.dataset.theme = savedTheme === 'light' || savedTheme === 'dark' ? savedTheme : 'dark';
+      } catch (error) {
+        document.documentElement.dataset.theme = 'dark';
+      }
+    </script>
+    <style>
+      /* Night Drive tokens (from the district guides) */
+      :root {
+        color-scheme: dark;
+        --bg: #0a1811; --surface: #122419; --soft: #172a1f; --ink: #f0e8d5;
+        --muted: #c6bba2; --line: #2f4a38; --accent: #765b2f; --accent-ink: #d4b573;
+        --headline: #f6edd6; --focus: #d4b573;
+        --d-a: #14231a; --d-b: #3a5a35; --d-c: #bd9049;
+        --pad: clamp(20px, 5vw, 40px);
+      }
+      * { box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
+      body {
+        margin: 0; background: var(--bg); color: var(--ink);
+        font-family: "Manrope", system-ui, sans-serif; line-height: 1.6;
+        overflow-x: hidden;
+      }
+      h1, h2, h3, .display { font-family: "Urbanist", "Manrope", sans-serif; }
+      a { color: var(--accent-ink); }
+      a:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
+      .kicker {
+        font-family: "Urbanist", sans-serif; font-weight: 700; letter-spacing: .22em;
+        font-size: .72rem; text-transform: uppercase; color: var(--accent-ink); margin: 0 0 14px;
+      }
+
+      /* ---------- hero ---------- */
+      .hero {
+        position: relative; padding: clamp(64px, 13vh, 130px) var(--pad) clamp(48px, 9vh, 84px);
+        background: radial-gradient(ellipse 90% 55% at 50% 112%, rgba(189,144,73,.26), transparent 60%),
+          linear-gradient(168deg, #1d3325, #14231a 55%, #0a1811);
+        border-bottom: 1px solid var(--line);
+      }
+      .hero-in { max-width: 860px; margin: 0 auto; }
+      .crumbs { font-size: .8rem; color: var(--muted); margin: 0 0 26px; }
+      .crumbs a { font-weight: 700; }
+      .hero-brand {
+        font-family: "Urbanist", sans-serif; font-weight: 700; letter-spacing: .22em;
+        font-size: .72rem; text-transform: uppercase; color: var(--accent-ink); text-decoration: none;
+      }
+      .hero h1 {
+        font-size: clamp(2.6rem, 8.5vw, 5.2rem); line-height: .98; letter-spacing: .01em;
+        color: var(--headline); margin: 18px 0 16px; text-transform: uppercase;
+      }
+      .hero .sub { font-size: clamp(1.05rem, 2.6vw, 1.3rem); color: var(--ink); max-width: 620px; margin: 0 0 10px; }
+      .hero .fine { color: var(--muted); max-width: 620px; margin: 0; }
+      .anchor-nav { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 30px; }
+      .anchor-nav a {
+        border: 1px solid var(--line); border-radius: 999px; padding: 8px 14px;
+        font-size: .82rem; font-weight: 700; text-decoration: none; background: rgba(255,255,255,.03);
+        min-height: 42px; display: inline-flex; align-items: center;
+      }
+      .anchor-nav a:hover { border-color: var(--accent-ink); }
+
+      /* ---------- sections ---------- */
+      main { display: block; }
+      .sec { max-width: 860px; margin: 0 auto; padding: clamp(52px, 9vh, 88px) var(--pad) 0; }
+      .sec h2 { font-size: clamp(1.7rem, 4.6vw, 2.4rem); line-height: 1.12; color: var(--headline); margin: 0 0 16px; }
+      .sec .lede { color: var(--muted); font-size: 1.04rem; max-width: 640px; margin: 0 0 26px; }
+      .sec p { max-width: 68ch; }
+      .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 14px; margin: 22px 0 6px; }
+      .card {
+        background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 20px;
+      }
+      .card h3 { margin: 0 0 6px; font-size: 1.12rem; color: var(--headline); }
+      .card .addr { font-weight: 800; color: var(--accent-ink); margin: 0 0 10px; font-size: .98rem; }
+      .card p { margin: 0; color: var(--muted); font-size: .94rem; }
+      .cols { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 22px 0 6px; }
+      @media (max-width: 680px) { .cols { grid-template-columns: 1fr; } }
+      .panel { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 20px 22px; }
+      .panel h3 { margin: 0 0 12px; font-size: 1.05rem; color: var(--headline); }
+      .panel ul, .plain-list { margin: 0; padding-left: 18px; }
+      .panel li, .plain-list li { margin-bottom: 9px; }
+      .panel li:last-child, .plain-list li:last-child { margin-bottom: 0; }
+      .note {
+        border-left: 3px solid var(--accent-ink); background: var(--soft);
+        padding: 14px 18px; border-radius: 0 12px 12px 0; margin: 22px 0 6px; max-width: 68ch;
+      }
+      .note p { margin: 0; }
+      .venue-links { list-style: none; margin: 0; padding: 0; }
+      .venue-links li { margin-bottom: 10px; }
+      .venue-links a { font-weight: 800; text-underline-offset: 3px; }
+      .venue-links span { color: var(--muted); }
+
+      /* ---------- jobs ---------- */
+      .job-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 14px; margin-top: 22px; }
+      .job { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 20px 22px; }
+      .job h3 { margin: 0 0 6px; font-size: 1.08rem; color: var(--headline); }
+      .job p { margin: 0 0 12px; color: var(--muted); font-size: .94rem; }
+      .job ul { list-style: none; margin: 0 0 14px; padding: 0; }
+      .job li { margin-bottom: 7px; }
+      .job li a { font-weight: 800; text-underline-offset: 3px; }
+      .job .browse { font-size: .86rem; font-weight: 800; text-transform: uppercase; letter-spacing: .08em; }
+
+      /* ---------- what to avoid ---------- */
+      .avoid { border-top: 1px solid var(--line); padding: 24px 0 6px; }
+      .avoid h3 { margin: 0 0 10px; font-size: 1.18rem; color: var(--headline); }
+      .avoid p { margin: 0 0 8px; max-width: 68ch; }
+      .avoid strong { color: var(--accent-ink); }
+      .flags { display: flex; flex-wrap: wrap; gap: 8px; margin: 18px 0 6px; }
+      .flags span {
+        border: 1px solid var(--accent); border-radius: 999px; padding: 7px 13px;
+        font-size: .85rem; font-weight: 700; color: var(--accent-ink); background: rgba(255,255,255,.03);
+      }
+      .rules { margin: 16px 0 0; padding-left: 20px; max-width: 68ch; }
+      .rules li { margin-bottom: 10px; }
+
+      .handoff { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 30px; }
+      .btn-big {
+        display: inline-flex; align-items: center; min-height: 52px; padding: 12px 22px;
+        background: var(--accent); color: #fff; font-weight: 800; border-radius: 999px; text-decoration: none;
+      }
+      .btn-big:hover { background: var(--accent-ink); color: #1d2a20; }
+      .btn-ghost {
+        display: inline-flex; align-items: center; min-height: 52px; padding: 12px 22px;
+        border: 1px solid var(--line); color: var(--accent-ink); font-weight: 800; border-radius: 999px; text-decoration: none;
+      }
+
+      footer { border-top: 1px solid var(--line); margin-top: clamp(52px, 9vh, 88px); }
+      .foot-in { max-width: 860px; margin: 0 auto; padding: 34px var(--pad) 44px; color: var(--muted); font-size: .9rem; }
+      .foot-in p { margin: 0 0 9px; }
+      .back-link { font-weight: 800; display: inline-block; margin-bottom: 16px; }
+      .brand-line { color: var(--ink); font-weight: 700; }
+
+      /* ---------- Light theme: app-page tokens ---------- */
+      html[data-theme="light"] {
+        color-scheme: light;
+        --bg: #faf6ec; --surface: #fffdf7; --soft: #f3ecd7; --ink: #1d2a20;
+        --muted: #4c5a45; --line: #ddd3ba; --accent: #8a5f0e; --accent-ink: #7c520c;
+        --headline: #123524; --focus: #8a5f0e;
+      }
+      html[data-theme="light"] .hero {
+        background: radial-gradient(ellipse 90% 55% at 50% 112%, rgba(163,129,63,.30), transparent 60%),
+          linear-gradient(168deg, color-mix(in srgb, var(--d-a) 24%, #faf6ec), color-mix(in srgb, var(--d-a) 40%, #faf6ec) 55%, color-mix(in srgb, var(--d-a) 14%, #faf6ec));
+      }
+      html[data-theme="light"] .anchor-nav a, html[data-theme="light"] .flags span { background: rgba(29,42,32,.04); }
+      html[data-theme="light"] .btn-big { background: var(--accent); color: #fff; }
+      html[data-theme="light"] .btn-big:hover { background: var(--accent-ink); color: #fff; }
+
+      @media print { .anchor-nav { display: none; } }
+      @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+    
+      /* ---------- finder pages (Seam 2 additions) ---------- */
+      .count {
+        font-family: "Urbanist", sans-serif; font-weight: 700; letter-spacing: .14em;
+        font-size: .8rem; text-transform: uppercase; color: var(--accent-ink); margin: 0;
+      }
+      .vlist { display: grid; gap: 14px; margin-top: 22px; }
+      .vcard {
+        background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 20px 22px;
+      }
+      .vcard h3 { margin: 0 0 4px; font-size: 1.15rem; color: var(--headline); }
+      .vcard h3 a { color: var(--headline); text-decoration: none; }
+      .vcard h3 a:hover { color: var(--accent-ink); text-decoration: underline; text-underline-offset: 3px; }
+      .badge {
+        display: inline-block; vertical-align: middle; margin-left: 8px;
+        border: 1px solid var(--accent); border-radius: 999px; padding: 2px 9px;
+        font-family: "Manrope", sans-serif; font-size: .68rem; font-weight: 800;
+        letter-spacing: .08em; text-transform: uppercase; color: var(--accent-ink);
+        background: rgba(255,255,255,.03); white-space: nowrap;
+      }
+      .vcard .meta { margin: 0 0 2px; font-weight: 800; color: var(--accent-ink); font-size: .92rem; }
+      .vcard .addr { margin: 0 0 8px; color: var(--muted); font-size: .9rem; }
+      .vcard .desc { margin: 0 0 10px; max-width: 68ch; }
+      .vcard .dirs { margin: 0; font-size: .88rem; font-weight: 800; }
+      .strip { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 22px; }
+      .strip a {
+        border: 1px solid var(--line); border-radius: 999px; padding: 8px 14px;
+        font-size: .82rem; font-weight: 700; text-decoration: none; background: rgba(255,255,255,.03);
+        min-height: 42px; display: inline-flex; align-items: center;
+      }
+      .strip a:hover { border-color: var(--accent-ink); }
+      .strip a[aria-current="page"] { border-color: var(--accent-ink); color: var(--headline); }
+      html[data-theme="light"] .badge, html[data-theme="light"] .strip a { background: rgba(29,42,32,.04); }
+    </style>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"ItemList","name":"407 FYI places: Oviedo","numberOfItems":11,"itemListElement":[{"@type":"ListItem","position":1,"item":{"@type":"LocalBusiness","name":"Ramen Takagi","address":{"@type":"PostalAddress","streetAddress":"Ramen Takagi, 3635 Aloma Ave, Oviedo, FL 32765-6395","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":28.67,"longitude":-81.2},"priceRange":"$$","category":"Noodles & Southeast Asian","url":"https://407.fyi/archive.html?venue=ramen-takagi"}},{"@type":"ListItem","position":2,"item":{"@type":"LocalBusiness","name":"Black Hammock Restaurant","address":{"@type":"PostalAddress","streetAddress":"2316 Black Hammock Fish Camp Rd","addressLocality":"Oviedo","addressRegion":"FL","postalCode":"32765","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":28.704516,"longitude":-81.206689},"priceRange":"$$","category":"Restaurants","url":"https://407.fyi/archive.html?venue=black-hammock-restaurant"}},{"@type":"ListItem","position":3,"item":{"@type":"LocalBusiness","name":"Alma Argentina","address":{"@type":"PostalAddress","streetAddress":"3607 Aloma Ave Unit 107","addressLocality":"Oviedo","addressRegion":"FL","postalCode":"32765","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":28.6180182,"longitude":-81.2635413},"priceRange":"$$","category":"Latin & Caribbean","url":"https://407.fyi/archive.html?venue=alma-argentina"}},{"@type":"ListItem","position":4,"item":{"@type":"LocalBusiness","name":"Overlook Park","address":{"@type":"PostalAddress","streetAddress":"1988 Spring Ave","addressLocality":"Oviedo","addressRegion":"FL","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":28.700367,"longitude":-81.238151},"priceRange":"$","category":"Parks & outdoors","url":"https://407.fyi/archive.html?venue=overlook-park-oviedo"}},{"@type":"ListItem","position":5,"item":{"@type":"LocalBusiness","name":"PokeWorks (Oviedo)","address":{"@type":"PostalAddress","streetAddress":"45 W Mitchell Hammock Rd","addressLocality":"Oviedo","addressRegion":"FL","postalCode":"32765","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":28.65678,"longitude":-81.20903},"priceRange":"$","category":"Restaurants","url":"https://407.fyi/archive.html?venue=pokeworks"}},{"@type":"ListItem","position":6,"item":{"@type":"LocalBusiness","name":"Lemongrass Thai Kitchen","address":{"@type":"PostalAddress","streetAddress":"Lemongrass Thai Kitchen, 1016 Lockwood Blvd, Oviedo, FL 32765-6027","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":28.65815,"longitude":-81.17985},"priceRange":"$$","category":"Noodles & Southeast Asian","url":"https://407.fyi/archive.html?venue=lemongrass-thai-kitchen"}},{"@type":"ListItem","position":7,"item":{"@type":"LocalBusiness","name":"Sushi Pop","address":{"@type":"PostalAddress","streetAddress":"Sushi Pop, 310 W Mitchell Hammock Rd, Oviedo, FL 32765-4921","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":28.65509,"longitude":-81.21338},"priceRange":"$$","category":"Japanese & sushi","url":"https://407.fyi/archive.html?venue=sushi-pop"}},{"@type":"ListItem","position":8,"item":{"@type":"LocalBusiness","name":"Hinode Sushi","address":{"@type":"PostalAddress","streetAddress":"Hinode Sushi, 1016 Lockwood Blvd, Oviedo, FL 32765-6027, United States","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":28.65815,"longitude":-81.17985},"priceRange":"$$","category":"Japanese & sushi","url":"https://407.fyi/archive.html?venue=hinode-sushi"}},{"@type":"ListItem","position":9,"item":{"@type":"LocalBusiness","name":"Beirut Grill and Deli","address":{"@type":"PostalAddress","streetAddress":"Beirut Grill and Deli, 3100 Alafaya Trl, Oviedo, FL 32765-9466, United States","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":28.62373,"longitude":-81.20844},"priceRange":"$$","category":"Mediterranean","url":"https://407.fyi/archive.html?venue=beirut-grill-and-deli"}},{"@type":"ListItem","position":10,"item":{"@type":"LocalBusiness","name":"Tikka Shack Indian Grub","address":{"@type":"PostalAddress","streetAddress":"Tikka Shack Indian Grub, 1500 Alafaya Trl, Oviedo, FL 32765-4517, United States","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":28.64762,"longitude":-81.2088},"priceRange":"$$","category":"Indian","url":"https://407.fyi/archive.html?venue=tikka-shack-indian-grub"}},{"@type":"ListItem","position":11,"item":{"@type":"LocalBusiness","name":"Saigon Flavors","address":{"@type":"PostalAddress","streetAddress":"3573 Aloma Ave","addressLocality":"Oviedo","addressRegion":"FL","postalCode":"32765","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":28.61805,"longitude":-81.26225},"priceRange":"$$","category":"Noodles & Southeast Asian","url":"https://407.fyi/archive.html?venue=saigon-flavors"}}]}</script>
+  </head>
+  <body>
+    <header class="hero">
+      <div class="hero-in">
+        <p class="crumbs"><a href="/">407 FYI</a> &middot; District Finder</p>
+        <a class="hero-brand" href="/">407 FYI &middot; A District Finder</a>
+        <h1>Oviedo</h1>
+        <p class="sub">Oviedo, northeast of the city: noodle shops, sushi and small-town rooms, famous chickens included.</p>
+        <p class="count">11 hand-verified places</p>
+        <nav class="anchor-nav" aria-label="On this page">
+          <a href="#places">The places</a>
+          <a href="#districts">All districts</a>
+          <a href="/archive.html?district=oviedo">Open in the full finder</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="sec" id="places">
+        <p class="kicker">The Full List</p>
+        <h2>Every place in Oviedo</h2>
+        <p class="lede">Full cards for the whole district, Local Picks first, then A to Z. Every name opens its listing in the full finder, where the map, filters and export live.</p>
+        <div class="vlist">
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=black-hammock-restaurant">Black Hammock Restaurant</a> <span class="badge">Local Pick</span></h3>
+          <p class="meta">Restaurants &middot; $$</p>
+          <p class="addr">2316 Black Hammock Fish Camp Rd, Oviedo, FL 32765</p>
+          <p class="desc">Old Florida sets the table here, unapologetic and all in on gators. The Black Hammock sits on Lake Jesup, home of one of the largest alligator populations in the state. The menu leans into that setting with gator bites, gator tacos, fried gator tail, and catfish. Before you eat, you can ride an airboat across the lake with an experienced captain, then meet Hammy, the 12-foot resident gator at the free wildlife exhibit. A lakeside bar and weekend live music round it out. Go for a distinctly Florida afternoon.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=Black+Hammock+Restaurant+2316+Black+Hammock+Fish+Camp+Rd%2C+Oviedo%2C+FL+32765" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=alma-argentina">Alma Argentina</a></h3>
+          <p class="meta">Latin &amp; Caribbean &middot; $$</p>
+          <p class="addr">3607 Aloma Ave Unit 107, Oviedo, FL 32765</p>
+          <p class="desc">Buenos Aires shows up in Oviedo by way of empanadas, grilled meat and dulce de leche. This family run Argentine spot on Aloma Avenue fries empanadas stuffed with osobuco or three cheeses, and regulars treat them as more than a starter. The main order is the full parrillada, joined by sizzling provoleta, classic milanesa and desserts like chocotorta or flan with dulce de leche. Warm service and careful plating complete it. Come for a steakhouse dinner with a family kitchen heart.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=Alma+Argentina+3607+Aloma+Ave+Unit+107%2C+Oviedo%2C+FL+32765" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=beirut-grill-and-deli">Beirut Grill and Deli</a></h3>
+          <p class="meta">Mediterranean &middot; $$</p>
+          <p class="addr">Beirut Grill and Deli, 3100 Alafaya Trl, Oviedo, FL 32765-9466, United States</p>
+          <p class="desc">A family owned halal Lebanese kitchen near UCF earns its believers fast in Oviedo. Beirut Grill and Deli holds Best Middle Eastern in the Orlando Sentinel Foodie Awards, and the menu backs the title with chicken shawarma, falafel, scratch made grape leaves and fresh manakish. Regulars tell newcomers to save room for kenefeh. A guest who once lived in Lebanon called it the real thing, and the owner greets you like family. Generous and deeply loved, it makes the case plate by plate.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=Beirut+Grill+and+Deli+Beirut+Grill+and+Deli%2C+3100+Alafaya+Trl%2C+Oviedo%2C+FL+32765-9466%2C+United+States" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=hinode-sushi">Hinode Sushi</a></h3>
+          <p class="meta">Japanese &amp; sushi &middot; $$</p>
+          <p class="addr">Hinode Sushi, 1016 Lockwood Blvd, Oviedo, FL 32765-6027, United States</p>
+          <p class="desc">Chef George Tan plates sushi like art in this Oviedo neighborhood spot, and locals treat it as their own delicious secret. The Trio Tower stacks tuna, salmon, yellowtail, mango and avocado into something striking, the Black Widow roll wears a spiderweb of sauce, and even the avocado fries arrive as beautiful little sculptures. Everything tastes as vivid as it looks, from the Roll On Fire to the Oviedo Sunrise. A warm, family-run room where the fish is always fresh and the plates always turn heads.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=Hinode+Sushi+Hinode+Sushi%2C+1016+Lockwood+Blvd%2C+Oviedo%2C+FL+32765-6027%2C+United+States" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=lemongrass-thai-kitchen">Lemongrass Thai Kitchen</a></h3>
+          <p class="meta">Noodles &amp; Southeast Asian &middot; $$</p>
+          <p class="addr">Lemongrass Thai Kitchen, 1016 Lockwood Blvd, Oviedo, FL 32765-6027</p>
+          <p class="desc">Chef Tuvi brings over 20 years of Thai technique to an unassuming Oviedo plaza, and the neighborhood knows what it found. Panang duck, lobster phad thai, tamarind shrimp and whole snapper dinners people still talk about months later lead the menu, with housemade sauces throughout. Durian ice cream waits for the adventurous at the end. The room is contemporary and calm, the flavors are bright and true, and the cooking carries real depth. For Oviedo Thai that goes beyond the standard takeout rotation, Lemongrass is the address.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=Lemongrass+Thai+Kitchen+Lemongrass+Thai+Kitchen%2C+1016+Lockwood+Blvd%2C+Oviedo%2C+FL+32765-6027" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=overlook-park-oviedo">Overlook Park</a></h3>
+          <p class="meta">Parks &amp; outdoors &middot; $</p>
+          <p class="addr">1988 Spring Ave, Oviedo, FL</p>
+          <p class="desc">Only three acres, but Overlook Park packs a whole Florida postcard into them. The boardwalk stretches over the south shore of Lake Jesup, where osprey circle overhead and alligators drift past like they own the place, which they do. Mature oaks shade the pavilion and its barbecue grills, picnic tables sit in a quiet you do not expect this close to the suburbs, and morning light turns the lake photogenic. Come to fish, wander the pier, or sit still and watch the water. Small park, complete reset.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=Overlook+Park+1988+Spring+Ave%2C+Oviedo%2C+FL" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=pokeworks">PokeWorks (Oviedo)</a></h3>
+          <p class="meta">Restaurants &middot; $</p>
+          <p class="addr">45 W Mitchell Hammock Rd, Oviedo, FL 32765</p>
+          <p class="desc">Poke done right is fast, fresh, and exactly the way you want it, and PokeWorks in Oviedo nails the formula. Build your own bowl from sushi-grade ahi tuna, salmon, albacore, shrimp, and scallops over rice or greens, or go straight to the signatures: the Hawaiian Ahi, the yuzu ponzu salmon, the umami ahi. There are poke burritos, bite-size poke bombs, and the garlic spam musubi that regulars order on the side. Healthy never felt this satisfying.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=PokeWorks+%28Oviedo%29+45+W+Mitchell+Hammock+Rd%2C+Oviedo%2C+FL+32765" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=ramen-takagi">Ramen Takagi</a></h3>
+          <p class="meta">Noodles &amp; Southeast Asian &middot; $$</p>
+          <p class="addr">Ramen Takagi, 3635 Aloma Ave, Oviedo, FL 32765-6395</p>
+          <p class="desc">Out in Oviedo, far from the ramen crowds, a small shop rewards the drive across the county. Ramen Takagi cooks everything from scratch in a space that feels like a kitchen that happens to serve the public. The black garlic tonkotsu is the signature, deep and savory with a roasted edge, the spicy miso brings real heat, and the tantan mazesoba proves the kitchen can do brothless too. Go at lunch, order warm, and plan to return for the whole menu. Serious noodle people already treat it as a destination.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=Ramen+Takagi+Ramen+Takagi%2C+3635+Aloma+Ave%2C+Oviedo%2C+FL+32765-6395" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=saigon-flavors">Saigon Flavors</a></h3>
+          <p class="meta">Noodles &amp; Southeast Asian &middot; $$</p>
+          <p class="addr">3573 Aloma Ave, Oviedo, FL 32765</p>
+          <p class="desc">Oviedo&#x27;s prettiest Vietnamese room is owned by the former Viet Garden proprietor, with colorful walls, lit cubbies of bric-a-brac and paintings of old Saigon scenes. The pho is the anchor: rich broth, generous beef, herbs on the side like it should be. Order the golden pancake, the crispy banh xeo omelet with bean sprouts, as the appetizer, and Charlie&#x27;s Special lemon chicken if you want the house signature. Just outside the Mills 50 corridor, it gives Oviedo regulars a Vietnamese room of their own.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=Saigon+Flavors+3573+Aloma+Ave%2C+Oviedo%2C+FL+32765" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=sushi-pop">Sushi Pop</a></h3>
+          <p class="meta">Japanese &amp; sushi &middot; $$</p>
+          <p class="addr">Sushi Pop, 310 W Mitchell Hammock Rd, Oviedo, FL 32765-4921</p>
+          <p class="desc">Oviedo gets a monotony breaker at Sushi Pop, where Chef Chau runs the sushi bar like an artist&#x27;s studio. Seasonal crudo, nikkei maki, ceviche rolls, and buffalo rock shrimp show the range, and an omakase is worth trusting him with when you want the kitchen to lead. The room feels like a Vegas tourist district in the best way: bold, loud, and unapologetic about either. Seafood freshness is the kitchen&#x27;s calling card, presented without quieting the room down. Book ahead, because this one gets packed, and plan to order beyond your usual roll.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=Sushi+Pop+Sushi+Pop%2C+310+W+Mitchell+Hammock+Rd%2C+Oviedo%2C+FL+32765-4921" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=tikka-shack-indian-grub">Tikka Shack Indian Grub</a></h3>
+          <p class="meta">Indian &middot; $$</p>
+          <p class="addr">Tikka Shack Indian Grub, 1500 Alafaya Trl, Oviedo, FL 32765-4517, United States</p>
+          <p class="desc">Scratch-made Indian food, minus the formality. Tikka Shack is a fast-casual kitchen on a mission to make Indian flavors approachable for everyone, and it works: tikka fries that regulars single out, a tandoori chicken pizza on naan crust, chicken tikka kabob bowls, and paneer tikka biryani, all with naan that is fluffy, soft and chewy. Halal, vegan and gluten-free options cover every eater, and you set the spice level. Quick, generous, and genuinely fun.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=Tikka+Shack+Indian+Grub+Tikka+Shack+Indian+Grub%2C+1500+Alafaya+Trl%2C+Oviedo%2C+FL+32765-4517%2C+United+States" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        </div>
+      </section>
+
+      <section class="sec" id="districts">
+        <p class="kicker">Keep Going</p>
+        <h2>Every district has a finder page</h2>
+        <p class="lede">One page per district, generated from the same hand-verified dataset as the full guide.</p>
+        <nav class="strip" aria-label="District finder pages">
+          <a href="/winter-park-finder.html">Winter Park</a>
+          <a href="/disney-springs-finder.html">Disney Springs</a>
+          <a href="/milk-district-finder.html">Milk District</a>
+          <a href="/thornton-park-finder.html">Thornton Park</a>
+          <a href="/mills-50-finder.html">Mills 50</a>
+          <a href="/ivanhoe-village-finder.html">Ivanhoe Village</a>
+          <a href="/downtown-orlando-finder.html">Downtown Orlando</a>
+          <a href="/international-drive-finder.html">International Drive</a>
+          <a href="/lake-nona-finder.html">Lake Nona</a>
+          <a href="/universal-finder.html">Universal</a>
+          <a href="/audubon-park-finder.html">Audubon Park</a>
+          <a href="/college-park-finder.html">College Park</a>
+          <a href="/more-orlando-finder.html">More Orlando</a>
+          <a href="/disney-area-finder.html">Disney Area</a>
+          <a href="/ucf-finder.html">UCF</a>
+          <a href="/kissimmee-finder.html">Kissimmee</a>
+          <a href="/baldwin-park-finder.html">Baldwin Park</a>
+          <a href="/winter-garden-finder.html">Winter Garden</a>
+          <a href="/sanford-finder.html">Sanford</a>
+          <a href="/maitland-finder.html">Maitland</a>
+          <a href="/oviedo-finder.html" aria-current="page">Oviedo</a>
+          <a href="/hourglass-finder.html">Hourglass</a>
+          <a href="/sodo-finder.html">SoDo</a>
+        </nav>
+        <div class="handoff">
+          <a class="btn-ghost" href="/archive.html?district=oviedo">Oviedo in the full finder</a>
+        </div>
+      </section>
+    </main>
+
+<footer>
+      <div class="foot-in">
+        <a class="back-link" href="/">&larr; Back to the full guide</a>
+        <p class="brand-line">407 FYI, an independent Orlando guide. Details can change; confirm before you go.</p>
+        <p>Hand-verified Orlando places · Checked October 2026 · Local Picks are never sponsored · Corrections: <a href="mailto:mail@407.fyi">mail@407.fyi</a></p>
+        <p>Some links on 407 FYI are affiliate links. They never affect which places we list, rank, or recommend.</p>
+      </div>
+    </footer>
+  </body>
+</html>

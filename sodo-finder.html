@@ -1,0 +1,338 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="color-scheme" content="light dark" />
+    <title>SoDo Finder &middot; 407 FYI</title>
+    <meta name="description" content="The 407 FYI finder page for SoDo: every hand-verified place in the district with full cards, addresses, descriptions and directions." />
+    <link rel="canonical" href="https://407.fyi/sodo-finder.html" />
+    <meta property="og:title" content="SoDo Finder &middot; 407 FYI" />
+    <meta property="og:description" content="The 407 FYI finder page for SoDo: every hand-verified place in the district with full cards, addresses, descriptions and directions." />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://407.fyi/sodo-finder.html" />
+    <meta property="og:image" content="https://407.fyi/og-image.png" />
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Urbanist:wght@600;700;800&amp;display=swap" rel="stylesheet" />
+<script>
+      try {
+        const savedTheme = localStorage.getItem('white-atlas-theme');
+        document.documentElement.dataset.theme = savedTheme === 'light' || savedTheme === 'dark' ? savedTheme : 'dark';
+      } catch (error) {
+        document.documentElement.dataset.theme = 'dark';
+      }
+    </script>
+    <style>
+      /* Night Drive tokens (from the district guides) */
+      :root {
+        color-scheme: dark;
+        --bg: #0a1811; --surface: #122419; --soft: #172a1f; --ink: #f0e8d5;
+        --muted: #c6bba2; --line: #2f4a38; --accent: #765b2f; --accent-ink: #d4b573;
+        --headline: #f6edd6; --focus: #d4b573;
+        --d-a: #14231a; --d-b: #3a5a35; --d-c: #bd9049;
+        --pad: clamp(20px, 5vw, 40px);
+      }
+      * { box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
+      body {
+        margin: 0; background: var(--bg); color: var(--ink);
+        font-family: "Manrope", system-ui, sans-serif; line-height: 1.6;
+        overflow-x: hidden;
+      }
+      h1, h2, h3, .display { font-family: "Urbanist", "Manrope", sans-serif; }
+      a { color: var(--accent-ink); }
+      a:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
+      .kicker {
+        font-family: "Urbanist", sans-serif; font-weight: 700; letter-spacing: .22em;
+        font-size: .72rem; text-transform: uppercase; color: var(--accent-ink); margin: 0 0 14px;
+      }
+
+      /* ---------- hero ---------- */
+      .hero {
+        position: relative; padding: clamp(64px, 13vh, 130px) var(--pad) clamp(48px, 9vh, 84px);
+        background: radial-gradient(ellipse 90% 55% at 50% 112%, rgba(189,144,73,.26), transparent 60%),
+          linear-gradient(168deg, #1d3325, #14231a 55%, #0a1811);
+        border-bottom: 1px solid var(--line);
+      }
+      .hero-in { max-width: 860px; margin: 0 auto; }
+      .crumbs { font-size: .8rem; color: var(--muted); margin: 0 0 26px; }
+      .crumbs a { font-weight: 700; }
+      .hero-brand {
+        font-family: "Urbanist", sans-serif; font-weight: 700; letter-spacing: .22em;
+        font-size: .72rem; text-transform: uppercase; color: var(--accent-ink); text-decoration: none;
+      }
+      .hero h1 {
+        font-size: clamp(2.6rem, 8.5vw, 5.2rem); line-height: .98; letter-spacing: .01em;
+        color: var(--headline); margin: 18px 0 16px; text-transform: uppercase;
+      }
+      .hero .sub { font-size: clamp(1.05rem, 2.6vw, 1.3rem); color: var(--ink); max-width: 620px; margin: 0 0 10px; }
+      .hero .fine { color: var(--muted); max-width: 620px; margin: 0; }
+      .anchor-nav { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 30px; }
+      .anchor-nav a {
+        border: 1px solid var(--line); border-radius: 999px; padding: 8px 14px;
+        font-size: .82rem; font-weight: 700; text-decoration: none; background: rgba(255,255,255,.03);
+        min-height: 42px; display: inline-flex; align-items: center;
+      }
+      .anchor-nav a:hover { border-color: var(--accent-ink); }
+
+      /* ---------- sections ---------- */
+      main { display: block; }
+      .sec { max-width: 860px; margin: 0 auto; padding: clamp(52px, 9vh, 88px) var(--pad) 0; }
+      .sec h2 { font-size: clamp(1.7rem, 4.6vw, 2.4rem); line-height: 1.12; color: var(--headline); margin: 0 0 16px; }
+      .sec .lede { color: var(--muted); font-size: 1.04rem; max-width: 640px; margin: 0 0 26px; }
+      .sec p { max-width: 68ch; }
+      .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 14px; margin: 22px 0 6px; }
+      .card {
+        background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 20px;
+      }
+      .card h3 { margin: 0 0 6px; font-size: 1.12rem; color: var(--headline); }
+      .card .addr { font-weight: 800; color: var(--accent-ink); margin: 0 0 10px; font-size: .98rem; }
+      .card p { margin: 0; color: var(--muted); font-size: .94rem; }
+      .cols { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 22px 0 6px; }
+      @media (max-width: 680px) { .cols { grid-template-columns: 1fr; } }
+      .panel { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 20px 22px; }
+      .panel h3 { margin: 0 0 12px; font-size: 1.05rem; color: var(--headline); }
+      .panel ul, .plain-list { margin: 0; padding-left: 18px; }
+      .panel li, .plain-list li { margin-bottom: 9px; }
+      .panel li:last-child, .plain-list li:last-child { margin-bottom: 0; }
+      .note {
+        border-left: 3px solid var(--accent-ink); background: var(--soft);
+        padding: 14px 18px; border-radius: 0 12px 12px 0; margin: 22px 0 6px; max-width: 68ch;
+      }
+      .note p { margin: 0; }
+      .venue-links { list-style: none; margin: 0; padding: 0; }
+      .venue-links li { margin-bottom: 10px; }
+      .venue-links a { font-weight: 800; text-underline-offset: 3px; }
+      .venue-links span { color: var(--muted); }
+
+      /* ---------- jobs ---------- */
+      .job-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 14px; margin-top: 22px; }
+      .job { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 20px 22px; }
+      .job h3 { margin: 0 0 6px; font-size: 1.08rem; color: var(--headline); }
+      .job p { margin: 0 0 12px; color: var(--muted); font-size: .94rem; }
+      .job ul { list-style: none; margin: 0 0 14px; padding: 0; }
+      .job li { margin-bottom: 7px; }
+      .job li a { font-weight: 800; text-underline-offset: 3px; }
+      .job .browse { font-size: .86rem; font-weight: 800; text-transform: uppercase; letter-spacing: .08em; }
+
+      /* ---------- what to avoid ---------- */
+      .avoid { border-top: 1px solid var(--line); padding: 24px 0 6px; }
+      .avoid h3 { margin: 0 0 10px; font-size: 1.18rem; color: var(--headline); }
+      .avoid p { margin: 0 0 8px; max-width: 68ch; }
+      .avoid strong { color: var(--accent-ink); }
+      .flags { display: flex; flex-wrap: wrap; gap: 8px; margin: 18px 0 6px; }
+      .flags span {
+        border: 1px solid var(--accent); border-radius: 999px; padding: 7px 13px;
+        font-size: .85rem; font-weight: 700; color: var(--accent-ink); background: rgba(255,255,255,.03);
+      }
+      .rules { margin: 16px 0 0; padding-left: 20px; max-width: 68ch; }
+      .rules li { margin-bottom: 10px; }
+
+      .handoff { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 30px; }
+      .btn-big {
+        display: inline-flex; align-items: center; min-height: 52px; padding: 12px 22px;
+        background: var(--accent); color: #fff; font-weight: 800; border-radius: 999px; text-decoration: none;
+      }
+      .btn-big:hover { background: var(--accent-ink); color: #1d2a20; }
+      .btn-ghost {
+        display: inline-flex; align-items: center; min-height: 52px; padding: 12px 22px;
+        border: 1px solid var(--line); color: var(--accent-ink); font-weight: 800; border-radius: 999px; text-decoration: none;
+      }
+
+      footer { border-top: 1px solid var(--line); margin-top: clamp(52px, 9vh, 88px); }
+      .foot-in { max-width: 860px; margin: 0 auto; padding: 34px var(--pad) 44px; color: var(--muted); font-size: .9rem; }
+      .foot-in p { margin: 0 0 9px; }
+      .back-link { font-weight: 800; display: inline-block; margin-bottom: 16px; }
+      .brand-line { color: var(--ink); font-weight: 700; }
+
+      /* ---------- Light theme: app-page tokens ---------- */
+      html[data-theme="light"] {
+        color-scheme: light;
+        --bg: #faf6ec; --surface: #fffdf7; --soft: #f3ecd7; --ink: #1d2a20;
+        --muted: #4c5a45; --line: #ddd3ba; --accent: #8a5f0e; --accent-ink: #7c520c;
+        --headline: #123524; --focus: #8a5f0e;
+      }
+      html[data-theme="light"] .hero {
+        background: radial-gradient(ellipse 90% 55% at 50% 112%, rgba(163,129,63,.30), transparent 60%),
+          linear-gradient(168deg, color-mix(in srgb, var(--d-a) 24%, #faf6ec), color-mix(in srgb, var(--d-a) 40%, #faf6ec) 55%, color-mix(in srgb, var(--d-a) 14%, #faf6ec));
+      }
+      html[data-theme="light"] .anchor-nav a, html[data-theme="light"] .flags span { background: rgba(29,42,32,.04); }
+      html[data-theme="light"] .btn-big { background: var(--accent); color: #fff; }
+      html[data-theme="light"] .btn-big:hover { background: var(--accent-ink); color: #fff; }
+
+      @media print { .anchor-nav { display: none; } }
+      @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+    
+      /* ---------- finder pages (Seam 2 additions) ---------- */
+      .count {
+        font-family: "Urbanist", sans-serif; font-weight: 700; letter-spacing: .14em;
+        font-size: .8rem; text-transform: uppercase; color: var(--accent-ink); margin: 0;
+      }
+      .vlist { display: grid; gap: 14px; margin-top: 22px; }
+      .vcard {
+        background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 20px 22px;
+      }
+      .vcard h3 { margin: 0 0 4px; font-size: 1.15rem; color: var(--headline); }
+      .vcard h3 a { color: var(--headline); text-decoration: none; }
+      .vcard h3 a:hover { color: var(--accent-ink); text-decoration: underline; text-underline-offset: 3px; }
+      .badge {
+        display: inline-block; vertical-align: middle; margin-left: 8px;
+        border: 1px solid var(--accent); border-radius: 999px; padding: 2px 9px;
+        font-family: "Manrope", sans-serif; font-size: .68rem; font-weight: 800;
+        letter-spacing: .08em; text-transform: uppercase; color: var(--accent-ink);
+        background: rgba(255,255,255,.03); white-space: nowrap;
+      }
+      .vcard .meta { margin: 0 0 2px; font-weight: 800; color: var(--accent-ink); font-size: .92rem; }
+      .vcard .addr { margin: 0 0 8px; color: var(--muted); font-size: .9rem; }
+      .vcard .desc { margin: 0 0 10px; max-width: 68ch; }
+      .vcard .dirs { margin: 0; font-size: .88rem; font-weight: 800; }
+      .strip { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 22px; }
+      .strip a {
+        border: 1px solid var(--line); border-radius: 999px; padding: 8px 14px;
+        font-size: .82rem; font-weight: 700; text-decoration: none; background: rgba(255,255,255,.03);
+        min-height: 42px; display: inline-flex; align-items: center;
+      }
+      .strip a:hover { border-color: var(--accent-ink); }
+      .strip a[aria-current="page"] { border-color: var(--accent-ink); color: var(--headline); }
+      html[data-theme="light"] .badge, html[data-theme="light"] .strip a { background: rgba(29,42,32,.04); }
+    </style>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"ItemList","name":"407 FYI places: SoDo","numberOfItems":9,"itemListElement":[{"@type":"ListItem","position":1,"item":{"@type":"LocalBusiness","name":"Peach Valley Cafe","address":{"@type":"PostalAddress","streetAddress":"Peach Valley Cafe, 2849 S Orange Ave, Orlando, FL 32806-5403","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":28.55,"longitude":-81.37},"priceRange":"$$","category":"Breakfast & brunch","url":"https://407.fyi/archive.html?venue=peach-valley"}},{"@type":"ListItem","position":2,"item":{"@type":"LocalBusiness","name":"MOOYAH Burgers, Fries & Shakes","address":{"@type":"PostalAddress","streetAddress":"3155 S Orange Ave","addressLocality":"Orlando","addressRegion":"FL","postalCode":"32806","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":28.50859,"longitude":-81.37477},"priceRange":"$","category":"Burgers & sandwiches","url":"https://407.fyi/archive.html?venue=mooyah-burgers-fries-shakes"}},{"@type":"ListItem","position":3,"item":{"@type":"LocalBusiness","name":"The Juicy Crab","address":{"@type":"PostalAddress","streetAddress":"296 E Michigan St","addressLocality":"Orlando","addressRegion":"FL","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":28.51209,"longitude":-81.37423},"priceRange":"$","category":"Seafood","url":"https://407.fyi/archive.html?venue=the-juicy-crab"}},{"@type":"ListItem","position":4,"item":{"@type":"LocalBusiness","name":"Dang Boba & Musubi House","address":{"@type":"PostalAddress","streetAddress":"Dang Boba & Musubi House, 11772 E Colonial Dr, Orlando, FL 32817-4625","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":28.56541,"longitude":-81.20858},"priceRange":"$$","category":"Coffee & cafes","url":"https://407.fyi/archive.html?venue=dang-boba-musubi-house"}},{"@type":"ListItem","position":5,"item":{"@type":"LocalBusiness","name":"Clean Eatz","address":{"@type":"PostalAddress","streetAddress":"Clean Eatz, 2205 Orange Ave S, Orlando, FL 32806-3038","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":28.51724,"longitude":-81.37611},"priceRange":"$$","category":"Restaurants","url":"https://407.fyi/archive.html?venue=clean-eatz"}},{"@type":"ListItem","position":6,"item":{"@type":"LocalBusiness","name":"Rockpit Brewing","address":{"@type":"PostalAddress","streetAddress":"Rockpit Brewing, 10 W Illiana St, Orlando, FL 32806-4408, United States","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":28.51077,"longitude":-81.3769},"priceRange":"$$","category":"Breweries","url":"https://407.fyi/archive.html?venue=rockpit-brewing"}},{"@type":"ListItem","position":7,"item":{"@type":"LocalBusiness","name":"Cafe 34 Istanbul","address":{"@type":"PostalAddress","streetAddress":"Cafe 34 Istanbul, 8255 International Dr, Orlando, FL 32819-9326, United States","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":28.44549,"longitude":-81.46918},"priceRange":"$$","category":"Mediterranean","url":"https://407.fyi/archive.html?venue=cafe-34-istanbul"}},{"@type":"ListItem","position":8,"item":{"@type":"LocalBusiness","name":"The Smoothie Room","address":{"@type":"PostalAddress","streetAddress":"The Smoothie Room, 25 W Crystal Lake St, Orlando, FL 32806-4403, United States","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":28.51522,"longitude":-81.37768},"priceRange":"$$","category":"Coffee & cafes","url":"https://407.fyi/archive.html?venue=the-smoothie-room"}},{"@type":"ListItem","position":9,"item":{"@type":"LocalBusiness","name":"Zaza Cuban Comfort Food","address":{"@type":"PostalAddress","streetAddress":"1621 S Orange Ave","addressLocality":"Orlando","addressRegion":"FL","postalCode":"32806","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":28.525,"longitude":-81.376},"priceRange":"$","category":"Latin & Caribbean","url":"https://407.fyi/archive.html?venue=zaza-cuban-comfort-food"}}]}</script>
+  </head>
+  <body>
+    <header class="hero">
+      <div class="hero-in">
+        <p class="crumbs"><a href="/">407 FYI</a> &middot; District Finder</p>
+        <a class="hero-brand" href="/">407 FYI &middot; A District Finder</a>
+        <h1>SoDo</h1>
+        <p class="sub">SoDo, south of downtown along Orange Avenue: coffee first, then breakfast and burgers.</p>
+        <p class="count">9 hand-verified places</p>
+        <nav class="anchor-nav" aria-label="On this page">
+          <a href="#places">The places</a>
+          <a href="#districts">All districts</a>
+          <a href="/archive.html?district=sodo">Open in the full finder</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="sec" id="places">
+        <p class="kicker">The Full List</p>
+        <h2>Every place in SoDo</h2>
+        <p class="lede">Full cards for the whole district, Local Picks first, then A to Z. Every name opens its listing in the full finder, where the map, filters and export live.</p>
+        <div class="vlist">
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=cafe-34-istanbul">Cafe 34 Istanbul</a></h3>
+          <p class="meta">Mediterranean &middot; $$</p>
+          <p class="addr">Cafe 34 Istanbul, 8255 International Dr, Orlando, FL 32819-9326, United States</p>
+          <p class="desc">Named for Istanbul&#x27;s area code, Cafe 34 Istanbul brings Turkey to Orlando with grill smoke, baklava and tea served the traditional way. Its grill runs hot with lamb adana kebabs, chicken shish and lamb chops people rave about, while baklava and rice pudding handle the sweet side. Ornate hookahs shipped from Turkey fill the lounge with fragrance and calm. Finish with Turkish tea or coffee, and settle into the late, lively room. You get a full Istanbul leaning night without leaving the International Drive orbit.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=Cafe+34+Istanbul+Cafe+34+Istanbul%2C+8255+International+Dr%2C+Orlando%2C+FL+32819-9326%2C+United+States" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=clean-eatz">Clean Eatz</a></h3>
+          <p class="meta">Restaurants &middot; $$</p>
+          <p class="addr">Clean Eatz, 2205 Orange Ave S, Orlando, FL 32806-3038</p>
+          <p class="desc">Healthy food rarely gets to keep this much flavor, but this SoDo cafe tries. Clean Eatz builds bowls to order and serves a Bang Bang Shrimp Wrap, Monterey Chicken, and buffalo chicken wraps in tomato-basil tortillas. Weekly meal plans and grab-and-go cases cover dinners beyond the visit. Every menu item lists its calories, so you can choose with the numbers in front of you. Come here when you want a health-food lunch that stays informed rather than guilty, and practical enough to repeat during a busy week.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=Clean+Eatz+Clean+Eatz%2C+2205+Orange+Ave+S%2C+Orlando%2C+FL+32806-3038" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=dang-boba-musubi-house">Dang Boba &amp; Musubi House</a></h3>
+          <p class="meta">Coffee &amp; cafes &middot; $$</p>
+          <p class="addr">Dang Boba &amp; Musubi House, 11772 E Colonial Dr, Orlando, FL 32817-4625</p>
+          <p class="desc">Two cravings share one roof here, and the pairing makes sense by the second sip. Run by UCF alumni, Dang Boba and Musubi House brews teas with care through its Bobaristas: lavender milk tea, tiger tea, and princess peach fruit tea. Then musubi stack like edible architecture in classic spam, spam and kimchi, and garlic soy chicken versions. The room stays cheerful and student friendly, with dessert and dining under the same sign. Choose Dang when boba culture and Hawaiian comfort food sound better together than apart, which they do here.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=Dang+Boba+%26+Musubi+House+Dang+Boba+%26+Musubi+House%2C+11772+E+Colonial+Dr%2C+Orlando%2C+FL+32817-4625" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=mooyah-burgers-fries-shakes">MOOYAH Burgers, Fries &amp; Shakes</a></h3>
+          <p class="meta">Burgers &amp; sandwiches &middot; $</p>
+          <p class="addr">3155 S Orange Ave, Orlando, FL 32806</p>
+          <p class="desc">The name promises three things, and SoDo&#x27;s MOOYAH builds its meal around all of them. Certified Angus Beef burgers are built to order, hand cut fries arrive hot and salty, and buns bake fresh daily. Hand spun shakes use real ice cream, the Double Diablo brings heat, and the Bacon Hot Jam Burger is the house favorite. Sweet potato fries have a following of their own, and the room stays fresh, fast, and family friendly. Choose MOOYAH when the burger craving hits and a shake belongs in the same order.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=MOOYAH+Burgers%2C+Fries+%26+Shakes+3155+S+Orange+Ave%2C+Orlando%2C+FL+32806" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=peach-valley">Peach Valley Cafe</a></h3>
+          <p class="meta">Breakfast &amp; brunch &middot; $$</p>
+          <p class="addr">Peach Valley Cafe, 2849 S Orange Ave, Orlando, FL 32806-5403</p>
+          <p class="desc">Hot apple fritters arrive first, and patience gets tested immediately. Peach Valley has served Central Florida as a neighborhood brunch answer since 2001, a local chain that still cooks like a name is on the sign. Chicken and waffles come with blueberry butter and Cajun spiked syrup, and shrimp and grits taste of the low country. A sunlit porch suits slow mornings and big crews around the table. Choose it when everyone at your table needs a plate that feels made for them, from fritters to grits and back again.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=Peach+Valley+Cafe+Peach+Valley+Cafe%2C+2849+S+Orange+Ave%2C+Orlando%2C+FL+32806-5403" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=rockpit-brewing">Rockpit Brewing</a></h3>
+          <p class="meta">Breweries &middot; $$</p>
+          <p class="addr">Rockpit Brewing, 10 W Illiana St, Orlando, FL 32806-4408, United States</p>
+          <p class="desc">A coal mining theme sounds like a costume until the taps and the room settle you in. Rockpit, Orlando&#x27;s neighborhood brewery in SoDo, rotates small batch brews poured right behind the bar. SoDo Blondin goes down easy, red ales bring the malt, and sours keep adventurous drinkers happy. Live music fills the room most nights, smoked BBQ lands at your table, and warm wood keeps conversation easy. Choose Rockpit when you want a taproom that feels like a second living room, with small batch beer doing the hosting.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=Rockpit+Brewing+Rockpit+Brewing%2C+10+W+Illiana+St%2C+Orlando%2C+FL+32806-4408%2C+United+States" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=the-juicy-crab">The Juicy Crab</a></h3>
+          <p class="meta">Seafood &middot; $</p>
+          <p class="addr">296 E Michigan St, Orlando, FL</p>
+          <p class="desc">A seafood boil arrives here the way New Orleans intended, with a family legend behind it. The Juicy Crab began with the Chen family, inspired by New Orleans and Grandfather Chen&#x27;s travels. Crab arrives drenched, seasoned, and impossible to eat politely. Build a combo with shrimp, sausage, corn, potatoes, snow crab, or crawfish, or splurge on Dungeness and king crab. Fried shrimp basket and coco bread cover non-boil loyalists, with a full bar alongside. Grab a bib and commit fully, because polite half measures miss the point.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=The+Juicy+Crab+296+E+Michigan+St%2C+Orlando%2C+FL" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=the-smoothie-room">The Smoothie Room</a></h3>
+          <p class="meta">Coffee &amp; cafes &middot; $$</p>
+          <p class="addr">The Smoothie Room, 25 W Crystal Lake St, Orlando, FL 32806-4403, United States</p>
+          <p class="desc">SoDo&#x27;s answer to the sugar-bomb smoothie chain is this bright little room where nothing comes from a powder, a concentrate, or a pump. The Bahama Mama and Berry Dose are made fresh on the spot, thick with real fruit, and the PB Falcon acai bowl is the move when you want something with substance. Wheatgrass shots, ginger shots, cold-pressed juices, all of it in a space that feels calm on purpose. Locals swear this is the best smoothie in Orlando. One sip and the argument is over.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=The+Smoothie+Room+The+Smoothie+Room%2C+25+W+Crystal+Lake+St%2C+Orlando%2C+FL+32806-4403%2C+United+States" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=zaza-cuban-comfort-food">Zaza Cuban Comfort Food</a></h3>
+          <p class="meta">Latin &amp; Caribbean &middot; $</p>
+          <p class="addr">1621 S Orange Ave, Orlando, FL 32806</p>
+          <p class="desc">Hospital Row got a cafecito stop in mid 2026, and the morning crowd already explains it. Zaza&#x27;s newest location extends the local chainlet formula with cafecito that wakes you up, medianoche sandwiches pressed to order and daily specials like ropa vieja over rice. The cooking tastes like a grandmother is still running the kitchen, even in a counter service diner format. Prices reflect the format, not white tablecloth ambitions. Hospital staff and regulars make it a SoDo staple in the making.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=Zaza+Cuban+Comfort+Food+1621+S+Orange+Ave%2C+Orlando%2C+FL+32806" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        </div>
+      </section>
+
+      <section class="sec" id="districts">
+        <p class="kicker">Keep Going</p>
+        <h2>Every district has a finder page</h2>
+        <p class="lede">One page per district, generated from the same hand-verified dataset as the full guide.</p>
+        <nav class="strip" aria-label="District finder pages">
+          <a href="/winter-park-finder.html">Winter Park</a>
+          <a href="/disney-springs-finder.html">Disney Springs</a>
+          <a href="/milk-district-finder.html">Milk District</a>
+          <a href="/thornton-park-finder.html">Thornton Park</a>
+          <a href="/mills-50-finder.html">Mills 50</a>
+          <a href="/ivanhoe-village-finder.html">Ivanhoe Village</a>
+          <a href="/downtown-orlando-finder.html">Downtown Orlando</a>
+          <a href="/international-drive-finder.html">International Drive</a>
+          <a href="/lake-nona-finder.html">Lake Nona</a>
+          <a href="/universal-finder.html">Universal</a>
+          <a href="/audubon-park-finder.html">Audubon Park</a>
+          <a href="/college-park-finder.html">College Park</a>
+          <a href="/more-orlando-finder.html">More Orlando</a>
+          <a href="/disney-area-finder.html">Disney Area</a>
+          <a href="/ucf-finder.html">UCF</a>
+          <a href="/kissimmee-finder.html">Kissimmee</a>
+          <a href="/baldwin-park-finder.html">Baldwin Park</a>
+          <a href="/winter-garden-finder.html">Winter Garden</a>
+          <a href="/sanford-finder.html">Sanford</a>
+          <a href="/maitland-finder.html">Maitland</a>
+          <a href="/oviedo-finder.html">Oviedo</a>
+          <a href="/hourglass-finder.html">Hourglass</a>
+          <a href="/sodo-finder.html" aria-current="page">SoDo</a>
+        </nav>
+        <div class="handoff">
+          <a class="btn-ghost" href="/archive.html?district=sodo">SoDo in the full finder</a>
+        </div>
+      </section>
+    </main>
+
+<footer>
+      <div class="foot-in">
+        <a class="back-link" href="/">&larr; Back to the full guide</a>
+        <p class="brand-line">407 FYI, an independent Orlando guide. Details can change; confirm before you go.</p>
+        <p>Hand-verified Orlando places · Checked October 2026 · Local Picks are never sponsored · Corrections: <a href="mailto:mail@407.fyi">mail@407.fyi</a></p>
+        <p>Some links on 407 FYI are affiliate links. They never affect which places we list, rank, or recommend.</p>
+      </div>
+    </footer>
+  </body>
+</html>

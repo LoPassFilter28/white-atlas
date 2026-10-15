@@ -1,0 +1,562 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="color-scheme" content="light dark" />
+    <title>Mills 50 Finder &middot; 407 FYI</title>
+    <meta name="description" content="The 407 FYI finder page for Mills 50: every hand-verified place in the district with full cards, addresses, descriptions and directions." />
+    <link rel="canonical" href="https://407.fyi/mills-50-finder.html" />
+    <meta property="og:title" content="Mills 50 Finder &middot; 407 FYI" />
+    <meta property="og:description" content="The 407 FYI finder page for Mills 50: every hand-verified place in the district with full cards, addresses, descriptions and directions." />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://407.fyi/mills-50-finder.html" />
+    <meta property="og:image" content="https://407.fyi/og-image.png" />
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Urbanist:wght@600;700;800&amp;display=swap" rel="stylesheet" />
+<script>
+      try {
+        const savedTheme = localStorage.getItem('white-atlas-theme');
+        document.documentElement.dataset.theme = savedTheme === 'light' || savedTheme === 'dark' ? savedTheme : 'dark';
+      } catch (error) {
+        document.documentElement.dataset.theme = 'dark';
+      }
+    </script>
+    <style>
+      /* Night Drive tokens (from the district guides) */
+      :root {
+        color-scheme: dark;
+        --bg: #0a1811; --surface: #122419; --soft: #172a1f; --ink: #f0e8d5;
+        --muted: #c6bba2; --line: #2f4a38; --accent: #765b2f; --accent-ink: #d4b573;
+        --headline: #f6edd6; --focus: #d4b573;
+        --d-a: #14231a; --d-b: #3a5a35; --d-c: #bd9049;
+        --pad: clamp(20px, 5vw, 40px);
+      }
+      * { box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
+      body {
+        margin: 0; background: var(--bg); color: var(--ink);
+        font-family: "Manrope", system-ui, sans-serif; line-height: 1.6;
+        overflow-x: hidden;
+      }
+      h1, h2, h3, .display { font-family: "Urbanist", "Manrope", sans-serif; }
+      a { color: var(--accent-ink); }
+      a:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
+      .kicker {
+        font-family: "Urbanist", sans-serif; font-weight: 700; letter-spacing: .22em;
+        font-size: .72rem; text-transform: uppercase; color: var(--accent-ink); margin: 0 0 14px;
+      }
+
+      /* ---------- hero ---------- */
+      .hero {
+        position: relative; padding: clamp(64px, 13vh, 130px) var(--pad) clamp(48px, 9vh, 84px);
+        background: radial-gradient(ellipse 90% 55% at 50% 112%, rgba(189,144,73,.26), transparent 60%),
+          linear-gradient(168deg, #1d3325, #14231a 55%, #0a1811);
+        border-bottom: 1px solid var(--line);
+      }
+      .hero-in { max-width: 860px; margin: 0 auto; }
+      .crumbs { font-size: .8rem; color: var(--muted); margin: 0 0 26px; }
+      .crumbs a { font-weight: 700; }
+      .hero-brand {
+        font-family: "Urbanist", sans-serif; font-weight: 700; letter-spacing: .22em;
+        font-size: .72rem; text-transform: uppercase; color: var(--accent-ink); text-decoration: none;
+      }
+      .hero h1 {
+        font-size: clamp(2.6rem, 8.5vw, 5.2rem); line-height: .98; letter-spacing: .01em;
+        color: var(--headline); margin: 18px 0 16px; text-transform: uppercase;
+      }
+      .hero .sub { font-size: clamp(1.05rem, 2.6vw, 1.3rem); color: var(--ink); max-width: 620px; margin: 0 0 10px; }
+      .hero .fine { color: var(--muted); max-width: 620px; margin: 0; }
+      .anchor-nav { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 30px; }
+      .anchor-nav a {
+        border: 1px solid var(--line); border-radius: 999px; padding: 8px 14px;
+        font-size: .82rem; font-weight: 700; text-decoration: none; background: rgba(255,255,255,.03);
+        min-height: 42px; display: inline-flex; align-items: center;
+      }
+      .anchor-nav a:hover { border-color: var(--accent-ink); }
+
+      /* ---------- sections ---------- */
+      main { display: block; }
+      .sec { max-width: 860px; margin: 0 auto; padding: clamp(52px, 9vh, 88px) var(--pad) 0; }
+      .sec h2 { font-size: clamp(1.7rem, 4.6vw, 2.4rem); line-height: 1.12; color: var(--headline); margin: 0 0 16px; }
+      .sec .lede { color: var(--muted); font-size: 1.04rem; max-width: 640px; margin: 0 0 26px; }
+      .sec p { max-width: 68ch; }
+      .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 14px; margin: 22px 0 6px; }
+      .card {
+        background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 20px;
+      }
+      .card h3 { margin: 0 0 6px; font-size: 1.12rem; color: var(--headline); }
+      .card .addr { font-weight: 800; color: var(--accent-ink); margin: 0 0 10px; font-size: .98rem; }
+      .card p { margin: 0; color: var(--muted); font-size: .94rem; }
+      .cols { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 22px 0 6px; }
+      @media (max-width: 680px) { .cols { grid-template-columns: 1fr; } }
+      .panel { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 20px 22px; }
+      .panel h3 { margin: 0 0 12px; font-size: 1.05rem; color: var(--headline); }
+      .panel ul, .plain-list { margin: 0; padding-left: 18px; }
+      .panel li, .plain-list li { margin-bottom: 9px; }
+      .panel li:last-child, .plain-list li:last-child { margin-bottom: 0; }
+      .note {
+        border-left: 3px solid var(--accent-ink); background: var(--soft);
+        padding: 14px 18px; border-radius: 0 12px 12px 0; margin: 22px 0 6px; max-width: 68ch;
+      }
+      .note p { margin: 0; }
+      .venue-links { list-style: none; margin: 0; padding: 0; }
+      .venue-links li { margin-bottom: 10px; }
+      .venue-links a { font-weight: 800; text-underline-offset: 3px; }
+      .venue-links span { color: var(--muted); }
+
+      /* ---------- jobs ---------- */
+      .job-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 14px; margin-top: 22px; }
+      .job { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 20px 22px; }
+      .job h3 { margin: 0 0 6px; font-size: 1.08rem; color: var(--headline); }
+      .job p { margin: 0 0 12px; color: var(--muted); font-size: .94rem; }
+      .job ul { list-style: none; margin: 0 0 14px; padding: 0; }
+      .job li { margin-bottom: 7px; }
+      .job li a { font-weight: 800; text-underline-offset: 3px; }
+      .job .browse { font-size: .86rem; font-weight: 800; text-transform: uppercase; letter-spacing: .08em; }
+
+      /* ---------- what to avoid ---------- */
+      .avoid { border-top: 1px solid var(--line); padding: 24px 0 6px; }
+      .avoid h3 { margin: 0 0 10px; font-size: 1.18rem; color: var(--headline); }
+      .avoid p { margin: 0 0 8px; max-width: 68ch; }
+      .avoid strong { color: var(--accent-ink); }
+      .flags { display: flex; flex-wrap: wrap; gap: 8px; margin: 18px 0 6px; }
+      .flags span {
+        border: 1px solid var(--accent); border-radius: 999px; padding: 7px 13px;
+        font-size: .85rem; font-weight: 700; color: var(--accent-ink); background: rgba(255,255,255,.03);
+      }
+      .rules { margin: 16px 0 0; padding-left: 20px; max-width: 68ch; }
+      .rules li { margin-bottom: 10px; }
+
+      .handoff { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 30px; }
+      .btn-big {
+        display: inline-flex; align-items: center; min-height: 52px; padding: 12px 22px;
+        background: var(--accent); color: #fff; font-weight: 800; border-radius: 999px; text-decoration: none;
+      }
+      .btn-big:hover { background: var(--accent-ink); color: #1d2a20; }
+      .btn-ghost {
+        display: inline-flex; align-items: center; min-height: 52px; padding: 12px 22px;
+        border: 1px solid var(--line); color: var(--accent-ink); font-weight: 800; border-radius: 999px; text-decoration: none;
+      }
+
+      footer { border-top: 1px solid var(--line); margin-top: clamp(52px, 9vh, 88px); }
+      .foot-in { max-width: 860px; margin: 0 auto; padding: 34px var(--pad) 44px; color: var(--muted); font-size: .9rem; }
+      .foot-in p { margin: 0 0 9px; }
+      .back-link { font-weight: 800; display: inline-block; margin-bottom: 16px; }
+      .brand-line { color: var(--ink); font-weight: 700; }
+
+      /* ---------- Light theme: app-page tokens ---------- */
+      html[data-theme="light"] {
+        color-scheme: light;
+        --bg: #faf6ec; --surface: #fffdf7; --soft: #f3ecd7; --ink: #1d2a20;
+        --muted: #4c5a45; --line: #ddd3ba; --accent: #8a5f0e; --accent-ink: #7c520c;
+        --headline: #123524; --focus: #8a5f0e;
+      }
+      html[data-theme="light"] .hero {
+        background: radial-gradient(ellipse 90% 55% at 50% 112%, rgba(163,129,63,.30), transparent 60%),
+          linear-gradient(168deg, color-mix(in srgb, var(--d-a) 24%, #faf6ec), color-mix(in srgb, var(--d-a) 40%, #faf6ec) 55%, color-mix(in srgb, var(--d-a) 14%, #faf6ec));
+      }
+      html[data-theme="light"] .anchor-nav a, html[data-theme="light"] .flags span { background: rgba(29,42,32,.04); }
+      html[data-theme="light"] .btn-big { background: var(--accent); color: #fff; }
+      html[data-theme="light"] .btn-big:hover { background: var(--accent-ink); color: #fff; }
+
+      @media print { .anchor-nav { display: none; } }
+      @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+    
+      /* ---------- finder pages (Seam 2 additions) ---------- */
+      .count {
+        font-family: "Urbanist", sans-serif; font-weight: 700; letter-spacing: .14em;
+        font-size: .8rem; text-transform: uppercase; color: var(--accent-ink); margin: 0;
+      }
+      .vlist { display: grid; gap: 14px; margin-top: 22px; }
+      .vcard {
+        background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 20px 22px;
+      }
+      .vcard h3 { margin: 0 0 4px; font-size: 1.15rem; color: var(--headline); }
+      .vcard h3 a { color: var(--headline); text-decoration: none; }
+      .vcard h3 a:hover { color: var(--accent-ink); text-decoration: underline; text-underline-offset: 3px; }
+      .badge {
+        display: inline-block; vertical-align: middle; margin-left: 8px;
+        border: 1px solid var(--accent); border-radius: 999px; padding: 2px 9px;
+        font-family: "Manrope", sans-serif; font-size: .68rem; font-weight: 800;
+        letter-spacing: .08em; text-transform: uppercase; color: var(--accent-ink);
+        background: rgba(255,255,255,.03); white-space: nowrap;
+      }
+      .vcard .meta { margin: 0 0 2px; font-weight: 800; color: var(--accent-ink); font-size: .92rem; }
+      .vcard .addr { margin: 0 0 8px; color: var(--muted); font-size: .9rem; }
+      .vcard .desc { margin: 0 0 10px; max-width: 68ch; }
+      .vcard .dirs { margin: 0; font-size: .88rem; font-weight: 800; }
+      .strip { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 22px; }
+      .strip a {
+        border: 1px solid var(--line); border-radius: 999px; padding: 8px 14px;
+        font-size: .82rem; font-weight: 700; text-decoration: none; background: rgba(255,255,255,.03);
+        min-height: 42px; display: inline-flex; align-items: center;
+      }
+      .strip a:hover { border-color: var(--accent-ink); }
+      .strip a[aria-current="page"] { border-color: var(--accent-ink); color: var(--headline); }
+      html[data-theme="light"] .badge, html[data-theme="light"] .strip a { background: rgba(29,42,32,.04); }
+    </style>
+  </head>
+  <body>
+    <header class="hero">
+      <div class="hero-in">
+        <p class="crumbs"><a href="/">407 FYI</a> &middot; District Finder</p>
+        <a class="hero-brand" href="/">407 FYI &middot; A District Finder</a>
+        <h1>Mills 50</h1>
+        <p class="sub">Steam first, no apologies, immigrant kitchens, dive bars and band rooms.</p>
+        <p class="count">41 hand-verified places</p>
+        <nav class="anchor-nav" aria-label="On this page">
+          <a href="#places">The places</a>
+          <a href="#districts">All districts</a>
+          <a href="/archive.html?district=mills-50">Open in the full finder</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="sec" id="places">
+        <p class="kicker">The Full List</p>
+        <h2>Every place in Mills 50</h2>
+        <p class="lede">Full cards for the whole district, Local Picks first, then A to Z. Every name opens its listing in the full finder, where the map, filters and export live.</p>
+        <div class="vlist">
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=the-guesthouse">The Guesthouse</a> <span class="badge">Local Pick</span></h3>
+          <p class="meta">Bars &amp; lounges &middot; $$</p>
+          <p class="addr">1321 N Mills Ave, Orlando, FL 32803</p>
+          <p class="desc">Greenery trails across white walls and the room feels like a stylish, plant filled living room in Mills 50. Sunlight floods through big windows early, then candlelight softens The Guesthouse late. Bartenders build classic cocktails with conviction: a margarita people call the best in the city, a proper old fashioned, and an army navy regulars swear by. A wine list deeper than you expect from a corner bar gives you another route through the evening. Loud, laughing, and full of locals, it suits you when you want the neighborhood at its warmest.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=The+Guesthouse+1321+N+Mills+Ave%2C+Orlando%2C+FL+32803" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=amar-orlando">Amar Orlando</a></h3>
+          <p class="meta">Mediterranean &middot; $$</p>
+          <p class="addr">8001 S Orange Blossom Trl, Ste #1510, Orlando, FL 32809</p>
+          <p class="desc">Fire and family recipes drive this Mediterranean kitchen, where shawarma comes shaved with intent. Amar serves olive oil that tastes like olives, pita warm enough to steam when you tear it and salads that crunch instead of wilt. The room runs on Levantine hospitality, feeding you like a guest rather than processing you like a transaction. When you want a bowl of food that leaves you feeling better than it found you, this is the stop. Simple details, handled properly, carry the whole meal.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=Amar+Orlando+8001+S+Orange+Blossom+Trl%2C+Ste+%231510%2C+Orlando%2C+FL+32809" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=banh-mi-boy">Banh Mi Boy</a></h3>
+          <p class="meta">Noodles &amp; Southeast Asian &middot; $</p>
+          <p class="addr">1110 E Colonial Dr, Orlando, FL 32803</p>
+          <p class="desc">Michelin handed it a Bib Gourmand and Netflix&#x27;s Somebody Feed Phil came with cameras, but Banh Mi Boy never changed its tune. A Mills Market fixture serving for over twenty years, it bakes baguettes that shatter the way Saigon street bread should, then loads them with crispy pork belly, roasted garlic mayo and house pate. The playful side shows in the pho French dip, a sandwich built for dunking in rich broth, and fresh-pressed sugarcane juice. For Vietnamese sandwiches in Mills 50, this is the benchmark regulars measure others against.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=Banh+Mi+Boy+1110+E+Colonial+Dr%2C+Orlando%2C+FL+32803" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=banh-mi-cali">Banh Mi Cali</a></h3>
+          <p class="meta">Noodles &amp; Southeast Asian &middot; $</p>
+          <p class="addr">Banh Mi Cali, 5210 W Colonial Dr, Orlando, FL 32808-7606</p>
+          <p class="desc">No frills, no pretense, just one of Orlando&#x27;s most honest banh mi counters in Mills 50. The sandwiches come on crisp, airy baguettes stuffed with the classics: roast pork, meatballs, house pate and terrine, with pickled carrot and daikon crunching through every bite. Regulars round it out with a strong Vietnamese iced coffee or a milk tea, and the doughnuts earn their own quiet reputation. Small and fast, it is exactly the kind of unassuming lunch spot locals protect, best when you want the sandwich to do all the talking.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=Banh+Mi+Cali+Banh+Mi+Cali%2C+5210+W+Colonial+Dr%2C+Orlando%2C+FL+32808-7606" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=bites-and-bubbles">Bites &amp; Bubbles</a></h3>
+          <p class="meta">American &middot; $$</p>
+          <p class="addr">1618 N Mills Ave, Orlando, FL 32803</p>
+          <p class="desc">Date night polish and neighborhood warmth rarely share a room, but they do at Chef Eddie Nickell&#x27;s Mills 50 restaurant. The duck fat infused Chef&#x27;s Burger arrives with fried goat cheese and sun dried tomato jam, plus fries people call the best in town. The spicy Ahi Tuna Stack and the escargot show the kitchen&#x27;s serious side. You can dine inside or on the rooftop under the stars while the wine program and craft cocktails carry the evening. Book it when you want polish without stiffness.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=Bites+%26+Bubbles+1618+N+Mills+Ave%2C+Orlando%2C+FL+32803" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=black-bean-deli">Black Bean Deli</a></h3>
+          <p class="meta">Latin &amp; Caribbean &middot; $</p>
+          <p class="addr">1835 E Colonial Dr, Orlando, FL 32803</p>
+          <p class="desc">A Cuban cafe built from family memory still cooks like the grandparents are watching. Owner Andres Corton drew on his grandparents&#x27; kitchen and the ventanita culture of 1960s Miami cafes for this Mills 50 deli. Pan con lechon arrives stacked with mojo kissed pulled pork, empanadas crackle with seasoned picadillo, and the guava pastelito stays flaky without turning cloying. Order cafe con leche strong and sweet, made for sharing. Cuban families in Orlando point here when the standard is home cooking.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=Black+Bean+Deli+1835+E+Colonial+Dr%2C+Orlando%2C+FL+32803" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=black-rooster-taqueria">Black Rooster Taqueria</a></h3>
+          <p class="meta">Mexican &middot; $$</p>
+          <p class="addr">1323 N Mills Ave, Orlando, FL 32803</p>
+          <p class="desc">A decade in Mills 50, a Michelin Guide nod and an Orlando Sentinel Best Tacos title frame Black Rooster&#x27;s craft. Chef owners Juliana and John Calloway press corn tortillas in house daily, and you feel the difference when the tacos land. Smoked beef brisket sets the standard, pozole verde with slow cooked pork shoulder brings comfort, and the crispy fish taco keeps the daily catch promise. Finish with tres leches cake. These are tacos built with a chef&#x27;s conscience and a neighborhood&#x27;s expectations.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=Black+Rooster+Taqueria+1323+N+Mills+Ave%2C+Orlando%2C+FL+32803" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=chewy-boba-company">Chewy Boba Company</a></h3>
+          <p class="meta">Coffee &amp; cafes &middot; $</p>
+          <p class="addr">1212 E Colonial Dr, Orlando, FL 32803</p>
+          <p class="desc">Bubble tea was still exotic in Orlando when this family business started pouring in 2002. Chewy Boba keeps the Colonial Drive shop classic with taro milk tea, passionfruit, and brown sugar milk in generous cups at honest prices. The University Boulevard outpost adds a tap served boba system and fresh sugarcane juice guests call criminally refreshing in Florida heat. Vietnamese iced coffee with sea salt cold foam and seasonal specials round out the menu. Choose Chewy when you want long running boba craft with both classic cups and newer experiments.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=Chewy+Boba+Company+1212+E+Colonial+Dr%2C+Orlando%2C+FL+32803" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=chi-kin">Chi-Kin</a></h3>
+          <p class="meta">Restaurants &middot; $$</p>
+          <p class="addr">813 N Mills Ave, Orlando, FL 32803</p>
+          <p class="desc">The crunch is the whole point, and it survives the sauce. Chi-Kin serves double-fried Korean chicken that stays crisp under scratch-made sauces, including sweet gochujang and spicy honey on the wings. Kimchi fries stay crunchy to the last bite, according to the kitchen&#x27;s reputation here. The laid-back Mills counter also offers bulgogi bowls and loaded waffle fries, and staff move fast even at the lunch rush. Pick it when you want Korean fried chicken with texture intact, plus sides that hold their own beside the wings.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=Chi-Kin+813+N+Mills+Ave%2C+Orlando%2C+FL+32803" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=cowboy-curry">Cowboy Curry</a></h3>
+          <p class="meta">Japanese &amp; sushi &middot; $$</p>
+          <p class="addr">1110 E Colonial Dr, Orlando, FL 32803</p>
+          <p class="desc">From the UniGirl family comes a love letter to Japanese curry done the slow way: forty hours, forty ingredients, and a sauce sweetened only with fruits and vegetables, no gluten, no dairy, just depth. The base curry is beef, slow-cooked to silk, and then you build: chicken katsu with real crunch, gyu katsu, fried karaage, fried oyster. The bowl arrives deep and steaming, and a cup of hojicha tea on the side is the move. Comfort food with an obsession behind it, in the middle of Mills Market&#x27;s chaos.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=Cowboy+Curry+1110+E+Colonial+Dr%2C+Orlando%2C+FL+32803" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=death-in-the-afternoon">Death in the Afternoon</a></h3>
+          <p class="meta">Bars &amp; lounges &middot; $$</p>
+          <p class="addr">Death in the Afternoon, 930 Mills Ave N, Orlando, FL 32803-3230, United States</p>
+          <p class="desc">Hemingway named the drink, and Mills 50 built a shrine around it. Death in the Afternoon, from the crew behind Sanford&#x27;s Suffering Bastard, is a dim room devoted to absinthe, pouring bottles from around the world. Cocktails show real confidence with the spirit, and the Sauterelle tastes like mint chocolate chip ice cream with swagger, according to regulars. If absinthe is not your lane, a Spanish leaning kitchen offers patatas bravas, grilled octopus, and a chorizo burger. Book it for a date night with a darker mood.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=Death+in+the+Afternoon+Death+in+the+Afternoon%2C+930+Mills+Ave+N%2C+Orlando%2C+FL+32803-3230%2C+United+States" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=edoboy">Edoboy</a></h3>
+          <p class="meta">Japanese &amp; sushi &middot; $$</p>
+          <p class="addr">728 N Thornton Ave, Orlando, FL 32803</p>
+          <p class="desc">Eight seats, no chairs, and twelve pieces at a standing counter: Edoboy is Orlando&#x27;s first standing sushi bar. Chef Sean &quot;Sonny&quot; Nguyen built the passion project after travels through Tokyo, Osaka, and Kyoto, where standing sushi is a local shortcut to excellence. You book a slot on Resy, stand at the counter, and order nigiri and hand rolls from the chefs piece by piece, each one brushed and ready. Finish with miso soup made from the fish bones of the day and, wisely, the matcha s&#x27;more. Fast, fun, and fiercely good, it rewards planning.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=Edoboy+728+N+Thornton+Ave%2C+Orlando%2C+FL+32803" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=framework-craft-coffee-house">Framework Craft Coffee House</a></h3>
+          <p class="meta">Coffee &amp; cafes &middot; $</p>
+          <p class="addr">1201 N Mills Ave, Orlando, FL 32803</p>
+          <p class="desc">Pay what you can generosity sounds like the concept, until the espresso proves it is also the craft. Framework Craft Coffee House in Mills 50 serves the Sunflower and Spice Mocha alongside a vegan lemon rosemary bread with a small, devoted following. The matcha latte tastes forward and unsweetened, like versions you get in Japan. The shop began as the mobile Vita Luna cart and grew into a community hub with free Wi-Fi, outdoor seating, and dogs welcome. Choose Framework when excellent espresso and an open door policy matter equally to you.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=Framework+Craft+Coffee+House+1201+N+Mills+Ave%2C+Orlando%2C+FL+32803" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=grape-the-grain">Grape &amp; the Grain</a></h3>
+          <p class="meta">Bars &amp; lounges &middot; $$</p>
+          <p class="addr">Grape &amp; the Grain, 1110 Virginia Dr, Orlando, FL 32803</p>
+          <p class="desc">Staff who remember your pour make a wine bar feel like a neighborhood room. Grape and the Grain in Mills 50 pours wines hand selected from vineyards across the globe, with Florida craft beer for the non wine crowd and a charcuterie board built for lingering. Out back, a covered patio adds funky art, food trucks, trivia nights, and DJs. Novices and connoisseurs get the same welcome and zero pretension. Choose it when you want to slow down without the evening going quiet.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=Grape+%26+the+Grain+Grape+%26+the+Grain%2C+1110+Virginia+Dr%2C+Orlando%2C+FL+32803" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=jiangs-kitchen-mills50">Jiang&#x27;s Kitchen (Mills 50)</a></h3>
+          <p class="meta">Chinese &middot; $$</p>
+          <p class="addr">1111 E Colonial Dr, Orlando, FL 32803</p>
+          <p class="desc">A noodle shop dreamed up from childhood becomes Mills 50 theater you can eat. Restaurateur Eric Jiang, the chef behind Sushi Izuki omakase, built this Jiang&#x27;s Kitchen around handcrafted noodles and dumplings. An open kitchen lets you watch noodles stretch and pull while soup dumplings fold by hand nearby. Regional Chinese specialties include biang biang noodles, dan dan noodles, and wontons in chili oil, plus beer, wine, sake, and bubble teas. Across from Mills Market on East Colonial, it suits you when craft and spectacle should arrive in the same bowl.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=Jiang%27s+Kitchen+%28Mills+50%29+1111+E+Colonial+Dr%2C+Orlando%2C+FL+32803" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=kabooki">Kabooki Sushi</a></h3>
+          <p class="meta">Japanese &amp; sushi &middot; $$$$</p>
+          <p class="addr">Kabooki Sushi, 7705 Turkey Lake Rd, Orlando, FL 32819-5221</p>
+          <p class="desc">Ask any serious sushi lover in Orlando to name the room that leveled up the whole scene and this name comes up first. Chef Henry Moso leads Kabooki with a restless, globe-trotting approach: meticulous Japanese technique with creative freedom to borrow from everywhere, plated with genuine artistry. The traditional kaiseki multi-course option is the deep end, while the broader menu rewards adventurous ordering with combinations you will not see twice. The lounge out back keeps things sultry, and the whole place hums with the confidence of a restaurant that has stayed at the top by never repeating itself.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=Kabooki+Sushi+Kabooki+Sushi%2C+7705+Turkey+Lake+Rd%2C+Orlando%2C+FL+32819-5221" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=kai-kai-bbq-dumplings">Kai Kai BBQ &amp; Dumplings</a></h3>
+          <p class="meta">Chinese &middot; $</p>
+          <p class="addr">Mills Market, 1110 E Colonial Dr, Orlando, FL 32803</p>
+          <p class="desc">Dim sum means touch the heart, and Kai Kai takes that translation literally at Mills Market. Husband and wife Jerry and Jackie Lau brought 35 years of Cantonese cooking from New York&#x27;s Chinatown, and the proof hangs in the meat case. Glistening roast duck, crackling crispy pork, and honey glazed char siu sell by the pound or pile into rice boxes. Roast duck bao leads the order, and handmade dumplings come off the steamer fresh through the day. Michelin Guide recognized and food hall casual, it moves fast when you are hungry.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=Kai+Kai+BBQ+%26+Dumplings+Mills+Market%2C+1110+E+Colonial+Dr%2C+Orlando%2C+FL+32803" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=kaya">Kaya</a></h3>
+          <p class="meta">Fine dining &amp; steak &middot; $$$$</p>
+          <p class="addr">618 N Thornton Ave, Orlando, FL 32803</p>
+          <p class="desc">Filipino cooking gets a personal, farm-linked treatment in Mills 50, where Chef Lordfer Lalicon and Jamilyn Salonga Bailey run Kaya as casual fine dining. Lalicon, a veteran of Michelin-starred kitchens including Blue Hill, applies Filipino techniques to Florida farms and waters. Seafood and vegetable-focused plates carry the color, while ube pancakes and adobo fried rice keep tables smiling. The room feels like a family dinner filtered through very good taste. You leave understanding why Orlando took to this kitchen so quickly.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=Kaya+618+N+Thornton+Ave%2C+Orlando%2C+FL+32803" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=king-bao">King Bao</a></h3>
+          <p class="meta">Restaurants &middot; $</p>
+          <p class="addr">710 N Mills Ave, Orlando, FL 32803</p>
+          <p class="desc">Mills 50 has a hole-in-the-wall hero, and it serves steamed buns with attitude. King Bao claims an early quick-service gourmet bao title in Orlando, then backs the attitude with a rule-breaking menu. The pork-belly Hogzilla, zesty Firecracker Shrimp, a Cuban bao, Nashville hot chicken with real fire, and crispy Fire tots fill the board. Early-2000s metal rattles the speakers, wall art keeps things trippy, and a self-serve kiosk keeps the line moving. Come for loud, inexpensive bao that feels genuinely fun rather than formulaic.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=King+Bao+710+N+Mills+Ave%2C+Orlando%2C+FL+32803" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=little-sister-dumpling">Little Sister Dumpling</a></h3>
+          <p class="meta">Chinese &middot; $$</p>
+          <p class="addr">713 N Mills Ave, Orlando, FL 32803</p>
+          <p class="desc">Mills 50 gets a dumpling specialist that treats a small format with serious craft. Little Sister Dumpling, the district&#x27;s new spot on North Mills Avenue, works an Asian fusion kitchen through Korean inflected flavors alongside classic techniques. Everything is hand folded and made to be eaten immediately, which is the point of a dumpling done right. Slide into a seat along Mills and order a spread to share with the table. Choose it when you want to taste why this district keeps turning out focused, confident food stops.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=Little+Sister+Dumpling+713+N+Mills+Ave%2C+Orlando%2C+FL+32803" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=mills-market">Mills Market</a></h3>
+          <p class="meta">Markets &amp; shops &middot; $$</p>
+          <p class="addr">1110 E Colonial Dr, Orlando, FL 32803</p>
+          <p class="desc">An old Colonial Plaza stretch became Mills 50&#x27;s culinary anchor, patio lines included. Mills Market gathers stalls like Banh Mi Boy, Kai Kai BBQ and Dumplings and UniGirl, drawing crowds that spill onto the patio. The vendor mix leans Asian and chef driven, and shared seating makes it the easiest group dinner in the district when nobody can agree. Order across three stalls, claim a table and share everything. The food hall format earns its keep on nights like that.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=Mills+Market+1110+E+Colonial+Dr%2C+Orlando%2C+FL+32803" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=pho-hoa">Pho Hoa</a></h3>
+          <p class="meta">Noodles &amp; Southeast Asian &middot; $</p>
+          <p class="addr">Pho Hoa, 649 N Primrose Dr, Orlando, FL 32803-5016</p>
+          <p class="desc">On a side street off Colonial, Orlando goes to Pho Hoa when it wants Vietnamese food without the performance. A bright, family-style room is built around a broth that tastes like someone refused to cut a corner: deep, clear and alive with star anise. The pho bo is the order you see at half the tables, the bun bo hue brings a slow chili warmth, and the Vietnamese iced coffee is famously thick. Unfussy and generous, it is exactly the kind of Mills 50 place locals quietly depend on.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=Pho+Hoa+Pho+Hoa%2C+649+N+Primrose+Dr%2C+Orlando%2C+FL+32803-5016" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=pig-floyds-x-pigzza">Pig Floyd&#x27;s x Pigzza</a></h3>
+          <p class="meta">BBQ &middot; $$</p>
+          <p class="addr">1050 N Mills Ave, Orlando, FL 32803</p>
+          <p class="desc">Brisket and wood fired pizza at the same table ends the group dinner argument early. Two Mills 50 names merged in September 2026, with Pig Floyd&#x27;s urban BBQ and Pigzza&#x27;s pizza and pasta sharing one roof at 1050 N Mills. The combined menu lets your table order across both kitchens without splitting up or compromising. The room is loud, casual, and unapologetically indulgent, matching the neighborhood that asked for the pairing. Go with indecisive friends and let everyone order the thing they actually wanted.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=Pig+Floyd%27s+x+Pigzza+1050+N+Mills+Ave%2C+Orlando%2C+FL+32803" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=poke-hana">Poke Hana</a></h3>
+          <p class="meta">Restaurants &middot; $$</p>
+          <p class="addr">1225A E Colonial Dr, Orlando, FL 32803</p>
+          <p class="desc">At the heart of a strong food neighborhood, Poke Hana knows exactly what it is doing. This Hawaiian spot serves poke bowls with tuna that regulars praise as exceptionally fresh, marinated in house sauces and piled with seaweed salad, pickled cucumber, and edamame. Crispy rice tacos bring crunch and flavor, and the Huli chicken plate offers another route. The room stays bright, casual, and quick, with bowls endlessly customizable. Choose it for a Mills 50 lunch that can quietly become a regular habit without getting repetitive.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=Poke+Hana+1225A+E+Colonial+Dr%2C+Orlando%2C+FL+32803" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=premium-matcha-cafe-maiko">Premium Matcha Cafe Maiko</a></h3>
+          <p class="meta">Coffee &amp; cafes &middot; $$</p>
+          <p class="addr">Premium Matcha Cafe Maiko, 639 Mills Ave N, Orlando, FL 32803-4640, United States</p>
+          <p class="desc">In the middle of Mills 50, this little counter is a temple to real matcha. Not the dusty, bitter-afterthought kind: whisked-to-order lattes, silky soft serve, shaved ice stacked like fresh snow, and taiyaki fish waffles stuffed warm from the griddle. The banana pudding matcha latte sounds like a dare and drinks like a decision you will make again. Sit a minute, watch the whisk work, and let the caffeine arrive the graceful Japanese way.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=Premium+Matcha+Cafe+Maiko+Premium+Matcha+Cafe+Maiko%2C+639+Mills+Ave+N%2C+Orlando%2C+FL+32803-4640%2C+United+States" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=qreate-coffee">Qreate Coffee</a></h3>
+          <p class="meta">Coffee &amp; cafes &middot; $$</p>
+          <p class="addr">1212 Woodward St #1, Orlando, FL 32803</p>
+          <p class="desc">Qreate sits off Mills on Woodward Street, part coffee lab, part creative studio, with a menu built for trying something new. Crème Brûlée Lattes, Purple Pearl ube creations, and Tiger Lattes with house brown sugar rotate alongside seasonal specials that change like a gallery show. The Korean cream cheese garlic bread earns repeat orders. Quiet corners, plenty of outlets, and a photo studio in back make the room work for laptop hours and lingering alike. You come to create, then stay for a second cup.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=Qreate+Coffee+1212+Woodward+St+%231%2C+Orlando%2C+FL+32803" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=saigon-snow">Saigon Snow</a></h3>
+          <p class="meta">Sweets &middot; $</p>
+          <p class="addr">1110 E Colonial Dr, Orlando, FL 32803</p>
+          <p class="desc">Shaved snow gets a Vietnamese accent inside Mills Market. Saigon Snow, run by Chef Hung Huynh, layers shaved snow with ube, mango, lychee, and mochi toppings. Vietnamese espresso topped with pandan foam is the insider order for coffee drinkers. The ice stays soft and delicate, in the Hawaiian shaved-ice tradition, with flavors that keep each spoonful changing. Portions suit a cool-down rather than a full dessert production. Stop here after a Mills Market food crawl when you want something cold, light, fragrant, and quick to finish.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=Saigon+Snow+1110+E+Colonial+Dr%2C+Orlando%2C+FL+32803" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=shin-jung">Shin Jung</a></h3>
+          <p class="meta">Restaurants &middot; $$</p>
+          <p class="addr">1638 E Colonial Dr, Orlando, FL 32803</p>
+          <p class="desc">Tabletop grills have been sizzling on this room&#x27;s tables since 1993. Shin Jung, one of the first Korean restaurants in Orlando, survived a fire and returned rebuilt and brighter, with K-pop on the screens and the room humming. The banchan spread is generous, LA kalbi and beef bulgogi carry real flame character, and the soon tofu stew arrives bubbling. Go with a group, order for the table, and let dinner become an event built around sharing, grilling, and passing plates.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=Shin+Jung+1638+E+Colonial+Dr%2C+Orlando%2C+FL+32803" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=sparrow">Sparrow Orlando</a></h3>
+          <p class="meta">Bars &amp; lounges &middot; $$</p>
+          <p class="addr">807 N Orange Ave, Orlando, FL 32801</p>
+          <p class="desc">You settle into a dark, moody room in Mills 50 and the night slows down on purpose. Sparrow is the wine bar and lounge from the Good Salt group, with chef Wendy Lopez cooking southern European small plates. You can order silky mushroom pate, jamon iberico with melon, short rib ragu over rigatoni, and a tomato gimlet that wakes up your palate. The wine list leans Old World with New World charm, and Thursday vinyl nights give the room its pulse. Choose Sparrow for an intimate, unhurried date night that feels grown up and a little romantic.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=Sparrow+Orlando+807+N+Orange+Ave%2C+Orlando%2C+FL+32801" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=ten10-brewing">Ten10 Brewing</a></h3>
+          <p class="meta">Breweries &middot; $$</p>
+          <p class="addr">Ten10 Brewing, 1010 Virginia Dr, Orlando, FL 32803-2532</p>
+          <p class="desc">A tasting room works best when friends and strangers actually meet there, and Ten10 lives that idea in Mills 50. The self styled DIY punk rock brew crew pours character driven beers including Grandmas Purse butterscotch ale. Big Green Egg smoked wings and a kitchen that punches above its weight give the taproom a food reason too. A dog friendly patio, Tuesday run club, Thursday trivia, and live music keep the calendar social. Choose Ten10 when you want neighborhood brewing at its happiest, with a pint and a patio waiting for you.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=Ten10+Brewing+Ten10+Brewing%2C+1010+Virginia+Dr%2C+Orlando%2C+FL+32803-2532" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=thai-house">Thai House</a></h3>
+          <p class="meta">Noodles &amp; Southeast Asian &middot; $$</p>
+          <p class="addr">Thai House, 2117 E Colonial Dr, Orlando, FL 32803-4834</p>
+          <p class="desc">Look for the red building with the green roof on East Colonial. Inside is Thai House of Orlando, a Mills 50 fixture that keeps its cooking close to the Thai original. The room is small and cozy, the kind of place where regulars barely glance at the menu. The pad panang is rich and comforting, the duck soup has a loyal following, and the curries carry real depth. Locals have defended this place for years against every newcomer. End with the fried banana and ice cream, and you will understand the loyalty.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=Thai+House+Thai+House%2C+2117+E+Colonial+Dr%2C+Orlando%2C+FL+32803-4834" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=the-burrow-cafe-and-play">The Burrow Cafe and Play</a></h3>
+          <p class="meta">Coffee &amp; cafes &middot; $$</p>
+          <p class="addr">618 N Mills Ave, Orlando, FL 32803</p>
+          <p class="desc">A cafe and bar in Mills 50 solves the parent problem: kids get a supervised indoor playground, and adults get a room of their own. The coffee is serious, and wine, beer, and cocktails sit alongside it, so the visit works beyond a play date. Order the signature Honey Badger latte, settle in for remote work during the day, or plan around Monday trivia. Birthday parties are part of the offer too. You come for the children, and the menu gives you a reason to stay.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=The+Burrow+Cafe+and+Play+618+N+Mills+Ave%2C+Orlando%2C+FL+32803" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=moderne">The Moderne</a></h3>
+          <p class="meta">Bars &amp; lounges &middot; $$$</p>
+          <p class="addr">1241 E Colonial Dr, Orlando, FL 32803</p>
+          <p class="desc">Art Deco curves and tableside smoke give Mills 50 its most theatrical cocktail room. The Moderne pairs gold accents and sculptural lines with chef owner Michael Nguyen&#x27;s bar program built around deconstructed classics: smoked old fashioneds poured tableside, elaborate garnishes, and drinks such as Woman in White. Plates follow the same logic, ranging tapas style from Korean vodka pasta to duck wontons and miso cream noodles, drawing on the district&#x27;s heritage. Book it when a date night should feel like an occasion with ceremony built in.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=The+Moderne+1241+E+Colonial+Dr%2C+Orlando%2C+FL+32803" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=the-strand">The Strand</a></h3>
+          <p class="meta">American &middot; $$</p>
+          <p class="addr">807 N Mills Ave, Orlando, FL 32803</p>
+          <p class="desc">The &quot;New Old&quot; is the whole idea here, and The Strand wears it beautifully: classic American cooking rethought with real craft, inside a mid-century dining room on Mills 50 that feels pulled from a warmer decade. Seasonal plates made from scratch, a menu that turns over with the market, and a daily chef&#x27;s special that rewards regulars. Slide into a long booth, order something you could never make at home, and let the vintage glow do the rest. This is the neighborhood bistro every neighborhood wishes it had.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=The+Strand+807+N+Mills+Ave%2C+Orlando%2C+FL+32803" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=toojays">TooJay&#x27;s</a></h3>
+          <p class="meta">Restaurants &middot; $$</p>
+          <p class="addr">2624 E Colonial Dr, Orlando, FL 32803</p>
+          <p class="desc">Florida&#x27;s New York-style deli has kept its nostalgic spread since 1981. TooJay&#x27;s on Colonial Drive serves towering pastrami and Reuben sandwiches, matzo ball soup, and blintzes. A bakery case holds rugalach, babka, and the famous Killer Cake. Portions run big, service moves fast and friendly, and the menu offers that particular deli joy of eating three meals without repeating yourself. Bring an appetite and a takeout bag, because the bakery case rarely lets a table leave empty-handed after sandwiches that size.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=TooJay%27s+2624+E+Colonial+Dr%2C+Orlando%2C+FL+32803" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=tori-tori">Tori Tori</a></h3>
+          <p class="meta">Japanese &amp; sushi &middot; $$</p>
+          <p class="addr">720 N Mills Ave, Orlando, FL 32803</p>
+          <p class="desc">Charcoal smoke, low lights and a proper highball set the tone at this Mills 50 izakaya. Chef Sonny Nguyen runs Tori Tori with yakitori skewers cooked over binchotan, giving each piece real fire character. The blue crab and corn croquettes are the plate regulars talk about, and the drinks are poured with conviction. Walk in only, share everything and let the crowd become part of the theater. Hungry groups who like late, lively rooms will feel at home.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=Tori+Tori+720+N+Mills+Ave%2C+Orlando%2C+FL+32803" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=unigirl">UniGirl</a></h3>
+          <p class="meta">Japanese &amp; sushi &middot; $$$</p>
+          <p class="addr">1110 E Colonial Dr, Orlando, FL 32803</p>
+          <p class="desc">A food hall stall earned a Michelin Bib Gourmand, and the reason fits in your hand. Inside Mills Market, Orlando&#x27;s first dedicated onigiri shop is named for chef William Shen&#x27;s shiba inu, Uni. Warm triangles of lightly salted koshihikari rice and crisp nori hold fillings like crispy fried chicken thigh, tuna sharpened with mustard and unagi in sweet sauce. They sell out, the line moves fast and the menu keeps changing. Grab a few, plus a bottled drink, and eat them warm.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=UniGirl+1110+E+Colonial+Dr%2C+Orlando%2C+FL+32803" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=wills-pub">Will&#x27;s Pub &amp; Lil Indie&#x27;s</a></h3>
+          <p class="meta">Nightlife &amp; music &middot; $</p>
+          <p class="addr">1042 N Mills Ave, Orlando, FL 32803</p>
+          <p class="desc">If Orlando&#x27;s underground has an address, it is 1042 North Mills. Will&#x27;s Pub is the room where punk, metal, post-punk and emo bills pack the floor shoulder to shoulder, and where your new favorite band might be opening. In the second room, Lil Indie&#x27;s keeps it late and loose: funk DJs, jazz improv and folk strings, often with no cover. Two rooms, one block, zero pretension, and a Mills 50 crowd that shows up curious. Come for a bill you half know, and leave converted often enough to keep returning.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=Will%27s+Pub+%26+Lil+Indie%27s+1042+N+Mills+Ave%2C+Orlando%2C+FL+32803" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=zama-mills-50">Zama</a></h3>
+          <p class="meta">Mexican &middot; $$</p>
+          <p class="addr">1120 N Mills Ave, Orlando, FL 32803</p>
+          <p class="desc">Live fire does the cooking at Zama, which opened in late 2025 in Mills 50 from Agave Azul&#x27;s Juan Rios. The kitchen cooks Mexican food over open flame with a seafood lean, moving between wood-fired fish, ember-roasted vegetables and tacos that remind you how good a tortilla can be. A serious tequila and mezcal program backs the menu, giving the bar the same weight as the kitchen. It slots into the Mills 50 restaurant row as the special-occasion Mexican spot, the place you pick when tacos alone are not the whole plan.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=Zama+1120+N+Mills+Ave%2C+Orlando%2C+FL+32803" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=zaru">Zaru</a></h3>
+          <p class="meta">Japanese &amp; sushi &middot; $$</p>
+          <p class="addr">Zaru, 1114 E Colonial Dr, Orlando, FL 32803-4636</p>
+          <p class="desc">A woven bamboo basket gives Zaru its name, and it signals the philosophy: simple tools, obsessive craft. The Tung brothers built this Mills 50 room around Sanuki-style udon made from flour milled in Kagawa, the birthplace of udon, with equipment shipped from Japan. You fill out your own interactive menu, choose hot or cold noodles, then watch broths develop smokiness and depth around add-ons like ikura onsen or crispy shrimp tempura. A Michelin Bib Gourmand went to this 25-seat noodle room. Slurp loudly; it is appreciated here.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=Zaru+Zaru%2C+1114+E+Colonial+Dr%2C+Orlando%2C+FL+32803-4636" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=ziggies-pizza">Ziggie&#x27;s Pizza</a></h3>
+          <p class="meta">Pizza &middot; $$</p>
+          <p class="addr">Ziggie&#x27;s Pizza, 603 Virginia Dr, Orlando, FL 32803-1844, United States</p>
+          <p class="desc">Menus rarely get this playful, and that is exactly the point here. In Ivanhoe Village, attached to the Thirsty Topher craft beer bar, Ziggie&#x27;s turns out thin-crust 12-inch personal pies with offbeat toppings. The Killa Beez layers fig jam, prosciutto, pepperoni, goat cheese, and house-made hot honey, and regulars treat it as the cult favorite. Ziggie&#x27;s Stardust piles on pistachio pesto and truffle oil. Order at the counter, then settle at the bar with a Florida-brewed pint while your pie bakes. Small, joyful, and fiercely loved.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=Ziggie%27s+Pizza+Ziggie%27s+Pizza%2C+603+Virginia+Dr%2C+Orlando%2C+FL+32803-1844%2C+United+States" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        </div>
+      </section>
+
+      <section class="sec" id="districts">
+        <p class="kicker">Keep Going</p>
+        <h2>Every district has a finder page</h2>
+        <p class="lede">One page per district, generated from the same hand-verified dataset as the full guide.</p>
+        <nav class="strip" aria-label="District finder pages">
+          <a href="/winter-park-finder.html">Winter Park</a>
+          <a href="/disney-springs-finder.html">Disney Springs</a>
+          <a href="/milk-district-finder.html">Milk District</a>
+          <a href="/thornton-park-finder.html">Thornton Park</a>
+          <a href="/mills-50-finder.html" aria-current="page">Mills 50</a>
+          <a href="/ivanhoe-village-finder.html">Ivanhoe Village</a>
+          <a href="/downtown-orlando-finder.html">Downtown Orlando</a>
+          <a href="/international-drive-finder.html">International Drive</a>
+          <a href="/lake-nona-finder.html">Lake Nona</a>
+          <a href="/universal-finder.html">Universal</a>
+          <a href="/audubon-park-finder.html">Audubon Park</a>
+          <a href="/college-park-finder.html">College Park</a>
+          <a href="/more-orlando-finder.html">More Orlando</a>
+          <a href="/disney-area-finder.html">Disney Area</a>
+          <a href="/ucf-finder.html">UCF</a>
+          <a href="/kissimmee-finder.html">Kissimmee</a>
+          <a href="/baldwin-park-finder.html">Baldwin Park</a>
+          <a href="/winter-garden-finder.html">Winter Garden</a>
+          <a href="/sanford-finder.html">Sanford</a>
+          <a href="/maitland-finder.html">Maitland</a>
+          <a href="/oviedo-finder.html">Oviedo</a>
+          <a href="/hourglass-finder.html">Hourglass</a>
+          <a href="/sodo-finder.html">SoDo</a>
+        </nav>
+        <div class="handoff">
+          <a class="btn-big" href="/mills-50-district-guide.html">Read the Mills 50 story</a>
+          <a class="btn-ghost" href="/archive.html?district=mills-50">Mills 50 in the full finder</a>
+        </div>
+      </section>
+    </main>
+
+<footer>
+      <div class="foot-in">
+        <a class="back-link" href="/">&larr; Back to the full guide</a>
+        <p class="brand-line">407 FYI, an independent Orlando guide. Details can change; confirm before you go.</p>
+        <p>Hand-verified Orlando places · Checked October 2026 · Local Picks are never sponsored · Corrections: <a href="mailto:mail@407.fyi">mail@407.fyi</a></p>
+        <p>Some links on 407 FYI are affiliate links. They never affect which places we list, rank, or recommend.</p>
+      </div>
+    </footer>
+  </body>
+</html>

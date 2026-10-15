@@ -1,0 +1,394 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="color-scheme" content="light dark" />
+    <title>Ivanhoe Village Finder &middot; 407 FYI</title>
+    <meta name="description" content="The 407 FYI finder page for Ivanhoe Village: every hand-verified place in the district with full cards, addresses, descriptions and directions." />
+    <link rel="canonical" href="https://407.fyi/ivanhoe-village-finder.html" />
+    <meta property="og:title" content="Ivanhoe Village Finder &middot; 407 FYI" />
+    <meta property="og:description" content="The 407 FYI finder page for Ivanhoe Village: every hand-verified place in the district with full cards, addresses, descriptions and directions." />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://407.fyi/ivanhoe-village-finder.html" />
+    <meta property="og:image" content="https://407.fyi/og-image.png" />
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Urbanist:wght@600;700;800&amp;display=swap" rel="stylesheet" />
+<script>
+      try {
+        const savedTheme = localStorage.getItem('white-atlas-theme');
+        document.documentElement.dataset.theme = savedTheme === 'light' || savedTheme === 'dark' ? savedTheme : 'dark';
+      } catch (error) {
+        document.documentElement.dataset.theme = 'dark';
+      }
+    </script>
+    <style>
+      /* Night Drive tokens (from the district guides) */
+      :root {
+        color-scheme: dark;
+        --bg: #0a1811; --surface: #122419; --soft: #172a1f; --ink: #f0e8d5;
+        --muted: #c6bba2; --line: #2f4a38; --accent: #765b2f; --accent-ink: #d4b573;
+        --headline: #f6edd6; --focus: #d4b573;
+        --d-a: #14231a; --d-b: #3a5a35; --d-c: #bd9049;
+        --pad: clamp(20px, 5vw, 40px);
+      }
+      * { box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
+      body {
+        margin: 0; background: var(--bg); color: var(--ink);
+        font-family: "Manrope", system-ui, sans-serif; line-height: 1.6;
+        overflow-x: hidden;
+      }
+      h1, h2, h3, .display { font-family: "Urbanist", "Manrope", sans-serif; }
+      a { color: var(--accent-ink); }
+      a:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
+      .kicker {
+        font-family: "Urbanist", sans-serif; font-weight: 700; letter-spacing: .22em;
+        font-size: .72rem; text-transform: uppercase; color: var(--accent-ink); margin: 0 0 14px;
+      }
+
+      /* ---------- hero ---------- */
+      .hero {
+        position: relative; padding: clamp(64px, 13vh, 130px) var(--pad) clamp(48px, 9vh, 84px);
+        background: radial-gradient(ellipse 90% 55% at 50% 112%, rgba(189,144,73,.26), transparent 60%),
+          linear-gradient(168deg, #1d3325, #14231a 55%, #0a1811);
+        border-bottom: 1px solid var(--line);
+      }
+      .hero-in { max-width: 860px; margin: 0 auto; }
+      .crumbs { font-size: .8rem; color: var(--muted); margin: 0 0 26px; }
+      .crumbs a { font-weight: 700; }
+      .hero-brand {
+        font-family: "Urbanist", sans-serif; font-weight: 700; letter-spacing: .22em;
+        font-size: .72rem; text-transform: uppercase; color: var(--accent-ink); text-decoration: none;
+      }
+      .hero h1 {
+        font-size: clamp(2.6rem, 8.5vw, 5.2rem); line-height: .98; letter-spacing: .01em;
+        color: var(--headline); margin: 18px 0 16px; text-transform: uppercase;
+      }
+      .hero .sub { font-size: clamp(1.05rem, 2.6vw, 1.3rem); color: var(--ink); max-width: 620px; margin: 0 0 10px; }
+      .hero .fine { color: var(--muted); max-width: 620px; margin: 0; }
+      .anchor-nav { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 30px; }
+      .anchor-nav a {
+        border: 1px solid var(--line); border-radius: 999px; padding: 8px 14px;
+        font-size: .82rem; font-weight: 700; text-decoration: none; background: rgba(255,255,255,.03);
+        min-height: 42px; display: inline-flex; align-items: center;
+      }
+      .anchor-nav a:hover { border-color: var(--accent-ink); }
+
+      /* ---------- sections ---------- */
+      main { display: block; }
+      .sec { max-width: 860px; margin: 0 auto; padding: clamp(52px, 9vh, 88px) var(--pad) 0; }
+      .sec h2 { font-size: clamp(1.7rem, 4.6vw, 2.4rem); line-height: 1.12; color: var(--headline); margin: 0 0 16px; }
+      .sec .lede { color: var(--muted); font-size: 1.04rem; max-width: 640px; margin: 0 0 26px; }
+      .sec p { max-width: 68ch; }
+      .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 14px; margin: 22px 0 6px; }
+      .card {
+        background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 20px;
+      }
+      .card h3 { margin: 0 0 6px; font-size: 1.12rem; color: var(--headline); }
+      .card .addr { font-weight: 800; color: var(--accent-ink); margin: 0 0 10px; font-size: .98rem; }
+      .card p { margin: 0; color: var(--muted); font-size: .94rem; }
+      .cols { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 22px 0 6px; }
+      @media (max-width: 680px) { .cols { grid-template-columns: 1fr; } }
+      .panel { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 20px 22px; }
+      .panel h3 { margin: 0 0 12px; font-size: 1.05rem; color: var(--headline); }
+      .panel ul, .plain-list { margin: 0; padding-left: 18px; }
+      .panel li, .plain-list li { margin-bottom: 9px; }
+      .panel li:last-child, .plain-list li:last-child { margin-bottom: 0; }
+      .note {
+        border-left: 3px solid var(--accent-ink); background: var(--soft);
+        padding: 14px 18px; border-radius: 0 12px 12px 0; margin: 22px 0 6px; max-width: 68ch;
+      }
+      .note p { margin: 0; }
+      .venue-links { list-style: none; margin: 0; padding: 0; }
+      .venue-links li { margin-bottom: 10px; }
+      .venue-links a { font-weight: 800; text-underline-offset: 3px; }
+      .venue-links span { color: var(--muted); }
+
+      /* ---------- jobs ---------- */
+      .job-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 14px; margin-top: 22px; }
+      .job { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 20px 22px; }
+      .job h3 { margin: 0 0 6px; font-size: 1.08rem; color: var(--headline); }
+      .job p { margin: 0 0 12px; color: var(--muted); font-size: .94rem; }
+      .job ul { list-style: none; margin: 0 0 14px; padding: 0; }
+      .job li { margin-bottom: 7px; }
+      .job li a { font-weight: 800; text-underline-offset: 3px; }
+      .job .browse { font-size: .86rem; font-weight: 800; text-transform: uppercase; letter-spacing: .08em; }
+
+      /* ---------- what to avoid ---------- */
+      .avoid { border-top: 1px solid var(--line); padding: 24px 0 6px; }
+      .avoid h3 { margin: 0 0 10px; font-size: 1.18rem; color: var(--headline); }
+      .avoid p { margin: 0 0 8px; max-width: 68ch; }
+      .avoid strong { color: var(--accent-ink); }
+      .flags { display: flex; flex-wrap: wrap; gap: 8px; margin: 18px 0 6px; }
+      .flags span {
+        border: 1px solid var(--accent); border-radius: 999px; padding: 7px 13px;
+        font-size: .85rem; font-weight: 700; color: var(--accent-ink); background: rgba(255,255,255,.03);
+      }
+      .rules { margin: 16px 0 0; padding-left: 20px; max-width: 68ch; }
+      .rules li { margin-bottom: 10px; }
+
+      .handoff { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 30px; }
+      .btn-big {
+        display: inline-flex; align-items: center; min-height: 52px; padding: 12px 22px;
+        background: var(--accent); color: #fff; font-weight: 800; border-radius: 999px; text-decoration: none;
+      }
+      .btn-big:hover { background: var(--accent-ink); color: #1d2a20; }
+      .btn-ghost {
+        display: inline-flex; align-items: center; min-height: 52px; padding: 12px 22px;
+        border: 1px solid var(--line); color: var(--accent-ink); font-weight: 800; border-radius: 999px; text-decoration: none;
+      }
+
+      footer { border-top: 1px solid var(--line); margin-top: clamp(52px, 9vh, 88px); }
+      .foot-in { max-width: 860px; margin: 0 auto; padding: 34px var(--pad) 44px; color: var(--muted); font-size: .9rem; }
+      .foot-in p { margin: 0 0 9px; }
+      .back-link { font-weight: 800; display: inline-block; margin-bottom: 16px; }
+      .brand-line { color: var(--ink); font-weight: 700; }
+
+      /* ---------- Light theme: app-page tokens ---------- */
+      html[data-theme="light"] {
+        color-scheme: light;
+        --bg: #faf6ec; --surface: #fffdf7; --soft: #f3ecd7; --ink: #1d2a20;
+        --muted: #4c5a45; --line: #ddd3ba; --accent: #8a5f0e; --accent-ink: #7c520c;
+        --headline: #123524; --focus: #8a5f0e;
+      }
+      html[data-theme="light"] .hero {
+        background: radial-gradient(ellipse 90% 55% at 50% 112%, rgba(163,129,63,.30), transparent 60%),
+          linear-gradient(168deg, color-mix(in srgb, var(--d-a) 24%, #faf6ec), color-mix(in srgb, var(--d-a) 40%, #faf6ec) 55%, color-mix(in srgb, var(--d-a) 14%, #faf6ec));
+      }
+      html[data-theme="light"] .anchor-nav a, html[data-theme="light"] .flags span { background: rgba(29,42,32,.04); }
+      html[data-theme="light"] .btn-big { background: var(--accent); color: #fff; }
+      html[data-theme="light"] .btn-big:hover { background: var(--accent-ink); color: #fff; }
+
+      @media print { .anchor-nav { display: none; } }
+      @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+    
+      /* ---------- finder pages (Seam 2 additions) ---------- */
+      .count {
+        font-family: "Urbanist", sans-serif; font-weight: 700; letter-spacing: .14em;
+        font-size: .8rem; text-transform: uppercase; color: var(--accent-ink); margin: 0;
+      }
+      .vlist { display: grid; gap: 14px; margin-top: 22px; }
+      .vcard {
+        background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 20px 22px;
+      }
+      .vcard h3 { margin: 0 0 4px; font-size: 1.15rem; color: var(--headline); }
+      .vcard h3 a { color: var(--headline); text-decoration: none; }
+      .vcard h3 a:hover { color: var(--accent-ink); text-decoration: underline; text-underline-offset: 3px; }
+      .badge {
+        display: inline-block; vertical-align: middle; margin-left: 8px;
+        border: 1px solid var(--accent); border-radius: 999px; padding: 2px 9px;
+        font-family: "Manrope", sans-serif; font-size: .68rem; font-weight: 800;
+        letter-spacing: .08em; text-transform: uppercase; color: var(--accent-ink);
+        background: rgba(255,255,255,.03); white-space: nowrap;
+      }
+      .vcard .meta { margin: 0 0 2px; font-weight: 800; color: var(--accent-ink); font-size: .92rem; }
+      .vcard .addr { margin: 0 0 8px; color: var(--muted); font-size: .9rem; }
+      .vcard .desc { margin: 0 0 10px; max-width: 68ch; }
+      .vcard .dirs { margin: 0; font-size: .88rem; font-weight: 800; }
+      .strip { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 22px; }
+      .strip a {
+        border: 1px solid var(--line); border-radius: 999px; padding: 8px 14px;
+        font-size: .82rem; font-weight: 700; text-decoration: none; background: rgba(255,255,255,.03);
+        min-height: 42px; display: inline-flex; align-items: center;
+      }
+      .strip a:hover { border-color: var(--accent-ink); }
+      .strip a[aria-current="page"] { border-color: var(--accent-ink); color: var(--headline); }
+      html[data-theme="light"] .badge, html[data-theme="light"] .strip a { background: rgba(29,42,32,.04); }
+    </style>
+  </head>
+  <body>
+    <header class="hero">
+      <div class="hero-in">
+        <p class="crumbs"><a href="/">407 FYI</a> &middot; District Finder</p>
+        <a class="hero-brand" href="/">407 FYI &middot; A District Finder</a>
+        <h1>Ivanhoe Village</h1>
+        <p class="sub">Orlando with its guard down, brunch, vintage racks and a brewery by the lake.</p>
+        <p class="count">17 hand-verified places</p>
+        <nav class="anchor-nav" aria-label="On this page">
+          <a href="#places">The places</a>
+          <a href="#districts">All districts</a>
+          <a href="/archive.html?district=ivanhoe-village">Open in the full finder</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="sec" id="places">
+        <p class="kicker">The Full List</p>
+        <h2>Every place in Ivanhoe Village</h2>
+        <p class="lede">Full cards for the whole district, Local Picks first, then A to Z. Every name opens its listing in the full finder, where the map, filters and export live.</p>
+        <div class="vlist">
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=4-hens-creole-kitchen">4 Hens Creole Kitchen</a></h3>
+          <p class="meta">Restaurants &middot; $$</p>
+          <p class="addr">1412 Alden Rd, Orlando, FL 32803</p>
+          <p class="desc">Chef Brandi&#x27;s all-day Creole stall in City Food Hall cooks with real confidence. The chicken and croffles, a croissant crossed with a waffle and dripping hot honey, are the signature move. Gumbo ramen and a loaded Bourbon Street po&#x27;boy deserve your attention too, with rich, soulful seasoning throughout. The record describes the stall as Black and women owned, set in a warm room where the music never misses. Pick this Ivanhoe Village stop when you want New Orleans comfort that tastes seasoned, generous, and assured.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=4+Hens+Creole+Kitchen+1412+Alden+Rd%2C+Orlando%2C+FL+32803" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=barkhaven">Barkhaven</a></h3>
+          <p class="meta">Parks &amp; outdoors &middot; $$</p>
+          <p class="addr">Barkhaven, 724 Brookhaven Dr, Orlando, FL 32803-2505, United States</p>
+          <p class="desc">The one rule at BarkHaven is that your dog has as much fun as you do. Orlando&#x27;s dog bar pairs a supervised off-leash park and a splash zone with on-site grooming, plus a full restaurant and bar so humans can eat properly while the pups play. The kitchen goes beyond pub fare with burgers, guava wings and a brisket bratwurst that regulars praise. Fire pits, live DJs and a whole community of regulars on four legs complete it. Bring the dog; the humans are well covered here.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=Barkhaven+Barkhaven%2C+724+Brookhaven+Dr%2C+Orlando%2C+FL+32803-2505%2C+United+States" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=sushi-making-class">Beginner Sushi-Making Class</a></h3>
+          <p class="meta">Attractions &middot; $$</p>
+          <p class="addr">Ten10 Brewing Company, 1010 Virginia Dr, Orlando, FL 32803</p>
+          <p class="desc">Your first roll leans, your second holds, and someone trades a piece for a sip of beer. A beginner sushi making class at a local brewery teaches rolls step by step in a relaxed setting built for first timers. The pint in front of you and the low stakes keep nerves down while your hands learn the work. Reserve spots together so you share a table, and pick this for a date or friends night where doing something beats just watching.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=Beginner+Sushi-Making+Class+Ten10+Brewing+Company%2C+1010+Virginia+Dr%2C+Orlando%2C+FL+32803" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=brews-and-bites-tour">Brews and Bites Walking Tour</a></h3>
+          <p class="meta">Attractions &middot; $$</p>
+          <p class="addr">Ten10 Brewing Company, 1010 Virginia Dr, Orlando, FL 32803</p>
+          <p class="desc">The brewer pulls a small pour, explains what changed in this batch, and a plate arrives that was clearly chosen to go with it. Brews and Bites is a walking tour of breweries and bars in Ivanhoe Village, with food paired along the way and small groups throughout. For craft beer people, it is a guided first round through a scene that takes time to map alone. Pick an evening, wear comfortable shoes, and plan a ride home afterward.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=Brews+and+Bites+Walking+Tour+Ten10+Brewing+Company%2C+1010+Virginia+Dr%2C+Orlando%2C+FL+32803" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=cfh-orlando">CFH Orlando</a></h3>
+          <p class="meta">Markets &amp; shops &middot; $$</p>
+          <p class="addr">1412 Alden Rd, Orlando, FL 32803</p>
+          <p class="desc">Between food runs at City Food Hall, the central bar gives you a reason to pause. CFH anchors the Ivanhoe Village room with seasonal cocktails, local beers on tap and natural wines. Daily specials set the rhythm: Mule Mondays, Tiki Tuesdays, Whiskey Wednesdays and Thirsty Thursdays, with weekday happy hour specials in the mix too. Grab a stool, or carry your drink to the lawn on a movie night. Bartenders know their regulars and treat newcomers like them, which keeps the bar social.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=CFH+Orlando+1412+Alden+Rd%2C+Orlando%2C+FL+32803" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=city-food-hall">City Food Hall</a></h3>
+          <p class="meta">Markets &amp; shops &middot; $$</p>
+          <p class="addr">City Food Hall, 1412 Alden Rd, Orlando, FL 32803-1862</p>
+          <p class="desc">Indecision is the ideal condition at the Hall on the Yard by Lake Formosa. A curated mix of local concepts circles one big roof: smash burgers, street tacos on hand pressed tortillas, New Orleans po&#x27;boys, shrimp and grits, fresh sushi and New York style bagels. A central bar pours seasonal cocktails and local taps, Topgolf Swing Suites sit upstairs, and live events fill the outdoor plaza. Dinner becomes a whole evening here, especially when your group refuses to agree on one cuisine.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=City+Food+Hall+City+Food+Hall%2C+1412+Alden+Rd%2C+Orlando%2C+FL+32803-1862" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=dona-pepa">Doña Pepa</a></h3>
+          <p class="meta">Mexican &middot; $$</p>
+          <p class="addr">1412 Alden Rd, Orlando, FL 32803</p>
+          <p class="desc">Street tacos, pressed by hand on proper corn tortillas, anchor this Ivanhoe Village food hall counter. Dona Pepa Street Taqueria draws locals for birria with rich consomme and the vampiro, a cheese crusted tortilla with guacamole. Al pastor gets its pineapple hit the way it should, and churros stuffed with dulce de leche wait at the end. Add a mangonada smoothie for the full experience. Fast, friendly and priced like a taco shop, it makes a group food hall run easy.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=Do%C3%B1a+Pepa+1412+Alden+Rd%2C+Orlando%2C+FL+32803" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=egg-dose">Egg Dose</a></h3>
+          <p class="meta">Breakfast &amp; brunch &middot; $$</p>
+          <p class="addr">1412 Alden Rd, Orlando, FL 32803</p>
+          <p class="desc">A line at a food hall stall usually tells you something before the first bite. Egg Dose calls itself Orlando&#x27;s best breakfast spot, and the line at its City Food Hall stall, number 9, backs up the confidence. The Maple Dose is the legend: brioche French toast as the bun, thick cut bacon, soft scrambled eggs, cheddar, and real maple syrup for dunking. The picanha steak sandwich is the sleeper pick, and every sandwich is built fresh that morning. Choose it for breakfast with swagger, or catch the Lake Eola and Winter Garden farmers markets on weekends.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=Egg+Dose+1412+Alden+Rd%2C+Orlando%2C+FL+32803" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=ivanhoe-park-brewing-company">Ivanhoe Park Brewing Company</a></h3>
+          <p class="meta">Breweries &middot; $$</p>
+          <p class="addr">1300 Alden Rd, Orlando, FL 32803</p>
+          <p class="desc">Local history pours into the pint here, starting with the name itself. Ivanhoe Park honors Lake Ivanhoe founder George Russell and the old Joyland amusement park that once stood nearby. The beer follows with personality, from crisp Park Hopp&#x27;r pilsner to bold Tupac ShaPorter. A reclaimed wood taproom and dog friendly beer garden hum with neighborhood energy, and rotating taps keep locals returning to see what is new. Choose this independent brewery when you want an Ivanhoe Village hangout where story, setting, and beer all pull together.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=Ivanhoe+Park+Brewing+Company+1300+Alden+Rd%2C+Orlando%2C+FL+32803" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=ivanhoe-village-food-tour">Ivanhoe Village Food Tour</a></h3>
+          <p class="meta">Attractions &middot; $$$</p>
+          <p class="addr">1211 N Orange Ave, Orlando, FL 32804</p>
+          <p class="desc">Vintage shop windows, a lake at the end of the street, and a tasting waiting two doors down set the rhythm of the walk here. This Ivanhoe Village food tour pairs tastings with a lakefront vintage district of small shops and cafes. For a couple or a small group, it is an easy half day that mixes eating with browsing. Reserve your date and wander the shops a little longer afterward, when the tastings have pointed you toward your favorites.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=Ivanhoe+Village+Food+Tour+1211+N+Orange+Ave%2C+Orlando%2C+FL+32804" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=lukes-new-york-bagels">Luke&#x27;s New York Bagels</a></h3>
+          <p class="meta">Bakeries &middot; $$</p>
+          <p class="addr">1412 Alden Rd, Orlando, FL 32803</p>
+          <p class="desc">A bagel that actually tastes like a bagel is the whole promise, kept plainly. Gainesville born Luke&#x27;s brought New York style bagels to Orlando, opening in City Food Hall in late June, with a boil and bake chew and a crisp crust over a dense crumb. House made schmears range from classic to playful, including a Lucky Charms cream cheese that regulars say works, plus deli inspired breakfast sandwiches. Choose it when shortcuts are exactly what you are trying to avoid at breakfast.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=Luke%27s+New+York+Bagels+1412+Alden+Rd%2C+Orlando%2C+FL+32803" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=orlando-science-center">Orlando Science Center</a></h3>
+          <p class="meta">Museums &amp; landmarks &middot; $$</p>
+          <p class="addr">777 E Princeton St, Orlando, FL 32803</p>
+          <p class="desc">Every Orlando kid of the last thirty years has a Science Center memory, and many involve that dome. The Orlando Science Center started in 1960 as the Central Florida Museum and grew into four floors of hands-on exhibits in Loch Haven Park: dinosaur digs, a living cypress swamp and the observatory roof. The Dome by Dr. Phillips Charities is the place&#x27;s soul, a 300-seat giant dome theater that surrounds you with Everest climbs and ocean depths. Go learn something and feel like a kid again, whatever your age.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=Orlando+Science+Center+777+E+Princeton+St%2C+Orlando%2C+FL+32803" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=palm-beach">Palm Beach Meats</a></h3>
+          <p class="meta">Markets &amp; shops &middot; $$$</p>
+          <p class="addr">Palm Beach Meats, 3421 Orange Ave S, Orlando, FL 32806-6127</p>
+          <p class="desc">Wagyu, done every way, is the single obsession behind Palm Beach Meats on South Orange. Eric and Meghan San Pedro built the shop and restaurant around Japanese, Australian and American Wagyu. The counter serves a Wagyu burger, a layered Frito Pie, Filipino leaning Wagyu tapa over garlic rice with a fried egg, a Wagyu Philly and a beef tallow Nutella brownie people return for. Behind the coolers, a full market holds Wagyu deli cuts and frozen beef. Carnivores get a pilgrimage spot with fast casual ease out front.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=Palm+Beach+Meats+Palm+Beach+Meats%2C+3421+Orange+Ave+S%2C+Orlando%2C+FL+32806-6127" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=smash-dunk">Smash Dunk</a></h3>
+          <p class="meta">Burgers &amp; sandwiches &middot; $$</p>
+          <p class="addr">1412 Alden Rd, Orlando, FL 32803</p>
+          <p class="desc">A full court press suits a smash burger when the signature play arrives under cheddar. Smash Dunk&#x27;s Lay-Up layers chopped bacon under a pour of house cheddar sauce, with patties getting proper crust from the flat top. Dunk sauce works on everything, and picanha steak fries nod to the owners&#x27; Brazilian roots. The City Food Hall stall is the newest outpost of a brand that started on East Michigan Street, so the playbook already has proof. Choose Smash Dunk when you want crust, sauce, and onion hoops in Ivanhoe Village.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=Smash+Dunk+1412+Alden+Rd%2C+Orlando%2C+FL+32803" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=the-pinery">The Pinery</a></h3>
+          <p class="meta">American &middot; $$$</p>
+          <p class="addr">The Pinery, 295 NE Ivanhoe Blvd, Orlando, FL 32804-6434</p>
+          <p class="desc">Right on Lake Ivanhoe, The Pinery is Ivanhoe Village&#x27;s love letter to its own past, named for the pineapple farms that once grew where the condos stand. Owner Carol Holladay runs a warm, lake-view dining room built on Southern hospitality and chef-driven Florida cooking: smoked peanut soup, a bread board with pimento cheese, broiled blue crab dip, and shrimp and grits that taste like the season they were made in. The patio catches the water breeze, the cocktails lean tropical, and the whole room glows. Dinner with a view, done the Ivanhoe way.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=The+Pinery+The+Pinery%2C+295+NE+Ivanhoe+Blvd%2C+Orlando%2C+FL+32804-6434" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=white-wolf">White Wolf Cafe</a></h3>
+          <p class="meta">American &middot; $$</p>
+          <p class="addr">White Wolf Cafe, 1829 N Orange Ave, Orlando, FL 32804</p>
+          <p class="desc">This is Ivanhoe Village&#x27;s morning ritual. White Wolf does Southern comfort the way it should be done: the Crab Cakes Benedict that regulars dream about, French toast worth the trip alone, and a cinnamon bun famous across the neighborhood. Cheese grits, home fries, country fried chicken, the whole honest lineup. The room is art-filled and warm, the staff treats you like a neighbor, and brunch here feels like the day already started right.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=White+Wolf+Cafe+White+Wolf+Cafe%2C+1829+N+Orange+Ave%2C+Orlando%2C+FL+32804" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=yakuza-sushi">Yakuza Sushi</a></h3>
+          <p class="meta">Japanese &amp; sushi &middot; $$</p>
+          <p class="addr">1412 Alden Rd, Orlando, FL 32803</p>
+          <p class="desc">Japanese and Mexican flavors share the same roll here, and pretension stays off the menu. Yakuza Sushi, a counter with a food truck past in Ivanhoe Village, builds the Black Panther roll and dragon tempura rolls with bold sauces. Sushi push pops, sushi burritos and buildable poke bowls sit beside shrimp ceviche and tostones yaku, so a group with split cravings can still order together. Pick it for playful sushi, big rolls and a dinner that stays fun.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=Yakuza+Sushi+1412+Alden+Rd%2C+Orlando%2C+FL+32803" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        </div>
+      </section>
+
+      <section class="sec" id="districts">
+        <p class="kicker">Keep Going</p>
+        <h2>Every district has a finder page</h2>
+        <p class="lede">One page per district, generated from the same hand-verified dataset as the full guide.</p>
+        <nav class="strip" aria-label="District finder pages">
+          <a href="/winter-park-finder.html">Winter Park</a>
+          <a href="/disney-springs-finder.html">Disney Springs</a>
+          <a href="/milk-district-finder.html">Milk District</a>
+          <a href="/thornton-park-finder.html">Thornton Park</a>
+          <a href="/mills-50-finder.html">Mills 50</a>
+          <a href="/ivanhoe-village-finder.html" aria-current="page">Ivanhoe Village</a>
+          <a href="/downtown-orlando-finder.html">Downtown Orlando</a>
+          <a href="/international-drive-finder.html">International Drive</a>
+          <a href="/lake-nona-finder.html">Lake Nona</a>
+          <a href="/universal-finder.html">Universal</a>
+          <a href="/audubon-park-finder.html">Audubon Park</a>
+          <a href="/college-park-finder.html">College Park</a>
+          <a href="/more-orlando-finder.html">More Orlando</a>
+          <a href="/disney-area-finder.html">Disney Area</a>
+          <a href="/ucf-finder.html">UCF</a>
+          <a href="/kissimmee-finder.html">Kissimmee</a>
+          <a href="/baldwin-park-finder.html">Baldwin Park</a>
+          <a href="/winter-garden-finder.html">Winter Garden</a>
+          <a href="/sanford-finder.html">Sanford</a>
+          <a href="/maitland-finder.html">Maitland</a>
+          <a href="/oviedo-finder.html">Oviedo</a>
+          <a href="/hourglass-finder.html">Hourglass</a>
+          <a href="/sodo-finder.html">SoDo</a>
+        </nav>
+        <div class="handoff">
+          <a class="btn-big" href="/ivanhoe-village-district-guide.html">Read the Ivanhoe Village story</a>
+          <a class="btn-ghost" href="/archive.html?district=ivanhoe-village">Ivanhoe Village in the full finder</a>
+        </div>
+      </section>
+    </main>
+
+<footer>
+      <div class="foot-in">
+        <a class="back-link" href="/">&larr; Back to the full guide</a>
+        <p class="brand-line">407 FYI, an independent Orlando guide. Details can change; confirm before you go.</p>
+        <p>Hand-verified Orlando places · Checked October 2026 · Local Picks are never sponsored · Corrections: <a href="mailto:mail@407.fyi">mail@407.fyi</a></p>
+        <p>Some links on 407 FYI are affiliate links. They never affect which places we list, rank, or recommend.</p>
+      </div>
+    </footer>
+  </body>
+</html>

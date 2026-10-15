@@ -1,0 +1,520 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="color-scheme" content="light dark" />
+    <title>Disney Area Finder &middot; 407 FYI</title>
+    <meta name="description" content="The 407 FYI finder page for Disney Area: every hand-verified place in the district with full cards, addresses, descriptions and directions." />
+    <link rel="canonical" href="https://407.fyi/disney-area-finder.html" />
+    <meta property="og:title" content="Disney Area Finder &middot; 407 FYI" />
+    <meta property="og:description" content="The 407 FYI finder page for Disney Area: every hand-verified place in the district with full cards, addresses, descriptions and directions." />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://407.fyi/disney-area-finder.html" />
+    <meta property="og:image" content="https://407.fyi/og-image.png" />
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Urbanist:wght@600;700;800&amp;display=swap" rel="stylesheet" />
+<script>
+      try {
+        const savedTheme = localStorage.getItem('white-atlas-theme');
+        document.documentElement.dataset.theme = savedTheme === 'light' || savedTheme === 'dark' ? savedTheme : 'dark';
+      } catch (error) {
+        document.documentElement.dataset.theme = 'dark';
+      }
+    </script>
+    <style>
+      /* Night Drive tokens (from the district guides) */
+      :root {
+        color-scheme: dark;
+        --bg: #0a1811; --surface: #122419; --soft: #172a1f; --ink: #f0e8d5;
+        --muted: #c6bba2; --line: #2f4a38; --accent: #765b2f; --accent-ink: #d4b573;
+        --headline: #f6edd6; --focus: #d4b573;
+        --d-a: #14231a; --d-b: #3a5a35; --d-c: #bd9049;
+        --pad: clamp(20px, 5vw, 40px);
+      }
+      * { box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
+      body {
+        margin: 0; background: var(--bg); color: var(--ink);
+        font-family: "Manrope", system-ui, sans-serif; line-height: 1.6;
+        overflow-x: hidden;
+      }
+      h1, h2, h3, .display { font-family: "Urbanist", "Manrope", sans-serif; }
+      a { color: var(--accent-ink); }
+      a:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
+      .kicker {
+        font-family: "Urbanist", sans-serif; font-weight: 700; letter-spacing: .22em;
+        font-size: .72rem; text-transform: uppercase; color: var(--accent-ink); margin: 0 0 14px;
+      }
+
+      /* ---------- hero ---------- */
+      .hero {
+        position: relative; padding: clamp(64px, 13vh, 130px) var(--pad) clamp(48px, 9vh, 84px);
+        background: radial-gradient(ellipse 90% 55% at 50% 112%, rgba(189,144,73,.26), transparent 60%),
+          linear-gradient(168deg, #1d3325, #14231a 55%, #0a1811);
+        border-bottom: 1px solid var(--line);
+      }
+      .hero-in { max-width: 860px; margin: 0 auto; }
+      .crumbs { font-size: .8rem; color: var(--muted); margin: 0 0 26px; }
+      .crumbs a { font-weight: 700; }
+      .hero-brand {
+        font-family: "Urbanist", sans-serif; font-weight: 700; letter-spacing: .22em;
+        font-size: .72rem; text-transform: uppercase; color: var(--accent-ink); text-decoration: none;
+      }
+      .hero h1 {
+        font-size: clamp(2.6rem, 8.5vw, 5.2rem); line-height: .98; letter-spacing: .01em;
+        color: var(--headline); margin: 18px 0 16px; text-transform: uppercase;
+      }
+      .hero .sub { font-size: clamp(1.05rem, 2.6vw, 1.3rem); color: var(--ink); max-width: 620px; margin: 0 0 10px; }
+      .hero .fine { color: var(--muted); max-width: 620px; margin: 0; }
+      .anchor-nav { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 30px; }
+      .anchor-nav a {
+        border: 1px solid var(--line); border-radius: 999px; padding: 8px 14px;
+        font-size: .82rem; font-weight: 700; text-decoration: none; background: rgba(255,255,255,.03);
+        min-height: 42px; display: inline-flex; align-items: center;
+      }
+      .anchor-nav a:hover { border-color: var(--accent-ink); }
+
+      /* ---------- sections ---------- */
+      main { display: block; }
+      .sec { max-width: 860px; margin: 0 auto; padding: clamp(52px, 9vh, 88px) var(--pad) 0; }
+      .sec h2 { font-size: clamp(1.7rem, 4.6vw, 2.4rem); line-height: 1.12; color: var(--headline); margin: 0 0 16px; }
+      .sec .lede { color: var(--muted); font-size: 1.04rem; max-width: 640px; margin: 0 0 26px; }
+      .sec p { max-width: 68ch; }
+      .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 14px; margin: 22px 0 6px; }
+      .card {
+        background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 20px;
+      }
+      .card h3 { margin: 0 0 6px; font-size: 1.12rem; color: var(--headline); }
+      .card .addr { font-weight: 800; color: var(--accent-ink); margin: 0 0 10px; font-size: .98rem; }
+      .card p { margin: 0; color: var(--muted); font-size: .94rem; }
+      .cols { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 22px 0 6px; }
+      @media (max-width: 680px) { .cols { grid-template-columns: 1fr; } }
+      .panel { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 20px 22px; }
+      .panel h3 { margin: 0 0 12px; font-size: 1.05rem; color: var(--headline); }
+      .panel ul, .plain-list { margin: 0; padding-left: 18px; }
+      .panel li, .plain-list li { margin-bottom: 9px; }
+      .panel li:last-child, .plain-list li:last-child { margin-bottom: 0; }
+      .note {
+        border-left: 3px solid var(--accent-ink); background: var(--soft);
+        padding: 14px 18px; border-radius: 0 12px 12px 0; margin: 22px 0 6px; max-width: 68ch;
+      }
+      .note p { margin: 0; }
+      .venue-links { list-style: none; margin: 0; padding: 0; }
+      .venue-links li { margin-bottom: 10px; }
+      .venue-links a { font-weight: 800; text-underline-offset: 3px; }
+      .venue-links span { color: var(--muted); }
+
+      /* ---------- jobs ---------- */
+      .job-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 14px; margin-top: 22px; }
+      .job { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 20px 22px; }
+      .job h3 { margin: 0 0 6px; font-size: 1.08rem; color: var(--headline); }
+      .job p { margin: 0 0 12px; color: var(--muted); font-size: .94rem; }
+      .job ul { list-style: none; margin: 0 0 14px; padding: 0; }
+      .job li { margin-bottom: 7px; }
+      .job li a { font-weight: 800; text-underline-offset: 3px; }
+      .job .browse { font-size: .86rem; font-weight: 800; text-transform: uppercase; letter-spacing: .08em; }
+
+      /* ---------- what to avoid ---------- */
+      .avoid { border-top: 1px solid var(--line); padding: 24px 0 6px; }
+      .avoid h3 { margin: 0 0 10px; font-size: 1.18rem; color: var(--headline); }
+      .avoid p { margin: 0 0 8px; max-width: 68ch; }
+      .avoid strong { color: var(--accent-ink); }
+      .flags { display: flex; flex-wrap: wrap; gap: 8px; margin: 18px 0 6px; }
+      .flags span {
+        border: 1px solid var(--accent); border-radius: 999px; padding: 7px 13px;
+        font-size: .85rem; font-weight: 700; color: var(--accent-ink); background: rgba(255,255,255,.03);
+      }
+      .rules { margin: 16px 0 0; padding-left: 20px; max-width: 68ch; }
+      .rules li { margin-bottom: 10px; }
+
+      .handoff { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 30px; }
+      .btn-big {
+        display: inline-flex; align-items: center; min-height: 52px; padding: 12px 22px;
+        background: var(--accent); color: #fff; font-weight: 800; border-radius: 999px; text-decoration: none;
+      }
+      .btn-big:hover { background: var(--accent-ink); color: #1d2a20; }
+      .btn-ghost {
+        display: inline-flex; align-items: center; min-height: 52px; padding: 12px 22px;
+        border: 1px solid var(--line); color: var(--accent-ink); font-weight: 800; border-radius: 999px; text-decoration: none;
+      }
+
+      footer { border-top: 1px solid var(--line); margin-top: clamp(52px, 9vh, 88px); }
+      .foot-in { max-width: 860px; margin: 0 auto; padding: 34px var(--pad) 44px; color: var(--muted); font-size: .9rem; }
+      .foot-in p { margin: 0 0 9px; }
+      .back-link { font-weight: 800; display: inline-block; margin-bottom: 16px; }
+      .brand-line { color: var(--ink); font-weight: 700; }
+
+      /* ---------- Light theme: app-page tokens ---------- */
+      html[data-theme="light"] {
+        color-scheme: light;
+        --bg: #faf6ec; --surface: #fffdf7; --soft: #f3ecd7; --ink: #1d2a20;
+        --muted: #4c5a45; --line: #ddd3ba; --accent: #8a5f0e; --accent-ink: #7c520c;
+        --headline: #123524; --focus: #8a5f0e;
+      }
+      html[data-theme="light"] .hero {
+        background: radial-gradient(ellipse 90% 55% at 50% 112%, rgba(163,129,63,.30), transparent 60%),
+          linear-gradient(168deg, color-mix(in srgb, var(--d-a) 24%, #faf6ec), color-mix(in srgb, var(--d-a) 40%, #faf6ec) 55%, color-mix(in srgb, var(--d-a) 14%, #faf6ec));
+      }
+      html[data-theme="light"] .anchor-nav a, html[data-theme="light"] .flags span { background: rgba(29,42,32,.04); }
+      html[data-theme="light"] .btn-big { background: var(--accent); color: #fff; }
+      html[data-theme="light"] .btn-big:hover { background: var(--accent-ink); color: #fff; }
+
+      @media print { .anchor-nav { display: none; } }
+      @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+    
+      /* ---------- finder pages (Seam 2 additions) ---------- */
+      .count {
+        font-family: "Urbanist", sans-serif; font-weight: 700; letter-spacing: .14em;
+        font-size: .8rem; text-transform: uppercase; color: var(--accent-ink); margin: 0;
+      }
+      .vlist { display: grid; gap: 14px; margin-top: 22px; }
+      .vcard {
+        background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 20px 22px;
+      }
+      .vcard h3 { margin: 0 0 4px; font-size: 1.15rem; color: var(--headline); }
+      .vcard h3 a { color: var(--headline); text-decoration: none; }
+      .vcard h3 a:hover { color: var(--accent-ink); text-decoration: underline; text-underline-offset: 3px; }
+      .badge {
+        display: inline-block; vertical-align: middle; margin-left: 8px;
+        border: 1px solid var(--accent); border-radius: 999px; padding: 2px 9px;
+        font-family: "Manrope", sans-serif; font-size: .68rem; font-weight: 800;
+        letter-spacing: .08em; text-transform: uppercase; color: var(--accent-ink);
+        background: rgba(255,255,255,.03); white-space: nowrap;
+      }
+      .vcard .meta { margin: 0 0 2px; font-weight: 800; color: var(--accent-ink); font-size: .92rem; }
+      .vcard .addr { margin: 0 0 8px; color: var(--muted); font-size: .9rem; }
+      .vcard .desc { margin: 0 0 10px; max-width: 68ch; }
+      .vcard .dirs { margin: 0; font-size: .88rem; font-weight: 800; }
+      .strip { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 22px; }
+      .strip a {
+        border: 1px solid var(--line); border-radius: 999px; padding: 8px 14px;
+        font-size: .82rem; font-weight: 700; text-decoration: none; background: rgba(255,255,255,.03);
+        min-height: 42px; display: inline-flex; align-items: center;
+      }
+      .strip a:hover { border-color: var(--accent-ink); }
+      .strip a[aria-current="page"] { border-color: var(--accent-ink); color: var(--headline); }
+      html[data-theme="light"] .badge, html[data-theme="light"] .strip a { background: rgba(29,42,32,.04); }
+    </style>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"ItemList","name":"407 FYI places: Disney Area","numberOfItems":35,"itemListElement":[{"@type":"ListItem","position":1,"item":{"@type":"LocalBusiness","name":"Amare","address":{"@type":"PostalAddress","streetAddress":"Amare, 1255 Epcot Resorts Blvd","addressLocality":"Lake Buena Vista","addressRegion":"FL","postalCode":"32830","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":28.368,"longitude":-81.54},"priceRange":"$$$","category":"Mediterranean","url":"https://407.fyi/archive.html?venue=amare"}},{"@type":"ListItem","position":2,"item":{"@type":"LocalBusiness","name":"Capa","address":{"@type":"PostalAddress","streetAddress":"10100 Dream Tree Blvd","addressLocality":"Orlando","addressRegion":"FL","postalCode":"32836","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":28.384,"longitude":-81.527},"priceRange":"$$$$","category":"Fine dining & steak","url":"https://407.fyi/archive.html?venue=capa"}},{"@type":"ListItem","position":3,"item":{"@type":"LocalBusiness","name":"Chef Mickey's","address":{"@type":"PostalAddress","streetAddress":"Chef Mickey's, 4600 N World Dr, Lake Buena Vista, FL 32830-8413","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":28.416,"longitude":-81.581},"priceRange":"$$$","category":"American","url":"https://407.fyi/archive.html?venue=chef-mickeys"}},{"@type":"ListItem","position":4,"item":{"@type":"LocalBusiness","name":"EPCOT","address":{"@type":"PostalAddress","streetAddress":"200 Epcot Center Dr","addressLocality":"Lake Buena Vista","addressRegion":"FL","postalCode":"32830","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":28.375,"longitude":-81.549},"priceRange":"$$$$","category":"Parks & outdoors","url":"https://407.fyi/archive.html?venue=epcot"}},{"@type":"ListItem","position":5,"item":{"@type":"LocalBusiness","name":"Flatlands Bar & Grill","address":{"@type":"PostalAddress","streetAddress":"124 Ruby Red Place","addressLocality":"Winter Garden","addressRegion":"FL","postalCode":"34787","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":28.38054,"longitude":-81.61868},"priceRange":"$$","category":"American","url":"https://407.fyi/archive.html?venue=flatlands"}},{"@type":"ListItem","position":6,"item":{"@type":"LocalBusiness","name":"Four Flamingos","address":{"@type":"PostalAddress","streetAddress":"Four Flamingos, 1 Grand Cypress Blvd","addressLocality":"Orlando","addressRegion":"FL","postalCode":"32836","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":28.38,"longitude":-81.51},"priceRange":"$$$","category":"Fine dining & steak","url":"https://407.fyi/archive.html?venue=four-flamingos"}},{"@type":"ListItem","position":7,"item":{"@type":"LocalBusiness","name":"Kung Fu Kitchen","address":{"@type":"PostalAddress","streetAddress":"Kungfu Kitchen, 8466 Palm Pkwy, Orlando, FL 32836-6431","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":28.39,"longitude":-81.5},"priceRange":"$$","category":"Chinese","url":"https://407.fyi/archive.html?venue=kung-fu"}},{"@type":"ListItem","position":8,"item":{"@type":"LocalBusiness","name":"Magic Kingdom Park","address":{"@type":"PostalAddress","streetAddress":"Disney's Magic Kingdom, 1180 Seven Seas Dr","addressLocality":"Lake Buena Vista","addressRegion":"FL","postalCode":"32830","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":28.418,"longitude":-81.581},"priceRange":"$$$$","category":"Parks & outdoors","url":"https://407.fyi/archive.html?venue=magic-kingdom"}},{"@type":"ListItem","position":9,"item":{"@type":"LocalBusiness","name":"Oga's Cantina","address":{"@type":"PostalAddress","streetAddress":"Disney's Hollywood Studios, 351 S Studio Dr","addressLocality":"Lake Buena Vista","addressRegion":"FL","postalCode":"32830","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":28.355,"longitude":-81.56},"priceRange":"$$","category":"Bars & lounges","url":"https://407.fyi/archive.html?venue=ogas"}},{"@type":"ListItem","position":10,"item":{"@type":"LocalBusiness","name":"Ravello","address":{"@type":"PostalAddress","streetAddress":"10100 Dream Tree Blvd","addressLocality":"Orlando","addressRegion":"FL","postalCode":"32836","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":28.384,"longitude":-81.527},"priceRange":"$$$","category":"Italian","url":"https://407.fyi/archive.html?venue=ravello"}},{"@type":"ListItem","position":11,"item":{"@type":"LocalBusiness","name":"Victoria & Albert's","address":{"@type":"PostalAddress","streetAddress":"Victoria & Albert's, 4401 Floridian Way","addressLocality":"Lake Buena Vista","addressRegion":"FL","postalCode":"32830","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":28.411,"longitude":-81.587},"priceRange":"$$$$","category":"American","url":"https://407.fyi/archive.html?venue=victoria-alberts"}},{"@type":"ListItem","position":12,"item":{"@type":"LocalBusiness","name":"Woody's Lunch Box","address":{"@type":"PostalAddress","streetAddress":"Woody's Lunch Box, 351 S Studio Dr","addressLocality":"Lake Buena Vista","addressRegion":"FL","postalCode":"32830","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":28.357,"longitude":-81.558},"priceRange":"$","category":"American","url":"https://407.fyi/archive.html?venue=woodys"}},{"@type":"ListItem","position":13,"item":{"@type":"LocalBusiness","name":"Sushi Izuki","address":{"@type":"PostalAddress","streetAddress":"8685 Fenton St #150","addressLocality":"Orlando","addressRegion":"FL","postalCode":"32836","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":28.40625,"longitude":-81.50251},"priceRange":"$$$","category":"Japanese & sushi","url":"https://407.fyi/archive.html?venue=sushi-izuki"}},{"@type":"ListItem","position":14,"item":{"@type":"LocalBusiness","name":"Evermore Orlando Resort","address":{"@type":"PostalAddress","streetAddress":"1590 Evermore Way","addressLocality":"Orlando","addressRegion":"FL","postalCode":"32836","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":28.405943,"longitude":-81.528374},"priceRange":"$$$","category":"Hotels","url":"https://407.fyi/archive.html?venue=evermore-orlando-resort"}},{"@type":"ListItem","position":15,"item":{"@type":"LocalBusiness","name":"Fogo de Chão, Vineland Pointe","address":{"@type":"PostalAddress","streetAddress":"11543 Regency Village Dr","addressLocality":"Orlando","addressRegion":"FL","postalCode":"32821","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":28.394207,"longitude":-81.484804},"priceRange":"$$$","category":"Fine dining & steak","url":"https://407.fyi/archive.html?venue=fogo-orlando-vineland"}},{"@type":"ListItem","position":16,"item":{"@type":"LocalBusiness","name":"Orlando Vineland Premium Outlets","address":{"@type":"PostalAddress","streetAddress":"8200 Vineland Ave","addressLocality":"Orlando","addressRegion":"FL","postalCode":"32821","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":28.387177,"longitude":-81.49237},"priceRange":"$$","category":"Markets & shops","url":"https://407.fyi/archive.html?venue=orlando-vineland-premium-outlets"}},{"@type":"ListItem","position":17,"item":{"@type":"LocalBusiness","name":"Simply Capri","address":{"@type":"PostalAddress","streetAddress":"114 Ruby Red Place","addressLocality":"Winter Garden","addressRegion":"FL","postalCode":"34787","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":28.37937,"longitude":-81.61795},"priceRange":"$$$","category":"Italian","url":"https://407.fyi/archive.html?venue=simply-capri"}},{"@type":"ListItem","position":18,"item":{"@type":"LocalBusiness","name":"Portillo's","address":{"@type":"PostalAddress","streetAddress":"7715 Palm Pkwy","addressLocality":"Orlando","addressRegion":"FL","postalCode":"32836","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":28.39979,"longitude":-81.4887},"priceRange":"$","category":"Burgers & sandwiches","url":"https://407.fyi/archive.html?venue=portillo-s"}},{"@type":"ListItem","position":19,"item":{"@type":"LocalBusiness","name":"Stadium Club","address":{"@type":"PostalAddress","streetAddress":"8101 World Center Dr","addressLocality":"Orlando","addressRegion":"FL","postalCode":"32821","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":28.35838,"longitude":-81.49305},"priceRange":"$$","category":"Bars & lounges","url":"https://407.fyi/archive.html?venue=stadium-club"}},{"@type":"ListItem","position":20,"item":{"@type":"LocalBusiness","name":"Duffy's Sports Grill","address":{"@type":"PostalAddress","streetAddress":"Duffy's Sports Grill, 951 Market Promenade Ave","addressLocality":"Lake Mary","addressRegion":"FL","postalCode":"32746","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":28.78875,"longitude":-81.35699},"priceRange":"$","category":"American","url":"https://407.fyi/archive.html?venue=duffy-s-sports-grill"}},{"@type":"ListItem","position":21,"item":{"@type":"LocalBusiness","name":"Le Macaron Celebration","address":{"@type":"PostalAddress","streetAddress":"671 Front St #110","addressLocality":"Celebration","addressRegion":"FL","postalCode":"34747","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":28.31804,"longitude":-81.53994},"priceRange":"$$","category":"Bakeries","url":"https://407.fyi/archive.html?venue=le-macaron-celebration"}},{"@type":"ListItem","position":22,"item":{"@type":"LocalBusiness","name":"Vivoli Il Gelato","address":{"@type":"PostalAddress","streetAddress":"Vivoli Il Gelato, 1638 E Buena Vista Dr, Lake Buena Vista, FL 32830, United States","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":28.3722,"longitude":-81.51491},"priceRange":"$$","category":"Sweets","url":"https://407.fyi/archive.html?venue=vivoli-il-gelato"}},{"@type":"ListItem","position":23,"item":{"@type":"LocalBusiness","name":"Disney Starlight: Dream the Night Away","address":{"@type":"PostalAddress","streetAddress":"Magic Kingdom Park, 1180 Seven Seas Dr","addressLocality":"Lake Buena Vista","addressRegion":"FL","postalCode":"32830","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":28.4194,"longitude":-81.5812},"priceRange":"$$$$","category":"Attractions","url":"https://407.fyi/archive.html?venue=disney-starlight-parade"}},{"@type":"ListItem","position":24,"item":{"@type":"LocalBusiness","name":"Test Track 3.0","address":{"@type":"PostalAddress","streetAddress":"EPCOT, 200 Epcot Center Dr","addressLocality":"Lake Buena Vista","addressRegion":"FL","postalCode":"32830","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":28.3747,"longitude":-81.5494},"priceRange":"$$$$","category":"Attractions","url":"https://407.fyi/archive.html?venue=test-track-3-0"}},{"@type":"ListItem","position":25,"item":{"@type":"LocalBusiness","name":"GEO-82","address":{"@type":"PostalAddress","streetAddress":"EPCOT, 200 Epcot Center Dr","addressLocality":"Lake Buena Vista","addressRegion":"FL","postalCode":"32830","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":28.3747,"longitude":-81.5494},"priceRange":"$$$","category":"Bars & lounges","url":"https://407.fyi/archive.html?venue=geo-82-epcot"}},{"@type":"ListItem","position":26,"item":{"@type":"LocalBusiness","name":"The Beak and Barrel","address":{"@type":"PostalAddress","streetAddress":"Magic Kingdom Park, 1180 Seven Seas Dr","addressLocality":"Lake Buena Vista","addressRegion":"FL","postalCode":"32830","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":28.4194,"longitude":-81.5812},"priceRange":"$$$$","category":"Bars & lounges","url":"https://407.fyi/archive.html?venue=beak-and-barrel"}},{"@type":"ListItem","position":27,"item":{"@type":"LocalBusiness","name":"Zootopia: Better Zoogether!","address":{"@type":"PostalAddress","streetAddress":"Disney's Animal Kingdom, 2901 Osceola Pkwy","addressLocality":"Lake Buena Vista","addressRegion":"FL","postalCode":"32830","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":28.3554,"longitude":-81.5903},"priceRange":"$$$$","category":"Attractions","url":"https://407.fyi/archive.html?venue=zootopia-better-zoogether"}},{"@type":"ListItem","position":28,"item":{"@type":"LocalBusiness","name":"Disney Villains: Unfairly Ever After","address":{"@type":"PostalAddress","streetAddress":"Disney's Hollywood Studios, 351 S Studio Dr","addressLocality":"Lake Buena Vista","addressRegion":"FL","postalCode":"32830","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":28.3575,"longitude":-81.5583},"priceRange":"$$$$","category":"Attractions","url":"https://407.fyi/archive.html?venue=disney-villains-unfairly-ever-after"}},{"@type":"ListItem","position":29,"item":{"@type":"LocalBusiness","name":"The Little Mermaid: A Musical Adventure","address":{"@type":"PostalAddress","streetAddress":"Disney's Hollywood Studios, 351 S Studio Dr","addressLocality":"Lake Buena Vista","addressRegion":"FL","postalCode":"32830","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":28.3575,"longitude":-81.5583},"priceRange":"$$$$","category":"Attractions","url":"https://407.fyi/archive.html?venue=little-mermaid-musical-adventure"}},{"@type":"ListItem","position":30,"item":{"@type":"LocalBusiness","name":"Soarin' Across America","address":{"@type":"PostalAddress","streetAddress":"EPCOT, 200 Epcot Center Dr","addressLocality":"Lake Buena Vista","addressRegion":"FL","postalCode":"32830","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":28.3747,"longitude":-81.5494},"priceRange":"$$$$","category":"Attractions","url":"https://407.fyi/archive.html?venue=soarin-across-america"}},{"@type":"ListItem","position":31,"item":{"@type":"LocalBusiness","name":"Rock 'n' Roller Coaster Starring the Muppets","address":{"@type":"PostalAddress","streetAddress":"Disney's Hollywood Studios, 351 S Studio Dr","addressLocality":"Lake Buena Vista","addressRegion":"FL","postalCode":"32830","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":28.3575,"longitude":-81.5583},"priceRange":"$$$$","category":"Attractions","url":"https://407.fyi/archive.html?venue=rock-n-roller-coaster-muppets"}},{"@type":"ListItem","position":32,"item":{"@type":"LocalBusiness","name":"Big Thunder Mountain Railroad","address":{"@type":"PostalAddress","streetAddress":"Magic Kingdom Park, 1180 Seven Seas Dr","addressLocality":"Lake Buena Vista","addressRegion":"FL","postalCode":"32830","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":28.4194,"longitude":-81.5812},"priceRange":"$$$$","category":"Attractions","url":"https://407.fyi/archive.html?venue=big-thunder-mountain-railroad"}},{"@type":"ListItem","position":33,"item":{"@type":"LocalBusiness","name":"Amazonica","address":{"@type":"PostalAddress","streetAddress":"8200 Vineland Ave","addressLocality":"Orlando","addressRegion":"FL","postalCode":"32821","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":28.38711,"longitude":-81.49278},"priceRange":"$$","category":"Sweets","url":"https://407.fyi/archive.html?venue=amazonica-vineland-outlets"}},{"@type":"ListItem","position":34,"item":{"@type":"LocalBusiness","name":"Ford's Garage","address":{"@type":"PostalAddress","streetAddress":"8201 Vineland Ave Ste 1801","addressLocality":"Orlando","addressRegion":"FL","postalCode":"32821","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":28.38976,"longitude":-81.49039},"priceRange":"$$","category":"Burgers & sandwiches","url":"https://407.fyi/archive.html?venue=ford-s-garage-vineland-outlets"}},{"@type":"ListItem","position":35,"item":{"@type":"LocalBusiness","name":"Lake Buena Vista Factory Stores","address":{"@type":"PostalAddress","streetAddress":"15657 S Apopka Vineland Rd","addressLocality":"Orlando","addressRegion":"FL","postalCode":"32821","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":28.35067,"longitude":-81.48765},"priceRange":"$$","category":"Markets & shops","url":"https://407.fyi/archive.html?venue=lake-buena-vista-factory-stores"}}]}</script>
+  </head>
+  <body>
+    <header class="hero">
+      <div class="hero-in">
+        <p class="crumbs"><a href="/">407 FYI</a> &middot; District Finder</p>
+        <a class="hero-brand" href="/">407 FYI &middot; A District Finder</a>
+        <h1>Disney Area</h1>
+        <p class="sub">Lake Buena Vista and the resort blocks around Walt Disney World, beyond the Disney Springs gates.</p>
+        <p class="count">35 hand-verified places</p>
+        <nav class="anchor-nav" aria-label="On this page">
+          <a href="#places">The places</a>
+          <a href="#districts">All districts</a>
+          <a href="/archive.html?district=disney-area">Open in the full finder</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="sec" id="places">
+        <p class="kicker">The Full List</p>
+        <h2>Every place in Disney Area</h2>
+        <p class="lede">Full cards for the whole district, Local Picks first, then A to Z. Every name opens its listing in the full finder, where the map, filters and export live.</p>
+        <div class="vlist">
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=fogo-orlando-vineland">Fogo de Chão, Vineland Pointe</a> <span class="badge">Local Pick</span></h3>
+          <p class="meta">Fine dining &amp; steak &middot; $$$</p>
+          <p class="addr">11543 Regency Village Dr, Orlando, FL 32821</p>
+          <p class="desc">Fogo de Chão doesn&#x27;t do dinner, it stages it. The gaucho chefs arrive at your table with fire-roasted cuts, Picanha with its ember-kissed crust, Fraldinha dripping juice, Filet Mignon that yields without a fight, carving right there in front of you, one slice at a time. The Market Table is a spread of seasonal salads, exotic fruits, and cheese with honey that regulars plan around. Founded in Southern Brazil and built on the centuries-old art of churrasco, this is the kind of meal that makes an ordinary evening feel like an occasion. The Vineland Pointe patio is your calmest seat.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=Fogo+de+Ch%C3%A3o%2C+Vineland+Pointe+11543+Regency+Village+Dr%2C+Orlando%2C+FL+32821" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=evermore-orlando-resort">Evermore Orlando Resort</a> <span class="badge">Local Pick</span></h3>
+          <p class="meta">Hotels &middot; $$$</p>
+          <p class="addr">1590 Evermore Way, Orlando, FL 32836</p>
+          <p class="desc">There is a beach in Orlando, and it has eight acres of crystal-clear water surrounded by twenty acres of white sand. Evermore Bay is the centerpiece of this reimagined Grand Cypress resort, where you can rent houses and flats big enough for the whole family tree, or check into the AAA Five Diamond Conrad Orlando. Golfers get two Jack Nicklaus courses, sunset cruises glide out on classic Chris-Craft boats, and thirteen dining venues keep everyone fed. Landlocked Florida, meeting the Caribbean, right outside Disney&#x27;s gates.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=Evermore+Orlando+Resort+1590+Evermore+Way%2C+Orlando%2C+FL+32836" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=orlando-vineland-premium-outlets">Orlando Vineland Premium Outlets</a> <span class="badge">Local Pick</span></h3>
+          <p class="meta">Markets &amp; shops &middot; $$</p>
+          <p class="addr">8200 Vineland Ave, Orlando, FL 32821</p>
+          <p class="desc">Minutes from Disney, Vineland is a luxury outlet run lined for a serious shopping day. Prada, Bottega Veneta, Burberry, Jimmy Choo, kate spade, Tory Burch and Ferragamo line the walkways beside big name sportswear and denim staples. Pace yourself, use the food hall between rounds and ask store staff questions, since they know the inventory closely. Shoppers plan whole trips around this stop, and the brand list explains why. You came to find the thing, so give the search real time.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=Orlando+Vineland+Premium+Outlets+8200+Vineland+Ave%2C+Orlando%2C+FL+32821" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=amare">Amare</a></h3>
+          <p class="meta">Mediterranean &middot; $$$</p>
+          <p class="addr">Amare, 1255 Epcot Resorts Blvd, Lake Buena Vista, FL 32830</p>
+          <p class="desc">The Disney bubble dissolves at Amare into something calmer, older and built around the Mediterranean. Chef Scott West treats the region as a journey rather than a theme, moving from grilled coastal fish to slow, earthy braises. Each plate has a pour to match from a wine list built entirely around the region, and curated flights shortcut a tasting of Greece, Italy and Spain in one sitting. Ask about them. The rare resort restaurant here earns the trip on its own merits.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=Amare+Amare%2C+1255+Epcot+Resorts+Blvd%2C+Lake+Buena+Vista%2C+FL+32830" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=amazonica-vineland-outlets">Amazonica</a></h3>
+          <p class="meta">Sweets &middot; $$</p>
+          <p class="addr">8200 Vineland Ave, Orlando, FL 32821</p>
+          <p class="desc">A smart mid shopping stop sits in front of Columbia, next to Lululemon, at Vineland Premium Outlets. Amazonica&#x27;s kiosk serves the same Colombian menu as the Florida Mall location: obleas, acai bowls, empanadas, cafe drinks, and fruit smoothies, all made fresh. A cholado or acai bowl gives you fruit, sweetness, and enough lift to keep browsing without dragging by the later stores. The format stays quick, bright, and built for a pause between shops. Choose it when outlet shopping needs a fresh break rather than another heavy food court plate.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=Amazonica+8200+Vineland+Ave%2C+Orlando%2C+FL+32821" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=big-thunder-mountain-railroad">Big Thunder Mountain Railroad</a></h3>
+          <p class="meta">Attractions &middot; $$$$</p>
+          <p class="addr">Magic Kingdom Park, 1180 Seven Seas Dr, Lake Buena Vista, FL 32830</p>
+          <p class="desc">The wildest ride in the wilderness is running again. Big Thunder Mountain reopened in May 2026 after a full refurbishment, and the project replaced the track, added a new Rainbow Caverns scene, and refreshed the animatronics throughout the mining town. It remains the perfect first big coaster for kids graduating from the Barnstormer, all speed and scenery without a punishing drop. The refurbished version rewards a re ride even if you have done it a hundred times, so budget time for a second lap.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=Big+Thunder+Mountain+Railroad+Magic+Kingdom+Park%2C+1180+Seven+Seas+Dr%2C+Lake+Buena+Vista%2C+FL+32830" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=capa">Capa</a></h3>
+          <p class="meta">Fine dining &amp; steak &middot; $$$$</p>
+          <p class="addr">10100 Dream Tree Blvd, Orlando, FL 32836</p>
+          <p class="desc">Seventeen floors up inside the Four Seasons, Capa makes a case that the great steakhouse tradition belongs to Spain too. Chefs Fabrizio Schenardi and Chris Edwards cook over a wood-burning grill in an open kitchen, sending out Wagyu from Florida&#x27;s own Clear Creek Farm alongside tapas that show off: fried cauliflower with capers and a fried egg, pork cheeks with Marcona almonds. Start with cocktails on the rooftop terrace, where the view stretches over golf greens and wetlands to the nightly Disney fireworks. Dark wood, black and crimson, candlelight, the whole romantic apparatus, earned.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=Capa+10100+Dream+Tree+Blvd%2C+Orlando%2C+FL+32836" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=chef-mickeys">Chef Mickey&#x27;s</a></h3>
+          <p class="meta">American &middot; $$$</p>
+          <p class="addr">Chef Mickey&#x27;s, 4600 N World Dr, Lake Buena Vista, FL 32830-8413</p>
+          <p class="desc">Some Disney memories are manufactured, but the joy in this room is real. Chef Mickey&#x27;s sits on the Contemporary Resort&#x27;s grand concourse, monorail gliding right through the building, and every meal is a celebration: Mickey, Minnie, Goofy, Pluto and Donald working the tables while the whole room twirls napkins overhead to music. The buffet does the heavy lifting, breakfast spreads and dinner carving stations built for refills and second plates. For a kid meeting Mickey Mouse up close, there is no substitute. Book early, the world knows about this one.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=Chef+Mickey%27s+Chef+Mickey%27s%2C+4600+N+World+Dr%2C+Lake+Buena+Vista%2C+FL+32830-8413" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=disney-starlight-parade">Disney Starlight: Dream the Night Away</a></h3>
+          <p class="meta">Attractions &middot; $$$$</p>
+          <p class="addr">Magic Kingdom Park, 1180 Seven Seas Dr, Lake Buena Vista, FL 32830</p>
+          <p class="desc">Magic Kingdom has a new way to end the night. Disney Starlight, which debuted in July 2025, is described as the park&#x27;s first new daily nighttime parade since 2016, and it was built for the drone and projection era. The floats blend classic characters with newer favorites, the soundtrack is engineered to stick in your head for days, and the route down Main Street USA delivers the moment the castle lights up behind the final float. Stake out a spot early, because everyone else has the same idea.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=Disney+Starlight%3A+Dream+the+Night+Away+Magic+Kingdom+Park%2C+1180+Seven+Seas+Dr%2C+Lake+Buena+Vista%2C+FL+32830" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=disney-villains-unfairly-ever-after">Disney Villains: Unfairly Ever After</a></h3>
+          <p class="meta">Attractions &middot; $$$$</p>
+          <p class="addr">Disney&#x27;s Hollywood Studios, 351 S Studio Dr, Lake Buena Vista, FL 32830</p>
+          <p class="desc">The villains finally get their own stage, and the show commits to the bit. Unfairly Ever After, which debuted in May 2025 at Hollywood Studios, leans into the villains&#x27; grievances with Broadway scale staging, and the audience is encouraged to pick sides. It is a strong new stage show at the Studios, and the indoor theater makes it a strategic midday break from the Florida sun. Bring the family, pick a villain to root for, and enjoy a production that knows exactly whose side the crowd secretly takes.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=Disney+Villains%3A+Unfairly+Ever+After+Disney%27s+Hollywood+Studios%2C+351+S+Studio+Dr%2C+Lake+Buena+Vista%2C+FL+32830" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=duffy-s-sports-grill">Duffy&#x27;s Sports Grill</a></h3>
+          <p class="meta">American &middot; $</p>
+          <p class="addr">Duffy&#x27;s Sports Grill, 951 Market Promenade Ave, Lake Mary, FL 32746</p>
+          <p class="desc">Screens everywhere and the game always on: Duffy&#x27;s knows its assignment in Lake Mary. The Florida sports bar chain built its name on taking game day seriously, and this location adds a big, busy patio that stays active through the season. The Major League Burger and jumbo wings headline a kitchen that treats game day food with real care. Bring the crew, find your screen early, and settle in for the kind of loud, happy room where nobody watches a big play alone.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=Duffy%27s+Sports+Grill+Duffy%27s+Sports+Grill%2C+951+Market+Promenade+Ave%2C+Lake+Mary%2C+FL+32746" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=epcot">EPCOT</a></h3>
+          <p class="meta">Parks &amp; outdoors &middot; $$$$</p>
+          <p class="addr">200 Epcot Center Dr, Lake Buena Vista, FL 32830</p>
+          <p class="desc">Walt&#x27;s grandest what-if still stands at Disney. EPCOT opened in 1982 as the Experimental Prototype Community of Tomorrow, his World&#x27;s Fair dream of a city of the future, and four neighborhoods carry that ambition now: celebration, discovery, nature and the World Showcase, where eleven countries ring a lagoon. Come during a festival, Flower and Garden in spring or Food and Wine in fall, when the park becomes one long global tasting menu, and stay for the nighttime spectacular over the water. It is Disney&#x27;s most curiosity-driven park.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=EPCOT+200+Epcot+Center+Dr%2C+Lake+Buena+Vista%2C+FL+32830" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=flatlands">Flatlands Bar &amp; Grill</a></h3>
+          <p class="meta">American &middot; $$</p>
+          <p class="addr">124 Ruby Red Place, Winter Garden, FL 34787</p>
+          <p class="desc">Brand new at Flamingo Crossings, and already worth leaving the Disney bubble for. From restaurateur Nick Valenti with executive chef Dominique Filoni, formerly of Disney&#x27;s Cítricos and Topolino&#x27;s Terrace, Flatlands is built around Central Florida&#x27;s 1920s citrus boom: the building looks like a vintage packing facility, and the cooking follows the Italian-immigrant principles behind it, great ingredients, simple preparations, zero compromise. The Maine lobster rolls are the breakout star, the cookie skillet finishes strong, and the Orange Blossom Collins drinks like Florida itself. Disney-adjacent dining, all grown up.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=Flatlands+Bar+%26+Grill+124+Ruby+Red+Place%2C+Winter+Garden%2C+FL+34787" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=ford-s-garage-vineland-outlets">Ford&#x27;s Garage</a></h3>
+          <p class="meta">Burgers &amp; sandwiches &middot; $$</p>
+          <p class="addr">8201 Vineland Ave Ste 1801, Orlando, FL 32821</p>
+          <p class="desc">The sit-down escape at Orlando Vineland Premium Outlets: burgers, comfort food, and a full bar in a vintage garage setting, at the center that otherwise leans on its food court. Ford&#x27;s Garage gives Disney-side shoppers a table, a server, and a reset between stores. Families and groups use it the way it was built, as the meal that makes the second round of shopping possible.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=Ford%27s+Garage+8201+Vineland+Ave+Ste+1801%2C+Orlando%2C+FL+32821" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=four-flamingos">Four Flamingos</a></h3>
+          <p class="meta">Fine dining &amp; steak &middot; $$$</p>
+          <p class="addr">Four Flamingos, 1 Grand Cypress Blvd, Orlando, FL 32836</p>
+          <p class="desc">Chef Richard Blais brought his first Florida kitchen to the Hyatt Regency Grand Cypress, playful from the start. Four Flamingos pairs an open kitchen, a raw bar, and a live lobster tank with a dining room the record calls a tropical oasis. The menu chases Florida&#x27;s bounty: Tuna Tostada crowned with a passion fruit yolk, bone-in swordfish prime rib, and coconut and mango running through dishes. Order the Key Lime in the Coconut cocktail. Stay for laid-back energy when a Disney-area dinner should linger rather than rush.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=Four+Flamingos+Four+Flamingos%2C+1+Grand+Cypress+Blvd%2C+Orlando%2C+FL+32836" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=geo-82-epcot">GEO-82</a></h3>
+          <p class="meta">Bars &amp; lounges &middot; $$$</p>
+          <p class="addr">EPCOT, 200 Epcot Center Dr, Lake Buena Vista, FL 32830</p>
+          <p class="desc">Cocktails inside Spaceship Earth, with no kids anywhere in the room. GEO-82 opened in June 2025 as EPCOT&#x27;s first adults only lounge, serving drinks inside the park&#x27;s icon in a mid century space age setting. The program leans classic, with a few geodesic themed signatures, and the 21 and over policy keeps the room calm even on busy festival days. Reservations open ahead of time and go fast. Treat it as the EPCOT date night move when you want atmosphere as much as a drink.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=GEO-82+EPCOT%2C+200+Epcot+Center+Dr%2C+Lake+Buena+Vista%2C+FL+32830" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=kung-fu">Kung Fu Kitchen</a></h3>
+          <p class="meta">Chinese &middot; $$</p>
+          <p class="addr">Kungfu Kitchen, 8466 Palm Pkwy, Orlando, FL 32836-6431</p>
+          <p class="desc">Soup dumpling obsession starts with noodles and bao made the hard way. Kung Fu Kitchen, a Flushing, New York export, built its Orlando following on hand pulled ramen and knife cut noodles that land springy and fresh in soup or stir fried. Xiao long bao arrive delicate and soup filled with pork, chicken, or crab, and pan fried Shanghai pork buns quiet the table. Chocolate xiao long bao tastes like cake batter in dumpling form. Choose the red walled, booth lined room when a noodle run deserves planning across town.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=Kung+Fu+Kitchen+Kungfu+Kitchen%2C+8466+Palm+Pkwy%2C+Orlando%2C+FL+32836-6431" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=lake-buena-vista-factory-stores">Lake Buena Vista Factory Stores</a></h3>
+          <p class="meta">Markets &amp; shops &middot; $$</p>
+          <p class="addr">15657 S Apopka Vineland Rd, Orlando, FL 32821</p>
+          <p class="desc">The low-stress outlet trip. Lake Buena Vista Factory Stores keeps its center compact, roughly fifty stores in the Nike, Gap, and Tommy Hilfiger tier, with easy surface parking and a Disney-adjacent address on SR 535. It is smaller than the Simon giants and honest about it: no luxury wing, no parking garage battle. For families staying near Disney who want an outlet run without the production, this is the right size.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=Lake+Buena+Vista+Factory+Stores+15657+S+Apopka+Vineland+Rd%2C+Orlando%2C+FL+32821" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=le-macaron-celebration">Le Macaron Celebration</a></h3>
+          <p class="meta">Bakeries &middot; $$</p>
+          <p class="addr">671 Front St #110, Celebration, FL 34747</p>
+          <p class="desc">A small piece of Paris sits on the lakeside promenade in Celebration. Le Macaron lines its case with French macarons in more than twenty flavors, including salted caramel, pistachio, rose, Colombian coffee, and birthday cake, each crisp shelled and chewy at the center. Beyond macarons, you find buttery croissants, eclairs, beignets, house made gelato, and a proper espresso menu. Pause here when a Celebration stroll needs a sweet break, and let a coffee and two macarons reset the pace of your day.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=Le+Macaron+Celebration+671+Front+St+%23110%2C+Celebration%2C+FL+34747" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=magic-kingdom">Magic Kingdom Park</a></h3>
+          <p class="meta">Parks &amp; outdoors &middot; $$$$</p>
+          <p class="addr">Disney&#x27;s Magic Kingdom, 1180 Seven Seas Dr, Lake Buena Vista, FL 32830</p>
+          <p class="desc">You know this park before you ever set foot in it, and it still gets you. Cinderella Castle stands at the hub of six lands, with Space Mountain&#x27;s rattling darkness, the Haunted Mansion&#x27;s stretching rooms and pirates singing their song: rides that double as shared memories the country grew up with. Locals come back for the fireworks, the Festival of Fantasy parade and watching a child&#x27;s first visit through their own eyes. Plan for a full day, walk Main Street slowly, and give in to the place completely.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=Magic+Kingdom+Park+Disney%27s+Magic+Kingdom%2C+1180+Seven+Seas+Dr%2C+Lake+Buena+Vista%2C+FL+32830" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=ogas">Oga&#x27;s Cantina</a></h3>
+          <p class="meta">Bars &amp; lounges &middot; $$</p>
+          <p class="addr">Disney&#x27;s Hollywood Studios, 351 S Studio Dr, Lake Buena Vista, FL 32830</p>
+          <p class="desc">A droid DJ, a tingling cocktail, and a room built for Star Wars fans. Oga&#x27;s Cantina sits inside Galaxy&#x27;s Edge at Hollywood Studios, where R-3X spins behind the bar and drinks arrive in otherworldly presentations. The Fuzzy Tauntaun famously makes your mouth tingle, joined by Bespin Fizz, Outer Rim, and non alcoholic options for younger guests, plus galactic snacks. Space is tight, the energy is high, and reservations are hard to land. Book ahead if Batuu is on your park day plan.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=Oga%27s+Cantina+Disney%27s+Hollywood+Studios%2C+351+S+Studio+Dr%2C+Lake+Buena+Vista%2C+FL+32830" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=portillo-s">Portillo&#x27;s</a></h3>
+          <p class="meta">Burgers &amp; sandwiches &middot; $</p>
+          <p class="addr">7715 Palm Pkwy, Orlando, FL 32836</p>
+          <p class="desc">Homesick Midwesterners get a direct answer in Orlando, red chrome and all. Portillo&#x27;s has served Chicago street food since 1963, and the Orlando rooms go full retro diner as slow roasted Italian beef perfumes the entrance. The Italian beef sandwich drips with jus and takes sweet or hot peppers the way Chicagoans argue about. A Chicago style hot dog gets dragged through the garden correctly, and the chocolate cake shake sounds wrong until it tastes right. Order at the counter and watch families, students, and transplants reach for the same fries.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=Portillo%27s+7715+Palm+Pkwy%2C+Orlando%2C+FL+32836" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=ravello">Ravello</a></h3>
+          <p class="meta">Italian &middot; $$$</p>
+          <p class="addr">10100 Dream Tree Blvd, Orlando, FL 32836</p>
+          <p class="desc">Some Italian dinners earn a plan made weeks ahead, birthday included. Ravello sits inside the Four Seasons Resort Orlando, where executive chef Fabrizio Schenardi, a Torino native, runs a kitchen that makes its pastas, breads, sauces, and desserts entirely in house. The veal ravioli is the signature, soft and rich the way holiday meals are remembered, and the wood-fired pies come layered with prosciutto di Parma and fresh burrata. It even holds a rare Italian taste certification few American restaurants ever earn. Bring someone you want to impress. The room will help.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=Ravello+10100+Dream+Tree+Blvd%2C+Orlando%2C+FL+32836" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=rock-n-roller-coaster-muppets">Rock &#x27;n&#x27; Roller Coaster Starring the Muppets</a></h3>
+          <p class="meta">Attractions &middot; $$$$</p>
+          <p class="addr">Disney&#x27;s Hollywood Studios, 351 S Studio Dr, Lake Buena Vista, FL 32830</p>
+          <p class="desc">A familiar launch now comes with a Muppets storyline wrapped around it. In May 2026, the Rock &#x27;n&#x27; Roller Coaster received its biggest change since opening, with the Electric Mayhem band taking over the story and the super stretch limo becoming a dash across Hollywood. The coaster itself stayed the same, launching from 0 to 57 in under three seconds, with inversions in the dark. A new pre-show and soundtrack give returning riders a fresh reason to queue, and single rider remains the fastest way on.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=Rock+%27n%27+Roller+Coaster+Starring+the+Muppets+Disney%27s+Hollywood+Studios%2C+351+S+Studio+Dr%2C+Lake+Buena+Vista%2C+FL+32830" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=simply-capri">Simply Capri</a></h3>
+          <p class="meta">Italian &middot; $$$</p>
+          <p class="addr">114 Ruby Red Place, Winter Garden, FL 34787</p>
+          <p class="desc">Nick Valenti is the man behind Via Napoli at EPCOT and Space 220, so when he built a trattoria at Flamingo Crossings, Orlando took notice. Simply Capri whisks you to the Isle of Capri on sheer atmosphere: sunny Amalfi yellows, Italian servers, and a pizza oven shipped all the way from Naples turning out blistered Neapolitan pies. The house-made pastas sing with Southern Italian soul, try the Scialatielli dei Faraglioni with shrimp, clams, mussels, and calamari, and the Delizia al Limone is the limoncello-spiked finish you&#x27;ll dream about. The concept is simple, the cooking is not.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=Simply+Capri+114+Ruby+Red+Place%2C+Winter+Garden%2C+FL+34787" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=soarin-across-america">Soarin&#x27; Across America</a></h3>
+          <p class="meta">Attractions &middot; $$$$</p>
+          <p class="addr">EPCOT, 200 Epcot Center Dr, Lake Buena Vista, FL 32830</p>
+          <p class="desc">A hang glider seat, wind in your face, and the United States rolling out below you. Soarin&#x27; Across America debuted in May 2026, swapping the ride&#x27;s usual world tour for a flight tied to the country&#x27;s 250th anniversary. The simulator still delivers its signature sensations, with scents and wind doing half the storytelling, while the new film gives repeat riders a reason to return. Expect long EPCOT lines through the anniversary year, and make this an early priority.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=Soarin%27+Across+America+EPCOT%2C+200+Epcot+Center+Dr%2C+Lake+Buena+Vista%2C+FL+32830" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=stadium-club">Stadium Club</a></h3>
+          <p class="meta">Bars &amp; lounges &middot; $$</p>
+          <p class="addr">8101 World Center Dr, Orlando, FL 32821</p>
+          <p class="desc">Game day gets a two level temple at Caribe Royale, built for the moment the whole room erupts. Walls of screens carry every matchup at once, and VIP booths come with sports simulators of their own. The kitchen is run by two Top Chef alums who refuse to serve ordinary bar food, so you eat better than the usual sports bar standard. Drinks stay in hand, nobody sits still, and the roar moves through fans around you. Pick Stadium Club when you want a watch party with scale, energy, and food that keeps pace.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=Stadium+Club+8101+World+Center+Dr%2C+Orlando%2C+FL+32821" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=sushi-izuki">Sushi Izuki</a></h3>
+          <p class="meta">Japanese &amp; sushi &middot; $$$</p>
+          <p class="addr">8685 Fenton St #150, Orlando, FL 32836</p>
+          <p class="desc">Eight seats, one chef, eighteen courses: Sushi Izuki is Chef Leo&#x27;s declaration on omakase. The menu is never printed; it&#x27;s spoken, decided that morning from whatever arrived fresh, and it never repeats. Whole fish dry-aged in house, cut to order, served with deliberate, restless creativity drawn from Japan and the West. Add a private tatami room for a second, even more intimate way in. Two seatings an evening, reservations on Resy. If you want to taste a chef chasing a Michelin star in real time, this is the room.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=Sushi+Izuki+8685+Fenton+St+%23150%2C+Orlando%2C+FL+32836" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=test-track-3-0">Test Track 3.0</a></h3>
+          <p class="meta">Attractions &middot; $$$$</p>
+          <p class="addr">EPCOT, 200 Epcot Center Dr, Lake Buena Vista, FL 32830</p>
+          <p class="desc">The crash test theme is gone, replaced by a sleeker story about car design. Test Track reopened in July 2025 as version 3.0, a retro futuristic overhaul covering automotive design through the decades. The ride system remains the familiar high speed loop, including the 65 mph outdoor sprint, while new show scenes and a richer queue carry the updated theme. It remains EPCOT&#x27;s headline thrill ride, so use the morning or the single rider line to cut your wait.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=Test+Track+3.0+EPCOT%2C+200+Epcot+Center+Dr%2C+Lake+Buena+Vista%2C+FL+32830" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=beak-and-barrel">The Beak and Barrel</a></h3>
+          <p class="meta">Bars &amp; lounges &middot; $$$$</p>
+          <p class="addr">Magic Kingdom Park, 1180 Seven Seas Dr, Lake Buena Vista, FL 32830</p>
+          <p class="desc">Pirates finally got a tavern of their own inside Magic Kingdom. The Beak and Barrel opened in August 2025 in Adventureland as the standalone Pirates of the Caribbean tavern fans had waited decades to see. Pirate lore and Audio-Animatronic touches fill the interior, while themed cocktails and shareable bites carry the menu. The room feels like stepping into the ride&#x27;s world with a drink in hand. Walk up waits grow long by midday, so try early or during fireworks when the land empties.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=The+Beak+and+Barrel+Magic+Kingdom+Park%2C+1180+Seven+Seas+Dr%2C+Lake+Buena+Vista%2C+FL+32830" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=little-mermaid-musical-adventure">The Little Mermaid: A Musical Adventure</a></h3>
+          <p class="meta">Attractions &middot; $$$$</p>
+          <p class="addr">Disney&#x27;s Hollywood Studios, 351 S Studio Dr, Lake Buena Vista, FL 32830</p>
+          <p class="desc">The Little Mermaid: A Musical Adventure opened in May 2025 at Hollywood Studios, replacing the Voyage of the Little Mermaid show that ran for decades. The new production retells Ariel&#x27;s story with updated puppetry, projection work, and the songs everyone already knows by heart. It is built for families with young kids, runs multiple times daily, and the theater&#x27;s air conditioning is a feature, not a footnote, especially at midday.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=The+Little+Mermaid%3A+A+Musical+Adventure+Disney%27s+Hollywood+Studios%2C+351+S+Studio+Dr%2C+Lake+Buena+Vista%2C+FL+32830" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=victoria-alberts">Victoria &amp; Albert&#x27;s</a></h3>
+          <p class="meta">American &middot; $$$$</p>
+          <p class="addr">Victoria &amp; Albert&#x27;s, 4401 Floridian Way, Lake Buena Vista, FL 32830</p>
+          <p class="desc">Inside Disney&#x27;s Grand Floridian, behind a formal dress code and a hushed dining room, sits a restaurant the record calls the most decorated in the Southeast. Victoria and Albert&#x27;s has held AAA&#x27;s Five Diamond award since 2000 and earned a Michelin star, the first for any Disney owned restaurant. Course after course of seasonal American cooking arrives with ceremony: personalized menus, tableside flourishes, and a coffee service people talk about for years. Book months ahead, dress the part, and give the evening the reverence it deserves.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=Victoria+%26+Albert%27s+Victoria+%26+Albert%27s%2C+4401+Floridian+Way%2C+Lake+Buena+Vista%2C+FL+32830" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=vivoli-il-gelato">Vivoli Il Gelato</a></h3>
+          <p class="meta">Sweets &middot; $$</p>
+          <p class="addr">Vivoli Il Gelato, 1638 E Buena Vista Dr, Lake Buena Vista, FL 32830, United States</p>
+          <p class="desc">Florence pauses in the middle of Disney Springs, dense and unhurried. Vivoli Il Gelato is the Orlando outpost of a famous Italian gelateria, serving scoops made the old way with cannoli and espresso on the menu for good measure. The gelato reads creamy and deliberate rather than icy or rushed. Between park runs, this is a civilized pause: a shaded seat and a cup of something carefully made. Choose Vivoli when Disney Springs dessert should feel European, calm, and focused on texture over spectacle.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=Vivoli+Il+Gelato+Vivoli+Il+Gelato%2C+1638+E+Buena+Vista+Dr%2C+Lake+Buena+Vista%2C+FL+32830%2C+United+States" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=woodys">Woody&#x27;s Lunch Box</a></h3>
+          <p class="meta">American &middot; $</p>
+          <p class="addr">Woody&#x27;s Lunch Box, 351 S Studio Dr, Lake Buena Vista, FL 32830</p>
+          <p class="desc">Andy&#x27;s lunch box, flipped on its side and propped open with his thermos, anchors Toy Story Land. The menu plays with childhood nostalgia done right: Totchos, tater tot nachos buried under chili and cheese, a BBQ Brisket Melt on garlic butter sourdough, and Lunch Box Tarts in rotating seasonal flavors. Green Army Men keep watch while you eat at toy scale. Mobile order ahead and grab a table when you want a quick, playful bite that lands better than standard quick service fare.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=Woody%27s+Lunch+Box+Woody%27s+Lunch+Box%2C+351+S+Studio+Dr%2C+Lake+Buena+Vista%2C+FL+32830" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=zootopia-better-zoogether">Zootopia: Better Zoogether!</a></h3>
+          <p class="meta">Attractions &middot; $$$$</p>
+          <p class="addr">Disney&#x27;s Animal Kingdom, 2901 Osceola Pkwy, Lake Buena Vista, FL 32830</p>
+          <p class="desc">The Tree of Life hides a theater, and its newest show trades bugs for Zootopia. Zootopia: Better Zoogether opened in November 2025, replacing the long running It&#x27;s Tough to Be a Bug with a 4D show. Judy Hopps and Nick Wilde host a celebration of the animal kingdom&#x27;s biomes, with in theater effects doing much of the work. It plays to all ages, and one stop gives you both the show and the park&#x27;s most photographed icon outside.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=Zootopia%3A+Better+Zoogether%21+Disney%27s+Animal+Kingdom%2C+2901+Osceola+Pkwy%2C+Lake+Buena+Vista%2C+FL+32830" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        </div>
+      </section>
+
+      <section class="sec" id="districts">
+        <p class="kicker">Keep Going</p>
+        <h2>Every district has a finder page</h2>
+        <p class="lede">One page per district, generated from the same hand-verified dataset as the full guide.</p>
+        <nav class="strip" aria-label="District finder pages">
+          <a href="/winter-park-finder.html">Winter Park</a>
+          <a href="/disney-springs-finder.html">Disney Springs</a>
+          <a href="/milk-district-finder.html">Milk District</a>
+          <a href="/thornton-park-finder.html">Thornton Park</a>
+          <a href="/mills-50-finder.html">Mills 50</a>
+          <a href="/ivanhoe-village-finder.html">Ivanhoe Village</a>
+          <a href="/downtown-orlando-finder.html">Downtown Orlando</a>
+          <a href="/international-drive-finder.html">International Drive</a>
+          <a href="/lake-nona-finder.html">Lake Nona</a>
+          <a href="/universal-finder.html">Universal</a>
+          <a href="/audubon-park-finder.html">Audubon Park</a>
+          <a href="/college-park-finder.html">College Park</a>
+          <a href="/more-orlando-finder.html">More Orlando</a>
+          <a href="/disney-area-finder.html" aria-current="page">Disney Area</a>
+          <a href="/ucf-finder.html">UCF</a>
+          <a href="/kissimmee-finder.html">Kissimmee</a>
+          <a href="/baldwin-park-finder.html">Baldwin Park</a>
+          <a href="/winter-garden-finder.html">Winter Garden</a>
+          <a href="/sanford-finder.html">Sanford</a>
+          <a href="/maitland-finder.html">Maitland</a>
+          <a href="/oviedo-finder.html">Oviedo</a>
+          <a href="/hourglass-finder.html">Hourglass</a>
+          <a href="/sodo-finder.html">SoDo</a>
+        </nav>
+        <div class="handoff">
+          <a class="btn-ghost" href="/archive.html?district=disney-area">Disney Area in the full finder</a>
+        </div>
+      </section>
+    </main>
+
+<footer>
+      <div class="foot-in">
+        <a class="back-link" href="/">&larr; Back to the full guide</a>
+        <p class="brand-line">407 FYI, an independent Orlando guide. Details can change; confirm before you go.</p>
+        <p>Hand-verified Orlando places · Checked October 2026 · Local Picks are never sponsored · Corrections: <a href="mailto:mail@407.fyi">mail@407.fyi</a></p>
+        <p>Some links on 407 FYI are affiliate links. They never affect which places we list, rank, or recommend.</p>
+      </div>
+    </footer>
+  </body>
+</html>

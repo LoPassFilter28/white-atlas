@@ -1,0 +1,401 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="color-scheme" content="light dark" />
+    <title>Disney Springs Finder &middot; 407 FYI</title>
+    <meta name="description" content="The 407 FYI finder page for Disney Springs: every hand-verified place in the district with full cards, addresses, descriptions and directions." />
+    <link rel="canonical" href="https://407.fyi/disney-springs-finder.html" />
+    <meta property="og:title" content="Disney Springs Finder &middot; 407 FYI" />
+    <meta property="og:description" content="The 407 FYI finder page for Disney Springs: every hand-verified place in the district with full cards, addresses, descriptions and directions." />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://407.fyi/disney-springs-finder.html" />
+    <meta property="og:image" content="https://407.fyi/og-image.png" />
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Urbanist:wght@600;700;800&amp;display=swap" rel="stylesheet" />
+<script>
+      try {
+        const savedTheme = localStorage.getItem('white-atlas-theme');
+        document.documentElement.dataset.theme = savedTheme === 'light' || savedTheme === 'dark' ? savedTheme : 'dark';
+      } catch (error) {
+        document.documentElement.dataset.theme = 'dark';
+      }
+    </script>
+    <style>
+      /* Night Drive tokens (from the district guides) */
+      :root {
+        color-scheme: dark;
+        --bg: #0a1811; --surface: #122419; --soft: #172a1f; --ink: #f0e8d5;
+        --muted: #c6bba2; --line: #2f4a38; --accent: #765b2f; --accent-ink: #d4b573;
+        --headline: #f6edd6; --focus: #d4b573;
+        --d-a: #14231a; --d-b: #3a5a35; --d-c: #bd9049;
+        --pad: clamp(20px, 5vw, 40px);
+      }
+      * { box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
+      body {
+        margin: 0; background: var(--bg); color: var(--ink);
+        font-family: "Manrope", system-ui, sans-serif; line-height: 1.6;
+        overflow-x: hidden;
+      }
+      h1, h2, h3, .display { font-family: "Urbanist", "Manrope", sans-serif; }
+      a { color: var(--accent-ink); }
+      a:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
+      .kicker {
+        font-family: "Urbanist", sans-serif; font-weight: 700; letter-spacing: .22em;
+        font-size: .72rem; text-transform: uppercase; color: var(--accent-ink); margin: 0 0 14px;
+      }
+
+      /* ---------- hero ---------- */
+      .hero {
+        position: relative; padding: clamp(64px, 13vh, 130px) var(--pad) clamp(48px, 9vh, 84px);
+        background: radial-gradient(ellipse 90% 55% at 50% 112%, rgba(189,144,73,.26), transparent 60%),
+          linear-gradient(168deg, #1d3325, #14231a 55%, #0a1811);
+        border-bottom: 1px solid var(--line);
+      }
+      .hero-in { max-width: 860px; margin: 0 auto; }
+      .crumbs { font-size: .8rem; color: var(--muted); margin: 0 0 26px; }
+      .crumbs a { font-weight: 700; }
+      .hero-brand {
+        font-family: "Urbanist", sans-serif; font-weight: 700; letter-spacing: .22em;
+        font-size: .72rem; text-transform: uppercase; color: var(--accent-ink); text-decoration: none;
+      }
+      .hero h1 {
+        font-size: clamp(2.6rem, 8.5vw, 5.2rem); line-height: .98; letter-spacing: .01em;
+        color: var(--headline); margin: 18px 0 16px; text-transform: uppercase;
+      }
+      .hero .sub { font-size: clamp(1.05rem, 2.6vw, 1.3rem); color: var(--ink); max-width: 620px; margin: 0 0 10px; }
+      .hero .fine { color: var(--muted); max-width: 620px; margin: 0; }
+      .anchor-nav { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 30px; }
+      .anchor-nav a {
+        border: 1px solid var(--line); border-radius: 999px; padding: 8px 14px;
+        font-size: .82rem; font-weight: 700; text-decoration: none; background: rgba(255,255,255,.03);
+        min-height: 42px; display: inline-flex; align-items: center;
+      }
+      .anchor-nav a:hover { border-color: var(--accent-ink); }
+
+      /* ---------- sections ---------- */
+      main { display: block; }
+      .sec { max-width: 860px; margin: 0 auto; padding: clamp(52px, 9vh, 88px) var(--pad) 0; }
+      .sec h2 { font-size: clamp(1.7rem, 4.6vw, 2.4rem); line-height: 1.12; color: var(--headline); margin: 0 0 16px; }
+      .sec .lede { color: var(--muted); font-size: 1.04rem; max-width: 640px; margin: 0 0 26px; }
+      .sec p { max-width: 68ch; }
+      .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 14px; margin: 22px 0 6px; }
+      .card {
+        background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 20px;
+      }
+      .card h3 { margin: 0 0 6px; font-size: 1.12rem; color: var(--headline); }
+      .card .addr { font-weight: 800; color: var(--accent-ink); margin: 0 0 10px; font-size: .98rem; }
+      .card p { margin: 0; color: var(--muted); font-size: .94rem; }
+      .cols { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 22px 0 6px; }
+      @media (max-width: 680px) { .cols { grid-template-columns: 1fr; } }
+      .panel { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 20px 22px; }
+      .panel h3 { margin: 0 0 12px; font-size: 1.05rem; color: var(--headline); }
+      .panel ul, .plain-list { margin: 0; padding-left: 18px; }
+      .panel li, .plain-list li { margin-bottom: 9px; }
+      .panel li:last-child, .plain-list li:last-child { margin-bottom: 0; }
+      .note {
+        border-left: 3px solid var(--accent-ink); background: var(--soft);
+        padding: 14px 18px; border-radius: 0 12px 12px 0; margin: 22px 0 6px; max-width: 68ch;
+      }
+      .note p { margin: 0; }
+      .venue-links { list-style: none; margin: 0; padding: 0; }
+      .venue-links li { margin-bottom: 10px; }
+      .venue-links a { font-weight: 800; text-underline-offset: 3px; }
+      .venue-links span { color: var(--muted); }
+
+      /* ---------- jobs ---------- */
+      .job-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 14px; margin-top: 22px; }
+      .job { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 20px 22px; }
+      .job h3 { margin: 0 0 6px; font-size: 1.08rem; color: var(--headline); }
+      .job p { margin: 0 0 12px; color: var(--muted); font-size: .94rem; }
+      .job ul { list-style: none; margin: 0 0 14px; padding: 0; }
+      .job li { margin-bottom: 7px; }
+      .job li a { font-weight: 800; text-underline-offset: 3px; }
+      .job .browse { font-size: .86rem; font-weight: 800; text-transform: uppercase; letter-spacing: .08em; }
+
+      /* ---------- what to avoid ---------- */
+      .avoid { border-top: 1px solid var(--line); padding: 24px 0 6px; }
+      .avoid h3 { margin: 0 0 10px; font-size: 1.18rem; color: var(--headline); }
+      .avoid p { margin: 0 0 8px; max-width: 68ch; }
+      .avoid strong { color: var(--accent-ink); }
+      .flags { display: flex; flex-wrap: wrap; gap: 8px; margin: 18px 0 6px; }
+      .flags span {
+        border: 1px solid var(--accent); border-radius: 999px; padding: 7px 13px;
+        font-size: .85rem; font-weight: 700; color: var(--accent-ink); background: rgba(255,255,255,.03);
+      }
+      .rules { margin: 16px 0 0; padding-left: 20px; max-width: 68ch; }
+      .rules li { margin-bottom: 10px; }
+
+      .handoff { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 30px; }
+      .btn-big {
+        display: inline-flex; align-items: center; min-height: 52px; padding: 12px 22px;
+        background: var(--accent); color: #fff; font-weight: 800; border-radius: 999px; text-decoration: none;
+      }
+      .btn-big:hover { background: var(--accent-ink); color: #1d2a20; }
+      .btn-ghost {
+        display: inline-flex; align-items: center; min-height: 52px; padding: 12px 22px;
+        border: 1px solid var(--line); color: var(--accent-ink); font-weight: 800; border-radius: 999px; text-decoration: none;
+      }
+
+      footer { border-top: 1px solid var(--line); margin-top: clamp(52px, 9vh, 88px); }
+      .foot-in { max-width: 860px; margin: 0 auto; padding: 34px var(--pad) 44px; color: var(--muted); font-size: .9rem; }
+      .foot-in p { margin: 0 0 9px; }
+      .back-link { font-weight: 800; display: inline-block; margin-bottom: 16px; }
+      .brand-line { color: var(--ink); font-weight: 700; }
+
+      /* ---------- Light theme: app-page tokens ---------- */
+      html[data-theme="light"] {
+        color-scheme: light;
+        --bg: #faf6ec; --surface: #fffdf7; --soft: #f3ecd7; --ink: #1d2a20;
+        --muted: #4c5a45; --line: #ddd3ba; --accent: #8a5f0e; --accent-ink: #7c520c;
+        --headline: #123524; --focus: #8a5f0e;
+      }
+      html[data-theme="light"] .hero {
+        background: radial-gradient(ellipse 90% 55% at 50% 112%, rgba(163,129,63,.30), transparent 60%),
+          linear-gradient(168deg, color-mix(in srgb, var(--d-a) 24%, #faf6ec), color-mix(in srgb, var(--d-a) 40%, #faf6ec) 55%, color-mix(in srgb, var(--d-a) 14%, #faf6ec));
+      }
+      html[data-theme="light"] .anchor-nav a, html[data-theme="light"] .flags span { background: rgba(29,42,32,.04); }
+      html[data-theme="light"] .btn-big { background: var(--accent); color: #fff; }
+      html[data-theme="light"] .btn-big:hover { background: var(--accent-ink); color: #fff; }
+
+      @media print { .anchor-nav { display: none; } }
+      @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+    
+      /* ---------- finder pages (Seam 2 additions) ---------- */
+      .count {
+        font-family: "Urbanist", sans-serif; font-weight: 700; letter-spacing: .14em;
+        font-size: .8rem; text-transform: uppercase; color: var(--accent-ink); margin: 0;
+      }
+      .vlist { display: grid; gap: 14px; margin-top: 22px; }
+      .vcard {
+        background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 20px 22px;
+      }
+      .vcard h3 { margin: 0 0 4px; font-size: 1.15rem; color: var(--headline); }
+      .vcard h3 a { color: var(--headline); text-decoration: none; }
+      .vcard h3 a:hover { color: var(--accent-ink); text-decoration: underline; text-underline-offset: 3px; }
+      .badge {
+        display: inline-block; vertical-align: middle; margin-left: 8px;
+        border: 1px solid var(--accent); border-radius: 999px; padding: 2px 9px;
+        font-family: "Manrope", sans-serif; font-size: .68rem; font-weight: 800;
+        letter-spacing: .08em; text-transform: uppercase; color: var(--accent-ink);
+        background: rgba(255,255,255,.03); white-space: nowrap;
+      }
+      .vcard .meta { margin: 0 0 2px; font-weight: 800; color: var(--accent-ink); font-size: .92rem; }
+      .vcard .addr { margin: 0 0 8px; color: var(--muted); font-size: .9rem; }
+      .vcard .desc { margin: 0 0 10px; max-width: 68ch; }
+      .vcard .dirs { margin: 0; font-size: .88rem; font-weight: 800; }
+      .strip { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 22px; }
+      .strip a {
+        border: 1px solid var(--line); border-radius: 999px; padding: 8px 14px;
+        font-size: .82rem; font-weight: 700; text-decoration: none; background: rgba(255,255,255,.03);
+        min-height: 42px; display: inline-flex; align-items: center;
+      }
+      .strip a:hover { border-color: var(--accent-ink); }
+      .strip a[aria-current="page"] { border-color: var(--accent-ink); color: var(--headline); }
+      html[data-theme="light"] .badge, html[data-theme="light"] .strip a { background: rgba(29,42,32,.04); }
+    </style>
+  </head>
+  <body>
+    <header class="hero">
+      <div class="hero-in">
+        <p class="crumbs"><a href="/">407 FYI</a> &middot; District Finder</p>
+        <a class="hero-brand" href="/">407 FYI &middot; A District Finder</a>
+        <h1>Disney Springs</h1>
+        <p class="sub">The best night at Disney World never enters a park.</p>
+        <p class="count">18 hand-verified places</p>
+        <nav class="anchor-nav" aria-label="On this page">
+          <a href="#places">The places</a>
+          <a href="#districts">All districts</a>
+          <a href="/archive.html?district=disney-springs">Open in the full finder</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="sec" id="places">
+        <p class="kicker">The Full List</p>
+        <h2>Every place in Disney Springs</h2>
+        <p class="lede">Full cards for the whole district, Local Picks first, then A to Z. Every name opens its listing in the full finder, where the map, filters and export live.</p>
+        <div class="vlist">
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=disney-springs-district">Disney Springs</a> <span class="badge">Local Pick</span></h3>
+          <p class="meta">Markets &amp; shops &middot; $$$</p>
+          <p class="addr">1486 E Buena Vista Dr, Lake Buena Vista, FL 32830</p>
+          <p class="desc">No park ticket, no turnstile, still an evening on the water at Disney Springs. The resort&#x27;s open air promenade stitches four waterfront neighborhoods together, with food running from Morimoto&#x27;s ramen to waterfront tables at The BOATHOUSE. Bars keep live music rolling, boats glide past, and Ghirardelli ice cream makes a strong final course in hand. Locals use it for date nights and group nights out, never paying admission. Choose it for the Disney glow when you want the night, not the park day.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=Disney+Springs+1486+E+Buena+Vista+Dr%2C+Lake+Buena+Vista%2C+FL+32830" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=bakery-1908">Bakery 1908</a></h3>
+          <p class="meta">Bakeries &middot; $$</p>
+          <p class="addr">Bakery 1908, 12399 S Apopka Vineland Rd, Orlando, FL 32836, United States</p>
+          <p class="desc">Pineapple buns and pork floss buns gleam behind glass on East Colonial Drive. Bakery 1908 serves Asian bakery trays that include the celebrated Golden Onion Roll, while the dim sum side offers dumplings and shumai worth lingering over. The boba is fresh, the space is bright and modern, and everything comes out made that day, according to the bakery. Regulars have helped it grow into a small Florida presence, and one visit explains the loyalty better than any slogan could.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=Bakery+1908+Bakery+1908%2C+12399+S+Apopka+Vineland+Rd%2C+Orlando%2C+FL+32836%2C+United+States" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=chef-art-smith-s-homecomin">Chef Art Smith&#x27;s Homecomin&#x27;</a></h3>
+          <p class="meta">American &middot; $$$</p>
+          <p class="addr">1602 E Buena Vista Dr, Lake Buena Vista, FL 32830</p>
+          <p class="desc">Celebrity chef Art Smith brought his Florida farmhouse kitchen to Disney Springs, and the result tastes like a homecoming worth having. Art&#x27;s Famous Fried Chicken is the legend: brined, crackling, unapologetic. Start with Thigh High Chicken Biscuits drizzled in hot honey and Church Lady Deviled Eggs, save room for Momma&#x27;s Mac &amp; Cheese and a Hallelujah Biscuit if you are brave. This is Southern comfort at its most generous, in a dining room that feels like Sunday afternoon.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=Chef+Art+Smith%27s+Homecomin%27+1602+E+Buena+Vista+Dr%2C+Lake+Buena+Vista%2C+FL+32830" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=drawn-to-life">Drawn to Life: Cirque du Soleil</a></h3>
+          <p class="meta">Attractions &middot; $$$</p>
+          <p class="addr">1478 E Buena Vista Dr, Lake Buena Vista, FL 32830</p>
+          <p class="desc">An animator&#x27;s pencil sketch lifts off the page, an acrobat turns it into a leap, and the whole theater goes quiet before the landing. Drawn to Life at Disney Springs is the Cirque du Soleil show built around Disney animation drawings. For couples and older kids, it is a date night that needs no park ticket. Choose an evening when you are already at Disney Springs, and make dinner there part of the night for the full effect.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=Drawn+to+Life%3A+Cirque+du+Soleil+1478+E+Buena+Vista+Dr%2C+Lake+Buena+Vista%2C+FL+32830" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=gideons">Gideon&#x27;s Bakehouse (Disney Springs Flagship)</a></h3>
+          <p class="meta">Bakeries &middot; $$</p>
+          <p class="addr">1600 E Buena Vista Dr, Lake Buena Vista, FL 32830</p>
+          <p class="desc">A line in Disney Springs usually signals hype, but these cookies carry real weight. Steve Lewis started baking in his kitchen before Gideon&#x27;s Bakehouse grew into a candlelit, Victorian style room where a gargoyle guards the case. The cookies are nearly half pound, handmade, and take more than 24 hours to prepare, with the Original Chocolate Chip converting plenty of skeptics. Cake slices and serious cold brew widen the order. Go early and hungry, and expect the wait to be part of the ritual.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=Gideon%27s+Bakehouse+%28Disney+Springs+Flagship%29+1600+E+Buena+Vista+Dr%2C+Lake+Buena+Vista%2C+FL+32830" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=house-of-blues">House of Blues</a></h3>
+          <p class="meta">Nightlife &amp; music &middot; $$$</p>
+          <p class="addr">1490 E Buena Vista Dr, Lake Buena Vista, FL 32830</p>
+          <p class="desc">Disney Springs&#x27; West Side rock club has carried a Southern accent since 1997. The House of Blues Music Hall is general admission and standing room, which keeps you close enough to feel the drum hits, and the calendar runs rock, hip hop, country, Latin, blues and tribute nights. Come early for Crossroads and eat shrimp and grits or jambalaya under the folk art of Mr. Imagination, then catch the gospel brunch on Sunday. It suits concertgoers who want dinner and a show in one stop.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=House+of+Blues+1490+E+Buena+Vista+Dr%2C+Lake+Buena+Vista%2C+FL+32830" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=jaleo">Jaleo</a></h3>
+          <p class="meta">Mediterranean &middot; $$$</p>
+          <p class="addr">Jaleo, 1482 E Buena Vista Dr, Lake Buena Vista, FL 32830-8518</p>
+          <p class="desc">A celebrity chef restaurant that eats like a love letter to Spain anchors Disney Springs. Jose Andres built Jaleo here with jamon sliced thin enough to glisten, tapas that taste like a Madrid night out and wood fired paellas layered with saffron and garlic aioli. Rumba guitarists roam on Sundays, the Matador Bar runs a sangria hour, and Pepe next door serves bocatas for the grab and go version. A group dinner feels like a celebration without losing the cooking.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=Jaleo+Jaleo%2C+1482+E+Buena+Vista+Dr%2C+Lake+Buena+Vista%2C+FL+32830-8518" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=level-99">Level 99</a></h3>
+          <p class="meta">Attractions &middot; $$</p>
+          <p class="addr">1486 E Buena Vista Dr, Lake Buena Vista, FL 32830</p>
+          <p class="desc">Forget what you thought you knew about the old NBA Experience building at Disney Springs. Level99 packs a warehouse of life sized mini games, from axe dodging beams to logic puzzles to head to head duels, all unlocked by an RFID wristband at check in, and the record calls it the largest interactive gaming playground of its kind in the country. Team up for cooperative challenge rooms, settle scores in duels, or hunt through the art scavenger hunt. The bar pours craft cocktails and local beers, and the scratch kitchen&#x27;s Detroit style pizza fuels rounds.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=Level+99+1486+E+Buena+Vista+Dr%2C+Lake+Buena+Vista%2C+FL+32830" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=morimoto">Morimoto Asia</a></h3>
+          <p class="meta">Restaurants &middot; $$$</p>
+          <p class="addr">Morimoto Asia, 1600 E Buena Vista Dr, Lake Buena Vista, FL 32830</p>
+          <p class="desc">The grand opening set a theatrical tone that the room still carries. Morimoto Asia retells that opening with Morimoto himself cracking a sake cask and turning a large tuna into a long maki roll. A decade later, the two-story Disney Springs dining hall remains striking, serving the chef&#x27;s first pan-Asian menu through dim sum, pristine sushi, and a bar program built around sake, including sake sangria. The kitchen and prep space reportedly run bigger than the dining room. Choose it for polished, theatrical pan-Asian cooking.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=Morimoto+Asia+Morimoto+Asia%2C+1600+E+Buena+Vista+Dr%2C+Lake+Buena+Vista%2C+FL+32830" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=paddlefish">Paddlefish</a></h3>
+          <p class="meta">Seafood &middot; $$$</p>
+          <p class="addr">1670 E Buena Vista Dr, Lake Buena Vista, FL 32830</p>
+          <p class="desc">Dinner aboard a steamboat on Lake Buena Vista is the promise, and three decks deliver the setting. Paddlefish offers 360-degree waterfront views from a reimagined vessel at Disney Springs. Executive Chef Steve Richard runs a seafood menu built for indulgence: daily catch, whole Maine lobster, king crab, and scallops, with filet mignon for anyone preferring turf beside surf. The rooftop pairs sunset over water with a craft cocktail, and a build-your-own boil lets you call the shots. Choose it for Disney Springs romance with scale.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=Paddlefish+1670+E+Buena+Vista+Dr%2C+Lake+Buena+Vista%2C+FL+32830" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=raglan-road">Raglan Road</a></h3>
+          <p class="meta">Bars &amp; lounges &middot; $$</p>
+          <p class="addr">1640 E Buena Vista Dr, Lake Buena Vista, FL 32830</p>
+          <p class="desc">Mahogany and walnut salvaged from old Irish bars and churches give this room its weight. Raglan Road, Disney Springs&#x27; Dublin style pub, takes its name from the Kavanagh poem later turned into song by U2 and Van Morrison. Live bands and Irish dancers perform nightly, a weekend brunch show rolls on, fish and chips draw people across the property, and the whiskey list takes its job seriously. Choose it when you want a Disney Springs room that locals bring visitors to and then stay for themselves.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=Raglan+Road+1640+E+Buena+Vista+Dr%2C+Lake+Buena+Vista%2C+FL+32830" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=six-ravens">Six Ravens</a></h3>
+          <p class="meta">Burgers &amp; sandwiches &middot; $$</p>
+          <p class="addr">1600 E Buena Vista Dr, Lake Buena Vista, FL 32830</p>
+          <p class="desc">Savory was the missing move from the people behind Gideon&#x27;s Bakehouse, and Disney Springs feels it. Six Ravens, in The Landing, serves Coffyns, old school hand pies made from house baked yeast rolls with chef driven fillings. The menu reads like a love letter to Orlando food: a Pizza Bruno collaboration with basil pesto chicken, a Smoke and Donuts mashup of pulled pork and mac and cheese, and a Pink Salamander cheeseburger pie. Local draft beer from Sideward Brewing and The Ravenous Pig rounds it out. Choose Six Ravens for a dark, storybook grab and go between adventures.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=Six+Ravens+1600+E+Buena+Vista+Dr%2C+Lake+Buena+Vista%2C+FL+32830" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=stk-steakhouse">STK Steakhouse</a></h3>
+          <p class="meta">Fine dining &amp; steak &middot; $$$</p>
+          <p class="addr">1580 E Buena Vista Dr, Lake Buena Vista, FL 32830</p>
+          <p class="desc">STK at Disney Springs fuses a modern steakhouse with a chic lounge, so dinner doubles as a night out. The steaks are serious, notably a 34-ounce Tomahawk with a strong crust, and the Wagyu Lil&#x27; BRGs disappear in two bites. Lobster mac and cheese anchors the sides, while a DJ and a lively scene carry the room beyond the plate. The rooftop is the only one in Disney Springs, and weekend brunch brings Lobster and Eggs Benedict. You arrive hungry, dress sharp, and settle in.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=STK+Steakhouse+1580+E+Buena+Vista+Dr%2C+Lake+Buena+Vista%2C+FL+32830" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=boathouse">The Boathouse &amp; Vintage Amphicars</a></h3>
+          <p class="meta">Seafood &middot; $$$</p>
+          <p class="addr">1620 E Buena Vista Dr, Lake Buena Vista, FL 32830</p>
+          <p class="desc">Waterfront dining is easy to promise at Disney Springs; owning the view is harder. The Boathouse pairs a raw bar and steaks, both with reputations earned honestly, with a deck where golden hour slows the table down. Then comes the signature move: a captain-guided Amphicar tour in a vintage 1960s amphibious car that splashes off the dock and carries you around the lake. The house bills it as a singular experience worldwide. Book the ride, then dinner, when you want the evening to feel staged around water.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=The+Boathouse+%26+Vintage+Amphicars+1620+E+Buena+Vista+Dr%2C+Lake+Buena+Vista%2C+FL+32830" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=the-ganachery">The Ganachery</a></h3>
+          <p class="meta">Sweets &middot; $$$</p>
+          <p class="addr">The Ganachery, 1486 E Buena Vista Dr, Lake Buena Vista, FL 32830</p>
+          <p class="desc">Disney Springs treats chocolate as craft rather than souvenir here. The Ganachery&#x27;s expert chocolatiers work an open show kitchen, cutting ganache squares in sixteen flavors, torching artisan s&#x27;mores to order, and making ganache pops and chocolate piñatas filled with treats. The program uses single-origin dark chocolate from the Dominican Republic, old-world techniques, fresh cream, and real vanilla beans. Mickey and Minnie chocolate bars suit kids, while dark chocolate with Egyptian salt suits you. Every bite feels crafted because the process stays visible.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=The+Ganachery+The+Ganachery%2C+1486+E+Buena+Vista+Dr%2C+Lake+Buena+Vista%2C+FL+32830" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=the-polite-pig">The Polite Pig</a></h3>
+          <p class="meta">BBQ &middot; $$$</p>
+          <p class="addr">1536 E Buena Vista Dr, Lake Buena Vista, FL 32830</p>
+          <p class="desc">Quick service at Disney Springs rarely slows anyone down, but the smoke here earns a pause. The Polite Pig is a family run modern BBQ spot serving tender pork shoulder, coffee rubbed brisket, and St. Louis ribs. Fried chicken with hot honey and sweet potato tots that everyone steals from your tray round out the order, and a deep bourbon list pours from the tap. Finish with buttermilk chess pie, and choose this when theme park food needs to feel polished and genuinely fun.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=The+Polite+Pig+1536+E+Buena+Vista+Dr%2C+Lake+Buena+Vista%2C+FL+32830" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=u-me-revolving-hot-pot">U &amp; Me Revolving Hot Pot</a></h3>
+          <p class="meta">Chinese &middot; $$</p>
+          <p class="addr">12384 S Apopka Vineland Rd, Orlando, FL 32836</p>
+          <p class="desc">Hot pot meets a conveyor belt, and dinner turns into a game you play at the table. U &amp; Me lets you pick a broth, bone, beef, mushroom, Sichuan heat, or Thai Tom Yum, then pull fresh plates from the revolving line. Thin sliced beef, seafood, and vegetables drop into the pot as you choose them. A sauce bar is yours to customize, the boba tea menu holds up, and robot waiters deliver drinks while a sassy one seats you. Choose it for all you can eat fun that leaves kids delighted and adults stuffed.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=U+%26+Me+Revolving+Hot+Pot+12384+S+Apopka+Vineland+Rd%2C+Orlando%2C+FL+32836" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=wine-bar-george">Wine Bar George</a></h3>
+          <p class="meta">Bars &amp; lounges &middot; $$$</p>
+          <p class="addr">1610 E Buena Vista Dr, Lake Buena Vista, FL 32830</p>
+          <p class="desc">A winemaker&#x27;s estate is the model, even though you are in the middle of Disney Springs. George Miliotes, one of a few hundred Master Sommeliers in the world, built Wine Bar George around his obsession with pouring well. More than 200 wines pour by the glass, the bottle, or the ounce, so you can taste a legendary vintage without committing to a full bottle. Small plates, charcuterie, and family style feasts are chosen for what sits in your glass. Choose it for wine education without snobbery and tasting at your own pace.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=Wine+Bar+George+1610+E+Buena+Vista+Dr%2C+Lake+Buena+Vista%2C+FL+32830" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        </div>
+      </section>
+
+      <section class="sec" id="districts">
+        <p class="kicker">Keep Going</p>
+        <h2>Every district has a finder page</h2>
+        <p class="lede">One page per district, generated from the same hand-verified dataset as the full guide.</p>
+        <nav class="strip" aria-label="District finder pages">
+          <a href="/winter-park-finder.html">Winter Park</a>
+          <a href="/disney-springs-finder.html" aria-current="page">Disney Springs</a>
+          <a href="/milk-district-finder.html">Milk District</a>
+          <a href="/thornton-park-finder.html">Thornton Park</a>
+          <a href="/mills-50-finder.html">Mills 50</a>
+          <a href="/ivanhoe-village-finder.html">Ivanhoe Village</a>
+          <a href="/downtown-orlando-finder.html">Downtown Orlando</a>
+          <a href="/international-drive-finder.html">International Drive</a>
+          <a href="/lake-nona-finder.html">Lake Nona</a>
+          <a href="/universal-finder.html">Universal</a>
+          <a href="/audubon-park-finder.html">Audubon Park</a>
+          <a href="/college-park-finder.html">College Park</a>
+          <a href="/more-orlando-finder.html">More Orlando</a>
+          <a href="/disney-area-finder.html">Disney Area</a>
+          <a href="/ucf-finder.html">UCF</a>
+          <a href="/kissimmee-finder.html">Kissimmee</a>
+          <a href="/baldwin-park-finder.html">Baldwin Park</a>
+          <a href="/winter-garden-finder.html">Winter Garden</a>
+          <a href="/sanford-finder.html">Sanford</a>
+          <a href="/maitland-finder.html">Maitland</a>
+          <a href="/oviedo-finder.html">Oviedo</a>
+          <a href="/hourglass-finder.html">Hourglass</a>
+          <a href="/sodo-finder.html">SoDo</a>
+        </nav>
+        <div class="handoff">
+          <a class="btn-big" href="/disney-springs-district-guide.html">Read the Disney Springs story</a>
+          <a class="btn-ghost" href="/archive.html?district=disney-springs">Disney Springs in the full finder</a>
+        </div>
+      </section>
+    </main>
+
+<footer>
+      <div class="foot-in">
+        <a class="back-link" href="/">&larr; Back to the full guide</a>
+        <p class="brand-line">407 FYI, an independent Orlando guide. Details can change; confirm before you go.</p>
+        <p>Hand-verified Orlando places · Checked October 2026 · Local Picks are never sponsored · Corrections: <a href="mailto:mail@407.fyi">mail@407.fyi</a></p>
+        <p>Some links on 407 FYI are affiliate links. They never affect which places we list, rank, or recommend.</p>
+      </div>
+    </footer>
+  </body>
+</html>

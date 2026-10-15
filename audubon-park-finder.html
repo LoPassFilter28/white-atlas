@@ -1,0 +1,338 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="color-scheme" content="light dark" />
+    <title>Audubon Park Finder &middot; 407 FYI</title>
+    <meta name="description" content="The 407 FYI finder page for Audubon Park: every hand-verified place in the district with full cards, addresses, descriptions and directions." />
+    <link rel="canonical" href="https://407.fyi/audubon-park-finder.html" />
+    <meta property="og:title" content="Audubon Park Finder &middot; 407 FYI" />
+    <meta property="og:description" content="The 407 FYI finder page for Audubon Park: every hand-verified place in the district with full cards, addresses, descriptions and directions." />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://407.fyi/audubon-park-finder.html" />
+    <meta property="og:image" content="https://407.fyi/og-image.png" />
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Urbanist:wght@600;700;800&amp;display=swap" rel="stylesheet" />
+<script>
+      try {
+        const savedTheme = localStorage.getItem('white-atlas-theme');
+        document.documentElement.dataset.theme = savedTheme === 'light' || savedTheme === 'dark' ? savedTheme : 'dark';
+      } catch (error) {
+        document.documentElement.dataset.theme = 'dark';
+      }
+    </script>
+    <style>
+      /* Night Drive tokens (from the district guides) */
+      :root {
+        color-scheme: dark;
+        --bg: #0a1811; --surface: #122419; --soft: #172a1f; --ink: #f0e8d5;
+        --muted: #c6bba2; --line: #2f4a38; --accent: #765b2f; --accent-ink: #d4b573;
+        --headline: #f6edd6; --focus: #d4b573;
+        --d-a: #14231a; --d-b: #3a5a35; --d-c: #bd9049;
+        --pad: clamp(20px, 5vw, 40px);
+      }
+      * { box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
+      body {
+        margin: 0; background: var(--bg); color: var(--ink);
+        font-family: "Manrope", system-ui, sans-serif; line-height: 1.6;
+        overflow-x: hidden;
+      }
+      h1, h2, h3, .display { font-family: "Urbanist", "Manrope", sans-serif; }
+      a { color: var(--accent-ink); }
+      a:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
+      .kicker {
+        font-family: "Urbanist", sans-serif; font-weight: 700; letter-spacing: .22em;
+        font-size: .72rem; text-transform: uppercase; color: var(--accent-ink); margin: 0 0 14px;
+      }
+
+      /* ---------- hero ---------- */
+      .hero {
+        position: relative; padding: clamp(64px, 13vh, 130px) var(--pad) clamp(48px, 9vh, 84px);
+        background: radial-gradient(ellipse 90% 55% at 50% 112%, rgba(189,144,73,.26), transparent 60%),
+          linear-gradient(168deg, #1d3325, #14231a 55%, #0a1811);
+        border-bottom: 1px solid var(--line);
+      }
+      .hero-in { max-width: 860px; margin: 0 auto; }
+      .crumbs { font-size: .8rem; color: var(--muted); margin: 0 0 26px; }
+      .crumbs a { font-weight: 700; }
+      .hero-brand {
+        font-family: "Urbanist", sans-serif; font-weight: 700; letter-spacing: .22em;
+        font-size: .72rem; text-transform: uppercase; color: var(--accent-ink); text-decoration: none;
+      }
+      .hero h1 {
+        font-size: clamp(2.6rem, 8.5vw, 5.2rem); line-height: .98; letter-spacing: .01em;
+        color: var(--headline); margin: 18px 0 16px; text-transform: uppercase;
+      }
+      .hero .sub { font-size: clamp(1.05rem, 2.6vw, 1.3rem); color: var(--ink); max-width: 620px; margin: 0 0 10px; }
+      .hero .fine { color: var(--muted); max-width: 620px; margin: 0; }
+      .anchor-nav { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 30px; }
+      .anchor-nav a {
+        border: 1px solid var(--line); border-radius: 999px; padding: 8px 14px;
+        font-size: .82rem; font-weight: 700; text-decoration: none; background: rgba(255,255,255,.03);
+        min-height: 42px; display: inline-flex; align-items: center;
+      }
+      .anchor-nav a:hover { border-color: var(--accent-ink); }
+
+      /* ---------- sections ---------- */
+      main { display: block; }
+      .sec { max-width: 860px; margin: 0 auto; padding: clamp(52px, 9vh, 88px) var(--pad) 0; }
+      .sec h2 { font-size: clamp(1.7rem, 4.6vw, 2.4rem); line-height: 1.12; color: var(--headline); margin: 0 0 16px; }
+      .sec .lede { color: var(--muted); font-size: 1.04rem; max-width: 640px; margin: 0 0 26px; }
+      .sec p { max-width: 68ch; }
+      .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 14px; margin: 22px 0 6px; }
+      .card {
+        background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 20px;
+      }
+      .card h3 { margin: 0 0 6px; font-size: 1.12rem; color: var(--headline); }
+      .card .addr { font-weight: 800; color: var(--accent-ink); margin: 0 0 10px; font-size: .98rem; }
+      .card p { margin: 0; color: var(--muted); font-size: .94rem; }
+      .cols { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 22px 0 6px; }
+      @media (max-width: 680px) { .cols { grid-template-columns: 1fr; } }
+      .panel { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 20px 22px; }
+      .panel h3 { margin: 0 0 12px; font-size: 1.05rem; color: var(--headline); }
+      .panel ul, .plain-list { margin: 0; padding-left: 18px; }
+      .panel li, .plain-list li { margin-bottom: 9px; }
+      .panel li:last-child, .plain-list li:last-child { margin-bottom: 0; }
+      .note {
+        border-left: 3px solid var(--accent-ink); background: var(--soft);
+        padding: 14px 18px; border-radius: 0 12px 12px 0; margin: 22px 0 6px; max-width: 68ch;
+      }
+      .note p { margin: 0; }
+      .venue-links { list-style: none; margin: 0; padding: 0; }
+      .venue-links li { margin-bottom: 10px; }
+      .venue-links a { font-weight: 800; text-underline-offset: 3px; }
+      .venue-links span { color: var(--muted); }
+
+      /* ---------- jobs ---------- */
+      .job-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 14px; margin-top: 22px; }
+      .job { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 20px 22px; }
+      .job h3 { margin: 0 0 6px; font-size: 1.08rem; color: var(--headline); }
+      .job p { margin: 0 0 12px; color: var(--muted); font-size: .94rem; }
+      .job ul { list-style: none; margin: 0 0 14px; padding: 0; }
+      .job li { margin-bottom: 7px; }
+      .job li a { font-weight: 800; text-underline-offset: 3px; }
+      .job .browse { font-size: .86rem; font-weight: 800; text-transform: uppercase; letter-spacing: .08em; }
+
+      /* ---------- what to avoid ---------- */
+      .avoid { border-top: 1px solid var(--line); padding: 24px 0 6px; }
+      .avoid h3 { margin: 0 0 10px; font-size: 1.18rem; color: var(--headline); }
+      .avoid p { margin: 0 0 8px; max-width: 68ch; }
+      .avoid strong { color: var(--accent-ink); }
+      .flags { display: flex; flex-wrap: wrap; gap: 8px; margin: 18px 0 6px; }
+      .flags span {
+        border: 1px solid var(--accent); border-radius: 999px; padding: 7px 13px;
+        font-size: .85rem; font-weight: 700; color: var(--accent-ink); background: rgba(255,255,255,.03);
+      }
+      .rules { margin: 16px 0 0; padding-left: 20px; max-width: 68ch; }
+      .rules li { margin-bottom: 10px; }
+
+      .handoff { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 30px; }
+      .btn-big {
+        display: inline-flex; align-items: center; min-height: 52px; padding: 12px 22px;
+        background: var(--accent); color: #fff; font-weight: 800; border-radius: 999px; text-decoration: none;
+      }
+      .btn-big:hover { background: var(--accent-ink); color: #1d2a20; }
+      .btn-ghost {
+        display: inline-flex; align-items: center; min-height: 52px; padding: 12px 22px;
+        border: 1px solid var(--line); color: var(--accent-ink); font-weight: 800; border-radius: 999px; text-decoration: none;
+      }
+
+      footer { border-top: 1px solid var(--line); margin-top: clamp(52px, 9vh, 88px); }
+      .foot-in { max-width: 860px; margin: 0 auto; padding: 34px var(--pad) 44px; color: var(--muted); font-size: .9rem; }
+      .foot-in p { margin: 0 0 9px; }
+      .back-link { font-weight: 800; display: inline-block; margin-bottom: 16px; }
+      .brand-line { color: var(--ink); font-weight: 700; }
+
+      /* ---------- Light theme: app-page tokens ---------- */
+      html[data-theme="light"] {
+        color-scheme: light;
+        --bg: #faf6ec; --surface: #fffdf7; --soft: #f3ecd7; --ink: #1d2a20;
+        --muted: #4c5a45; --line: #ddd3ba; --accent: #8a5f0e; --accent-ink: #7c520c;
+        --headline: #123524; --focus: #8a5f0e;
+      }
+      html[data-theme="light"] .hero {
+        background: radial-gradient(ellipse 90% 55% at 50% 112%, rgba(163,129,63,.30), transparent 60%),
+          linear-gradient(168deg, color-mix(in srgb, var(--d-a) 24%, #faf6ec), color-mix(in srgb, var(--d-a) 40%, #faf6ec) 55%, color-mix(in srgb, var(--d-a) 14%, #faf6ec));
+      }
+      html[data-theme="light"] .anchor-nav a, html[data-theme="light"] .flags span { background: rgba(29,42,32,.04); }
+      html[data-theme="light"] .btn-big { background: var(--accent); color: #fff; }
+      html[data-theme="light"] .btn-big:hover { background: var(--accent-ink); color: #fff; }
+
+      @media print { .anchor-nav { display: none; } }
+      @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+    
+      /* ---------- finder pages (Seam 2 additions) ---------- */
+      .count {
+        font-family: "Urbanist", sans-serif; font-weight: 700; letter-spacing: .14em;
+        font-size: .8rem; text-transform: uppercase; color: var(--accent-ink); margin: 0;
+      }
+      .vlist { display: grid; gap: 14px; margin-top: 22px; }
+      .vcard {
+        background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 20px 22px;
+      }
+      .vcard h3 { margin: 0 0 4px; font-size: 1.15rem; color: var(--headline); }
+      .vcard h3 a { color: var(--headline); text-decoration: none; }
+      .vcard h3 a:hover { color: var(--accent-ink); text-decoration: underline; text-underline-offset: 3px; }
+      .badge {
+        display: inline-block; vertical-align: middle; margin-left: 8px;
+        border: 1px solid var(--accent); border-radius: 999px; padding: 2px 9px;
+        font-family: "Manrope", sans-serif; font-size: .68rem; font-weight: 800;
+        letter-spacing: .08em; text-transform: uppercase; color: var(--accent-ink);
+        background: rgba(255,255,255,.03); white-space: nowrap;
+      }
+      .vcard .meta { margin: 0 0 2px; font-weight: 800; color: var(--accent-ink); font-size: .92rem; }
+      .vcard .addr { margin: 0 0 8px; color: var(--muted); font-size: .9rem; }
+      .vcard .desc { margin: 0 0 10px; max-width: 68ch; }
+      .vcard .dirs { margin: 0; font-size: .88rem; font-weight: 800; }
+      .strip { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 22px; }
+      .strip a {
+        border: 1px solid var(--line); border-radius: 999px; padding: 8px 14px;
+        font-size: .82rem; font-weight: 700; text-decoration: none; background: rgba(255,255,255,.03);
+        min-height: 42px; display: inline-flex; align-items: center;
+      }
+      .strip a:hover { border-color: var(--accent-ink); }
+      .strip a[aria-current="page"] { border-color: var(--accent-ink); color: var(--headline); }
+      html[data-theme="light"] .badge, html[data-theme="light"] .strip a { background: rgba(29,42,32,.04); }
+    </style>
+  </head>
+  <body>
+    <header class="hero">
+      <div class="hero-in">
+        <p class="crumbs"><a href="/">407 FYI</a> &middot; District Finder</p>
+        <a class="hero-brand" href="/">407 FYI &middot; A District Finder</a>
+        <h1>Audubon Park</h1>
+        <p class="sub">Greener, slower, hungrier, gardens, a market hall and walking pace.</p>
+        <p class="count">9 hand-verified places</p>
+        <nav class="anchor-nav" aria-label="On this page">
+          <a href="#places">The places</a>
+          <a href="#districts">All districts</a>
+          <a href="/archive.html?district=audubon-park">Open in the full finder</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="sec" id="places">
+        <p class="kicker">The Full List</p>
+        <h2>Every place in Audubon Park</h2>
+        <p class="lede">Full cards for the whole district, Local Picks first, then A to Z. Every name opens its listing in the full finder, where the map, filters and export live.</p>
+        <div class="vlist">
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=coro">Coro</a></h3>
+          <p class="meta">American &middot; $$$</p>
+          <p class="addr">Coro, 3022 Corrine Dr, Orlando, FL 32803-2204</p>
+          <p class="desc">The name means chorus, and the menu sings in one voice. Chef Tim Lovero&#x27;s Audubon Park restaurant earned a Michelin Bib Gourmand for small plates that change with the seasons and the chef&#x27;s mood: warm potato naan with whipped chicken skin butter and marmalade, lamb shoulder so tender it surrenders, and a dessert riffing on fries and a milkshake with panna cotta, crispy sunchoke and cocoa nibs. The open kitchen puts the cooks within arm&#x27;s reach, and the wine list leans natural. Choose it for intimate, evolving cooking at its best.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=Coro+Coro%2C+3022+Corrine+Dr%2C+Orlando%2C+FL+32803-2204" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=domu">Domu</a></h3>
+          <p class="meta">Noodles &amp; Southeast Asian &middot; $$</p>
+          <p class="addr">3201 Corrine Dr, Orlando, FL 32803</p>
+          <p class="desc">Since November 2016, Domu has been the ramen room Orlando talks about. The East End Market original earned a Michelin Bib Gourmand and a Netflix spotlight, and the bowls live up to it. Start with the kimchi butter wings, then the Richie Rich ramen, and give yourself over to the broth. The room is compact, the line is real, and first come, first served keeps the energy honest. It is worth the wait for ramen drinkers who plan around a bowl, especially on a first visit to Audubon Park.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=Domu+3201+Corrine+Dr%2C+Orlando%2C+FL+32803" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=east-end-market">East End Market</a></h3>
+          <p class="meta">Markets &amp; shops &middot; $</p>
+          <p class="addr">3201 Corrine Dr, Orlando, FL 32803</p>
+          <p class="desc">Forget the food court format you know, because Audubon Park built a maker hall instead. East End Market combines a market hall, incubator kitchens and an event space under one roof. Line up for the well known Gideon&#x27;s Bakehouse cookies, tear into a loaf from Olde Hearth Bread, sip Lineage Coffee and wander past La Femme du Fromage and Domu. Every corner belongs to a local maker with something to prove. Come hungry and leave carrying somebody&#x27;s craft in a bag.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=East+End+Market+3201+Corrine+Dr%2C+Orlando%2C+FL+32803" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=foreigner">Foreigner Restaurant</a></h3>
+          <p class="meta">Fine dining &amp; steak &middot; $$$$</p>
+          <p class="addr">Foreigner Restaurant, 2816 Corrine Dr, Orlando, FL 32803-2226</p>
+          <p class="desc">Chef Bruno Fonseca&#x27;s Brazilian roots run through this Corrine Drive counter like a current. Foreigner is a chef&#x27;s-counter tasting room serving a menu confiance, a monthly-changing parade of globally inspired courses, where poached oysters meet caviar and brown butter powder, mackerel gets the moqueca treatment, and picanha lands with bordelaise and morels. It began as intimate popups, and the intimacy survived the move to a permanent room: Chef Bruno introduces each course personally, the wine pairings are chosen with real care, and you leave feeling like a houseguest who was fussed over beautifully.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=Foreigner+Restaurant+Foreigner+Restaurant%2C+2816+Corrine+Dr%2C+Orlando%2C+FL+32803-2226" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=hinckleys-fancy-meats">Hinckley&#x27;s Fancy Meats</a></h3>
+          <p class="meta">Markets &amp; shops &middot; $$</p>
+          <p class="addr">3201 Corrine Dr #104, Orlando, FL 32803</p>
+          <p class="desc">A butcher shop inside East End Market treats meat as a craft with receipts. Chef Matt Hinckley cures, smokes and ages at this Audubon Park counter, where the charcuterie earned a nod from the New York Times and the bacon was called the best in Florida. Sandwiches put the work between bread: rare Florida porchetta with salsa piccante and broccoli rabe, proper pastrami on rye and a banh mi with nerve. Sourcing stays transparent and nose to tail. Carnivores, consider this your Audubon Park cathedral.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=Hinckley%27s+Fancy+Meats+3201+Corrine+Dr+%23104%2C+Orlando%2C+FL+32803" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=kelly-s-homemade-ice-cream">Kelly&#x27;s Homemade Ice Cream</a></h3>
+          <p class="meta">Sweets &middot; $</p>
+          <p class="addr">3114 Corrine Dr, Orlando, FL</p>
+          <p class="desc">Orlando-made and proud of it, Kelly&#x27;s churns small-batch ice cream across a string of scoop shops. Monthly flavors read like a dessert diary: bear claw, fluffernutter, hummingbird cake, and toasted s&#x27;mores. Clear labeling covers allergies, non-dairy flavors rotate in, and Dog Pops serve four-legged regulars. The Fern Creek shop runs patio karaoke nights, which tells you plenty about the vibe. Warm and playful, the shops make leaving with one scoop difficult. Choose Kelly&#x27;s when local ice cream should feel personal, changing, and neighborhood-rooted.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=Kelly%27s+Homemade+Ice+Cream+3114+Corrine+Dr%2C+Orlando%2C+FL" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=lineage-coffee-roasting">Lineage Coffee Roasting</a></h3>
+          <p class="meta">Coffee &amp; cafes &middot; $$</p>
+          <p class="addr">Lineage Coffee Roasting, 3201 Corrine Dr, Orlando, FL 32803-2224, United States</p>
+          <p class="desc">A retrofitted grill and an ice cream motor make an unlikely start for a roastery that now teaches the craft. In 2012, husband and wife Jarrett and Justine started roasting in Orlando, and by their own admission the early coffee was terrible. Lineage now roasts small, hand picked lots, cups and dials in every coffee, and teaches you through the Lineage Academy while you drink. Three locations stretch from East End Market to Mills 50 across the city. Choose Lineage when you want a cup that tastes like people who never stopped learning.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=Lineage+Coffee+Roasting+Lineage+Coffee+Roasting%2C+3201+Corrine+Dr%2C+Orlando%2C+FL+32803-2224%2C+United+States" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=sushi-lolas">Sushi Lola&#x27;s</a></h3>
+          <p class="meta">Japanese &amp; sushi &middot; $$</p>
+          <p class="addr">Sushi Lola&#x27;s, 2902 Corrine Dr, Orlando, FL 32803, United States</p>
+          <p class="desc">Sushi Lola&#x27;s runs on a delicious split personality. Owner Aaron Pak has kept two kitchens humming on Corrine Drive in Audubon Park for over a decade: one for sushi, one for Korean, so your table can hold a Playboy roll and a sizzling dolsot bibimbap at once. The Lava Dips are a cult appetizer, the Volcano roll lives up to its name, and dessert arrives as a warm browned butter cookie, on the house. It is the rare fusion spot where both halves of the hyphen earn their keep.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=Sushi+Lola%27s+Sushi+Lola%27s%2C+2902+Corrine+Dr%2C+Orlando%2C+FL+32803%2C+United+States" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/archive.html?venue=winter-park-biscuit-company">Winter Park Biscuit Company</a></h3>
+          <p class="meta">Breakfast &amp; brunch &middot; $$</p>
+          <p class="addr">Winter Park Biscuit Company, 3201 Corrine Dr, Orlando, FL 32803-2224, United States</p>
+          <p class="desc">Everything vegan and nobody believing it is the dare running this East End Market counter. Winter Park Biscuit Company serves oat buttermilk biscuits that come out flaky and golden and disappear in minutes. The crispy chick sandwich has converted more skeptics than a sermon, and biscuits and gravy land rich and peppery. Hibiscus lemonade cuts through the comfort with bright acidity at the table. Choose it when you want Southern comfort food that never announces its virtue, because the biscuit, gravy, and sandwich make the argument on flavor alone.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=Winter+Park+Biscuit+Company+Winter+Park+Biscuit+Company%2C+3201+Corrine+Dr%2C+Orlando%2C+FL+32803-2224%2C+United+States" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        </div>
+      </section>
+
+      <section class="sec" id="districts">
+        <p class="kicker">Keep Going</p>
+        <h2>Every district has a finder page</h2>
+        <p class="lede">One page per district, generated from the same hand-verified dataset as the full guide.</p>
+        <nav class="strip" aria-label="District finder pages">
+          <a href="/winter-park-finder.html">Winter Park</a>
+          <a href="/disney-springs-finder.html">Disney Springs</a>
+          <a href="/milk-district-finder.html">Milk District</a>
+          <a href="/thornton-park-finder.html">Thornton Park</a>
+          <a href="/mills-50-finder.html">Mills 50</a>
+          <a href="/ivanhoe-village-finder.html">Ivanhoe Village</a>
+          <a href="/downtown-orlando-finder.html">Downtown Orlando</a>
+          <a href="/international-drive-finder.html">International Drive</a>
+          <a href="/lake-nona-finder.html">Lake Nona</a>
+          <a href="/universal-finder.html">Universal</a>
+          <a href="/audubon-park-finder.html" aria-current="page">Audubon Park</a>
+          <a href="/college-park-finder.html">College Park</a>
+          <a href="/more-orlando-finder.html">More Orlando</a>
+          <a href="/disney-area-finder.html">Disney Area</a>
+          <a href="/ucf-finder.html">UCF</a>
+          <a href="/kissimmee-finder.html">Kissimmee</a>
+          <a href="/baldwin-park-finder.html">Baldwin Park</a>
+          <a href="/winter-garden-finder.html">Winter Garden</a>
+          <a href="/sanford-finder.html">Sanford</a>
+          <a href="/maitland-finder.html">Maitland</a>
+          <a href="/oviedo-finder.html">Oviedo</a>
+          <a href="/hourglass-finder.html">Hourglass</a>
+          <a href="/sodo-finder.html">SoDo</a>
+        </nav>
+        <div class="handoff">
+          <a class="btn-big" href="/audubon-park-district-guide.html">Read the Audubon Park story</a>
+          <a class="btn-ghost" href="/archive.html?district=audubon-park">Audubon Park in the full finder</a>
+        </div>
+      </section>
+    </main>
+
+<footer>
+      <div class="foot-in">
+        <a class="back-link" href="/">&larr; Back to the full guide</a>
+        <p class="brand-line">407 FYI, an independent Orlando guide. Details can change; confirm before you go.</p>
+        <p>Hand-verified Orlando places · Checked October 2026 · Local Picks are never sponsored · Corrections: <a href="mailto:mail@407.fyi">mail@407.fyi</a></p>
+        <p>Some links on 407 FYI are affiliate links. They never affect which places we list, rank, or recommend.</p>
+      </div>
+    </footer>
+  </body>
+</html>
