@@ -70,5 +70,10 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://407.fyi/convention.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
   <url><loc>https://407.fyi/whats-new.html</loc><lastmod>2026-10-13</lastmod></url>
 </urlset>

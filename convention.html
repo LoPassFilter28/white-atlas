@@ -1,0 +1,536 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="color-scheme" content="light dark" />
+    <title>Orlando Convention Guide · 407 FYI</title>
+    <meta name="description" content="The 407 FYI convention guide to the Orange County Convention Center and International Drive: the three concourses, the pedestrian bridges, parking and transport, attendee logistics, where to eat by the job, and what to avoid." />
+    <link rel="canonical" href="https://407.fyi/convention.html" />
+    <meta property="og:title" content="Orlando Convention Guide · 407 FYI" />
+    <meta property="og:description" content="The three concourses, the bridges, parking and transport, attendee logistics, where to eat by the job, and what to avoid around the Orange County Convention Center." />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://407.fyi/convention.html" />
+    <meta property="og:image" content="https://407.fyi/og-image.png" />
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Urbanist:wght@600;700;800&amp;display=swap" rel="stylesheet" />
+    <script>
+      try {
+        const savedTheme = localStorage.getItem('white-atlas-theme');
+        document.documentElement.dataset.theme = savedTheme === 'light' || savedTheme === 'dark' ? savedTheme : 'dark';
+      } catch (error) {
+        document.documentElement.dataset.theme = 'dark';
+      }
+    </script>
+    <style>
+      /* Night Drive tokens (from the district guides) */
+      :root {
+        color-scheme: dark;
+        --bg: #0a1811; --surface: #122419; --soft: #172a1f; --ink: #f0e8d5;
+        --muted: #c6bba2; --line: #2f4a38; --accent: #765b2f; --accent-ink: #d4b573;
+        --headline: #f6edd6; --focus: #d4b573;
+        --d-a: #14231a; --d-b: #3a5a35; --d-c: #bd9049;
+        --pad: clamp(20px, 5vw, 40px);
+      }
+      * { box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
+      body {
+        margin: 0; background: var(--bg); color: var(--ink);
+        font-family: "Manrope", system-ui, sans-serif; line-height: 1.6;
+        overflow-x: hidden;
+      }
+      h1, h2, h3, .display { font-family: "Urbanist", "Manrope", sans-serif; }
+      a { color: var(--accent-ink); }
+      a:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
+      .kicker {
+        font-family: "Urbanist", sans-serif; font-weight: 700; letter-spacing: .22em;
+        font-size: .72rem; text-transform: uppercase; color: var(--accent-ink); margin: 0 0 14px;
+      }
+
+      /* ---------- hero ---------- */
+      .hero {
+        position: relative; padding: clamp(64px, 13vh, 130px) var(--pad) clamp(48px, 9vh, 84px);
+        background: radial-gradient(ellipse 90% 55% at 50% 112%, rgba(189,144,73,.26), transparent 60%),
+          linear-gradient(168deg, #1d3325, #14231a 55%, #0a1811);
+        border-bottom: 1px solid var(--line);
+      }
+      .hero-in { max-width: 860px; margin: 0 auto; }
+      .crumbs { font-size: .8rem; color: var(--muted); margin: 0 0 26px; }
+      .crumbs a { font-weight: 700; }
+      .hero-brand {
+        font-family: "Urbanist", sans-serif; font-weight: 700; letter-spacing: .22em;
+        font-size: .72rem; text-transform: uppercase; color: var(--accent-ink); text-decoration: none;
+      }
+      .hero h1 {
+        font-size: clamp(2.6rem, 8.5vw, 5.2rem); line-height: .98; letter-spacing: .01em;
+        color: var(--headline); margin: 18px 0 16px; text-transform: uppercase;
+      }
+      .hero .sub { font-size: clamp(1.05rem, 2.6vw, 1.3rem); color: var(--ink); max-width: 620px; margin: 0 0 10px; }
+      .hero .fine { color: var(--muted); max-width: 620px; margin: 0; }
+      .anchor-nav { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 30px; }
+      .anchor-nav a {
+        border: 1px solid var(--line); border-radius: 999px; padding: 8px 14px;
+        font-size: .82rem; font-weight: 700; text-decoration: none; background: rgba(255,255,255,.03);
+        min-height: 42px; display: inline-flex; align-items: center;
+      }
+      .anchor-nav a:hover { border-color: var(--accent-ink); }
+
+      /* ---------- sections ---------- */
+      main { display: block; }
+      .sec { max-width: 860px; margin: 0 auto; padding: clamp(52px, 9vh, 88px) var(--pad) 0; }
+      .sec h2 { font-size: clamp(1.7rem, 4.6vw, 2.4rem); line-height: 1.12; color: var(--headline); margin: 0 0 16px; }
+      .sec .lede { color: var(--muted); font-size: 1.04rem; max-width: 640px; margin: 0 0 26px; }
+      .sec p { max-width: 68ch; }
+      .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 14px; margin: 22px 0 6px; }
+      .card {
+        background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 20px;
+      }
+      .card h3 { margin: 0 0 6px; font-size: 1.12rem; color: var(--headline); }
+      .card .addr { font-weight: 800; color: var(--accent-ink); margin: 0 0 10px; font-size: .98rem; }
+      .card p { margin: 0; color: var(--muted); font-size: .94rem; }
+      .cols { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 22px 0 6px; }
+      @media (max-width: 680px) { .cols { grid-template-columns: 1fr; } }
+      .panel { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 20px 22px; }
+      .panel h3 { margin: 0 0 12px; font-size: 1.05rem; color: var(--headline); }
+      .panel ul, .plain-list { margin: 0; padding-left: 18px; }
+      .panel li, .plain-list li { margin-bottom: 9px; }
+      .panel li:last-child, .plain-list li:last-child { margin-bottom: 0; }
+      .note {
+        border-left: 3px solid var(--accent-ink); background: var(--soft);
+        padding: 14px 18px; border-radius: 0 12px 12px 0; margin: 22px 0 6px; max-width: 68ch;
+      }
+      .note p { margin: 0; }
+      .venue-links { list-style: none; margin: 0; padding: 0; }
+      .venue-links li { margin-bottom: 10px; }
+      .venue-links a { font-weight: 800; text-underline-offset: 3px; }
+      .venue-links span { color: var(--muted); }
+
+      /* ---------- jobs ---------- */
+      .job-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 14px; margin-top: 22px; }
+      .job { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 20px 22px; }
+      .job h3 { margin: 0 0 6px; font-size: 1.08rem; color: var(--headline); }
+      .job p { margin: 0 0 12px; color: var(--muted); font-size: .94rem; }
+      .job ul { list-style: none; margin: 0 0 14px; padding: 0; }
+      .job li { margin-bottom: 7px; }
+      .job li a { font-weight: 800; text-underline-offset: 3px; }
+      .job .browse { font-size: .86rem; font-weight: 800; text-transform: uppercase; letter-spacing: .08em; }
+
+      /* ---------- what to avoid ---------- */
+      .avoid { border-top: 1px solid var(--line); padding: 24px 0 6px; }
+      .avoid h3 { margin: 0 0 10px; font-size: 1.18rem; color: var(--headline); }
+      .avoid p { margin: 0 0 8px; max-width: 68ch; }
+      .avoid strong { color: var(--accent-ink); }
+      .flags { display: flex; flex-wrap: wrap; gap: 8px; margin: 18px 0 6px; }
+      .flags span {
+        border: 1px solid var(--accent); border-radius: 999px; padding: 7px 13px;
+        font-size: .85rem; font-weight: 700; color: var(--accent-ink); background: rgba(255,255,255,.03);
+      }
+      .rules { margin: 16px 0 0; padding-left: 20px; max-width: 68ch; }
+      .rules li { margin-bottom: 10px; }
+
+      .handoff { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 30px; }
+      .btn-big {
+        display: inline-flex; align-items: center; min-height: 52px; padding: 12px 22px;
+        background: var(--accent); color: #fff; font-weight: 800; border-radius: 999px; text-decoration: none;
+      }
+      .btn-big:hover { background: var(--accent-ink); color: #1d2a20; }
+      .btn-ghost {
+        display: inline-flex; align-items: center; min-height: 52px; padding: 12px 22px;
+        border: 1px solid var(--line); color: var(--accent-ink); font-weight: 800; border-radius: 999px; text-decoration: none;
+      }
+
+      footer { border-top: 1px solid var(--line); margin-top: clamp(52px, 9vh, 88px); }
+      .foot-in { max-width: 860px; margin: 0 auto; padding: 34px var(--pad) 44px; color: var(--muted); font-size: .9rem; }
+      .foot-in p { margin: 0 0 9px; }
+      .back-link { font-weight: 800; display: inline-block; margin-bottom: 16px; }
+      .brand-line { color: var(--ink); font-weight: 700; }
+
+      /* ---------- Light theme: app-page tokens ---------- */
+      html[data-theme="light"] {
+        color-scheme: light;
+        --bg: #faf6ec; --surface: #fffdf7; --soft: #f3ecd7; --ink: #1d2a20;
+        --muted: #4c5a45; --line: #ddd3ba; --accent: #8a5f0e; --accent-ink: #7c520c;
+        --headline: #123524; --focus: #8a5f0e;
+      }
+      html[data-theme="light"] .hero {
+        background: radial-gradient(ellipse 90% 55% at 50% 112%, rgba(163,129,63,.30), transparent 60%),
+          linear-gradient(168deg, color-mix(in srgb, var(--d-a) 24%, #faf6ec), color-mix(in srgb, var(--d-a) 40%, #faf6ec) 55%, color-mix(in srgb, var(--d-a) 14%, #faf6ec));
+      }
+      html[data-theme="light"] .anchor-nav a, html[data-theme="light"] .flags span { background: rgba(29,42,32,.04); }
+      html[data-theme="light"] .btn-big { background: var(--accent); color: #fff; }
+      html[data-theme="light"] .btn-big:hover { background: var(--accent-ink); color: #fff; }
+
+      @media print { .anchor-nav { display: none; } }
+      @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+    </style>
+  </head>
+  <body>
+    <header class="hero">
+      <div class="hero-in">
+        <p class="crumbs"><a href="/">407 FYI</a> · Convention Guide</p>
+        <a class="hero-brand" href="/">407 FYI · A Convention Guide</a>
+        <h1>Orlando, for Convention People</h1>
+        <p class="sub">You came for a show at the Orange County Convention Center. This page is the local knowledge that keeps the trip around it from going sideways.</p>
+        <p class="fine">How the center actually works, which hotels are truly connected, where the team dinner comes from, and the moves that cost attendees their evening. Everything here is written for the I-Drive convention district and checked against the center's own guidance.</p>
+        <nav class="anchor-nav" aria-label="On this page">
+          <a href="#concourses">The concourses</a>
+          <a href="#bridges">Bridges and beds</a>
+          <a href="#parking">Parking and transport</a>
+          <a href="#logistics">Attendee logistics</a>
+          <a href="#jobs">Eat and drink by the job</a>
+          <a href="#avoid">What to avoid</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="sec" id="concourses">
+        <p class="kicker">First, Orient Yourself</p>
+        <h2>Two buildings, three concourses, three addresses</h2>
+        <p class="lede">The single most common convention mistake in Orlando is treating the convention center as one building with one front door. It is two buildings on opposite sides of International Drive. The West Building stands on its own; the North and South concourses are the two ends of one second building across the road. Being "at the OCCC" and being in the wrong building are fully compatible.</p>
+        <div class="cards">
+          <article class="card">
+            <h3>West Concourse</h3>
+            <p class="addr">9800 International Dr</p>
+            <p>The original building, home to the Linda W. Chapin Theater and the Valencia Ballroom. Rosen Centre, Rosen Plaza, Pointe Orlando, and the West parking lot all key off this side. Most restaurant depth in the district is a West-side walk.</p>
+          </article>
+          <article class="card">
+            <h3>South Concourse</h3>
+            <p class="addr">9899 International Dr</p>
+            <p>The south end of the North and South building. Hilton Orlando connects here by bridge, and the Hyatt Regency reaches this building through the Oversight Bridge. Use this address for rideshare when your show sits at this end.</p>
+          </article>
+          <article class="card">
+            <h3>North Concourse</h3>
+            <p class="addr">9400 Universal Blvd</p>
+            <p>The north end of the same building, and the address most attendees never learn. Universal Boulevard is its street, which is why Topgolf, Andretti, and the Universal side of the district sit closer to North sessions than the I-Drive storefronts do.</p>
+          </article>
+        </div>
+        <div class="note">
+          <p><strong>The rule:</strong> put the concourse address in the rideshare app, never just "Orange County Convention Center." Large shows use one building, the other, or both, and even repeat attendees get caught assuming last year's building. Registration and concourse functions in the North and South building sit mainly on Level 2, so a meeting point needs a building, a hall, and a level, not "the lobby."</p>
+        </div>
+      </section>
+
+      <section class="sec" id="bridges">
+        <p class="kicker">Staying Connected</p>
+        <h2>The bridges are the real map</h2>
+        <p class="lede">Five pedestrian bridges tie four hotels directly into the center. A bridge-connected room is the only stay in this district that fully deletes the car, the weather, and the parking question from a show day.</p>
+        <div class="cols">
+          <div class="panel">
+            <h3>The five bridges</h3>
+            <ul>
+              <li><strong>Oversight Pedestrian Bridge</strong>: the North and South building to the Hyatt Regency, and onward to the West Building.</li>
+              <li><strong>International Drive Skywalk</strong>: the Hyatt Regency to the West Building, near West Hall C on Level 2.</li>
+              <li><strong>Rosen Centre Skywalk</strong>: the Rosen Centre to the West Building near Hall A.</li>
+              <li><strong>Gary Sain Memorial Bridge</strong>: the Rosen Plaza to the West Building near Hall F, also called the Rosen Plaza Skywalk.</li>
+              <li><strong>Hilton Pedestrian Bridge</strong>: the Hilton Orlando to the South Concourse.</li>
+            </ul>
+          </div>
+          <div class="panel">
+            <h3>Connected hotels, in the guide</h3>
+            <ul class="venue-links">
+              <li><a href="/archive.html?venue=hyatt-regency-orlando">Hyatt Regency Orlando</a> <span>· the only hotel touching both buildings</span></li>
+              <li><a href="/archive.html?venue=rosen-centre">Rosen Centre</a> <span>· West Building, Hall A end</span></li>
+              <li><a href="/archive.html?venue=rosen-plaza">Rosen Plaza</a> <span>· West Building, Hall F end</span></li>
+              <li><a href="/archive.html?venue=hilton-orlando">Hilton Orlando</a> <span>· South Concourse, the North and South building's connected stay</span></li>
+            </ul>
+          </div>
+        </div>
+        <div class="note">
+          <p><strong>Adjacent is not connected.</strong> Rosen Inn at Pointe Orlando, Hyatt Place, and Embassy Suites sit close to the center and work fine as bases, but the trip in is a walk or a trolley ride, not a skywalk. Rosen Shingle Creek on Universal Boulevard is a full convention resort in its own right and a genuine alternative headquarters, but it is not walkable-connected to the center despite the neighboring address. In heat, rain, or dress shoes, treat every non-bridge walk in this district as longer than it looks.</p>
+        </div>
+      </section>
+
+      <section class="sec" id="parking">
+        <p class="kicker">Getting In and Out</p>
+        <h2>Parking and transport, permanent versus show-set</h2>
+        <p class="lede">Half the transport confusion at the center comes from mixing up what is permanent infrastructure with what each show rearranges. Keep the two separate and the district gets much easier to read.</p>
+        <div class="cols">
+          <div class="panel">
+            <h3>Permanent patterns</h3>
+            <ul>
+              <li>The center runs three parking lots, first come, first served. Payment is cashless, cards and phone pay, and the rate varies by event and vehicle size. There is no single permanent price to memorize.</li>
+              <li>Parking does not include in and out privileges. Driving out at lunch means paying to park again.</li>
+              <li>LED signs on the district's main roads point drivers to the lots open that day. Follow the signs over your memory of last year's show.</li>
+              <li>The I-RIDE Trolley stops in front of both buildings on International Drive and is the car-free spine of the corridor. Passes are sold at the center's Guest Services desk.</li>
+              <li>LYNX buses connect the center with the airport and downtown. SunRail does not serve the convention center.</li>
+              <li>Rideshare pickup runs from signed, geofenced points matched to where you are on campus. Follow the app pin to the designated point instead of requesting at a random curb.</li>
+              <li>Pedicabs work the lots and sidewalks for short hops. They are opportunistic, tipped, and not scheduled by the center, so never build a timed transfer around one.</li>
+            </ul>
+          </div>
+          <div class="panel">
+            <h3>Set by each show</h3>
+            <ul>
+              <li>Which lots open, and which overflow lots join them. On peak days the names in the alerts include Aquatica, Pointe Orlando, Watson, Destination, and Dezerland. Seeing those names means the main lots are under pressure, not that you are lost.</li>
+              <li>Valet availability and taxi stand location, both set with show management.</li>
+              <li>Shuttle routes and staging. Hotel forecourts become controlled bus zones during big shows, which is why the pickup that worked at drop-off can be closed to cars at show close.</li>
+              <li>Presale parking and shuttle details for the largest shows, announced per event.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="note">
+          <p><strong>Construction, through 2029:</strong> the Grand Concourse expansion is rebuilding the North and South building's front door, adding meeting space and a ballroom. Convention Way along that building closed on February 26, 2026 and stays closed for the project, so any pre-2026 directions, drop-off habits, or parking routines that use Convention Way on the North and South side are retired. Build extra time into North and South arrivals while the work runs.</p>
+        </div>
+      </section>
+
+      <section class="sec" id="logistics">
+        <p class="kicker">The Practical Layer</p>
+        <h2>Attendee logistics, without the folklore</h2>
+        <p class="lede">The errands that eat a show day are predictable. Here is where each one actually gets solved.</p>
+        <div class="cols">
+          <div class="panel">
+            <h3>Shipping, printing, mobility</h3>
+            <ul>
+              <li><strong>FedEx Office</strong> is the center's business center, with locations in the North, South, and West concourses, the West location near Hall C. Printing, signs, copies, supplies, and packing and shipping for packages up to 150 lb. Label inbound packages care of the show, with the building, hall, booth, and a cell number.</li>
+              <li>Scootaround wheelchair and scooter rentals pick up and drop off through FedEx Office.</li>
+              <li>Lost and found is run separately for each building by center security, one more reason to know which building you are in.</li>
+              <li>Free Wi-Fi runs in the center's public areas, and hotel lobbies in the four connected hotels are the district's de facto quiet work spots.</li>
+            </ul>
+          </div>
+          <div class="panel">
+            <h3>Pharmacy, grocery, luggage</h3>
+            <ul>
+              <li>Closest pharmacies: CVS at 9188 International Dr, its entrance faces the parking lot rather than the street, and Walgreens at 9858 International Dr.</li>
+              <li>There is no full supermarket on the convention campus. The working grocery run is the Publix at Williamsburg Downs, 5350 Central Florida Pkwy, or the Turkey Lake Road corridor west of I-Drive. Treat groceries as a rideshare errand, not a walk.</li>
+              <li><strong>Luggage:</strong> no public luggage storage service near the center is verified. On departure day, the real options are your hotel's bell desk or shipping the bag home through FedEx Office. Plan for one of those rather than discovering it at checkout.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="sec" id="jobs">
+        <p class="kicker">Eat and Drink</p>
+        <h2>Organized by the job, not the alphabet</h2>
+        <p class="lede">Convention eating is a set of jobs: feed the team, impress the client, eat before the first session, unwind after the last one. Start from the job and the short list writes itself. Every pick below opens its full card in the finder, with directions and details.</p>
+        <div class="job-grid">
+          <article class="job">
+            <h3>Team dinners</h3>
+            <p>Mixed tastes, one check, nobody stranded. Big rooms that share food well and take groups seriously.</p>
+            <ul>
+              <li><a href="/archive.html?venue=big-fin-seafood-kitchen">Big Fin Seafood Kitchen</a></li>
+              <li><a href="/archive.html?venue=maggiano-s-pointe-orlando">Maggiano's Little Italy</a></li>
+              <li><a href="/archive.html?venue=cafe-tu-tu-tango">Café Tu Tu Tango</a></li>
+              <li><a href="/archive.html?venue=yard-house">Yard House</a></li>
+              <li><a href="/archive.html?venue=rocco-s-tacos-tequila-bar">Rocco's Tacos &amp; Tequila Bar</a></li>
+            </ul>
+            <a class="browse" href="/archive.html?occasion=convention">Browse convention picks</a>
+          </article>
+          <article class="job">
+            <h3>Client entertainment</h3>
+            <p>Quiet enough to talk, strong enough to remember. The short ride to Sand Lake is the upgrade move.</p>
+            <ul>
+              <li><a href="/archive.html?venue=norman-s-orlando">Norman's Orlando</a></li>
+              <li><a href="/archive.html?venue=the-capital-grille-pointe-orlando">The Capital Grille</a></li>
+              <li><a href="/archive.html?venue=christini-s-ristorante-italiano">Christini's Ristorante Italiano</a></li>
+              <li><a href="/archive.html?venue=chathams">Chathams Place</a></li>
+              <li><a href="/archive.html?venue=fleming-s-prime-steakhouse-sand-lake">Fleming's Prime Steakhouse</a></li>
+            </ul>
+            <a class="browse" href="/archive.html?district=i-drive">Browse the district</a>
+          </article>
+          <article class="job">
+            <h3>Breakfast before sessions</h3>
+            <p>The thinnest meal in the district. Hotels carry most of it; these are the rooms worth leaving the hotel for.</p>
+            <ul>
+              <li><a href="/archive.html?venue=keke-s-breakfast-cafe">Keke's Breakfast Cafe</a></li>
+              <li><a href="/archive.html?venue=le-cafe-de-paris">Le Café de Paris</a></li>
+              <li><a href="/archive.html?venue=hash-house-a-go-go-orlando">Hash House A Go Go</a></li>
+              <li><a href="/archive.html?venue=first-watch">First Watch</a></li>
+            </ul>
+            <a class="browse" href="/archive.html?q=breakfast">Search breakfast</a>
+          </article>
+          <article class="job">
+            <h3>Post-event drinks</h3>
+            <p>After the show floor closes, the corridor splits into live music energy and Sand Lake decompression.</p>
+            <ul>
+              <li><a href="/archive.html?venue=the-whiskey">The Whiskey</a></li>
+              <li><a href="/archive.html?venue=vines-by-h">Vines by H</a></li>
+              <li><a href="/archive.html?venue=ole-red-orlando">Ole Red Orlando</a></li>
+              <li><a href="/archive.html?venue=toms-watch-bar-orlando">Tom's Watch Bar</a></li>
+              <li><a href="/archive.html?venue=mangos">Mango's Tropical Cafe</a></li>
+            </ul>
+            <a class="browse" href="/archive.html?district=i-drive">Browse the district</a>
+          </article>
+          <article class="job">
+            <h3>Family companions</h3>
+            <p>For the people who came with you and have the day to fill while you are in sessions. Weatherproof first.</p>
+            <ul>
+              <li><a href="/archive.html?venue=icon-park">ICON Park &amp; The Orlando Eye</a></li>
+              <li><a href="/archive.html?venue=madame-tussauds-orlando">Madame Tussauds Orlando</a></li>
+              <li><a href="/archive.html?venue=wonderworks-orlando">WonderWorks Orlando</a></li>
+              <li><a href="/archive.html?venue=andretti-indoor-karting-orlando">Andretti Indoor Karting and Games</a></li>
+              <li><a href="/archive.html?venue=dezerland-park-orlando">Dezerland Park Orlando</a></li>
+            </ul>
+            <a class="browse" href="/archive.html?occasion=family">Browse family picks</a>
+          </article>
+          <article class="job">
+            <h3>Shopping runs</h3>
+            <p>Outlet trips work when they are planned as trips. The Disney outlet is a destination, not a detour.</p>
+            <ul>
+              <li><a href="/archive.html?venue=disney-character-warehouse">Disney Character Warehouse</a></li>
+              <li><a href="/archive.html?venue=orlando-international-premium-outlets">Orlando International Premium Outlets</a></li>
+              <li><a href="/archive.html?venue=orlando-vineland-premium-outlets">Orlando Vineland Premium Outlets</a></li>
+              <li><a href="/archive.html?venue=lake-buena-vista-factory-stores">Lake Buena Vista Factory Stores</a></li>
+              <li><a href="/archive.html?venue=orlando-outlet-marketplace">Orlando Outlet Marketplace</a></li>
+            </ul>
+            <a class="browse" href="/archive.html?q=outlet">Search outlets</a>
+          </article>
+        </div>
+      </section>
+
+      <section class="sec" id="avoid">
+        <p class="kicker">Learn It Here, Not Out There</p>
+        <h2>What to avoid</h2>
+        <p class="lede">Most convention pain in this district is not bad luck. It is a short list of reasonable-sounding moves built on false assumptions, repeated by thousands of attendees every show. Here is the list, with the assumption, the reality, and the better move.</p>
+
+        <article class="avoid">
+          <h3>Pinning "the convention center" as your destination</h3>
+          <p><strong>The assumption:</strong> one building, one entrance, one pin.</p>
+          <p><strong>What happens:</strong> you arrive at the wrong building, on the wrong side of a multi-lane road, with a long indoor and outdoor walk to registration.</p>
+          <p><strong>Do instead:</strong> use the concourse address, West 9800 International Dr, South 9899 International Dr, North 9400 Universal Blvd, and name a meeting point with a building, hall, and level.</p>
+          <p><strong>The cost:</strong> the first session, the first meeting, or both.</p>
+        </article>
+
+        <article class="avoid">
+          <h3>Requesting a rideshare at the hotel forecourt when the show lets out</h3>
+          <p><strong>The assumption:</strong> pickup works the way the morning drop-off did.</p>
+          <p><strong>What happens:</strong> tens of thousands of people leave at once, hotel forecourts become controlled bus zones, and cars cannot reach the door. Attendees end up walking a long way to an open road, and some get into unmetered cars that were never sent for them.</p>
+          <p><strong>Do instead:</strong> use the center's signed rideshare points, walk to a calmer street before requesting, take the trolley or a hotel shuttle, or wait out the first surge somewhere comfortable.</p>
+          <p><strong>The cost:</strong> an hour of your evening, surge pricing, and the dinner reservation you were rushing to.</p>
+        </article>
+
+        <article class="avoid">
+          <h3>Driving out at lunch</h3>
+          <p><strong>The assumption:</strong> your parking spot, or at least your payment, waits for you.</p>
+          <p><strong>What happens:</strong> center parking has no in and out privileges. Leaving means paying to park again, and on a peak day the lot you return to may be full or redirected.</p>
+          <p><strong>Do instead:</strong> eat inside the center, walk to Pointe Orlando from the West side, or build the day so the car moves once.</p>
+          <p><strong>The cost:</strong> a second parking fee and a parking hunt in the middle of the show day.</p>
+        </article>
+
+        <article class="avoid">
+          <h3>Expecting cash, or a fixed parking price</h3>
+          <p><strong>The assumption:</strong> parking costs what it cost last year and takes cash.</p>
+          <p><strong>What happens:</strong> payment is cashless only and the rate varies by event and vehicle size, so the surprise arrives at the gate with a line behind you.</p>
+          <p><strong>Do instead:</strong> carry a card or phone pay, and check the show's own parking guidance before driving in.</p>
+          <p><strong>The cost:</strong> gate friction at the exact moment thousands of other drivers arrive.</p>
+        </article>
+
+        <article class="avoid">
+          <h3>Parking before you know your building</h3>
+          <p><strong>The assumption:</strong> any center lot is close enough.</p>
+          <p><strong>What happens:</strong> the West lot and the North and South lot serve different buildings across International Drive from each other. The wrong choice is a long walk in show clothes, in Florida weather.</p>
+          <p><strong>Do instead:</strong> match the lot to the concourse on your badge or app first, then follow the LED signs to what is open.</p>
+          <p><strong>The cost:</strong> up to a mile of walking and a late, sweaty arrival.</p>
+        </article>
+
+        <article class="avoid">
+          <h3>Treating the I-RIDE Trolley as a schedule</h3>
+          <p><strong>The assumption:</strong> a trolley line on the map means a trolley on a timetable.</p>
+          <p><strong>What happens:</strong> waits are unpredictable and bunching is normal, especially when shows let out. It is a fine way to drift to dinner and a poor way to reach a keynote.</p>
+          <p><strong>Do instead:</strong> ride it for evenings and errands, and give timed trips a rideshare, a shuttle, or a generous buffer.</p>
+          <p><strong>The cost:</strong> the session you planned the morning around.</p>
+        </article>
+
+        <article class="avoid">
+          <h3>Assuming SunRail gets you to the convention center</h3>
+          <p><strong>The assumption:</strong> Orlando's train must stop at Orlando's convention center.</p>
+          <p><strong>What happens:</strong> it does not. The rail line runs nowhere near I-Drive, and the discovery usually happens with luggage in hand.</p>
+          <p><strong>Do instead:</strong> plan on LYNX buses, the trolley, shuttles, rideshare, or a car for the convention district.</p>
+          <p><strong>The cost:</strong> a stranded arrival and an expensive recovery ride.</p>
+        </article>
+
+        <article class="avoid">
+          <h3>Winging the team dinner on a show night</h3>
+          <p><strong>The assumption:</strong> a party of eight can find a table when the show closes.</p>
+          <p><strong>What happens:</strong> every show lets out into the same restaurants at the same time. The walkable rooms fill, Restaurant Row books out, and the group ends up scattered or eating badly and late.</p>
+          <p><strong>Do instead:</strong> book the team and client dinners when you book the flights. Use the job lists above; Big Fin and Maggiano's exist on them precisely for this night.</p>
+          <p><strong>The cost:</strong> the one evening the whole team was in the same city.</p>
+        </article>
+
+        <article class="avoid">
+          <h3>Popping over to the outlets between sessions</h3>
+          <p><strong>The assumption:</strong> the outlet stores are a quick in and out.</p>
+          <p><strong>What happens:</strong> the Disney Character Warehouse runs a virtual queue on busy days that can stretch far beyond a session break, and outlet parking tightens exactly when everyone else has the same idea.</p>
+          <p><strong>Do instead:</strong> give a shopping run its own block of time, ideally a half day, and join the queue before you commit to the trip.</p>
+          <p><strong>The cost:</strong> the sessions you skipped for a store you never entered.</p>
+        </article>
+
+        <article class="avoid">
+          <h3>Buying park tickets from a discount booth</h3>
+          <p><strong>The assumption:</strong> a cheap ticket is a ticket.</p>
+          <p><strong>What happens:</strong> booth and reseller tickets can be partially used or nontransferable, and park tickets are tied to the original buyer. The gate refuses entry, and the day gets rebuilt at full gate price on top of what was already spent.</p>
+          <p><strong>Do instead:</strong> buy from the parks or an authorized seller, and link the ticket to your own account before you travel.</p>
+          <p><strong>The cost:</strong> the ticket money, the park day, and the full price paid twice.</p>
+        </article>
+
+        <article class="avoid">
+          <h3>Taking the free ticket that costs a presentation</h3>
+          <p><strong>The assumption:</strong> a short sales presentation is a fair trade for free admission.</p>
+          <p><strong>What happens:</strong> the presentation eats the best part of a day, the pressure is professional-grade, and the tickets come with conditions. Some visitors sign contracts they spend the flight home regretting.</p>
+          <p><strong>Do instead:</strong> price your vacation day honestly. If the tickets are worth less than the day, buy the tickets. If you ever do sign anything, know the cancellation terms before you sign, in writing.</p>
+          <p><strong>The cost:</strong> a day of the trip, and possibly a contract.</p>
+        </article>
+
+        <article class="avoid">
+          <h3>Accepting the rental counter toll package on reflex</h3>
+          <p><strong>The assumption:</strong> the toll add-on is the only way through Florida's cashless tolls.</p>
+          <p><strong>What happens:</strong> rental toll programs charge daily device or service fees for the whole rental, even on days you never touch a toll road, while the airport's Visitor Toll Pass covers the same roads without the daily fee structure.</p>
+          <p><strong>Do instead:</strong> compare the counter offer with the Visitor Toll Pass or your own transponder before you sign the rental agreement.</p>
+          <p><strong>The cost:</strong> a quiet fee stack that can rival a day of parking.</p>
+        </article>
+
+        <article class="avoid">
+          <h3>Judging a hotel by its nightly rate</h3>
+          <p><strong>The assumption:</strong> the rate on the search page is the price of the stay.</p>
+          <p><strong>What happens:</strong> resort fees and parking charges stack on top at the property, and the deal re-prices itself at checkout, during the most expensive weeks of the convention calendar.</p>
+          <p><strong>Do instead:</strong> total the full stay, rate, resort fee, and parking, before comparing hotels. A connected hotel with no parking charge can beat a cheaper rate across the street.</p>
+          <p><strong>The cost:</strong> the difference between the budget you approved and the folio you get.</p>
+        </article>
+
+        <h3 style="margin-top:34px;color:var(--headline)">Red flag phrases</h3>
+        <p style="color:var(--muted);max-width:68ch">When you hear these, slow down. Each one is the start of a story that ends in the list above.</p>
+        <div class="flags">
+          <span>"Free tickets"</span>
+          <span>"Official visitor information"</span>
+          <span>"Just a short presentation"</span>
+          <span>"Minutes from the parks"</span>
+          <span>"Transportation included"</span>
+          <span>"Starting at"</span>
+          <span>"Fees due at the property"</span>
+        </div>
+
+        <h3 style="margin-top:30px;color:var(--headline)">Rules of thumb</h3>
+        <ol class="rules">
+          <li>If the price is not final, it is not the price.</li>
+          <li>If a discount costs hours, price the hours.</li>
+          <li>If your pickup depends on one crowded doorway, you need a second pickup plan.</li>
+          <li>If the itinerary has no slack, Orlando will create slack at the worst possible moment.</li>
+          <li>If the plan only works when traffic, weather, and crowds behave, it is not a plan.</li>
+        </ol>
+      </section>
+
+      <section class="sec" id="more">
+        <p class="kicker">Keep Going</p>
+        <h2>The district, and the whole guide</h2>
+        <p class="lede">This page covers the convention layer. The International Drive district story covers the street itself, and the full finder carries every place in the guide with search, filters, and a map.</p>
+        <div class="handoff">
+          <a class="btn-big" href="/international-drive-district-guide.html">Read the International Drive story</a>
+          <a class="btn-ghost" href="/archive.html?district=i-drive">Browse International Drive in the finder</a>
+          <a class="btn-ghost" href="/archive.html?occasion=convention">All convention picks</a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="foot-in">
+        <a class="back-link" href="/">&larr; Back to the full guide</a>
+        <p class="brand-line">407 FYI, an independent Orlando guide. Details can change; confirm before you go.</p>
+        <p>Hand-verified Orlando places · Checked October 2026 · Local Picks are never sponsored · Corrections: <a href="mailto:mail@407.fyi">mail@407.fyi</a></p>
+        <p>Some links on 407 FYI are affiliate links. They never affect which places we list, rank, or recommend.</p>
+      </div>
+    </footer>
+  </body>
+</html>
