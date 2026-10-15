@@ -89,7 +89,6 @@
     .map-entry-action{min-width:158px;display:flex;align-items:center;justify-content:center;gap:9px;padding:18px 22px;border-left:1px solid rgba(255,255,255,.2);background:#b08a48;color:#221a08;font-size:.88rem;font-weight:800}.map-entry-action::after{content:'→';font-size:1.06rem}.map-entry:hover .map-entry-action,.map-entry:focus-visible .map-entry-action{background:#c9a55c}.map-entry:focus-visible{outline:3px solid var(--focus);outline-offset:2px}
     .ask-local{margin:28px 0 0;background:var(--surface);color:var(--ink);border:1px solid var(--line);display:grid;grid-template-columns:minmax(230px,.72fr) minmax(0,1.28fr);align-items:stretch}
     .ask-local-copy{padding:clamp(22px,4vw,32px);border-right:1px solid var(--line);display:flex;flex-direction:column;justify-content:center}.ask-local-kicker{margin:0 0 8px;color:var(--accent-ink);font-size:.78rem;font-weight:800}.ask-local h2{margin:0;color:var(--headline);font-size:clamp(1.85rem,4.8vw,3.15rem);line-height:.98;letter-spacing:-.05em}.ask-local-intro{margin:14px 0 0;color:var(--muted);font-size:.88rem;line-height:1.45}
-    .ask-guides{padding:clamp(20px,3vw,28px)}.ask-guides-label{margin:0 0 11px;color:var(--muted);font-size:.72rem;font-weight:800}.ask-guide-list{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:1fr 1fr;gap:8px}.ask-guide{min-width:0;display:flex;flex-direction:column}.ask-guide:last-child{grid-column:1/-1}.ask-guide button{position:relative;width:100%;flex:1;min-height:108px;padding:13px 34px 13px 13px;border:1px solid var(--line);border-radius:5px;background:var(--bg);color:var(--ink);text-align:left}.ask-guide button::after{content:'→';position:absolute;right:12px;top:12px;color:var(--accent-ink);font-weight:800}.ask-guide button:hover,.ask-guide button:focus-visible{border-color:var(--accent);background:var(--soft);outline:0}.ask-guide button[aria-pressed="true"]{border-color:var(--accent);background:var(--accent);color:var(--on-accent)}.ask-guide button[aria-pressed="true"]::after,.ask-guide button[aria-pressed="true"] .ask-guide-prompt,.ask-guide button[aria-pressed="true"] .ask-guide-picks{color:var(--on-accent)}.ask-guide h3{margin:0 0 5px;color:inherit;font-size:.88rem;line-height:1.2;letter-spacing:-.01em}.ask-guide-prompt{display:block;color:var(--muted);font-size:.72rem;line-height:1.35}.ask-guide-picks{display:block;margin-top:6px;color:var(--accent-ink);font-size:.72rem;line-height:1.35}.ask-guide-picks b{font-weight:800}.ask-local-status{min-height:1.2em;margin:11px 0 0;color:var(--accent-ink);font-size:.72rem;font-weight:800}
     .ask-picks-link{grid-column:1/-1;display:flex;align-items:center;justify-content:space-between;gap:18px;border-top:1px solid var(--line);padding:15px clamp(22px,4vw,32px);color:var(--accent-ink);text-decoration:none}.ask-picks-link:hover strong,.ask-picks-link:focus-visible strong{text-decoration:underline;text-underline-offset:3px}.ask-picks-link span{color:var(--muted);font-size:.78rem}.ask-picks-link strong{display:inline-flex;align-items:center;gap:8px;white-space:nowrap;font-size:.88rem}.ask-picks-link strong::after{content:'↓';font-size:1.06rem;color:var(--accent-ink)}
     .scanner-start{display:none;padding:4px 0 30px;border-bottom:1px solid var(--line)}
     html.scanner-mode .scanner-start{display:block}
@@ -245,13 +244,11 @@
     .wordmark{display:grid;grid-template-columns:auto clamp(34px,6vw,52px) minmax(150px,1fr);align-items:end;column-gap:clamp(8px,1.4vw,14px);width:min(720px,100%);max-width:100%;margin:0;color:var(--headline)}
     .wordmark-city{display:block;font-size:clamp(4rem,10.4vw,6.9rem);line-height:.72;letter-spacing:-.074em;font-weight:700}.wordmark-fountain{width:100%;height:auto;align-self:center;overflow:visible;color:var(--accent-ink)}.wordmark-fountain path,.wordmark-fountain ellipse{fill:none;stroke:currentColor;stroke-width:2.4;stroke-linecap:round;vector-effect:non-scaling-stroke}.wordmark-local{display:grid;align-self:center;justify-items:start;padding-top:.25em;line-height:.9}.wordmark-local i{color:var(--accent-ink);font-family:"Manrope",ui-sans-serif,sans-serif;font-size:clamp(.72rem,1.55vw,1rem);font-style:normal;font-weight:800;letter-spacing:.35em;text-transform:uppercase}.wordmark-local b{margin-top:.28em;font-size:clamp(1.6rem,3.7vw,2.6rem);font-weight:700;letter-spacing:-.035em;text-transform:uppercase}
     .flashbacks-pagebar-actions,.export-head-actions{display:flex;align-items:center;justify-content:flex-end;gap:10px}.export-head-actions{flex:0 0 auto}
-    html[data-theme="dark"] .map-entry{border-color:#6d5529;background:#0f2417}html[data-theme="dark"] .map-entry-icon{border-color:#33503c;background:#1a2f21}html[data-theme="dark"] .map-entry-icon svg,html[data-theme="dark"] .map-entry-label{color:var(--accent-ink)}html[data-theme="dark"] .map-entry-detail{color:var(--muted)}html[data-theme="dark"] .map-entry-action{border-color:#8a682d;background:var(--accent);color:var(--on-accent)}html[data-theme="dark"] .map-entry:hover .map-entry-action,html[data-theme="dark"] .map-entry:focus-visible .map-entry-action{background:#c9a55c}
-    html[data-theme="dark"] .ask-guide button[aria-pressed="true"],html[data-theme="dark"] .scanner-location.active,html[data-theme="dark"] .scanner-directory,html[data-theme="dark"] .list-shortcut[aria-pressed="true"],html[data-theme="dark"] .category-pill[aria-pressed="true"],html[data-theme="dark"] .category-option[aria-pressed="true"],html[data-theme="dark"] .location-btn,html[data-theme="dark"] .bottom-tab[aria-pressed="true"],html[data-theme="dark"] .copy-list:hover,html[data-theme="dark"] .copy-list:focus-visible,html[data-theme="dark"] .export-trigger,html[data-theme="dark"] .selection-toolbar .review-selection,html[data-theme="dark"] .pick-place[aria-pressed="true"],html[data-theme="dark"] .tag.star,html[data-theme="dark"] .tag.bib,html[data-theme="dark"] .quick-directions:hover,html[data-theme="dark"] .quick-directions:focus-visible,html[data-theme="dark"] .copy-place:hover,html[data-theme="dark"] .copy-place:focus-visible,html[data-theme="dark"] .flag-closure:hover,html[data-theme="dark"] .flag-closure:focus-visible,html[data-theme="dark"] .export-chip:has(input:checked),html[data-theme="dark"] .format-choice:has(input:checked),html[data-theme="dark"] .export-action,html[data-theme="dark"] .flashbacks-entry:hover .flashbacks-entry-action,html[data-theme="dark"] .flashbacks-entry:focus-visible .flashbacks-entry-action{color:var(--on-accent)}
-    html[data-theme="dark"] .ask-guide button[aria-pressed="true"]::after,html[data-theme="dark"] .ask-guide button[aria-pressed="true"] .ask-guide-prompt,html[data-theme="dark"] .ask-guide button[aria-pressed="true"] .ask-guide-picks,html[data-theme="dark"] .scanner-location.active span,html[data-theme="dark"] .scanner-location.active b,html[data-theme="dark"] .list-shortcut[aria-pressed="true"] span,html[data-theme="dark"] .location-btn svg,html[data-theme="dark"] .location-btn .nearest-detail{color:var(--on-accent)}
+    html[data-theme="dark"] .map-entry{border-color:#6d5529;background:#0f2417}html[data-theme="dark"] .map-entry-icon{border-color:#33503c;background:#1a2f21}html[data-theme="dark"] .map-entry-icon svg,html[data-theme="dark"] .map-entry-label{color:var(--accent-ink)}html[data-theme="dark"] .map-entry-detail{color:var(--muted)}html[data-theme="dark"] .map-entry-action{border-color:#8a682d;background:var(--accent);color:var(--on-accent)}html[data-theme="dark"] .map-entry:hover .map-entry-action,html[data-theme="dark"] .map-entry:focus-visible .map-entry-action{background:#c9a55c}html[data-theme="dark"] .scanner-location.active,html[data-theme="dark"] .scanner-directory,html[data-theme="dark"] .list-shortcut[aria-pressed="true"],html[data-theme="dark"] .category-pill[aria-pressed="true"],html[data-theme="dark"] .category-option[aria-pressed="true"],html[data-theme="dark"] .location-btn,html[data-theme="dark"] .bottom-tab[aria-pressed="true"],html[data-theme="dark"] .copy-list:hover,html[data-theme="dark"] .copy-list:focus-visible,html[data-theme="dark"] .export-trigger,html[data-theme="dark"] .selection-toolbar .review-selection,html[data-theme="dark"] .pick-place[aria-pressed="true"],html[data-theme="dark"] .tag.star,html[data-theme="dark"] .tag.bib,html[data-theme="dark"] .quick-directions:hover,html[data-theme="dark"] .quick-directions:focus-visible,html[data-theme="dark"] .copy-place:hover,html[data-theme="dark"] .copy-place:focus-visible,html[data-theme="dark"] .flag-closure:hover,html[data-theme="dark"] .flag-closure:focus-visible,html[data-theme="dark"] .export-chip:has(input:checked),html[data-theme="dark"] .format-choice:has(input:checked),html[data-theme="dark"] .export-action,html[data-theme="dark"] .flashbacks-entry:hover .flashbacks-entry-action,html[data-theme="dark"] .flashbacks-entry:focus-visible .flashbacks-entry-action{color:var(--on-accent)}html[data-theme="dark"] .scanner-location.active span,html[data-theme="dark"] .scanner-location.active b,html[data-theme="dark"] .list-shortcut[aria-pressed="true"] span,html[data-theme="dark"] .location-btn svg,html[data-theme="dark"] .location-btn .nearest-detail{color:var(--on-accent)}
     html[data-theme="dark"] .nearest-action{background:#17130b;color:#c9a55c}html[data-theme="dark"] .location-btn{--nearest-ping:#c9a55c}html[data-theme="dark"] .location-btn.active{background:#14231a;border-color:var(--accent)}html[data-theme="dark"] .location-btn.active .nearest-action{background:var(--accent);color:var(--on-accent)}html[data-theme="dark"] .map-frame{border-color:#33503c;background:#08170e}html[data-theme="dark"] #map:focus-visible{box-shadow:inset 0 0 0 3px var(--focus)}html[data-theme="dark"] .map-brand{border-left-color:var(--accent)}html[data-theme="dark"] .legend-dot{background:var(--accent)}html[data-theme="dark"] .zoom-stack button{border-color:#33503c;background:rgba(8,20,12,.94)}html[data-theme="dark"] .zoom-stack button:active{background:var(--accent);color:var(--on-accent)}html[data-theme="dark"] .map-selection{box-shadow:0 10px 36px rgba(0,0,0,.58)}html[data-theme="dark"] .export-backdrop{background:rgba(4,10,7,.82)}
     html[data-theme="dark"] .history-tier-title{border-color:var(--line);background:#1a2f21;color:var(--accent-ink)}html[data-theme="dark"] .copy-status{background:var(--accent);color:var(--on-accent)}html[data-theme="dark"] option{background:var(--surface);color:var(--ink)}html[data-theme="dark"] .export-sheet{box-shadow:0 26px 90px rgba(0,0,0,.72)}html[data-theme="dark"] .finder{background:color-mix(in srgb,var(--bg) 96%,transparent)}html[data-theme="dark"] .tag.soon{color:var(--muted)}html[data-theme="dark"] .flashbacks{border-top-color:var(--headline)}
     @media(max-width:620px){
-      .app{padding-bottom:116px}.mast{padding-top:22px}.mast-row{margin-bottom:46px}.map-entry{grid-template-columns:1fr;margin-top:18px}.map-entry-copy{grid-template-columns:42px minmax(0,1fr);gap:12px;padding:16px}.map-entry-icon{width:42px;height:42px}.map-entry-icon svg{width:23px;height:23px}.map-entry-action{min-width:0;justify-content:space-between;padding:13px 16px;border-left:0;border-top:1px solid rgba(255,255,255,.2)}.venue-row{grid-template-columns:minmax(0,1fr) 70px}.venue-quick-actions{width:68px;margin:9px 0 9px 6px}.quick-directions,.copy-place,.flag-closure{width:68px;min-height:38px;padding:6px 4px;font-size:.72rem}.quick-directions::after{content:' ↗'}.data-out{align-items:flex-start}.data-out-note{max-width:48%}.copy-list{white-space:normal;text-align:center}.ask-local{grid-template-columns:1fr;margin-top:20px}.ask-local-copy{padding:22px 18px;border-right:0;border-bottom:1px solid var(--line)}.ask-guides{padding:18px}.ask-guide-list{grid-template-columns:1fr}.ask-guide:last-child{grid-column:auto}.ask-guide button,.ask-guide-link{min-height:96px}.ask-picks-link{align-items:flex-start;padding:15px 18px}.ask-picks-link span{max-width:105px}.ask-picks-link strong{white-space:normal;text-align:right;justify-content:flex-end}.filters{grid-template-columns:1fr}.smart-filters{grid-template-columns:1fr 1fr}.finder{padding-top:10px}.location-bar{align-items:flex-start}.location-status{padding-top:3px}.map-head{align-items:flex-start}.map-head p{max-width:48%}.map-frame{height:min(62vh,480px);min-height:350px}.map-note{flex-direction:column;gap:4px}.venue-toggle{grid-template-columns:32px minmax(0,1fr);gap:9px;padding:19px 0}.venue-detail{padding-left:41px}.detail-grid{grid-template-columns:1fr;gap:16px}.detail-block.wide{grid-column:auto}.summary{padding-top:22px}.description{font-size:.88rem}.footer{flex-direction:column}.category-pills{display:flex;flex-wrap:wrap;gap:6px}.category-pill{flex:0 0 auto;min-height:42px;padding:8px 11px;font-size:.72rem}
+      .app{padding-bottom:116px}.mast{padding-top:22px}.mast-row{margin-bottom:46px}.map-entry{grid-template-columns:1fr;margin-top:18px}.map-entry-copy{grid-template-columns:42px minmax(0,1fr);gap:12px;padding:16px}.map-entry-icon{width:42px;height:42px}.map-entry-icon svg{width:23px;height:23px}.map-entry-action{min-width:0;justify-content:space-between;padding:13px 16px;border-left:0;border-top:1px solid rgba(255,255,255,.2)}.venue-row{grid-template-columns:minmax(0,1fr) 70px}.venue-quick-actions{width:68px;margin:9px 0 9px 6px}.quick-directions,.copy-place,.flag-closure{width:68px;min-height:38px;padding:6px 4px;font-size:.72rem}.quick-directions::after{content:' ↗'}.data-out{align-items:flex-start}.data-out-note{max-width:48%}.copy-list{white-space:normal;text-align:center}.ask-local{grid-template-columns:1fr;margin-top:20px}.ask-local-copy{padding:22px 18px;border-right:0;border-bottom:1px solid var(--line)}.ask-picks-link{align-items:flex-start;padding:15px 18px}.ask-picks-link span{max-width:105px}.ask-picks-link strong{white-space:normal;text-align:right;justify-content:flex-end}.filters{grid-template-columns:1fr}.smart-filters{grid-template-columns:1fr 1fr}.finder{padding-top:10px}.location-bar{align-items:flex-start}.location-status{padding-top:3px}.map-head{align-items:flex-start}.map-head p{max-width:48%}.map-frame{height:min(62vh,480px);min-height:350px}.map-note{flex-direction:column;gap:4px}.venue-toggle{grid-template-columns:32px minmax(0,1fr);gap:9px;padding:19px 0}.venue-detail{padding-left:41px}.detail-grid{grid-template-columns:1fr;gap:16px}.detail-block.wide{grid-column:auto}.summary{padding-top:22px}.description{font-size:.88rem}.footer{flex-direction:column}.category-pills{display:flex;flex-wrap:wrap;gap:6px}.category-pill{flex:0 0 auto;min-height:42px;padding:8px 11px;font-size:.72rem}
     }
     @media(max-width:620px){
       .scanner-head{display:block;padding-top:16px}.scanner-head p{max-width:none;margin-top:8px;text-align:left}.scanner-ask-head{display:block}.scanner-ask-head p{margin-top:3px;text-align:left}.scanner-ask-options{grid-template-columns:1fr}.scanner-start{padding-bottom:22px}
@@ -365,8 +362,8 @@
       .venue-list .venue{min-width:0}
       .venue-quick-actions .copy-place,.venue-quick-actions .flag-closure{display:none}
       .venue-quick-actions{align-self:start;margin-top:14px}
-      .district-name,.pick-card-name,.ask-guide h3,.category-option,.list-shortcut,.nearest-title,.nearest-detail{overflow-wrap:anywhere;word-break:normal}
-      .layer-head>*,.district-card>*,.pick-card>*,.ask-local>*,.ask-guide,.nearest-copy,.summary>*{min-width:0;max-width:100%}
+      .district-name,.pick-card-name,.category-option,.list-shortcut,.nearest-title,.nearest-detail{overflow-wrap:anywhere;word-break:normal}
+      .layer-head>*,.district-card>*,.pick-card>*,.ask-local>*,.nearest-copy,.summary>*{min-width:0;max-width:100%}
     }
     @media(min-width:1500px){
       :root{--max:1340px}
@@ -379,8 +376,8 @@
     .quick-directions,.copy-place,.flag-closure,.category-option,.custom-scope-tools button{min-height:44px}
     .layer-head,.summary,.data-out,.footer,.map-head,.map-note,.scanner-head,.scanner-ask-head{min-width:0}
     .layer-head>*,.summary>*,.data-out>*,.footer>*,.map-head>*,.map-note>*,.scanner-head>*,.scanner-ask-head>*{min-width:0;overflow-wrap:anywhere}
-    .venue-row,.venue-toggle,.venue-toggle>span,.venue-quick-actions,.detail-grid,.detail-block,.ask-guide button,.selection-toolbar>*{min-width:0}
-    .pick-card-name,.pick-card-meta,.ask-guide-prompt,.ask-guide-picks,.nearest-detail,.history-title,.detail-block p,.footer span,.footer a{overflow-wrap:anywhere}.footer-legal{display:flex;gap:18px;align-items:baseline;flex-wrap:wrap}.footer-details{margin:0}.footer-details summary{cursor:pointer;font-weight:800;text-decoration:underline;text-underline-offset:3px}.footer-details-body{margin-top:10px;max-width:70ch;line-height:1.6}.footer-details-body p{margin:0 0 8px}
+    .venue-row,.venue-toggle,.venue-toggle>span,.venue-quick-actions,.detail-grid,.detail-block,.selection-toolbar>*{min-width:0}
+    .pick-card-name,.pick-card-meta,.nearest-detail,.history-title,.detail-block p,.footer span,.footer a{overflow-wrap:anywhere}.footer-legal{display:flex;gap:18px;align-items:baseline;flex-wrap:wrap}.footer-details{margin:0}.footer-details summary{cursor:pointer;font-weight:800;text-decoration:underline;text-underline-offset:3px}.footer-details-body{margin-top:10px;max-width:70ch;line-height:1.6}.footer-details-body p{margin:0 0 8px}
     @media(max-width:620px){
       .mast-count .theme-toggle,.flashbacks-pagebar .theme-toggle{min-height:44px}
       .category-pill{min-height:44px;padding-inline:10px}
@@ -404,6 +401,7 @@
     @media(pointer:coarse){#map{touch-action:pan-y}}
     @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
   .brand-407{font-family:"Urbanist","Manrope",ui-sans-serif,sans-serif;font-weight:700;font-size:clamp(2.5rem,8vw,5rem);letter-spacing:.06em;line-height:1;white-space:nowrap;color:var(--ink)}.footer{flex-wrap:wrap}.footer .foot-col{flex:0 0 auto;min-width:150px}.footer .foot-col a{overflow-wrap:normal;word-break:normal}.footer .foot-main{flex:1 1 320px}
+.ask-panel{padding:clamp(20px,3vw,28px);display:flex;flex-direction:column;justify-content:center;gap:16px}.ask-pills{display:flex;flex-wrap:wrap;gap:8px}.ask-pill{display:inline-flex;align-items:center;min-height:44px;padding:9px 18px;border:1px solid var(--line);border-radius:999px;background:var(--bg);color:var(--ink);font-size:.88rem;font-weight:800;text-decoration:none}.ask-pill:hover,.ask-pill:focus-visible{border-color:var(--accent);background:var(--soft);outline:0}.ask-panel-more{margin:0;color:var(--muted);font-size:.82rem;line-height:1.45}.ask-panel-more a{color:var(--accent-ink);font-weight:700;text-decoration:none}.ask-panel-more a:hover{text-decoration:underline}
 </style>
   
 <link rel="icon" href="/favicon.ico" sizes="any"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest"><meta name="theme-color" content="#0a1811"><script type="application/ld+json">{
@@ -522,14 +520,6 @@
 .rn-dist{font-weight:700;color:var(--accent-ink)}
 .picks-note{margin:10px 2px 0;color:var(--muted);font-size:.78rem}
 .picks-rail .pick-card{text-decoration:none}
-.ask-results{display:grid;gap:8px;margin-top:14px}
-.ask-result{display:flex;align-items:baseline;gap:12px;padding:12px 14px;border:1px solid var(--line);border-radius:12px;background:var(--surface);color:var(--ink);text-decoration:none}
-.ask-result:hover{border-color:var(--accent)}
-.ask-result-name{font-weight:800}
-.ask-result-meta{color:var(--muted);font-size:.78rem}
-.ask-result-price{margin-left:auto;font-weight:800;color:var(--accent-ink);white-space:nowrap}
-.ask-result-more{justify-content:center;font-weight:800;color:var(--accent-ink)}
-.ask-guide-link{display:block;position:relative;width:100%;flex:1;padding:13px 34px 13px 13px;border:1px solid var(--line);border-radius:5px;background:var(--bg);color:var(--ink);text-decoration:none;text-align:left}.ask-guide-link::after{content:'\2192';position:absolute;right:12px;top:12px;color:var(--accent-ink);font-weight:800}.ask-guide-link:hover,.ask-guide-link:focus-visible{border-color:var(--accent);background:var(--soft);outline:0}
 .browse-cta{margin:34px 0 6px}
 .browse-cta-btn{display:flex;flex-direction:column;gap:3px;padding:20px 22px;border-radius:20px;background:linear-gradient(160deg,#0d2417,#2f4a38 60%,#765b2f 135%);color:#fdf6e3;text-decoration:none;font-family:"Urbanist","Manrope",sans-serif;font-size:1.25rem;font-weight:800;box-shadow:0 10px 24px rgba(18,40,26,.22)}
 .browse-cta-btn span{font-family:"Manrope",sans-serif;font-size:.88rem;font-weight:700;color:rgba(253,246,227,.85)}
@@ -558,7 +548,7 @@ html[data-theme="dark"] .export-trigger:hover,html[data-theme="dark"] .export-tr
 /* deepening: reserve the Right Now grid height so its data fill cannot shift the page */
 .rn-grid{min-height:432px}
 @media(min-width:760px){.rn-grid{min-height:280px}}
-.district-index{display:grid;grid-template-columns:1fr;gap:20px}@media(min-width:720px){.district-index{grid-template-columns:repeat(2,1fr)}}@media(min-width:1080px){.district-index{grid-template-columns:repeat(4,1fr)}}.di-group h3{font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin:0 0 10px}.di-group ul{list-style:none;margin:0;padding:0;display:grid;gap:7px}.di-group a{color:var(--ink);text-decoration:none;font-weight:600}.di-group a:hover{color:var(--accent-ink);text-decoration:underline}.ask-guide-more{margin:8px 2px 0;font-size:.82rem;color:var(--muted)}.ask-guide-more a{color:var(--accent-ink);font-weight:700;text-decoration:none}.ask-guide-more a:hover{text-decoration:underline}</style>
+.district-index{display:grid;grid-template-columns:1fr;gap:20px}@media(min-width:720px){.district-index{grid-template-columns:repeat(2,1fr)}}@media(min-width:1080px){.district-index{grid-template-columns:repeat(4,1fr)}}.di-group h3{font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin:0 0 10px}.di-group ul{list-style:none;margin:0;padding:0;display:grid;gap:7px}.di-group a{color:var(--ink);text-decoration:none;font-weight:600}.di-group a:hover{color:var(--accent-ink);text-decoration:underline}</style>
 
 </head>
 <body>
@@ -638,19 +628,16 @@ html[data-theme="dark"] .export-trigger:hover,html[data-theme="dark"] .export-tr
       <div class="ask-local-copy">
         <p class="ask-local-kicker">A shortcut to local knowledge</p>
         <h2 id="askLocalTitle">Ask a Local</h2>
-        <p class="ask-local-intro">Pick a question to narrow the guide to places that fit.</p>
+        <p class="ask-local-intro">What’s the occasion? Pick one and go straight to the shortlist a local would send you.</p>
       </div>
-      <div class="ask-guides">
-        <p class="ask-guides-label">Choose what fits your trip</p>
-        <ul class="ask-guide-list">
-          <li class="ask-guide"><button type="button" data-scenario="convention" aria-pressed="false"><h3>Convention Guidebook</h3><span class="ask-guide-prompt">Quick team lunch or a client dinner near I-Drive</span><span class="ask-guide-picks"><b>Start with:</b> Tom’s Watch Bar · O’Shucks Karaoke · Baires Grill · Fogo de Chão</span></button><p class="ask-guide-more">Read the guides: <a href="/convention.html">the Orlando convention guide</a> · <a href="/i-drive-playbook.html">the I-Drive playbook</a></p></li>
-          <li class="ask-guide"><button type="button" data-scenario="family" aria-pressed="false"><h3>Kids Welcome</h3><span class="ask-guide-prompt">Easy family stops between bigger plans</span><span class="ask-guide-picks"><b>Start with:</b> Boxi Park · Disney Springs · Black Hammock</span></button><p class="ask-guide-more">Read the guides: <a href="/i-drive-family-guide.html">Family on I-Drive</a> · <a href="/universal-family-guide.html">Family at Universal</a></p></li>
-          <li class="ask-guide"><button type="button" data-scenario="date-night" aria-pressed="false"><h3>Couples &amp; Honeymoons</h3><span class="ask-guide-prompt">Romantic dinner, cocktails and a memorable setting</span><span class="ask-guide-picks"><b>Start with:</b> AVA · RusTeak · Evermore</span></button><p class="ask-guide-more">Read the guides: <a href="/i-drive-date-night-guide.html">Date night on I-Drive</a> · <a href="/winter-park-date-night-guide.html">Date night in Winter Park</a></p></li>
-          <li class="ask-guide"><button type="button" data-scenario="groups" aria-pressed="false"><h3>Party in Numbers</h3><span class="ask-guide-prompt">Eat, drink and keep the whole group moving</span><span class="ask-guide-picks"><b>Start with:</b> Quesa Loco · The Guesthouse · Wall Street</span></button><p class="ask-guide-more">Read the guides: <a href="/i-drive-groups-guide.html">Groups on I-Drive</a> · <a href="/downtown-groups-guide.html">Groups downtown</a></p></li>
-          <li class="ask-guide"><a class="ask-guide-link" href="/archive.html"><h3>Custom Planners</h3><span class="ask-guide-prompt">Choose your occasion, timing and budget to build your own shortlist</span><span class="ask-guide-picks"><b>Open:</b> the full guide's filters</span></a></li>
-        </ul>
-        <p class="ask-local-status" id="askStatus" aria-live="polite">Choose one to see a shortlist here. Every result opens in the full guide.</p>
-        <div class="ask-results" id="askResults"></div>
+      <div class="ask-panel">
+        <div class="ask-pills">
+          <a class="ask-pill" href="/convention.html">Convention</a>
+          <a class="ask-pill" href="/i-drive-family-guide.html">Family</a>
+          <a class="ask-pill" href="/i-drive-date-night-guide.html">Date night</a>
+          <a class="ask-pill" href="/i-drive-groups-guide.html">Groups</a>
+        </div>
+        <p class="ask-panel-more">Building your own list instead? <a href="/archive.html">Custom Planners</a> opens the full guide with every filter.</p>
       </div>
     </section>
 
@@ -807,50 +794,6 @@ rnNear.addEventListener('click',()=>{
     rnStatus.textContent=messages[err.code]||'Location is unavailable; places remain in guide order.';
   },{enableHighAccuracy:false,maximumAge:300000,timeout:15000});
 });
-/* Ask a Local: one instance, the guide's four scenario pools */
-const SCENARIOS={
-  convention:{tag:'convention',occ:'convention',label:'Convention Guidebook'},
-  family:{tag:'family',occ:'family',label:'Kids Welcome'},
-  'date-night':{tag:'date-night',occ:'date',label:'Couples & Honeymoons'},
-  groups:{tag:'groups',occ:'friends',label:'Party in Numbers'}
-};
-let activeScenario=null;
-function scenarioPool(key){
-  const sc=SCENARIOS[key];if(!sc)return [];
-  return PLACES.filter(p=>(p.tags||[]).includes(sc.tag)&&occasions(p).includes(sc.occ));
-}
-/* Acclaim signal from the record itself (fix round 2026-10-14): Michelin
-   tags and badges, award language in the description, top price band.
-   Used to lead the date-night shortlist with the places a visitor asking
-   for a special occasion actually means. Same signals as the archive
-   search ranking. */
-function acclaimSignal(p){
-  const t=p.tags||[];let s=0;
-  if(t.includes('michelin-star'))s+=3;else if(t.includes('bib-gourmand'))s+=2;else if(t.includes('michelin-recommended'))s+=1.5;
-  if(t.some(x=>x.includes('michelin')&&x!=='michelin-star'&&x!=='michelin-recommended'&&x!=='bib-gourmand'))s+=1;
-  const d=publicDescription(p).toLowerCase();
-  if(d.includes('michelin star'))s+=2;
-  if(d.includes('five diamond'))s+=2;
-  if(d.includes('most decorated'))s+=1;
-  if(d.includes('award'))s+=1;
-  const runs=String(p.price||'').match(/\$+/g)||[];if(runs.some(r=>r.length>=4))s+=1;
-  return s;
-}
-const SCENARIO_SEE_ALL={convention:'/convention.html',family:'/archive.html?occasion=family','date-night':'/archive.html?occasion=date',groups:'/archive.html?occasion=friends'};
-document.querySelectorAll('[data-scenario]').forEach(button=>button.addEventListener('click',()=>{
-  const key=button.dataset.scenario,status=$('#askStatus'),box=$('#askResults');
-  if(activeScenario===key){
-    activeScenario=null;button.setAttribute('aria-pressed','false');
-    status.textContent='Choose one to see a shortlist here. Every result opens in the full guide.';box.innerHTML='';return;
-  }
-  activeScenario=key;
-  document.querySelectorAll('[data-scenario]').forEach(b=>b.setAttribute('aria-pressed',String(b===button)));
-  let pool=scenarioPool(key);const sc=SCENARIOS[key];
-  if(key==='date-night'){const pickRank=id=>{const i=PICK_ORDER.indexOf(id);return i<0?999:i};pool=pool.slice().sort((a,b)=>acclaimSignal(b)-acclaimSignal(a)||pickRank(a.id)-pickRank(b.id));}
-  status.textContent=`${pool.length} ${pool.length===1?'place fits':'places fit'} ${sc.label}: showing the first ${Math.min(8,pool.length)}.`;
-  box.innerHTML=pool.slice(0,8).map(p=>`<a class="ask-result" href="/archive.html?venue=${esc(p.id)}"><span class="ask-result-name">${esc(p.name)}</span><span class="ask-result-meta">${esc(p.category)} · ${esc(specificArea(p))}</span><span class="ask-result-price">${esc(displayPrice(p))}</span></a>`).join('')
-    +(pool.length>8?`<a class="ask-result ask-result-more" href="${SCENARIO_SEE_ALL[key]||'/archive.html'}">See all ${pool.length} in the full guide →</a>`:'');
-}));
 /* reveal on scroll (same pattern as the guide) */
 if('IntersectionObserver'in window){const revealObserver=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('inview');revealObserver.unobserve(entry.target)}}),{threshold:.06});document.querySelectorAll('.reveal').forEach(el=>revealObserver.observe(el))}
 else document.querySelectorAll('.reveal').forEach(el=>el.classList.add('inview'));
