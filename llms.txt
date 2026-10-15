@@ -52,6 +52,10 @@
 - [SoDo finder page](https://407.fyi/sodo-finder.html)
 - [More Orlando finder page](https://407.fyi/more-orlando-finder.html)
 
+## Venue pages
+
+- Every venue has its own page at https://407.fyi/venue/ followed by the venue id and .html, for example [AVA MediterrAegean](https://407.fyi/venue/ava.html): the full write-up, address, directions and nearby places for all 643 venues.
+
 ## Scenario guides
 
 - [Family on I-Drive](https://407.fyi/i-drive-family-guide.html)
