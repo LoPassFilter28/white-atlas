@@ -66,14 +66,19 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://407.fyi/what-visitors-google-orlando.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://407.fyi/convention.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url><loc>https://407.fyi/whats-new.html</loc><lastmod>2026-10-13</lastmod></url>
+  <url>
+    <loc>https://407.fyi/archive.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://407.fyi/links.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
 </urlset>
