@@ -1,0 +1,18 @@
+/*
+  407 FYI self-hosted fonts. Manrope and Urbanist are variable fonts
+  licensed under the SIL Open Font License 1.1; the woff2 files in this
+  directory are the latin and latin-ext subsets Google Fonts served for
+  this site, now served from 407.fyi itself (Phase 3, 2026-10-15).
+
+  Metric overrides: ascent/descent/line-gap align each webfont's line box
+  to the generic sans fallback the pages stack against (Arial reference
+  metrics: ascent 90.53%, descent 21.19%, line gap 3.27% of em), and
+  size-adjust equalizes x-height against that fallback (Arial x-height
+  51.86% of em; Manrope 54.00% -> 96.03%; Urbanist 50.00% -> 103.71%).
+  Metrics measured from these files with fontTools; see
+  white-atlas-build/phase3-fonts/REPORT.md.
+*/
+@font-face{font-family:"Manrope";font-style:normal;font-weight:400 800;font-display:swap;src:url("/fonts/manrope-latin.woff2") format("woff2");unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;size-adjust:96.03%;ascent-override:90.53%;descent-override:21.19%;line-gap-override:3.27%}
+@font-face{font-family:"Manrope";font-style:normal;font-weight:400 800;font-display:swap;src:url("/fonts/manrope-latin-ext.woff2") format("woff2");unicode-range:U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;size-adjust:96.03%;ascent-override:90.53%;descent-override:21.19%;line-gap-override:3.27%}
+@font-face{font-family:"Urbanist";font-style:normal;font-weight:500 800;font-display:swap;src:url("/fonts/urbanist-latin.woff2") format("woff2");unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;size-adjust:103.71%;ascent-override:90.53%;descent-override:21.19%;line-gap-override:3.27%}
+@font-face{font-family:"Urbanist";font-style:normal;font-weight:500 800;font-display:swap;src:url("/fonts/urbanist-latin-ext.woff2") format("woff2");unicode-range:U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;size-adjust:103.71%;ascent-override:90.53%;descent-override:21.19%;line-gap-override:3.27%}
