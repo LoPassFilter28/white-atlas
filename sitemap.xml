@@ -557,11 +557,6 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://407.fyi/venue/little-sister-dumpling.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://407.fyi/venue/lukes-kitchen.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -858,11 +853,6 @@
   </url>
   <url>
     <loc>https://407.fyi/venue/ravenous-pig.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://407.fyi/venue/the-reverie.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -1597,11 +1587,6 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://407.fyi/venue/fratelli-s-italian-restaurant.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://407.fyi/venue/market-on-south.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -1712,11 +1697,6 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://407.fyi/venue/tj-s-seafood-shack.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://407.fyi/venue/ben-jerry-s.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -1803,11 +1783,6 @@
   </url>
   <url>
     <loc>https://407.fyi/venue/chewy-boba-company.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://407.fyi/venue/snowbean.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -2183,11 +2158,6 @@
   </url>
   <url>
     <loc>https://407.fyi/venue/domu-chibi-ramen.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://407.fyi/venue/thrive.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
