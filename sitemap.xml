@@ -237,6 +237,16 @@
     <priority>0.3</priority>
   </url>
   <url>
+    <loc>https://407.fyi/day-trips-finder.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://407.fyi/west-orlando-finder.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://407.fyi/venue/1921-mount-dora.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>

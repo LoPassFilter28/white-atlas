@@ -764,7 +764,7 @@ html:not([data-theme="dark"]) .upd-tag{color:#7c520c;background:rgba(124,82,12,.
     {key:'audubon-park',name:'Audubon Park',match:['Audubon Park'],g:['#13220e','#425c28','#ac8a45'],story:'/audubon-park-district-guide.html'},
     {key:'college-park',name:'College Park',match:['College Park'],g:['#201110','#583622','#a87f40'],story:'/college-park-district-guide.html'}
   ];
-  const AREAS=[{key:'hourglass',name:'Hourglass'},{key:'kissimmee',name:'Kissimmee'},{key:'winter-garden',name:'Winter Garden'},{key:'oviedo',name:'Oviedo'},{key:'sanford',name:'Sanford'},{key:'sodo',name:'SoDo'},{key:'baldwin-park',name:'Baldwin Park'},{key:'ucf',name:'UCF'},{key:'maitland',name:'Maitland'},{key:'disney-area',name:'Disney Area'}];
+  const AREAS=[{key:'hourglass',name:'Hourglass'},{key:'kissimmee',name:'Kissimmee'},{key:'winter-garden',name:'Winter Garden'},{key:'oviedo',name:'Oviedo'},{key:'sanford',name:'Sanford'},{key:'sodo',name:'SoDo'},{key:'baldwin-park',name:'Baldwin Park'},{key:'ucf',name:'UCF'},{key:'maitland',name:'Maitland'},{key:'disney-area',name:'Disney Area'},{key:'west-orlando',name:'West Orlando'},{key:'day-trips',name:'Day Trips'}];
   const DISTRICT_MATCH=Object.fromEntries(DISTRICTS.map(d=>[d.key,d.match]));
   const DISTRICT_NAMES=Object.fromEntries([...DISTRICTS,...AREAS].map(d=>[d.key,d.name]));
   const PICK_ORDER=['ava','quesa-loco','rusteak-thornton-park','fogo-orlando-vineland','the-guesthouse','robinson-cocktail-room','fixtion','wall-street-plaza','elixir-kitchen-bar','iron-cow','toms-watch-bar-orlando','baires-grill-orlando','boxi-park','disney-springs-district','evermore-orlando-resort','orlando-vineland-premium-outlets','black-hammock-restaurant'];
@@ -1504,7 +1504,7 @@ function render(){
     if(bootParams.get('export')==='1')openExportCenter();
     if(bootParams.get('flashbacks')==='1')openFlashbacks();
   }
-  window.__placesReady=fetch('places.json?v=20261015e1').then(r=>{if(!r.ok)throw new Error('places.json HTTP '+r.status);return r.json()}).then(d=>{PLACES=d.places||[];VIATOR_DEEP_LINKS=d.viator||{};GYG_DEEP_LINKS=d.gyg||{};SOVRN_LINKS=d.sovrn||{};startApp();});
+  window.__placesReady=fetch('places.json?v=20261015f1').then(r=>{if(!r.ok)throw new Error('places.json HTTP '+r.status);return r.json()}).then(d=>{PLACES=d.places||[];VIATOR_DEEP_LINKS=d.viator||{};GYG_DEEP_LINKS=d.gyg||{};SOVRN_LINKS=d.sovrn||{};startApp();});
   window.__placesReady.catch(err=>{const rc=$('#resultCount');if(rc)rc.textContent='The place list could not load. Check your connection, then reload this page.';if(window.console)console.error(err);});
   </script>
 

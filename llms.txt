@@ -52,6 +52,8 @@
 - [Hourglass finder page](https://407.fyi/hourglass-finder.html)
 - [SoDo finder page](https://407.fyi/sodo-finder.html)
 - [More Orlando finder page](https://407.fyi/more-orlando-finder.html)
+- [Day Trips finder page](https://407.fyi/day-trips-finder.html)
+- [West Orlando finder page](https://407.fyi/west-orlando-finder.html)
 
 ## Venue pages
 
