@@ -242,11 +242,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://407.fyi/west-orlando-finder.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://407.fyi/venue/1921-mount-dora.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -457,11 +452,6 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://407.fyi/venue/hmart-food-hall.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://407.fyi/venue/harlow-grove.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -573,11 +563,6 @@
   </url>
   <url>
     <loc>https://407.fyi/venue/lukes-kitchen.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://407.fyi/venue/lumenes.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -828,11 +813,6 @@
   </url>
   <url>
     <loc>https://407.fyi/venue/taverna-opa.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://407.fyi/venue/ten-ten.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -1692,11 +1672,6 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://407.fyi/venue/golden-krust.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://407.fyi/venue/high-tide-harry-s.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -2262,11 +2237,6 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://407.fyi/venue/paiks-noodles.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://407.fyi/venue/sea-thai-restaurant.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -2447,11 +2417,6 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://407.fyi/venue/jerkman-bbq.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://407.fyi/venue/lake-meadow-naturals.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -2478,11 +2443,6 @@
   </url>
   <url>
     <loc>https://407.fyi/venue/sullivans-public-house.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://407.fyi/venue/walala-handpulled-noodle-house.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -2598,11 +2558,6 @@
   </url>
   <url>
     <loc>https://407.fyi/venue/el-coqui-ninja-restaurant.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://407.fyi/venue/gg-korean-bbq.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
