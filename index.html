@@ -746,7 +746,7 @@ function distanceMiles(p){
 function distanceText(p){const d=distanceMiles(p);if(!Number.isFinite(d))return '';return d<.1?'under 0.1 mi away':`${d.toFixed(d<10?1:0)} mi away`}
 function venueCard(p,kicker){
   const dist=myPos?distanceText(p):'';
-  return `<a class="pick-card" href="/archive.html?venue=${esc(p.id)}"><span class="pick-card-kicker">${esc(kicker)}</span><span class="pick-card-name">${esc(p.name)}</span><span class="pick-card-meta">${esc(p.category)} · ${esc(specificArea(p))}</span><span class="pick-card-go">View place${dist?` · <span class="rn-dist">${esc(dist)}</span>`:''}</span></a>`;
+  return `<a class="pick-card" href="/venue/${esc(p.id)}.html"><span class="pick-card-kicker">${esc(kicker)}</span><span class="pick-card-name">${esc(p.name)}</span><span class="pick-card-meta">${esc(p.category)} · ${esc(specificArea(p))}</span><span class="pick-card-go">View place${dist?` · <span class="rn-dist">${esc(dist)}</span>`:''}</span></a>`;
 }
 function renderPicks(){
   const rail=$('#picksRail');if(!rail)return;
