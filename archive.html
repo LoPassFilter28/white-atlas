@@ -271,10 +271,10 @@ body.export-open{overflow:hidden}
 .venue-toggle{width:100%;border:0;background:transparent;color:inherit;text-align:left;padding:22px 2px;display:grid;grid-template-columns:42px minmax(0,1fr);gap:14px;align-items:start;transition:background var(--dur-ui) ease}
 .venue-toggle:active{background:color-mix(in srgb,var(--soft) 74%,transparent)}
 .venue-quick-actions{align-self:center;display:grid;gap:7px;margin:10px 2px 10px 14px}
-.quick-directions,.copy-place,.flag-closure,.quick-page{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:8px 11px;border:1px solid var(--line);border-radius:4px;background:var(--surface);color:var(--accent-ink);font-size:.72rem;font-weight:800;text-decoration:none;white-space:nowrap}
+.quick-directions,.copy-place,.flag-closure,.quick-page,.quick-ig{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:8px 11px;border:1px solid var(--line);border-radius:4px;background:var(--surface);color:var(--accent-ink);font-size:.72rem;font-weight:800;text-decoration:none;white-space:nowrap}
 .copy-place{border-color:var(--line);color:var(--ink)}
 .flag-closure{border-color:var(--line);color:var(--muted);font-size:.72rem}
-.quick-directions:hover,.quick-directions:focus-visible,.copy-place:hover,.copy-place:focus-visible,.flag-closure:hover,.flag-closure:focus-visible,.quick-page:hover,.quick-page:focus-visible{background:var(--accent);border-color:var(--accent);color:var(--on-accent);outline:0}
+.quick-directions:hover,.quick-directions:focus-visible,.copy-place:hover,.copy-place:focus-visible,.flag-closure:hover,.flag-closure:focus-visible,.quick-page:hover,.quick-page:focus-visible,.quick-ig:hover,.quick-ig:focus-visible{background:var(--accent);border-color:var(--accent);color:var(--on-accent);outline:0}
 .index{font-variant-numeric:tabular-nums;color:var(--muted);font-size:.72rem;padding-top:5px}
 .venue-toggle>span:last-child,.venue-title{min-width:0;max-width:100%}
 .venue-title{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
@@ -341,7 +341,7 @@ html[data-theme="dark"] .flashbacks{border-top-color:var(--headline)}
 @media(max-width:620px){.app{padding-bottom:116px}
 .venue-row{grid-template-columns:minmax(0,1fr) 70px}
 .venue-quick-actions{width:68px;margin:9px 0 9px 6px}
-.quick-directions,.copy-place,.flag-closure,.quick-page{width:68px;min-height:38px;padding:6px 4px;font-size:.72rem}
+.quick-directions,.copy-place,.flag-closure,.quick-page,.quick-ig{width:68px;min-height:38px;padding:6px 4px;font-size:.72rem}
 .quick-directions::after{content:' ↗'}
 .data-out{align-items:flex-start}
 .data-out-note{max-width:48%}
@@ -464,7 +464,7 @@ body{background:#fff;color:#1d2a20;font-family:"Manrope",ui-sans-serif,sans-seri
 .pick-card-name{font-size:.88rem}
 .venue-row{grid-template-columns:minmax(0,1fr) 76px}
 .venue-quick-actions{width:74px}
-.quick-directions,.copy-place,.flag-closure,.quick-page{width:74px;padding-inline:6px}
+.quick-directions,.copy-place,.flag-closure,.quick-page,.quick-ig{width:74px;padding-inline:6px}
 .venue h2{font-size:1.06rem}
 .venue-title{display:block}
 .tag{margin-top:6px;margin-right:4px}
@@ -1089,7 +1089,7 @@ function detail(p){
     const shownPrice=displayPrice(p);
     const facts=`<span class="venue-facts">${shownPrice?`<span class="price-signal" aria-label="Price range ${esc(shownPrice)}">${esc(shownPrice)}</span>`:''}${away?`<span class="distance">${esc(away)}</span>`:''}</span>`;
     const primaryMeta=`<span class="venue-meta-primary"><span class="venue-category">${esc(p.category)}</span><span class="venue-district">${esc(specificArea(p))}</span></span>`;
-    return `<article class="venue${isOpen?' open':''}" data-id="${esc(p.id)}"><div class="venue-row"><button class="venue-toggle" aria-expanded="${isOpen}" data-toggle="${esc(p.id)}"><span class="index">${String(i+1).padStart(3,'0')}</span><span><span class="venue-title"><h2>${esc(p.name)}</h2>${badges(p)}</span>${primaryMeta}${facts}<span class="description">${esc(publicDescription(p))}</span><span class="description-affordance">${isOpen?'Less':'More'} <span class="description-chevron" aria-hidden="true">⌄</span></span></span></button><span class="venue-quick-actions"><a class="quick-directions" href="${directionsUrl(p)}" target="_blank" rel="noopener" aria-label="Directions to ${esc(p.name)}">Directions</a><a class="quick-page" href="/venue/${esc(p.id)}.html" aria-label="Venue page for ${esc(p.name)}">Venue page</a><button class="copy-place" type="button" data-copy-place="${esc(p.id)}" aria-label="Copy ${esc(p.name)}">Copy</button><a class="flag-closure" href="${closureUrl(p)}" aria-label="Report a change for ${esc(p.name)}">Report a change</a></span></div>${historyTease(p)}<div class="venue-detail">${isOpen?detail(p):''}</div></article>`;
+    return `<article class="venue${isOpen?' open':''}" data-id="${esc(p.id)}"><div class="venue-row"><button class="venue-toggle" aria-expanded="${isOpen}" data-toggle="${esc(p.id)}"><span class="index">${String(i+1).padStart(3,'0')}</span><span><span class="venue-title"><h2>${esc(p.name)}</h2>${badges(p)}</span>${primaryMeta}${facts}<span class="description">${esc(publicDescription(p))}</span><span class="description-affordance">${isOpen?'Less':'More'} <span class="description-chevron" aria-hidden="true">⌄</span></span></span></button><span class="venue-quick-actions"><a class="quick-directions" href="${directionsUrl(p)}" target="_blank" rel="noopener" aria-label="Directions to ${esc(p.name)}">Directions</a><a class="quick-page" href="/venue/${esc(p.id)}.html" aria-label="Venue page for ${esc(p.name)}">Venue page</a>${p.instagram?`<a class="quick-ig" href="${esc(p.instagram)}" target="_blank" rel="noopener" aria-label="${esc(p.name)} on Instagram"><svg class="ig-glyph" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg> Instagram</a>`:``}<button class="copy-place" type="button" data-copy-place="${esc(p.id)}" aria-label="Copy ${esc(p.name)}">Copy</button><a class="flag-closure" href="${closureUrl(p)}" aria-label="Report a change for ${esc(p.name)}">Report a change</a></span></div>${historyTease(p)}<div class="venue-detail">${isOpen?detail(p):''}</div></article>`;
   }
   function districtMatches(p,key){if(key==='all')return true;const k=districtKeyOf(p);if(key==='more')return k==='more'||k===null;return k===key;}
 function filtered(){
@@ -1504,7 +1504,7 @@ function render(){
     if(bootParams.get('export')==='1')openExportCenter();
     if(bootParams.get('flashbacks')==='1')openFlashbacks();
   }
-  window.__placesReady=fetch('places.json?v=20261015g1').then(r=>{if(!r.ok)throw new Error('places.json HTTP '+r.status);return r.json()}).then(d=>{PLACES=d.places||[];VIATOR_DEEP_LINKS=d.viator||{};GYG_DEEP_LINKS=d.gyg||{};SOVRN_LINKS=d.sovrn||{};startApp();});
+  window.__placesReady=fetch('places.json?v=20261016a1').then(r=>{if(!r.ok)throw new Error('places.json HTTP '+r.status);return r.json()}).then(d=>{PLACES=d.places||[];VIATOR_DEEP_LINKS=d.viator||{};GYG_DEEP_LINKS=d.gyg||{};SOVRN_LINKS=d.sovrn||{};startApp();});
   window.__placesReady.catch(err=>{const rc=$('#resultCount');if(rc)rc.textContent='The place list could not load. Check your connection, then reload this page.';if(window.console)console.error(err);});
   </script>
 
