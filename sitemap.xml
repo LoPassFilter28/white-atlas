@@ -1702,11 +1702,6 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://407.fyi/venue/ben-jerry-s.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://407.fyi/venue/blaze-pizza.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -1718,11 +1713,6 @@
   </url>
   <url>
     <loc>https://407.fyi/venue/cuban-american-cafe.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://407.fyi/venue/la-palette-artisan-ice-pops.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -1958,11 +1948,6 @@
   </url>
   <url>
     <loc>https://407.fyi/venue/clean-eatz.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://407.fyi/venue/gentrys-bbq.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -2442,11 +2427,6 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://407.fyi/venue/red-eye-sports-tavern.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://407.fyi/venue/shaka-donuts.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -2658,11 +2638,6 @@
   </url>
   <url>
     <loc>https://407.fyi/venue/knight-library.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://407.fyi/venue/on-tap-ucf.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -2958,11 +2933,6 @@
   </url>
   <url>
     <loc>https://407.fyi/venue/cfh-orlando.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://407.fyi/venue/dona-pepa.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
