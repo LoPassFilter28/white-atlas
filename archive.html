@@ -652,15 +652,15 @@ html:not([data-theme="dark"]) .upd-tag{color:#7c520c;background:rgba(124,82,12,.
     <section class="finder" id="finder" aria-label="Find places">
       <div class="search-wrap">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-4-4"></path></svg>
-        <input id="search" type="search" placeholder="Search places…" autocomplete="off" aria-label="Search all Orlando places">
+        <input id="search" type="search" placeholder="Describe the vibe…" autocomplete="off" aria-label="Search all Orlando places">
         <button id="clearSearch" aria-label="Clear search">×</button>
       </div>
       <div class="vibe-row" id="vibeRow">
         <div class="vibe-modes" role="group" aria-label="Search mode">
-          <button type="button" id="modePlaces" class="vibe-mode active" aria-pressed="true">Places</button>
-          <button type="button" id="modeVibe" class="vibe-mode" aria-pressed="false">By vibe</button>
+          <button type="button" id="modePlaces" class="vibe-mode" aria-pressed="false">Places</button>
+          <button type="button" id="modeVibe" class="vibe-mode active" aria-pressed="true">By vibe</button>
         </div>
-        <span class="vibe-hint" id="vibeHint" hidden>Describe a feeling, not a name, then press Enter. Try "quiet rooftop for a date".</span>
+        <span class="vibe-hint" id="vibeHint">By vibe: describe a feeling or an occasion, then press Enter. Try "quiet rooftop for a date".</span>
       </div>
       <div class="vibe-chip" id="vibeChip" hidden><span class="vibe-chip-label">Vibe matches for <b id="vibeChipText"></b>. Closest first.</span><button id="vibeClear" type="button">Clear</button></div>
       <span class="vibe-status" id="vibeStatus" role="status"></span>
@@ -805,7 +805,7 @@ html:not([data-theme="dark"]) .upd-tag{color:#7c520c;background:rgba(124,82,12,.
   };
   const EOLA_HISTORY_PLACES=new Set(['lake-eola','rusteak-thornton-park','june-orlando']);
   
-  const state={query:'',zone:'all',category:'all',occasion:'all',daypart:'all',price:'all',collection:'all',district:'all',sort:'guide',open:null,position:null,vibe:null,vibeMode:false,watchId:null,view:'list',localGuide:null};
+  const state={query:'',zone:'all',category:'all',occasion:'all',daypart:'all',price:'all',collection:'all',district:'all',sort:'guide',open:null,position:null,vibe:null,vibeMode:true,watchId:null,view:'list',localGuide:null};
   const DEFAULT_EXPORT_FIELDS=['district','priceBand','description','whyGo','address'];
   const EXPORT_FIELD_LABELS={district:'District',priceBand:'Price band',description:'Description',whyGo:'Why go',address:'Address'};
   const exportState={scope:'current',format:'markdown',pdfApplied:false,lastFocus:null,navPressed:null};
@@ -1474,8 +1474,8 @@ function render(){
   $('#clearSearch').addEventListener('click',()=>{resetAskLocal();if(state.vibeMode)clearVibeResults();$('#search').value='';const heroInput=$('#heroSearch');if(heroInput)heroInput.value='';state.query='';state.open=null;$('#clearSearch').style.display='none';render();fitAfterRender();$('#search').focus()});
   const heroSearchInput=$('#heroSearch');
   if(heroSearchInput){
-    heroSearchInput.addEventListener('input',e=>{resetAskLocal();state.query=e.target.value;state.open=null;$('#search').value=e.target.value;$('#clearSearch').style.display=state.query?'block':'none';scheduleSearchRender()});
-    heroSearchInput.addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();scrollToBrowse()}});
+    heroSearchInput.addEventListener('input',e=>{resetAskLocal();if(state.vibeMode){$('#search').value=e.target.value;$('#clearSearch').style.display=e.target.value?'block':'none';return}state.query=e.target.value;state.open=null;$('#search').value=e.target.value;$('#clearSearch').style.display=state.query?'block':'none';scheduleSearchRender()});
+    heroSearchInput.addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();if(state.vibeMode){$('#search').value=e.target.value;runVibe()}scrollToBrowse()}});
   }
   function scrollToBrowse(){const smooth=!matchMedia('(prefers-reduced-motion: reduce)').matches;$('#finder')?.scrollIntoView({block:'start',behavior:smooth?'smooth':'auto'})}
   $('#heroSearchGo')?.addEventListener('click',scrollToBrowse);
@@ -1519,7 +1519,7 @@ function render(){
     state.vibeMode=on;
     modePlaces.classList.toggle('active',!on);modePlaces.setAttribute('aria-pressed',String(!on));
     modeVibe.classList.toggle('active',on);modeVibe.setAttribute('aria-pressed',String(on));
-    vibeHint.hidden=!on;
+    vibeHint.textContent=on?'By vibe: describe a feeling or an occasion, then press Enter. Try "quiet rooftop for a date".':'By place: search a name, a neighborhood, or a kind of place. Try "coffee" or "Winter Park".';
     searchInput.placeholder=on?'Describe the vibe…':'Search places…';
     if(on){state.query='';state.vibe=null;vibeChip.hidden=true;vibeStatus.textContent='';render()}
     else clearVibeResults();
@@ -1603,7 +1603,7 @@ function capTeasers(root){var ts=$$('#venueList .venue-history',root);ts.forEach
 function stampUpdated(root){$$("article.venue[data-id]",root).forEach(function(a){if(UPDATED[a.dataset.id]&&!a.querySelector(".upd-tag")){var t=a.querySelector(".venue-title");if(t){var s=document.createElement("span");s.className="upd-tag";s.textContent="Updated Oct 2026";t.appendChild(s)}}})}
 function updateIntro(){var el=$("#districtIntro");if(!el)return;var k=activeKey();var txt=INTROS[k]||"";if(txt){el.textContent=txt;el.hidden=false}else{el.hidden=true}}
 var syncT=null;var lastSyncedDistrict=null,popApply=false;
-function syncURL(){clearTimeout(syncT);syncT=setTimeout(function(){var d=activeKey(),c=activeChip(),q=($("#search")||{}).value||($("#heroSearch")||{}).value||"";var z=($("#zone")||{}).value||"all",o=($("#occasion")||{}).value||"all",dp=($("#daypart")||{}).value||"all",pr=($("#price")||{}).value||"all";var fcb=$$("[data-category-option]").filter(function(b){return b.getAttribute("aria-pressed")==="true"})[0];var fc=fcb?fcb.dataset.categoryOption:"";var p=new URLSearchParams();if(d&&d!=="all")p.set("district",d);if(c)p.set("cat",c);if(typeof state!=="undefined"&&state.vibe&&state.vibe.q)p.set("vibe",state.vibe.q);else if(q)p.set("q",q);var qs=p.toString();var url=qs?("?"+qs):location.pathname;try{if(!popApply&&lastSyncedDistrict!==null&&d!==lastSyncedDistrict)history.pushState(null,"",url);else history.replaceState(null,"",url)}catch(e){}lastSyncedDistrict=d;try{localStorage.setItem("fyi-filters-v1",JSON.stringify({d:d,c:c,q:(typeof state!=="undefined"&&state.vibe)?"":q,z:z,o:o,dp:dp,pr:pr,fc:fc}))}catch(e){}updateIntro()},350)}
+function syncURL(){clearTimeout(syncT);syncT=setTimeout(function(){var d=activeKey(),c=activeChip(),q=($("#search")||{}).value||($("#heroSearch")||{}).value||"";if(typeof state!=="undefined"&&state.vibeMode&&!state.vibe)q="";var z=($("#zone")||{}).value||"all",o=($("#occasion")||{}).value||"all",dp=($("#daypart")||{}).value||"all",pr=($("#price")||{}).value||"all";var fcb=$$("[data-category-option]").filter(function(b){return b.getAttribute("aria-pressed")==="true"})[0];var fc=fcb?fcb.dataset.categoryOption:"";var p=new URLSearchParams();if(d&&d!=="all")p.set("district",d);if(c)p.set("cat",c);if(typeof state!=="undefined"&&state.vibe&&state.vibe.q)p.set("vibe",state.vibe.q);else if(q)p.set("q",q);var qs=p.toString();var url=qs?("?"+qs):location.pathname;try{if(!popApply&&lastSyncedDistrict!==null&&d!==lastSyncedDistrict)history.pushState(null,"",url);else history.replaceState(null,"",url)}catch(e){}lastSyncedDistrict=d;try{localStorage.setItem("fyi-filters-v1",JSON.stringify({d:d,c:c,q:(typeof state!=="undefined"&&state.vibe)?"":q,z:z,o:o,dp:dp,pr:pr,fc:fc}))}catch(e){}updateIntro()},350)}
 function suggestions(q){if(!q||typeof PLACES==="undefined")return[];var names=PLACES.map(function(p){return p.name});var ds=PLACES.map(function(p){return p.district});var all=names.concat(ds.filter(function(v,i){return ds.indexOf(v)===i}));var maxD=Math.max(2,Math.floor(q.length/3));var scored=all.map(function(n){return{n:n,d:lev(q,n)}}).filter(function(x){return x.d<=maxD||x.n.toLowerCase().indexOf(q.toLowerCase())===0}).sort(function(a,b){return a.d-b.d});var out=[];scored.forEach(function(x){if(out.indexOf(x.n)<0)out.push(x.n)});return out.slice(0,3)}
 function fillDidYouMean(){var box=$("#didYouMean");if(!box)return;box.innerHTML="";var q=($("#search")||{}).value||($("#heroSearch")||{}).value||"";var s=suggestions(q);if(!s.length)return;var lab=document.createElement("span");lab.textContent="Did you mean:";lab.style.cssText="align-self:center;color:var(--muted);font-size:.88rem";box.appendChild(lab);s.forEach(function(n){var b=document.createElement("button");b.type="button";b.textContent=n;b.addEventListener("click",function(){setQuery(n);var l=$("#venueList");if(l)l.scrollIntoView({behavior:"smooth",block:"start"})});box.appendChild(b)})}
 function init(){
@@ -1615,7 +1615,7 @@ function init(){
   var params=new URLSearchParams(location.search);var mem=null;try{mem=JSON.parse(localStorage.getItem("fyi-filters-v1")||"null")}catch(e){}
   if(params.has("occasion"))mem=null;
   var d=params.get("district")||(mem&&mem.d)||"",c=params.get("cat")||(mem&&mem.c)||"",q=params.get("q")||(mem&&mem.q)||"";
-  if(d&&d!=="all")clickDistrict(d);if(c)clickCategory(c);if(q)setQuery(q);
+  if(q)try{setVibeMode(false)}catch(e){};if(d&&d!=="all")clickDistrict(d);if(c)clickCategory(c);if(q)setQuery(q);
   var selVals={zone:params.get("zone")||(mem&&mem.z)||"",occasion:params.get("occasion")||(mem&&mem.o)||"",daypart:params.get("daypart")||(mem&&mem.dp)||"",price:params.get("price")||(mem&&mem.pr)||""};
   Object.keys(selVals).forEach(function(id){var el=document.getElementById(id),v=selVals[id];if(el&&v&&el.value!==v&&Array.prototype.some.call(el.options,function(op){return op.value===v})){el.value=v;el.dispatchEvent(new Event("change",{bubbles:true}))}});
   var fcv=(mem&&mem.fc)||"";if(fcv&&!c){var ob=$$("[data-category-option]").filter(function(b){return b.dataset.categoryOption===fcv})[0];if(ob&&ob.getAttribute("aria-pressed")!=="true")ob.click()}

@@ -576,15 +576,15 @@ html[data-theme="dark"] .export-trigger:hover,html[data-theme="dark"] .export-tr
       <div class="primary-actions">
         <form class="hero-search" id="heroForm" action="/archive.html" method="get" role="search">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-4-4"></path></svg>
-          <input id="heroSearch" name="q" type="search" placeholder="Search places…" autocomplete="off" aria-label="Search all Orlando places">
+          <input id="heroSearch" name="q" type="search" placeholder="Describe the vibe…" autocomplete="off" aria-label="Search all Orlando places">
           <button class="hero-search-go" type="submit" aria-label="Go to search results">→</button>
         </form>
         <div class="home-vibe-row">
           <div class="home-vibe-modes" role="group" aria-label="Search mode">
-            <button type="button" id="homeModePlaces" class="home-vibe-mode active" aria-pressed="true">Places</button>
-            <button type="button" id="homeModeVibe" class="home-vibe-mode" aria-pressed="false">By vibe</button>
+            <button type="button" id="homeModePlaces" class="home-vibe-mode" aria-pressed="false">Places</button>
+            <button type="button" id="homeModeVibe" class="home-vibe-mode active" aria-pressed="true">By vibe</button>
           </div>
-          <span class="home-vibe-hint" id="homeVibeHint" hidden>Describe a feeling, not a name. Try "quiet rooftop for a date".</span>
+          <span class="home-vibe-hint" id="homeVibeHint">By vibe: describe a feeling or an occasion. Try "quiet rooftop for a date".</span>
         </div>
         
       </div>
@@ -740,13 +740,13 @@ function goSearch(q){
   if(q){try{if(window.posthog&&typeof window.posthog.capture==='function')window.posthog.capture('search',{query:q,results:searchMatchCount(q)})}catch(error){}}
   location.href=q?('/archive.html?q='+encodeURIComponent(q)):'/archive.html';
 }
-let homeVibe=false;
+let homeVibe=true;
 const homeModePlaces=$('#homeModePlaces'),homeModeVibe=$('#homeModeVibe'),homeVibeHint=$('#homeVibeHint');
 function setHomeVibe(on){
   homeVibe=on;
   homeModePlaces.classList.toggle('active',!on);homeModePlaces.setAttribute('aria-pressed',String(!on));
   homeModeVibe.classList.toggle('active',on);homeModeVibe.setAttribute('aria-pressed',String(on));
-  homeVibeHint.hidden=!on;
+  homeVibeHint.textContent=on?'By vibe: describe a feeling or an occasion. Try "quiet rooftop for a date".':'By place: search a name, a neighborhood, or a kind of place. Try "coffee" or "Winter Park".';
   heroInput.placeholder=on?'Describe the vibe…':'Search places…';
   heroInput.focus();
 }
