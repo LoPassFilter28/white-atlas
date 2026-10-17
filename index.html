@@ -417,7 +417,7 @@
    "@type": "WebSite",
    "name": "407 FYI",
    "url": "https://407.fyi/",
-   "description": "664 hand-verified places across Greater Orlando.",
+   "description": "663 hand-verified places across Greater Orlando.",
    "potentialAction": {
     "@type": "SearchAction",
     "target": {
@@ -654,7 +654,7 @@ html[data-theme="dark"] .export-trigger:hover,html[data-theme="dark"] .export-tr
 
     <div class="browse-cta"><a class="browse-cta-btn" href="/archive.html">Browse all places<span>Search, district tabs, the map and export, the whole guide, one door.</span></a></div>
 
-<div class="cred-strip"><strong><span id="credCount">664</span> hand-verified places</strong> · Checked October 2026 · Local Picks are never sponsored · Corrections: <a href="mailto:mail@407.fyi">mail@407.fyi</a></div><footer class="footer"><div class="foot-col"><h3>Districts</h3><ul><li><a href="/winter-park-district-guide.html">Winter Park</a></li><li><a href="/downtown-orlando-district-guide.html">Downtown Orlando</a></li><li><a href="/mills-50-district-guide.html">Mills 50</a></li><li><a href="/milk-district-guide.html">Milk District</a></li><li><a href="/international-drive-district-guide.html">International Drive</a></li><li><a href="#districts">All 12 districts</a></li></ul></div><div class="foot-col"><h3>About</h3><ul><li><a href="/whats-new.html">What's new</a></li><li><a href="/convention.html">Convention guide</a></li><li><a href="/i-drive-playbook.html">I-Drive playbook</a></li><li><a href="/archive.html?flashbacks=1">Flashbacks: Orlando history</a></li><li><a href="/archive.html?export=1">Export the guide</a></li></ul></div><div class="foot-col foot-main"><span><strong>407 FYI</strong> · Details can change. Confirm before you go.</span> <a href="mailto:mail@407.fyi?subject=407%20FYI%20%E2%80%94%20venue%20correction&amp;body=Venue%20name%3A%0AWhat%20changed%3A%0ASource%20or%20details%3A">Flag a closure / suggest an edit</a> <a href="https://www.instagram.com/407.fyi" target="_blank" rel="noopener">Instagram · @407.fyi</a> <span class="aff-disclosure">407 FYI is free and reader supported. Some ticket, hotel, and dining links are affiliate or referral links. If you book or buy through one, we may earn a commission or a dining credit at no extra cost to you. No venue can pay to be listed, ranked, picked, or recommended here, and affiliate links never change the order of anything. Local Picks are chosen by editors and are never sponsored.</span><nav class="footer-legal"><a href="mailto:mail@407.fyi?subject=407%20FYI%20contact">Contact</a><a href="/privacy.html">Privacy Policy</a></nav></div></footer>
+<div class="cred-strip"><strong><span id="credCount">663</span> hand-verified places</strong> · Checked October 2026 · Local Picks are never sponsored · Corrections: <a href="mailto:mail@407.fyi">mail@407.fyi</a></div><footer class="footer"><div class="foot-col"><h3>Districts</h3><ul><li><a href="/winter-park-district-guide.html">Winter Park</a></li><li><a href="/downtown-orlando-district-guide.html">Downtown Orlando</a></li><li><a href="/mills-50-district-guide.html">Mills 50</a></li><li><a href="/milk-district-guide.html">Milk District</a></li><li><a href="/international-drive-district-guide.html">International Drive</a></li><li><a href="#districts">All 12 districts</a></li></ul></div><div class="foot-col"><h3>About</h3><ul><li><a href="/whats-new.html">What's new</a></li><li><a href="/convention.html">Convention guide</a></li><li><a href="/i-drive-playbook.html">I-Drive playbook</a></li><li><a href="/archive.html?flashbacks=1">Flashbacks: Orlando history</a></li><li><a href="/archive.html?export=1">Export the guide</a></li></ul></div><div class="foot-col foot-main"><span><strong>407 FYI</strong> · Details can change. Confirm before you go.</span> <a href="mailto:mail@407.fyi?subject=407%20FYI%20%E2%80%94%20venue%20correction&amp;body=Venue%20name%3A%0AWhat%20changed%3A%0ASource%20or%20details%3A">Flag a closure / suggest an edit</a> <a href="https://www.instagram.com/407.fyi" target="_blank" rel="noopener">Instagram · @407.fyi</a> <span class="aff-disclosure">407 FYI is free and reader supported. Some ticket, hotel, and dining links are affiliate or referral links. If you book or buy through one, we may earn a commission or a dining credit at no extra cost to you. No venue can pay to be listed, ranked, picked, or recommended here, and affiliate links never change the order of anything. Local Picks are chosen by editors and are never sponsored.</span><nav class="footer-legal"><a href="mailto:mail@407.fyi?subject=407%20FYI%20contact">Contact</a><a href="/privacy.html">Privacy Policy</a></nav></div></footer>
   </main>
 
 <script>
@@ -841,7 +841,7 @@ document.addEventListener('click',e=>{
   }
 });
 /* load */
-fetch('places.json?v=20261017c1').then(r=>{if(!r.ok)throw new Error('places.json HTTP '+r.status);return r.json()}).then(d=>{
+fetch('places.json?v=20261017d1').then(r=>{if(!r.ok)throw new Error('places.json HTTP '+r.status);return r.json()}).then(d=>{
   PLACES=d.places||[];
   const vc=$('#venueCount');if(vc)vc.textContent=PLACES.length;
   renderPicks();renderRightNow();
