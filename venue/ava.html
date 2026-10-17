@@ -210,7 +210,16 @@
       .vcard .meta { margin: 0 0 2px; font-weight: 800; color: var(--accent-ink); font-size: .92rem; }
       .vcard .addr { margin: 0; color: var(--muted); font-size: .9rem; }
       @media (max-width: 640px) { .facts { grid-template-columns: 1fr; } }
-    </style>
+    
+.quotes{display:grid;gap:14px;margin-top:20px}
+.quote{border:1px solid var(--line);border-radius:12px;padding:16px 18px;background:var(--surface)}
+.quote blockquote{margin:0;font-size:1.02rem;line-height:1.55}
+.quote figcaption{margin-top:10px;font-size:.82rem;color:var(--muted)}
+.quote figcaption a{color:var(--accent-ink);font-weight:700}
+.take{margin-top:18px;border:1px solid var(--accent);border-radius:12px;padding:16px 18px;background:color-mix(in srgb,var(--accent) 10%,transparent)}
+.take p{margin:0;line-height:1.6}
+.take .take-label{font-size:.72rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--accent-ink);margin:0 0 8px}
+</style>
   </head>
   <body>
     <header class="hero">
@@ -241,7 +250,31 @@
         </div>
       </section>
 
-      <section class="sec" id="nearby">
+<section class="sec" id="saying">
+        <p class="kicker">What People Are Saying</p>
+        <h2>The word from guests</h2>
+        <p class="lede">Real words from people who have been, gathered from public reviews. AVA Mediterranean holds 4.8 on Google across 12,361 reviews.</p>
+        <div class="quotes">
+        <figure class="quote">
+          <blockquote>&ldquo;The food was excellent! Gabriel and Scott did a perfect job for us. 100% we&#x27;ll be regulars here because of the elite food and service.&rdquo;</blockquote>
+          <figcaption>Luis R., via <a href="https://www.mapquest.com/us/florida/ava-mediterraegean-434020903" target="_blank" rel="noopener">MapQuest</a></figcaption>
+        </figure>
+        <figure class="quote">
+          <blockquote>&ldquo;One of the most beautiful restaurant on Park Ave -- AVA combines fantastic service, strong drinks, and delicious food for a night to remember.&rdquo;</blockquote>
+          <figcaption>Nhi B., via <a href="https://www.mapquest.com/us/florida/ava-mediterraegean-434020903" target="_blank" rel="noopener">MapQuest</a></figcaption>
+        </figure>
+        <figure class="quote">
+          <blockquote>&ldquo;I had a really great experience at Ava Mediterranean for magical dining!! The portions were a good size, and the food was fresh, flavorful, and good quality.&rdquo;</blockquote>
+          <figcaption>Erin H., via <a href="https://maps.roadtrippers.com/us/winter-park-fl/food-drink/ava-mediterraegean-winter-park-fl--0" target="_blank" rel="noopener">Yelp</a></figcaption>
+        </figure>
+        </div>
+        <div class="take">
+          <p class="take-label">Our honest take</p>
+          <p>The honest part: the kitchen and the room earn the hype, but the air conditioning has a long-running feud with the dining room, and a 20% operations charge lands on the bill whether you noticed it on the menu or not. Go for the food and the scene. Just dress for a warm room, and read the check before you tip on top of it.</p>
+        </div>
+      </section>
+
+            <section class="sec" id="nearby">
         <p class="kicker">Keep Going</p>
         <h2>More in Winter Park</h2>
         <p class="lede">Other hand-verified places in Winter Park, closest to AVA Mediterranean first.</p>

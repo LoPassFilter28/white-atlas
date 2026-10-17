@@ -210,7 +210,16 @@
       .vcard .meta { margin: 0 0 2px; font-weight: 800; color: var(--accent-ink); font-size: .92rem; }
       .vcard .addr { margin: 0; color: var(--muted); font-size: .9rem; }
       @media (max-width: 640px) { .facts { grid-template-columns: 1fr; } }
-    </style>
+    
+.quotes{display:grid;gap:14px;margin-top:20px}
+.quote{border:1px solid var(--line);border-radius:12px;padding:16px 18px;background:var(--surface)}
+.quote blockquote{margin:0;font-size:1.02rem;line-height:1.55}
+.quote figcaption{margin-top:10px;font-size:.82rem;color:var(--muted)}
+.quote figcaption a{color:var(--accent-ink);font-weight:700}
+.take{margin-top:18px;border:1px solid var(--accent);border-radius:12px;padding:16px 18px;background:color-mix(in srgb,var(--accent) 10%,transparent)}
+.take p{margin:0;line-height:1.6}
+.take .take-label{font-size:.72rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--accent-ink);margin:0 0 8px}
+</style>
   </head>
   <body>
     <header class="hero">
@@ -241,7 +250,31 @@
         </div>
       </section>
 
-      <section class="sec" id="nearby">
+<section class="sec" id="saying">
+        <p class="kicker">What People Are Saying</p>
+        <h2>The word from guests</h2>
+        <p class="lede">Real words from people who have been, gathered from public reviews. Rusteak holds 4.4 on Google across 1,292 reviews.</p>
+        <div class="quotes">
+        <figure class="quote">
+          <blockquote>&ldquo;Rusteak in Thornton Park is such a great spot if you&#x27;re looking for an elevated but relaxed dining experience.&rdquo;</blockquote>
+          <figcaption>Megan B, via <a href="https://wanderlog.com/place/details/1477111/rusteak-thornton-park" target="_blank" rel="noopener">Google</a></figcaption>
+        </figure>
+        <figure class="quote">
+          <blockquote>&ldquo;Loved this place! ... I had the best espresso martini ever (made by Z)! The food was delicious!&rdquo;</blockquote>
+          <figcaption>Kristen B, via <a href="https://wanderlog.com/place/details/1477111/rusteak-thornton-park" target="_blank" rel="noopener">Google</a></figcaption>
+        </figure>
+        <figure class="quote">
+          <blockquote>&ldquo;The steak frites were delish, burgers were on point and the fish was good as well. The staff was fantastic and everyone had a good time.&rdquo;</blockquote>
+          <figcaption>Carol R, via <a href="https://www.tripadvisor.co.uk/Restaurant_Review-g34515-d25326515-Reviews-Rusteak-Orlando_Florida.html" target="_blank" rel="noopener">TripAdvisor</a></figcaption>
+        </figure>
+        </div>
+        <div class="take">
+          <p class="take-label">Our honest take</p>
+          <p>When RusTeak fills up, it gets loud enough to lean in across the table, and service stretches with the room. The cooking holds up its end of the deal. Book the early seating if you actually want to hear your dinner date.</p>
+        </div>
+      </section>
+
+            <section class="sec" id="nearby">
         <p class="kicker">Keep Going</p>
         <h2>More in Thornton Park</h2>
         <p class="lede">Other hand-verified places in Thornton Park, closest to Rusteak first.</p>

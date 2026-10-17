@@ -210,7 +210,16 @@
       .vcard .meta { margin: 0 0 2px; font-weight: 800; color: var(--accent-ink); font-size: .92rem; }
       .vcard .addr { margin: 0; color: var(--muted); font-size: .9rem; }
       @media (max-width: 640px) { .facts { grid-template-columns: 1fr; } }
-    </style>
+    
+.quotes{display:grid;gap:14px;margin-top:20px}
+.quote{border:1px solid var(--line);border-radius:12px;padding:16px 18px;background:var(--surface)}
+.quote blockquote{margin:0;font-size:1.02rem;line-height:1.55}
+.quote figcaption{margin-top:10px;font-size:.82rem;color:var(--muted)}
+.quote figcaption a{color:var(--accent-ink);font-weight:700}
+.take{margin-top:18px;border:1px solid var(--accent);border-radius:12px;padding:16px 18px;background:color-mix(in srgb,var(--accent) 10%,transparent)}
+.take p{margin:0;line-height:1.6}
+.take .take-label{font-size:.72rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--accent-ink);margin:0 0 8px}
+</style>
   </head>
   <body>
     <header class="hero">
@@ -240,7 +249,31 @@
         </div>
       </section>
 
-      <section class="sec" id="nearby">
+<section class="sec" id="saying">
+        <p class="kicker">What People Are Saying</p>
+        <h2>The word from guests</h2>
+        <p class="lede">Real words from people who have been, gathered from public reviews.</p>
+        <div class="quotes">
+        <figure class="quote">
+          <blockquote>&ldquo;This place was so much fun and the food was great! Our server Courtney was so attentive and sweet we couldn’t have asked for a better experience.&rdquo;</blockquote>
+          <figcaption>Diana Rochester, via <a href="https://www.restaurantji.com/fl/oviedo/black-hammock-restaurant-/comments/" target="_blank" rel="noopener">Google</a></figcaption>
+        </figure>
+        <figure class="quote">
+          <blockquote>&ldquo;The wings were great and meaty, Jaelyn advised medium over hot for the flavor which was excellent.&rdquo;</blockquote>
+          <figcaption>Spiggle, via <a href="https://maps.roadtrippers.com/us/oviedo-fl/food-drink/black-hammock-restaurant-oviedo" target="_blank" rel="noopener">Yelp</a></figcaption>
+        </figure>
+        <figure class="quote">
+          <blockquote>&ldquo;I have to go here everytime im in the Orlando area! What a Florida experience!&rdquo;</blockquote>
+          <figcaption>Lori Peterson, via <a href="https://www.restaurantji.com/fl/oviedo/black-hammock-restaurant-/comments/" target="_blank" rel="noopener">Google</a></figcaption>
+        </figure>
+        </div>
+        <div class="take">
+          <p class="take-label">Our honest take</p>
+          <p>Regulars are honest that the kitchen is not as consistent as it was: recent reviews describe food and service slipping from the standard that built this place. The setting has not slipped at all. Go for Lake Jesup, the gators, and the Old Florida theater of it, and keep dinner expectations easy.</p>
+        </div>
+      </section>
+
+            <section class="sec" id="nearby">
         <p class="kicker">Keep Going</p>
         <h2>More in Oviedo</h2>
         <p class="lede">Other hand-verified places in Oviedo, closest to Black Hammock Restaurant first.</p>

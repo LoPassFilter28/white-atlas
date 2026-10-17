@@ -210,7 +210,16 @@
       .vcard .meta { margin: 0 0 2px; font-weight: 800; color: var(--accent-ink); font-size: .92rem; }
       .vcard .addr { margin: 0; color: var(--muted); font-size: .9rem; }
       @media (max-width: 640px) { .facts { grid-template-columns: 1fr; } }
-    </style>
+    
+.quotes{display:grid;gap:14px;margin-top:20px}
+.quote{border:1px solid var(--line);border-radius:12px;padding:16px 18px;background:var(--surface)}
+.quote blockquote{margin:0;font-size:1.02rem;line-height:1.55}
+.quote figcaption{margin-top:10px;font-size:.82rem;color:var(--muted)}
+.quote figcaption a{color:var(--accent-ink);font-weight:700}
+.take{margin-top:18px;border:1px solid var(--accent);border-radius:12px;padding:16px 18px;background:color-mix(in srgb,var(--accent) 10%,transparent)}
+.take p{margin:0;line-height:1.6}
+.take .take-label{font-size:.72rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--accent-ink);margin:0 0 8px}
+</style>
   </head>
   <body>
     <header class="hero">
@@ -241,7 +250,31 @@
         </div>
       </section>
 
-      <section class="sec" id="nearby">
+<section class="sec" id="saying">
+        <p class="kicker">What People Are Saying</p>
+        <h2>The word from guests</h2>
+        <p class="lede">Real words from people who have been, gathered from public reviews. Tom&#x27;s Watch Bar holds 4.8 on Google across 4,551 reviews.</p>
+        <div class="quotes">
+        <figure class="quote">
+          <blockquote>&ldquo;From the moment we arrived, he made us feel genuinely welcome and looked after us throughout our visit. He was friendly, attentive, knowledgeable&rdquo;</blockquote>
+          <figcaption>Andrew Gittings, via <a href="https://www.restaurantji.com/fl/orlando/toms-watch-bar-/comments/" target="_blank" rel="noopener">Google</a></figcaption>
+        </figure>
+        <figure class="quote">
+          <blockquote>&ldquo;Fantastic place! The food was absolutely delicious, with generous portions and great flavors. The atmosphere is lively and welcoming&rdquo;</blockquote>
+          <figcaption>Luis, via <a href="https://www.restaurantji.com/fl/orlando/toms-watch-bar-/comments/" target="_blank" rel="noopener">Google</a></figcaption>
+        </figure>
+        <figure class="quote">
+          <blockquote>&ldquo;Gabe attended us and he was the best waiter I’ve ever had. We came on vacation from Chicago and this was the best service I’ve ever witnessed from a person.&rdquo;</blockquote>
+          <figcaption>Lucia Cortez, via <a href="https://www.restaurantji.com/fl/orlando/toms-watch-bar-/comments/" target="_blank" rel="noopener">Google</a></figcaption>
+        </figure>
+        </div>
+        <div class="take">
+          <p class="take-label">Our honest take</p>
+          <p>The screens deliver exactly what the name promises. The bill is where people push back: prices run high, and event nights can add parking and even entry fees that catch first-timers off guard. Check the event calendar before you go, and the sticker shock mostly disappears.</p>
+        </div>
+      </section>
+
+            <section class="sec" id="nearby">
         <p class="kicker">Keep Going</p>
         <h2>More in International Drive</h2>
         <p class="lede">Other hand-verified places in International Drive, Local Picks first, then the closest to Tom&#x27;s Watch Bar.</p>

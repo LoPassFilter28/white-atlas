@@ -210,7 +210,16 @@
       .vcard .meta { margin: 0 0 2px; font-weight: 800; color: var(--accent-ink); font-size: .92rem; }
       .vcard .addr { margin: 0; color: var(--muted); font-size: .9rem; }
       @media (max-width: 640px) { .facts { grid-template-columns: 1fr; } }
-    </style>
+    
+.quotes{display:grid;gap:14px;margin-top:20px}
+.quote{border:1px solid var(--line);border-radius:12px;padding:16px 18px;background:var(--surface)}
+.quote blockquote{margin:0;font-size:1.02rem;line-height:1.55}
+.quote figcaption{margin-top:10px;font-size:.82rem;color:var(--muted)}
+.quote figcaption a{color:var(--accent-ink);font-weight:700}
+.take{margin-top:18px;border:1px solid var(--accent);border-radius:12px;padding:16px 18px;background:color-mix(in srgb,var(--accent) 10%,transparent)}
+.take p{margin:0;line-height:1.6}
+.take .take-label{font-size:.72rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--accent-ink);margin:0 0 8px}
+</style>
   </head>
   <body>
     <header class="hero">
@@ -241,7 +250,31 @@
         </div>
       </section>
 
-      <section class="sec" id="nearby">
+<section class="sec" id="saying">
+        <p class="kicker">What People Are Saying</p>
+        <h2>The word from guests</h2>
+        <p class="lede">Real words from people who have been, gathered from public reviews. Disney Springs holds 4.7 on Google across 161,481 reviews.</p>
+        <div class="quotes">
+        <figure class="quote">
+          <blockquote>&ldquo;Love it! Plenty to do, see, eat, drink and purchase! Sitting around people watching or listening to music is also fun to do there!&rdquo;</blockquote>
+          <figcaption>RozayLife, via <a href="https://www.tripadvisor.ca/ShowUserReviews-g34515-d130846-r1076089327-Disney_Springs-Orlando_Florida.html" target="_blank" rel="noopener">TripAdvisor</a></figcaption>
+        </figure>
+        <figure class="quote">
+          <blockquote>&ldquo;Wonderful shopping experience with the family. Nice place for walking, dining and shopping. Parking is free and lots to do.&rdquo;</blockquote>
+          <figcaption>67yolandal, via <a href="https://www.tripadvisor.ca/ShowUserReviews-g34515-d130846-r1076089327-Disney_Springs-Orlando_Florida.html" target="_blank" rel="noopener">TripAdvisor</a></figcaption>
+        </figure>
+        <figure class="quote">
+          <blockquote>&ldquo;Lovely place to wander in the evening, lots of places to eat and good selection of shopping, also a bowling alley and a cinema. ... I’d recommend a visit here even just to unwind and soak up the atmosphere.&rdquo;</blockquote>
+          <figcaption>Paul C, via <a href="https://www.tripadvisor.ca/ShowUserReviews-g34515-d130846-r1076089327-Disney_Springs-Orlando_Florida.html" target="_blank" rel="noopener">TripAdvisor</a></figcaption>
+        </figure>
+        </div>
+        <div class="take">
+          <p class="take-label">Our honest take</p>
+          <p>Disney Springs is free to enter and expensive to inhabit. Crowds stack up by evening, waits follow, and prices carry the Disney premium everywhere. It is still the easiest big night out in the tourist corridor. Go early, reserve where you can, and let the waterfront do its work.</p>
+        </div>
+      </section>
+
+            <section class="sec" id="nearby">
         <p class="kicker">Keep Going</p>
         <h2>More in Disney Springs</h2>
         <p class="lede">Other hand-verified places in Disney Springs, closest to Disney Springs first.</p>
