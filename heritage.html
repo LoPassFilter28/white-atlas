@@ -1,0 +1,467 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="color-scheme" content="light dark" />
+    <title>Orlando Heritage: The Longest-Running Tables, Stages and Landmarks | 407 FYI</title>
+    <meta name="description" content="Orlando heritage from the 407 FYI guide: the longest-running restaurants, stages, markets and landmarks in Greater Orlando, from a 1905 dining room family to the rooms locals refuse to lose." />
+    <link rel="canonical" href="https://407.fyi/heritage.html" />
+    <meta property="og:title" content="Orlando Heritage: The Long View · 407 FYI" />
+    <meta property="og:description" content="Orlando heritage from the 407 FYI guide: the longest-running restaurants, stages, markets and landmarks in Greater Orlando, from a 1905 dining room family to the rooms locals refuse to lose." />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://407.fyi/heritage.html" />
+    <meta property="og:image" content="https://407.fyi/og-image.png" />
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="preload" href="/fonts/manrope-latin.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="/fonts/fonts.css" />
+    <script>
+      try {
+        const savedTheme = localStorage.getItem('white-atlas-theme');
+        document.documentElement.dataset.theme = savedTheme === 'light' || savedTheme === 'dark' ? savedTheme : 'dark';
+      } catch (error) {
+        document.documentElement.dataset.theme = 'dark';
+      }
+    </script>
+    <style>
+      /* Night Drive tokens (from the main guide) + district gradient */
+      :root { --scrim: rgba(4,10,6,0.6); --g-panel: #14220f; --g-base: #040a06; --dur-reveal: 900ms; --dur-glide: 1200ms; --dur-ghost: 1400ms; --dur-cue: 2400ms;
+        color-scheme: dark;
+        --bg: #0a1811; --surface: #122419; --soft: #172a1f; --ink: #f0e8d5;
+        --muted: #c6bba2; --line: #2f4a38; --accent: #765b2f; --accent-ink: #d4b573;
+        --headline: #f6edd6; --focus: #d4b573;
+        --d-a: #0a2114; --d-b: #3c4527; --d-c: #a3813f;
+        --h1vw: 13.5vw;
+        --pad: clamp(20px, 5vw, 40px);
+      }
+      * { box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
+      body {
+        margin: 0; background: var(--bg); color: var(--ink);
+        font-family: "Manrope", system-ui, sans-serif; line-height: 1.6;
+        overflow-x: hidden;
+      }
+      h1, h2, .display { font-family: "Urbanist", "Manrope", sans-serif; }
+      a { color: var(--accent-ink); }
+      a:focus-visible, .venue-btn:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
+      .kicker {
+        font-family: "Urbanist", sans-serif; font-weight: 700; letter-spacing: .22em;
+        font-size:.72rem; text-transform: uppercase; color: var(--accent-ink); margin: 0 0 18px;
+      }
+
+      /* ---------- reveal on scroll (armed by JS; content visible without it) ---------- */
+      .reveal-armed .reveal { opacity: 0; transform: translateY(26px); transition: opacity var(--dur-reveal) ease, transform var(--dur-reveal) ease; }
+      .reveal-armed .reveal.in { opacity: 1; transform: none; }
+
+      /* ---------- 1 · title screen ---------- */
+      .hero {
+        position: relative; min-height: min(100svh, 960px); display: grid; place-items: center;
+        text-align: center; overflow: hidden; padding: 64px var(--pad);
+        background:
+          radial-gradient(ellipse 90% 55% at 50% 108%, rgba(163, 129, 63, .28), transparent 60%),
+          linear-gradient(168deg, #0d2818 0%, var(--d-a) 52%, #07130c 100%);
+      }
+      .hero-in { position: relative; max-width: 900px; }
+      .hero-brand {
+        font-family: "Urbanist", sans-serif; font-weight: 800; letter-spacing: .3em;
+        font-size:.78rem; color: var(--ink); text-decoration: none; opacity: .85;
+      }
+      .hero h1 {
+        margin: 26px 0 8px; font-weight: 800; color: var(--headline);
+        font-size: clamp(1.9rem, var(--h1vw), 5.75rem); line-height: .98; letter-spacing: .01em;
+      }
+      .hero .sub {
+        margin: 10px auto 0; max-width: 620px; font-size: clamp(1.05rem, 2.6vw, 1.45rem);
+        color: var(--ink); font-weight: 500;
+      }
+      .hero .count { margin-top: 30px; color: var(--muted); font-size:.88rem; letter-spacing: .12em; text-transform: uppercase; }
+      .scroll-cue {
+        position: absolute; left: 50%; bottom: 26px; transform: translateX(-50%);
+        color: var(--muted); font-size:.72rem; letter-spacing: .3em; text-transform: uppercase;
+        display: grid; justify-items: center; gap: 8px;
+      }
+      .scroll-cue::after {
+        content: ""; width: 1px; height: 44px;
+        background: linear-gradient(var(--accent-ink), transparent);
+        animation: cue var(--dur-cue) ease-in-out infinite;
+      }
+      @keyframes cue { 0%, 100% { transform: scaleY(.55); opacity: .4; } 50% { transform: scaleY(1); opacity: 1; } }
+
+      /* ---------- quiet text blocks ---------- */
+      .quiet { max-width: 680px; margin: 0 auto; padding: clamp(72px, 17vh, 170px) var(--pad); }
+      .quiet h2, .split h2, .grid-sec h2, .closing h2 {
+        margin: 0 0 20px; font-weight: 800; color: var(--headline);
+        font-size: clamp(2rem, 5.6vw, 3.2rem); line-height: 1.08;
+      }
+      .quiet p { font-size: clamp(1.05rem, 2.2vw, 1.22rem); color: var(--ink); margin: 0; }
+
+      /* ---------- glideshow panels ---------- */
+      .glide { position: relative; }
+      .glide-stage {
+        position: sticky; top: 0; height: 100svh; overflow: hidden;
+      }
+      .glide-bg { position: absolute; inset: 0; transition: opacity var(--dur-glide) ease; }
+      .glide-bg.b { opacity: 0; }
+      .glide.in-view .glide-bg.b { opacity: 1; }
+      .glide-bg.a1 { background: radial-gradient(ellipse 80% 60% at 18% 110%, rgba(163,129,63,.35), transparent 62%), linear-gradient(155deg, #10301d, var(--d-a) 58%, #060f09); }
+      .glide-bg.b1 { background: radial-gradient(ellipse 80% 60% at 82% -10%, rgba(163,129,63,.30), transparent 60%), linear-gradient(205deg, #143723, var(--d-a) 60%, #050d07); }
+      .glide-bg.a2 { background: radial-gradient(ellipse 75% 55% at 85% 108%, rgba(163,129,63,.26), transparent 60%), linear-gradient(200deg, #0c2416, #081a10 60%, var(--g-base)); }
+      .glide-bg.b2 { background: radial-gradient(ellipse 75% 55% at 12% -8%, rgba(212,181,115,.22), transparent 58%), linear-gradient(160deg, #0e2a19, #07160e 62%, var(--g-base)); }
+      .glide-bg.a3 { background: radial-gradient(ellipse 90% 65% at 50% 115%, rgba(233,193,121,.42), transparent 64%), linear-gradient(168deg, var(--d-b), #6d5a28 58%, #4a3a17); }
+      .glide-bg.b3 { background: radial-gradient(ellipse 90% 65% at 50% -15%, rgba(233,193,121,.30), transparent 60%), linear-gradient(200deg, #55602f, var(--d-c) 62%, #57431a); }
+      .ghost {
+        position: absolute; top: 4svh; right: max(2vw, calc((100vw - 1560px) / 2 + 32px)); margin: 0;
+        font-family: "Urbanist", sans-serif; font-weight: 800; line-height: 1;
+        font-size: clamp(9rem, 34vw, 24rem); color: transparent;
+        -webkit-text-stroke: 1.5px rgba(212, 181, 115, .28);
+        transform: translateY(3.5svh); transition: transform var(--dur-ghost) ease;
+        user-select: none;
+      }
+      .glide.in-view .ghost { transform: translateY(0); }
+      .glide.flip .ghost { right: auto; left: max(2vw, calc((100vw - 1560px) / 2 + 32px)); }
+      .glide-cardwrap { position: relative; z-index: 2; margin-top: -58svh; padding: 0 max(var(--pad), calc((100vw - 1560px) / 2 + 40px)) 16svh; }
+      .glide-card {
+        max-width: 540px; background: rgba(18, 36, 25, .92); border: 1px solid var(--line);
+        border-radius: 20px; padding: clamp(26px, 4.5vw, 42px);
+        box-shadow: 0 30px 70px rgba(0, 0, 0, .5); backdrop-filter: blur(6px);
+      }
+      .glide.flip .glide-card { margin-left: auto; }
+      .glide-card h2 { margin: 0 0 14px; font-weight: 800; color: var(--headline); font-size: clamp(1.8rem, 4.6vw, 2.7rem); line-height: 1.1; }
+      .glide-card p { margin: 0 0 22px; font-size:1.06rem; }
+      .venue-meta { color: var(--muted); font-size:.88rem; font-weight:700; letter-spacing: .04em; margin: 0 0 14px; }
+      .venue-btn {
+        display: inline-block; background: var(--accent-ink); color: var(--g-panel); text-decoration: none;
+        font-weight: 800; font-size:.88rem; padding: 13px 22px; border-radius: 999px;
+      }
+      .venue-btn:hover { background: #e9c179; }
+
+      /* ---------- pull quote ---------- */
+      .pullquote { min-height: min(94svh, 820px); display: grid; place-items: center; text-align: center; padding: clamp(64px, 12vh, 140px) var(--pad); }
+      .pullquote blockquote {
+        margin: 0; max-width: 880px; font-family: "Urbanist", sans-serif; font-weight: 700;
+        font-size: clamp(1.9rem, 6.2vw, 3.7rem); line-height: 1.22; color: var(--headline);
+      }
+      .pullquote .mark { color: var(--accent-ink); }
+
+      /* ---------- split: short list + point map ---------- */
+      .split { max-width: 820px; margin: 0 auto; padding: clamp(72px, 15vh, 150px) var(--pad); display: grid; grid-template-columns: 1fr; gap: clamp(28px, 5vw, 64px); align-items: center; }
+      .split .lede { color: var(--muted); margin: 0 0 10px; font-size:1.06rem; }
+      .ave-row {
+        display: flex; align-items: baseline; gap: 14px; padding: 17px 4px;
+        border-bottom: 1px solid var(--line); text-decoration: none; color: var(--ink);
+      }
+      .ave-row:first-of-type { border-top: 1px solid var(--line); }
+      .ave-row .n { font-family: "Urbanist", sans-serif; font-weight: 800; color: var(--accent-ink); font-size:.88rem; }
+      .ave-row .who { flex: 1; min-width: 0; }
+      .ave-row .who b { display: block; font-family: "Urbanist", sans-serif; font-size:1.25rem; color: var(--headline); }
+      .ave-row .who span { color: var(--muted); font-size:.88rem; }
+      .ave-row .arr { color: var(--accent-ink); font-weight: 800; }
+      .ave-row:hover .who b { color: var(--accent-ink); }
+
+      /* ---------- typographic grid ---------- */
+      .grid-sec { max-width: 1120px; margin: 0 auto; padding: clamp(40px, 6vh, 64px) var(--pad) clamp(72px, 15vh, 150px); }
+      .tiles { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 30px; }
+      .tile {
+        display: block; background: var(--surface); border: 1px solid var(--line); border-radius: 20px;
+        padding: clamp(22px, 3.4vw, 32px); text-decoration: none; color: var(--ink);
+      }
+      .tile:hover { border-color: var(--accent-ink); }
+      .tile b { display: block; font-family: "Urbanist", sans-serif; font-weight: 800; font-size: clamp(1.25rem, 2.6vw, 1.6rem); line-height: 1.2; color: var(--headline); margin-bottom: 8px; }
+      .tile p { margin: 0 0 14px; color: var(--muted); font-size:1.06rem; }
+      .tile .venue-meta { margin: 0; }
+
+      /* ---------- closing: the whole neighbourhood ---------- */
+      .closing { max-width: 860px; margin: 0 auto; padding: clamp(72px, 15vh, 150px) var(--pad) clamp(48px, 9vh, 90px); }
+      .closing .lede { color: var(--muted); font-size:1.06rem; margin: 0 0 8px; max-width: 560px; }
+      .ix { list-style: none; margin: 34px 0 0; padding: 0; }
+      .ix a {
+        display: flex; align-items: baseline; justify-content: space-between; gap: 16px;
+        padding: 11px 2px; border-bottom: 1px solid var(--line); text-decoration: none;
+      }
+      .ix-name { font-weight:700; color: var(--ink); text-wrap:balance; }
+      .ix-meta { color: var(--muted); font-size:.88rem; text-align: right; white-space: nowrap; }
+      .ix a:hover .ix-name { color: var(--accent-ink); }
+      @media (min-width: 780px) { .ix { columns: 2; column-gap: 54px; } .ix li { break-inside: avoid; } }
+      .handoff { margin-top: 52px; display: grid; gap: 18px; justify-items: start; }
+      .btn-big {
+        display: inline-block; background: var(--accent-ink); color: var(--g-panel); text-decoration: none;
+        font-family: "Urbanist", sans-serif; font-weight: 800; font-size:1.06rem;
+        padding: 16px 28px; border-radius: 999px;
+      }
+      .btn-big:hover { background: #e9c179; }
+      .next-district { font-weight: 700; text-decoration: none; }
+      .next-district:hover { text-decoration: underline; }
+
+      /* ---------- Phase 4 · hero photograph (duotone; the type stays the hero) ---------- */
+      .hero-photo { position: absolute; top: 0; bottom: 0; left: 50%; transform: translateX(-50%); width: 100%; overflow: hidden; }
+      .hero-photo img {
+        width: 100%; height: 100%; display: block; object-fit: cover; object-position: center 38%;
+        filter: grayscale(.5) sepia(.34) hue-rotate(64deg) saturate(.85) brightness(.6) contrast(1.07);
+      }
+      .hero-photo::after {
+        content: ""; position: absolute; inset: 0;
+        background:
+          linear-gradient(180deg, rgba(7, 19, 12, .58) 0%, rgba(7, 19, 12, .30) 36%, rgba(7, 19, 12, .55) 68%, rgba(7, 19, 12, .93) 100%),
+          radial-gradient(ellipse 90% 55% at 50% 108%, rgba(163, 129, 63, .25), transparent 60%);
+      }
+      .hero-in { z-index: 2; }
+      .scroll-cue { z-index: 2; }
+      .hero.has-photo h1, .hero.has-photo .sub, .hero.has-photo .count { text-shadow: 0 2px 30px var(--scrim); }
+
+      /* ---------- Phase 4 · flashback panel ---------- */
+      .flashback { max-width: 680px; margin: 0 auto; padding: clamp(48px, 9vh, 90px) var(--pad) 2vh; }
+      .fb-panel {
+        background: var(--surface); border: 1px solid var(--line); border-left: 3px solid var(--accent-ink);
+        border-radius: 20px; padding: clamp(26px, 4.5vw, 40px);
+      }
+      .fb-card h3 {
+        font-family: "Urbanist", sans-serif; font-weight: 800; color: var(--headline);
+        font-size: clamp(1.3rem, 3.2vw, 1.7rem); line-height: 1.22; margin: 0 0 14px;
+      }
+      .fb-card p { margin: 0 0 14px; font-size:1.06rem; }
+      .fb-card p:last-child { margin-bottom: 0; }
+      .fb-card .history-reveal { font-weight: 700; color: var(--headline); }
+      .fb-card .history-note { color: var(--muted); }
+      .fb-card .history-source { font-size:.88rem; color: var(--muted); }
+      .fb-card + .fb-card { margin-top: 30px; padding-top: 28px; border-top: 1px solid var(--line); }
+      .fb-more { margin: 18px 2px 0; color: var(--muted); font-size:.88rem; }
+      .photo-credit { font-size:.78rem !important; }
+
+      /* ---------- footer ---------- */
+      footer { border-top: 1px solid var(--line); margin-top: 4vh; }
+      .foot-in { max-width: 860px; margin: 0 auto; padding: 44px var(--pad) 58px; display: grid; gap: 14px; }
+      .back-link { font-weight: 700; text-decoration: none; }
+      .back-link:hover { text-decoration: underline; }
+      .foot-in p { margin: 0; color: var(--muted); font-size:.88rem; max-width: 640px; }
+      .foot-in .brand-line { color: var(--ink); font-weight: 700; }
+      .foot-in a { display: inline-block; padding: 12px 0; }
+
+      @media (max-width: 760px) {
+        .split { grid-template-columns: 1fr; }
+        .tiles { grid-template-columns: 1fr; }
+        .glide-cardwrap { margin-top: -46svh; }
+      }
+      @media print { .reveal { opacity: 1 !important; transform: none !important; } }
+      @media (prefers-reduced-motion: reduce) {
+        html { scroll-behavior: auto; }
+        .glide-stage { position: static; height: 52svh; }
+        .glide-cardwrap { margin-top: 0; padding-top: 30px; }
+        .glide-bg, .ghost, .scroll-cue::after { transition: none !important; animation: none !important; }
+        .reveal-armed .reveal { opacity: 1 !important; transform: none !important; transition: none !important; }
+      }
+    
+.venue-btn:active{filter:brightness(.92)}
+
+      /* ---------- Desktop containment: ultra-wide composition frame ---------- */
+      @media (min-width: 1561px) {
+        .glide-bg.a1 { background: radial-gradient(900px 620px at calc(50% - 520px) 110%, rgba(163,129,63,.35), transparent 62%), linear-gradient(155deg, #10301d, var(--d-a) 58%, #060f09); }
+        .glide-bg.b1 { background: radial-gradient(900px 620px at calc(50% + 400px) -10%, rgba(163,129,63,.30), transparent 60%), linear-gradient(205deg, #143723, var(--d-a) 60%, #050d07); }
+        .glide-bg.a2 { background: radial-gradient(900px 620px at calc(50% + 445px) 108%, rgba(163,129,63,.26), transparent 60%), linear-gradient(200deg, #0c2416, #081a10 60%, var(--g-base)); }
+        .glide-bg.b2 { background: radial-gradient(900px 620px at calc(50% - 605px) -8%, rgba(212,181,115,.22), transparent 58%), linear-gradient(160deg, #0e2a19, #07160e 62%, var(--g-base)); }
+        .glide-bg.a3 { background: radial-gradient(1100px 700px at 50% 115%, rgba(233,193,121,.42), transparent 64%), linear-gradient(168deg, var(--d-b), #6d5a28 58%, #4a3a17); }
+        .glide-bg.b3 { background: radial-gradient(1100px 700px at 50% -15%, rgba(233,193,121,.30), transparent 60%), linear-gradient(200deg, #55602f, var(--d-c) 62%, #57431a); }
+      }
+      @media (min-width: 2201px) {
+        .hero-photo::after {
+          background:
+            linear-gradient(90deg, rgba(7, 19, 12, .88) 0, rgba(7, 19, 12, 0) 150px, rgba(7, 19, 12, 0) calc(100% - 150px), rgba(7, 19, 12, .88) 100%),
+            linear-gradient(180deg, rgba(7, 19, 12, .58) 0%, rgba(7, 19, 12, .30) 36%, rgba(7, 19, 12, .55) 68%, rgba(7, 19, 12, .93) 100%),
+            radial-gradient(ellipse 90% 55% at 50% 108%, rgba(163, 129, 63, .25), transparent 60%);
+        }
+        .hero:not(.has-photo)::before {
+          content: ""; position: absolute; top: 0; bottom: 0; left: 50%; transform: translateX(-50%);
+          width: 2200px; pointer-events: none;
+          background: radial-gradient(ellipse 62% 55% at 50% 108%, rgba(163, 129, 63, .22), transparent 60%);
+        }
+      }
+
+      /* ---------- Light theme: app-page tokens, district hues mixed toward the light ground ---------- */
+      html[data-theme="light"] {
+        color-scheme: light;
+        --bg: #faf6ec; --surface: #fffdf7; --soft: #f3ecd7; --ink: #1d2a20;
+        --muted: #4c5a45; --line: #ddd3ba; --accent: #8a5f0e; --accent-ink: #7c520c;
+        --headline: #123524; --focus: #8a5f0e; --g-base: #e9e1c9;
+      }
+      html[data-theme="light"] .hero {
+        background:
+          radial-gradient(ellipse 90% 55% at 50% 108%, rgba(163, 129, 63, .30), transparent 60%),
+          linear-gradient(168deg, color-mix(in srgb, var(--d-a) 24%, #faf6ec) 0%, color-mix(in srgb, var(--d-a) 42%, #faf6ec) 52%, color-mix(in srgb, var(--d-a) 16%, #faf6ec) 100%) !important;
+      }
+      html[data-theme="light"] .hero.has-photo {
+        --ink: #f0e8d5; --headline: #f6edd6; --muted: #c6bba2; --accent-ink: #d4b573; --focus: #d4b573;
+      }
+      html[data-theme="light"] .glide-bg.a1 { background: radial-gradient(ellipse 80% 60% at 18% 110%, rgba(163,129,63,.30), transparent 62%), linear-gradient(155deg, color-mix(in srgb, var(--d-a) 30%, #faf6ec), color-mix(in srgb, var(--d-a) 46%, #faf6ec) 58%, color-mix(in srgb, var(--d-a) 22%, #faf6ec)); }
+      html[data-theme="light"] .glide-bg.b1 { background: radial-gradient(ellipse 80% 60% at 82% -10%, rgba(163,129,63,.26), transparent 60%), linear-gradient(205deg, color-mix(in srgb, var(--d-a) 34%, #faf6ec), color-mix(in srgb, var(--d-a) 48%, #faf6ec) 60%, color-mix(in srgb, var(--d-a) 24%, #faf6ec)); }
+      html[data-theme="light"] .glide-bg.a2 { background: radial-gradient(ellipse 75% 55% at 85% 108%, rgba(163,129,63,.24), transparent 60%), linear-gradient(200deg, color-mix(in srgb, var(--d-a) 26%, #faf6ec), color-mix(in srgb, var(--d-a) 20%, #faf6ec) 60%, color-mix(in srgb, var(--d-a) 12%, #faf6ec)); }
+      html[data-theme="light"] .glide-bg.b2 { background: radial-gradient(ellipse 75% 55% at 12% -8%, rgba(212,181,115,.32), transparent 58%), linear-gradient(160deg, color-mix(in srgb, var(--d-a) 28%, #faf6ec), color-mix(in srgb, var(--d-a) 18%, #faf6ec) 62%, color-mix(in srgb, var(--d-a) 12%, #faf6ec)); }
+      html[data-theme="light"] .glide-bg.a3 { background: radial-gradient(ellipse 90% 65% at 50% 115%, rgba(190,150,70,.38), transparent 64%), linear-gradient(168deg, color-mix(in srgb, var(--d-b) 62%, #f6ead0), #cdb27c 58%, color-mix(in srgb, var(--d-b) 45%, #e6d3a3)); }
+      html[data-theme="light"] .glide-bg.b3 { background: radial-gradient(ellipse 90% 65% at 50% -15%, rgba(190,150,70,.30), transparent 60%), linear-gradient(200deg, color-mix(in srgb, var(--d-c) 40%, #faf6ec), color-mix(in srgb, var(--d-c) 55%, #faf6ec) 62%, color-mix(in srgb, var(--d-b) 38%, #e9dcbc)); }
+      html[data-theme="light"] .ghost { -webkit-text-stroke: 1.5px rgba(124, 82, 12, .42); }
+      html[data-theme="light"] .glide-card { background: rgba(255, 253, 247, .94); box-shadow: 0 30px 70px rgba(29, 42, 32, .22); }
+      html[data-theme="light"] .venue-btn, html[data-theme="light"] .btn-big { background: var(--accent); color: #fff; }
+      html[data-theme="light"] .venue-btn:hover, html[data-theme="light"] .btn-big:hover { background: var(--accent-ink); }
+      html[data-theme="light"]
+      @media (min-width: 1561px) {
+        html[data-theme="light"] .glide-bg.a1 { background: radial-gradient(900px 620px at calc(50% - 520px) 110%, rgba(163,129,63,.30), transparent 62%), linear-gradient(155deg, color-mix(in srgb, var(--d-a) 30%, #faf6ec), color-mix(in srgb, var(--d-a) 46%, #faf6ec) 58%, color-mix(in srgb, var(--d-a) 22%, #faf6ec)); }
+        html[data-theme="light"] .glide-bg.b1 { background: radial-gradient(900px 620px at calc(50% + 400px) -10%, rgba(163,129,63,.26), transparent 60%), linear-gradient(205deg, color-mix(in srgb, var(--d-a) 34%, #faf6ec), color-mix(in srgb, var(--d-a) 48%, #faf6ec) 60%, color-mix(in srgb, var(--d-a) 24%, #faf6ec)); }
+        html[data-theme="light"] .glide-bg.a2 { background: radial-gradient(900px 620px at calc(50% + 445px) 108%, rgba(163,129,63,.24), transparent 60%), linear-gradient(200deg, color-mix(in srgb, var(--d-a) 26%, #faf6ec), color-mix(in srgb, var(--d-a) 20%, #faf6ec) 60%, color-mix(in srgb, var(--d-a) 12%, #faf6ec)); }
+        html[data-theme="light"] .glide-bg.b2 { background: radial-gradient(900px 620px at calc(50% - 605px) -8%, rgba(212,181,115,.32), transparent 58%), linear-gradient(160deg, color-mix(in srgb, var(--d-a) 28%, #faf6ec), color-mix(in srgb, var(--d-a) 18%, #faf6ec) 62%, color-mix(in srgb, var(--d-a) 12%, #faf6ec)); }
+        html[data-theme="light"] .glide-bg.a3 { background: radial-gradient(1100px 700px at 50% 115%, rgba(190,150,70,.38), transparent 64%), linear-gradient(168deg, color-mix(in srgb, var(--d-b) 62%, #f6ead0), #cdb27c 58%, color-mix(in srgb, var(--d-b) 45%, #e6d3a3)); }
+        html[data-theme="light"] .glide-bg.b3 { background: radial-gradient(1100px 700px at 50% -15%, rgba(190,150,70,.30), transparent 60%), linear-gradient(200deg, color-mix(in srgb, var(--d-c) 40%, #faf6ec), color-mix(in srgb, var(--d-c) 55%, #faf6ec) 62%, color-mix(in srgb, var(--d-b) 38%, #e9dcbc)); }
+      }
+</style>
+    
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"ItemList","name":"Orlando Heritage: longest-running places in the 407 FYI guide","itemListElement":[{"@type":"ListItem","position":1,"url":"https://407.fyi/venue/columbia-restaurant-celebration.html","name":"Columbia Restaurant"},{"@type":"ListItem","position":2,"url":"https://407.fyi/venue/the-beacham.html","name":"The Beacham & The Social"},{"@type":"ListItem","position":3,"url":"https://407.fyi/venue/winter-park-boat-tour.html","name":"Winter Park Scenic Boat Tour"},{"@type":"ListItem","position":4,"url":"https://407.fyi/venue/gatorland.html","name":"Gatorland"},{"@type":"ListItem","position":5,"url":"https://407.fyi/venue/beefy-king.html","name":"Beefy King"},{"@type":"ListItem","position":6,"url":"https://407.fyi/venue/charlies-bakery.html","name":"Charlie's Bakery"},{"@type":"ListItem","position":7,"url":"https://407.fyi/venue/lams-garden.html","name":"Lam's Garden Chinese Restaurant"},{"@type":"ListItem","position":8,"url":"https://407.fyi/venue/briarpatch.html","name":"Briarpatch"},{"@type":"ListItem","position":9,"url":"https://407.fyi/venue/enzos-lake.html","name":"Enzo's On the Lake"},{"@type":"ListItem","position":10,"url":"https://407.fyi/venue/peterbrooke-chocolatier.html","name":"Peterbrooke Chocolatier"},{"@type":"ListItem","position":11,"url":"https://407.fyi/venue/christini-s-ristorante-italiano.html","name":"Christini's Ristorante Italiano"},{"@type":"ListItem","position":12,"url":"https://407.fyi/venue/orlando-farmers-market.html","name":"Orlando Farmers Market"},{"@type":"ListItem","position":13,"url":"https://407.fyi/venue/camila-s-brazilian-restaurant.html","name":"Camila's Brazilian Restaurant"},{"@type":"ListItem","position":14,"url":"https://407.fyi/venue/cecils-texas-style-bar-b-q.html","name":"Cecil's Texas Style Bar-B-Q"},{"@type":"ListItem","position":15,"url":"https://407.fyi/venue/colorado-fondue-company.html","name":"Colorado Fondue Company"},{"@type":"ListItem","position":16,"url":"https://407.fyi/venue/shakers-american-cafe.html","name":"Shakers American Cafe"},{"@type":"ListItem","position":17,"url":"https://407.fyi/venue/shin-jung.html","name":"Shin Jung"},{"@type":"ListItem","position":18,"url":"https://407.fyi/venue/high-tide-harry-s.html","name":"High Tide Harry's"},{"@type":"ListItem","position":19,"url":"https://407.fyi/venue/wall-street-plaza.html","name":"Wall Street Plaza"},{"@type":"ListItem","position":20,"url":"https://407.fyi/venue/the-goblin-market-restaurant.html","name":"The Goblin Market Restaurant"},{"@type":"ListItem","position":21,"url":"https://407.fyi/venue/fun-spot-america-orlando.html","name":"Fun Spot America"},{"@type":"ListItem","position":22,"url":"https://407.fyi/venue/agave-azul-cocina-mexicana.html","name":"Agave Azul Cocina Mexicana"},{"@type":"ListItem","position":23,"url":"https://407.fyi/venue/la-revancha-cuban-cafe.html","name":"La Revancha Cuban Cafe"},{"@type":"ListItem","position":24,"url":"https://407.fyi/venue/thai-place.html","name":"Thai Place"},{"@type":"ListItem","position":25,"url":"https://407.fyi/venue/lake-meadow-naturals.html","name":"Lake Meadow Naturals"},{"@type":"ListItem","position":26,"url":"https://407.fyi/venue/lazy-moon-pizza-ucf.html","name":"Lazy Moon Pizza"},{"@type":"ListItem","position":27,"url":"https://407.fyi/venue/nile-ethiopian.html","name":"Nile Ethiopian"},{"@type":"ListItem","position":28,"url":"https://407.fyi/venue/wine-room-park-avenue.html","name":"The Wine Room on Park Avenue"},{"@type":"ListItem","position":29,"url":"https://407.fyi/venue/tasty-takeover.html","name":"Tasty Takeover"},{"@type":"ListItem","position":30,"url":"https://407.fyi/venue/osprey.html","name":"The Osprey"},{"@type":"ListItem","position":31,"url":"https://407.fyi/venue/inter-co-stadium.html","name":"Inter.co Stadium"},{"@type":"ListItem","position":32,"url":"https://407.fyi/venue/delaneys-tavern.html","name":"Delaney's Tavern"}]}</script>
+</head>
+  <body>
+    <!-- 1 · TITLE SCREEN, type poster on a clean district field -->
+    <header class="hero">
+      <div class="hero-in">
+        <a class="hero-brand" href="/">407 FYI · HERITAGE</a>
+        <h1>THE LONG VIEW</h1>
+        <p class="sub">Anyone can open in Orlando. Staying open is the achievement.</p>
+        <p class="count">The longest-running tables, stages, markets and landmarks in the guide</p>
+      </div>
+      <div class="scroll-cue" aria-hidden="true">Scroll</div>
+    </header>
+
+    <main>
+      <section class="grid-sec">
+        <div class="reveal">
+          <p class="kicker">407 FYI Heritage</p>
+          <h2>Orlando's longest-running places</h2>
+          <p class="lede">This is the guide's roll of the places that have outlasted fads, storms, and the corridor's endless turnover: family dining rooms, stubborn little shops, stages, and markets that locals treat as permanent. Every entry links to its full page in the guide.</p>
+        </div>
+      </section>
+      <section class="grid-sec">
+        <div class="reveal">
+          <p class="kicker">Heritage</p>
+          <h2>The Deep Roots</h2>
+          <p class="lede">Before Orlando had theme parks, it had tables, stages, and boat docks. These are the places that were already institutions when the interstates were still on paper.</p>
+        </div>
+        <div class="tiles">
+          <a class="tile reveal" href="/venue/columbia-restaurant-celebration.html"><b>Columbia Restaurant</b><p>The family&#x27;s Ybor City original dates to 1905, and the Celebration dining room carries five generations of that kitchen with it.</p><p class="venue-meta">Since 1905 &middot; Latin &amp; Caribbean &middot; Celebration</p></a>
+          <a class="tile reveal" href="/venue/the-beacham.html"><b>The Beacham &amp; The Social</b><p>A vaudeville theater on Orange Avenue that has been giving Orlando a place to lose itself in music since 1921.</p><p class="venue-meta">Since 1921 &middot; Nightlife &amp; music &middot; Downtown</p></a>
+          <a class="tile reveal" href="/venue/winter-park-boat-tour.html"><b>Winter Park Scenic Boat Tour</b><p>Gliding through the Winter Park chain of lakes and its narrow canals since 1938.</p><p class="venue-meta">Since 1938 &middot; Attractions &middot; Winter Park</p></a>
+          <a class="tile reveal" href="/venue/gatorland.html"><b>Gatorland</b><p>Orange Blossom Trail&#x27;s alligator landmark, doing its one unmistakable thing since 1949.</p><p class="venue-meta">Since 1949 &middot; Attractions &middot; South Orlando</p></a>
+        </div>
+      </section>
+      <section class="grid-sec">
+        <div class="reveal">
+          <p class="kicker">Heritage</p>
+          <h2>The Postwar Table</h2>
+          <p class="lede">The Orlando that locals grew up with was built in rooms like these: family-run, unhurried, and stubborn about staying exactly themselves.</p>
+        </div>
+        <div class="tiles">
+          <a class="tile reveal" href="/venue/beefy-king.html"><b>Beefy King</b><p>Freeman and Margaret Smith&#x27;s Bumby Avenue shop has steamed its roast beef the same way since 1968.</p><p class="venue-meta">Since 1968 &middot; Burgers &amp; sandwiches &middot; Milk District</p></a>
+          <a class="tile reveal" href="/venue/charlies-bakery.html"><b>Charlie&#x27;s Bakery</b><p>Feeding Orlando cakes, eclairs, and the Parker House rolls regulars swear by since 1971.</p><p class="venue-meta">Since 1971 &middot; Bakeries &middot; Orlando</p></a>
+          <a class="tile reveal" href="/venue/lams-garden.html"><b>Lam&#x27;s Garden Chinese Restaurant</b><p>Cantonese cooking in the Milk District since 1975, with weekend dim sum rolling out of the kitchen.</p><p class="venue-meta">Since 1975 &middot; Chinese &middot; Milk District</p></a>
+        </div>
+      </section>
+      <section class="grid-sec">
+        <div class="reveal">
+          <p class="kicker">Heritage</p>
+          <h2>The Eighties Hold</h2>
+          <p class="lede">While the tourist corridor boomed, these rooms locked in. Most are still family-run, and most still anchor their neighborhoods.</p>
+        </div>
+        <div class="tiles">
+          <a class="tile reveal" href="/venue/briarpatch.html"><b>Briarpatch</b><p>Park Avenue&#x27;s breakfast institution since 1980, holding the corner through every reinvention of the street.</p><p class="venue-meta">Since 1980 &middot; Breakfast &amp; brunch &middot; Winter Park</p></a>
+          <a class="tile reveal" href="/venue/enzos-lake.html"><b>Enzo&#x27;s On the Lake</b><p>Central Florida&#x27;s special-occasion Italian on Lake Kathryn since 1980.</p><p class="venue-meta">Since 1980 &middot; Italian &middot; Longwood</p></a>
+          <a class="tile reveal" href="/venue/peterbrooke-chocolatier.html"><b>Peterbrooke Chocolatier</b><p>Handcrafting chocolate in the European tradition on Park Avenue since 1983.</p><p class="venue-meta">Since 1983 &middot; Sweets &middot; Winter Park</p></a>
+          <a class="tile reveal" href="/venue/christini-s-ristorante-italiano.html"><b>Christini&#x27;s Ristorante Italiano</b><p>Restaurant Row&#x27;s white-tablecloth occasion since 1984.</p><p class="venue-meta">Since 1984 &middot; Italian &middot; Dr Phillips</p></a>
+          <a class="tile reveal" href="/venue/orlando-farmers-market.html"><b>Orlando Farmers Market</b><p>Downtown&#x27;s Sunday ritual on the Lake Eola lakefront, running since 1987.</p><p class="venue-meta">Since 1987 &middot; Markets &amp; shops &middot; Lake Eola</p></a>
+          <a class="tile reveal" href="/venue/camila-s-brazilian-restaurant.html"><b>Camila&#x27;s Brazilian Restaurant</b><p>Feeding Brazilians in Florida at serious scale since 1989.</p><p class="venue-meta">Since 1989 &middot; Latin &amp; Caribbean &middot; I-Drive</p></a>
+        </div>
+      </section>
+      <section class="grid-sec">
+        <div class="reveal">
+          <p class="kicker">Heritage</p>
+          <h2>Staying Power</h2>
+          <p class="lede">Surviving the nineties in Orlando meant outlasting fads, hurricanes, and the corridor&#x27;s endless turnover. These did, and then some.</p>
+        </div>
+        <div class="tiles">
+          <a class="tile reveal" href="/venue/cecils-texas-style-bar-b-q.html"><b>Cecil&#x27;s Texas Style Bar-B-Q</b><p>Orlando&#x27;s Texas roadhouse since 1992: grab a tray, watch the brisket get trimmed.</p><p class="venue-meta">Since 1992 &middot; BBQ &middot; SoDo</p></a>
+          <a class="tile reveal" href="/venue/colorado-fondue-company.html"><b>Colorado Fondue Company</b><p>A Casselberry institution since 1992, dressed like a ski lodge and run by family.</p><p class="venue-meta">Since 1992 &middot; American &middot; Casselberry</p></a>
+          <a class="tile reveal" href="/venue/shakers-american-cafe.html"><b>Shakers American Cafe</b><p>The College Park cottage whose walls of donated salt-and-pepper shakers have been growing since 1993.</p><p class="venue-meta">Since 1993 &middot; American &middot; Orlando</p></a>
+          <a class="tile reveal" href="/venue/shin-jung.html"><b>Shin Jung</b><p>Tabletop grills sizzling in Mills 50 since 1993.</p><p class="venue-meta">Since 1993 &middot; Restaurants &middot; Mills 50</p></a>
+          <a class="tile reveal" href="/venue/high-tide-harry-s.html"><b>High Tide Harry&#x27;s</b><p>Family-owned and proudly local since 1995, the airport corridor&#x27;s seafood joint.</p><p class="venue-meta">Since 1995 &middot; Seafood &middot; Airport Corridor</p></a>
+          <a class="tile reveal" href="/venue/wall-street-plaza.html"><b>Wall Street Plaza</b><p>The beating heart of downtown nightlife since 1995, a whole block of bars sharing one street.</p><p class="venue-meta">Since 1995 &middot; Nightlife &amp; music &middot; Downtown</p></a>
+          <a class="tile reveal" href="/venue/the-goblin-market-restaurant.html"><b>The Goblin Market Restaurant</b><p>Mount Dora&#x27;s storybook gastropub, charming locals and tourists since 1996.</p><p class="venue-meta">Since 1996 &middot; American &middot; Mount Dora</p></a>
+          <a class="tile reveal" href="/venue/fun-spot-america-orlando.html"><b>Fun Spot America</b><p>Family-owned since 1997, big thrills without the big gates.</p><p class="venue-meta">Since 1997 &middot; Attractions &middot; International Drive</p></a>
+          <a class="tile reveal" href="/venue/agave-azul-cocina-mexicana.html"><b>Agave Azul Cocina Mexicana</b><p>Family owned since 1998, Mexican cooking with a high-energy streak.</p><p class="venue-meta">Since 1998 &middot; Mexican &middot; Airport Corridor</p></a>
+          <a class="tile reveal" href="/venue/la-revancha-cuban-cafe.html"><b>La Revancha Cuban Cafe</b><p>Pressing Cubans since 1998, and defending the standard ever since.</p><p class="venue-meta">Since 1998 &middot; Latin &amp; Caribbean &middot; Orlando</p></a>
+          <a class="tile reveal" href="/venue/thai-place.html"><b>Thai Place</b><p>Family owned since 1999, quietly anchoring the Winter Park Village side of Orlando Avenue.</p><p class="venue-meta">Since 1999 &middot; Noodles &amp; Southeast Asian &middot; Winter Park</p></a>
+        </div>
+      </section>
+      <section class="grid-sec">
+        <div class="reveal">
+          <p class="kicker">Heritage</p>
+          <h2>The New Institutions</h2>
+          <p class="lede">Heritage is not only old. These are the places a newer Orlando already treats as permanent, the first draft of the next century&#x27;s list.</p>
+        </div>
+        <div class="tiles">
+          <a class="tile reveal" href="/venue/lake-meadow-naturals.html"><b>Lake Meadow Naturals</b><p>Raising chickens, ducks, and grass-fed cattle in Ocoee since 2004, with a farm store that keeps the source honest.</p><p class="venue-meta">Since 2004 &middot; Markets &amp; shops &middot; Ocoee</p></a>
+          <a class="tile reveal" href="/venue/lazy-moon-pizza-ucf.html"><b>Lazy Moon Pizza</b><p>Thirty-inch pies and a sticker-plastered room near campus since 2004.</p><p class="venue-meta">Since 2004 &middot; Pizza &middot; UCF Area</p></a>
+          <a class="tile reveal" href="/venue/nile-ethiopian.html"><b>Nile Ethiopian</b><p>Family-run Ethiopian cooking on International Drive since 2006, a loyal following built quietly.</p><p class="venue-meta">Since 2006 &middot; Restaurants &middot; International Drive</p></a>
+          <a class="tile reveal" href="/venue/wine-room-park-avenue.html"><b>The Wine Room on Park Avenue</b><p>Park Avenue&#x27;s wine bar and shop since 2006, with a former bank vault downstairs.</p><p class="venue-meta">Since 2006 &middot; Bars &amp; lounges &middot; Winter Park</p></a>
+          <a class="tile reveal" href="/venue/tasty-takeover.html"><b>Tasty Takeover</b><p>The food truck gathering that has run on the same simple formula since 2011.</p><p class="venue-meta">Since 2011 &middot; Restaurants &middot; Milk District</p></a>
+          <a class="tile reveal" href="/venue/osprey.html"><b>The Osprey</b><p>Baldwin Park&#x27;s New Broad Street anchor since 2015.</p><p class="venue-meta">Since 2015 &middot; Seafood &middot; Baldwin Park</p></a>
+          <a class="tile reveal" href="/venue/inter-co-stadium.html"><b>Inter.co Stadium</b><p>Downtown&#x27;s soccer cathedral, home to Orlando City and the Pride since 2017.</p><p class="venue-meta">Since 2017 &middot; Attractions &middot; Downtown</p></a>
+          <a class="tile reveal" href="/venue/delaneys-tavern.html"><b>Delaney&#x27;s Tavern</b><p>SoDo&#x27;s special-occasion answer since 2019, on the ground floor of the Delaney Hotel.</p><p class="venue-meta">Since 2019 &middot; American &middot; Orlando</p></a>
+        </div>
+      </section>
+      <section class="closing">
+        <p class="kicker">Keep Going</p>
+        <h2>Know a place that belongs here?</h2>
+        <p class="lede">Heritage is a living list. If a long-running Orlando place is missing from the guide, or a date here needs correcting, write to <a href="mailto:mail@407.fyi?subject=407%20FYI%20heritage">mail@407.fyi</a>.</p>
+      </section>
+    </main>
+
+
+    <footer>
+      <div class="foot-in">
+        <a class="back-link" href="/">&larr; Back to the full guide</a>
+        <p class="brand-line">407 FYI, an independent Orlando guide. Details can change; confirm before you go.</p>
+        <p>Hand-verified Orlando places · Checked October 2026 · Local Picks are never sponsored · Corrections: <a href="mailto:mail@407.fyi">mail@407.fyi</a></p>
+        <p>Some links on 407 FYI are affiliate or referral links. We may earn a commission or credit at no extra cost to you. They never affect which places we list, rank, or recommend.</p>
+        <p><a href="/privacy.html">Privacy</a></p>
+      </div>
+    </footer>
+
+
+    <script>
+      (function () {
+        var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+        if (reduce || !("IntersectionObserver" in window)) return;
+        /* Arm hidden start states only once the observer is running;
+           without JS (or with reduced motion) everything renders. */
+        document.body.classList.add("reveal-armed");
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) {
+            if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); }
+          });
+        }, { threshold: 0.12, rootMargin: "0px 0px -6% 0px" });
+        document.querySelectorAll(".reveal").forEach(function (el) { io.observe(el); });
+        /* Glide stages: toggle the cross-fade layer while a panel is on screen. */
+        var gio = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) {
+            e.target.classList.toggle("in-view", e.isIntersecting);
+          });
+        }, { threshold: 0.08 });
+        document.querySelectorAll(".glide").forEach(function (el) { gio.observe(el); });
+        /* Static-render safety (full-page capture / embed snapshot):
+           if nothing has scrolled shortly after load, show everything. */
+        setTimeout(function () {
+          if (window.scrollY < 10) {
+            document.querySelectorAll(".reveal").forEach(function (el) { el.classList.add("in"); });
+            io.disconnect();
+          }
+        }, 1200);
+      })();
+    </script>
+
+  </body>
+</html>
