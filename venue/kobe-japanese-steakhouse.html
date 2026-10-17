@@ -210,7 +210,16 @@
       .vcard .meta { margin: 0 0 2px; font-weight: 800; color: var(--accent-ink); font-size: .92rem; }
       .vcard .addr { margin: 0; color: var(--muted); font-size: .9rem; }
       @media (max-width: 640px) { .facts { grid-template-columns: 1fr; } }
-    </style>
+    
+.quotes{display:grid;gap:14px;margin-top:20px}
+.quote{border:1px solid var(--line);border-radius:12px;padding:16px 18px;background:var(--surface)}
+.quote blockquote{margin:0;font-size:1.02rem;line-height:1.55}
+.quote figcaption{margin-top:10px;font-size:.82rem;color:var(--muted)}
+.quote figcaption a{color:var(--accent-ink);font-weight:700}
+.take{margin-top:18px;border:1px solid var(--accent);border-radius:12px;padding:16px 18px;background:color-mix(in srgb,var(--accent) 10%,transparent)}
+.take p{margin:0;line-height:1.6}
+.take .take-label{font-size:.72rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--accent-ink);margin:0 0 8px}
+</style>
   </head>
   <body>
     <header class="hero">
@@ -240,7 +249,31 @@
         </div>
       </section>
 
-      <section class="sec" id="similar">
+<section class="sec" id="saying">
+        <p class="kicker">What People Are Saying</p>
+        <h2>The word from guests</h2>
+        <p class="lede">Real words from people who have been, gathered from public reviews. Kobe Japanese Steakhouse holds 4.6 on OpenTable across 2,753 reviews.</p>
+        <div class="quotes">
+        <figure class="quote">
+          <blockquote>&ldquo;Chef was great and had some tricks I hadn’t seen. Got sat right at our reservation time and the food came out fast.&rdquo;</blockquote>
+          <figcaption>nathan, via <a href="https://www.opentable.com/r/kobe-japanese-steakhouse-international-drive-orlando?corrid=4502ff65-c594-478f-94b4-149711342397&amp;avt=eyJ2IjoyLCJtIjoxLCJwIjowLCJzIjowLCJuIjowfQ" target="_blank" rel="noopener">OpenTable</a></figcaption>
+        </figure>
+        <figure class="quote">
+          <blockquote>&ldquo;Alex and Melvin were fantastic!! We had a great experience and the food was delicious.&rdquo;</blockquote>
+          <figcaption>Carly, via <a href="https://www.opentable.co.uk/r/kobe-japanese-steakhouse-international-drive-orlando?corrid=9248a6e9-fd66-406a-bc87-18b4ad701520&amp;avt=eyJ2IjoyLCJtIjoxLCJwIjowLCJzIjowLCJuIjowfQ&amp;p=2&amp;sd=2025-04-12T19%3A00%3A00" target="_blank" rel="noopener">OpenTable</a></figcaption>
+        </figure>
+        <figure class="quote">
+          <blockquote>&ldquo;I&#x27;ve eaten at this Kobe location several times, and the food and service is consistently good. They provide great show preparing the meal, and the food portions are enormous.&rdquo;</blockquote>
+          <figcaption>Derrick Gold, via <a href="https://www.opentable.co.uk/r/kobe-japanese-steakhouse-international-drive-orlando?corrid=ff4f82e4-fa52-4057-8eb4-51121b5d01e9&amp;" target="_blank" rel="noopener">OpenTable</a></figcaption>
+        </figure>
+        </div>
+        <div class="take">
+          <p class="take-label">Our honest take</p>
+          <p>Dinner and a show, teppanyaki style, family-owned and doing it with flair for years: onion volcanoes, flying shrimp, chefs who read the table. It is theater with a good meal inside it, and groups leave happy. Book the grill for birthdays and visiting family; it has never not worked.</p>
+        </div>
+      </section>
+
+            <section class="sec" id="similar">
         <p class="kicker">Similar Feel</p>
         <h2>More places with this feel</h2>
         <p class="lede">Matched by vibe, not by neighborhood: the places across Greater Orlando closest in spirit to Kobe Japanese Steakhouse.</p>

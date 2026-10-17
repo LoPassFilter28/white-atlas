@@ -210,7 +210,16 @@
       .vcard .meta { margin: 0 0 2px; font-weight: 800; color: var(--accent-ink); font-size: .92rem; }
       .vcard .addr { margin: 0; color: var(--muted); font-size: .9rem; }
       @media (max-width: 640px) { .facts { grid-template-columns: 1fr; } }
-    </style>
+    
+.quotes{display:grid;gap:14px;margin-top:20px}
+.quote{border:1px solid var(--line);border-radius:12px;padding:16px 18px;background:var(--surface)}
+.quote blockquote{margin:0;font-size:1.02rem;line-height:1.55}
+.quote figcaption{margin-top:10px;font-size:.82rem;color:var(--muted)}
+.quote figcaption a{color:var(--accent-ink);font-weight:700}
+.take{margin-top:18px;border:1px solid var(--accent);border-radius:12px;padding:16px 18px;background:color-mix(in srgb,var(--accent) 10%,transparent)}
+.take p{margin:0;line-height:1.6}
+.take .take-label{font-size:.72rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--accent-ink);margin:0 0 8px}
+</style>
   </head>
   <body>
     <header class="hero">
@@ -241,7 +250,31 @@
         </div>
       </section>
 
-      <section class="sec" id="similar">
+<section class="sec" id="saying">
+        <p class="kicker">What People Are Saying</p>
+        <h2>The word from guests</h2>
+        <p class="lede">Real words from people who have been, gathered from public reviews. Ole Red Orlando holds 4.6 on Google across 1,243 reviews.</p>
+        <div class="quotes">
+        <figure class="quote">
+          <blockquote>&ldquo;Jenny at Ole Red was absolutely phenomenal! From the minute we sat down, she made us feel like we were her only table.&rdquo;</blockquote>
+          <figcaption>Ken Cureton, via <a href="https://www.restaurantji.com/fl/orlando/ole-red-/comments/" target="_blank" rel="noopener">Google</a></figcaption>
+        </figure>
+        <figure class="quote">
+          <blockquote>&ldquo;The food and experience were great! Alyssa was very attentive and good about checking on our table. Entertainment was also good.&rdquo;</blockquote>
+          <figcaption>Brittany Martin, via <a href="https://www.restaurantji.com/fl/orlando/ole-red-/comments/" target="_blank" rel="noopener">Google</a></figcaption>
+        </figure>
+        <figure class="quote">
+          <blockquote>&ldquo;Food was excellent! Alyssa was friendly and attentive. Bryan James has a great sound!&rdquo;</blockquote>
+          <figcaption>Michael Giffin, via <a href="https://www.restaurantji.com/fl/orlando/ole-red-/comments/" target="_blank" rel="noopener">Google</a></figcaption>
+        </figure>
+        </div>
+        <div class="take">
+          <p class="take-label">Our honest take</p>
+          <p>Blake Shelton&#x27;s honky-tonk plants itself in ICON Park with scratch-made Southern cooking and live country energy, and the room delivers the party it promises. The bar tab is the warning: reviewers cite around $13 for a draft Bud Light and nearly $60 for four drafts. Eat here, enjoy the show, and pace the rounds.</p>
+        </div>
+      </section>
+
+            <section class="sec" id="similar">
         <p class="kicker">Similar Feel</p>
         <h2>More places with this feel</h2>
         <p class="lede">Matched by vibe, not by neighborhood: the places across Greater Orlando closest in spirit to Ole Red Orlando.</p>

@@ -210,7 +210,16 @@
       .vcard .meta { margin: 0 0 2px; font-weight: 800; color: var(--accent-ink); font-size: .92rem; }
       .vcard .addr { margin: 0; color: var(--muted); font-size: .9rem; }
       @media (max-width: 640px) { .facts { grid-template-columns: 1fr; } }
-    </style>
+    
+.quotes{display:grid;gap:14px;margin-top:20px}
+.quote{border:1px solid var(--line);border-radius:12px;padding:16px 18px;background:var(--surface)}
+.quote blockquote{margin:0;font-size:1.02rem;line-height:1.55}
+.quote figcaption{margin-top:10px;font-size:.82rem;color:var(--muted)}
+.quote figcaption a{color:var(--accent-ink);font-weight:700}
+.take{margin-top:18px;border:1px solid var(--accent);border-radius:12px;padding:16px 18px;background:color-mix(in srgb,var(--accent) 10%,transparent)}
+.take p{margin:0;line-height:1.6}
+.take .take-label{font-size:.72rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--accent-ink);margin:0 0 8px}
+</style>
   </head>
   <body>
     <header class="hero">
@@ -241,7 +250,31 @@
         </div>
       </section>
 
-      <section class="sec" id="similar">
+<section class="sec" id="saying">
+        <p class="kicker">What People Are Saying</p>
+        <h2>The word from guests</h2>
+        <p class="lede">Real words from people who have been, gathered from public reviews. Helena Modern Riviera holds 4.2 on OpenTable across 913 reviews.</p>
+        <div class="quotes">
+        <figure class="quote">
+          <blockquote>&ldquo;Always a great time here. Great music, delicious food and amazing service. And the theme decorations always on point&rdquo;</blockquote>
+          <figcaption>Paola, via <a href="https://www.opentable.com/r/helena-modern-riviera-orlando?corrid=0597f4b8-82e8-499b-b49d-7750f1fb4ac0&amp;avt=eyJ2IjoyLCJtIjoxLCJwIjowLCJzIjowLCJuIjowfQ" target="_blank" rel="noopener">OpenTable</a></figcaption>
+        </figure>
+        <figure class="quote">
+          <blockquote>&ldquo;Every time that I go, I have a great time. The food is spectacular and great atmosphere.&rdquo;</blockquote>
+          <figcaption>Miraida, via <a href="https://www.opentable.co.uk/r/helena-modern-riviera-orlando?corrid=79c74596-89b1-463a-8ef9-a788c5e088b4&amp;avt=eyJ2IjoyLCJtIjoxLCJwIjowLCJzIjowLCJuIjowfQ" target="_blank" rel="noopener">OpenTable</a></figcaption>
+        </figure>
+        <figure class="quote">
+          <blockquote>&ldquo;We had a great time at Helena’s brunch! I would recommend the lemon drop martini &amp; prosciutto and fig pizza. Our waitress Isabella, was very kind and attentive!&rdquo;</blockquote>
+          <figcaption>Madison, via <a href="https://www.opentable.co.uk/r/helena-modern-riviera-orlando?corrid=79c74596-89b1-463a-8ef9-a788c5e088b4&amp;avt=eyJ2IjoyLCJtIjoxLCJwIjowLCJzIjowLCJuIjowfQ" target="_blank" rel="noopener">OpenTable</a></figcaption>
+        </figure>
+        </div>
+        <div class="take">
+          <p class="take-label">Our honest take</p>
+          <p>The polished room inside ICON Park: coastal Italian and Greek plates, crudos and whole fish in a supper-club setting. The food and the room rate well; the recurring complaint is pacing, with slow or inattentive service in a share of visits. When it clicks it is the park&#x27;s grown-up dinner. Just do not book it on a tight schedule.</p>
+        </div>
+      </section>
+
+            <section class="sec" id="similar">
         <p class="kicker">Similar Feel</p>
         <h2>More places with this feel</h2>
         <p class="lede">Matched by vibe, not by neighborhood: the places across Greater Orlando closest in spirit to Helena Modern Riviera.</p>

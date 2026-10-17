@@ -210,7 +210,16 @@
       .vcard .meta { margin: 0 0 2px; font-weight: 800; color: var(--accent-ink); font-size: .92rem; }
       .vcard .addr { margin: 0; color: var(--muted); font-size: .9rem; }
       @media (max-width: 640px) { .facts { grid-template-columns: 1fr; } }
-    </style>
+    
+.quotes{display:grid;gap:14px;margin-top:20px}
+.quote{border:1px solid var(--line);border-radius:12px;padding:16px 18px;background:var(--surface)}
+.quote blockquote{margin:0;font-size:1.02rem;line-height:1.55}
+.quote figcaption{margin-top:10px;font-size:.82rem;color:var(--muted)}
+.quote figcaption a{color:var(--accent-ink);font-weight:700}
+.take{margin-top:18px;border:1px solid var(--accent);border-radius:12px;padding:16px 18px;background:color-mix(in srgb,var(--accent) 10%,transparent)}
+.take p{margin:0;line-height:1.6}
+.take .take-label{font-size:.72rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--accent-ink);margin:0 0 8px}
+</style>
   </head>
   <body>
     <header class="hero">
@@ -243,7 +252,27 @@
         </div>
       </section>
 
-      <section class="sec" id="similar">
+<section class="sec" id="saying">
+        <p class="kicker">What People Are Saying</p>
+        <h2>The word from guests</h2>
+        <p class="lede">Real words from people who have been, gathered from public reviews. Andretti Indoor Karting and Games holds 4.3 on Google across 12,607 reviews.</p>
+        <div class="quotes">
+        <figure class="quote">
+          <blockquote>&ldquo;Good experience with a spouse or kid. Had a blast.&rdquo;</blockquote>
+          <figcaption>Vanessa_j, via <a href="https://www.peek.com/orlando-florida/r0ab/andretti-indoor-karting-games-orlandos-premier-entertainment-destination/a0rp9ad?list_info=Region%3AOrlando%7CCategory%3Ac0qvy%7C4" target="_blank" rel="noopener">Viator</a></figcaption>
+        </figure>
+        <figure class="quote">
+          <blockquote>&ldquo;A great afternoon spent here loads to do and good helpful staff.&rdquo;</blockquote>
+          <figcaption>Kevin_S, via <a href="https://www.expedia.ca/things-to-do/andretti-indoor-karting-games-in-orlando.a695498.activity-details?location=Orlando%2C%20Florida%2C%20United%20States%20of%20America&amp;startDate=2026-10-08&amp;endDate=2026-10-22&amp;rid=2693" target="_blank" rel="noopener">Viator</a></figcaption>
+        </figure>
+        </div>
+        <div class="take">
+          <p class="take-label">Our honest take</p>
+          <p>The scale is real and so is the demand. Book ahead, expect waits at peak times, and know that staff slow or stop karts mid-race for safety, which some drivers read as lost laps. Off-peak weekday sessions are the value play; prime-time weekends are the full-price version of the same track.</p>
+        </div>
+      </section>
+
+            <section class="sec" id="similar">
         <p class="kicker">Similar Feel</p>
         <h2>More places with this feel</h2>
         <p class="lede">Matched by vibe, not by neighborhood: the places across Greater Orlando closest in spirit to Andretti Indoor Karting and Games.</p>

@@ -210,7 +210,16 @@
       .vcard .meta { margin: 0 0 2px; font-weight: 800; color: var(--accent-ink); font-size: .92rem; }
       .vcard .addr { margin: 0; color: var(--muted); font-size: .9rem; }
       @media (max-width: 640px) { .facts { grid-template-columns: 1fr; } }
-    </style>
+    
+.quotes{display:grid;gap:14px;margin-top:20px}
+.quote{border:1px solid var(--line);border-radius:12px;padding:16px 18px;background:var(--surface)}
+.quote blockquote{margin:0;font-size:1.02rem;line-height:1.55}
+.quote figcaption{margin-top:10px;font-size:.82rem;color:var(--muted)}
+.quote figcaption a{color:var(--accent-ink);font-weight:700}
+.take{margin-top:18px;border:1px solid var(--accent);border-radius:12px;padding:16px 18px;background:color-mix(in srgb,var(--accent) 10%,transparent)}
+.take p{margin:0;line-height:1.6}
+.take .take-label{font-size:.72rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--accent-ink);margin:0 0 8px}
+</style>
   </head>
   <body>
     <header class="hero">
@@ -240,7 +249,31 @@
         </div>
       </section>
 
-      <section class="sec" id="similar">
+<section class="sec" id="saying">
+        <p class="kicker">What People Are Saying</p>
+        <h2>The word from guests</h2>
+        <p class="lede">Real words from people who have been, gathered from public reviews. JoJo&#x27;s Shake Bar holds 4.7 on OpenTable across 514 reviews.</p>
+        <div class="quotes">
+        <figure class="quote">
+          <blockquote>&ldquo;Great food and drinks but the service was amazing.&rdquo;</blockquote>
+          <figcaption>Ann, via <a href="https://www.opentable.ie/r/jojos-shake-bar-orlando?corrid=fc0bcf14-6db6-4113-bd8a-227f22774a14&amp;avt=eyJ2IjoyLCJtIjoxLCJwIjowLCJzIjowLCJuIjowfQ" target="_blank" rel="noopener">OpenTable</a></figcaption>
+        </figure>
+        <figure class="quote">
+          <blockquote>&ldquo;Good time with the family. The kids really enjoyed the shakes!&rdquo;</blockquote>
+          <figcaption>Adam Gold, via <a href="https://www.opentable.sg/r/jojos-shake-bar-orlando" target="_blank" rel="noopener">OpenTable</a></figcaption>
+        </figure>
+        <figure class="quote">
+          <blockquote>&ldquo;We loved this place for family night out and can’t wait to go back&rdquo;</blockquote>
+          <figcaption>Lindsay, via <a href="https://www.opentable.sg/r/jojos-shake-bar-orlando" target="_blank" rel="noopener">OpenTable</a></figcaption>
+        </figure>
+        </div>
+        <div class="take">
+          <p class="take-label">Our honest take</p>
+          <p>The shakes arrive wearing their own desserts, and the photos are the point. The honest split: several reviewers call the food overpriced for the portion and some shakes better looking than tasting. Go for one ridiculous shake as the event itself, share it, and let dinner happen somewhere else if value matters.</p>
+        </div>
+      </section>
+
+            <section class="sec" id="similar">
         <p class="kicker">Similar Feel</p>
         <h2>More places with this feel</h2>
         <p class="lede">Matched by vibe, not by neighborhood: the places across Greater Orlando closest in spirit to JoJo&#x27;s Shake Bar.</p>

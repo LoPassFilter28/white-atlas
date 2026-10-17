@@ -210,7 +210,16 @@
       .vcard .meta { margin: 0 0 2px; font-weight: 800; color: var(--accent-ink); font-size: .92rem; }
       .vcard .addr { margin: 0; color: var(--muted); font-size: .9rem; }
       @media (max-width: 640px) { .facts { grid-template-columns: 1fr; } }
-    </style>
+    
+.quotes{display:grid;gap:14px;margin-top:20px}
+.quote{border:1px solid var(--line);border-radius:12px;padding:16px 18px;background:var(--surface)}
+.quote blockquote{margin:0;font-size:1.02rem;line-height:1.55}
+.quote figcaption{margin-top:10px;font-size:.82rem;color:var(--muted)}
+.quote figcaption a{color:var(--accent-ink);font-weight:700}
+.take{margin-top:18px;border:1px solid var(--accent);border-radius:12px;padding:16px 18px;background:color-mix(in srgb,var(--accent) 10%,transparent)}
+.take p{margin:0;line-height:1.6}
+.take .take-label{font-size:.72rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--accent-ink);margin:0 0 8px}
+</style>
   </head>
   <body>
     <header class="hero">
@@ -240,7 +249,31 @@
         </div>
       </section>
 
-      <section class="sec" id="similar">
+<section class="sec" id="saying">
+        <p class="kicker">What People Are Saying</p>
+        <h2>The word from guests</h2>
+        <p class="lede">Real words from people who have been, gathered from public reviews. Hash House A Go Go holds 4.5 on Google across 11,322 reviews.</p>
+        <div class="quotes">
+        <figure class="quote">
+          <blockquote>&ldquo;Very large portions and everything was amazing! Server was great.&rdquo;</blockquote>
+          <figcaption>Cheryl, via <a href="https://www.opentable.com/r/hash-house-a-go-go-orlando?corrid=19daab66-ddbc-4c6a-8b70-32cc83794eb1&amp;" target="_blank" rel="noopener">OpenTable</a></figcaption>
+        </figure>
+        <figure class="quote">
+          <blockquote>&ldquo;Amazing food, amazing hostess, and Amazing Waiter. I think his name was Antonio. Will absolutely be coming back!!!&rdquo;</blockquote>
+          <figcaption>DERRICK, via <a href="https://www.opentable.com/r/hash-house-a-go-go-orlando?corrid=19daab66-ddbc-4c6a-8b70-32cc83794eb1&amp;" target="_blank" rel="noopener">OpenTable</a></figcaption>
+        </figure>
+        <figure class="quote">
+          <blockquote>&ldquo;Visited my 2nd time, and the meal was excellent. Our host Sydney was “Outstanding.” The portion sizes are generous, and the coffee was even amazing. You get a great meal and super customer service at a great price.&rdquo;</blockquote>
+          <figcaption>Derek Gold, via <a href="https://www.opentable.com/r/hash-house-a-go-go-orlando?corrid=19daab66-ddbc-4c6a-8b70-32cc83794eb1&amp;" target="_blank" rel="noopener">OpenTable</a></figcaption>
+        </figure>
+        </div>
+        <div class="take">
+          <p class="take-label">Our honest take</p>
+          <p>Portions that redraw the plate: oversized hashes, fried chicken Benedicts, pancakes the size of hubcaps. Eleven thousand reviews in, the spectacle still eats well, which is why the room stays busy. Order to share, plan a light dinner, and do not pretend anyone is finishing a stack alone.</p>
+        </div>
+      </section>
+
+            <section class="sec" id="similar">
         <p class="kicker">Similar Feel</p>
         <h2>More places with this feel</h2>
         <p class="lede">Matched by vibe, not by neighborhood: the places across Greater Orlando closest in spirit to Hash House A Go Go.</p>

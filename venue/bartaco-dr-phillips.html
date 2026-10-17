@@ -210,7 +210,16 @@
       .vcard .meta { margin: 0 0 2px; font-weight: 800; color: var(--accent-ink); font-size: .92rem; }
       .vcard .addr { margin: 0; color: var(--muted); font-size: .9rem; }
       @media (max-width: 640px) { .facts { grid-template-columns: 1fr; } }
-    </style>
+    
+.quotes{display:grid;gap:14px;margin-top:20px}
+.quote{border:1px solid var(--line);border-radius:12px;padding:16px 18px;background:var(--surface)}
+.quote blockquote{margin:0;font-size:1.02rem;line-height:1.55}
+.quote figcaption{margin-top:10px;font-size:.82rem;color:var(--muted)}
+.quote figcaption a{color:var(--accent-ink);font-weight:700}
+.take{margin-top:18px;border:1px solid var(--accent);border-radius:12px;padding:16px 18px;background:color-mix(in srgb,var(--accent) 10%,transparent)}
+.take p{margin:0;line-height:1.6}
+.take .take-label{font-size:.72rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--accent-ink);margin:0 0 8px}
+</style>
   </head>
   <body>
     <header class="hero">
@@ -240,7 +249,31 @@
         </div>
       </section>
 
-      <section class="sec" id="similar">
+<section class="sec" id="saying">
+        <p class="kicker">What People Are Saying</p>
+        <h2>The word from guests</h2>
+        <p class="lede">Real words from people who have been, gathered from public reviews. bartaco holds 4.6 on Restaurantji across 516 reviews.</p>
+        <div class="quotes">
+        <figure class="quote">
+          <blockquote>&ldquo;Great experience at Bataco! Our server, Estefany, was super friendly and attentive.&rdquo;</blockquote>
+          <figcaption>Diana Z, via <a href="https://Wanderlog.com/place/details/897904" target="_blank" rel="noopener">Wanderlog</a></figcaption>
+        </figure>
+        <figure class="quote">
+          <blockquote>&ldquo;If you&#x27;ve never been, it&#x27;s definitely a place you want to try.&rdquo;</blockquote>
+          <figcaption>Annamarie S, via <a href="https://Wanderlog.com/place/details/897904" target="_blank" rel="noopener">Wanderlog</a></figcaption>
+        </figure>
+        <figure class="quote">
+          <blockquote>&ldquo;Cannot recommend this place enough.&rdquo;</blockquote>
+          <figcaption>Meghan Z, via <a href="https://www.doordash.com/store/bartaco-orlando-103267/" target="_blank" rel="noopener">DoorDash</a></figcaption>
+        </figure>
+        </div>
+        <div class="take">
+          <p class="take-label">Our honest take</p>
+          <p>Order like it is tapas, because it is: the tacos are street-sized by design and a table of small plates adds up faster than the menu suggests. The patio is the charm and the food is consistently liked. Go in expecting a grazing meal, not a cheap one, and it lands right.</p>
+        </div>
+      </section>
+
+            <section class="sec" id="similar">
         <p class="kicker">Similar Feel</p>
         <h2>More places with this feel</h2>
         <p class="lede">Matched by vibe, not by neighborhood: the places across Greater Orlando closest in spirit to bartaco.</p>
