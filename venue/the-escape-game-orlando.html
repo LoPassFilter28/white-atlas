@@ -210,7 +210,16 @@
       .vcard .meta { margin: 0 0 2px; font-weight: 800; color: var(--accent-ink); font-size: .92rem; }
       .vcard .addr { margin: 0; color: var(--muted); font-size: .9rem; }
       @media (max-width: 640px) { .facts { grid-template-columns: 1fr; } }
-    </style>
+    
+.quotes{display:grid;gap:14px;margin-top:20px}
+.quote{border:1px solid var(--line);border-radius:12px;padding:16px 18px;background:var(--surface)}
+.quote blockquote{margin:0;font-size:1.02rem;line-height:1.55}
+.quote figcaption{margin-top:10px;font-size:.82rem;color:var(--muted)}
+.quote figcaption a{color:var(--accent-ink);font-weight:700}
+.take{margin-top:18px;border:1px solid var(--accent);border-radius:12px;padding:16px 18px;background:color-mix(in srgb,var(--accent) 10%,transparent)}
+.take p{margin:0;line-height:1.6}
+.take .take-label{font-size:.72rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--accent-ink);margin:0 0 8px}
+</style>
   </head>
   <body>
     <header class="hero">
@@ -242,7 +251,31 @@
         </div>
       </section>
 
-      <section class="sec" id="similar">
+<section class="sec" id="saying">
+        <p class="kicker">What People Are Saying</p>
+        <h2>The word from guests</h2>
+        <p class="lede">Real words from people who have been, gathered from public reviews. The Escape Game Orlando holds 5.0 on Viator across 949 reviews.</p>
+        <div class="quotes">
+        <figure class="quote">
+          <blockquote>&ldquo;We had the best time, this was the best room we have ever done. We completed it and had so much fun.&rdquo;</blockquote>
+          <figcaption>Maureen_J, via <a href="https://www.viator.com/en-AU/tours/Orlando/The-Escape-Game-Orlando-Epic-60-Minute-Adventures/d663-15115P9" target="_blank" rel="noopener">Viator</a></figcaption>
+        </figure>
+        <figure class="quote">
+          <blockquote>&ldquo;Really well done escape room. We enjoyed The Depths (7/10 difficulty) and want to go back to try others&rdquo;</blockquote>
+          <figcaption>Ashley_P, via <a href="https://www.viator.com/en-AU/tours/Orlando/The-Escape-Game-Orlando-Epic-60-Minute-Adventures/d663-15115P9" target="_blank" rel="noopener">Viator</a></figcaption>
+        </figure>
+        <figure class="quote">
+          <blockquote>&ldquo;It was a lot of fun. The mission from Mars was challenging enough and exciting. We went with 2 of us and joined another couple , it was perfect&rdquo;</blockquote>
+          <figcaption>Maureen_S, via <a href="https://www.viator.com/en-AU/tours/Orlando/The-Escape-Game-Orlando-Epic-60-Minute-Adventures/d663-15115P9" target="_blank" rel="noopener">Viator</a></figcaption>
+        </figure>
+        </div>
+        <div class="take">
+          <p class="take-label">Our honest take</p>
+          <p>The polished, big-budget end of escape rooms: multi-layer puzzles that slow down confident groups in the best way. Players rate it a perfect five across nearly a thousand reviews on Viator, which for an escape room is close to unheard of. Book the harder rooms with your sharpest friends and take the photo after; you will want it.</p>
+        </div>
+      </section>
+
+            <section class="sec" id="similar">
         <p class="kicker">Similar Feel</p>
         <h2>More places with this feel</h2>
         <p class="lede">Matched by vibe, not by neighborhood: the places across Greater Orlando closest in spirit to The Escape Game Orlando.</p>
