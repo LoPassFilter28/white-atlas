@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="color-scheme" content="light dark">
-  <script>(function(){var q=new URLSearchParams(location.search);if(q.has('venue')||q.has('district')||q.has('cat')||q.has('q')){location.replace('/archive.html'+location.search);}})();</script>
+  <script>(function(){var q=new URLSearchParams(location.search);if(q.has('venue')||q.has('district')||q.has('cat')||q.has('q')||q.has('vibe')){location.replace('/archive.html'+location.search);}})();</script>
 
   <title>407 FYI: Orlando Restaurants, Landmarks &amp; New Openings</title>
   <meta name="description" content="Explore Orlando restaurants, coffee shops, nightlife spots, attractions, hotels and local landmarks, organized by district, occasion and price.">
@@ -297,6 +297,11 @@
     .mast .lede{color:rgba(247,239,219,.9)}
     html.scanner-mode .primary-actions,body.flashbacks-page .primary-actions,html.scanner-mode .mast .location-status,body.flashbacks-page .mast .location-status{display:none}
     .hero-search{position:relative;margin-top:26px;max-width:660px}
+    .home-vibe-row{display:flex;align-items:center;gap:12px;margin-top:12px;flex-wrap:wrap;flex:1 1 100%}
+    .home-vibe-modes{display:inline-flex;border:1px solid var(--line);border-radius:999px;overflow:hidden}
+    .home-vibe-mode{border:0;background:transparent;color:var(--muted);font:inherit;font-size:.8rem;font-weight:800;padding:9px 15px;cursor:pointer}
+    .home-vibe-mode.active{background:var(--accent);color:var(--on-accent)}
+    .home-vibe-hint{font-size:.82rem;color:var(--muted)}
     .hero-search svg{position:absolute;left:16px;top:50%;transform:translateY(-50%);width:21px;height:21px;color:#7c520c;pointer-events:none}
     .hero-search input{width:100%;height:58px;border:1px solid rgba(247,239,219,.45);border-radius:12px;background:rgba(255,253,247,.97);color:#1d2a20;padding:0 58px 0 48px;font-size:1.06rem;font-weight:700;outline:none;box-shadow:0 10px 26px rgba(10,25,15,.28)}
     .hero-search input::placeholder{color:#6b725f}
@@ -574,6 +579,13 @@ html[data-theme="dark"] .export-trigger:hover,html[data-theme="dark"] .export-tr
           <input id="heroSearch" name="q" type="search" placeholder="Search places…" autocomplete="off" aria-label="Search all Orlando places">
           <button class="hero-search-go" type="submit" aria-label="Go to search results">→</button>
         </form>
+        <div class="home-vibe-row">
+          <div class="home-vibe-modes" role="group" aria-label="Search mode">
+            <button type="button" id="homeModePlaces" class="home-vibe-mode active" aria-pressed="true">Places</button>
+            <button type="button" id="homeModeVibe" class="home-vibe-mode" aria-pressed="false">By vibe</button>
+          </div>
+          <span class="home-vibe-hint" id="homeVibeHint" hidden>Describe a feeling, not a name. Try "quiet rooftop for a date".</span>
+        </div>
         
       </div>
     </header>
@@ -728,9 +740,27 @@ function goSearch(q){
   if(q){try{if(window.posthog&&typeof window.posthog.capture==='function')window.posthog.capture('search',{query:q,results:searchMatchCount(q)})}catch(error){}}
   location.href=q?('/archive.html?q='+encodeURIComponent(q)):'/archive.html';
 }
-heroForm.addEventListener('submit',e=>{e.preventDefault();goSearch(heroInput.value)});
+let homeVibe=false;
+const homeModePlaces=$('#homeModePlaces'),homeModeVibe=$('#homeModeVibe'),homeVibeHint=$('#homeVibeHint');
+function setHomeVibe(on){
+  homeVibe=on;
+  homeModePlaces.classList.toggle('active',!on);homeModePlaces.setAttribute('aria-pressed',String(!on));
+  homeModeVibe.classList.toggle('active',on);homeModeVibe.setAttribute('aria-pressed',String(on));
+  homeVibeHint.hidden=!on;
+  heroInput.placeholder=on?'Describe the vibe…':'Search places…';
+  heroInput.focus();
+}
+homeModePlaces.addEventListener('click',()=>{if(homeVibe)setHomeVibe(false)});
+homeModeVibe.addEventListener('click',()=>{if(!homeVibe)setHomeVibe(true)});
+function goVibe(q){
+  q=String(q||'').trim();
+  if(q){try{if(window.posthog&&typeof window.posthog.capture==='function')window.posthog.capture('search',{query:q,mode:'vibe'})}catch(error){}}
+  location.href=q?('/archive.html?vibe='+encodeURIComponent(q)):'/archive.html';
+}
+heroForm.addEventListener('submit',e=>{e.preventDefault();if(homeVibe)goVibe(heroInput.value);else goSearch(heroInput.value)});
 let heroTimer=0;
 heroInput.addEventListener('input',()=>{
+  if(homeVibe)return;
   clearTimeout(heroTimer);
   const q=heroInput.value.trim();
   if(q.length>=3)heroTimer=setTimeout(()=>goSearch(q),800);
