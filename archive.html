@@ -1545,6 +1545,25 @@ function render(){
   const VIBE_KEY='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inh4ZGd4aWd3cG5lenNkdmJpYXdpIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTE2OTM0MDYsImV4cCI6MjEwNzI2OTQwNn0.3fuj9vjXspT31fQhgcejf4Thmk9yHPc7RSBZ0v97Gw4';
   const vibeHint=$('#vibeHint'),vibeChip=$('#vibeChip'),vibeChipText=$('#vibeChipText'),vibeStatus=$('#vibeStatus'),modePlaces=$('#modePlaces'),modeVibe=$('#modeVibe'),searchInput=$('#search');
   let vibeSeq=0,vibeCtrl=null;
+  const RERANK_STOP=new Set('with that feels like some somewhere place places good great best night dinner lunch brunch the and for out'.split(' '));
+  function rerankVibe(q,results){
+    const toks=new Set((q.toLowerCase().match(/[a-z0-9]+/g)||[]).filter(t=>t.length>=4&&!RERANK_STOP.has(t)));
+    if(!toks.size)return results;
+    const byId={};PLACES.forEach(p=>byId[p.id]=p);
+    return results.map(r=>{
+      const p=byId[r.id];let s=(typeof r.similarity==='number')?r.similarity:0;
+      if(p){
+        const hay=new Set();
+        (p.tags||[]).forEach(t=>{(String(t).toLowerCase().match(/[a-z0-9]+/g)||[]).forEach(w=>hay.add(w))});
+        ((p.category||'').toLowerCase().match(/[a-z0-9]+/g)||[]).forEach(w=>hay.add(w));
+        ((p.categoryDetail||'').toLowerCase().match(/[a-z0-9]+/g)||[]).forEach(w=>hay.add(w));
+        let th=0;toks.forEach(t=>{if(hay.has(t))th++});
+        let oh=0;(p.occasions||[]).forEach(o=>{if(toks.has(o))oh++});
+        s+=0.04*th+0.03*oh;
+      }
+      return {id:r.id,score:s};
+    }).sort((a,b)=>(b.score-a.score)||(a.id<b.id?1:-1));
+  }
   function clearVibeResults(){vibeSeq++;if(vibeCtrl){vibeCtrl.abort();vibeCtrl=null}state.vibe=null;vibeChip.hidden=true;vibeStatus.textContent='';render()}
   function setVibeMode(on){
     vibeSeq++;if(vibeCtrl){vibeCtrl.abort();vibeCtrl=null}
@@ -1571,7 +1590,7 @@ function render(){
       if(!r.ok)throw new Error('vibe '+r.status);
       const d=await r.json();
       if(mySeq!==vibeSeq)return;
-      const ids=(d.results||[]).map(x=>x.id);
+      const ids=rerankVibe(q,(d.results||[])).map(x=>x.id);
       if(!ids.length){state.vibe=null;vibeChip.hidden=true;vibeStatus.textContent='No strong matches for that vibe. Try different words, or switch back to Places.';render();searchInput.dispatchEvent(new Event('input',{bubbles:true}));return}
       state.vibe={q:q,ids:ids};state.open=null;
       vibeChipText.textContent='\u201C'+q+'\u201D';vibeChip.hidden=false;
