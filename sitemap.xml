@@ -732,11 +732,6 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://407.fyi/venue/sebys-pizza.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://407.fyi/venue/seito.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -833,11 +828,6 @@
   </url>
   <url>
     <loc>https://407.fyi/venue/glass-knife.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://407.fyi/venue/majesty-building.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -1273,11 +1263,6 @@
   </url>
   <url>
     <loc>https://407.fyi/venue/quesa-loco.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://407.fyi/venue/robinson-cocktail-room.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -1987,11 +1972,6 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://407.fyi/venue/empanada-co.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://407.fyi/venue/kavas-tacos-tequila.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -2003,11 +1983,6 @@
   </url>
   <url>
     <loc>https://407.fyi/venue/lim-ros-thai-restaurant.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://407.fyi/venue/melt-n-dip.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -3062,47 +3037,12 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://407.fyi/venue/universal-orlando-resort-tickets.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://407.fyi/venue/universal-vip-experience.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://407.fyi/venue/seaworld-howl-o-scream.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://407.fyi/venue/coco-key-water-park.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://407.fyi/venue/hilton-pool-pass.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://407.fyi/venue/omni-resort-pool-pass.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://407.fyi/venue/grove-resort-water-park.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://407.fyi/venue/go-city-explorer-pass.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://407.fyi/venue/orlando-essentials-pass.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -3143,21 +3083,6 @@
   </url>
   <url>
     <loc>https://407.fyi/venue/fettuccine-pasta-class.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://407.fyi/venue/moonshine-mixology-class.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://407.fyi/venue/caribbean-moonshine-distillery-tour.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://407.fyi/venue/caribbean-moonshine-bottling-tour.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -3328,11 +3253,6 @@
   </url>
   <url>
     <loc>https://407.fyi/venue/lake-buena-vista-factory-stores.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://407.fyi/venue/paradiso-grande-resort.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
