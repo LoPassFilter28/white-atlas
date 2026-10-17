@@ -125,6 +125,18 @@ body.flashbacks-page .flashbacks-head{border-top:1px solid var(--line)}
 .search-wrap svg{position:absolute;left:16px;top:50%;transform:translateY(-50%);width:21px;color:var(--muted);pointer-events:none}
 #search{width:100%;height:58px;border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:12px;padding:0 46px 0 48px;font-size:1.06rem;font-weight:700;outline:none;box-shadow:0 5px 18px color-mix(in srgb,var(--headline) 7%,transparent);transition:border-color var(--dur-ui) ease,box-shadow var(--dur-ui) ease}
 #search:focus{border-color:var(--focus);box-shadow:0 0 0 3px color-mix(in srgb,var(--focus) 28%,transparent),0 7px 22px color-mix(in srgb,var(--headline) 10%,transparent)}
+.vibe-row{display:flex;align-items:center;gap:12px;margin-top:10px;flex-wrap:wrap}
+.vibe-modes{display:inline-flex;border:1px solid var(--line);border-radius:999px;overflow:hidden}
+.vibe-mode{border:0;background:transparent;color:var(--muted);font:inherit;font-size:.8rem;font-weight:800;padding:9px 15px;cursor:pointer}
+.vibe-mode.active{background:var(--accent);color:var(--on-accent)}
+.vibe-hint{font-size:.8rem;color:var(--muted)}
+.vibe-chip{display:flex;margin-top:10px;align-items:center;gap:10px;border:1px solid var(--accent);border-radius:12px;padding:10px 12px;background:color-mix(in srgb,var(--accent) 12%,transparent)}
+.vibe-chip[hidden]{display:none}
+.vibe-chip-label{font-size:.9rem;font-weight:600;min-width:0;line-height:1.35}
+.vibe-chip-label b{color:var(--accent-ink)}
+#vibeClear{margin-left:auto;flex:0 0 auto;border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:8px;min-height:38px;padding:5px 14px;font:inherit;font-size:.78rem;font-weight:800;cursor:pointer}
+.vibe-status{display:block;margin-top:6px;font-size:.8rem;color:var(--muted);line-height:1.35}
+.vibe-status:empty{display:none}
 #clearSearch{position:absolute;right:5px;top:7px;width:44px;height:44px;border:0;background:transparent;color:var(--muted);font-size:1.25rem;display:none}
 .list-shortcuts{display:grid;grid-template-columns:1fr;gap:8px;margin-top:10px}
 .list-shortcut{min-height:46px;display:flex;align-items:center;justify-content:space-between;gap:10px;padding:9px 12px;border:1px solid var(--line);border-radius:5px;background:var(--surface);color:var(--accent-ink);font-size:.78rem;font-weight:800;text-align:left}
@@ -643,6 +655,15 @@ html:not([data-theme="dark"]) .upd-tag{color:#7c520c;background:rgba(124,82,12,.
         <input id="search" type="search" placeholder="Search places…" autocomplete="off" aria-label="Search all Orlando places">
         <button id="clearSearch" aria-label="Clear search">×</button>
       </div>
+      <div class="vibe-row" id="vibeRow">
+        <div class="vibe-modes" role="group" aria-label="Search mode">
+          <button type="button" id="modePlaces" class="vibe-mode active" aria-pressed="true">Places</button>
+          <button type="button" id="modeVibe" class="vibe-mode" aria-pressed="false">By vibe</button>
+        </div>
+        <span class="vibe-hint" id="vibeHint" hidden>Describe a feeling, not a name, then press Enter. Try "quiet rooftop for a date".</span>
+      </div>
+      <div class="vibe-chip" id="vibeChip" hidden><span class="vibe-chip-label">Vibe matches for <b id="vibeChipText"></b>. Closest first.</span><button id="vibeClear" type="button">Clear</button></div>
+      <span class="vibe-status" id="vibeStatus" role="status"></span>
       <div class="location-bar"><button class="location-btn" id="locationBtn" type="button" aria-pressed="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="3"></circle><path d="M12 2v3M12 19v3M2 12h3M19 12h3"></path><circle cx="12" cy="12" r="8"></circle></svg><span class="nearest-copy"><span class="nearest-title">Nearest to me</span><span class="nearest-detail">Tap once to see distance on every place</span></span><span class="nearest-action">Find</span></button><span class="location-status" id="locationStatus" role="status">Location is requested only when you tap. Approximate distance stays in this session.</span></div>
       <nav class="list-shortcuts" aria-label="Featured guide filters">
         <button class="list-shortcut" id="picksFilter" type="button" aria-pressed="false"><strong>Local Picks</strong><span>17 places</span></button>
@@ -784,7 +805,7 @@ html:not([data-theme="dark"]) .upd-tag{color:#7c520c;background:rgba(124,82,12,.
   };
   const EOLA_HISTORY_PLACES=new Set(['lake-eola','rusteak-thornton-park','june-orlando']);
   
-  const state={query:'',zone:'all',category:'all',occasion:'all',daypart:'all',price:'all',collection:'all',district:'all',sort:'guide',open:null,position:null,watchId:null,view:'list',localGuide:null};
+  const state={query:'',zone:'all',category:'all',occasion:'all',daypart:'all',price:'all',collection:'all',district:'all',sort:'guide',open:null,position:null,vibe:null,vibeMode:false,watchId:null,view:'list',localGuide:null};
   const DEFAULT_EXPORT_FIELDS=['district','priceBand','description','whyGo','address'];
   const EXPORT_FIELD_LABELS={district:'District',priceBand:'Price band',description:'Description',whyGo:'Why go',address:'Address'};
   const exportState={scope:'current',format:'markdown',pdfApplied:false,lastFocus:null,navPressed:null};
@@ -1102,6 +1123,10 @@ function filtered(){
       &&(state.occasion==='all'||occasions(p).includes(state.occasion))
       &&(state.daypart==='all'||dayparts(p).includes(state.daypart))
       &&(state.price==='all'||priceBand(p)===state.price));
+    if(state.vibe&&state.vibe.ids&&state.vibe.ids.length){
+      const rank=new Map(state.vibe.ids.map((id,ix)=>[id,ix]));
+      return list.filter(p=>rank.has(p.id)).sort((a,b)=>rank.get(a.id)-rank.get(b.id));
+    }
     if(q){
       const scored=[];
       for(const p of list){const i=PLACES.indexOf(p);const s=scorePlace(i,q);if(s>=0)scored.push({p,i,s});}
@@ -1343,11 +1368,11 @@ function observeDistrictSections(){if(groupObserver)groupObserver.disconnect();g
 function buildDistrictTabs(){const el=$('#districtTabs');if(!el||el.dataset.built)return;el.dataset.built='1';const counts={};for(const p of PLACES){const k=districtKeyOf(p)||'more';counts[k]=(counts[k]||0)+1;}let h='<button type="button" class="district-tab" data-dtab="all" aria-pressed="true"><strong>All</strong><span>'+PLACES.length+'</span></button>';for(const d of [...DISTRICTS,...AREAS]){h+='<button type="button" class="district-tab" data-dtab="'+d.key+'" aria-pressed="false"><strong>'+esc(d.name)+'</strong><span>'+(counts[d.key]||0)+'</span></button>';}h+='<button type="button" class="district-tab" data-dtab="more" aria-pressed="false"><strong>More Orlando</strong><span>'+(counts['more']||0)+'</span></button>';el.innerHTML=h;el.addEventListener('click',e=>{const b=e.target.closest('[data-dtab]');if(!b)return;setDistrictTab(b.dataset.dtab);});}
 function setDistrictTab(key){if(state.district===key&&key!=='all')return;resetFilters();if(key!=='all')state.district=key;state.open=null;setViewMode('list');render();}
 function syncDistrictTabs(){document.querySelectorAll('[data-dtab]').forEach(b=>{const k=b.dataset.dtab;b.setAttribute('aria-pressed',String(k==='all'?state.district==='all':k===state.district));});}
-function isDefaultBrowse(){return !state.query.trim()&&state.collection==='all'&&!state.localGuide&&state.zone==='all'&&state.district==='all'&&state.category==='all'&&state.occasion==='all'&&state.daypart==='all'&&state.price==='all'&&state.sort!=='distance';}
+function isDefaultBrowse(){return !state.vibe&&!state.query.trim()&&state.collection==='all'&&!state.localGuide&&state.zone==='all'&&state.district==='all'&&state.category==='all'&&state.occasion==='all'&&state.daypart==='all'&&state.price==='all'&&state.sort!=='distance';}
 function render(){
     const list=filtered();
     $('#resultCount').textContent=`${list.length} ${list.length===1?'place':'places'}`;
-    const notes=[];if(state.collection==='picks')notes.push('Local Picks');if(state.localGuide)notes.push(LOCAL_GUIDE_LABELS[state.localGuide]);if(state.zone!=='all')notes.push(ZONES[state.zone]);if(state.district!=='all')notes.push(state.district==='more'?'More Orlando':DISTRICT_NAMES[state.district]);if(state.category!=='all')notes.push(state.category.startsWith('cat:')?state.category.slice(4):CATEGORIES[state.category]);if(state.occasion!=='all')notes.push($('#occasion').selectedOptions[0].textContent);if(state.daypart!=='all')notes.push($('#daypart').selectedOptions[0].textContent);if(state.price!=='all')notes.push(state.price==='$$$'?'$$$+':state.price);if(state.query)notes.push(`“${state.query}”`);if(state.sort==='distance'&&state.position)notes.push('nearest first');
+    const notes=[];if(state.collection==='picks')notes.push('Local Picks');if(state.localGuide)notes.push(LOCAL_GUIDE_LABELS[state.localGuide]);if(state.zone!=='all')notes.push(ZONES[state.zone]);if(state.district!=='all')notes.push(state.district==='more'?'More Orlando':DISTRICT_NAMES[state.district]);if(state.category!=='all')notes.push(state.category.startsWith('cat:')?state.category.slice(4):CATEGORIES[state.category]);if(state.occasion!=='all')notes.push($('#occasion').selectedOptions[0].textContent);if(state.daypart!=='all')notes.push($('#daypart').selectedOptions[0].textContent);if(state.price!=='all')notes.push(state.price==='$$$'?'$$$+':state.price);if(state.query)notes.push(`“${state.query}”`);if(state.vibe)notes.push('matched by vibe');if(state.sort==='distance'&&state.position)notes.push('nearest first');
     $('#filterNote').textContent=notes.join(' · ')||'All of Greater Orlando';
     if(exportState.pdfApplied)renderPrintSheet(exportList(),DEFAULT_EXPORT_FIELDS,exportScopeLabel());
     const grouped=isDefaultBrowse();$('#venueList').innerHTML=(list.length?inkindBanner():'')+(grouped?groupedListHtml(list):list.map(card).join(''));syncDistrictTabs();if(grouped)observeDistrictSections();$('#venueList').hidden=state.view==='map';$('#empty').hidden=state.view==='map'||list.length>0;
@@ -1445,8 +1470,8 @@ function render(){
   $('#zoomIn').addEventListener('click',()=>{if(mapReady)map.zoomIn()});
   $('#zoomOut').addEventListener('click',()=>{if(mapReady)map.zoomOut()});
   $('#mapSelection').addEventListener('click',e=>{if(e.target.closest('.selection-close'))closeMapSelection()});
-  const scheduleSearchRender=debounce(()=>{render();scheduleSearchFit();const q=state.query.trim();if(q)captureEvent('search',{query:q,results:filtered().length});},200);$('#search').addEventListener('input',e=>{resetAskLocal();state.query=e.target.value;state.open=null;const heroInput=$('#heroSearch');if(heroInput)heroInput.value=e.target.value;$('#clearSearch').style.display=state.query?'block':'none';scheduleSearchRender()});
-  $('#clearSearch').addEventListener('click',()=>{resetAskLocal();$('#search').value='';const heroInput=$('#heroSearch');if(heroInput)heroInput.value='';state.query='';state.open=null;$('#clearSearch').style.display='none';render();fitAfterRender();$('#search').focus()});
+  const scheduleSearchRender=debounce(()=>{render();scheduleSearchFit();const q=state.query.trim();if(q)captureEvent('search',{query:q,results:filtered().length});},200);$('#search').addEventListener('input',e=>{resetAskLocal();if(state.vibeMode){const hv=$('#heroSearch');if(hv)hv.value=e.target.value;$('#clearSearch').style.display=e.target.value?'block':'none';return}state.query=e.target.value;state.open=null;const heroInput=$('#heroSearch');if(heroInput)heroInput.value=e.target.value;$('#clearSearch').style.display=state.query?'block':'none';scheduleSearchRender()});
+  $('#clearSearch').addEventListener('click',()=>{resetAskLocal();if(state.vibeMode)clearVibeResults();$('#search').value='';const heroInput=$('#heroSearch');if(heroInput)heroInput.value='';state.query='';state.open=null;$('#clearSearch').style.display='none';render();fitAfterRender();$('#search').focus()});
   const heroSearchInput=$('#heroSearch');
   if(heroSearchInput){
     heroSearchInput.addEventListener('input',e=>{resetAskLocal();state.query=e.target.value;state.open=null;$('#search').value=e.target.value;$('#clearSearch').style.display=state.query?'block':'none';scheduleSearchRender()});
@@ -1485,6 +1510,43 @@ function render(){
       $('#locationStatus').textContent=messages[err.code]||'Location is unavailable; places remain in guide order.';
     },{enableHighAccuracy:false,maximumAge:300000,timeout:15000});
   }
+  // Vibe search: semantic matching through the Supabase pgvector endpoint.
+  const VIBE_FN='https://xxdgxigwpnezsdvbiawi.supabase.co/functions/v1/vibe';
+  const VIBE_KEY='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inh4ZGd4aWd3cG5lenNkdmJpYXdpIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTE2OTM0MDYsImV4cCI6MjEwNzI2OTQwNn0.3fuj9vjXspT31fQhgcejf4Thmk9yHPc7RSBZ0v97Gw4';
+  const vibeHint=$('#vibeHint'),vibeChip=$('#vibeChip'),vibeChipText=$('#vibeChipText'),vibeStatus=$('#vibeStatus'),modePlaces=$('#modePlaces'),modeVibe=$('#modeVibe'),searchInput=$('#search');
+  function clearVibeResults(){state.vibe=null;vibeChip.hidden=true;vibeStatus.textContent='';render()}
+  function setVibeMode(on){
+    state.vibeMode=on;
+    modePlaces.classList.toggle('active',!on);modePlaces.setAttribute('aria-pressed',String(!on));
+    modeVibe.classList.toggle('active',on);modeVibe.setAttribute('aria-pressed',String(on));
+    vibeHint.hidden=!on;
+    searchInput.placeholder=on?'Describe the vibe…':'Search places…';
+    if(on){state.query='';state.vibe=null;vibeChip.hidden=true;vibeStatus.textContent='';render()}
+    else clearVibeResults();
+  }
+  async function runVibe(){
+    const q=searchInput.value.trim();
+    if(q.length<2){vibeStatus.textContent='Give me a few words about the vibe you want.';return}
+    vibeStatus.textContent='Reading the vibe…';
+    try{
+      const r=await fetch(VIBE_FN,{method:'POST',headers:{'Authorization':'Bearer '+VIBE_KEY,'apikey':VIBE_KEY,'Content-Type':'application/json'},body:JSON.stringify({query:q,count:60})});
+      if(!r.ok)throw new Error('vibe '+r.status);
+      const d=await r.json();
+      const ids=(d.results||[]).map(x=>x.id);
+      if(!ids.length){state.vibe=null;vibeChip.hidden=true;vibeStatus.textContent='No strong matches for that vibe. Try different words, or switch back to Places.';render();return}
+      state.vibe={q:q,ids:ids};state.open=null;
+      vibeChipText.textContent='\u201C'+q+'\u201D';vibeChip.hidden=false;
+      vibeStatus.textContent='Closest matches first. Your filters still apply on top.';
+      captureEvent('search',{query:q,results:filtered().length,mode:'vibe'});
+      render();
+    }catch(e){
+      vibeStatus.textContent='Vibe search is unavailable right now. Places search still works.';
+    }
+  }
+  modePlaces.addEventListener('click',()=>{if(state.vibeMode)setVibeMode(false)});
+  modeVibe.addEventListener('click',()=>{if(!state.vibeMode)setVibeMode(true)});
+  $('#vibeClear').addEventListener('click',clearVibeResults);
+  searchInput.addEventListener('keydown',e=>{if(state.vibeMode&&e.key==='Enter'){e.preventDefault();runVibe()}});
   $('#locationBtn').addEventListener('click',startLocation);
   addEventListener('pagehide',()=>{
     if(state.watchId!==null&&navigator.geolocation)navigator.geolocation.clearWatch(state.watchId);
