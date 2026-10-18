@@ -705,7 +705,7 @@ html:not([data-theme="dark"]) .upd-tag{color:#7c520c;background:rgba(124,82,12,.
         <div class="ref-chip" id="refChip"><span class="ref-chip-label">Measuring from <b id="refChipName"></b>. Distances and directions start there.</span><button id="refClear" type="button" aria-label="Clear reference point">Clear</button></div>
       </div>
       <nav class="list-shortcuts" aria-label="Featured guide filters">
-        <button class="list-shortcut" id="picksFilter" type="button" aria-pressed="false"><strong>Local Picks</strong><span>16 places</span></button>
+        <button class="list-shortcut" id="picksFilter" type="button" aria-pressed="false"><strong>Local Picks</strong><span>18 places</span></button>
         <button class="list-shortcut" id="fullList" type="button"><strong>Full list</strong><span>All places, no filters</span></button>
       </nav>
       <nav class="category-pills" aria-label="Filter by category">
@@ -827,7 +827,7 @@ html:not([data-theme="dark"]) .upd-tag{color:#7c520c;background:rgba(124,82,12,.
   const AREAS=[{key:'hourglass',name:'Hourglass'},{key:'kissimmee',name:'Kissimmee'},{key:'winter-garden',name:'Winter Garden'},{key:'oviedo',name:'Oviedo'},{key:'sanford',name:'Sanford'},{key:'sodo',name:'SoDo'},{key:'baldwin-park',name:'Baldwin Park'},{key:'ucf',name:'UCF'},{key:'maitland',name:'Maitland'},{key:'disney-area',name:'Disney Area'},{key:'day-trips',name:'Day Trips'}];
   const DISTRICT_MATCH=Object.fromEntries(DISTRICTS.map(d=>[d.key,d.match]));
   const DISTRICT_NAMES=Object.fromEntries([...DISTRICTS,...AREAS].map(d=>[d.key,d.name]));
-  const PICK_ORDER=['ava','quesa-loco','rusteak-thornton-park','fogo-orlando-vineland','the-guesthouse','fixtion','wall-street-plaza','elixir-kitchen-bar','iron-cow','toms-watch-bar-orlando','baires-grill-orlando','boxi-park','disney-springs-district','evermore-orlando-resort','orlando-vineland-premium-outlets','black-hammock-restaurant'];
+  const PICK_ORDER=['ava','quesa-loco','rusteak-thornton-park','fogo-orlando-vineland','the-guesthouse','fixtion','wall-street-plaza','elixir-kitchen-bar','iron-cow','toms-watch-bar-orlando','baires-grill-orlando','boxi-park','disney-springs-district','evermore-orlando-resort','orlando-vineland-premium-outlets','black-hammock-restaurant','imperial-on-park','prato'];
   const scenarioIds=(tag,occasion)=>PLACES.filter(p=>p.tags?.includes(tag)&&p.occasions?.includes(occasion)).map(p=>p.id);
   const LOCAL_GUIDES={
     get convention(){return scenarioIds('convention','convention')},

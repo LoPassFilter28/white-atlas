@@ -630,7 +630,7 @@ html[data-theme="dark"] .export-trigger:hover,html[data-theme="dark"] .export-tr
 
     <section class="layer picks-layer" id="picks" aria-labelledby="picksRailTitle">
       <div class="layer-head">
-        <div><h2 id="picksRailTitle">Local Picks</h2><p>The short list. Sixteen places a local sends you to first.</p></div>
+        <div><h2 id="picksRailTitle">Local Picks</h2><p>The short list. Eighteen places a local sends you to first.</p></div>
       </div>
       <div class="picks-rail" id="picksRail"></div>
       <p class="picks-note">Local Picks are never sponsored, no venue can pay to be on this list.</p>
@@ -663,7 +663,7 @@ html[data-theme="dark"] .export-trigger:hover,html[data-theme="dark"] .export-tr
    guide's own logic so Right Now / Ask a Local use the same rules. */
 const $=s=>document.querySelector(s);
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-const PICK_ORDER=['ava','quesa-loco','rusteak-thornton-park','fogo-orlando-vineland','the-guesthouse','fixtion','wall-street-plaza','elixir-kitchen-bar','iron-cow','toms-watch-bar-orlando','baires-grill-orlando','boxi-park','disney-springs-district','evermore-orlando-resort','orlando-vineland-premium-outlets','black-hammock-restaurant'];
+const PICK_ORDER=['ava','quesa-loco','rusteak-thornton-park','fogo-orlando-vineland','the-guesthouse','fixtion','wall-street-plaza','elixir-kitchen-bar','iron-cow','toms-watch-bar-orlando','baires-grill-orlando','boxi-park','disney-springs-district','evermore-orlando-resort','orlando-vineland-premium-outlets','black-hammock-restaurant','imperial-on-park','prato'];
 const ZONES={'downtown-eola':'Downtown & Lake Eola','winter-park':'Winter Park','mills-50':'Mills 50 & Ivanhoe','garden-district':'Audubon & Baldwin','disney-area':'Disney & Lake Buena Vista','universal-idrive':'Universal & I-Drive','lake-nona':'Lake Nona','day-trips':'Day trips','other':'Greater Orlando'};
 const AREA_ALIASES={'Ucf':'UCF Area','UCF area':'UCF Area','UCF/Alafaya':'UCF Area','Dr Phillips':'Dr. Phillips','Metrowest':'MetroWest','I-Drive':'International Drive'};
 const INVALID_AREA=/^(?:\d|also\b|opened\b|open\b|fresh-|taqueria\b|f&d\b|halal\b|historic general store\b|chinatown plaza\b|2 locations\b|near\b)/i;
