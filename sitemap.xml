@@ -222,7 +222,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-  <url>
     <loc>https://407.fyi/heritage.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -232,6 +231,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+  <url>
     <loc>https://407.fyi/hourglass-finder.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
