@@ -1,0 +1,635 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="color-scheme" content="light dark" />
+    <title>Flashbacks: Orlando History as One Long Story | 407 FYI</title>
+    <meta name="description" content="Central Florida history from the 407 FYI guide, told as one continuous scroll: street names, landmarks and local lore, in the spirit of Jim Robison, the Orlando Sentinel columnist who documented this region's past." />
+    <link rel="canonical" href="https://407.fyi/flashbacks-scroll.html" />
+    <meta property="og:title" content="Flashbacks: Orlando History as One Long Story · 407 FYI" />
+    <meta property="og:description" content="Central Florida history from the 407 FYI guide, told as one continuous scroll: street names, landmarks and local lore." />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://407.fyi/flashbacks-scroll.html" />
+    <meta property="og:image" content="https://407.fyi/og-image.png" />
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="preload" href="/fonts/urbanist-latin.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="/fonts/fonts.css" />
+    <script>
+      try {
+        const savedTheme = localStorage.getItem('white-atlas-theme');
+        document.documentElement.dataset.theme = savedTheme === 'light' || savedTheme === 'dark' ? savedTheme : 'dark';
+      } catch (error) {
+        document.documentElement.dataset.theme = 'dark';
+      }
+    </script>
+    <style>
+      :root{color-scheme:dark;--bg:#0d1512;--ink:#f4efe1;--bronze:#c19a5b;--sage:#b9bfa4;--muted:#9aa48c;--line:rgba(193,154,91,.28)}
+      *{margin:0;padding:0;box-sizing:border-box}
+      body{background:var(--bg);color:var(--ink);font-family:Urbanist,system-ui,sans-serif;overflow-x:hidden}
+      #gl{position:fixed;inset:0;width:100%;height:100%;z-index:0;display:block}
+      #veil{position:fixed;inset:0;z-index:1;background:radial-gradient(120% 90% at 50% 40%,transparent 55%,rgba(6,10,8,.55) 100%);pointer-events:none}
+      header{position:fixed;top:0;left:0;right:0;z-index:10;display:flex;justify-content:space-between;align-items:center;padding:20px 28px}
+      .wordmark{font-weight:800;letter-spacing:.34em;font-size:.82rem;color:var(--sage);text-decoration:none}
+      .head-label{font-size:.72rem;letter-spacing:.28em;color:var(--bronze);font-weight:700}
+      #progress{position:fixed;top:0;left:0;height:3px;width:100%;background:var(--bronze);transform-origin:0 50%;transform:scaleX(0);z-index:11}
+      main{position:relative;z-index:2}
+      .scene{min-height:100vh;display:flex;align-items:center;position:relative;padding:16vh 6vw}
+      .scene-inner{max-width:880px;margin:0 auto;width:100%;position:relative}
+      .intro h1{font-size:clamp(3.4rem,11vw,8.5rem);font-weight:850;line-height:.98;letter-spacing:-.01em}
+      .intro h1 em{font-style:normal;color:var(--bronze)}
+      .intro .standfirst{margin-top:28px;font-size:clamp(1.05rem,2.2vw,1.4rem);line-height:1.55;color:var(--sage);max-width:34em;font-weight:500}
+      .scroll-cue{margin-top:56px;color:var(--muted);font-size:.75rem;letter-spacing:.3em;font-weight:700}
+      .scroll-cue span{display:block;width:1px;height:56px;background:linear-gradient(var(--bronze),transparent);margin-top:14px}
+      .ghost{position:absolute;top:8vh;right:2vw;font-size:clamp(10rem,30vw,24rem);font-weight:900;line-height:1;color:transparent;-webkit-text-stroke:1.5px rgba(193,154,91,.20);user-select:none;pointer-events:none}
+      .kicker{color:var(--bronze);font-weight:700;letter-spacing:.26em;text-transform:uppercase;font-size:.78rem;margin-bottom:26px}
+      .story-title{font-size:clamp(2.2rem,6vw,4.3rem);font-weight:820;line-height:1.06;max-width:14em}
+      .tier-name{font-size:clamp(3rem,10vw,7rem);font-weight:850;line-height:1;letter-spacing:.01em}
+      .tier-rule{width:120px;height:3px;background:var(--bronze);margin-top:34px}
+      .reveal-line{margin-top:30px;font-size:clamp(1.25rem,2.6vw,1.7rem);font-weight:750;color:var(--bronze);line-height:1.35}
+      .body-p{margin-top:22px;font-size:clamp(1.05rem,1.9vw,1.28rem);line-height:1.68;max-width:38em;font-weight:480}
+      .note{margin-top:30px;padding-top:18px;border-top:1px solid var(--line);color:var(--muted);font-style:italic;font-size:.95rem;line-height:1.6;max-width:38em}
+      .source{margin-top:16px;font-size:.8rem;color:var(--muted)}
+      .source a{color:var(--bronze);font-weight:700;text-underline-offset:3px}
+      .outro .scene-inner{text-align:center}
+      .outro p.big{font-size:clamp(1.8rem,4.6vw,3.2rem);font-weight:800;line-height:1.2}
+      .outro .backlink{display:inline-block;margin-top:34px;min-height:44px;padding:12px 20px;border:1px solid var(--line);border-radius:4px;color:var(--ink);text-decoration:none;font-size:.85rem;font-weight:800;letter-spacing:.06em}
+      .outro .backlink:hover,.outro .backlink:focus-visible{border-color:var(--bronze);color:var(--bronze);outline:3px solid var(--bronze);outline-offset:2px}
+      footer{position:relative;z-index:2;padding:34px 28px;border-top:1px solid var(--line);color:var(--muted);font-size:.8rem;display:flex;justify-content:space-between;letter-spacing:.14em}
+      @media (prefers-reduced-motion:reduce){.scroll-cue span{display:none}}
+    </style>
+  </head>
+  <body>
+    <canvas id="gl"></canvas>
+    <div id="veil"></div>
+    <div id="progress"></div>
+    <header><a class="wordmark" href="/">407 FYI</a><div class="head-label">FLASHBACKS</div></header>
+    <main>
+      <section class="scene intro">
+        <div class="scene-inner">
+          <p class="kicker">407 FYI · Orlando like a local</p>
+          <h1>Flash<em>backs</em></h1>
+          <p class="standfirst">Central Florida history, in the spirit of Orlando Sentinel columnist Jim Robison, who spent decades documenting this region's past. Told here as one long story, one scroll at a time.</p>
+          <p class="scroll-cue">SCROLL<span></span></p>
+        </div>
+      </section>
+
+<section class="scene tier-divider">
+  <div class="scene-inner">
+    <p class="kicker">Flashbacks</p>
+    <h2 class="tier-name">THE HITS</h2>
+    <div class="tier-rule"></div>
+  </div>
+</section>
+
+<section class="scene story" id="history-orlando">
+  <div class="ghost" aria-hidden="true">01</div>
+  <div class="scene-inner">
+    <p class="kicker">Flashbacks · The Hits</p>
+    <h2 class="story-title">Where did the name &quot;Orlando&quot; come from?</h2>
+    <p class="reveal-line">Nobody actually knows.</p><p class="body-p">The leading story: a soldier named Orlando Reeves died in the Second Seminole War and the town was named for him. Except historians later found no record of any Orlando Reeves, only an Orlando Rees who carved his name into a tree and vanished. The backup theory: Orlando from Shakespeare&#x27;s As You Like It .</p><p class="note">Local note: a city named after either a war hero who may not have existed or a Shakespeare character. the answer is still anybody’s guess. But now you&#x27;ve got both theories.</p>
+  </div>
+</section>
+
+<section class="scene story" id="history-epcot">
+  <div class="ghost" aria-hidden="true">02</div>
+  <div class="scene-inner">
+    <p class="kicker">Flashbacks · The Hits</p>
+    <h2 class="story-title">Was EPCOT supposed to be a real city?</h2>
+    <p class="body-p">Yes: not a theme park at all. Walt Disney&#x27;s 1966 plan was a working city of about 20,000 people, circular in design, with cars banished to underground tunnels and monorails and PeopleMovers gliding on the surface. Every adult resident would have been employed within the Disney World development.</p><p class="body-p">After Walt died, the city was shelved. The park that debuted in 1982 kept the name, Experimental Prototype Community of Tomorrow, and the spirit, but not the residents.</p><p class="note">Local note: you&#x27;ve probably been to EPCOT. Walt wanted you to live there.</p><p class="source"><a href="https://d23.com/d23-video/from-the-office-of-walt-disney-epcot-a-blueprint-of-the-future/" target="_blank" rel="noopener">Source: Walt Disney Archives / D23 ↗</a></p>
+  </div>
+</section>
+
+<section class="scene story" id="history-eola-swans">
+  <div class="ghost" aria-hidden="true">03</div>
+  <div class="scene-inner">
+    <p class="kicker">Flashbacks · The Hits</p>
+    <h2 class="story-title">What happened to the Lake Eola swans?</h2>
+    <p class="body-p">They were rehomed in 2026. After an avian flu outbreak killed more than 30 birds, the city ended the century-old program and moved the remaining 44 swans ahead of a $60 million park renovation, so if the lake looks quieter, that&#x27;s why.</p><p class="body-p">The flock started with soap-opera drama: in 1910 an Englishman bought four swans for Lake Lucerne, including a royal mute swan named Billy (supposedly from King George&#x27;s own Thames flock) who drowned his mate, chased cars, and nipped schoolchildren. After Billy feuded with the lake&#x27;s black swans, a pair was moved to Lake Eola in 1922 and founded the flock.</p><p class="note">Local note: downtown&#x27;s most famous residents were British royalty with anger issues.</p>
+  </div>
+</section>
+
+<section class="scene story" id="history-wet-n-wild">
+  <div class="ghost" aria-hidden="true">04</div>
+  <div class="scene-inner">
+    <p class="kicker">Flashbacks · The Hits</p>
+    <h2 class="story-title">Was the water park invented on International Drive?</h2>
+    <p class="body-p">Basically, yes. Wet &#x27;n Wild debuted on I-Drive on March 13, 1977, founded by SeaWorld creator George Millay, who quit SeaWorld to build it. Most industry experts consider it the first true water park: the first to combine wave pools, slides, and splash zones in one place.</p><p class="body-p">Disney&#x27;s River Country debuted a year earlier, but Wet &#x27;n Wild defined the formula. It ran 39 years before closing to make way for Volcano Bay.</p><p class="note">Local note: every water park on this road is a cover version of the original.</p>
+  </div>
+</section>
+
+<section class="scene story" id="history-oviedo-chickens">
+  <div class="ghost" aria-hidden="true">05</div>
+  <div class="scene-inner">
+    <p class="kicker">Flashbacks · The Hits</p>
+    <h2 class="story-title">Why are there chickens running downtown Oviedo?</h2>
+    <p class="body-p">Nobody fully knows: local lore traces the flock to a single hen spotted in 1994, followed weeks later by 13 chicks. Decades later they&#x27;re still there, wandering the streets like they own the place.</p><p class="body-p">They&#x27;re so beloved the city declared itself a bird sanctuary to protect them, and the chickens show up on local t-shirts and coffee mugs.</p><p class="note">Local note: if a chicken crosses the road in Oviedo, nobody asks why. It&#x27;s just Tuesday.</p>
+  </div>
+</section>
+
+<section class="scene story" id="history-milk-district">
+  <div class="ghost" aria-hidden="true">06</div>
+  <div class="scene-inner">
+    <p class="kicker">Flashbacks · The Hits</p>
+    <h2 class="story-title">Why is it called the Milk District?</h2>
+    <p class="body-p">Because of a dairy. The T.G. Lee Dairy plant was founded in 1925, and founder Thomas Gilbert Lee started with a single cow producing milk for Central Florida.</p><p class="body-p">The plant still stands as the district&#x27;s landmark, and the strip of independent shops and bars around it picked up the nickname. A whole nightlife district, named after one cow.</p><p class="note">Local note: one cow. That&#x27;s the whole origin story.</p>
+  </div>
+</section>
+
+<section class="scene story" id="history-mills-50">
+  <div class="ghost" aria-hidden="true">07</div>
+  <div class="scene-inner">
+    <p class="kicker">Flashbacks · The Hits</p>
+    <h2 class="story-title">Why is it called Mills 50?</h2>
+    <p class="body-p">It&#x27;s literally the crossroads: Mills Avenue meets State Road 50 (Colonial Drive), and the neighborhood named itself after the intersection.</p><p class="body-p">Starting in the late 1970s, Vietnamese refugees resettled through Catholic Charities established markets, bakeries, and pho shops there, and the area grew into &quot;Little Saigon&quot;, one of Florida&#x27;s most concentrated Vietnamese business districts.</p><p class="note">Local note: you&#x27;re eating in a neighborhood named after a street corner with a Little Saigon heart.</p>
+  </div>
+</section>
+
+<section class="scene story" id="history-eatonville">
+  <div class="ghost" aria-hidden="true">08</div>
+  <div class="scene-inner">
+    <p class="kicker">Flashbacks · The Hits</p>
+    <h2 class="story-title">What&#x27;s the big deal about Eatonville?</h2>
+    <p class="body-p">It&#x27;s the oldest incorporated African American municipality in the United States, founded August 15, 1887, when freed slaves from Maitland bought 112 acres and named the town for Josiah Eaton, the white landowner who helped arrange the purchase.</p><p class="body-p">Zora Neale Hurston was raised there from age three (her father was the town&#x27;s third mayor) and she set her fiction in its streets, calling it &quot;a city of five lakes, three croquet courts, three hundred brown skins, three hundred good swimmers, plenty guavas, two schools, and no jailhouse.&quot;</p><p class="note">Local note: ten minutes north of downtown sits a town that made American literary history.</p>
+  </div>
+</section>
+
+<section class="scene story" id="history-great-swamp-caper">
+  <div class="ghost" aria-hidden="true">35</div>
+  <div class="scene-inner">
+    <p class="kicker">Flashbacks · The Hits</p>
+    <h2 class="story-title">The Great Swamp Caper</h2>
+    <p class="body-p">In the mid-1960s, Disney quietly bought more than 27,000 acres of Central Florida swampland without telling a soul. Agents used dummy companies with names like the &quot;Ayefour Corporation,&quot; paid in cash, and picked up land for as little as $100 an acre. The Orlando Sentinel finally cracked the story in October 1965 with the front-page headline &quot;We Say: It&#x27;s Disney&quot;, by which point the buying was done and prices exploded overnight.</p>
+  </div>
+</section>
+
+<section class="scene story" id="history-opening-day-disaster">
+  <div class="ghost" aria-hidden="true">36</div>
+  <div class="scene-inner">
+    <p class="kicker">Flashbacks · The Hits</p>
+    <h2 class="story-title">The Opening-Day Disaster</h2>
+    <p class="body-p">Universal Studios Florida opened on June 7, 1990, before it was actually ready. Headline rides broke down constantly, and Universal ended up suing the manufacturer of the Jaws ride. The park survived its shaky start, and nine years later Islands of Adventure opened next door, turning one troubled park into a real resort.</p>
+  </div>
+</section>
+
+<section class="scene story" id="history-gatorland-1949">
+  <div class="ghost" aria-hidden="true">37</div>
+  <div class="scene-inner">
+    <p class="kicker">Flashbacks · The Hits</p>
+    <h2 class="story-title">The Park That Beat Disney Here by 22 Years</h2>
+    <p class="body-p">Gatorland opened in 1949, more than two decades before the Magic Kingdom. Founder Owen Godwin started with an alligator pit, bought 110 acres on Highway 17/92, and built the &quot;Alligator Capital of the World.&quot; When Disney arrived in 1971 and wiped out most roadside attractions, Gatorland leaned into its old-Florida charm and outlasted them all.</p>
+  </div>
+</section>
+
+<section class="scene story" id="history-finleys-folly">
+  <div class="ghost" aria-hidden="true">38</div>
+  <div class="scene-inner">
+    <p class="kicker">Flashbacks · The Hits</p>
+    <h2 class="story-title">Finley&#x27;s Folly</h2>
+    <p class="body-p">International Drive began in the late 1960s as one man&#x27;s gamble: hotelier Finley Hamilton built a road through empty ranchland to reach his new Hilton Inn South, betting Disney&#x27;s 1971 opening would send tourists his way. Locals laughed and nicknamed the lonely hotel &quot;Finley&#x27;s Folly.&quot; The joke didn&#x27;t last. That 11-mile road became the spine of Orlando&#x27;s entire tourist corridor.</p>
+  </div>
+</section>
+
+<section class="scene story" id="history-doctor-oranges">
+  <div class="ghost" aria-hidden="true">39</div>
+  <div class="scene-inner">
+    <p class="kicker">Flashbacks · The Hits</p>
+    <h2 class="story-title">The Doctor Who Chose Oranges</h2>
+    <p class="body-p">Dr. Phillips was a real doctor: Philip Phillips earned his medical degree from Columbia University and carried the nickname &quot;Doc&quot; for life. He barely practiced. Instead he built a citrus empire of more than 5,000 acres across nine Florida counties, pioneered modern orange-juice processing, and sold it all to Minute Maid in 1954. The neighborhood, the hospital, the performing arts center, and Restaurant Row all sit on or near his old groves.</p>
+  </div>
+</section>
+
+<section class="scene story" id="history-monorail-factory">
+  <div class="ghost" aria-hidden="true">40</div>
+  <div class="scene-inner">
+    <p class="kicker">Flashbacks · The Hits</p>
+    <h2 class="story-title">The Missile Factory That Built the Monorails</h2>
+    <p class="body-p">In 1969, Martin Marietta, the defense contractor now known as Lockheed Martin, was hired to build the monorail trains for Walt Disney World. The Mark IV monorails were manufactured at the company&#x27;s Sand Lake Road plant in west Orlando and ran from the park&#x27;s 1971 opening until 1989. The same campus that builds missile systems built the most famous trains in Florida.</p>
+  </div>
+</section>
+
+<section class="scene tier-divider">
+  <div class="scene-inner">
+    <p class="kicker">Flashbacks</p>
+    <h2 class="tier-name">B-SIDES</h2>
+    <div class="tier-rule"></div>
+  </div>
+</section>
+
+<section class="scene story" id="history-semoran">
+  <div class="ghost" aria-hidden="true">09</div>
+  <div class="scene-inner">
+    <p class="kicker">Flashbacks · B-Sides</p>
+    <h2 class="story-title">Why is it called Semoran Boulevard?</h2>
+    <p class="reveal-line">Semoran is Seminole + Orange smashed together.</p><p class="body-p">SR 436 rides the county line between the two, so the road is literally named after the border it sits on.</p><p class="note">Local note: next time you&#x27;re crawling down 436, you&#x27;ve got the trivia answer before the light turns green.</p>
+  </div>
+</section>
+
+<section class="scene story" id="history-obt">
+  <div class="ghost" aria-hidden="true">10</div>
+  <div class="scene-inner">
+    <p class="kicker">Flashbacks · B-Sides</p>
+    <h2 class="story-title">Why is it called Orange Blossom Trail?</h2>
+    <p class="reveal-line">Because it used to run through orange groves.</p><p class="body-p">Before I-4, OBT was the main drag into Central Florida, and in January the blossoms perfumed the whole road. One stretch was even renamed from Kentucky Avenue because Orange Blossom Trail sounded better to travelers.</p><p class="note">Local note: roll the windows down in January. Some stretches still smell like it.</p>
+  </div>
+</section>
+
+<section class="scene story" id="history-church">
+  <div class="ghost" aria-hidden="true">11</div>
+  <div class="scene-inner">
+    <p class="kicker">Flashbacks · B-Sides</p>
+    <h2 class="story-title">What was Church Street Station before the clubs?</h2>
+    <p class="reveal-line">A railroad depot.</p><p class="body-p">The 1889 South Florida Railroad depot anchored downtown for decades before entrepreneur Bob Snow turned it into the Church Street Station entertainment district in the 1970s: live music, saloons, and shopping that ruled Orlando nightlife through the 80s and 90s.</p><p class="note">Local note: the party district downtown is standing on a train station. The tracks came first.</p>
+  </div>
+</section>
+
+<section class="scene story" id="history-eola">
+  <div class="ghost" aria-hidden="true">12</div>
+  <div class="scene-inner">
+    <p class="kicker">Flashbacks · B-Sides</p>
+    <h2 class="story-title">Does Lake Eola have two fountains?</h2>
+    <p class="reveal-line">Yes: and almost nobody notices the second one.</p><p class="body-p">The famous fountain gets the photos, but the smaller Sperry Fountain has flowed in the southwest corner for over a century. It was funded by E.F. Sperry, Orlando&#x27;s mayor in 1914, who donated the shoreline land to finish the park, and championed women&#x27;s voting rights when that was still controversial.</p><p class="note">Local note: walk the southwest corner of the lake and find the fountain everyone misses.</p>
+  </div>
+</section>
+
+<section class="scene story" id="history-winter-park">
+  <div class="ghost" aria-hidden="true">13</div>
+  <div class="scene-inner">
+    <p class="kicker">Flashbacks · B-Sides</p>
+    <h2 class="story-title">Why is it called Winter Park?</h2>
+    <p class="reveal-line">Because that&#x27;s exactly what it was built to be.</p><p class="body-p">Northern developers founded it in the 1880s as a winter resort, a park-like escape from northern winters. Before that the settlement went by Lake View, then Osceola, before somebody stated the obvious.</p><p class="note">Local note: you&#x27;re driving through a 140-year-old snowbird trap. It worked.</p>
+  </div>
+</section>
+
+<section class="scene story" id="history-disney-springs">
+  <div class="ghost" aria-hidden="true">14</div>
+  <div class="scene-inner">
+    <p class="kicker">Flashbacks · B-Sides</p>
+    <h2 class="story-title">Why does Disney Springs feel like it&#x27;s had other lives?</h2>
+    <p class="body-p">Because it&#x27;s had five names. It debuted March 22, 1975 as the Lake Buena Vista Shopping Village, became Walt Disney World Village in 1977, Disney Village Marketplace in 1989, Downtown Disney in 1997, and finally Disney Springs in 2015.</p><p class="body-p">The current theming, a Florida waterfront town built around natural springs, was invented from scratch for the 2015 rebrand.</p><p class="note">Local note: if you remember &quot;Downtown Disney,&quot; congratulations, you&#x27;re dating yourself.</p>
+  </div>
+</section>
+
+<section class="scene story" id="history-college-park">
+  <div class="ghost" aria-hidden="true">15</div>
+  <div class="scene-inner">
+    <p class="kicker">Flashbacks · B-Sides</p>
+    <h2 class="story-title">Why are College Park streets named after colleges?</h2>
+    <p class="body-p">It was a 1920s sales gimmick. Developers named the streets Princeton, Harvard, Yale, Dartmouth, and Stetson specifically to sell building lots during the Florida Land Boom, an Ivy League address for your new bungalow.</p><p class="body-p">The neighborhood was platted starting in 1921 on the shore of Lake Ivanhoe, and the collegiate branding worked so well the post office made &quot;College Park&quot; official decades later.</p><p class="note">Local note: every street sign here is a hundred-year-old real-estate ad.</p>
+  </div>
+</section>
+
+<section class="scene story" id="history-ivanhoe">
+  <div class="ghost" aria-hidden="true">16</div>
+  <div class="scene-inner">
+    <p class="kicker">Flashbacks · B-Sides</p>
+    <h2 class="story-title">Why is Lake Ivanhoe named after a knight?</h2>
+    <p class="body-p">After Sir Walter Scott&#x27;s 1819 novel Ivanhoe. Early landowner F.N. Abbott named the lake for the Saxon knight, and around the same time, neighbor John W. Childress named nearby Lake Adair after his wife.</p><p class="body-p">So one lake is literature and the next one is a love letter.</p><p class="note">Local note: two lakes, one medieval novel, one marriage. Orlando&#x27;s original romantics.</p>
+  </div>
+</section>
+
+<section class="scene story" id="history-audubon">
+  <div class="ghost" aria-hidden="true">17</div>
+  <div class="scene-inner">
+    <p class="kicker">Flashbacks · B-Sides</p>
+    <h2 class="story-title">Why are Audubon Park&#x27;s streets named after birds?</h2>
+    <p class="body-p">In honor of its namesake, the National Audubon Society. The tree-lined streets carry bird names, and it became the first neighborhood in Central Florida certified as a Wildlife Habitat Community.</p><p class="body-p">Fitting, too: the district grew up housing military families from the nearby Naval Training Center and McCoy Air Force Base.</p><p class="note">Local note: look out the window instead of at your phone: the street signs are a bird guide.</p>
+  </div>
+</section>
+
+<section class="scene story" id="history-angebilt">
+  <div class="ghost" aria-hidden="true">18</div>
+  <div class="scene-inner">
+    <p class="kicker">Flashbacks · B-Sides</p>
+    <h2 class="story-title">Did someone really climb the Angebilt Hotel?</h2>
+    <p class="body-p">Yes: days before its debut. The 11-story Angebilt debuted March 14, 1923 as Orlando&#x27;s first skyscraper, designed by Murray S. King, Florida&#x27;s first registered architect.</p><p class="body-p">Before its debut, a daredevil billed as &quot;the Human Fly&quot; scaled all eleven stories before a crowd of about 10,000 to raise money for charity, hanging from windowsills by his fingertips. You can still see the building at 37 N. Orange Ave.</p><p class="note">Local note: downtown&#x27;s first skyscraper moment was a man hanging off it.</p>
+  </div>
+</section>
+
+<section class="scene story" id="history-downtown-boom">
+  <div class="ghost" aria-hidden="true">19</div>
+  <div class="scene-inner">
+    <p class="kicker">Flashbacks · B-Sides</p>
+    <h2 class="story-title">Why does downtown Orlando look frozen in the 1920s?</h2>
+    <p class="body-p">Because it nearly was. Florida&#x27;s 1921-25 land boom inflated property values fivefold, and Orange County issued a $7 million bond in 1926 for 86 road projects. Then the bust came in 1926 (hurricanes, then the Depression) and building permits cratered from $8.3 million in 1926 to under $2 million by the end of 1927.</p><p class="body-p">The towers that rose in the boom, the Angebilt, the San Juan, stood as the skyline for decades. The 1927 courthouse that now houses the Orange County Regional History Center is a surviving artifact of the boom&#x27;s civic ambition.</p><p class="note">Local note: the skyline you&#x27;re looking at is a boom-time time capsule.</p>
+  </div>
+</section>
+
+<section class="scene story" id="history-beacham">
+  <div class="ghost" aria-hidden="true">20</div>
+  <div class="scene-inner">
+    <p class="kicker">Flashbacks · B-Sides</p>
+    <h2 class="story-title">What&#x27;s the Beacham&#x27;s story?</h2>
+    <p class="body-p">It&#x27;s Orlando&#x27;s first theater. Former mayor Braxton Beacham Sr. built it at 46 N. Orange Ave; it debuted December 9, 1921 with a Norma Talmadge picture and a Buster Keaton short, ran vaudeville on the &quot;Straw Hat Circuit,&quot; and introduced &quot;talkie&quot; films in 1928.</p><p class="body-p">Local lore says a tunnel runs beneath Orange Avenue: either so vaudeville performers could dodge crowds, or so Prohibition-era booze could move unseen. A century of entertainment on one block, from vaudeville to EDM.</p><p class="note">Local note: the tunnel&#x27;s real purpose is lost to history. The rumor mill did its job.</p>
+  </div>
+</section>
+
+<section class="scene story" id="history-rollins">
+  <div class="ghost" aria-hidden="true">21</div>
+  <div class="scene-inner">
+    <p class="kicker">Flashbacks · B-Sides</p>
+    <h2 class="story-title">Is Rollins really Florida&#x27;s oldest college?</h2>
+    <p class="body-p">By official designation, yes. Founded by New England Congregationalists to bring liberal-arts education to the &quot;Florida frontier,&quot; it was organized in Sanford on April 28, 1885 and began classes in Winter Park that November, named for Chicago businessman and first treasurer Alonzo Rollins.</p><p class="body-p">A 2004 Florida House resolution designates it &quot;Florida&#x27;s oldest college.&quot; Franklin D. Roosevelt received an honorary degree at Knowles Chapel in 1936.</p><p class="note">Local note: the college is older than the city around it.</p>
+  </div>
+</section>
+
+<section class="scene story" id="history-winter-park-canals">
+  <div class="ghost" aria-hidden="true">22</div>
+  <div class="scene-inner">
+    <p class="kicker">Flashbacks · B-Sides</p>
+    <h2 class="story-title">Were Winter Park&#x27;s canals built for the boat tour?</h2>
+    <p class="body-p">No: they were logging ditches. The canals linking Lakes Maitland, Osceola, Virginia, Mizell, and Minnehaha were dug by hand in the late 19th century to float harvested logs to sawmills.</p><p class="body-p">The Venetian Canal and Fern Canal still carry the Scenic Boat Tour, running since 1938, which once marketed Winter Park as &quot;the Venice of America.&quot;</p><p class="note">Local note: the prettiest boat ride in town started as industrial plumbing.</p>
+  </div>
+</section>
+
+<section class="scene story" id="history-cattle">
+  <div class="ghost" aria-hidden="true">23</div>
+  <div class="scene-inner">
+    <p class="kicker">Flashbacks · B-Sides</p>
+    <h2 class="story-title">What was Central Florida&#x27;s first industry?</h2>
+    <p class="body-p">Cattle: long before citrus or tourism. Spanish cattle gone wild after 1821 roamed the region, and &quot;cowhunters&quot; drove them to market along the 146-mile Florida Cracker Trail.</p><p class="body-p">The name &quot;cracker&quot; comes from the crack of 10-to-12-foot braided bullwhips used to move herds through swamps. The workers called themselves cowmen, not cowboys. Seminoles ranched too (a chief known as &quot;Cowkeeper&quot; kept some 1,000 head), and Black cowmen were central to the trade.</p><p class="note">Local note: before the mouse, before the orange: the cow.</p>
+  </div>
+</section>
+
+<section class="scene story" id="history-leu-gardens">
+  <div class="ghost" aria-hidden="true">24</div>
+  <div class="scene-inner">
+    <p class="kicker">Flashbacks · B-Sides</p>
+    <h2 class="story-title">How did Leu Gardens become public?</h2>
+    <p class="body-p">A wealthy couple gave it away. Harry P. Leu and his wife Mary Jane bought the 1858 Mizell house and 40 acres on North Forest Avenue in 1936, then spent decades filling it with exotic plants from world travels, including 240 camellia varieties.</p><p class="body-p">In 1961 they deeded the whole estate to the City of Orlando. It welcomed the public in 1964, and the house joined the National Register in 1994.</p><p class="note">Local note: one of the best &quot;old Florida&quot; afternoons in town exists because somebody donated their backyard.</p>
+  </div>
+</section>
+
+<section class="scene story" id="history-tinker-field">
+  <div class="ghost" aria-hidden="true">25</div>
+  <div class="scene-inner">
+    <p class="kicker">Flashbacks · B-Sides</p>
+    <h2 class="story-title">What happened at Tinker Field?</h2>
+    <p class="body-p">A lot more than baseball. The stadium at 287 S. Tampa Ave hosted spring training from 1923 to 1990, the Reds, the Brooklyn Dodgers, the Senators/Twins, and the day after watching a Negro League game there, sportswriter Shirley Povich published the first national call for baseball&#x27;s integration in 1939.</p><p class="body-p">Dr. Martin Luther King Jr. gave his only Central Florida public speech there on March 6, 1964. The grandstands came down in 2015; the site is now the Tinker Field History Plaza.</p><p class="note">Local note: a vanished ballpark that quietly sits at the center of two civil-rights milestones.</p>
+  </div>
+</section>
+
+<section class="scene story" id="history-osceola">
+  <div class="ghost" aria-hidden="true">26</div>
+  <div class="scene-inner">
+    <p class="kicker">Flashbacks · B-Sides</p>
+    <h2 class="story-title">What does &quot;Osceola&quot; actually mean?</h2>
+    <p class="body-p">It&#x27;s an Anglicized version of &quot;Asi-yaholo&quot;, roughly &quot;Black Drink Crier.&quot; The black drink was a ceremonial tea brewed from yaupon holly by Seminoles and earlier peoples, and it was an honor to be the one who called the ceremony.</p><p class="body-p">The Spanish called the tea cassina. Yaupon holly is the only caffeinated plant native to North America. It was revived commercially in Florida in 2012 after more than a century.</p><p class="note">Local note: the county next door is named after a guy whose title was basically &quot;tea announcer.&quot;</p>
+  </div>
+</section>
+
+<section class="scene story" id="history-winter-garden-railroad">
+  <div class="ghost" aria-hidden="true">27</div>
+  <div class="scene-inner">
+    <p class="kicker">Flashbacks · B-Sides</p>
+    <h2 class="story-title">Why did Winter Garden&#x27;s little railroad have so many nicknames?</h2>
+    <p class="body-p">The Tavares &amp; Gulf was famous for derailing. Local lore says a train once took a week to go from Tavares to Ocoee and back, earning it names like the Turtle and Gopher, the Try and Go, and the favorite: the Tug and Grunt.</p><p class="body-p">But the tiny line was no joke: in 1949 it generated more perishable freight per mile than any Class 1 railroad in America, hauling citrus out of Winter Garden on cars cooled with blocks of ice. Its 1913 depot, built of Florida sand brick for $1,765, now houses the Central Florida Railroad Museum.</p><p class="note">Local note: $1,765 for a depot. Try that on today&#x27;s construction costs.</p>
+  </div>
+</section>
+
+<section class="scene story" id="history-sanford-celery">
+  <div class="ghost" aria-hidden="true">28</div>
+  <div class="scene-inner">
+    <p class="kicker">Flashbacks · B-Sides</p>
+    <h2 class="story-title">Why was Sanford called &quot;Celery City&quot;?</h2>
+    <p class="body-p">Because by the early 1900s it was one of the largest vegetable-shipping centers in the United States. Founder Henry S. Sanford bought thousands of acres on Lake Monroe in the 1870s and set out to build the &quot;Gate City of South Florida&quot;, a transportation hub linking the interior to the coast by rail and riverboat.</p><p class="body-p">The South Florida Railroad arrived in 1880, and celery (plus citrus) made Sanford boom. Floods, disease, and freezes knocked it down; it kept getting back up.</p><p class="note">Local note: before Orlando had theme parks, Sanford had celery. Every city has its era.</p>
+  </div>
+</section>
+
+<section class="scene story" id="history-knowles-chapel">
+  <div class="ghost" aria-hidden="true">29</div>
+  <div class="scene-inner">
+    <p class="kicker">Flashbacks · B-Sides</p>
+    <h2 class="story-title">Why does Rollins call its chapel a &quot;white elephant&quot;?</h2>
+    <p class="body-p">Because the college historian does, affectionately. In 1926, Frances Knowles Warren and her sister Mabel Knowles Gage gave Rollins $100,000 in memory of their father, a college founder: $75,000 to build a chapel, $25,000 to maintain it.</p><p class="body-p">President Hamilton Holt hired Ralph Adams Cram, America&#x27;s foremost church architect, designer of Princeton&#x27;s chapel and St. John the Divine, and the final bill hit $250,000 (over $4 million today), dedicated March 29, 1932, in the depths of the Great Depression. Faculty took pay cuts while it went up. Holt built it because students had just voted to end mandatory daily chapel. He wanted religion back at the center of campus life. It didn&#x27;t quite work, but the building is Cram&#x27;s &quot;Renaissance masterwork&quot; and sits on the National Register.</p><p class="note">Local note: a quarter-million Depression dollars to win an argument with the student body. The building won; the argument didn&#x27;t.</p><p class="source"><a href="https://blogs.rollins.edu/libraryarchives/2020/01/15/knowles-memorial-chapel-hamilton-holts-gift-to-rollins-college/" target="_blank" rel="noopener">Source: Rollins College Archives ↗</a></p>
+  </div>
+</section>
+
+<section class="scene story" id="history-annie-russell-theatre">
+  <div class="ghost" aria-hidden="true">30</div>
+  <div class="scene-inner">
+    <p class="kicker">Flashbacks · B-Sides</p>
+    <h2 class="story-title">Why is Rollins&#x27; theater attached to its chapel?</h2>
+    <p class="body-p">President Hamilton Holt read that modern drama was born from Easter Mass services, &quot;a child of the church&quot;, and had an epiphany: put the new theater next to Knowles Chapel with a cloistered garden between them, linked by loggias, so chapel and theater would be &quot;in conversation.&quot;</p><p class="body-p">Both were dedicated the same day, March 29, 1932. The Annie Russell Theatre was designed by Richard Kiehnel; despite &quot;different authorship,&quot; architect Ralph Adams Cram said the buildings formed &quot;one composition.&quot;</p><p class="note">Local note: the chapel and the theater were built as a matched set, prayer and drama, side by side.</p><p class="source"><a href="https://blogs.rollins.edu/libraryarchives/2020/01/15/knowles-memorial-chapel-hamilton-holts-gift-to-rollins-college/" target="_blank" rel="noopener">Source: Rollins College Archives ↗</a></p>
+  </div>
+</section>
+
+<section class="scene story" id="history-never-walked-gates">
+  <div class="ghost" aria-hidden="true">41</div>
+  <div class="scene-inner">
+    <p class="kicker">Flashbacks · B-Sides</p>
+    <h2 class="story-title">He Never Walked Through the Gates</h2>
+    <p class="body-p">Walt Disney died in December 1966, nearly five years before Walt Disney World opened on October 1, 1971. His older brother Roy came out of retirement to finish the project and insisted the resort carry Walt&#x27;s name, so nobody would ever forget whose idea it was. Roy died just weeks after the opening celebration. Neither brother got to enjoy what they built.</p>
+  </div>
+</section>
+
+<section class="scene story" id="history-wizard-changed-everything">
+  <div class="ghost" aria-hidden="true">42</div>
+  <div class="scene-inner">
+    <p class="kicker">Flashbacks · B-Sides</p>
+    <h2 class="story-title">The Wizard Who Changed Everything</h2>
+    <p class="body-p">In 2010, part of Islands of Adventure became Hogsmeade, the first Wizarding World of Harry Potter, opening June 18 to enormous crowds. It was such a hit that four years later Universal tore out the Jaws ride and replaced it with Diagon Alley, complete with a Hogwarts Express train connecting the two parks. The boy wizard turned Universal from Disney&#x27;s scrappy rival into a destination in its own right.</p>
+  </div>
+</section>
+
+<section class="scene story" id="history-first-water-park">
+  <div class="ghost" aria-hidden="true">43</div>
+  <div class="scene-inner">
+    <p class="kicker">Flashbacks · B-Sides</p>
+    <h2 class="story-title">The World&#x27;s First True Water Park</h2>
+    <p class="body-p">In 1977, SeaWorld founder George Millay opened Wet &#x27;n Wild on International Drive, the first place to put water slides, a wave pool, and splash areas together in a single park. Universal bought it in 1998, and it closed on New Year&#x27;s Eve 2016 after nearly 40 years. Its replacement, Volcano Bay, opened up the street in 2017.</p>
+  </div>
+</section>
+
+<section class="scene story" id="history-convention-center-tax">
+  <div class="ghost" aria-hidden="true">44</div>
+  <div class="scene-inner">
+    <p class="kicker">Flashbacks · B-Sides</p>
+    <h2 class="story-title">The Convention Center Tourists Paid For</h2>
+    <p class="body-p">The Orange County Convention Center opened in February 1983, with the Boston Pops playing its grand opening. It was funded by a 2% tax on hotel rooms that county voters approved in 1978. Visitors literally paid for the building. Today it&#x27;s the second-largest convention center in the country, with more than 110 hotels within three miles of it.</p>
+  </div>
+</section>
+
+<section class="scene story" id="history-groves-to-restaurant-row">
+  <div class="ghost" aria-hidden="true">45</div>
+  <div class="scene-inner">
+    <p class="kicker">Flashbacks · B-Sides</p>
+    <h2 class="story-title">From Groves to Restaurant Row</h2>
+    <p class="body-p">As late as the 1960s, southwest Orlando was still orange groves: Phillips&#x27;s land stretched from Conroy Road down through the Sand Lake chain of lakes. When Disney&#x27;s arrival was announced, the development plans were redrawn, and in 1969 Dr. Phillips became Orange County&#x27;s first master-planned community. The groves gave way to subdivisions, and Sand Lake Road became Restaurant Row, one of the city&#x27;s best dining streets.</p>
+  </div>
+</section>
+
+<section class="scene story" id="history-factory-before-fantasy">
+  <div class="ghost" aria-hidden="true">46</div>
+  <div class="scene-inner">
+    <p class="kicker">Flashbacks · B-Sides</p>
+    <h2 class="story-title">1957: The Factory Before the Fantasy</h2>
+    <p class="body-p">The Martin Company opened its Orlando plant in 1957, fourteen years before Disney, to support the rocket launch site at Cape Canaveral. The campus eventually sprawled across 7,300 acres of south Orlando; over the decades most of it was sold off to developers, which is why so much of southwest Orlando looks the way it does. Lockheed and Martin Marietta merged in 1995, and Orlando remains one of Lockheed Martin&#x27;s major missile and fire-control sites.</p>
+  </div>
+</section>
+
+<section class="scene tier-divider">
+  <div class="scene-inner">
+    <p class="kicker">Flashbacks</p>
+    <h2 class="tier-name">CRATE DIGGERS</h2>
+    <div class="tier-rule"></div>
+  </div>
+</section>
+
+<section class="scene story" id="history-mosquito-county">
+  <div class="ghost" aria-hidden="true">31</div>
+  <div class="scene-inner">
+    <p class="kicker">Flashbacks · Crate Diggers</p>
+    <h2 class="story-title">Why was Orange County called Mosquito County?</h2>
+    <p class="body-p">Because it literally was. When the county was formed in December 1824, it was named Mosquito County after the Spanish name for the region&#x27;s waterways, and it kept the name for 20 years, making it the only Florida county ever named after an insect.</p><p class="body-p">Locals hated it. It almost became Leigh Read County (for a legislator killed in a duel, after he&#x27;d killed a man in a duel) and then Harrison County, before the legislature settled on Orange County in January 1845, named for the fruit that was taking over the region.</p><p class="note">Local note: Orange County ran on mosquito branding for two decades. The rebrand worked.</p>
+  </div>
+</section>
+
+<section class="scene story" id="history-fort-gatlin">
+  <div class="ghost" aria-hidden="true">32</div>
+  <div class="scene-inner">
+    <p class="kicker">Flashbacks · Crate Diggers</p>
+    <h2 class="story-title">Where was Fort Gatlin?</h2>
+    <p class="body-p">Right around where Gatlin and Summerlin avenues meet today, near present-day Edgewood. The U.S. Army built it in 1838 during the Second Seminole War, and a small settlement grew up around it.</p><p class="body-p">By 1840 that settlement had a name: Jernigan, after the first family to settle there permanently. It kept that name until the town renamed itself Orlando and the post office adopted it in 1857.</p><p class="note">Local note: you&#x27;re driving through a place that used to be a fort, then Jernigan, then Orlando. Third name&#x27;s the charm.</p>
+  </div>
+</section>
+
+<section class="scene story" id="history-orange-citrus">
+  <div class="ghost" aria-hidden="true">33</div>
+  <div class="scene-inner">
+    <p class="kicker">Flashbacks · Crate Diggers</p>
+    <h2 class="story-title">How much citrus did Orange County actually grow?</h2>
+    <p class="body-p">At its peak in the early 1970s, roughly 80,000 acres, the crop that gave the county its name when &quot;Mosquito&quot; was retired in 1845.</p><p class="body-p">Before the 1894-95 Great Freeze, Florida produced up to 6 million boxes of fruit a year; the freeze knocked it to 100,000. The industry rebuilt under the &quot;Citrus Barons,&quot; then the freezes of the 1980s pushed most groves south, ending the era.</p><p class="note">Local note: the county is named for an industry that barely exists here anymore.</p>
+  </div>
+</section>
+
+<section class="scene story" id="history-apopka">
+  <div class="ghost" aria-hidden="true">34</div>
+  <div class="scene-inner">
+    <p class="kicker">Flashbacks · Crate Diggers</p>
+    <h2 class="story-title">What does &quot;Apopka&quot; mean?</h2>
+    <p class="body-p">The common reading: from the Seminole Ahapopka, &quot;aha&quot; (potato) plus &quot;papka&quot; (eating place). &quot;Potato-eating place.&quot;</p><p class="body-p">But it&#x27;s disputed: an alternate theory traces it to &quot;tsalopopkohatchee,&quot; or &quot;catfish-eating creek.&quot; Either way it&#x27;s a Seminole food reference hiding on a highway sign. Incorporated in 1882 as &quot;Apopka City,&quot; it later became the &quot;Indoor Foliage Capital of the World&quot; for its greenhouse nurseries.</p><p class="note">Local note: potato or catfish. Either way, dinner.</p>
+  </div>
+</section>
+
+<section class="scene story" id="history-disney-government">
+  <div class="ghost" aria-hidden="true">47</div>
+  <div class="scene-inner">
+    <p class="kicker">Flashbacks · Crate Diggers</p>
+    <h2 class="story-title">A Government of Its Own</h2>
+    <p class="body-p">Disney didn&#x27;t just buy the land. On May 12, 1967, the state granted the company its own government over roughly 25,000 acres, with its own building codes, fire department, utilities, and roads. Two tiny company towns, Bay Lake and Lake Buena Vista, were incorporated inside it. And Walt&#x27;s real dream for the swamp wasn&#x27;t a theme park at all: EPCOT was pitched to lawmakers as a genuine working city of the future. After he died, the company built a theme park with that name instead.</p>
+  </div>
+</section>
+
+<section class="scene story" id="history-last-opening-day-ride">
+  <div class="ghost" aria-hidden="true">48</div>
+  <div class="scene-inner">
+    <p class="kicker">Flashbacks · Crate Diggers</p>
+    <h2 class="story-title">The Last Ride From Day One</h2>
+    <p class="body-p">Of everything that opened with Universal Studios Florida in 1990, exactly one ride is still running: E.T. Adventure. Kongfrontation, Jaws, Back to the Future. All gone. If you ride the bicycles past the moon, you&#x27;re on the oldest attraction in the park.</p>
+  </div>
+</section>
+
+<section class="scene story" id="history-cypress-gardens-legoland">
+  <div class="ghost" aria-hidden="true">49</div>
+  <div class="scene-inner">
+    <p class="kicker">Flashbacks · Crate Diggers</p>
+    <h2 class="story-title">The Flower Garden Under LEGOLAND</h2>
+    <p class="body-p">In 1936, showman Dick Pope opened Cypress Gardens in Winter Haven, 25 cents to stroll flowers on Lake Eloise, with water-ski shows, human pyramids, and Southern Belles. It ran for over 70 years before closing in 2009. LEGOLAND Florida opened on the same ground in 2011 and kept the original botanical gardens, so you can still walk Pope&#x27;s paths under the old cypress trees.</p>
+  </div>
+</section>
+
+<section class="scene story" id="history-irlo-bronson">
+  <div class="ghost" aria-hidden="true">50</div>
+  <div class="scene-inner">
+    <p class="kicker">Flashbacks · Crate Diggers</p>
+    <h2 class="story-title">Who was Irlo Bronson?</h2>
+    <p class="body-p">The road signs say Irlo Bronson Memorial Highway, but around here the road is just 192, the strip that runs past the Disney gates through Kissimmee. Irlo Bronson was an Osceola County cattleman who founded the Florida Cattlemen&#x27;s Association and served as its president, then sat in the Florida House and Senate. When Walt Disney&#x27;s buyers came quietly shopping for ranch land in the 1960s, Bronson sold without hesitation at about $100 an acre, figuring the project would give local kids a future worth staying for. He died in 1973, and the state put his name on the road his land sale helped fill with travelers.</p>
+  </div>
+</section>
+      <section class="scene outro">
+        <div class="scene-inner">
+          <p class="big">Every street here has a first draft.</p>
+          <a class="backlink" href="/archive.html#flashbacks">Back to the Flashbacks index</a>
+        </div>
+      </section>
+    </main>
+    <footer><span>407 FYI</span><span>ORLANDO LIKE A LOCAL</span></footer>
+    <script src="/assets/gsap.min.js"></script>
+    <script src="/assets/ScrollTrigger.min.js"></script>
+    <script src="/assets/lenis.min.js"></script>
+    <script>
+    (function(){
+      try{
+        var cv=document.getElementById('gl'), gl=cv.getContext('webgl',{antialias:false});
+        if(!gl) throw 0;
+        var vs='attribute vec2 p;void main(){gl_Position=vec4(p,0.,1.);}';
+        var fs=['precision mediump float;','uniform vec2 R;uniform float T;',
+        'float h(vec2 q){return fract(sin(dot(q,vec2(127.1,311.7)))*43758.5453);}',
+        'float n(vec2 q){vec2 i=floor(q),f=fract(q);f=f*f*(3.-2.*f);',
+        'return mix(mix(h(i),h(i+vec2(1,0)),f.x),mix(h(i+vec2(0,1)),h(i+vec2(1,1)),f.x),f.y);}',
+        'float fbm(vec2 q){float v=0.,a=.5;for(int i=0;i<4;i++){v+=a*n(q);q*=2.03;a*=.5;}return v;}',
+        'void main(){vec2 uv=gl_FragCoord.xy/R;vec2 q=uv*vec2(R.x/R.y,1.);',
+        'float t=T*0.016;',
+        'float m=fbm(q*1.6+vec2(t*0.7,t*0.22));',
+        'vec3 base=mix(vec3(0.030,0.055,0.043),vec3(0.066,0.098,0.075),m);',
+        'vec2 g1=vec2(0.5+0.22*sin(t*0.6),0.92+0.05*cos(t*0.4));',
+        'float d1=distance(q*vec2(1.,1.35),g1*vec2(1.,1.35));',
+        'base+=vec3(0.30,0.21,0.10)*pow(max(0.,1.-d1),3.0)*0.55;',
+        'vec2 g2=vec2(0.16+0.10*sin(t*0.35+2.1),0.10+0.04*sin(t*0.5));',
+        'float d2=distance(q,g2);',
+        'base+=vec3(0.16,0.11,0.045)*pow(max(0.,1.-d2),2.4)*0.5;',
+        'float gr=h(gl_FragCoord.xy+fract(T)*371.)*0.028;',
+        'gl_FragColor=vec4(base+gr,1.);}'].join('');
+        function sh(tp,src){var s=gl.createShader(tp);gl.shaderSource(s,src);gl.compileShader(s);return s;}
+        var pr=gl.createProgram();
+        gl.attachShader(pr,sh(gl.VERTEX_SHADER,vs)); gl.attachShader(pr,sh(gl.FRAGMENT_SHADER,fs));
+        gl.linkProgram(pr); gl.useProgram(pr);
+        var buf=gl.createBuffer(); gl.bindBuffer(gl.ARRAY_BUFFER,buf);
+        gl.bufferData(gl.ARRAY_BUFFER,new Float32Array([-1,-1,3,-1,-1,3]),gl.STATIC_DRAW);
+        var loc=gl.getAttribLocation(pr,'p'); gl.enableVertexAttribArray(loc); gl.vertexAttribPointer(loc,2,gl.FLOAT,false,0,0);
+        var uR=gl.getUniformLocation(pr,'R'), uT=gl.getUniformLocation(pr,'T');
+        function size(){var d=Math.min(window.devicePixelRatio||1,1.5);cv.width=innerWidth*d;cv.height=innerHeight*d;gl.viewport(0,0,cv.width,cv.height);}
+        size(); addEventListener('resize',size);
+        (function loop(ms){gl.uniform2f(uR,cv.width,cv.height);gl.uniform1f(uT,ms/1000);gl.drawArrays(gl.TRIANGLES,0,3);requestAnimationFrame(loop);})(0);
+      }catch(e){ document.getElementById('gl').style.display='none'; }
+      var reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if(window.gsap && window.ScrollTrigger && !reduced){
+        gsap.registerPlugin(ScrollTrigger);
+        var lenis = null;
+        if(window.Lenis){
+          lenis=new Lenis({duration:1.15,smoothWheel:true});
+          lenis.on('scroll',ScrollTrigger.update);
+          gsap.ticker.add(function(t){lenis.raf(t*1000);});
+          gsap.ticker.lagSmoothing(0);
+        }
+        gsap.to('#progress',{scaleX:1,ease:'none',scrollTrigger:{start:0,end:'max',scrub:0.3}});
+        document.querySelectorAll('.story .scene-inner > *, .tier-divider .scene-inner > *').forEach(function(el){
+          gsap.from(el,{y:44,opacity:0,duration:1.05,ease:'power3.out',
+            scrollTrigger:{trigger:el,start:'top 86%'}});
+        });
+        document.querySelectorAll('.ghost').forEach(function(el){
+          gsap.fromTo(el,{yPercent:14},{yPercent:-10,ease:'none',
+            scrollTrigger:{trigger:el.parentElement,start:'top bottom',end:'bottom top',scrub:true}});
+        });
+        gsap.from('.intro .scene-inner > *',{y:36,opacity:0,duration:1.1,stagger:0.12,ease:'power3.out',delay:0.15});
+        gsap.from('.outro .scene-inner > *',{y:36,opacity:0,duration:1.0,stagger:0.14,ease:'power3.out',
+          scrollTrigger:{trigger:'.outro',start:'top 70%'}});
+        if(location.hash){
+          var target=document.querySelector(location.hash);
+          if(target){
+            setTimeout(function(){
+              if(lenis){ lenis.scrollTo(target,{immediate:true}); }
+              else{ target.scrollIntoView(); }
+              ScrollTrigger.refresh();
+            },60);
+          }
+        }
+      }
+    })();
+    </script>
+  </body>
+</html>
