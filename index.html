@@ -872,6 +872,8 @@ fetch('places.json?v=20261017p1').then(r=>{if(!r.ok)throw new Error('places.json
 .fyi-chat-close{margin-left:auto;background:none;border:0;color:var(--muted,#c6bba2);font-size:20px;cursor:pointer;line-height:1;padding:2px 4px}
 .fyi-chat-msgs{flex:1;overflow-y:auto;padding:14px 14px 6px;display:flex;flex-direction:column;gap:10px}
 .fyi-chat-msg{max-width:88%;padding:9px 12px;border-radius:12px;font-size:14px;line-height:1.45;white-space:normal;overflow-wrap:break-word}
+.fyi-chat-msg p{margin:0 0 9px}
+.fyi-chat-msg p:last-child{margin-bottom:0}
 .fyi-chat-msg.bot{align-self:flex-start;background:var(--soft,#172a1f);color:var(--ink,#f0e8d5);border-bottom-left-radius:4px}
 .fyi-chat-msg.user{align-self:flex-end;background:var(--badge,#223c2b);color:var(--ink,#f0e8d5);border-bottom-right-radius:4px}
 .fyi-chat-msg.thinking{color:var(--muted,#c6bba2);font-style:italic}
@@ -931,11 +933,11 @@ fetch('places.json?v=20261017p1').then(r=>{if(!r.ok)throw new Error('places.json
   } catch (e) { visitor = 'anon'; }
   const track = (name) => { try { if (window.captureEvent) captureEvent(name, {}); else if (window.posthog) posthog.capture(name); } catch (e) {} };
   const esc = (s) => s.replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
-  const fmt = (s) => esc(s)
+  const fmt = (s) => s.split(/\n\s*\n/).map((para) => '<p>' + esc(para)
     .replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>')
     .replace(/^\s*[-*]\s+/gm, '• ')
     .replace(/mail@407\.fyi/g, '<a href="mailto:mail@407.fyi" style="color:var(--fyi-accent)">mail@407.fyi</a>')
-    .replace(/\n/g, '<br>');
+    .replace(/\n/g, '<br>') + '</p>').join('');
   function addMsg(cls, text) {
     const d = document.createElement('div');
     d.className = 'fyi-chat-msg ' + cls;
