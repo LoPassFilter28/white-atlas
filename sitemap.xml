@@ -117,6 +117,21 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://407.fyi/i-drive-convention-guide.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://407.fyi/downtown-date-night-guide.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://407.fyi/winter-park-family-guide.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://407.fyi/winter-park-finder.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>

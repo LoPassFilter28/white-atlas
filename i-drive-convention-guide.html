@@ -1,0 +1,457 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="color-scheme" content="light dark" />
+    <title>International Drive Convention Guide · 407 FYI</title>
+    <meta name="description" content="The 407 FYI convention guide to International Drive: the convention center hotels on their skywalks, Pointe Orlando group dinners, Restaurant Row client steakhouses, and every convention pick on the corridor." />
+    <link rel="canonical" href="https://407.fyi/i-drive-convention-guide.html" />
+    <meta property="og:title" content="International Drive Convention Guide · 407 FYI" />
+    <meta property="og:description" content="Convention center hotels, Pointe Orlando group dinners, and Restaurant Row client steakhouses: every convention pick on International Drive." />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://407.fyi/i-drive-convention-guide.html" />
+    <meta property="og:image" content="https://407.fyi/og-image.png" />
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="preload" href="/fonts/manrope-latin.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="/fonts/fonts.css" />
+<script>
+      try {
+        const savedTheme = localStorage.getItem('white-atlas-theme');
+        document.documentElement.dataset.theme = savedTheme === 'light' || savedTheme === 'dark' ? savedTheme : 'dark';
+      } catch (error) {
+        document.documentElement.dataset.theme = 'dark';
+      }
+    </script>
+    <style>
+      /* Night Drive tokens (from the district guides) */
+      :root {
+        color-scheme: dark;
+        --bg: #0a1811; --surface: #122419; --soft: #172a1f; --ink: #f0e8d5;
+        --muted: #c6bba2; --line: #2f4a38; --accent: #765b2f; --accent-ink: #d4b573;
+        --headline: #f6edd6; --focus: #d4b573;
+        --d-a: #14231a; --d-b: #3a5a35; --d-c: #bd9049;
+        --pad: clamp(20px, 5vw, 40px);
+      }
+      * { box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
+      body {
+        margin: 0; background: var(--bg); color: var(--ink);
+        font-family: "Manrope", system-ui, sans-serif; line-height: 1.6;
+        overflow-x: hidden;
+      }
+      h1, h2, h3, .display { font-family: "Urbanist", "Manrope", sans-serif; }
+      a { color: var(--accent-ink); }
+      a:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
+      .kicker {
+        font-family: "Urbanist", sans-serif; font-weight: 700; letter-spacing: .22em;
+        font-size: .72rem; text-transform: uppercase; color: var(--accent-ink); margin: 0 0 14px;
+      }
+
+      /* ---------- hero ---------- */
+      .hero {
+        position: relative; padding: clamp(64px, 13vh, 130px) var(--pad) clamp(48px, 9vh, 84px);
+        background: radial-gradient(ellipse 90% 55% at 50% 112%, rgba(189,144,73,.26), transparent 60%),
+          linear-gradient(168deg, #1d3325, #14231a 55%, #0a1811);
+        border-bottom: 1px solid var(--line);
+      }
+      .hero-in { max-width: 860px; margin: 0 auto; }
+      .crumbs { font-size: .8rem; color: var(--muted); margin: 0 0 26px; }
+      .crumbs a { font-weight: 700; }
+      .hero-brand {
+        font-family: "Urbanist", sans-serif; font-weight: 700; letter-spacing: .22em;
+        font-size: .72rem; text-transform: uppercase; color: var(--accent-ink); text-decoration: none;
+      }
+      .hero h1 {
+        font-size: clamp(2.6rem, 8.5vw, 5.2rem); line-height: .98; letter-spacing: .01em;
+        color: var(--headline); margin: 18px 0 16px; text-transform: uppercase;
+      }
+      .hero .sub { font-size: clamp(1.05rem, 2.6vw, 1.3rem); color: var(--ink); max-width: 620px; margin: 0 0 10px; }
+      .hero .fine { color: var(--muted); max-width: 620px; margin: 0; }
+      .anchor-nav { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 30px; }
+      .anchor-nav a {
+        border: 1px solid var(--line); border-radius: 999px; padding: 8px 14px;
+        font-size: .82rem; font-weight: 700; text-decoration: none; background: rgba(255,255,255,.03);
+        min-height: 42px; display: inline-flex; align-items: center;
+      }
+      .anchor-nav a:hover { border-color: var(--accent-ink); }
+
+      /* ---------- sections ---------- */
+      main { display: block; }
+      .sec { max-width: 860px; margin: 0 auto; padding: clamp(52px, 9vh, 88px) var(--pad) 0; }
+      .sec h2 { font-size: clamp(1.7rem, 4.6vw, 2.4rem); line-height: 1.12; color: var(--headline); margin: 0 0 16px; }
+      .sec .lede { color: var(--muted); font-size: 1.04rem; max-width: 640px; margin: 0 0 26px; }
+      .sec p { max-width: 68ch; }
+      .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 14px; margin: 22px 0 6px; }
+      .card {
+        background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 20px;
+      }
+      .card h3 { margin: 0 0 6px; font-size: 1.12rem; color: var(--headline); }
+      .card .addr { font-weight: 800; color: var(--accent-ink); margin: 0 0 10px; font-size: .98rem; }
+      .card p { margin: 0; color: var(--muted); font-size: .94rem; }
+      .cols { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 22px 0 6px; }
+      @media (max-width: 680px) { .cols { grid-template-columns: 1fr; } }
+      .panel { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 20px 22px; }
+      .panel h3 { margin: 0 0 12px; font-size: 1.05rem; color: var(--headline); }
+      .panel ul, .plain-list { margin: 0; padding-left: 18px; }
+      .panel li, .plain-list li { margin-bottom: 9px; }
+      .panel li:last-child, .plain-list li:last-child { margin-bottom: 0; }
+      .note {
+        border-left: 3px solid var(--accent-ink); background: var(--soft);
+        padding: 14px 18px; border-radius: 0 12px 12px 0; margin: 22px 0 6px; max-width: 68ch;
+      }
+      .note p { margin: 0; }
+      .venue-links { list-style: none; margin: 0; padding: 0; }
+      .venue-links li { margin-bottom: 10px; }
+      .venue-links a { font-weight: 800; text-underline-offset: 3px; }
+      .venue-links span { color: var(--muted); }
+
+      /* ---------- jobs ---------- */
+      .job-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 14px; margin-top: 22px; }
+      .job { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 20px 22px; }
+      .job h3 { margin: 0 0 6px; font-size: 1.08rem; color: var(--headline); }
+      .job p { margin: 0 0 12px; color: var(--muted); font-size: .94rem; }
+      .job ul { list-style: none; margin: 0 0 14px; padding: 0; }
+      .job li { margin-bottom: 7px; }
+      .job li a { font-weight: 800; text-underline-offset: 3px; }
+      .job .browse { font-size: .86rem; font-weight: 800; text-transform: uppercase; letter-spacing: .08em; }
+
+      /* ---------- what to avoid ---------- */
+      .avoid { border-top: 1px solid var(--line); padding: 24px 0 6px; }
+      .avoid h3 { margin: 0 0 10px; font-size: 1.18rem; color: var(--headline); }
+      .avoid p { margin: 0 0 8px; max-width: 68ch; }
+      .avoid strong { color: var(--accent-ink); }
+      .flags { display: flex; flex-wrap: wrap; gap: 8px; margin: 18px 0 6px; }
+      .flags span {
+        border: 1px solid var(--accent); border-radius: 999px; padding: 7px 13px;
+        font-size: .85rem; font-weight: 700; color: var(--accent-ink); background: rgba(255,255,255,.03);
+      }
+      .rules { margin: 16px 0 0; padding-left: 20px; max-width: 68ch; }
+      .rules li { margin-bottom: 10px; }
+
+      .handoff { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 30px; }
+      .btn-big {
+        display: inline-flex; align-items: center; min-height: 52px; padding: 12px 22px;
+        background: var(--accent); color: #fff; font-weight: 800; border-radius: 999px; text-decoration: none;
+      }
+      .btn-big:hover { background: var(--accent-ink); color: #1d2a20; }
+      .btn-ghost {
+        display: inline-flex; align-items: center; min-height: 52px; padding: 12px 22px;
+        border: 1px solid var(--line); color: var(--accent-ink); font-weight: 800; border-radius: 999px; text-decoration: none;
+      }
+
+      footer { border-top: 1px solid var(--line); margin-top: clamp(52px, 9vh, 88px); }
+      .foot-in { max-width: 860px; margin: 0 auto; padding: 34px var(--pad) 44px; color: var(--muted); font-size: .9rem; }
+      .foot-in p { margin: 0 0 9px; }
+      .back-link { font-weight: 800; display: inline-block; margin-bottom: 16px; }
+      .brand-line { color: var(--ink); font-weight: 700; }
+
+      /* ---------- Light theme: app-page tokens ---------- */
+      html[data-theme="light"] {
+        color-scheme: light;
+        --bg: #faf6ec; --surface: #fffdf7; --soft: #f3ecd7; --ink: #1d2a20;
+        --muted: #4c5a45; --line: #ddd3ba; --accent: #8a5f0e; --accent-ink: #7c520c;
+        --headline: #123524; --focus: #8a5f0e;
+      }
+      html[data-theme="light"] .hero {
+        background: radial-gradient(ellipse 90% 55% at 50% 112%, rgba(163,129,63,.30), transparent 60%),
+          linear-gradient(168deg, color-mix(in srgb, var(--d-a) 24%, #faf6ec), color-mix(in srgb, var(--d-a) 40%, #faf6ec) 55%, color-mix(in srgb, var(--d-a) 14%, #faf6ec));
+      }
+      html[data-theme="light"] .anchor-nav a, html[data-theme="light"] .flags span { background: rgba(29,42,32,.04); }
+      html[data-theme="light"] .btn-big { background: var(--accent); color: #fff; }
+      html[data-theme="light"] .btn-big:hover { background: var(--accent-ink); color: #fff; }
+
+
+      /* ---------- picks (scenario grid) ---------- */
+      .pick h3 a { color: var(--headline); text-decoration: none; }
+      .pick h3 a:hover { color: var(--accent-ink); text-decoration: underline; text-underline-offset: 3px; }
+      .card .meta { font-weight: 800; color: var(--accent-ink); margin: 0 0 8px; font-size: .9rem; }
+      @media print { .anchor-nav { display: none; } }
+      @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+        </style>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"ItemList","name":"407 FYI places: International Drive Convention","numberOfItems":40,"itemListElement":[{"@type":"ListItem","position":1,"item":{"@type":"LocalBusiness","name":"American Social","address":{"@type":"PostalAddress","streetAddress":"7335 W Sand Lake Rd Ste 101, Orlando, FL 32819","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":28.445,"longitude":-81.48},"priceRange":"$$","category":"American","url":"https://407.fyi/venue/american-social.html"}},{"@type":"ListItem","position":2,"item":{"@type":"LocalBusiness","name":"Blue Man Group","address":{"@type":"PostalAddress","streetAddress":"Blue Man Theater at ICON Park, 8390 Universal Blvd, Orlando, FL 32819","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":28.4432,"longitude":-81.4687},"priceRange":"$$$","category":"Attractions","url":"https://407.fyi/venue/blue-man-group.html"}},{"@type":"ListItem","position":3,"item":{"@type":"LocalBusiness","name":"Chathams Place","address":{"@type":"PostalAddress","streetAddress":"Chatham's Place, 7575 Dr Phillips Blvd, Orlando, FL 32819-5149","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":28.44,"longitude":-81.48},"priceRange":"$$$$","category":"Fine dining & steak","url":"https://407.fyi/venue/chathams.html"}},{"@type":"ListItem","position":4,"item":{"@type":"LocalBusiness","name":"Mango's Tropical Cafe","address":{"@type":"PostalAddress","streetAddress":"Mango's Tropical Cafe, 8126 International Dr, Orlando, FL 32819-9323","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":28.448,"longitude":-81.471},"priceRange":"$$$","category":"Latin & Caribbean","url":"https://407.fyi/venue/mangos.html"}},{"@type":"ListItem","position":5,"item":{"@type":"LocalBusiness","name":"Mosonori","address":{"@type":"PostalAddress","streetAddress":"Mosonori, 7541 W Sand Lake Rd, Orlando, FL 32819-5109","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":28.45,"longitude":-81.47},"priceRange":"$$","category":"Japanese & sushi","url":"https://407.fyi/venue/mosonori.html"}},{"@type":"ListItem","position":6,"item":{"@type":"LocalBusiness","name":"Nile Ethiopian","address":{"@type":"PostalAddress","streetAddress":"Nile Ethiopian, 7048 International Dr, Orlando, FL 32819-8222","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":28.45,"longitude":-81.47},"priceRange":"$$","category":"Restaurants","url":"https://407.fyi/venue/nile-ethiopian.html"}},{"@type":"ListItem","position":7,"item":{"@type":"LocalBusiness","name":"Nomikai by Sushi Saint","address":{"@type":"PostalAddress","streetAddress":"8371 International Dr Ste 60, Orlando, FL 32819","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":28.4432,"longitude":-81.4687},"priceRange":"$$$","category":"Japanese & sushi","url":"https://407.fyi/venue/nomikai.html"}},{"@type":"ListItem","position":8,"item":{"@type":"LocalBusiness","name":"Still Lounge by Dre and Snoop","address":{"@type":"PostalAddress","streetAddress":"9101 International Dr, Orlando, FL 32819","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":28.43299,"longitude":-81.47087},"priceRange":"$$$","category":"Bars & lounges","url":"https://407.fyi/venue/still-lounge.html"}},{"@type":"ListItem","position":9,"item":{"@type":"LocalBusiness","name":"Taverna Opa","address":{"@type":"PostalAddress","streetAddress":"9101 International Dr, Orlando, FL 32819","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":28.435,"longitude":-81.472},"priceRange":"$$","category":"Mediterranean","url":"https://407.fyi/venue/taverna-opa.html"}},{"@type":"ListItem","position":10,"item":{"@type":"LocalBusiness","name":"Taffer's Tavern","address":{"@type":"PostalAddress","streetAddress":"Pointe Orlando, 9101 International Dr, Orlando, FL 32819","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":28.43299,"longitude":-81.47087},"priceRange":"$$","category":"American","url":"https://407.fyi/venue/taffers-tavern.html"}},{"@type":"ListItem","position":11,"item":{"@type":"LocalBusiness","name":"Baires Grill","address":{"@type":"PostalAddress","streetAddress":"8050 International Dr, Orlando, FL 32819","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":28.448792,"longitude":-81.471753},"priceRange":"$$","category":"Latin & Caribbean","url":"https://407.fyi/venue/baires-grill-orlando.html"}},{"@type":"ListItem","position":12,"item":{"@type":"LocalBusiness","name":"Tom's Watch Bar","address":{"@type":"PostalAddress","streetAddress":"8050 International Dr, Suite 1000, Orlando, FL 32819","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":28.448788,"longitude":-81.47128},"priceRange":"$$","category":"Bars & lounges","url":"https://407.fyi/venue/toms-watch-bar-orlando.html"}},{"@type":"ListItem","position":13,"item":{"@type":"LocalBusiness","name":"Rocco's Tacos & Tequila Bar","address":{"@type":"PostalAddress","streetAddress":"7468 W Sand Lake Rd, Orlando, FL 32819","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":28.44904,"longitude":-81.48433},"priceRange":"$$","category":"Mexican","url":"https://407.fyi/venue/rocco-s-tacos-tequila-bar.html"}},{"@type":"ListItem","position":14,"item":{"@type":"LocalBusiness","name":"Shake Shack I-Drive","address":{"@type":"PostalAddress","streetAddress":"8359 International Dr, Orlando, FL 32819","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":28.44385,"longitude":-81.47017},"priceRange":"$","category":"Burgers & sandwiches","url":"https://407.fyi/venue/shake-shack-i-drive.html"}},{"@type":"ListItem","position":15,"item":{"@type":"LocalBusiness","name":"Kobe Japanese Steakhouse","address":{"@type":"PostalAddress","streetAddress":"8148 International Dr, Orlando, FL 32819","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":28.44787,"longitude":-81.47155},"priceRange":"$","category":"Japanese & sushi","url":"https://407.fyi/venue/kobe-japanese-steakhouse.html"}},{"@type":"ListItem","position":16,"item":{"@type":"LocalBusiness","name":"Yard House","address":{"@type":"PostalAddress","streetAddress":"8367 International Dr, Orlando, FL 32819","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":28.44355,"longitude":-81.46992},"priceRange":"$","category":"American","url":"https://407.fyi/venue/yard-house.html"}},{"@type":"ListItem","position":17,"item":{"@type":"LocalBusiness","name":"Kavas Tacos & Tequila","address":{"@type":"PostalAddress","streetAddress":"9101 International Dr Ste 1198, Orlando, FL 32819","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":28.43299,"longitude":-81.47087},"priceRange":"$$","category":"Mexican","url":"https://407.fyi/venue/kavas-tacos-tequila.html"}},{"@type":"ListItem","position":18,"item":{"@type":"LocalBusiness","name":"Oza Izakaya","address":{"@type":"PostalAddress","streetAddress":"Oza Izakaya, 5310 Central Florida Pkwy, Orlando, FL 32821-8772","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":28.4074,"longitude":-81.44725},"priceRange":"$$","category":"Japanese & sushi","url":"https://407.fyi/venue/oza-izakaya.html"}},{"@type":"ListItem","position":19,"item":{"@type":"LocalBusiness","name":"YH Seafood Clubhouse","address":{"@type":"PostalAddress","streetAddress":"YH Seafood Clubhouse, 8081 Turkey Lake Rd, Orlando, FL 32819-7321, United States","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":28.44727,"longitude":-81.47565},"priceRange":"$$","category":"Chinese","url":"https://407.fyi/venue/yh-seafood-clubhouse.html"}},{"@type":"ListItem","position":20,"item":{"@type":"LocalBusiness","name":"Divina Carne","address":{"@type":"PostalAddress","streetAddress":"6424 Carrier Dr, Orlando, FL 32819","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":28.45565,"longitude":-81.46905},"priceRange":"$$","category":"Latin & Caribbean","url":"https://407.fyi/venue/divina-carne.html"}},{"@type":"ListItem","position":21,"item":{"@type":"LocalBusiness","name":"Café Tu Tu Tango","address":{"@type":"PostalAddress","streetAddress":"8625 International Dr, Orlando, FL 32819","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":28.44035,"longitude":-81.47002},"priceRange":"$$","category":"Restaurants","url":"https://407.fyi/venue/cafe-tu-tu-tango.html"}},{"@type":"ListItem","position":22,"item":{"@type":"LocalBusiness","name":"Ole Red Orlando","address":{"@type":"PostalAddress","streetAddress":"8417 International Dr, Orlando, FL 32819","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":28.4429,"longitude":-81.4699},"priceRange":"$$","category":"Bars & lounges","url":"https://407.fyi/venue/ole-red-orlando.html"}},{"@type":"ListItem","position":23,"item":{"@type":"LocalBusiness","name":"Helena Modern Riviera","address":{"@type":"PostalAddress","streetAddress":"8441 International Dr, Orlando, FL 32819","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":28.44288,"longitude":-81.46926},"priceRange":"$$$","category":"Mediterranean","url":"https://407.fyi/venue/helena-modern-riviera.html"}},{"@type":"ListItem","position":24,"item":{"@type":"LocalBusiness","name":"The Capital Grille","address":{"@type":"PostalAddress","streetAddress":"9101 International Dr, Orlando, FL 32819","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":28.43299,"longitude":-81.47087},"priceRange":"$$$$","category":"Fine dining & steak","url":"https://407.fyi/venue/the-capital-grille-pointe-orlando.html"}},{"@type":"ListItem","position":25,"item":{"@type":"LocalBusiness","name":"Maggiano's Little Italy","address":{"@type":"PostalAddress","streetAddress":"9101 International Dr, Orlando, FL 32819","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":28.43299,"longitude":-81.47087},"priceRange":"$$","category":"Italian","url":"https://407.fyi/venue/maggiano-s-pointe-orlando.html"}},{"@type":"ListItem","position":26,"item":{"@type":"LocalBusiness","name":"The Hampton Social","address":{"@type":"PostalAddress","streetAddress":"9101 International Dr, Orlando, FL 32819","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":28.43299,"longitude":-81.47087},"priceRange":"$$","category":"American","url":"https://407.fyi/venue/the-hampton-social-pointe-orlando.html"}},{"@type":"ListItem","position":27,"item":{"@type":"LocalBusiness","name":"Cuba Libre","address":{"@type":"PostalAddress","streetAddress":"9101 International Dr #1004, Orlando, FL 32819","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":28.43299,"longitude":-81.47087},"priceRange":"$$","category":"Latin & Caribbean","url":"https://407.fyi/venue/cuba-libre-pointe-orlando.html"}},{"@type":"ListItem","position":28,"item":{"@type":"LocalBusiness","name":"Main Event","address":{"@type":"PostalAddress","streetAddress":"9101 International Dr Ste 1032, Orlando, FL 32819","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":28.43299,"longitude":-81.47087},"priceRange":"$$","category":"Attractions","url":"https://407.fyi/venue/main-event-pointe-orlando.html"}},{"@type":"ListItem","position":29,"item":{"@type":"LocalBusiness","name":"Hyatt Regency Orlando","address":{"@type":"PostalAddress","streetAddress":"9801 International Dr, Orlando, FL 32819","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":28.428,"longitude":-81.46901},"priceRange":"$$$","category":"Hotels","url":"https://407.fyi/venue/hyatt-regency-orlando.html"}},{"@type":"ListItem","position":30,"item":{"@type":"LocalBusiness","name":"Rosen Centre","address":{"@type":"PostalAddress","streetAddress":"9840 International Dr, Orlando, FL 32819","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":28.42205,"longitude":-81.46487},"priceRange":"$$","category":"Hotels","url":"https://407.fyi/venue/rosen-centre.html"}},{"@type":"ListItem","position":31,"item":{"@type":"LocalBusiness","name":"Rosen Plaza","address":{"@type":"PostalAddress","streetAddress":"9700 International Dr, Orlando, FL 32819","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":28.43092,"longitude":-81.47127},"priceRange":"$$","category":"Hotels","url":"https://407.fyi/venue/rosen-plaza.html"}},{"@type":"ListItem","position":32,"item":{"@type":"LocalBusiness","name":"Hilton Orlando","address":{"@type":"PostalAddress","streetAddress":"6001 Destination Pkwy, Orlando, FL 32819","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":28.42484,"longitude":-81.459},"priceRange":"$$$","category":"Hotels","url":"https://407.fyi/venue/hilton-orlando.html"}},{"@type":"ListItem","position":33,"item":{"@type":"LocalBusiness","name":"Norman's Orlando","address":{"@type":"PostalAddress","streetAddress":"7924 Via Dellagio Way, Orlando, FL 32819","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":28.45052,"longitude":-81.49178},"priceRange":"$$$$","category":"Fine dining & steak","url":"https://407.fyi/venue/norman-s-orlando.html"}},{"@type":"ListItem","position":34,"item":{"@type":"LocalBusiness","name":"Dragonfly Robata Grill & Sushi","address":{"@type":"PostalAddress","streetAddress":"7972 Via Dellagio Way, Orlando, FL 32819","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":28.45055,"longitude":-81.49354},"priceRange":"$$$","category":"Japanese & sushi","url":"https://407.fyi/venue/dragonfly-robata-grill-sushi.html"}},{"@type":"ListItem","position":35,"item":{"@type":"LocalBusiness","name":"Fleming's Prime Steakhouse & Wine Bar","address":{"@type":"PostalAddress","streetAddress":"8030 Via Dellagio Way, Orlando, FL 32819","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":28.45065,"longitude":-81.49421},"priceRange":"$$$$","category":"Fine dining & steak","url":"https://407.fyi/venue/fleming-s-prime-steakhouse-sand-lake.html"}},{"@type":"ListItem","position":36,"item":{"@type":"LocalBusiness","name":"Vines by H","address":{"@type":"PostalAddress","streetAddress":"7533 W Sand Lake Rd, Orlando, FL 32819","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":28.45062,"longitude":-81.48527},"priceRange":"$$$","category":"Fine dining & steak","url":"https://407.fyi/venue/vines-by-h.html"}},{"@type":"ListItem","position":37,"item":{"@type":"LocalBusiness","name":"The Whiskey","address":{"@type":"PostalAddress","streetAddress":"7563 W Sand Lake Rd, Orlando, FL 32819","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":28.45056,"longitude":-81.48617},"priceRange":"$$","category":"Bars & lounges","url":"https://407.fyi/venue/the-whiskey.html"}},{"@type":"ListItem","position":38,"item":{"@type":"LocalBusiness","name":"Eddie V's Prime Seafood","address":{"@type":"PostalAddress","streetAddress":"7488 W Sand Lake Rd, Orlando, FL 32819","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":28.44938,"longitude":-81.48365},"priceRange":"$$$$","category":"Seafood","url":"https://407.fyi/venue/eddie-v-s-prime-seafood.html"}},{"@type":"ListItem","position":39,"item":{"@type":"LocalBusiness","name":"Ocean Prime","address":{"@type":"PostalAddress","streetAddress":"7339 W Sand Lake Rd, Orlando, FL 32819","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":28.45069,"longitude":-81.48045},"priceRange":"$$$$","category":"Seafood","url":"https://407.fyi/venue/ocean-prime-orlando.html"}},{"@type":"ListItem","position":40,"item":{"@type":"LocalBusiness","name":"Ruth's Chris Steak House","address":{"@type":"PostalAddress","streetAddress":"7501 W Sand Lake Rd, Orlando, FL 32819","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":28.45054,"longitude":-81.48405},"priceRange":"$$$$","category":"Fine dining & steak","url":"https://407.fyi/venue/ruth-s-chris-steak-house-sand-lake.html"}}]}</script>
+  </head>
+  <body>
+    <header class="hero">
+      <div class="hero-in">
+        <p class="crumbs"><a href="/">407 FYI</a> · International Drive Convention Guide</p>
+        <a class="hero-brand" href="/">407 FYI · A Convention Guide</a>
+        <h1>International Drive, for Conventions</h1>
+        <p class="sub">The Orange County Convention Center is the anchor of this corridor, and everything around it exists to serve the people it brings to town: headquarters hotels, group dinners, and rooms that can take the whole team at once.</p>
+        <p class="fine">Every pick below carries the guide’s convention tag in the International Drive district, from the convention center skywalks to Restaurant Row on Sand Lake Road. Each one opens its full card in the finder, with its address and details.</p>
+        <nav class="anchor-nav" aria-label="On this page">
+          <a href="#framing">The short version</a>
+          <a href="#picks">The picks</a>
+          <a href="#notes">Practical notes</a>
+          <a href="#more">Keep going</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="sec" id="framing">
+        <p class="kicker">The Short Version</p>
+        <h2>The show floor is the day; the corridor is the evening</h2>
+        <p>Convention weeks on I-Drive run on two clusters. The first wraps the convention center itself: headquarters hotels tied to the concourses by skywalks and pedestrian bridges, and Pointe Orlando beside them, where group dinners, a ropes course and bowling alley, and a two-story Old Havana courtyard stack into a few walkable blocks.</p>
+        <p>The second cluster is Restaurant Row, the Sand Lake Road strip at the corridor’s west end, where the client dinner is played at its highest level: white-tablecloth steakhouses and seafood rooms, a robata grill cooking over binchotan, a wine and jazz room, and Norman Van Aken’s flagship, the room where New World cuisine got its name.</p>
+        <div class="note">
+          <p><strong>The move:</strong> keep the team inside one cluster for the night. The corridor rewards groups that walk, and the cross-cluster car move lands at the exact hour every other convention in town is making it too.</p>
+        </div>
+      </section>
+
+      <section class="sec" id="picks">
+        <p class="kicker">The Picks</p>
+        <h2>Every convention pick on International Drive</h2>
+        <p class="lede">The complete convention list for the district, in the guide’s own order. Tap any name to open its own page.</p>
+        <div class="cards">
+          <article class="card pick">
+            <h3><a href="/venue/american-social.html">American Social</a></h3>
+            <p class="meta">American · $$</p>
+            <p>American Social is Restaurant Row&#x27;s high-energy sports lounge, lively and clubby with screens in every sightline and a room built for game day.</p>
+          </article>
+          <article class="card pick">
+            <h3><a href="/venue/blue-man-group.html">Blue Man Group</a></h3>
+            <p class="meta">Attractions · $$$</p>
+            <p>Three blue performers, no words, and a room full of paint drums, PVC pipe instruments, and giant balloons bouncing over the crowd.</p>
+          </article>
+          <article class="card pick">
+            <h3><a href="/venue/chathams.html">Chathams Place</a></h3>
+            <p class="meta">Fine dining &amp; steak · $$$$</p>
+            <p>A candlelit, old-school dining room in Dr. Phillips where a live pianist plays and the staff treats anniversaries like sacred occasions.</p>
+          </article>
+          <article class="card pick">
+            <h3><a href="/venue/mangos.html">Mango&#x27;s Tropical Cafe</a></h3>
+            <p class="meta">Latin &amp; Caribbean · $$$</p>
+            <p>Mango&#x27;s runs as a nightclub first on International Drive, with dinner and a live Latin show folded into the front of the night.</p>
+          </article>
+          <article class="card pick">
+            <h3><a href="/venue/mosonori.html">Mosonori</a></h3>
+            <p class="meta">Japanese &amp; sushi · $$</p>
+            <p>Mosonori is Chef Henry Moso&#x27;s handroll bar on Sand Lake Road, a calm, minimalist counter where temaki are made one at a time and handed straight to you so the nori stays crisp.</p>
+          </article>
+          <article class="card pick">
+            <h3><a href="/venue/nile-ethiopian.html">Nile Ethiopian</a></h3>
+            <p class="meta">Restaurants · $$</p>
+            <p>Family-run since 2006, Nile Ethiopian is a warm, homey room on International Drive where meals arrive shared, mounded on spongy injera you tear and scoop.</p>
+          </article>
+          <article class="card pick">
+            <h3><a href="/venue/nomikai.html">Nomikai by Sushi Saint</a></h3>
+            <p class="meta">Japanese &amp; sushi · $$$</p>
+            <p>Nomikai by Sushi Saint brings Chef Michael Collantes&#x27;s celebratory style to ICON Park, energetic and refined, with sushi guests call fresh and immaculate.</p>
+          </article>
+          <article class="card pick">
+            <h3><a href="/venue/still-lounge.html">Still Lounge by Dre and Snoop</a></h3>
+            <p class="meta">Bars &amp; lounges · $$$</p>
+            <p>A low-light lounge inside Live! at Pointe Orlando, built around Dr. Dre and Snoop Dogg&#x27;s Still G.I.N.</p>
+          </article>
+          <article class="card pick">
+            <h3><a href="/venue/taverna-opa.html">Taverna Opa</a></h3>
+            <p class="meta">Mediterranean · $$</p>
+            <p>Taverna Opa is a festive, high-energy Greek taverna at Pointe Orlando where dinner turns into a celebration, napkins flying as confetti.</p>
+          </article>
+          <article class="card pick">
+            <h3><a href="/venue/taffers-tavern.html">Taffer&#x27;s Tavern</a></h3>
+            <p class="meta">American · $$</p>
+            <p>Taffer&#x27;s Tavern brings Jon Taffer&#x27;s old-world tavern warmth to Pointe Orlando, cozy and lively with a sports-bar hum.</p>
+          </article>
+          <article class="card pick">
+            <h3><a href="/venue/baires-grill-orlando.html">Baires Grill</a></h3>
+            <p class="meta">Latin &amp; Caribbean · $$</p>
+            <p>The parrilla decides everything at this Argentine steakhouse just off International Drive.</p>
+          </article>
+          <article class="card pick">
+            <h3><a href="/venue/toms-watch-bar-orlando.html">Tom&#x27;s Watch Bar</a></h3>
+            <p class="meta">Bars &amp; lounges · $$</p>
+            <p>A sports bar built like a stadium on International Drive, with an oversized stadium screen and wall-to-wall screens wrapping the room, so every seat faces the action.</p>
+          </article>
+          <article class="card pick">
+            <h3><a href="/venue/rocco-s-tacos-tequila-bar.html">Rocco&#x27;s Tacos &amp; Tequila Bar</a></h3>
+            <p class="meta">Mexican · $$</p>
+            <p>Rocco&#x27;s is Sand Lake Road&#x27;s lakeside patio party, upbeat and colorful, where the tableside guacamole steals the show before the tacos even land.</p>
+          </article>
+          <article class="card pick">
+            <h3><a href="/venue/shake-shack-i-drive.html">Shake Shack I-Drive</a></h3>
+            <p class="meta">Burgers &amp; sandwiches · $</p>
+            <p>The I-Drive Shake Shack sits in ICON Park under the Orlando Eye, a busy fast-casual patio stop with rustic chic polish.</p>
+          </article>
+          <article class="card pick">
+            <h3><a href="/venue/kobe-japanese-steakhouse.html">Kobe Japanese Steakhouse</a></h3>
+            <p class="meta">Japanese &amp; sushi · $</p>
+            <p>Kobe turns dinner into theater on International Drive, where teppanyaki chefs work communal grill tables with onion volcanoes, flying shrimp, and tricks guests say they had not seen before.</p>
+          </article>
+          <article class="card pick">
+            <h3><a href="/venue/yard-house.html">Yard House</a></h3>
+            <p class="meta">American · $</p>
+            <p>Yard House is ICON Park&#x27;s big-room guarantee: a wall of taps, a glass-enclosed keg room as the centerpiece, and classic rock under everything.</p>
+          </article>
+          <article class="card pick">
+            <h3><a href="/venue/kavas-tacos-tequila.html">Kavas Tacos &amp; Tequila</a></h3>
+            <p class="meta">Mexican · $$</p>
+            <p>Kavas Tacos &amp; Tequila is Pointe Orlando&#x27;s loud, colorful taco party, vibrant and celebratory from the first chips and salsa.</p>
+          </article>
+          <article class="card pick">
+            <h3><a href="/venue/oza-izakaya.html">Oza Izakaya</a></h3>
+            <p class="meta">Japanese &amp; sushi · $$</p>
+            <p>Oza Izakaya is a sleek, garden-like Japanese room on Central Florida Parkway, beautiful and unhurried in a way that suits a date night.</p>
+          </article>
+          <article class="card pick">
+            <h3><a href="/venue/yh-seafood-clubhouse.html">YH Seafood Clubhouse</a></h3>
+            <p class="meta">Chinese · $$</p>
+            <p>YH Seafood Clubhouse is Turkey Lake Road&#x27;s elegant Cantonese room, refined and warm, where round tables fill with family-style plates.</p>
+          </article>
+          <article class="card pick">
+            <h3><a href="/venue/divina-carne.html">Divina Carne</a></h3>
+            <p class="meta">Latin &amp; Caribbean · $$</p>
+            <p>A polished Brazilian rodizio on Carrier Drive, minutes from the Convention Center, where gauchos carve picanha, ribeye and lamb right at the table.</p>
+          </article>
+          <article class="card pick">
+            <h3><a href="/venue/cafe-tu-tu-tango.html">Café Tu Tu Tango</a></h3>
+            <p class="meta">Restaurants · $$</p>
+            <p>An I-Drive original since the 1990s that treats dinner like an art opening, with resident artists painting at easels and the walls doubling as the gallery.</p>
+          </article>
+          <article class="card pick">
+            <h3><a href="/venue/ole-red-orlando.html">Ole Red Orlando</a></h3>
+            <p class="meta">Bars &amp; lounges · $$</p>
+            <p>Blake Shelton&#x27;s honky-tonk in the middle of ICON Park, with live country on stage and scratch-made Southern cooking coming out of the kitchen.</p>
+          </article>
+          <article class="card pick">
+            <h3><a href="/venue/helena-modern-riviera.html">Helena Modern Riviera</a></h3>
+            <p class="meta">Mediterranean · $$$</p>
+            <p>The polished room inside ICON Park, a Mediterranean supper club working coastal Italian and Greek plates: crudos, whole fish, a Moroccan lamb shank and a prosciutto and fig pizza, with a lemon drop martini in hand.</p>
+          </article>
+          <article class="card pick">
+            <h3><a href="/venue/the-capital-grille-pointe-orlando.html">The Capital Grille</a></h3>
+            <p class="meta">Fine dining &amp; steak · $$$$</p>
+            <p>The default client steakhouse at Pointe Orlando, a short walk from the Rosen hotels, running the full expense-account ritual.</p>
+          </article>
+          <article class="card pick">
+            <h3><a href="/venue/maggiano-s-pointe-orlando.html">Maggiano&#x27;s Little Italy</a></h3>
+            <p class="meta">Italian · $$</p>
+            <p>Family-style Italian at Pointe Orlando, built for the table that cannot agree on one dish.</p>
+          </article>
+          <article class="card pick">
+            <h3><a href="/venue/the-hampton-social-pointe-orlando.html">The Hampton Social</a></h3>
+            <p class="meta">American · $$</p>
+            <p>A coastal escape staged inside Pointe Orlando: whitewashed wood, rose on the tables, and beach-house plates like seafood towers, a lobster roll and blackened sea bass.</p>
+          </article>
+          <article class="card pick">
+            <h3><a href="/venue/cuba-libre-pointe-orlando.html">Cuba Libre</a></h3>
+            <p class="meta">Latin &amp; Caribbean · $$</p>
+            <p>A two-story Old Havana courtyard rebuilt inside Pointe Orlando, all palm shadows, live Latin music, and rum.</p>
+          </article>
+          <article class="card pick">
+            <h3><a href="/venue/main-event-pointe-orlando.html">Main Event</a></h3>
+            <p class="meta">Attractions · $$</p>
+            <p>Bowling, laser tag, billiards, a ropes course, and a big arcade under one roof at Pointe Orlando, with lane-side food and a full bar keeping groups fed between games.</p>
+          </article>
+          <article class="card pick">
+            <h3><a href="/venue/hyatt-regency-orlando.html">Hyatt Regency Orlando</a></h3>
+            <p class="meta">Hotels · $$$</p>
+            <p>The headquarters hotel on International Drive, tied to both convention concourses by pedestrian bridges so the show floor is a walk, not a shuttle ride.</p>
+          </article>
+          <article class="card pick">
+            <h3><a href="/venue/rosen-centre.html">Rosen Centre</a></h3>
+            <p class="meta">Hotels · $$</p>
+            <p>Rosen&#x27;s flagship tower on International Drive, joined to the convention center&#x27;s West Building by its own skywalk.</p>
+          </article>
+          <article class="card pick">
+            <h3><a href="/venue/rosen-plaza.html">Rosen Plaza</a></h3>
+            <p class="meta">Hotels · $$</p>
+            <p>The West Building&#x27;s other skywalk hotel, crossing to Hall F by the Gary Sain Memorial Bridge with a calmer, more relaxed feel than the flagship.</p>
+          </article>
+          <article class="card pick">
+            <h3><a href="/venue/hilton-orlando.html">Hilton Orlando</a></h3>
+            <p class="meta">Hotels · $$$</p>
+            <p>A convention hotel with a resort hiding inside it, linked to the South Concourse by its own pedestrian bridge.</p>
+          </article>
+          <article class="card pick">
+            <h3><a href="/venue/norman-s-orlando.html">Norman&#x27;s Orlando</a></h3>
+            <p class="meta">Fine dining &amp; steak · $$$$</p>
+            <p>Norman Van Aken&#x27;s flagship at Dellagio on Sand Lake, the room where New World cuisine fuses Florida, the Caribbean, and Latin America.</p>
+          </article>
+          <article class="card pick">
+            <h3><a href="/venue/dragonfly-robata-grill-sushi.html">Dragonfly Robata Grill &amp; Sushi</a></h3>
+            <p class="meta">Japanese &amp; sushi · $$$</p>
+            <p>Dellagio&#x27;s robata grill, where skewers cook over binchotan charcoal and the sushi bar keeps pace with rolls like the Big Boss and the Smoky Dragon.</p>
+          </article>
+          <article class="card pick">
+            <h3><a href="/venue/fleming-s-prime-steakhouse-sand-lake.html">Fleming&#x27;s Prime Steakhouse &amp; Wine Bar</a></h3>
+            <p class="meta">Fine dining &amp; steak · $$$$</p>
+            <p>Inside Dellagio&#x27;s fountain cluster, Fleming&#x27;s runs the classic steakhouse playbook with private-dining polish: prime cuts, a deep wine list, and service guests call truly exceptional.</p>
+          </article>
+          <article class="card pick">
+            <h3><a href="/venue/vines-by-h.html">Vines by H</a></h3>
+            <p class="meta">Fine dining &amp; steak · $$$</p>
+            <p>Restaurant Row&#x27;s long-running wine and jazz room, reborn under a new name at the same Sand Lake address.</p>
+          </article>
+          <article class="card pick">
+            <h3><a href="/venue/the-whiskey.html">The Whiskey</a></h3>
+            <p class="meta">Bars &amp; lounges · $$</p>
+            <p>A rock and roll gastropub on Sand Lake built around chef-driven burgers and a whiskey-deep bar.</p>
+          </article>
+          <article class="card pick">
+            <h3><a href="/venue/eddie-v-s-prime-seafood.html">Eddie V&#x27;s Prime Seafood</a></h3>
+            <p class="meta">Seafood · $$$$</p>
+            <p>Eddie V&#x27;s pairs prime seafood and steak with the V Lounge, where live trios keep the night moving after the plates clear.</p>
+          </article>
+          <article class="card pick">
+            <h3><a href="/venue/ocean-prime-orlando.html">Ocean Prime</a></h3>
+            <p class="meta">Seafood · $$$$</p>
+            <p>White-tablecloth polish at the I-4 end of Restaurant Row, in the Rialto: seafood and prime steaks, a raw bar, and a lively, dressy bar scene.</p>
+          </article>
+          <article class="card pick">
+            <h3><a href="/venue/ruth-s-chris-steak-house-sand-lake.html">Ruth&#x27;s Chris Steak House</a></h3>
+            <p class="meta">Fine dining &amp; steak · $$$$</p>
+            <p>The familiar name on Restaurant Row, recently remodeled and running its sizzling-platter ritual exactly to spec.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="sec" id="notes">
+        <p class="kicker">Before You Go</p>
+        <h2>Practical notes</h2>
+        <div class="cols">
+          <div class="panel">
+            <h3>Moving around the corridor</h3>
+            <ul>
+              <li>The headquarters hotels on this list connect to the convention center by skywalk or pedestrian bridge: the Hyatt Regency reaches both concourses, the Rosen Centre and Rosen Plaza cross to the West Building, and the Hilton Orlando links to the South Concourse. From those lobbies, the show floor is a walk.</li>
+              <li>The dinner clusters sit apart from the hotels: Pointe Orlando for walkable group rooms, Restaurant Row on Sand Lake Road for the client dinner tier. Plan the ride between clusters from each venue’s own address instead of treating the corridor as a single stop.</li>
+            </ul>
+          </div>
+          <div class="panel">
+            <h3>Using the finder</h3>
+            <ul>
+              <li>The convention view below opens the finder filtered to the occasion across every district, for the convention nights that land somewhere other than this corridor.</li>
+              <li>The <a href="/convention.html">Convention Guidebook</a> is the citywide companion to this page: the full convention playbook for Orlando, with this district at its center.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="sec" id="more">
+        <p class="kicker">Keep Going</p>
+        <h2>The district, and the whole guide</h2>
+        <p class="lede">This page is one cut of the guide: conventions on International Drive. The district story covers the corridor itself, and the finder carries every place in the guide with search, filters, and a map.</p>
+        <div class="handoff">
+          <a class="btn-big" href="/international-drive-district-guide.html">Read the International Drive story</a>
+          <a class="btn-ghost" href="/convention.html">The Convention Guidebook</a>
+          <a class="btn-ghost" href="/archive.html?district=i-drive">Browse International Drive in the finder</a>
+          <a class="btn-ghost" href="/archive.html?occasion=convention">All convention picks</a>
+        </div>
+      </section>
+    </main>
+
+<footer>
+      <div class="foot-in">
+        <a class="back-link" href="/">&larr; Back to the full guide</a>
+        <p class="brand-line">407 FYI, an independent Orlando guide. Details can change; confirm before you go.</p>
+        <p>Hand-verified Orlando places · Checked October 2026 · Local Picks are never sponsored · Corrections: <a href="mailto:mail@407.fyi">mail@407.fyi</a></p>
+        <p>Some links on 407 FYI are affiliate or referral links. We may earn a commission or credit at no extra cost to you. They never affect which places we list, rank, or recommend.</p>
+        <p><a href="/privacy.html">Privacy</a></p>
+      </div>
+    </footer>
+  </body>
+</html>
