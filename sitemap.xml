@@ -268,6 +268,11 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+<url>
+    <loc>https://407.fyi/district-history.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
   <url>
     <loc>https://407.fyi/flashbacks-scroll.html</loc>
     <changefreq>monthly</changefreq>
