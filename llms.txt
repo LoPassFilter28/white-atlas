@@ -1,11 +1,11 @@
 # 407 FYI
 
-> 407 FYI is an independent, locally run guide to Orlando, Florida. It lists 643 hand-verified restaurants, bars, coffee shops, attractions, shops, and hotels across Orlando and its neighborhoods, written in a local's voice for visitors and residents. Local Picks are 100 percent editorial and unsponsored. The guide deliberately does not list opening hours.
+> 407 FYI is an independent, locally run guide to Orlando, Florida. It lists 644 hand-verified restaurants, bars, coffee shops, attractions, shops, and hotels across Orlando and its neighborhoods, written in a local's voice for visitors and residents. Local Picks are 100 percent editorial and unsponsored. The guide deliberately does not list opening hours.
 
 ## Main pages
 
-- [407 FYI home](https://407.fyi/): The full guide: search all 643 venues by name, category, district, price, and occasion (family, date night, groups, convention).
-- [The full finder](https://407.fyi/archive.html): Search and filter all 643 venues by name, category, district, price, and occasion, with a map view.
+- [407 FYI home](https://407.fyi/): The full guide: search all 644 venues by name, category, district, price, and occasion (family, date night, groups, convention).
+- [The full finder](https://407.fyi/archive.html): Search and filter all 644 venues by name, category, district, price, and occasion, with a map view.
 - [Orlando convention guide](https://407.fyi/convention.html): The convention center companion: the concourses and connected hotels, parking and logistics, and convention picks around International Drive.
 - [I-Drive playbook](https://407.fyi/i-drive-playbook.html): What to avoid on International Drive for park visitors: ticket booths, timeshare pitches, rental toll devices, hotel fee stacks, line-skip sticker shock and parking, with verified nearby picks for dinner, late food and a calm breakfast.
 - [What's new](https://407.fyi/whats-new.html): Recent additions and changes to the guide.
@@ -56,7 +56,7 @@
 
 ## Venue pages
 
-- Every venue has its own page at https://407.fyi/venue/ followed by the venue id and .html, for example [AVA MediterrAegean](https://407.fyi/venue/ava.html): the full write-up, address, directions and nearby places for all 643 venues.
+- Every venue has its own page at https://407.fyi/venue/ followed by the venue id and .html, for example [AVA MediterrAegean](https://407.fyi/venue/ava.html): the full write-up, address, directions and nearby places for all 644 venues.
 
 ## Scenario guides
 
@@ -69,7 +69,7 @@
 
 ## Data
 
-- [Venue dataset (JSON)](https://407.fyi/places.json): The machine-readable dataset behind the guide: name, district, category, price, address, description, and tags for all 643 venues.
+- [Venue dataset (JSON)](https://407.fyi/places.json): The machine-readable dataset behind the guide: name, district, category, price, address, description, and tags for all 644 venues.
 - [Sitemap](https://407.fyi/sitemap.xml)
 
 ## About
