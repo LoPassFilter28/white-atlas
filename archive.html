@@ -1497,7 +1497,7 @@ function render(){
     let venueId='';
     if(article)venueId=article.dataset.id;
     else if(inSelection){const b=inSelection.querySelector('[data-show-place]');venueId=b?b.dataset.showPlace:''}
-    captureEvent('outbound_click',{venue_id:venueId||'none',kind:outboundKind(a.href)});
+    captureEvent('outbound_click',{venue_id:venueId||'none',kind:outboundKind(a.href),destination_url:a.href});
   });
   $('#flashbacksEntry')?.addEventListener('click',()=>openFlashbacks());
   $('#flashbacksBack').addEventListener('click',()=>closeFlashbacks());
