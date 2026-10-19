@@ -1,0 +1,521 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="color-scheme" content="light dark" />
+    <title>Universal: The Land That Was Bought Twice | 407 FYI</title>
+    <meta name="description" content="Universal Orlando is a land story: acres bought quietly in the early 1980s, a studio park opened in 1990, a resort by 1999, and a south campus bought back for Epic Universe." />
+    <link rel="canonical" href="https://407.fyi/history/universal.html" />
+    <meta property="og:title" content="Universal: The Land That Was Bought Twice · 407 FYI" />
+    <meta property="og:description" content="Bought quietly in the early 1980s, opened in 1990, a resort by 1999, and expanded by buying its own land back: the short, documented land story of Universal Orlando." />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://407.fyi/history/universal.html" />
+    <meta property="og:image" content="https://407.fyi/history/img/universal-landsat-1973.webp" />
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="preload" href="/fonts/manrope-latin.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="/fonts/fonts.css" />
+    <script>
+      try {
+        const savedTheme = localStorage.getItem('white-atlas-theme');
+        document.documentElement.dataset.theme = savedTheme === 'light' || savedTheme === 'dark' ? savedTheme : 'dark';
+      } catch (error) {
+        document.documentElement.dataset.theme = 'dark';
+      }
+    </script>
+<style>
+      /* Night Drive tokens + scene palette (DESIGN.MD: scroll editions and stories) */
+      :root {
+        color-scheme: dark;
+        --bg: #0a1811; --surface: #122419; --soft: #172a1f; --ink: #f0e8d5;
+        --muted: #c6bba2; --line: #2f4a38; --accent: #765b2f; --accent-ink: #d4b573;
+        --headline: #f6edd6; --focus: #d4b573;
+        --g1: #0d1512; --g2: #111c16; --g3: #141f18;
+        --bronze: #c19a5b; --parch: #f4efe1; --sage: #b9bfa4;
+        --pad: clamp(20px, 5vw, 40px);
+      }
+      * { box-sizing: border-box; }
+      @media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
+      body {
+        margin: 0; background: var(--g1); color: var(--ink);
+        font-family: "Manrope", system-ui, sans-serif; line-height: 1.65;
+        overflow-x: hidden;
+      }
+      h1, h2, h3, .display { font-family: "Urbanist", "Manrope", sans-serif; }
+      a { color: var(--accent-ink); }
+      a:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
+      .kicker {
+        font-family: "Urbanist", sans-serif; font-weight: 700; letter-spacing: .24em;
+        font-size: .72rem; text-transform: uppercase; color: var(--bronze); margin: 0 0 16px;
+      }
+      #progress {
+        position: fixed; top: 0; left: 0; right: 0; height: 3px; z-index: 900;
+        background: var(--bronze); transform: scaleX(0); transform-origin: 0 50%;
+      }
+      .static #progress { display: none; }
+
+      /* ---------- full-bleed scenes ---------- */
+      .scene {
+        position: relative; overflow: hidden; isolation: isolate;
+        background: var(--g2);
+      }
+      .scene > img {
+        position: absolute; inset: 0; width: 100%; height: 100%;
+        object-fit: cover; object-position: center; z-index: -2;
+      }
+      .scene::after {
+        content: ""; position: absolute; inset: 0; z-index: -1;
+        background: linear-gradient(180deg, rgba(13,21,18,.52), rgba(13,21,18,.06) 34%, rgba(13,21,18,.10) 62%, rgba(13,21,18,.88));
+      }
+      .scene-hero { min-height: 100svh; display: flex; align-items: flex-end; }
+      .scene-hero .scene-cap { bottom: 64px; }
+      .scene-mid { min-height: 78svh; display: flex; align-items: flex-end; }
+      .scene-in { width: 100%; max-width: 920px; margin: 0 auto; padding: clamp(56px, 10vh, 96px) var(--pad) clamp(40px, 7vh, 64px); }
+      .scene-cap {
+        position: absolute; right: 14px; bottom: 12px; z-index: 2; max-width: min(480px, 78vw);
+        font-size: .72rem; line-height: 1.45; color: rgba(244,239,225,.82); text-align: right;
+        text-shadow: 0 1px 8px rgba(0,0,0,.65);
+      }
+
+      /* ---------- hero ---------- */
+      .crumbs { font-size: .82rem; color: var(--muted); margin: 0 0 30px; text-shadow: 0 1px 8px rgba(0,0,0,.6); }
+      .crumbs a { font-weight: 700; }
+      .hero h1 {
+        font-size: clamp(3.2rem, 11.5vw, 7.6rem); font-weight: 850; line-height: .94;
+        letter-spacing: -.05em; text-transform: uppercase; color: var(--parch);
+        margin: 0 0 18px; text-shadow: 0 2px 26px rgba(0,0,0,.45);
+      }
+      .hero h1 em { font-style: normal; color: var(--bronze); }
+      .hero .era {
+        font-size: clamp(1.08rem, 2.7vw, 1.34rem); line-height: 1.5; color: var(--parch);
+        max-width: 600px; margin: 0; text-shadow: 0 1px 12px rgba(0,0,0,.7);
+      }
+      .anchor-nav { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 34px; }
+      .anchor-nav a {
+        border: 1px solid rgba(193,154,91,.55); border-radius: 999px; padding: 8px 14px;
+        font-size: .82rem; font-weight: 700; text-decoration: none; color: var(--parch);
+        background: rgba(13,21,18,.55); min-height: 42px; display: inline-flex; align-items: center;
+        backdrop-filter: blur(3px);
+      }
+      .anchor-nav a:hover { border-color: var(--bronze); }
+      .scroll-cue { margin: 40px 0 0; font-size: .74rem; letter-spacing: .26em; text-transform: uppercase; color: var(--sage); }
+
+      /* ---------- chapters ---------- */
+      main { display: block; }
+      .chapter { max-width: 760px; margin: 0 auto; padding: clamp(58px, 10vh, 96px) var(--pad) 0; }
+      .chapter h2 {
+        font-size: clamp(2rem, 5.6vw, 3.1rem); line-height: 1.04; letter-spacing: -.03em;
+        color: var(--headline); margin: 0 0 20px;
+      }
+      .chapter p { max-width: 68ch; margin: 0 0 18px; font-size: 1.03rem; }
+      .chapter p.lede { font-size: 1.14rem; color: var(--parch); }
+      .chapter .drop::first-letter {
+        font-family: "Urbanist", sans-serif; font-weight: 800; float: left;
+        font-size: 3.4em; line-height: .82; padding: 6px 10px 0 0; color: var(--bronze);
+      }
+
+      /* ---------- archival plates ---------- */
+      .plate { margin: clamp(30px, 6vh, 52px) auto; max-width: 960px; padding: 0 var(--pad); }
+      .plate figure {
+        margin: 0; background: var(--parch); padding: clamp(8px, 1.6vw, 14px);
+        border-radius: 4px; box-shadow: 0 24px 60px rgba(0,0,0,.5);
+      }
+      .plate img { display: block; width: 100%; height: auto; }
+      .plate figcaption {
+        color: #43503f; font-size: .82rem; line-height: 1.5;
+        padding: 10px 4px 2px;
+      }
+      .plate figcaption strong { color: #22331f; }
+      .plate-narrow { max-width: 700px; }
+      @media (min-width: 900px) {
+        .plate-side { float: right; width: 300px; margin: 6px -40px 18px 28px; padding: 0; }
+        .plate-side figure { box-shadow: 0 16px 40px rgba(0,0,0,.5); }
+      }
+
+      /* ---------- then and now ---------- */
+      .then-now {
+        clear: both; border: 1px solid rgba(193,154,91,.4); border-left: 3px solid var(--bronze);
+        background: var(--g2); border-radius: 0 14px 14px 0;
+        padding: 20px 22px; margin: clamp(30px, 6vh, 48px) 0 6px; max-width: 68ch;
+      }
+      .then-now .tn-label {
+        font-family: "Urbanist", sans-serif; font-weight: 700; letter-spacing: .24em;
+        font-size: .68rem; text-transform: uppercase; color: var(--bronze); margin: 0 0 10px;
+      }
+      .then-now p { margin: 0; color: var(--parch); }
+
+      /* ---------- panels, notes, lists ---------- */
+      .panel { background: var(--g3); border: 1px solid var(--line); border-radius: 14px; padding: 22px 24px; margin: 24px 0 6px; }
+      .panel ul { margin: 0; padding-left: 18px; }
+      .panel li { margin-bottom: 11px; }
+      .panel li:last-child { margin-bottom: 0; }
+      .panel li strong { color: var(--headline); }
+      .note {
+        border-left: 3px solid var(--bronze); background: var(--g2);
+        padding: 14px 18px; border-radius: 0 12px 12px 0; margin: 22px 0 6px; max-width: 68ch;
+      }
+      .note p { margin: 0; font-size: .97rem; }
+
+      /* ---------- handoff + credits ---------- */
+      .handoff { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
+      .btn-big, .btn-ghost {
+        display: inline-flex; align-items: center; min-height: 48px; padding: 12px 22px;
+        border-radius: 999px; font-weight: 800; text-decoration: none; font-size: .95rem;
+      }
+      .btn-big { background: var(--accent); color: #fff; }
+      .btn-big:hover { background: #86682f; }
+      .btn-ghost { border: 1px solid var(--line); color: var(--ink); }
+      .btn-ghost:hover { border-color: var(--bronze); }
+      .credits { max-width: 760px; margin: 0 auto; padding: clamp(48px, 8vh, 72px) var(--pad) 0; }
+      .credits h2 { font-size: 1.15rem; color: var(--headline); margin: 0 0 12px; letter-spacing: -.01em; }
+      .credits p, .credits li { font-size: .86rem; color: var(--muted); }
+      .credits ul { margin: 0 0 16px; padding-left: 18px; }
+      .credits li { margin-bottom: 7px; }
+
+      /* ---------- footer (section shell) ---------- */
+      footer { border-top: 1px solid var(--line); margin-top: clamp(52px, 9vh, 88px); background: var(--bg); }
+      .foot-in { max-width: 860px; margin: 0 auto; padding: 34px var(--pad) 44px; }
+      .foot-in p { color: var(--muted); font-size: .9rem; margin: 0 0 10px; }
+      .foot-in .brand-line { color: var(--ink); font-weight: 700; }
+      .back-link { font-weight: 800; text-decoration: none; display: inline-block; margin-bottom: 16px; }
+</style>
+  </head>
+  <body>
+    <div id="progress" aria-hidden="true"></div>
+
+    <header class="scene scene-hero hero">
+      <img src="/history/img/universal-landsat-1973.webp" alt="Satellite view of Orlando in 1973: dark lakes scattered through red vegetation, with the young city grid faint at the center, years before Universal was built" width="1000" height="862" loading="eager" fetchpriority="high" />
+      <div class="scene-in">
+        <p class="crumbs"><a href="/history.html">407 FYI History</a> · District Stories</p>
+        <p class="kicker" data-hero>District Story · Universal</p>
+        <h1 data-hero>Universal</h1>
+        <p class="era" data-hero>A district with the shortest paper trail in Orlando: land bought quietly, built fast, and later bought back.</p>
+        <nav class="anchor-nav" data-hero aria-label="Chapters">
+          <a href="#land">The Land</a>
+          <a href="#first-park">The First Park</a>
+          <a href="#resort">The Resort</a>
+          <a href="#epic">The Buyback</a>
+          <a href="#streets">Street Names</a>
+          <a href="#walk">Walk It Today</a>
+        </nav>
+        <p class="scroll-cue" data-hero>Scroll</p>
+      </div>
+      <p class="scene-cap">Orlando seen by Landsat 1 on April 10, 1973, before MCA bought its acres. U.S. Geological Survey, public domain.</p>
+    </header>
+
+    <main>
+      <section class="chapter" id="land">
+        <p class="kicker" data-reveal>Chapter One · The Early 1980s</p>
+        <h2 data-reveal>Bought Quietly, Dated Twice</h2>
+        <p class="drop" data-reveal>This district has the shortest paper trail in the guide, and its story starts with a disagreement. Universal's parent company MCA moved on Orlando land in the early 1980s. One history dates a $4.5 million purchase of several hundred acres to 1981. Another dates MCA's acquisition of 423 acres to 1982. Both agree on the substance: a land assembly of several hundred acres for a Florida studio park, with construction following about four years later.</p>
+        <p data-reveal>The conflict is left unresolved on this page, because the sources leave it unresolved. No source found in the research names a ranch seller for the original parcel, so no seller is named here either. What can be said plainly is the shape of the ground the purchase created: the original resort sits on roughly 600 acres, hemmed in by Interstate 4 and the commercial and residential development around it. That tight fit is the fact the rest of this story keeps running into.</p>
+        <div class="plate" data-reveal>
+          <figure>
+            <img src="/history/img/universal-landsat-1986.webp" alt="Satellite view of Orlando in 1986: the city grid spreading outward through red vegetation and dark lakes" width="1000" height="862" loading="lazy" decoding="async" />
+            <figcaption><strong>Orlando from above, April 2, 1986.</strong> Landsat 5 catches the city in the years after MCA's land assembly, as construction followed the purchase. U.S. Geological Survey, public domain.</figcaption>
+          </figure>
+        </div>
+        <div class="then-now" data-reveal>
+          <p class="tn-label">Then and Now</p>
+          <p>Those several hundred acres are the original resort ground today, the Universal Studios Florida end of the district the guide covers, reached at 6000 Universal Boulevard.</p>
+        </div>
+      </section>
+
+      <section class="chapter" id="first-park">
+        <p class="kicker" data-reveal>Chapter Two · 1990</p>
+        <h2 data-reveal>One Park Opens</h2>
+        <p class="drop" data-reveal>Universal Studios Florida opened on June 7, 1990. That single date carries most of what this district is: the studio park came first, and everything else, the second park, the entertainment district, the hotels, the south campus, is an addition to it. The name tells the same story in order. Universal Orlando takes its name from Universal Studios Florida, the park that opened that day.</p>
+        <p data-reveal>There is no older layer underneath to dig for. On the resort parcel itself, the documented record consulted for this page starts with the purchase: no earlier settlement or plat on that ground is claimed in it. The district's history begins with a corporation buying land, and this page will not dress that up as something older.</p>
+        <div class="then-now" data-reveal>
+          <p class="tn-label">Then and Now</p>
+          <p>The guide still names it exactly as it opened: Universal Studios Florida, the original, opened in 1990. Of the anchors in the Universal guide, it is the one every other name was added around.</p>
+        </div>
+      </section>
+
+      <section class="chapter" id="resort">
+        <p class="kicker" data-reveal>Chapter Three · 1999 to 2017</p>
+        <h2 data-reveal>A Park Becomes a Resort</h2>
+        <p class="drop" data-reveal>The second gate era arrived in a single year. CityWalk opened on February 4, 1999, and Islands of Adventure followed on May 28, 1999, an expansion the research describes as Universal's largest investment in Orlando since the 1990 debut. The resort's first onsite hotel, Loews Portofino Bay, opened in September 1999. For a brief moment the bundle of two parks, CityWalk and the hotel was branded Universal Studios Escape, before the name was changed to Universal Orlando Resort.</p>
+        <p data-reveal>The water park chapter came later and closed an older one. Universal Volcano Bay opened on May 25, 2017. It replaced Wet n Wild, which Universal had acquired in 1998 and closed on December 31, 2016.</p>
+        <div class="then-now" data-reveal>
+          <p class="tn-label">Then and Now</p>
+          <p>The guide reads the 1999 layout the way locals use it: parks by day, CityWalk by dark. Universal's Islands of Adventure is the second gate in its list, and CityWalk holds the after dark anchors, among them The Toothsome Chocolate Emporium &amp; Savory Feast Kitchen and Voodoo Doughnut.</p>
+        </div>
+      </section>
+
+      <section class="chapter" id="epic">
+        <p class="kicker" data-reveal>Chapter Four · 1998 to 2025</p>
+        <h2 data-reveal>The Land It Bought Back</h2>
+        <p class="drop" data-reveal>The original resort's tight fit had a documented answer, and Universal had owned it once already. The Epic Universe campus, a few miles south, was part of an 1,800 acre parcel Universal bought from Lockheed Martin in 1998. Universal sold that land in 2003 to Atlanta developer Stan Thomas. Lenders foreclosed, and the parcel wound up with Colony Capital in late 2015. Then Universal bought its own land back, reacquiring 475 acres for $130 million in purchases across 2017 and 2018.</p>
+        <p data-reveal>Universal Epic Universe opened on May 22, 2025, the resort's fourth park, set within a larger 750 acre development a few miles south of the other parks. Universal's own release called it the first major theme park to open in Orlando in 25 years. The land chain is the point: the newest campus in the district exists because a parcel was bought, sold, foreclosed and bought again.</p>
+        <div class="then-now" data-reveal>
+          <p class="tn-label">Then and Now</p>
+          <p>The guide lists the result as Universal Epic Universe, the south campus anchor of the district today, a few miles from the ground MCA assembled in the early 1980s. The Kirkman Road Extension now links Universal Boulevard directly toward it.</p>
+        </div>
+      </section>
+
+      <section class="chapter" id="streets">
+        <p class="kicker" data-reveal>The Index in the Street Signs</p>
+        <h2 data-reveal>How the Streets Got Their Names</h2>
+        <p data-reveal>The streets around Universal mostly predate the resort or serve it, and the honest list is short. One road carries a citrus community's name into the district, one is named for the lake it runs by, and one is simply the resort's own address written large.</p>
+        <div class="panel" data-reveal>
+          <ul>
+            <li><strong>Vineland Road:</strong> traces to the Vineland community, not to Universal. Vineland was founded in the late 1800s as Englewood, platted as Orange Center in 1911, and renamed Vineland in 1924, supposedly because of confusion with Orange City, Florida. It was a citrus community centered on groves around Ruby Lake, and its name rides on major roads across the county.</li>
+            <li><strong>Turkey Lake Road:</strong> the descriptive name for Turkey Lake, with the formal naming act unverified. Bill Frederick Park covers 178 acres on the lake's western shore and was long known as Turkey Lake Park.</li>
+            <li><strong>Universal Boulevard:</strong> the resort's address is 6000 Universal Boulevard, and the boulevard runs parallel to the midsection of International Drive. Its function is documented; a formal naming act was not found. The Kirkman Road Extension now links it directly toward Epic Universe.</li>
+          </ul>
+        </div>
+        <div class="note" data-reveal>
+          <p>Two names stay undocumented, and this page will not invent them. Kirkman Road's namesake is undocumented, here as on the International Drive side: no Orlando source found in this research documents which Kirkman the road honors. Hollywood Way and the other internal resort roads are corporate theming names, and no sourced naming history was found for them, so none is claimed.</p>
+        </div>
+      </section>
+
+      <section class="chapter" id="walk">
+        <p class="kicker" data-reveal>The Story, On Foot</p>
+        <h2 data-reveal>Walk It Today</h2>
+        <p data-reveal>Walked today, the district runs in the order it was built. Start at the original ground: Universal Studios Florida, opened in 1990, beside Universal's Islands of Adventure, the second gate from 1999. When the parks wind down, CityWalk takes the evening, the role it was built for in 1999, with dinner at The Toothsome Chocolate Emporium &amp; Savory Feast Kitchen and a pink Voodoo Doughnut box for the ride home.</p>
+        <p data-reveal>Then take the newer link south. The Kirkman Road Extension points toward Universal Epic Universe, the park that opened in 2025 on land Universal bought, sold and bought back. Two campuses, one land story: that is the whole district, and it is enough.</p>
+        <div class="handoff" data-reveal>
+          <a class="btn-big" href="/universal-district-guide.html">The Universal district guide</a>
+          <a class="btn-ghost" href="/universal-finder.html">Browse Universal places</a>
+          <a class="btn-ghost" href="/history.html">More district stories</a>
+        </div>
+      </section>
+
+      <section class="credits">
+        <h2>Images and sources</h2>
+        <p>Every image on this page is a public domain U.S. Geological Survey Landsat view. Follow any credit to its archive record.</p>
+        <ul>
+          <li>Orlando seen by Landsat 1, April 10, 1973: <a href="https://eros.usgs.gov/earthshots/orlando-florida-usa" target="_blank" rel="noopener">U.S. Geological Survey, EROS Earthshots</a>. Public domain: USGS states that most images and data from its EROS Center are federally created and reside in the public domain, Landsat products included.</li>
+          <li>Orlando seen by Landsat 5, April 2, 1986: <a href="https://eros.usgs.gov/earthshots/orlando-florida-usa" target="_blank" rel="noopener">U.S. Geological Survey, EROS Earthshots</a>. Public domain, on the same basis.</li>
+        </ul>
+        <p>Story sources: the 407 FYI district history research, drawn from Universal Orlando references, the I-Drive District timeline, Florida Trend's account of the Epic Universe land buyback, and Universal's own opening release. No theme park publicity photography is used on this page, because none consulted was public domain. The sourced district history, street by street, lives on <a href="/district-history.html#universal">the District Histories page</a>.</p>
+      </section>
+    </main>
+
+    <footer>
+      <div class="foot-in">
+        <a class="back-link" href="/">&larr; Back to the full guide</a>
+        <p class="brand-line">407 FYI, an independent Orlando guide. Details can change; confirm before you go.</p>
+        <p>Hand-verified Orlando places · Checked October 2026 · Local Picks are never sponsored · Corrections: <a href="mailto:mail@407.fyi">mail@407.fyi</a></p>
+        <p>Some links on 407 FYI are affiliate or referral links. We may earn a commission or credit at no extra cost to you. They never affect which places we list, rank, or recommend.</p>
+        <p><a href="/privacy.html">Privacy</a></p>
+      </div>
+    </footer>
+
+    <script src="/assets/gsap.min.js"></script>
+    <script src="/assets/ScrollTrigger.min.js"></script>
+    <script>
+    (function () {
+      var reduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      var lowPower = (navigator.deviceMemory && navigator.deviceMemory <= 2) ||
+        (navigator.hardwareConcurrency && navigator.hardwareConcurrency <= 2) ||
+        (navigator.connection && navigator.connection.saveData);
+      if (reduced || lowPower || !window.gsap || !window.ScrollTrigger) {
+        document.documentElement.classList.add('static');
+        var bar = document.getElementById('progress');
+        if (bar) bar.style.display = 'none';
+        return;
+      }
+      gsap.registerPlugin(ScrollTrigger);
+      gsap.to('#progress', { scaleX: 1, ease: 'none',
+        scrollTrigger: { start: 0, end: 'max', scrub: 0.3 } });
+      gsap.from('[data-hero]', { y: 34, opacity: 0, duration: 1.1, stagger: 0.13,
+        ease: 'power3.out', delay: 0.15, clearProps: 'all' });
+      gsap.utils.toArray('[data-reveal]').forEach(function (el) {
+        gsap.from(el, { y: 38, opacity: 0, duration: 0.95, ease: 'power3.out',
+          scrollTrigger: { trigger: el, start: 'top 86%' } });
+      });
+      gsap.utils.toArray('[data-parallax]').forEach(function (img) {
+        gsap.fromTo(img, { yPercent: -7 }, { yPercent: 7, ease: 'none',
+          scrollTrigger: { trigger: img.parentElement, start: 'top bottom', end: 'bottom top', scrub: true } });
+      });
+    })();
+    </script>
+
+<!-- 407 FYI guide chat widget. Self-contained: style + markup + script.
+     Talks to the Supabase chat edge function; answers come only from guide data. -->
+<style id="fyi-chat-css">
+.fyi-chat-btn{position:fixed;right:16px;bottom:16px;z-index:1200;display:flex;align-items:center;gap:8px;
+  padding:11px 16px;border-radius:999px;border:1px solid var(--accent,#d4b573);cursor:pointer;
+  background:var(--surface,#122419);color:var(--headline,#f6edd6);
+  font-family:"Manrope",ui-sans-serif,sans-serif;font-size:14px;font-weight:700;
+  box-shadow:0 8px 24px rgba(0,0,0,.35)}
+.fyi-chat-btn:hover{border-color:var(--focus,#d4b573)}
+.fyi-chat-btn svg{flex:none}
+.fyi-chat-panel{position:fixed;right:16px;bottom:70px;z-index:1200;width:min(384px,calc(100vw - 24px));
+  height:min(580px,calc(100dvh - 96px));display:none;flex-direction:column;overflow:hidden;
+  border-radius:16px;border:1px solid var(--line,#2f4a38);background:var(--surface,#122419);
+  box-shadow:0 18px 48px rgba(0,0,0,.45);font-family:"Manrope",ui-sans-serif,sans-serif}
+.fyi-chat-panel.open{display:flex}
+.fyi-chat-head{padding:14px 16px 10px;border-bottom:1px solid var(--line,#2f4a38);display:flex;gap:10px;align-items:flex-start}
+.fyi-chat-head h2{margin:0;font-family:"Urbanist","Manrope",sans-serif;font-size:19px;color:var(--headline,#f6edd6)}
+.fyi-chat-head p{margin:2px 0 0;font-size:12.5px;color:var(--muted,#c6bba2)}
+.fyi-chat-close{margin-left:auto;background:none;border:0;color:var(--muted,#c6bba2);font-size:20px;cursor:pointer;line-height:1;padding:2px 4px}
+.fyi-chat-msgs{flex:1;overflow-y:auto;padding:14px 14px 6px;display:flex;flex-direction:column;gap:10px}
+.fyi-chat-msg{max-width:88%;padding:9px 12px;border-radius:12px;font-size:14px;line-height:1.45;white-space:normal;overflow-wrap:break-word}
+.fyi-chat-msg p{margin:0 0 9px}
+.fyi-chat-msg p:last-child{margin-bottom:0}
+.fyi-chat-msg.bot{align-self:flex-start;background:var(--soft,#172a1f);color:var(--ink,#f0e8d5);border-bottom-left-radius:4px}
+.fyi-chat-msg.user{align-self:flex-end;background:var(--badge,#223c2b);color:var(--ink,#f0e8d5);border-bottom-right-radius:4px}
+.fyi-chat-msg.thinking{color:var(--muted,#c6bba2);font-style:italic}
+.fyi-chat-note{font:500 12px/1.5 Manrope,system-ui,sans-serif;color:var(--fyi-muted);background:var(--fyi-soft);border:1px dashed var(--fyi-line);border-radius:10px;padding:8px 10px;align-self:flex-start;max-width:96%}
+.fyi-chat-chips{display:flex;flex-wrap:wrap;gap:6px;align-self:flex-start;max-width:96%}
+.fyi-chat-chip{display:inline-block;padding:5px 10px;border-radius:999px;border:1px solid var(--line,#2f4a38);
+  background:var(--bg,#0a1811);color:var(--accent-ink,#d4b573);font-size:12.5px;font-weight:600;text-decoration:none}
+.fyi-chat-chip:hover{border-color:var(--accent,#d4b573)}
+.fyi-chat-chip small{color:var(--muted,#c6bba2);font-weight:500}
+.fyi-chat-form{display:flex;gap:8px;padding:10px;border-top:1px solid var(--line,#2f4a38)}
+.fyi-chat-input{flex:1;padding:10px 12px;border-radius:10px;border:1px solid var(--line,#2f4a38);
+  background:var(--bg,#0a1811);color:var(--ink,#f0e8d5);font:inherit;font-size:14px}
+.fyi-chat-input:focus{outline:2px solid var(--focus,#d4b573);outline-offset:0}
+.fyi-chat-send{padding:10px 14px;border-radius:10px;border:0;cursor:pointer;font:inherit;font-weight:800;
+  background:var(--accent,#d4b573);color:#122419}
+.fyi-chat-send:disabled{opacity:.55;cursor:wait}
+@media (max-width:480px){.fyi-chat-panel{right:8px;bottom:64px}.fyi-chat-btn{right:12px;bottom:12px}}
+</style>
+<button class="fyi-chat-btn" id="fyiChatBtn" aria-haspopup="dialog" aria-expanded="false">
+  <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+  Ask the guide
+</button>
+<section class="fyi-chat-panel" id="fyiChatPanel" role="dialog" aria-label="Ask the 407 FYI guide">
+  <div class="fyi-chat-head">
+    <div>
+      <h2>Ask 407 FYI</h2>
+      <p>Answers only from the guide's own listings.</p>
+    </div>
+    <button class="fyi-chat-close" id="fyiChatClose" aria-label="Close chat">&times;</button>
+  </div>
+  <div class="fyi-chat-msgs" id="fyiChatMsgs"></div>
+  <form class="fyi-chat-form" id="fyiChatForm">
+    <input class="fyi-chat-input" id="fyiChatInput" type="text" autocomplete="off" maxlength="500"
+      placeholder="Ask about places in Orlando..." aria-label="Your question">
+    <button class="fyi-chat-send" id="fyiChatSend" type="submit">Send</button>
+  </form>
+</section>
+<script id="fyi-chat-js">
+(() => {
+  const FN = 'https://xxdgxigwpnezsdvbiawi.supabase.co/functions/v1/chat';
+  const KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inh4ZGd4aWd3cG5lenNkdmJpYXdpIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTE2OTM0MDYsImV4cCI6MjEwNzI2OTQwNn0.3fuj9vjXspT31fQhgcejf4Thmk9yHPc7RSBZ0v97Gw4';
+  const btn = document.getElementById('fyiChatBtn');
+  const panel = document.getElementById('fyiChatPanel');
+  const msgs = document.getElementById('fyiChatMsgs');
+  const form = document.getElementById('fyiChatForm');
+  const input = document.getElementById('fyiChatInput');
+  const send = document.getElementById('fyiChatSend');
+  let opened = false, busy = false, noticeShown = false;
+  const history = [];
+  let visitor = '';
+  try {
+    visitor = localStorage.getItem('fyi-chat-visitor') || '';
+    if (!visitor) {
+      visitor = (crypto.randomUUID ? crypto.randomUUID() : String(Date.now()) + Math.random().toString(36).slice(2));
+      localStorage.setItem('fyi-chat-visitor', visitor);
+    }
+  } catch (e) { visitor = 'anon'; }
+  const track = (name) => { try { if (window.captureEvent) captureEvent(name, {}); else if (window.posthog) posthog.capture(name); } catch (e) {} };
+  const esc = (s) => s.replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+  const fmt = (s) => s.split(/\n\s*\n/).map((para) => '<p>' + esc(para)
+    .replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>')
+    .replace(/^\s*[-*]\s+/gm, '• ')
+    .replace(/mail@407\.fyi/g, '<a href="mailto:mail@407.fyi" style="color:var(--fyi-accent)">mail@407.fyi</a>')
+    .replace(/\n/g, '<br>') + '</p>').join('');
+  function addMsg(cls, text) {
+    const d = document.createElement('div');
+    d.className = 'fyi-chat-msg ' + cls;
+    d.innerHTML = fmt(text);
+    msgs.appendChild(d);
+    msgs.scrollTop = msgs.scrollHeight;
+    return d;
+  }
+  function addChips(venues) {
+    if (!venues || !venues.length) return;
+    const row = document.createElement('div');
+    row.className = 'fyi-chat-chips';
+    for (const v of venues) {
+      const a = document.createElement('a');
+      a.className = 'fyi-chat-chip';
+      a.href = '/venue/' + v.id + '.html';
+      a.innerHTML = esc(v.name) + ' <small>' + esc(v.district || '') + '</small>';
+      row.appendChild(a);
+    }
+    msgs.appendChild(row);
+    msgs.scrollTop = msgs.scrollHeight;
+  }
+  function addGoogleChips(links) {
+    if (!links || !links.length) return;
+    const row = document.createElement('div');
+    row.className = 'fyi-chat-chips';
+    for (const v of links) {
+      const a = document.createElement('a');
+      a.className = 'fyi-chat-chip';
+      a.href = v.url;
+      a.target = '_blank';
+      a.rel = 'noopener';
+      a.innerHTML = esc(v.name) + ' <small>on Google</small>';
+      row.appendChild(a);
+    }
+    msgs.appendChild(row);
+    msgs.scrollTop = msgs.scrollHeight;
+  }
+  function toggle(open) {
+    panel.classList.toggle('open', open);
+    btn.setAttribute('aria-expanded', String(open));
+    if (open) {
+      if (!opened) {
+        opened = true;
+        addMsg('bot', 'Hi, I answer from the 407 FYI guide: date nights, coffee, family spots, neighborhoods, whatever you are after. We are in soft opening, so you get eight questions a day: make them thorough ones, with the neighborhood, the occasion, and the mood in a single ask, and you will get a fuller answer. One more limit: the guide does not list hours, so for hours or a phone number I will point you to the place on Google. What are you looking for?');
+        track('chat_open');
+      }
+      setTimeout(() => input.focus(), 60);
+    }
+  }
+  btn.addEventListener('click', () => toggle(!panel.classList.contains('open')));
+  document.getElementById('fyiChatClose').addEventListener('click', () => toggle(false));
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && panel.classList.contains('open')) toggle(false); });
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const q = input.value.trim();
+    if (!q || busy) return;
+    busy = true; send.disabled = true; input.value = '';
+    addMsg('user', q);
+    history.push({ role: 'user', text: q });
+    const thinking = addMsg('bot thinking', 'Looking through the guide...');
+    try {
+      const ctrl = new AbortController();
+      const timer = setTimeout(() => ctrl.abort(), 30000);
+      const r = await fetch(FN, {
+        method: 'POST',
+        headers: { 'Authorization': 'Bearer ' + KEY, 'apikey': KEY, 'Content-Type': 'application/json' },
+        body: JSON.stringify({ question: q, history: history.slice(0, -1).slice(-6), visitor }),
+        signal: ctrl.signal,
+      });
+      clearTimeout(timer);
+      const data = await r.json();
+      thinking.remove();
+      if (!r.ok || !data.answer) throw new Error('bad response');
+      if (data.notice && !noticeShown) {
+        noticeShown = true;
+        const n = document.createElement('div');
+        n.className = 'fyi-chat-note';
+        n.textContent = data.notice;
+        msgs.appendChild(n);
+      }
+      addMsg('bot', data.answer);
+      addChips(data.venues);
+      addGoogleChips(data.google);
+      history.push({ role: 'assistant', text: data.answer });
+      track('chat_question');
+    } catch (err) {
+      thinking.remove();
+      addMsg('bot', 'Something went wrong on my end. The finder on this page can still help, or try me again in a moment.');
+    }
+    busy = false; send.disabled = false; input.focus();
+  });
+})();
+</script>
+  </body>
+</html>

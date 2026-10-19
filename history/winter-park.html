@@ -1,0 +1,591 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="color-scheme" content="light dark" />
+    <title>Winter Park: The Town That Winter Built | 407 FYI</title>
+    <meta name="description" content="Winter Park began as a drawing: a park, a grand hotel and a grid of streets fitted between the lakes in 1881. Chase and Chapman, Rollins College, the Great Freeze and the logging canals, told against the Park Avenue you can walk today." />
+    <link rel="canonical" href="https://407.fyi/history/winter-park.html" />
+    <meta property="og:title" content="Winter Park: The Town That Winter Built · 407 FYI" />
+    <meta property="og:description" content="A planned town drawn between the lakes in 1881: the grand hotel, the college older than the city, the freeze, and the canals that became the boat tour." />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://407.fyi/history/winter-park.html" />
+    <meta property="og:image" content="https://407.fyi/history/img/lake-osceola-hero.webp" />
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="preload" href="/fonts/manrope-latin.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="/fonts/fonts.css" />
+    <script>
+      try {
+        const savedTheme = localStorage.getItem('white-atlas-theme');
+        document.documentElement.dataset.theme = savedTheme === 'light' || savedTheme === 'dark' ? savedTheme : 'dark';
+      } catch (error) {
+        document.documentElement.dataset.theme = 'dark';
+      }
+    </script>
+<style>
+      /* Night Drive tokens + scene palette (DESIGN.MD: scroll editions and stories) */
+      :root {
+        color-scheme: dark;
+        --bg: #0a1811; --surface: #122419; --soft: #172a1f; --ink: #f0e8d5;
+        --muted: #c6bba2; --line: #2f4a38; --accent: #765b2f; --accent-ink: #d4b573;
+        --headline: #f6edd6; --focus: #d4b573;
+        --g1: #0d1512; --g2: #111c16; --g3: #141f18;
+        --bronze: #c19a5b; --parch: #f4efe1; --sage: #b9bfa4;
+        --pad: clamp(20px, 5vw, 40px);
+      }
+      * { box-sizing: border-box; }
+      @media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
+      body {
+        margin: 0; background: var(--g1); color: var(--ink);
+        font-family: "Manrope", system-ui, sans-serif; line-height: 1.65;
+        overflow-x: hidden;
+      }
+      h1, h2, h3, .display { font-family: "Urbanist", "Manrope", sans-serif; }
+      a { color: var(--accent-ink); }
+      a:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
+      .kicker {
+        font-family: "Urbanist", sans-serif; font-weight: 700; letter-spacing: .24em;
+        font-size: .72rem; text-transform: uppercase; color: var(--bronze); margin: 0 0 16px;
+      }
+      #progress {
+        position: fixed; top: 0; left: 0; right: 0; height: 3px; z-index: 900;
+        background: var(--bronze); transform: scaleX(0); transform-origin: 0 50%;
+      }
+      .static #progress { display: none; }
+
+      /* ---------- full-bleed scenes ---------- */
+      .scene {
+        position: relative; overflow: hidden; isolation: isolate;
+        background: var(--g2);
+      }
+      .scene > img {
+        position: absolute; inset: 0; width: 100%; height: 100%;
+        object-fit: cover; object-position: center; z-index: -2;
+      }
+      .scene::after {
+        content: ""; position: absolute; inset: 0; z-index: -1;
+        background: linear-gradient(180deg, rgba(13,21,18,.52), rgba(13,21,18,.06) 34%, rgba(13,21,18,.10) 62%, rgba(13,21,18,.88));
+      }
+      .scene-hero { min-height: 100svh; display: flex; align-items: flex-end; }
+      .scene-hero .scene-cap { bottom: 64px; }
+      .scene-mid { min-height: 78svh; display: flex; align-items: flex-end; }
+      .scene-in { width: 100%; max-width: 920px; margin: 0 auto; padding: clamp(56px, 10vh, 96px) var(--pad) clamp(40px, 7vh, 64px); }
+      .scene-cap {
+        position: absolute; right: 14px; bottom: 12px; z-index: 2; max-width: min(480px, 78vw);
+        font-size: .72rem; line-height: 1.45; color: rgba(244,239,225,.82); text-align: right;
+        text-shadow: 0 1px 8px rgba(0,0,0,.65);
+      }
+
+      /* ---------- hero ---------- */
+      .crumbs { font-size: .82rem; color: var(--muted); margin: 0 0 30px; text-shadow: 0 1px 8px rgba(0,0,0,.6); }
+      .crumbs a { font-weight: 700; }
+      .hero h1 {
+        font-size: clamp(3.2rem, 11.5vw, 7.6rem); font-weight: 850; line-height: .94;
+        letter-spacing: -.05em; text-transform: uppercase; color: var(--parch);
+        margin: 0 0 18px; text-shadow: 0 2px 26px rgba(0,0,0,.45);
+      }
+      .hero h1 em { font-style: normal; color: var(--bronze); }
+      .hero .era {
+        font-size: clamp(1.08rem, 2.7vw, 1.34rem); line-height: 1.5; color: var(--parch);
+        max-width: 600px; margin: 0; text-shadow: 0 1px 12px rgba(0,0,0,.7);
+      }
+      .anchor-nav { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 34px; }
+      .anchor-nav a {
+        border: 1px solid rgba(193,154,91,.55); border-radius: 999px; padding: 8px 14px;
+        font-size: .82rem; font-weight: 700; text-decoration: none; color: var(--parch);
+        background: rgba(13,21,18,.55); min-height: 42px; display: inline-flex; align-items: center;
+        backdrop-filter: blur(3px);
+      }
+      .anchor-nav a:hover { border-color: var(--bronze); }
+      .scroll-cue { margin: 40px 0 0; font-size: .74rem; letter-spacing: .26em; text-transform: uppercase; color: var(--sage); }
+
+      /* ---------- chapters ---------- */
+      main { display: block; }
+      .chapter { max-width: 760px; margin: 0 auto; padding: clamp(58px, 10vh, 96px) var(--pad) 0; }
+      .chapter h2 {
+        font-size: clamp(2rem, 5.6vw, 3.1rem); line-height: 1.04; letter-spacing: -.03em;
+        color: var(--headline); margin: 0 0 20px;
+      }
+      .chapter p { max-width: 68ch; margin: 0 0 18px; font-size: 1.03rem; }
+      .chapter p.lede { font-size: 1.14rem; color: var(--parch); }
+      .chapter .drop::first-letter {
+        font-family: "Urbanist", sans-serif; font-weight: 800; float: left;
+        font-size: 3.4em; line-height: .82; padding: 6px 10px 0 0; color: var(--bronze);
+      }
+
+      /* ---------- archival plates ---------- */
+      .plate { margin: clamp(30px, 6vh, 52px) auto; max-width: 960px; padding: 0 var(--pad); }
+      .plate figure {
+        margin: 0; background: var(--parch); padding: clamp(8px, 1.6vw, 14px);
+        border-radius: 4px; box-shadow: 0 24px 60px rgba(0,0,0,.5);
+      }
+      .plate img { display: block; width: 100%; height: auto; }
+      .plate figcaption {
+        color: #43503f; font-size: .82rem; line-height: 1.5;
+        padding: 10px 4px 2px;
+      }
+      .plate figcaption strong { color: #22331f; }
+      .plate-narrow { max-width: 700px; }
+      @media (min-width: 900px) {
+        .plate-side { float: right; width: 300px; margin: 6px -40px 18px 28px; padding: 0; }
+        .plate-side figure { box-shadow: 0 16px 40px rgba(0,0,0,.5); }
+      }
+
+      /* ---------- then and now ---------- */
+      .then-now {
+        clear: both; border: 1px solid rgba(193,154,91,.4); border-left: 3px solid var(--bronze);
+        background: var(--g2); border-radius: 0 14px 14px 0;
+        padding: 20px 22px; margin: clamp(30px, 6vh, 48px) 0 6px; max-width: 68ch;
+      }
+      .then-now .tn-label {
+        font-family: "Urbanist", sans-serif; font-weight: 700; letter-spacing: .24em;
+        font-size: .68rem; text-transform: uppercase; color: var(--bronze); margin: 0 0 10px;
+      }
+      .then-now p { margin: 0; color: var(--parch); }
+
+      /* ---------- panels, notes, lists ---------- */
+      .panel { background: var(--g3); border: 1px solid var(--line); border-radius: 14px; padding: 22px 24px; margin: 24px 0 6px; }
+      .panel ul { margin: 0; padding-left: 18px; }
+      .panel li { margin-bottom: 11px; }
+      .panel li:last-child { margin-bottom: 0; }
+      .panel li strong { color: var(--headline); }
+      .note {
+        border-left: 3px solid var(--bronze); background: var(--g2);
+        padding: 14px 18px; border-radius: 0 12px 12px 0; margin: 22px 0 6px; max-width: 68ch;
+      }
+      .note p { margin: 0; font-size: .97rem; }
+
+      /* ---------- handoff + credits ---------- */
+      .handoff { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
+      .btn-big, .btn-ghost {
+        display: inline-flex; align-items: center; min-height: 48px; padding: 12px 22px;
+        border-radius: 999px; font-weight: 800; text-decoration: none; font-size: .95rem;
+      }
+      .btn-big { background: var(--accent); color: #fff; }
+      .btn-big:hover { background: #86682f; }
+      .btn-ghost { border: 1px solid var(--line); color: var(--ink); }
+      .btn-ghost:hover { border-color: var(--bronze); }
+      .credits { max-width: 760px; margin: 0 auto; padding: clamp(48px, 8vh, 72px) var(--pad) 0; }
+      .credits h2 { font-size: 1.15rem; color: var(--headline); margin: 0 0 12px; letter-spacing: -.01em; }
+      .credits p, .credits li { font-size: .86rem; color: var(--muted); }
+      .credits ul { margin: 0 0 16px; padding-left: 18px; }
+      .credits li { margin-bottom: 7px; }
+
+      /* ---------- footer (section shell) ---------- */
+      footer { border-top: 1px solid var(--line); margin-top: clamp(52px, 9vh, 88px); background: var(--bg); }
+      .foot-in { max-width: 860px; margin: 0 auto; padding: 34px var(--pad) 44px; }
+      .foot-in p { color: var(--muted); font-size: .9rem; margin: 0 0 10px; }
+      .foot-in .brand-line { color: var(--ink); font-weight: 700; }
+      .back-link { font-weight: 800; text-decoration: none; display: inline-block; margin-bottom: 16px; }
+</style>
+  </head>
+  <body>
+    <div id="progress" aria-hidden="true"></div>
+
+    <header class="scene scene-hero hero">
+      <img src="/history/img/lake-osceola-hero.webp" alt="Stereoscopic view of Lake Osceola in the 1880s: rowboats on still water, a pine shoreline and a cypress hung with Spanish moss" width="1600" height="1087" fetchpriority="high" />
+      <div class="scene-in">
+        <p class="crumbs"><a href="/history.html">407 FYI History</a> · District Stories</p>
+        <p class="kicker" data-hero>District Story · Winter Park</p>
+        <h1 data-hero>Winter <em>Park</em></h1>
+        <p class="era" data-hero>A park built for the winter, drawn on paper in 1881, and still legible in every street you walk today.</p>
+        <nav class="anchor-nav" data-hero aria-label="Chapters">
+          <a href="#drawing">The Drawing</a>
+          <a href="#seminole">The Grand Hotel</a>
+          <a href="#rollins">The College</a>
+          <a href="#chapel">Chapel and Stage</a>
+          <a href="#freeze">The Freeze</a>
+          <a href="#canals">The Canals</a>
+          <a href="#streets">Street Names</a>
+          <a href="#walk">Walk It Today</a>
+        </nav>
+        <p class="scroll-cue" data-hero>Scroll</p>
+      </div>
+      <p class="scene-cap">Lake Osceola in a stereoscopic view, Robert N. Dennis Collection, New York Public Library. Public domain.</p>
+    </header>
+
+    <main>
+      <section class="chapter" id="drawing">
+        <p class="kicker" data-reveal>Chapter One · 1858 to 1887</p>
+        <h2 data-reveal>A Town Drawn on Paper</h2>
+        <p class="drop" data-reveal>Before Winter Park was a town, it was a shoreline. In 1858, David Mizell Jr. and his family bought eight acres between Lakes Virginia, Mizell and Berry, and the settlement that grew around their homestead took the plain name Lake View. In 1870 it renamed itself Osceola and opened a post office. Then, in 1880, the South Florida Railroad reached the lakes, and the land along the line caught fire with buyers.</p>
+        <p data-reveal>The modern town starts with a February visit. Loring Chase first saw the area in February 1881 and went home to Massachusetts with a plan. With his boyhood friend Oliver Chapman, he bought 600 acres for $13,000, and by late summer the two had platted a town out of the pine flatwoods: a grid of streets, a 10 acre park set beside the railroad tracks, a lakeside site reserved for a grand resort hotel, and Hannibal Square, a Black residential district for the domestic servants and grove workers the resort economy would run on. The Winter Park History Museum describes their goal as a planned community of winter homes for wealthy Northerners, and calls the result the first planned community in Florida.</p>
+        <div class="plate" data-reveal>
+          <figure>
+            <img src="/history/img/town-map-1884.webp" alt="Map of the town of Winter Park published in 1884, showing the street grid fitted between Lake Maitland, Lake Osceola, Lake Mizell and Lake Virginia" width="1000" height="1379" loading="lazy" decoding="async" />
+            <figcaption><strong>The town as drawn, 1884.</strong> The map Chase and Chapman used to sell Winter Park, printed with the Winter Park Floridian. The lakes came first; the grid was fitted between them. Library of Congress, public domain.</figcaption>
+          </figure>
+        </div>
+        <p data-reveal>The name came out of an informal conversation. The city tells it directly: kicking names around, Chase and Chapman decided they wanted something about a park in winter. Winter Park is not a metaphor. It is a literal description of the product being sold, a park-like town for the winter season, and the founders said so themselves.</p>
+        <p data-reveal>In October 1887, Winter Park incorporated as a town, and the deciding votes came from Hannibal Square: rallied by Gus Henderson, its residents voted to bring their neighborhood inside the town limits, and the History Museum records that their vote carried the election. The town became the City of Winter Park in 1925.</p>
+        <div class="then-now" data-reveal>
+          <p class="tn-label">Then and Now</p>
+          <p>The 10 acre park drawn beside the tracks in 1881 is Central Park today, still holding the west side of Park Avenue under the oak canopy. The drawing was never revised. It just grew up around itself.</p>
+        </div>
+      </section>
+
+      <section class="chapter" id="seminole">
+        <p class="kicker" data-reveal>Chapter Two · The Resort Era</p>
+        <h2 data-reveal>The Grand Hotel on the Lake</h2>
+        <p class="drop" data-reveal>Every planned resort needs its palace, and Winter Park's rose on the shore of Lake Osceola. The Seminole Hotel opened on New Year's night 1886, and the city's history lists its wonders like a sales brochure that happens to be true: gas lights, steam heat, an orchestra, a formal dining room and long covered porches built for watching the lake. Northern guests arrived by rail, took the winter air, and wrote home about Florida as if they had found a loophole in the seasons.</p>
+        <div class="plate plate-narrow" data-reveal>
+          <figure>
+            <img src="/history/img/seminole-hotel.webp" alt="The Seminole Hotel, Winter Park's grand lakeside resort hotel, photographed in its first years" width="600" height="373" loading="lazy" decoding="async" />
+            <figcaption><strong>The Seminole Hotel</strong> in its first years, photographed by Stanley J. Morrow. State Archives of Florida, public domain.</figcaption>
+          </figure>
+        </div>
+        <p data-reveal>The resort era peaked early and burned bright. The Seminole was the town's proof of concept, the machine that turned a plat on paper into a society season. Around it, winter residents built their houses along the lakes and named the new streets after the states they had left behind, a habit the street signs still confess today.</p>
+        <div class="then-now" data-reveal>
+          <p class="tn-label">Then and Now</p>
+          <p>The Seminole's long porches are gone, but the lake it faced is still the town's front room. The Albin Polasek Museum keeps a sculptor's home, studio and sculpture gardens on Lake Osceola today, and the Scenic Boat Tour crosses the same water the hotel guests watched from the porch rail.</p>
+        </div>
+      </section>
+
+      <section class="chapter" id="rollins">
+        <p class="kicker" data-reveal>Chapter Three · 1885</p>
+        <h2 data-reveal>A College Older Than the City</h2>
+        <p class="drop" data-reveal>Winter Park was four years along as a plat and not yet a town when it landed a college. In late April 1885, the Florida Congregational Association chose Winter Park as the site of what would become Florida's first four year college. The school was organized in Sanford on April 28, 1885, and classes began in Winter Park that November, two years before the town around it incorporated.</p>
+        <p data-reveal>It was named for Alonzo Rollins, a Chicago industrialist whose leadership gift of land and money came to $50,000, the fortune that turned a mission into a campus. Founded by New England Congregationalists to bring liberal arts education to the Florida frontier, the college was designated Florida's oldest college by a 2004 Florida House resolution. It earned the title honestly: it has simply been here the longest, predating the city charter, the freeze and the century.</p>
+        <div class="plate plate-narrow" data-reveal>
+          <figure>
+            <img src="/history/img/knowles-hall.webp" alt="Old Knowles Hall at Rollins College, the first completed building on campus, about 1900" width="1004" height="656" loading="lazy" decoding="async" />
+            <figcaption><strong>Old Knowles Hall, about 1900.</strong> Knowles Hall, finished in 1886, was the first completed building on the Rollins campus. Public domain.</figcaption>
+          </figure>
+        </div>
+        <div class="then-now" data-reveal>
+          <p class="tn-label">Then and Now</p>
+          <p>The campus still sits where the founders put it, at the lake end of town, and the guide's Scenic Boat Tour still glides past it. A college planted in a four year old resort plat turned out to be the most permanent thing either founder built.</p>
+        </div>
+      </section>
+
+      <section class="chapter" id="chapel">
+        <p class="kicker" data-reveal>Chapter Four · 1932</p>
+        <h2 data-reveal>Prayer and Drama, Side by Side</h2>
+        <p class="drop" data-reveal>In 1926, Frances Knowles Warren and her sister Mabel Knowles Gage gave Rollins $100,000 in memory of their father, a founder of the college: $75,000 to build a chapel and $25,000 to maintain it. President Hamilton Holt hired Ralph Adams Cram, America's foremost church architect, designer of Princeton's chapel and of work at St. John the Divine. The final bill came to $250,000, over $4 million in today's money, spent in the depths of the Great Depression while the faculty took pay cuts to keep the college alive.</p>
+        <p data-reveal>Holt had an argument to win. The students had just voted to end mandatory daily chapel, and he wanted religion back at the center of campus life. Then he read that modern drama was born from Easter Mass services, a child of the church, and the plan doubled: build the new theater beside the chapel, set a cloistered garden between them, link the two with loggias, and let chapel and theater stand in conversation. The Annie Russell Theatre was designed by Richard Kiehnel, and Cram, despite the different authorship, said the pair formed one composition.</p>
+      </section>
+
+      <div class="scene scene-mid">
+        <img src="/history/img/knowles-chapel.webp" alt="Knowles Memorial Chapel at Rollins College, its bell tower and rose window rising above the cloister arches" width="1350" height="1087" loading="lazy" decoding="async" data-parallax />
+        <p class="scene-cap">Knowles Memorial Chapel, photographed for the Historic American Buildings Survey. Library of Congress, public domain.</p>
+      </div>
+
+      <section class="chapter">
+        <p data-reveal>Both buildings were dedicated on the same day, March 29, 1932. In 1936, Franklin D. Roosevelt received an honorary degree inside the chapel. The college historian calls the place, affectionately, a white elephant: a quarter of a million Depression dollars spent to win an argument with the student body. The building won. The argument did not. But the chapel became the picture of Rollins all the same, and it stands on the National Register of Historic Places.</p>
+        <div class="then-now" data-reveal>
+          <p class="tn-label">Then and Now</p>
+          <p>Chapel and theater still face each other across their cloistered garden on the Rollins campus, prayer and drama side by side exactly as they were dedicated in 1932. The tower in the photograph is still the one that rises over the lake end of town.</p>
+        </div>
+      </section>
+
+      <section class="chapter" id="freeze">
+        <p class="kicker" data-reveal>Chapter Five · 1894 to 1904</p>
+        <h2 data-reveal>The Freeze, and the Man Who Replanted the Town</h2>
+        <div class="plate plate-side" data-reveal>
+          <figure>
+            <img src="/history/img/charles-hosmer-morse.webp" alt="Portrait of Charles Hosmer Morse, the Chicago industrialist who settled in Winter Park in 1904" width="697" height="1037" loading="lazy" decoding="async" />
+            <figcaption><strong>Charles Hosmer Morse</strong>, before 1922. Public domain.</figcaption>
+          </figure>
+        </div>
+        <p class="drop" data-reveal>The resort town ran on citrus money and mild weather, and in the winter of 1894 the weather collected its debt. Freezes in December 1894 and again in February 1895, back to back, destroyed the citrus crop and the town's finances with it. Groves died where they stood. The boom that had drawn a railroad, a college and a grand hotel stalled in the cold.</p>
+        <p data-reveal>Recovery arrived in 1904 in the person of Charles Hosmer Morse, the Chicago industrialist behind the Fairbanks Morse Company. Morse settled in Winter Park, bought hundreds of acres, and set about endowing the town he had adopted, deeding land for Central Park and giving ground for a golf course and its clubs. Where Chase and Chapman had drawn the town, Morse landscaped it, and his name settled onto its main boulevard.</p>
+        <div class="then-now" data-reveal>
+          <p class="tn-label">Then and Now</p>
+          <p>Morse's name rides the boulevard, and it is over the door of the Charles Hosmer Morse Museum of American Art on Park Avenue, where the guide sends you for the world's most comprehensive collection of Tiffany, chapel interior included. The park he deeded still anchors the avenue he helped save.</p>
+        </div>
+      </section>
+
+      <section class="chapter" id="canals">
+        <p class="kicker" data-reveal>Chapter Six · The Working Water</p>
+        <h2 data-reveal>Ditches That Became the Main Event</h2>
+        <p class="drop" data-reveal>The prettiest ride in Winter Park started as industrial plumbing. In the late 19th century, canals were dug by hand between the lakes, Maitland, Osceola, Virginia, Mizell and Minnehaha, to float harvested logs down to the sawmills. The chain of lakes was a work yard before it was a postcard.</p>
+        <div class="plate plate-narrow" data-reveal>
+          <figure>
+            <img src="/history/img/lake-osceola-rowboat.webp" alt="A woman and child in a rowboat on Lake Osceola, between 1882 and 1887" width="600" height="440" loading="lazy" decoding="async" />
+            <figcaption><strong>On Lake Osceola, between 1882 and 1887.</strong> The lakes were transport first and scenery second. State Archives of Florida, public domain.</figcaption>
+          </figure>
+        </div>
+        <p data-reveal>In 1938, the work yard changed jobs. The Scenic Boat Tour began carrying passengers through the same cuts, the Venetian Canal and the Fern Canal among them, and marketed Winter Park as the Venice of America. The pitch was shameless and the product was real: still water, the college gliding past, big houses on the shore, and canals narrow enough to brush the ferns.</p>
+        <div class="then-now" data-reveal>
+          <p class="tn-label">Then and Now</p>
+          <p>The tour never stopped. It is in the guide today, still crossing the chain of lakes, still threading the logging ditches past Rollins College and the storied mansions of the shore. The prettiest boat ride in town is a sawmill shortcut that refused to retire.</p>
+        </div>
+      </section>
+
+      <section class="chapter" id="streets">
+        <p class="kicker" data-reveal>The Index in the Street Signs</p>
+        <h2 data-reveal>How the Streets Got Their Names</h2>
+        <p data-reveal>A planned town confesses its plan in its street signs. Winter Park's name the park it was sold on, the industrialist who rescued it, the states its winter people came from, and the men who laid out its roads.</p>
+        <div class="panel" data-reveal>
+          <ul>
+            <li><strong>Park Avenue:</strong> named for the park it borders. The 1881 plat set a 10 acre park beside the railroad tracks, and Central Park still sits on the avenue's west side.</li>
+            <li><strong>Morse Boulevard:</strong> named for Charles Hosmer Morse, the Chicago industrialist behind the Fairbanks Morse Company, who made his home here in 1904, bought hundreds of acres and deeded Central Park to the town. His name is also on the Charles Hosmer Morse Museum of American Art.</li>
+            <li><strong>New York Avenue:</strong> a state name. The History Museum records that winter residents named streets after the states they left.</li>
+            <li><strong>Pennsylvania Avenue:</strong> a state name, from the same History Museum list of streets named for the home states of northern winter residents.</li>
+            <li><strong>Minnesota Avenue:</strong> a state name, from the same list.</li>
+            <li><strong>Georgia Avenue:</strong> a state name, from the same list.</li>
+            <li><strong>Virginia Avenue:</strong> a state name, from the same list.</li>
+            <li><strong>Fairbanks Avenue:</strong> named for Franklin Fairbanks, whose father and uncle founded the E. and T. Fairbanks scale company in 1824. Franklin became its president in 1888 and was a seasonal resident and property owner in Winter Park.</li>
+            <li><strong>Comstock Avenue:</strong> for William C. Comstock, a Chicago grain merchant who in 1885 became a director of the Winter Park Land Company, in charge of laying out roads, railways and buildings, and a charter trustee of Rollins College.</li>
+          </ul>
+        </div>
+        <div class="note" data-reveal>
+          <p>Two famous names stay undocumented, and this page will not invent them. No source consulted says who named New England Avenue, likely as it sounds. Interlachen, often explained as between the lakes or as a nod to Interlaken in Switzerland, is repeated as a likelihood by real estate writing, not documented by a city or museum source. Knowles Avenue likely honors Francis Bangs Knowles, the Rollins benefactor behind Knowles Hall in 1886 and Knowles Memorial Chapel in 1932, but the street's own naming record was not found.</p>
+        </div>
+      </section>
+
+      <section class="chapter" id="walk">
+        <p class="kicker" data-reveal>The Story, On Foot</p>
+        <h2 data-reveal>Walk It Today</h2>
+        <p data-reveal>The whole story fits inside a slow afternoon. Start where the plat started, at Central Park, and walk Park Avenue the way the town was drawn: coffee on the avenue, a table at <a href="/winter-park-district-guide.html">Prato</a>, the Tiffany chapel interior waiting inside the Morse Museum, and Casa Feliz, the historic house museum, keeping the avenue's north end.</p>
+        <p data-reveal>Then give the town back its water. The Polasek Museum's sculpture gardens sit on Lake Osceola, and the Scenic Boat Tour still leaves through the old logging canals, past the college that predates the city, across the lake the stereoscopic cameras photographed when the town was new. Nothing on the route is a reconstruction. It is the drawing, still inhabited.</p>
+        <div class="handoff" data-reveal>
+          <a class="btn-big" href="/winter-park-district-guide.html">The Winter Park district guide</a>
+          <a class="btn-ghost" href="/winter-park-finder.html">Browse Winter Park places</a>
+          <a class="btn-ghost" href="/history.html">More district stories</a>
+        </div>
+      </section>
+
+      <section class="credits">
+        <h2>Images and sources</h2>
+        <p>Every photograph on this page is in the public domain. Follow any credit to its archive record.</p>
+        <ul>
+          <li>Lake Osceola stereoscopic view: Robert N. Dennis Collection of Stereoscopic Views, <a href="https://commons.wikimedia.org/wiki/File:Lake_Osceola,_Winter_Park,_Florida_(NYPL_b11707410-G90F134_026ZF).tiff" target="_blank" rel="noopener">New York Public Library</a>. Public domain.</li>
+          <li>Map of the town of Winter Park, 1884: <a href="https://commons.wikimedia.org/wiki/File:Map_of_the_town_of_Winter_Park,_Orange_Co.,_Florida_LOC_2005628274.jpg" target="_blank" rel="noopener">Library of Congress</a>, Geography and Map Division. Public domain.</li>
+          <li>The Seminole Hotel, photographed by Stanley J. Morrow: <a href="https://commons.wikimedia.org/wiki/File:Front_view_of_the_Seminole_Hotel_-_Winter_Park,_Florida.jpg" target="_blank" rel="noopener">State Archives of Florida</a>. Public domain.</li>
+          <li>Old Knowles Hall postcard, about 1900: <a href="https://commons.wikimedia.org/wiki/File:Old_Knowles_Hall,_Rollins_College,_Winter_Park,_FL.jpg" target="_blank" rel="noopener">Wikimedia Commons</a>. Public domain.</li>
+          <li>Knowles Memorial Chapel: Historic American Buildings Survey, <a href="https://commons.wikimedia.org/wiki/File:VIEW_OF_FRONT_(WEST)_AND_NORTHWEST_SIDES_OF_CHAPEL._-_Knowles_Memorial_Chapel,_1100_Holt_Avenue,_Winter_Park,_Orange_County,_FL_HABS_FLA,48-WIPA,1-1.tif" target="_blank" rel="noopener">Library of Congress</a>. Public domain.</li>
+          <li>Rowboat on Lake Osceola: <a href="https://commons.wikimedia.org/wiki/File:Women_with_child_in_rowboat_on_Lake_Osceola_-_Winter_Park,_Florida.jpg" target="_blank" rel="noopener">State Archives of Florida</a>. Public domain.</li>
+          <li>Charles Hosmer Morse portrait: <a href="https://commons.wikimedia.org/wiki/File:Charles_H_Morse.jpg" target="_blank" rel="noopener">Wikimedia Commons</a>. Public domain.</li>
+        </ul>
+        <p>Story sources: the City of Winter Park, the Winter Park History Museum, Rollins College Archives and the 407 FYI Flashbacks. The sourced district history, street by street, lives on <a href="/district-history.html#winter-park">the District Histories page</a>.</p>
+      </section>
+    </main>
+
+    <footer>
+      <div class="foot-in">
+        <a class="back-link" href="/">&larr; Back to the full guide</a>
+        <p class="brand-line">407 FYI, an independent Orlando guide. Details can change; confirm before you go.</p>
+        <p>Hand-verified Orlando places · Checked October 2026 · Local Picks are never sponsored · Corrections: <a href="mailto:mail@407.fyi">mail@407.fyi</a></p>
+        <p>Some links on 407 FYI are affiliate or referral links. We may earn a commission or credit at no extra cost to you. They never affect which places we list, rank, or recommend.</p>
+        <p><a href="/privacy.html">Privacy</a></p>
+      </div>
+    </footer>
+
+    <script src="/assets/gsap.min.js"></script>
+    <script src="/assets/ScrollTrigger.min.js"></script>
+    <script>
+    (function () {
+      var reduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      var lowPower = (navigator.deviceMemory && navigator.deviceMemory <= 2) ||
+        (navigator.hardwareConcurrency && navigator.hardwareConcurrency <= 2) ||
+        (navigator.connection && navigator.connection.saveData);
+      if (reduced || lowPower || !window.gsap || !window.ScrollTrigger) {
+        document.documentElement.classList.add('static');
+        var bar = document.getElementById('progress');
+        if (bar) bar.style.display = 'none';
+        return;
+      }
+      gsap.registerPlugin(ScrollTrigger);
+      gsap.to('#progress', { scaleX: 1, ease: 'none',
+        scrollTrigger: { start: 0, end: 'max', scrub: 0.3 } });
+      gsap.from('[data-hero]', { y: 34, opacity: 0, duration: 1.1, stagger: 0.13,
+        ease: 'power3.out', delay: 0.15, clearProps: 'all' });
+      gsap.utils.toArray('[data-reveal]').forEach(function (el) {
+        gsap.from(el, { y: 38, opacity: 0, duration: 0.95, ease: 'power3.out',
+          scrollTrigger: { trigger: el, start: 'top 86%' } });
+      });
+      gsap.utils.toArray('[data-parallax]').forEach(function (img) {
+        gsap.fromTo(img, { yPercent: -7 }, { yPercent: 7, ease: 'none',
+          scrollTrigger: { trigger: img.parentElement, start: 'top bottom', end: 'bottom top', scrub: true } });
+      });
+    })();
+    </script>
+
+<!-- 407 FYI guide chat widget. Self-contained: style + markup + script.
+     Talks to the Supabase chat edge function; answers come only from guide data. -->
+<style id="fyi-chat-css">
+.fyi-chat-btn{position:fixed;right:16px;bottom:16px;z-index:1200;display:flex;align-items:center;gap:8px;
+  padding:11px 16px;border-radius:999px;border:1px solid var(--accent,#d4b573);cursor:pointer;
+  background:var(--surface,#122419);color:var(--headline,#f6edd6);
+  font-family:"Manrope",ui-sans-serif,sans-serif;font-size:14px;font-weight:700;
+  box-shadow:0 8px 24px rgba(0,0,0,.35)}
+.fyi-chat-btn:hover{border-color:var(--focus,#d4b573)}
+.fyi-chat-btn svg{flex:none}
+.fyi-chat-panel{position:fixed;right:16px;bottom:70px;z-index:1200;width:min(384px,calc(100vw - 24px));
+  height:min(580px,calc(100dvh - 96px));display:none;flex-direction:column;overflow:hidden;
+  border-radius:16px;border:1px solid var(--line,#2f4a38);background:var(--surface,#122419);
+  box-shadow:0 18px 48px rgba(0,0,0,.45);font-family:"Manrope",ui-sans-serif,sans-serif}
+.fyi-chat-panel.open{display:flex}
+.fyi-chat-head{padding:14px 16px 10px;border-bottom:1px solid var(--line,#2f4a38);display:flex;gap:10px;align-items:flex-start}
+.fyi-chat-head h2{margin:0;font-family:"Urbanist","Manrope",sans-serif;font-size:19px;color:var(--headline,#f6edd6)}
+.fyi-chat-head p{margin:2px 0 0;font-size:12.5px;color:var(--muted,#c6bba2)}
+.fyi-chat-close{margin-left:auto;background:none;border:0;color:var(--muted,#c6bba2);font-size:20px;cursor:pointer;line-height:1;padding:2px 4px}
+.fyi-chat-msgs{flex:1;overflow-y:auto;padding:14px 14px 6px;display:flex;flex-direction:column;gap:10px}
+.fyi-chat-msg{max-width:88%;padding:9px 12px;border-radius:12px;font-size:14px;line-height:1.45;white-space:normal;overflow-wrap:break-word}
+.fyi-chat-msg p{margin:0 0 9px}
+.fyi-chat-msg p:last-child{margin-bottom:0}
+.fyi-chat-msg.bot{align-self:flex-start;background:var(--soft,#172a1f);color:var(--ink,#f0e8d5);border-bottom-left-radius:4px}
+.fyi-chat-msg.user{align-self:flex-end;background:var(--badge,#223c2b);color:var(--ink,#f0e8d5);border-bottom-right-radius:4px}
+.fyi-chat-msg.thinking{color:var(--muted,#c6bba2);font-style:italic}
+.fyi-chat-note{font:500 12px/1.5 Manrope,system-ui,sans-serif;color:var(--fyi-muted);background:var(--fyi-soft);border:1px dashed var(--fyi-line);border-radius:10px;padding:8px 10px;align-self:flex-start;max-width:96%}
+.fyi-chat-chips{display:flex;flex-wrap:wrap;gap:6px;align-self:flex-start;max-width:96%}
+.fyi-chat-chip{display:inline-block;padding:5px 10px;border-radius:999px;border:1px solid var(--line,#2f4a38);
+  background:var(--bg,#0a1811);color:var(--accent-ink,#d4b573);font-size:12.5px;font-weight:600;text-decoration:none}
+.fyi-chat-chip:hover{border-color:var(--accent,#d4b573)}
+.fyi-chat-chip small{color:var(--muted,#c6bba2);font-weight:500}
+.fyi-chat-form{display:flex;gap:8px;padding:10px;border-top:1px solid var(--line,#2f4a38)}
+.fyi-chat-input{flex:1;padding:10px 12px;border-radius:10px;border:1px solid var(--line,#2f4a38);
+  background:var(--bg,#0a1811);color:var(--ink,#f0e8d5);font:inherit;font-size:14px}
+.fyi-chat-input:focus{outline:2px solid var(--focus,#d4b573);outline-offset:0}
+.fyi-chat-send{padding:10px 14px;border-radius:10px;border:0;cursor:pointer;font:inherit;font-weight:800;
+  background:var(--accent,#d4b573);color:#122419}
+.fyi-chat-send:disabled{opacity:.55;cursor:wait}
+@media (max-width:480px){.fyi-chat-panel{right:8px;bottom:64px}.fyi-chat-btn{right:12px;bottom:12px}}
+</style>
+<button class="fyi-chat-btn" id="fyiChatBtn" aria-haspopup="dialog" aria-expanded="false">
+  <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+  Ask the guide
+</button>
+<section class="fyi-chat-panel" id="fyiChatPanel" role="dialog" aria-label="Ask the 407 FYI guide">
+  <div class="fyi-chat-head">
+    <div>
+      <h2>Ask 407 FYI</h2>
+      <p>Answers only from the guide's own listings.</p>
+    </div>
+    <button class="fyi-chat-close" id="fyiChatClose" aria-label="Close chat">&times;</button>
+  </div>
+  <div class="fyi-chat-msgs" id="fyiChatMsgs"></div>
+  <form class="fyi-chat-form" id="fyiChatForm">
+    <input class="fyi-chat-input" id="fyiChatInput" type="text" autocomplete="off" maxlength="500"
+      placeholder="Ask about places in Orlando..." aria-label="Your question">
+    <button class="fyi-chat-send" id="fyiChatSend" type="submit">Send</button>
+  </form>
+</section>
+<script id="fyi-chat-js">
+(() => {
+  const FN = 'https://xxdgxigwpnezsdvbiawi.supabase.co/functions/v1/chat';
+  const KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inh4ZGd4aWd3cG5lenNkdmJpYXdpIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTE2OTM0MDYsImV4cCI6MjEwNzI2OTQwNn0.3fuj9vjXspT31fQhgcejf4Thmk9yHPc7RSBZ0v97Gw4';
+  const btn = document.getElementById('fyiChatBtn');
+  const panel = document.getElementById('fyiChatPanel');
+  const msgs = document.getElementById('fyiChatMsgs');
+  const form = document.getElementById('fyiChatForm');
+  const input = document.getElementById('fyiChatInput');
+  const send = document.getElementById('fyiChatSend');
+  let opened = false, busy = false, noticeShown = false;
+  const history = [];
+  let visitor = '';
+  try {
+    visitor = localStorage.getItem('fyi-chat-visitor') || '';
+    if (!visitor) {
+      visitor = (crypto.randomUUID ? crypto.randomUUID() : String(Date.now()) + Math.random().toString(36).slice(2));
+      localStorage.setItem('fyi-chat-visitor', visitor);
+    }
+  } catch (e) { visitor = 'anon'; }
+  const track = (name) => { try { if (window.captureEvent) captureEvent(name, {}); else if (window.posthog) posthog.capture(name); } catch (e) {} };
+  const esc = (s) => s.replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+  const fmt = (s) => s.split(/\n\s*\n/).map((para) => '<p>' + esc(para)
+    .replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>')
+    .replace(/^\s*[-*]\s+/gm, '• ')
+    .replace(/mail@407\.fyi/g, '<a href="mailto:mail@407.fyi" style="color:var(--fyi-accent)">mail@407.fyi</a>')
+    .replace(/\n/g, '<br>') + '</p>').join('');
+  function addMsg(cls, text) {
+    const d = document.createElement('div');
+    d.className = 'fyi-chat-msg ' + cls;
+    d.innerHTML = fmt(text);
+    msgs.appendChild(d);
+    msgs.scrollTop = msgs.scrollHeight;
+    return d;
+  }
+  function addChips(venues) {
+    if (!venues || !venues.length) return;
+    const row = document.createElement('div');
+    row.className = 'fyi-chat-chips';
+    for (const v of venues) {
+      const a = document.createElement('a');
+      a.className = 'fyi-chat-chip';
+      a.href = '/venue/' + v.id + '.html';
+      a.innerHTML = esc(v.name) + ' <small>' + esc(v.district || '') + '</small>';
+      row.appendChild(a);
+    }
+    msgs.appendChild(row);
+    msgs.scrollTop = msgs.scrollHeight;
+  }
+  function addGoogleChips(links) {
+    if (!links || !links.length) return;
+    const row = document.createElement('div');
+    row.className = 'fyi-chat-chips';
+    for (const v of links) {
+      const a = document.createElement('a');
+      a.className = 'fyi-chat-chip';
+      a.href = v.url;
+      a.target = '_blank';
+      a.rel = 'noopener';
+      a.innerHTML = esc(v.name) + ' <small>on Google</small>';
+      row.appendChild(a);
+    }
+    msgs.appendChild(row);
+    msgs.scrollTop = msgs.scrollHeight;
+  }
+  function toggle(open) {
+    panel.classList.toggle('open', open);
+    btn.setAttribute('aria-expanded', String(open));
+    if (open) {
+      if (!opened) {
+        opened = true;
+        addMsg('bot', 'Hi, I answer from the 407 FYI guide: date nights, coffee, family spots, neighborhoods, whatever you are after. We are in soft opening, so you get eight questions a day: make them thorough ones, with the neighborhood, the occasion, and the mood in a single ask, and you will get a fuller answer. One more limit: the guide does not list hours, so for hours or a phone number I will point you to the place on Google. What are you looking for?');
+        track('chat_open');
+      }
+      setTimeout(() => input.focus(), 60);
+    }
+  }
+  btn.addEventListener('click', () => toggle(!panel.classList.contains('open')));
+  document.getElementById('fyiChatClose').addEventListener('click', () => toggle(false));
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && panel.classList.contains('open')) toggle(false); });
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const q = input.value.trim();
+    if (!q || busy) return;
+    busy = true; send.disabled = true; input.value = '';
+    addMsg('user', q);
+    history.push({ role: 'user', text: q });
+    const thinking = addMsg('bot thinking', 'Looking through the guide...');
+    try {
+      const ctrl = new AbortController();
+      const timer = setTimeout(() => ctrl.abort(), 30000);
+      const r = await fetch(FN, {
+        method: 'POST',
+        headers: { 'Authorization': 'Bearer ' + KEY, 'apikey': KEY, 'Content-Type': 'application/json' },
+        body: JSON.stringify({ question: q, history: history.slice(0, -1).slice(-6), visitor }),
+        signal: ctrl.signal,
+      });
+      clearTimeout(timer);
+      const data = await r.json();
+      thinking.remove();
+      if (!r.ok || !data.answer) throw new Error('bad response');
+      if (data.notice && !noticeShown) {
+        noticeShown = true;
+        const n = document.createElement('div');
+        n.className = 'fyi-chat-note';
+        n.textContent = data.notice;
+        msgs.appendChild(n);
+      }
+      addMsg('bot', data.answer);
+      addChips(data.venues);
+      addGoogleChips(data.google);
+      history.push({ role: 'assistant', text: data.answer });
+      track('chat_question');
+    } catch (err) {
+      thinking.remove();
+      addMsg('bot', 'Something went wrong on my end. The finder on this page can still help, or try me again in a moment.');
+    }
+    busy = false; send.disabled = false; input.focus();
+  });
+})();
+</script>
+  </body>
+</html>

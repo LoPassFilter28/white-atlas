@@ -1,0 +1,514 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="color-scheme" content="light dark" />
+    <title>Disney Springs: The Town That Never Was | 407 FYI</title>
+    <meta name="description" content="Disney Springs has a documented timeline that runs from the Lake Buena Vista Shopping Village in 1975 to the Town Center opening in 2016, and an invented 1800s town history written for the 2015 rebrand. This page keeps the two apart." />
+    <link rel="canonical" href="https://407.fyi/history/disney-springs.html" />
+    <meta property="og:title" content="Disney Springs: The Town That Never Was · 407 FYI" />
+    <meta property="og:description" content="The real dates are 1975 to 2016. The 1850s rancher, the bottling company and the natural springs are Disney fiction, and this page labels them as fiction." />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://407.fyi/history/disney-springs.html" />
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="preload" href="/fonts/manrope-latin.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="/fonts/fonts.css" />
+    <script>
+      try {
+        const savedTheme = localStorage.getItem('white-atlas-theme');
+        document.documentElement.dataset.theme = savedTheme === 'light' || savedTheme === 'dark' ? savedTheme : 'dark';
+      } catch (error) {
+        document.documentElement.dataset.theme = 'dark';
+      }
+    </script>
+<style>
+      /* Night Drive tokens + scene palette (DESIGN.MD: scroll editions and stories) */
+      :root {
+        color-scheme: dark;
+        --bg: #0a1811; --surface: #122419; --soft: #172a1f; --ink: #f0e8d5;
+        --muted: #c6bba2; --line: #2f4a38; --accent: #765b2f; --accent-ink: #d4b573;
+        --headline: #f6edd6; --focus: #d4b573;
+        --g1: #0d1512; --g2: #111c16; --g3: #141f18;
+        --bronze: #c19a5b; --parch: #f4efe1; --sage: #b9bfa4;
+        --pad: clamp(20px, 5vw, 40px);
+      }
+      * { box-sizing: border-box; }
+      @media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
+      body {
+        margin: 0; background: var(--g1); color: var(--ink);
+        font-family: "Manrope", system-ui, sans-serif; line-height: 1.65;
+        overflow-x: hidden;
+      }
+      h1, h2, h3, .display { font-family: "Urbanist", "Manrope", sans-serif; }
+      a { color: var(--accent-ink); }
+      a:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
+      .kicker {
+        font-family: "Urbanist", sans-serif; font-weight: 700; letter-spacing: .24em;
+        font-size: .72rem; text-transform: uppercase; color: var(--bronze); margin: 0 0 16px;
+      }
+      #progress {
+        position: fixed; top: 0; left: 0; right: 0; height: 3px; z-index: 900;
+        background: var(--bronze); transform: scaleX(0); transform-origin: 0 50%;
+      }
+      .static #progress { display: none; }
+
+      /* ---------- full-bleed scenes ---------- */
+      .scene {
+        position: relative; overflow: hidden; isolation: isolate;
+        background: var(--g2);
+      }
+      .scene > img {
+        position: absolute; inset: 0; width: 100%; height: 100%;
+        object-fit: cover; object-position: center; z-index: -2;
+      }
+      .scene::after {
+        content: ""; position: absolute; inset: 0; z-index: -1;
+        background: linear-gradient(180deg, rgba(13,21,18,.52), rgba(13,21,18,.06) 34%, rgba(13,21,18,.10) 62%, rgba(13,21,18,.88));
+      }
+      .scene-hero { min-height: 100svh; display: flex; align-items: flex-end; }
+      .scene-hero .scene-cap { bottom: 64px; }
+      .scene-mid { min-height: 78svh; display: flex; align-items: flex-end; }
+      .scene-in { width: 100%; max-width: 920px; margin: 0 auto; padding: clamp(56px, 10vh, 96px) var(--pad) clamp(40px, 7vh, 64px); }
+      .scene-cap {
+        position: absolute; right: 14px; bottom: 12px; z-index: 2; max-width: min(480px, 78vw);
+        font-size: .72rem; line-height: 1.45; color: rgba(244,239,225,.82); text-align: right;
+        text-shadow: 0 1px 8px rgba(0,0,0,.65);
+      }
+
+      /* ---------- hero ---------- */
+      .crumbs { font-size: .82rem; color: var(--muted); margin: 0 0 30px; text-shadow: 0 1px 8px rgba(0,0,0,.6); }
+      .crumbs a { font-weight: 700; }
+      .hero h1 {
+        font-size: clamp(3.2rem, 11.5vw, 7.6rem); font-weight: 850; line-height: .94;
+        letter-spacing: -.05em; text-transform: uppercase; color: var(--parch);
+        margin: 0 0 18px; text-shadow: 0 2px 26px rgba(0,0,0,.45);
+      }
+      .hero h1 em { font-style: normal; color: var(--bronze); }
+      .hero .era {
+        font-size: clamp(1.08rem, 2.7vw, 1.34rem); line-height: 1.5; color: var(--parch);
+        max-width: 600px; margin: 0; text-shadow: 0 1px 12px rgba(0,0,0,.7);
+      }
+      .anchor-nav { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 34px; }
+      .anchor-nav a {
+        border: 1px solid rgba(193,154,91,.55); border-radius: 999px; padding: 8px 14px;
+        font-size: .82rem; font-weight: 700; text-decoration: none; color: var(--parch);
+        background: rgba(13,21,18,.55); min-height: 42px; display: inline-flex; align-items: center;
+        backdrop-filter: blur(3px);
+      }
+      .anchor-nav a:hover { border-color: var(--bronze); }
+      .scroll-cue { margin: 40px 0 0; font-size: .74rem; letter-spacing: .26em; text-transform: uppercase; color: var(--sage); }
+
+      /* ---------- chapters ---------- */
+      main { display: block; }
+      .chapter { max-width: 760px; margin: 0 auto; padding: clamp(58px, 10vh, 96px) var(--pad) 0; }
+      .chapter h2 {
+        font-size: clamp(2rem, 5.6vw, 3.1rem); line-height: 1.04; letter-spacing: -.03em;
+        color: var(--headline); margin: 0 0 20px;
+      }
+      .chapter p { max-width: 68ch; margin: 0 0 18px; font-size: 1.03rem; }
+      .chapter p.lede { font-size: 1.14rem; color: var(--parch); }
+      .chapter .drop::first-letter {
+        font-family: "Urbanist", sans-serif; font-weight: 800; float: left;
+        font-size: 3.4em; line-height: .82; padding: 6px 10px 0 0; color: var(--bronze);
+      }
+
+      /* ---------- archival plates ---------- */
+      .plate { margin: clamp(30px, 6vh, 52px) auto; max-width: 960px; padding: 0 var(--pad); }
+      .plate figure {
+        margin: 0; background: var(--parch); padding: clamp(8px, 1.6vw, 14px);
+        border-radius: 4px; box-shadow: 0 24px 60px rgba(0,0,0,.5);
+      }
+      .plate img { display: block; width: 100%; height: auto; }
+      .plate figcaption {
+        color: #43503f; font-size: .82rem; line-height: 1.5;
+        padding: 10px 4px 2px;
+      }
+      .plate figcaption strong { color: #22331f; }
+      .plate-narrow { max-width: 700px; }
+      @media (min-width: 900px) {
+        .plate-side { float: right; width: 300px; margin: 6px -40px 18px 28px; padding: 0; }
+        .plate-side figure { box-shadow: 0 16px 40px rgba(0,0,0,.5); }
+      }
+
+      /* ---------- then and now ---------- */
+      .then-now {
+        clear: both; border: 1px solid rgba(193,154,91,.4); border-left: 3px solid var(--bronze);
+        background: var(--g2); border-radius: 0 14px 14px 0;
+        padding: 20px 22px; margin: clamp(30px, 6vh, 48px) 0 6px; max-width: 68ch;
+      }
+      .then-now .tn-label {
+        font-family: "Urbanist", sans-serif; font-weight: 700; letter-spacing: .24em;
+        font-size: .68rem; text-transform: uppercase; color: var(--bronze); margin: 0 0 10px;
+      }
+      .then-now p { margin: 0; color: var(--parch); }
+
+      /* ---------- panels, notes, lists ---------- */
+      .panel { background: var(--g3); border: 1px solid var(--line); border-radius: 14px; padding: 22px 24px; margin: 24px 0 6px; }
+      .panel ul { margin: 0; padding-left: 18px; }
+      .panel li { margin-bottom: 11px; }
+      .panel li:last-child { margin-bottom: 0; }
+      .panel li strong { color: var(--headline); }
+      .note {
+        border-left: 3px solid var(--bronze); background: var(--g2);
+        padding: 14px 18px; border-radius: 0 12px 12px 0; margin: 22px 0 6px; max-width: 68ch;
+      }
+      .note p { margin: 0; font-size: .97rem; }
+
+      /* ---------- handoff + credits ---------- */
+      .handoff { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
+      .btn-big, .btn-ghost {
+        display: inline-flex; align-items: center; min-height: 48px; padding: 12px 22px;
+        border-radius: 999px; font-weight: 800; text-decoration: none; font-size: .95rem;
+      }
+      .btn-big { background: var(--accent); color: #fff; }
+      .btn-big:hover { background: #86682f; }
+      .btn-ghost { border: 1px solid var(--line); color: var(--ink); }
+      .btn-ghost:hover { border-color: var(--bronze); }
+      .credits { max-width: 760px; margin: 0 auto; padding: clamp(48px, 8vh, 72px) var(--pad) 0; }
+      .credits h2 { font-size: 1.15rem; color: var(--headline); margin: 0 0 12px; letter-spacing: -.01em; }
+      .credits p, .credits li { font-size: .86rem; color: var(--muted); }
+      .credits ul { margin: 0 0 16px; padding-left: 18px; }
+      .credits li { margin-bottom: 7px; }
+
+      /* ---------- footer (section shell) ---------- */
+      footer { border-top: 1px solid var(--line); margin-top: clamp(52px, 9vh, 88px); background: var(--bg); }
+      .foot-in { max-width: 860px; margin: 0 auto; padding: 34px var(--pad) 44px; }
+      .foot-in p { color: var(--muted); font-size: .9rem; margin: 0 0 10px; }
+      .foot-in .brand-line { color: var(--ink); font-weight: 700; }
+      .back-link { font-weight: 800; text-decoration: none; display: inline-block; margin-bottom: 16px; }
+</style>
+  </head>
+  <body>
+    <div id="progress" aria-hidden="true"></div>
+
+    <header class="scene scene-hero hero">
+      <div class="scene-in">
+        <p class="crumbs"><a href="/history.html">407 FYI History</a> · District Stories</p>
+        <p class="kicker" data-hero>District Story · Disney Springs</p>
+        <h1 data-hero>Disney <em>Springs</em></h1>
+        <p class="era" data-hero>A shopping village opened in 1975, a town history written for a 2015 rebrand, and springs built to match the story. This is the documented version, told straight.</p>
+        <nav class="anchor-nav" data-hero aria-label="Chapters">
+          <a href="#city">The City Underneath</a>
+          <a href="#village">The Shopping Village</a>
+          <a href="#pleasure">Pleasure Island</a>
+          <a href="#rebrand">The Rebrand</a>
+          <a href="#streets">Street Names</a>
+          <a href="#walk">Walk It Today</a>
+        </nav>
+        <p class="scroll-cue" data-hero>Scroll</p>
+      </div>
+    </header>
+
+    <main>
+      <section class="chapter" id="city">
+        <p class="kicker" data-reveal>Chapter One · 1967 to 1969</p>
+        <h2 data-reveal>A City Signed Into Law</h2>
+        <p class="drop" data-reveal>Before there was a shopping district here, there was a government. On May 12, 1967, Florida law signed that day incorporated the City of Reedy Creek, alongside the law creating the Reedy Creek Improvement District and the law incorporating Bay Lake. Disney had not just bought land. The state granted the company its own government over roughly 25,000 acres, with its own building codes, fire department, utilities and roads, and two tiny company towns, Bay Lake and Lake Buena Vista, incorporated inside it.</p>
+        <p data-reveal>After boundary changes in 1969, the City of Reedy Creek was renamed the City of Lake Buena Vista. The Buena Vista name is documented properly, and it comes from California, not from a Florida settler. D23 records Disney legal counsel Bob Foster saying he would name the city for the street address of the Disney Studio in Burbank, Buena Vista Street, Spanish for good view. A Burbank street name, carried across the country and set down on a Florida city, is the oldest name underneath this district, and it is real.</p>
+        <div class="then-now" data-reveal>
+          <p class="tn-label">Then and Now</p>
+          <p>The city name never left. Disney Springs still sits in Lake Buena Vista, and the Burbank street name still rides the main road along the district, Buena Vista Drive, past every venue in the guide today.</p>
+        </div>
+      </section>
+
+      <section class="chapter" id="village">
+        <p class="kicker" data-reveal>Chapter Two · 1975 to 1989</p>
+        <h2 data-reveal>The Shopping Village on the Lake</h2>
+        <p class="drop" data-reveal>The district itself opened on March 22, 1975 as the Lake Buena Vista Shopping Village. D23 describes it as the centerpiece of Lake Buena Vista, sited along the shores of Village Lake, built as clusters of boutique and handicraft shops. No springs, no ranch, no 1800s town: a shopping village, opened on a documented date, beside a lake.</p>
+        <p data-reveal>Then the names began to turn over. A retheming in 1977 transformed it into Walt Disney World Village, and in 1989 it became Disney Village Marketplace. The Flashbacks card for this district counts the lives plainly: five names in all, from the 1975 village through Downtown Disney to Disney Springs in 2015. A place that feels like it has had other lives feels that way because it has, and every one of them is on the record.</p>
+        <div class="then-now" data-reveal>
+          <p class="tn-label">Then and Now</p>
+          <p>The original 1975 village side of the district survives as the Marketplace, one of the four neighborhoods the guide walks today. The shops have turned over completely since the boutique and handicraft clusters of 1975, but the ground they stood on, along Village Lake, is the same ground.</p>
+        </div>
+      </section>
+
+      <section class="chapter" id="pleasure">
+        <p class="kicker" data-reveal>Chapter Three · 1989 to 2008</p>
+        <h2 data-reveal>Pleasure Island and the Downtown Disney Years</h2>
+        <p class="drop" data-reveal>Next door to the Marketplace, a second district opened on May 1, 1989: Pleasure Island, a separately gated nightclub district that required an admission ticket. It operated to September 27, 2008. For nearly two decades, the village by day and the island by night were two different products sharing one shoreline.</p>
+        <p data-reveal>In 1997 a third area, the West Side, opened, offering the House of Blues, Cirque du Soleil, DisneyQuest and Bongos Cuban Cafe. The three areas were drawn together under a new name: Downtown Disney. That is the name a generation of Orlando visitors still uses by reflex, and the Flashbacks card nods to it directly: if you remember Downtown Disney, you are dating yourself.</p>
+        <div class="then-now" data-reveal>
+          <p class="tn-label">Then and Now</p>
+          <p>Two names from the 1997 West Side opening are still on the guide's pages today: the House of Blues, and Cirque du Soleil, now listed as Drawn to Life: Cirque du Soleil. The gated island itself is gone, replaced in the 2015 retheme by The Landing.</p>
+        </div>
+      </section>
+
+      <section class="chapter" id="rebrand">
+        <p class="kicker" data-reveal>Chapter Four · 2013 to 2016</p>
+        <h2 data-reveal>The Rebrand, and the Springs That Are Not</h2>
+        <p class="drop" data-reveal>On March 14, 2013, Walt Disney Parks and Resorts chairman Tom Staggs announced that Downtown Disney would be redesigned and renamed Disney Springs, a three year project with new tenants, two parking structures and a near doubling of the mall area. The complex was officially renamed on September 29, 2015, with four interconnected neighborhoods: The Landing, Marketplace, West Side and Town Center. Town Center, built south of The Landing on former surface parking lots, opened on May 15, 2016.</p>
+        <p data-reveal>Here is the distinction this whole page exists to make. The springs in the name refer to the invented town story, not to a documented historic settlement on the site. The springs at Town Center that visitors photograph are artificial, constructed as the centerpiece of the retheme. There was no historic natural spring town here. The water is real. The history attached to it is not.</p>
+        <div class="note" data-reveal>
+          <p>Disney's invented lore, labeled as lore: for the 2015 rebrand, Walt Disney Imagineering wrote a fictional history in which a cattle rancher discovered the town's namesake springs in the mid 1800s and the town grew outward from them. Later retellings name the rancher as Martin Sinclair, who with his wife Clara is said in the story to have discovered the water source in 1850, settled there and named the ranch Glowing Oak. In the story, the Springs Bottling Company bottled the spring water at the site now occupied by Morimoto Asia, whose building keeps a bottling company sign and a chandelier made from a former bottle conveyance system as props. Each neighborhood was assigned an era: The Landing as the town's transportation hub around the 1900s, the Marketplace to the 1930s and 1940s, Town Center as a 1920s Spanish Revival business district, the West Side as a 1950s exposition. Imagineer Theron Skees summed the fiction up at the 2013 announcement: the story is really of a small town that grew up around a natural spring, not unlike lots of small towns in Florida. None of that ranch, bottling plant or 1850 town history is documented real history for this site. It is corporate backstory, good storytelling that announces itself as storytelling only if somebody says so. This page says so. Pleasure Island's lore is the same species: the name comes from the fictional location in Disney's 1940 film Pinocchio, and its legend centered on a fictitious owner, Merriweather Adam Pleasure, presented by Disney as a legend, not a documented person.</p>
+        </div>
+        <div class="then-now" data-reveal>
+          <p class="tn-label">Then and Now</p>
+          <p>The fiction is still standing, and you can eat dinner inside it: the guide lists Morimoto Asia today, in the building that keeps the invented Springs Bottling Company sign as a story prop. Enjoy the prop for what it is, a prop, and the springs at Town Center for what they are, a constructed centerpiece from 2016.</p>
+        </div>
+      </section>
+
+      <section class="chapter" id="streets">
+        <p class="kicker" data-reveal>The Index in the Street Signs</p>
+        <h2 data-reveal>How the Streets Got Their Names</h2>
+        <p data-reveal>This district barely has streets to name. Its map is written in one real road name, carried from Burbank, and a set of internal area names, some documented and real, some assigned an era by the invented lore. Both kinds are labeled below, the way the record labels them.</p>
+        <div class="panel" data-reveal>
+          <ul>
+            <li><strong>Buena Vista Drive:</strong> the main road along the district, carrying the Buena Vista name documented above, from Buena Vista Street in Burbank. It was widened, with a new bus terminal and a new Interstate 4 exit ramp, as part of the Disney Springs traffic upgrade.</li>
+            <li><strong>Marketplace:</strong> the internal area name for the original 1975 shopping village side of the district, retained through the Walt Disney World Village and Disney Village Marketplace eras. In the invented lore it is assigned a 1930s and 1940s American Craftsman era.</li>
+            <li><strong>The Landing:</strong> the internal area name created in the 2015 retheme for the former Pleasure Island site, presented in the lore as the town's transportation hub and marina in repurposed industrial buildings.</li>
+            <li><strong>Town Center:</strong> the internal area name created for the new district built south of The Landing, opened May 15, 2016, and assigned a fictional 1920s Spanish Revival era in the lore. The real construction date is 2016.</li>
+            <li><strong>West Side:</strong> the internal area name dating to the real 1997 expansion that joined the Marketplace and Pleasure Island as Downtown Disney. In the lore it was reimagined as an exposition circa the 1950s.</li>
+            <li><strong>Pleasure Island:</strong> the former internal area name, 1989 to 2008, for the gated nightclub district now called The Landing. Its name originates from the fictional location in the 1940 film Pinocchio, with an invented legend about Merriweather Adam Pleasure added by Disney.</li>
+          </ul>
+        </div>
+        <div class="note" data-reveal>
+          <p>No further street name origins for this district are documented in the sources consulted, and this page will not invent them. Beyond Buena Vista Drive, the names on this map are internal area names rather than street names, and several of their dates belong to the lore, not the record. Where the two disagree, the record is the one printed here.</p>
+        </div>
+      </section>
+
+      <section class="chapter" id="walk">
+        <p class="kicker" data-reveal>The Story, On Foot</p>
+        <h2 data-reveal>Walk It Today</h2>
+        <p data-reveal>Walk it in the order it was built. Start at the Marketplace end, the ground the 1975 shopping village opened on, where the guide sends you to Gideon's Bakehouse (Disney Springs Flagship) and The Ganachery. Cross to The Landing, the former Pleasure Island ground, for dinner at Morimoto Asia inside the bottling company fiction, Chef Art Smith's Homecomin', Jaleo, The Polite Pig or Wine Bar George. Then stand in Town Center and look at the springs, knowing exactly what they are: constructed in the 2015 to 2016 build, beautiful, and honest about nothing until somebody tells you.</p>
+        <p data-reveal>Finish on the water and with the music, the way the guide frames the night: The Boathouse &amp; Vintage Amphicars and Paddlefish on the lake the 1975 village was built beside, Raglan Road and the House of Blues after dark, and Drawn to Life: Cirque du Soleil carrying the West Side tradition that started in 1997. No park ticket required, and no invented past required either. The real one, five names deep, is enough.</p>
+        <div class="handoff" data-reveal>
+          <a class="btn-big" href="/disney-springs-district-guide.html">The Disney Springs district guide</a>
+          <a class="btn-ghost" href="/disney-springs-finder.html">Browse Disney Springs places</a>
+          <a class="btn-ghost" href="/history.html">More district stories</a>
+        </div>
+      </section>
+
+      <section class="credits">
+        <h2>Images and sources</h2>
+        <p>This page carries no photographs, on purpose. Disney photography of this district is corporate work, not public domain material, and no verifiable public domain photograph of the Lake Buena Vista or Village Lake area was found in the Florida Memory, Library of Congress or Wikimedia Commons records consulted. Rather than borrow an image this page has no right to, the hero is typographic.</p>
+        <p>Story sources: D23, the official Disney fan club's account of Lake Buena Vista and the 1975 shopping village; the Laws of Florida, Chapter 67-1965, signed May 12, 1967; the Disney Springs reference entry for the 2013 announcement, the September 29, 2015 renaming and the May 15, 2016 Town Center opening; and the 407 FYI Flashbacks. The sourced district history, street by street, lives on <a href="/district-history.html#disney-springs">the District Histories page</a>.</p>
+      </section>
+    </main>
+
+        <footer>
+      <div class="foot-in">
+        <a class="back-link" href="/">&larr; Back to the full guide</a>
+        <p class="brand-line">407 FYI, an independent Orlando guide. Details can change; confirm before you go.</p>
+        <p>Hand-verified Orlando places · Checked October 2026 · Local Picks are never sponsored · Corrections: <a href="mailto:mail@407.fyi">mail@407.fyi</a></p>
+        <p>Some links on 407 FYI are affiliate or referral links. We may earn a commission or credit at no extra cost to you. They never affect which places we list, rank, or recommend.</p>
+        <p><a href="/privacy.html">Privacy</a></p>
+      </div>
+    </footer>
+
+    <script src="/assets/gsap.min.js"></script>
+    <script src="/assets/ScrollTrigger.min.js"></script>
+    <script>
+    (function () {
+      var reduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      var lowPower = (navigator.deviceMemory && navigator.deviceMemory <= 2) ||
+        (navigator.hardwareConcurrency && navigator.hardwareConcurrency <= 2) ||
+        (navigator.connection && navigator.connection.saveData);
+      if (reduced || lowPower || !window.gsap || !window.ScrollTrigger) {
+        document.documentElement.classList.add('static');
+        var bar = document.getElementById('progress');
+        if (bar) bar.style.display = 'none';
+        return;
+      }
+      gsap.registerPlugin(ScrollTrigger);
+      gsap.to('#progress', { scaleX: 1, ease: 'none',
+        scrollTrigger: { start: 0, end: 'max', scrub: 0.3 } });
+      gsap.from('[data-hero]', { y: 34, opacity: 0, duration: 1.1, stagger: 0.13,
+        ease: 'power3.out', delay: 0.15, clearProps: 'all' });
+      gsap.utils.toArray('[data-reveal]').forEach(function (el) {
+        gsap.from(el, { y: 38, opacity: 0, duration: 0.95, ease: 'power3.out',
+          scrollTrigger: { trigger: el, start: 'top 86%' } });
+      });
+      gsap.utils.toArray('[data-parallax]').forEach(function (img) {
+        gsap.fromTo(img, { yPercent: -7 }, { yPercent: 7, ease: 'none',
+          scrollTrigger: { trigger: img.parentElement, start: 'top bottom', end: 'bottom top', scrub: true } });
+      });
+    })();
+    </script>
+
+<!-- 407 FYI guide chat widget. Self-contained: style + markup + script.
+     Talks to the Supabase chat edge function; answers come only from guide data. -->
+<style id="fyi-chat-css">
+.fyi-chat-btn{position:fixed;right:16px;bottom:16px;z-index:1200;display:flex;align-items:center;gap:8px;
+  padding:11px 16px;border-radius:999px;border:1px solid var(--accent,#d4b573);cursor:pointer;
+  background:var(--surface,#122419);color:var(--headline,#f6edd6);
+  font-family:"Manrope",ui-sans-serif,sans-serif;font-size:14px;font-weight:700;
+  box-shadow:0 8px 24px rgba(0,0,0,.35)}
+.fyi-chat-btn:hover{border-color:var(--focus,#d4b573)}
+.fyi-chat-btn svg{flex:none}
+.fyi-chat-panel{position:fixed;right:16px;bottom:70px;z-index:1200;width:min(384px,calc(100vw - 24px));
+  height:min(580px,calc(100dvh - 96px));display:none;flex-direction:column;overflow:hidden;
+  border-radius:16px;border:1px solid var(--line,#2f4a38);background:var(--surface,#122419);
+  box-shadow:0 18px 48px rgba(0,0,0,.45);font-family:"Manrope",ui-sans-serif,sans-serif}
+.fyi-chat-panel.open{display:flex}
+.fyi-chat-head{padding:14px 16px 10px;border-bottom:1px solid var(--line,#2f4a38);display:flex;gap:10px;align-items:flex-start}
+.fyi-chat-head h2{margin:0;font-family:"Urbanist","Manrope",sans-serif;font-size:19px;color:var(--headline,#f6edd6)}
+.fyi-chat-head p{margin:2px 0 0;font-size:12.5px;color:var(--muted,#c6bba2)}
+.fyi-chat-close{margin-left:auto;background:none;border:0;color:var(--muted,#c6bba2);font-size:20px;cursor:pointer;line-height:1;padding:2px 4px}
+.fyi-chat-msgs{flex:1;overflow-y:auto;padding:14px 14px 6px;display:flex;flex-direction:column;gap:10px}
+.fyi-chat-msg{max-width:88%;padding:9px 12px;border-radius:12px;font-size:14px;line-height:1.45;white-space:normal;overflow-wrap:break-word}
+.fyi-chat-msg p{margin:0 0 9px}
+.fyi-chat-msg p:last-child{margin-bottom:0}
+.fyi-chat-msg.bot{align-self:flex-start;background:var(--soft,#172a1f);color:var(--ink,#f0e8d5);border-bottom-left-radius:4px}
+.fyi-chat-msg.user{align-self:flex-end;background:var(--badge,#223c2b);color:var(--ink,#f0e8d5);border-bottom-right-radius:4px}
+.fyi-chat-msg.thinking{color:var(--muted,#c6bba2);font-style:italic}
+.fyi-chat-note{font:500 12px/1.5 Manrope,system-ui,sans-serif;color:var(--fyi-muted);background:var(--fyi-soft);border:1px dashed var(--fyi-line);border-radius:10px;padding:8px 10px;align-self:flex-start;max-width:96%}
+.fyi-chat-chips{display:flex;flex-wrap:wrap;gap:6px;align-self:flex-start;max-width:96%}
+.fyi-chat-chip{display:inline-block;padding:5px 10px;border-radius:999px;border:1px solid var(--line,#2f4a38);
+  background:var(--bg,#0a1811);color:var(--accent-ink,#d4b573);font-size:12.5px;font-weight:600;text-decoration:none}
+.fyi-chat-chip:hover{border-color:var(--accent,#d4b573)}
+.fyi-chat-chip small{color:var(--muted,#c6bba2);font-weight:500}
+.fyi-chat-form{display:flex;gap:8px;padding:10px;border-top:1px solid var(--line,#2f4a38)}
+.fyi-chat-input{flex:1;padding:10px 12px;border-radius:10px;border:1px solid var(--line,#2f4a38);
+  background:var(--bg,#0a1811);color:var(--ink,#f0e8d5);font:inherit;font-size:14px}
+.fyi-chat-input:focus{outline:2px solid var(--focus,#d4b573);outline-offset:0}
+.fyi-chat-send{padding:10px 14px;border-radius:10px;border:0;cursor:pointer;font:inherit;font-weight:800;
+  background:var(--accent,#d4b573);color:#122419}
+.fyi-chat-send:disabled{opacity:.55;cursor:wait}
+@media (max-width:480px){.fyi-chat-panel{right:8px;bottom:64px}.fyi-chat-btn{right:12px;bottom:12px}}
+</style>
+<button class="fyi-chat-btn" id="fyiChatBtn" aria-haspopup="dialog" aria-expanded="false">
+  <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+  Ask the guide
+</button>
+<section class="fyi-chat-panel" id="fyiChatPanel" role="dialog" aria-label="Ask the 407 FYI guide">
+  <div class="fyi-chat-head">
+    <div>
+      <h2>Ask 407 FYI</h2>
+      <p>Answers only from the guide's own listings.</p>
+    </div>
+    <button class="fyi-chat-close" id="fyiChatClose" aria-label="Close chat">&times;</button>
+  </div>
+  <div class="fyi-chat-msgs" id="fyiChatMsgs"></div>
+  <form class="fyi-chat-form" id="fyiChatForm">
+    <input class="fyi-chat-input" id="fyiChatInput" type="text" autocomplete="off" maxlength="500"
+      placeholder="Ask about places in Orlando..." aria-label="Your question">
+    <button class="fyi-chat-send" id="fyiChatSend" type="submit">Send</button>
+  </form>
+</section>
+<script id="fyi-chat-js">
+(() => {
+  const FN = 'https://xxdgxigwpnezsdvbiawi.supabase.co/functions/v1/chat';
+  const KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inh4ZGd4aWd3cG5lenNkdmJpYXdpIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTE2OTM0MDYsImV4cCI6MjEwNzI2OTQwNn0.3fuj9vjXspT31fQhgcejf4Thmk9yHPc7RSBZ0v97Gw4';
+  const btn = document.getElementById('fyiChatBtn');
+  const panel = document.getElementById('fyiChatPanel');
+  const msgs = document.getElementById('fyiChatMsgs');
+  const form = document.getElementById('fyiChatForm');
+  const input = document.getElementById('fyiChatInput');
+  const send = document.getElementById('fyiChatSend');
+  let opened = false, busy = false, noticeShown = false;
+  const history = [];
+  let visitor = '';
+  try {
+    visitor = localStorage.getItem('fyi-chat-visitor') || '';
+    if (!visitor) {
+      visitor = (crypto.randomUUID ? crypto.randomUUID() : String(Date.now()) + Math.random().toString(36).slice(2));
+      localStorage.setItem('fyi-chat-visitor', visitor);
+    }
+  } catch (e) { visitor = 'anon'; }
+  const track = (name) => { try { if (window.captureEvent) captureEvent(name, {}); else if (window.posthog) posthog.capture(name); } catch (e) {} };
+  const esc = (s) => s.replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+  const fmt = (s) => s.split(/\n\s*\n/).map((para) => '<p>' + esc(para)
+    .replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>')
+    .replace(/^\s*[-*]\s+/gm, '• ')
+    .replace(/mail@407\.fyi/g, '<a href="mailto:mail@407.fyi" style="color:var(--fyi-accent)">mail@407.fyi</a>')
+    .replace(/\n/g, '<br>') + '</p>').join('');
+  function addMsg(cls, text) {
+    const d = document.createElement('div');
+    d.className = 'fyi-chat-msg ' + cls;
+    d.innerHTML = fmt(text);
+    msgs.appendChild(d);
+    msgs.scrollTop = msgs.scrollHeight;
+    return d;
+  }
+  function addChips(venues) {
+    if (!venues || !venues.length) return;
+    const row = document.createElement('div');
+    row.className = 'fyi-chat-chips';
+    for (const v of venues) {
+      const a = document.createElement('a');
+      a.className = 'fyi-chat-chip';
+      a.href = '/venue/' + v.id + '.html';
+      a.innerHTML = esc(v.name) + ' <small>' + esc(v.district || '') + '</small>';
+      row.appendChild(a);
+    }
+    msgs.appendChild(row);
+    msgs.scrollTop = msgs.scrollHeight;
+  }
+  function addGoogleChips(links) {
+    if (!links || !links.length) return;
+    const row = document.createElement('div');
+    row.className = 'fyi-chat-chips';
+    for (const v of links) {
+      const a = document.createElement('a');
+      a.className = 'fyi-chat-chip';
+      a.href = v.url;
+      a.target = '_blank';
+      a.rel = 'noopener';
+      a.innerHTML = esc(v.name) + ' <small>on Google</small>';
+      row.appendChild(a);
+    }
+    msgs.appendChild(row);
+    msgs.scrollTop = msgs.scrollHeight;
+  }
+  function toggle(open) {
+    panel.classList.toggle('open', open);
+    btn.setAttribute('aria-expanded', String(open));
+    if (open) {
+      if (!opened) {
+        opened = true;
+        addMsg('bot', 'Hi, I answer from the 407 FYI guide: date nights, coffee, family spots, neighborhoods, whatever you are after. We are in soft opening, so you get eight questions a day: make them thorough ones, with the neighborhood, the occasion, and the mood in a single ask, and you will get a fuller answer. One more limit: the guide does not list hours, so for hours or a phone number I will point you to the place on Google. What are you looking for?');
+        track('chat_open');
+      }
+      setTimeout(() => input.focus(), 60);
+    }
+  }
+  btn.addEventListener('click', () => toggle(!panel.classList.contains('open')));
+  document.getElementById('fyiChatClose').addEventListener('click', () => toggle(false));
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && panel.classList.contains('open')) toggle(false); });
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const q = input.value.trim();
+    if (!q || busy) return;
+    busy = true; send.disabled = true; input.value = '';
+    addMsg('user', q);
+    history.push({ role: 'user', text: q });
+    const thinking = addMsg('bot thinking', 'Looking through the guide...');
+    try {
+      const ctrl = new AbortController();
+      const timer = setTimeout(() => ctrl.abort(), 30000);
+      const r = await fetch(FN, {
+        method: 'POST',
+        headers: { 'Authorization': 'Bearer ' + KEY, 'apikey': KEY, 'Content-Type': 'application/json' },
+        body: JSON.stringify({ question: q, history: history.slice(0, -1).slice(-6), visitor }),
+        signal: ctrl.signal,
+      });
+      clearTimeout(timer);
+      const data = await r.json();
+      thinking.remove();
+      if (!r.ok || !data.answer) throw new Error('bad response');
+      if (data.notice && !noticeShown) {
+        noticeShown = true;
+        const n = document.createElement('div');
+        n.className = 'fyi-chat-note';
+        n.textContent = data.notice;
+        msgs.appendChild(n);
+      }
+      addMsg('bot', data.answer);
+      addChips(data.venues);
+      addGoogleChips(data.google);
+      history.push({ role: 'assistant', text: data.answer });
+      track('chat_question');
+    } catch (err) {
+      thinking.remove();
+      addMsg('bot', 'Something went wrong on my end. The finder on this page can still help, or try me again in a moment.');
+    }
+    busy = false; send.disabled = false; input.focus();
+  });
+})();
+</script>
+  </body>
+</html>

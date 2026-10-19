@@ -1,0 +1,601 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="color-scheme" content="light dark" />
+    <title>Downtown Orlando: The Name Nobody Can Prove | 407 FYI</title>
+    <meta name="description" content="Downtown Orlando grew from Fort Gatlin and a courthouse plat into a citrus hub and a 1920s skyline. The Orlando and Lake Eola name legends, the Beacham, the Angebilt, Church Street and the street names, told against the downtown you can walk today." />
+    <link rel="canonical" href="https://407.fyi/history/downtown.html" />
+    <meta property="og:title" content="Downtown Orlando: The Name Nobody Can Prove · 407 FYI" />
+    <meta property="og:description" content="A courthouse town that became a citrus hub and a skyline: the name legends of Orlando and Lake Eola, the Beacham and the Angebilt, Church Street, and the streets that remember it all." />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://407.fyi/history/downtown.html" />
+    <meta property="og:image" content="https://407.fyi/history/img/downtown-courthouse-eola.webp" />
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="preload" href="/fonts/manrope-latin.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="/fonts/fonts.css" />
+    <script>
+      try {
+        const savedTheme = localStorage.getItem('white-atlas-theme');
+        document.documentElement.dataset.theme = savedTheme === 'light' || savedTheme === 'dark' ? savedTheme : 'dark';
+      } catch (error) {
+        document.documentElement.dataset.theme = 'dark';
+      }
+    </script>
+<style>
+      /* Night Drive tokens + scene palette (DESIGN.MD: scroll editions and stories) */
+      :root {
+        color-scheme: dark;
+        --bg: #0a1811; --surface: #122419; --soft: #172a1f; --ink: #f0e8d5;
+        --muted: #c6bba2; --line: #2f4a38; --accent: #765b2f; --accent-ink: #d4b573;
+        --headline: #f6edd6; --focus: #d4b573;
+        --g1: #0d1512; --g2: #111c16; --g3: #141f18;
+        --bronze: #c19a5b; --parch: #f4efe1; --sage: #b9bfa4;
+        --pad: clamp(20px, 5vw, 40px);
+      }
+      * { box-sizing: border-box; }
+      @media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
+      body {
+        margin: 0; background: var(--g1); color: var(--ink);
+        font-family: "Manrope", system-ui, sans-serif; line-height: 1.65;
+        overflow-x: hidden;
+      }
+      h1, h2, h3, .display { font-family: "Urbanist", "Manrope", sans-serif; }
+      a { color: var(--accent-ink); }
+      a:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
+      .kicker {
+        font-family: "Urbanist", sans-serif; font-weight: 700; letter-spacing: .24em;
+        font-size: .72rem; text-transform: uppercase; color: var(--bronze); margin: 0 0 16px;
+      }
+      #progress {
+        position: fixed; top: 0; left: 0; right: 0; height: 3px; z-index: 900;
+        background: var(--bronze); transform: scaleX(0); transform-origin: 0 50%;
+      }
+      .static #progress { display: none; }
+
+      /* ---------- full-bleed scenes ---------- */
+      .scene {
+        position: relative; overflow: hidden; isolation: isolate;
+        background: var(--g2);
+      }
+      .scene > img {
+        position: absolute; inset: 0; width: 100%; height: 100%;
+        object-fit: cover; object-position: center; z-index: -2;
+      }
+      .scene::after {
+        content: ""; position: absolute; inset: 0; z-index: -1;
+        background: linear-gradient(180deg, rgba(13,21,18,.52), rgba(13,21,18,.06) 34%, rgba(13,21,18,.10) 62%, rgba(13,21,18,.88));
+      }
+      .scene-hero { min-height: 100svh; display: flex; align-items: flex-end; }
+      .scene-hero .scene-cap { bottom: 64px; }
+      .scene-mid { min-height: 78svh; display: flex; align-items: flex-end; }
+      .scene-in { width: 100%; max-width: 920px; margin: 0 auto; padding: clamp(56px, 10vh, 96px) var(--pad) clamp(40px, 7vh, 64px); }
+      .scene-cap {
+        position: absolute; right: 14px; bottom: 12px; z-index: 2; max-width: min(480px, 78vw);
+        font-size: .72rem; line-height: 1.45; color: rgba(244,239,225,.82); text-align: right;
+        text-shadow: 0 1px 8px rgba(0,0,0,.65);
+      }
+
+      /* ---------- hero ---------- */
+      .crumbs { font-size: .82rem; color: var(--muted); margin: 0 0 30px; text-shadow: 0 1px 8px rgba(0,0,0,.6); }
+      .crumbs a { font-weight: 700; }
+      .hero h1 {
+        font-size: clamp(3.2rem, 11.5vw, 7.6rem); font-weight: 850; line-height: .94;
+        letter-spacing: -.05em; text-transform: uppercase; color: var(--parch);
+        margin: 0 0 18px; text-shadow: 0 2px 26px rgba(0,0,0,.45);
+      }
+      .hero h1 em { font-style: normal; color: var(--bronze); }
+      .hero .era {
+        font-size: clamp(1.08rem, 2.7vw, 1.34rem); line-height: 1.5; color: var(--parch);
+        max-width: 600px; margin: 0; text-shadow: 0 1px 12px rgba(0,0,0,.7);
+      }
+      .anchor-nav { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 34px; }
+      .anchor-nav a {
+        border: 1px solid rgba(193,154,91,.55); border-radius: 999px; padding: 8px 14px;
+        font-size: .82rem; font-weight: 700; text-decoration: none; color: var(--parch);
+        background: rgba(13,21,18,.55); min-height: 42px; display: inline-flex; align-items: center;
+        backdrop-filter: blur(3px);
+      }
+      .anchor-nav a:hover { border-color: var(--bronze); }
+      .scroll-cue { margin: 40px 0 0; font-size: .74rem; letter-spacing: .26em; text-transform: uppercase; color: var(--sage); }
+
+      /* ---------- chapters ---------- */
+      main { display: block; }
+      .chapter { max-width: 760px; margin: 0 auto; padding: clamp(58px, 10vh, 96px) var(--pad) 0; }
+      .chapter h2 {
+        font-size: clamp(2rem, 5.6vw, 3.1rem); line-height: 1.04; letter-spacing: -.03em;
+        color: var(--headline); margin: 0 0 20px;
+      }
+      .chapter p { max-width: 68ch; margin: 0 0 18px; font-size: 1.03rem; }
+      .chapter p.lede { font-size: 1.14rem; color: var(--parch); }
+      .chapter .drop::first-letter {
+        font-family: "Urbanist", sans-serif; font-weight: 800; float: left;
+        font-size: 3.4em; line-height: .82; padding: 6px 10px 0 0; color: var(--bronze);
+      }
+
+      /* ---------- archival plates ---------- */
+      .plate { margin: clamp(30px, 6vh, 52px) auto; max-width: 960px; padding: 0 var(--pad); }
+      .plate figure {
+        margin: 0; background: var(--parch); padding: clamp(8px, 1.6vw, 14px);
+        border-radius: 4px; box-shadow: 0 24px 60px rgba(0,0,0,.5);
+      }
+      .plate img { display: block; width: 100%; height: auto; }
+      .plate figcaption {
+        color: #43503f; font-size: .82rem; line-height: 1.5;
+        padding: 10px 4px 2px;
+      }
+      .plate figcaption strong { color: #22331f; }
+      .plate-narrow { max-width: 700px; }
+      @media (min-width: 900px) {
+        .plate-side { float: right; width: 300px; margin: 6px -40px 18px 28px; padding: 0; }
+        .plate-side figure { box-shadow: 0 16px 40px rgba(0,0,0,.5); }
+      }
+
+      /* ---------- then and now ---------- */
+      .then-now {
+        clear: both; border: 1px solid rgba(193,154,91,.4); border-left: 3px solid var(--bronze);
+        background: var(--g2); border-radius: 0 14px 14px 0;
+        padding: 20px 22px; margin: clamp(30px, 6vh, 48px) 0 6px; max-width: 68ch;
+      }
+      .then-now .tn-label {
+        font-family: "Urbanist", sans-serif; font-weight: 700; letter-spacing: .24em;
+        font-size: .68rem; text-transform: uppercase; color: var(--bronze); margin: 0 0 10px;
+      }
+      .then-now p { margin: 0; color: var(--parch); }
+
+      /* ---------- panels, notes, lists ---------- */
+      .panel { background: var(--g3); border: 1px solid var(--line); border-radius: 14px; padding: 22px 24px; margin: 24px 0 6px; }
+      .panel ul { margin: 0; padding-left: 18px; }
+      .panel li { margin-bottom: 11px; }
+      .panel li:last-child { margin-bottom: 0; }
+      .panel li strong { color: var(--headline); }
+      .note {
+        border-left: 3px solid var(--bronze); background: var(--g2);
+        padding: 14px 18px; border-radius: 0 12px 12px 0; margin: 22px 0 6px; max-width: 68ch;
+      }
+      .note p { margin: 0; font-size: .97rem; }
+
+      /* ---------- handoff + credits ---------- */
+      .handoff { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
+      .btn-big, .btn-ghost {
+        display: inline-flex; align-items: center; min-height: 48px; padding: 12px 22px;
+        border-radius: 999px; font-weight: 800; text-decoration: none; font-size: .95rem;
+      }
+      .btn-big { background: var(--accent); color: #fff; }
+      .btn-big:hover { background: #86682f; }
+      .btn-ghost { border: 1px solid var(--line); color: var(--ink); }
+      .btn-ghost:hover { border-color: var(--bronze); }
+      .credits { max-width: 760px; margin: 0 auto; padding: clamp(48px, 8vh, 72px) var(--pad) 0; }
+      .credits h2 { font-size: 1.15rem; color: var(--headline); margin: 0 0 12px; letter-spacing: -.01em; }
+      .credits p, .credits li { font-size: .86rem; color: var(--muted); }
+      .credits ul { margin: 0 0 16px; padding-left: 18px; }
+      .credits li { margin-bottom: 7px; }
+
+      /* ---------- footer (section shell) ---------- */
+      footer { border-top: 1px solid var(--line); margin-top: clamp(52px, 9vh, 88px); background: var(--bg); }
+      .foot-in { max-width: 860px; margin: 0 auto; padding: 34px var(--pad) 44px; }
+      .foot-in p { color: var(--muted); font-size: .9rem; margin: 0 0 10px; }
+      .foot-in .brand-line { color: var(--ink); font-weight: 700; }
+      .back-link { font-weight: 800; text-decoration: none; display: inline-block; margin-bottom: 16px; }
+</style>
+  </head>
+  <body>
+    <div id="progress" aria-hidden="true"></div>
+
+    <header class="scene scene-hero hero">
+      <img src="/history/img/downtown-courthouse-eola.webp" alt="Postcard view of the brick Orange County courthouse with its clock tower, looking across rooftops and trees to Lake Eola, copyright 1904 by Detroit Photographic Co." width="1600" height="1062" fetchpriority="high" />
+      <div class="scene-in">
+        <p class="crumbs"><a href="/history.html">407 FYI History</a> · District Stories</p>
+        <p class="kicker" data-hero>District Story · Downtown Orlando</p>
+        <h1 data-hero>Downtown <em>Orlando</em></h1>
+        <p class="era" data-hero>A fort, a courthouse plat and a citrus boom built it. A name nobody can prove still runs it.</p>
+        <nav class="anchor-nav" data-hero aria-label="Chapters">
+          <a href="#fort">The Fort</a>
+          <a href="#name">The Name</a>
+          <a href="#golden">Rail and Citrus</a>
+          <a href="#eola">Lake Eola</a>
+          <a href="#skyline">First Skyline</a>
+          <a href="#church">Church Street</a>
+          <a href="#streets">Street Names</a>
+          <a href="#walk">Walk It Today</a>
+        </nav>
+        <p class="scroll-cue" data-hero>Scroll</p>
+      </div>
+      <p class="scene-cap">Court House and Lake Eola, Orlando, a Detroit Photographic Co. postcard of 1904. New York Public Library. Public domain.</p>
+    </header>
+
+    <main>
+      <section class="chapter" id="fort">
+        <p class="kicker" data-reveal>Chapter One · 1838 to 1875</p>
+        <h2 data-reveal>A Fort, Then a Courthouse Town</h2>
+        <p class="drop" data-reveal>Downtown Orlando grew south of a fort. Fort Gatlin was established in 1838 during the Second Seminole War, and the settlement that formed in its shadow took a settler's name first: renamed Jernigan in 1843, after Aaron Jernigan, the first permanent settler. The fort is gone. The town it sheltered is the downtown on the map today.</p>
+        <p data-reveal>The turn came in 1856, when Orlando was named the county seat. Judge James Gamble Speer offered four acres for a new courthouse and town square, and when the official plat was filed it was labeled the Town of Orlando. The town incorporated in 1875, centered around the original Orange County Courthouse between Court Avenue and Magnolia Avenue, the street then named Main Street.</p>
+        <div class="plate" data-reveal>
+          <figure>
+            <img src="/history/img/downtown-birds-eye-1884.webp" alt="Bird's eye view map of Orlando in 1884: a street grid and scattered buildings set among orange groves and pines between Lake Eola and Lake Lucerne" width="1400" height="806" loading="lazy" decoding="async" />
+            <figcaption><strong>Orlando from above, 1884.</strong> The bird's eye view published by J. J. Stoner for Sinclair's Real Estate Agency: the courthouse town four years after the railroad, its grid fitted between Lake Eola and Lake Lucerne. Wikimedia Commons, public domain.</figcaption>
+          </figure>
+        </div>
+        <p data-reveal>That is the whole founding kit: a fort site, a courthouse gift, a filed plat and an incorporation. Everything downtown since, the railroad, the citrus money, the towers, has been built outward from those four acres and the grid Speer helped draw.</p>
+        <div class="then-now" data-reveal>
+          <p class="tn-label">Then and Now</p>
+          <p>The plat is still legible on foot. Court Avenue and Magnolia Avenue still frame the courthouse core the town was drawn around, and Lake Eola Park &amp; Linton E. Allen Memorial Fountain holds the east side of that core, right where the 1884 view puts the lake at the town's edge.</p>
+        </div>
+      </section>
+
+      <section class="chapter" id="name">
+        <p class="kicker" data-reveal>Chapter Two · 1857</p>
+        <h2 data-reveal>The Name Nobody Can Prove</h2>
+        <p class="drop" data-reveal>Start with what the record will not give you. The Florida Department of State says it flatly: the town was renamed Orlando in 1857, and the true origin of the name remains a mystery. What circulates instead are legends, and this page labels them that way.</p>
+        <p data-reveal>Legend one is the soldier. The popular story holds that a soldier named Orlando Reeves was killed in the Second Seminole War, in some versions while firing a warning shot, and that the place became known as Orlando's grave. It is a good story with no soldier in it: muster rolls show no Orlando Reeves, Reed or Jennings ever serving in the Seminole Wars, and military records report no soldier deaths in what is now Orange County. The legend was still set in stone when Cherokee Junior High students placed a monument to Reeves at Lake Eola Park in 1939.</p>
+        <p data-reveal>Legend two is the real man with the similar name. Orlando Savage Rees did exist, with a large volume of documentation placing him in Florida in the 1830s and a plantation venture at Spring Garden in Volusia County. His descendants came forward in the 1950s with a family legend that the city was named for him, and that the famous tree carving was his camping marker, not a grave. An eyewitness, Kena Fries, remembered the carving reading “Orlando Re-s,” with the middle of the last name illegible and the missing letters presumed to be “eve.”</p>
+        <p data-reveal>What is documented is narrower, and better. Judge Speer proposed the name Orlando at a town meeting. Speer was a Shakespeare fan. The area south of Lake Eola was a popular camping spot on the Fort Mellon to Fort Gatlin Road between 1835 and 1856, with a large tree that had “Orlando” carved into it, treated by early settlers as a landmark. In 1857 the United States Post Office accepted Orlando as the official name. The Shakespeare theory, that Speer named the town for the hero of As You Like It, is the version his own descendants repeat and the one the 1915 book Early Settlers of Orange County prints, and it stays a theory, not a record.</p>
+        <div class="then-now" data-reveal>
+          <p class="tn-label">Then and Now</p>
+          <p>The unprovable name is on everything now, and the legend has an address: the Reeves monument still stands at Lake Eola Park, in the guide's Lake Eola Park &amp; Linton E. Allen Memorial Fountain entry. A city named for a man who may never have existed put his monument by its lake, and kept both.</p>
+        </div>
+      </section>
+
+      <section class="chapter" id="golden">
+        <p class="kicker" data-reveal>Chapter Three · 1880 to 1895</p>
+        <h2 data-reveal>Citrus, Rails and the Golden Era</h2>
+        <div class="plate plate-side" data-reveal>
+          <figure>
+            <img src="/history/img/downtown-orange-grove.webp" alt="Postcard view of an orange grove and pineries in Orlando in 1904, with rooftops and lakes on the horizon" width="824" height="523" loading="lazy" decoding="async" />
+            <figcaption><strong>Orange grove and pineries, 1904.</strong> The crop that made the Golden Era, growing at the edge of town. Detroit Photographic Co. postcard, New York Public Library, public domain.</figcaption>
+          </figure>
+        </div>
+        <p class="drop" data-reveal>The railroad finished what the courthouse started. The South Florida Railroad was completed from Sanford to Orlando in 1880, and the small community boomed with land speculators, citrus and cattle investors, and tourists. A courthouse town with a rail line was suddenly a shipping address.</p>
+        <p data-reveal>The years 1875 to 1895 were Orlando's Golden Era, when it became the hub of the nation's citrus industry. Orange Avenue, the street the railroad age built up, originally dead ended at an orange grove on the north end of town: the main street of a citrus capital ended in the crop that paid for it.</p>
+        <div class="plate" data-reveal>
+          <figure>
+            <img src="/history/img/downtown-orange-avenue.webp" alt="Orange Avenue in 1904: a dirt street running past the long red brick San Juan Hotel, with storefronts receding into the distance" width="827" height="524" loading="lazy" decoding="async" />
+            <figcaption><strong>Orange Avenue, 1904.</strong> The San Juan Hotel runs the length of the block on a dirt avenue. Detroit Photographic Co. postcard, New York Public Library, public domain.</figcaption>
+          </figure>
+        </div>
+        <p data-reveal>Then the weather collected. A three day freeze in 1894 destroyed nearly all the citrus trees in Orange County, and recovery took about 15 years. The Golden Era did not end in an argument or a market. It froze, in three days, a short walk from the avenue it had built.</p>
+        <div class="then-now" data-reveal>
+          <p class="tn-label">Then and Now</p>
+          <p>The grove at the end of Orange Avenue is long gone, and the avenue runs through a working downtown instead. The guide's Orange Avenue addresses include The Beacham &amp; The Social: a century of entertainment on the street the citrus era made, in a building the next skyline chapter put there.</p>
+        </div>
+      </section>
+
+      <section class="chapter" id="eola">
+        <p class="kicker" data-reveal>Chapter Four · 1873 to 1966</p>
+        <h2 data-reveal>Sandy Beach Becomes Lake Eola</h2>
+        <p class="drop" data-reveal>Downtown's lake started as a land purchase with a generous afterlife. Jacob Summerlin arrived in 1873 to purchase 200 acres in what is now downtown, and in 1883 the Summerlin family donated a strip of land around the lake for public use. In 1888, Lake Eola was recognized as a City of Orlando public park, and it has been the core's front yard ever since.</p>
+        <p data-reveal>The name Eola is legend too, in two versions that do not agree. The City's telling: the lake was known to the public as Sandy Beach, and in 1883, when the Summerlin family donated its strip of land, Sandy Beach was renamed Lake Eola in memory of Robert Summerlin's dearly departed sweetheart. The Orlando Land Trust's telling, retelling Eve Bacon's history, says brothers Robert and Samuel Summerlin gave the name Eola to what folks also called Sandy Beach, that Sam suggested it, the name of a girl they both knew, and that when Sam was asked about the lady later, he said he just did not recall. Who Eola was, sweetheart, fiancee or friend, is not settled by these sources, and this page will not pretend otherwise.</p>
+      </section>
+
+      <div class="scene scene-mid">
+        <img src="/history/img/downtown-eola-moonlight.webp" alt="Moonlight on Lake Eola postcard: the downtown skyline lit across the lake under a full moon, with palm fronds on the near shore" width="1400" height="892" loading="lazy" decoding="async" data-parallax />
+        <p class="scene-cap">Moonlight on Lake Eola, a postcard view across the water to the downtown shore. Wikimedia Commons, public domain.</p>
+      </div>
+
+      <section class="chapter">
+        <p data-reveal>The park grew its landmarks one gift at a time. Mayor E. Frank Sperry gifted the Sperry Fountain and its land in 1914, and that smaller fountain has flowed in the southwest corner of the lake for over a century, the one almost everybody walks past. The tiered fountain at the center of the lake was built in 1957, first named the Centennial Fountain, and renamed the Linton E. Allen Memorial Fountain in 1966.</p>
+        <div class="then-now" data-reveal>
+          <p class="tn-label">Then and Now</p>
+          <p>The guide names the whole scene in one entry, Lake Eola Park &amp; Linton E. Allen Memorial Fountain, and its loop might be the city's most walked path. The 1883 gift is still doing the job it was donated for, a beautified lake at the center of downtown, with a skyline standing where the grove shore stood.</p>
+        </div>
+      </section>
+
+      <section class="chapter" id="skyline">
+        <p class="kicker" data-reveal>Chapter Five · 1921 to 1927</p>
+        <h2 data-reveal>The First Skyline</h2>
+        <p class="drop" data-reveal>The 1920s Florida land boom gave downtown its first skyline, and it started with a theater. Braxton Beacham Sr., who had served as Mayor of Orlando in 1907, built the Beacham Theatre, and it opened on December 9, 1921, with Norma Talmadge's The Wonderful Thing, a Pathe News newsreel, and Buster Keaton's The Boat. The Beacham ran vaudeville on what performers called the Straw Hat Circuit, and it introduced talkie films in 1928.</p>
+        <div class="plate plate-narrow" data-reveal>
+          <figure>
+            <img src="/history/img/downtown-beacham-1921.webp" alt="The Beacham Theatre facade in 1921: tiled trim, a marquee canopy over the entrance and storefronts on either side" width="960" height="764" loading="lazy" decoding="async" />
+            <figcaption><strong>The Beacham Theatre in 1921.</strong> The facade in its opening year, the marquee canopy out over Orange Avenue. Wikimedia Commons, public domain.</figcaption>
+          </figure>
+        </div>
+        <p data-reveal>Across the avenue, the hotel race was on. Developer J. F. Ange announced his million dollar, 240 room Angebilt Hotel in late June 1921, designed by architect Murry S. King, and it opened in March 1923 at 37 North Orange Avenue and broke height records. Days before the debut, a daredevil billed as the Human Fly scaled all eleven stories before a crowd of about 10,000, hanging from windowsills by his fingertips to raise money for charity. Downtown's first skyscraper moment was a man hanging off it.</p>
+        <div class="plate plate-narrow" data-reveal>
+          <figure>
+            <img src="/history/img/downtown-san-juan-beacham.webp" alt="Orange Avenue in the 1920s: early automobiles parked in front of the Beacham Theatre, with the tall San Juan Hotel rising behind it" width="600" height="443" loading="lazy" decoding="async" />
+            <figcaption><strong>The San Juan and the Beacham.</strong> The hotel tower and the theater marquee share one Orange Avenue block, the avenue full of early automobiles. State Archives of Florida, public domain.</figcaption>
+          </figure>
+        </div>
+        <p data-reveal>The former bank buildings at 1 North Orange and 100 South Orange followed in 1924, and for a moment the boom looked permanent. It was not. The land boom of 1921 to 1925 had inflated property values fivefold, the bust came in 1926, and building permits cratered within two years. The towers that rose in the boom stood as the skyline for decades, and the 1927 courthouse became a surviving artifact of the boom's civic ambition: it now houses the Orange County Regional History Center.</p>
+        <div class="then-now" data-reveal>
+          <p class="tn-label">Then and Now</p>
+          <p>Both ends of the race are still standing on Orange Avenue. The Angebilt still stands at 37 North Orange Avenue, and the theater is in the guide today as The Beacham &amp; The Social, a century of entertainment on one block, from vaudeville to the present tense.</p>
+        </div>
+      </section>
+
+      <section class="chapter" id="church">
+        <p class="kicker" data-reveal>Chapter Six · 1889 to 1985</p>
+        <h2 data-reveal>A Depot, Then a Destination</h2>
+        <p class="drop" data-reveal>Church Street is where the railroad era and the entertainment era meet. The Old Orlando Railroad Depot, dated 1889, stood at 76 to 78 West Church Street, and for decades the trains were the reason the street existed. The 1889 South Florida Railroad depot anchored downtown while citrus, cattle and tourists moved through it.</p>
+        <div class="plate plate-narrow" data-reveal>
+          <figure>
+            <img src="/history/img/downtown-railroad-depot.webp" alt="The Old Orlando Railroad Depot: a brick station with a round turret, a Southern Express Company sign, passengers on the platform and a rail car at the right" width="600" height="437" loading="lazy" decoding="async" />
+            <figcaption><strong>The depot on Church Street.</strong> The brick railroad depot with its turret over the platform, a train at the curb of the tracks. State Archives of Florida (Florida Memory), public domain.</figcaption>
+          </figure>
+        </div>
+        <p data-reveal>By the 1970s the depot had largely been abandoned. In 1972, entrepreneur Bob Snow purchased the station and the surrounding buildings and announced plans for a downtown shopping and entertainment complex, and in 1976 the station was added to the National Register of Historic Places. The party district downtown is standing on a train station. The tracks came first.</p>
+        <p data-reveal>By 1985, Church Street Station employed 900 people and drew 1.7 million visitors a year, making it the fourth largest tourist attraction in the state, after Walt Disney World, SeaWorld Orlando and Busch Gardens. A railroad depot had become, for a while, one of the biggest draws in Florida.</p>
+        <div class="then-now" data-reveal>
+          <p class="tn-label">Then and Now</p>
+          <p>The depot's second career set downtown's pattern. Church Street still hums under string lights, exactly as the guide describes the downtown night, and the entertainment district Bob Snow built around a depot is the ancestor of the Church Street the guide sends you to after dark.</p>
+        </div>
+      </section>
+
+      <section class="chapter" id="streets">
+        <p class="kicker" data-reveal>The Index in the Street Signs</p>
+        <h2 data-reveal>How the Streets Got Their Names</h2>
+        <p data-reveal>A courthouse town confesses its past in its street signs. Downtown's name a grove, a schoolhouse, a women's club, a surveyor and a city limit, and one famous avenue name turns out to be a 1954 imagining of mansions that had not been built yet.</p>
+        <div class="panel" data-reveal>
+          <ul>
+            <li><strong>Orange Avenue:</strong> named, in one sourced historic district account, because it originally dead ended at an orange grove at the north end of town, during the citrus Golden Era. The simpler claims, that it honors Orange County or the citrus industry in general, were not documented in the sources consulted.</li>
+            <li><strong>Church Street:</strong> not for the church you would guess. A UCF RICHES exhibit notes that the old First Presbyterian Church visible from Church Street is not where the name came from: it came from the old Free Church School a block away, and Orlando Remembered dates that Free Church and school house to 1872.</li>
+            <li><strong>Magnolia Avenue:</strong> downtown's Main Street until the name changed. Main Street ran straight through downtown and was renamed Magnolia Avenue in the late 1950s. Why Magnolia was chosen is not documented.</li>
+            <li><strong>Rosalind Avenue:</strong> named in 1919, and not directly for Shakespeare. The street was Speer Avenue first, then West Street, then Rosalind, after the Rosalind Club, a women's social club founded in 1894, moved its headquarters there. The club's own name was the Shakespeare reference, Rosalind being Orlando's pairing in As You Like It, so the link is real, indirect, and dates to 1919 rather than 1857.</li>
+            <li><strong>Robinson Street:</strong> named for Samuel Robinson, city and county surveyor. A RICHES postcard note adds that East Robinson was named for Samuel Robinson of Emmett, Michigan, who surveyed for Orange County for seventeen years.</li>
+            <li><strong>South Street:</strong> named for its location, as the original southern boundary of the city.</li>
+            <li><strong>Central Boulevard:</strong> originally Central Avenue, documented on a 1919 postcard at Court Avenue. The tidy explanation, that it marks a central east to west dividing line, is plausible and undocumented.</li>
+            <li><strong>Colonial Drive:</strong> before it was Colonial it was Sweet Avenue, named for an old mayor. The Colonial name is attributed, in an essay citing a 1954 Corner Cupboard account, to Jeanette Robinson Murphy, daughter of an early settler, who heard the dirt road was to be paved and imagined it lined with stately Colonial mansions. The SR 50 number dates to the 1945 state renumbering. No source consulted documents a colonial era route behind this name, so that story is not repeated here as fact.</li>
+          </ul>
+        </div>
+        <div class="note" data-reveal>
+          <p>Pine Street, Amelia Street, Livingston Street and Marks Street are all old downtown names with no documented origin in the sources consulted. They are simply old, and old is all the record says.</p>
+        </div>
+      </section>
+
+      <section class="chapter" id="walk">
+        <p class="kicker" data-reveal>The Story, On Foot</p>
+        <h2 data-reveal>Walk It Today</h2>
+        <p data-reveal>The whole story fits inside a slow day, and it starts at the water. Walk the loop at <a href="/downtown-orlando-district-guide.html">Lake Eola Park &amp; Linton E. Allen Memorial Fountain</a>, find the Sperry Fountain in the southwest corner, and look for the Reeves monument the schoolchildren placed in 1939: the legend, the lake and the gift that made the park, all inside one circuit.</p>
+        <p data-reveal>Come off the lake on Rosalind Avenue, named for a club and not directly for a play, and cross to Orange Avenue. The Angebilt still stands at 37 North Orange, The Beacham &amp; The Social keeps the theater's century going, and Kres Chophouse serves dinner inside the 1930s Kress building. Take in a matinee at the Dr. Phillips Center for the Performing Arts, eat at Reyes Mezcaleria, and finish on Church Street, where the depot's block still hums as the lights come on.</p>
+        <div class="handoff" data-reveal>
+          <a class="btn-big" href="/downtown-orlando-district-guide.html">The Downtown Orlando district guide</a>
+          <a class="btn-ghost" href="/downtown-orlando-finder.html">Browse Downtown Orlando places</a>
+          <a class="btn-ghost" href="/history.html">More district stories</a>
+        </div>
+      </section>
+
+      <section class="credits">
+        <h2>Images and sources</h2>
+        <p>Every photograph on this page is in the public domain. Follow any credit to its archive record.</p>
+        <ul>
+          <li>Court House and Lake Eola postcard, Detroit Photographic Co., 1904: <a href="https://commons.wikimedia.org/wiki/File:Court_House_and_Lake_Eola,_Orlando,_Fla_(NYPL_b12647398-67636).tiff" target="_blank" rel="noopener">New York Public Library</a>. Public domain.</li>
+          <li>Bird's eye view of Orlando, 1884, published by J. J. Stoner: <a href="https://commons.wikimedia.org/wiki/File:Bird%27s_Eye_View_of_Orlando_in_Florida_1884_Map.jpg" target="_blank" rel="noopener">Wikimedia Commons</a>. Public domain.</li>
+          <li>Orange Grove and Pineries postcard, Detroit Photographic Co., 1904: <a href="https://commons.wikimedia.org/wiki/File:Orange_Grove_and_Pineries,_Orlando,_Fla_(NBY_429587).jpg" target="_blank" rel="noopener">New York Public Library</a>. Public domain.</li>
+          <li>Hotel San Juan and Orange Avenue postcard, Detroit Photographic Co., 1904: <a href="https://commons.wikimedia.org/wiki/File:Hotel_San_Juan_and_Orange_Avenue,_Orlando,_Fla_(NBY_429485).jpg" target="_blank" rel="noopener">New York Public Library</a>. Public domain.</li>
+          <li>Moonlight on Lake Eola postcard: <a href="https://commons.wikimedia.org/wiki/File:Central_Cigar_%26_Tobacco_Co._D-4_(62537)_-_Moonlight_on_Lake_Eola,_Orlando,_Florida_front.jpg" target="_blank" rel="noopener">Wikimedia Commons</a>. Public domain.</li>
+          <li>The Beacham Theatre in 1921: <a href="https://commons.wikimedia.org/wiki/File:Beacham_Theater_in_1921.jpg" target="_blank" rel="noopener">Wikimedia Commons</a>. Public domain.</li>
+          <li>San Juan Hotel and Beacham Theatre, Orange Avenue: <a href="https://commons.wikimedia.org/wiki/File:San_Juan_Hotel_and_Beacham_Theater_-_Orlando,_Florida.jpg" target="_blank" rel="noopener">State Archives of Florida</a>. Public domain.</li>
+          <li>Old Orlando Railroad Depot: <a href="https://commons.wikimedia.org/wiki/File:Old_Orlando_Railroad_Depot_Florida_Memory.jpg" target="_blank" rel="noopener">State Archives of Florida (Florida Memory)</a>. Public domain.</li>
+        </ul>
+        <p>Story sources: the Florida Department of State, Orlando Remembered, the Orange County Regional History Center, the City of Orlando, UCF RICHES, the Orlando Land Trust and the 407 FYI Flashbacks. The sourced district history, street by street, lives on <a href="/district-history.html#downtown">the District Histories page</a>.</p>
+      </section>
+    </main>
+
+    <footer>
+      <div class="foot-in">
+        <a class="back-link" href="/">&larr; Back to the full guide</a>
+        <p class="brand-line">407 FYI, an independent Orlando guide. Details can change; confirm before you go.</p>
+        <p>Hand-verified Orlando places · Checked October 2026 · Local Picks are never sponsored · Corrections: <a href="mailto:mail@407.fyi">mail@407.fyi</a></p>
+        <p>Some links on 407 FYI are affiliate or referral links. We may earn a commission or credit at no extra cost to you. They never affect which places we list, rank, or recommend.</p>
+        <p><a href="/privacy.html">Privacy</a></p>
+      </div>
+    </footer>
+
+    <script src="/assets/gsap.min.js"></script>
+    <script src="/assets/ScrollTrigger.min.js"></script>
+    <script>
+    (function () {
+      var reduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      var lowPower = (navigator.deviceMemory && navigator.deviceMemory <= 2) ||
+        (navigator.hardwareConcurrency && navigator.hardwareConcurrency <= 2) ||
+        (navigator.connection && navigator.connection.saveData);
+      if (reduced || lowPower || !window.gsap || !window.ScrollTrigger) {
+        document.documentElement.classList.add('static');
+        var bar = document.getElementById('progress');
+        if (bar) bar.style.display = 'none';
+        return;
+      }
+      gsap.registerPlugin(ScrollTrigger);
+      gsap.to('#progress', { scaleX: 1, ease: 'none',
+        scrollTrigger: { start: 0, end: 'max', scrub: 0.3 } });
+      gsap.from('[data-hero]', { y: 34, opacity: 0, duration: 1.1, stagger: 0.13,
+        ease: 'power3.out', delay: 0.15, clearProps: 'all' });
+      gsap.utils.toArray('[data-reveal]').forEach(function (el) {
+        gsap.from(el, { y: 38, opacity: 0, duration: 0.95, ease: 'power3.out',
+          scrollTrigger: { trigger: el, start: 'top 86%' } });
+      });
+      gsap.utils.toArray('[data-parallax]').forEach(function (img) {
+        gsap.fromTo(img, { yPercent: -7 }, { yPercent: 7, ease: 'none',
+          scrollTrigger: { trigger: img.parentElement, start: 'top bottom', end: 'bottom top', scrub: true } });
+      });
+    })();
+    </script>
+
+<!-- 407 FYI guide chat widget. Self-contained: style + markup + script.
+     Talks to the Supabase chat edge function; answers come only from guide data. -->
+<style id="fyi-chat-css">
+.fyi-chat-btn{position:fixed;right:16px;bottom:16px;z-index:1200;display:flex;align-items:center;gap:8px;
+  padding:11px 16px;border-radius:999px;border:1px solid var(--accent,#d4b573);cursor:pointer;
+  background:var(--surface,#122419);color:var(--headline,#f6edd6);
+  font-family:"Manrope",ui-sans-serif,sans-serif;font-size:14px;font-weight:700;
+  box-shadow:0 8px 24px rgba(0,0,0,.35)}
+.fyi-chat-btn:hover{border-color:var(--focus,#d4b573)}
+.fyi-chat-btn svg{flex:none}
+.fyi-chat-panel{position:fixed;right:16px;bottom:70px;z-index:1200;width:min(384px,calc(100vw - 24px));
+  height:min(580px,calc(100dvh - 96px));display:none;flex-direction:column;overflow:hidden;
+  border-radius:16px;border:1px solid var(--line,#2f4a38);background:var(--surface,#122419);
+  box-shadow:0 18px 48px rgba(0,0,0,.45);font-family:"Manrope",ui-sans-serif,sans-serif}
+.fyi-chat-panel.open{display:flex}
+.fyi-chat-head{padding:14px 16px 10px;border-bottom:1px solid var(--line,#2f4a38);display:flex;gap:10px;align-items:flex-start}
+.fyi-chat-head h2{margin:0;font-family:"Urbanist","Manrope",sans-serif;font-size:19px;color:var(--headline,#f6edd6)}
+.fyi-chat-head p{margin:2px 0 0;font-size:12.5px;color:var(--muted,#c6bba2)}
+.fyi-chat-close{margin-left:auto;background:none;border:0;color:var(--muted,#c6bba2);font-size:20px;cursor:pointer;line-height:1;padding:2px 4px}
+.fyi-chat-msgs{flex:1;overflow-y:auto;padding:14px 14px 6px;display:flex;flex-direction:column;gap:10px}
+.fyi-chat-msg{max-width:88%;padding:9px 12px;border-radius:12px;font-size:14px;line-height:1.45;white-space:normal;overflow-wrap:break-word}
+.fyi-chat-msg p{margin:0 0 9px}
+.fyi-chat-msg p:last-child{margin-bottom:0}
+.fyi-chat-msg.bot{align-self:flex-start;background:var(--soft,#172a1f);color:var(--ink,#f0e8d5);border-bottom-left-radius:4px}
+.fyi-chat-msg.user{align-self:flex-end;background:var(--badge,#223c2b);color:var(--ink,#f0e8d5);border-bottom-right-radius:4px}
+.fyi-chat-msg.thinking{color:var(--muted,#c6bba2);font-style:italic}
+.fyi-chat-note{font:500 12px/1.5 Manrope,system-ui,sans-serif;color:var(--fyi-muted);background:var(--fyi-soft);border:1px dashed var(--fyi-line);border-radius:10px;padding:8px 10px;align-self:flex-start;max-width:96%}
+.fyi-chat-chips{display:flex;flex-wrap:wrap;gap:6px;align-self:flex-start;max-width:96%}
+.fyi-chat-chip{display:inline-block;padding:5px 10px;border-radius:999px;border:1px solid var(--line,#2f4a38);
+  background:var(--bg,#0a1811);color:var(--accent-ink,#d4b573);font-size:12.5px;font-weight:600;text-decoration:none}
+.fyi-chat-chip:hover{border-color:var(--accent,#d4b573)}
+.fyi-chat-chip small{color:var(--muted,#c6bba2);font-weight:500}
+.fyi-chat-form{display:flex;gap:8px;padding:10px;border-top:1px solid var(--line,#2f4a38)}
+.fyi-chat-input{flex:1;padding:10px 12px;border-radius:10px;border:1px solid var(--line,#2f4a38);
+  background:var(--bg,#0a1811);color:var(--ink,#f0e8d5);font:inherit;font-size:14px}
+.fyi-chat-input:focus{outline:2px solid var(--focus,#d4b573);outline-offset:0}
+.fyi-chat-send{padding:10px 14px;border-radius:10px;border:0;cursor:pointer;font:inherit;font-weight:800;
+  background:var(--accent,#d4b573);color:#122419}
+.fyi-chat-send:disabled{opacity:.55;cursor:wait}
+@media (max-width:480px){.fyi-chat-panel{right:8px;bottom:64px}.fyi-chat-btn{right:12px;bottom:12px}}
+</style>
+<button class="fyi-chat-btn" id="fyiChatBtn" aria-haspopup="dialog" aria-expanded="false">
+  <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+  Ask the guide
+</button>
+<section class="fyi-chat-panel" id="fyiChatPanel" role="dialog" aria-label="Ask the 407 FYI guide">
+  <div class="fyi-chat-head">
+    <div>
+      <h2>Ask 407 FYI</h2>
+      <p>Answers only from the guide's own listings.</p>
+    </div>
+    <button class="fyi-chat-close" id="fyiChatClose" aria-label="Close chat">&times;</button>
+  </div>
+  <div class="fyi-chat-msgs" id="fyiChatMsgs"></div>
+  <form class="fyi-chat-form" id="fyiChatForm">
+    <input class="fyi-chat-input" id="fyiChatInput" type="text" autocomplete="off" maxlength="500"
+      placeholder="Ask about places in Orlando..." aria-label="Your question">
+    <button class="fyi-chat-send" id="fyiChatSend" type="submit">Send</button>
+  </form>
+</section>
+<script id="fyi-chat-js">
+(() => {
+  const FN = 'https://xxdgxigwpnezsdvbiawi.supabase.co/functions/v1/chat';
+  const KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inh4ZGd4aWd3cG5lenNkdmJpYXdpIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTE2OTM0MDYsImV4cCI6MjEwNzI2OTQwNn0.3fuj9vjXspT31fQhgcejf4Thmk9yHPc7RSBZ0v97Gw4';
+  const btn = document.getElementById('fyiChatBtn');
+  const panel = document.getElementById('fyiChatPanel');
+  const msgs = document.getElementById('fyiChatMsgs');
+  const form = document.getElementById('fyiChatForm');
+  const input = document.getElementById('fyiChatInput');
+  const send = document.getElementById('fyiChatSend');
+  let opened = false, busy = false, noticeShown = false;
+  const history = [];
+  let visitor = '';
+  try {
+    visitor = localStorage.getItem('fyi-chat-visitor') || '';
+    if (!visitor) {
+      visitor = (crypto.randomUUID ? crypto.randomUUID() : String(Date.now()) + Math.random().toString(36).slice(2));
+      localStorage.setItem('fyi-chat-visitor', visitor);
+    }
+  } catch (e) { visitor = 'anon'; }
+  const track = (name) => { try { if (window.captureEvent) captureEvent(name, {}); else if (window.posthog) posthog.capture(name); } catch (e) {} };
+  const esc = (s) => s.replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+  const fmt = (s) => s.split(/\n\s*\n/).map((para) => '<p>' + esc(para)
+    .replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>')
+    .replace(/^\s*[-*]\s+/gm, '• ')
+    .replace(/mail@407\.fyi/g, '<a href="mailto:mail@407.fyi" style="color:var(--fyi-accent)">mail@407.fyi</a>')
+    .replace(/\n/g, '<br>') + '</p>').join('');
+  function addMsg(cls, text) {
+    const d = document.createElement('div');
+    d.className = 'fyi-chat-msg ' + cls;
+    d.innerHTML = fmt(text);
+    msgs.appendChild(d);
+    msgs.scrollTop = msgs.scrollHeight;
+    return d;
+  }
+  function addChips(venues) {
+    if (!venues || !venues.length) return;
+    const row = document.createElement('div');
+    row.className = 'fyi-chat-chips';
+    for (const v of venues) {
+      const a = document.createElement('a');
+      a.className = 'fyi-chat-chip';
+      a.href = '/venue/' + v.id + '.html';
+      a.innerHTML = esc(v.name) + ' <small>' + esc(v.district || '') + '</small>';
+      row.appendChild(a);
+    }
+    msgs.appendChild(row);
+    msgs.scrollTop = msgs.scrollHeight;
+  }
+  function addGoogleChips(links) {
+    if (!links || !links.length) return;
+    const row = document.createElement('div');
+    row.className = 'fyi-chat-chips';
+    for (const v of links) {
+      const a = document.createElement('a');
+      a.className = 'fyi-chat-chip';
+      a.href = v.url;
+      a.target = '_blank';
+      a.rel = 'noopener';
+      a.innerHTML = esc(v.name) + ' <small>on Google</small>';
+      row.appendChild(a);
+    }
+    msgs.appendChild(row);
+    msgs.scrollTop = msgs.scrollHeight;
+  }
+  function toggle(open) {
+    panel.classList.toggle('open', open);
+    btn.setAttribute('aria-expanded', String(open));
+    if (open) {
+      if (!opened) {
+        opened = true;
+        addMsg('bot', 'Hi, I answer from the 407 FYI guide: date nights, coffee, family spots, neighborhoods, whatever you are after. We are in soft opening, so you get eight questions a day: make them thorough ones, with the neighborhood, the occasion, and the mood in a single ask, and you will get a fuller answer. One more limit: the guide does not list hours, so for hours or a phone number I will point you to the place on Google. What are you looking for?');
+        track('chat_open');
+      }
+      setTimeout(() => input.focus(), 60);
+    }
+  }
+  btn.addEventListener('click', () => toggle(!panel.classList.contains('open')));
+  document.getElementById('fyiChatClose').addEventListener('click', () => toggle(false));
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && panel.classList.contains('open')) toggle(false); });
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const q = input.value.trim();
+    if (!q || busy) return;
+    busy = true; send.disabled = true; input.value = '';
+    addMsg('user', q);
+    history.push({ role: 'user', text: q });
+    const thinking = addMsg('bot thinking', 'Looking through the guide...');
+    try {
+      const ctrl = new AbortController();
+      const timer = setTimeout(() => ctrl.abort(), 30000);
+      const r = await fetch(FN, {
+        method: 'POST',
+        headers: { 'Authorization': 'Bearer ' + KEY, 'apikey': KEY, 'Content-Type': 'application/json' },
+        body: JSON.stringify({ question: q, history: history.slice(0, -1).slice(-6), visitor }),
+        signal: ctrl.signal,
+      });
+      clearTimeout(timer);
+      const data = await r.json();
+      thinking.remove();
+      if (!r.ok || !data.answer) throw new Error('bad response');
+      if (data.notice && !noticeShown) {
+        noticeShown = true;
+        const n = document.createElement('div');
+        n.className = 'fyi-chat-note';
+        n.textContent = data.notice;
+        msgs.appendChild(n);
+      }
+      addMsg('bot', data.answer);
+      addChips(data.venues);
+      addGoogleChips(data.google);
+      history.push({ role: 'assistant', text: data.answer });
+      track('chat_question');
+    } catch (err) {
+      thinking.remove();
+      addMsg('bot', 'Something went wrong on my end. The finder on this page can still help, or try me again in a moment.');
+    }
+    busy = false; send.disabled = false; input.focus();
+  });
+})();
+</script>
+  </body>
+</html>

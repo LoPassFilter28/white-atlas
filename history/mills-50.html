@@ -1,0 +1,537 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="color-scheme" content="light dark" />
+    <title>Mills 50: The Corner That Named Itself | 407 FYI</title>
+    <meta name="description" content="Mills 50 is named for its own crossroads, Mills Avenue at State Road 50. Colonialtown plats from 1883, a Christmas Day movie palace, a lumber yard named for its address, and the Little Saigon that remade the corner." />
+    <link rel="canonical" href="https://407.fyi/history/mills-50.html" />
+    <meta property="og:title" content="Mills 50: The Corner That Named Itself · 407 FYI" />
+    <meta property="og:description" content="Colonialtown plats, storefront canopies, a lumber yard named for its address, and the Vietnamese kitchens that remade one Orlando crossroads." />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://407.fyi/history/mills-50.html" />
+    <meta property="og:image" content="https://407.fyi/history/img/mills-50-birds-eye-1884.webp" />
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="preload" href="/fonts/manrope-latin.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="/fonts/fonts.css" />
+    <script>
+      try {
+        const savedTheme = localStorage.getItem('white-atlas-theme');
+        document.documentElement.dataset.theme = savedTheme === 'light' || savedTheme === 'dark' ? savedTheme : 'dark';
+      } catch (error) {
+        document.documentElement.dataset.theme = 'dark';
+      }
+    </script>
+<style>
+      /* Night Drive tokens + scene palette (DESIGN.MD: scroll editions and stories) */
+      :root {
+        color-scheme: dark;
+        --bg: #0a1811; --surface: #122419; --soft: #172a1f; --ink: #f0e8d5;
+        --muted: #c6bba2; --line: #2f4a38; --accent: #765b2f; --accent-ink: #d4b573;
+        --headline: #f6edd6; --focus: #d4b573;
+        --g1: #0d1512; --g2: #111c16; --g3: #141f18;
+        --bronze: #c19a5b; --parch: #f4efe1; --sage: #b9bfa4;
+        --pad: clamp(20px, 5vw, 40px);
+      }
+      * { box-sizing: border-box; }
+      @media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
+      body {
+        margin: 0; background: var(--g1); color: var(--ink);
+        font-family: "Manrope", system-ui, sans-serif; line-height: 1.65;
+        overflow-x: hidden;
+      }
+      h1, h2, h3, .display { font-family: "Urbanist", "Manrope", sans-serif; }
+      a { color: var(--accent-ink); }
+      a:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
+      .kicker {
+        font-family: "Urbanist", sans-serif; font-weight: 700; letter-spacing: .24em;
+        font-size: .72rem; text-transform: uppercase; color: var(--bronze); margin: 0 0 16px;
+      }
+      #progress {
+        position: fixed; top: 0; left: 0; right: 0; height: 3px; z-index: 900;
+        background: var(--bronze); transform: scaleX(0); transform-origin: 0 50%;
+      }
+      .static #progress { display: none; }
+
+      /* ---------- full-bleed scenes ---------- */
+      .scene {
+        position: relative; overflow: hidden; isolation: isolate;
+        background: var(--g2);
+      }
+      .scene > img {
+        position: absolute; inset: 0; width: 100%; height: 100%;
+        object-fit: cover; object-position: center; z-index: -2;
+      }
+      .scene::after {
+        content: ""; position: absolute; inset: 0; z-index: -1;
+        background: linear-gradient(180deg, rgba(13,21,18,.52), rgba(13,21,18,.06) 34%, rgba(13,21,18,.10) 62%, rgba(13,21,18,.88));
+      }
+      .scene-hero { min-height: 100svh; display: flex; align-items: flex-end; }
+      .scene-hero .scene-cap { bottom: 64px; }
+      .scene-mid { min-height: 78svh; display: flex; align-items: flex-end; }
+      .scene-in { width: 100%; max-width: 920px; margin: 0 auto; padding: clamp(56px, 10vh, 96px) var(--pad) clamp(40px, 7vh, 64px); }
+      .scene-cap {
+        position: absolute; right: 14px; bottom: 12px; z-index: 2; max-width: min(480px, 78vw);
+        font-size: .72rem; line-height: 1.45; color: rgba(244,239,225,.82); text-align: right;
+        text-shadow: 0 1px 8px rgba(0,0,0,.65);
+      }
+
+      /* ---------- hero ---------- */
+      .crumbs { font-size: .82rem; color: var(--muted); margin: 0 0 30px; text-shadow: 0 1px 8px rgba(0,0,0,.6); }
+      .crumbs a { font-weight: 700; }
+      .hero h1 {
+        font-size: clamp(3.2rem, 11.5vw, 7.6rem); font-weight: 850; line-height: .94;
+        letter-spacing: -.05em; text-transform: uppercase; color: var(--parch);
+        margin: 0 0 18px; text-shadow: 0 2px 26px rgba(0,0,0,.45);
+      }
+      .hero h1 em { font-style: normal; color: var(--bronze); }
+      .hero .era {
+        font-size: clamp(1.08rem, 2.7vw, 1.34rem); line-height: 1.5; color: var(--parch);
+        max-width: 600px; margin: 0; text-shadow: 0 1px 12px rgba(0,0,0,.7);
+      }
+      .anchor-nav { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 34px; }
+      .anchor-nav a {
+        border: 1px solid rgba(193,154,91,.55); border-radius: 999px; padding: 8px 14px;
+        font-size: .82rem; font-weight: 700; text-decoration: none; color: var(--parch);
+        background: rgba(13,21,18,.55); min-height: 42px; display: inline-flex; align-items: center;
+        backdrop-filter: blur(3px);
+      }
+      .anchor-nav a:hover { border-color: var(--bronze); }
+      .scroll-cue { margin: 40px 0 0; font-size: .74rem; letter-spacing: .26em; text-transform: uppercase; color: var(--sage); }
+
+      /* ---------- chapters ---------- */
+      main { display: block; }
+      .chapter { max-width: 760px; margin: 0 auto; padding: clamp(58px, 10vh, 96px) var(--pad) 0; }
+      .chapter h2 {
+        font-size: clamp(2rem, 5.6vw, 3.1rem); line-height: 1.04; letter-spacing: -.03em;
+        color: var(--headline); margin: 0 0 20px;
+      }
+      .chapter p { max-width: 68ch; margin: 0 0 18px; font-size: 1.03rem; }
+      .chapter p.lede { font-size: 1.14rem; color: var(--parch); }
+      .chapter .drop::first-letter {
+        font-family: "Urbanist", sans-serif; font-weight: 800; float: left;
+        font-size: 3.4em; line-height: .82; padding: 6px 10px 0 0; color: var(--bronze);
+      }
+
+      /* ---------- archival plates ---------- */
+      .plate { margin: clamp(30px, 6vh, 52px) auto; max-width: 960px; padding: 0 var(--pad); }
+      .plate figure {
+        margin: 0; background: var(--parch); padding: clamp(8px, 1.6vw, 14px);
+        border-radius: 4px; box-shadow: 0 24px 60px rgba(0,0,0,.5);
+      }
+      .plate img { display: block; width: 100%; height: auto; }
+      .plate figcaption {
+        color: #43503f; font-size: .82rem; line-height: 1.5;
+        padding: 10px 4px 2px;
+      }
+      .plate figcaption strong { color: #22331f; }
+      .plate-narrow { max-width: 700px; }
+      @media (min-width: 900px) {
+        .plate-side { float: right; width: 300px; margin: 6px -40px 18px 28px; padding: 0; }
+        .plate-side figure { box-shadow: 0 16px 40px rgba(0,0,0,.5); }
+      }
+
+      /* ---------- then and now ---------- */
+      .then-now {
+        clear: both; border: 1px solid rgba(193,154,91,.4); border-left: 3px solid var(--bronze);
+        background: var(--g2); border-radius: 0 14px 14px 0;
+        padding: 20px 22px; margin: clamp(30px, 6vh, 48px) 0 6px; max-width: 68ch;
+      }
+      .then-now .tn-label {
+        font-family: "Urbanist", sans-serif; font-weight: 700; letter-spacing: .24em;
+        font-size: .68rem; text-transform: uppercase; color: var(--bronze); margin: 0 0 10px;
+      }
+      .then-now p { margin: 0; color: var(--parch); }
+
+      /* ---------- panels, notes, lists ---------- */
+      .panel { background: var(--g3); border: 1px solid var(--line); border-radius: 14px; padding: 22px 24px; margin: 24px 0 6px; }
+      .panel ul { margin: 0; padding-left: 18px; }
+      .panel li { margin-bottom: 11px; }
+      .panel li:last-child { margin-bottom: 0; }
+      .panel li strong { color: var(--headline); }
+      .note {
+        border-left: 3px solid var(--bronze); background: var(--g2);
+        padding: 14px 18px; border-radius: 0 12px 12px 0; margin: 22px 0 6px; max-width: 68ch;
+      }
+      .note p { margin: 0; font-size: .97rem; }
+
+      /* ---------- handoff + credits ---------- */
+      .handoff { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
+      .btn-big, .btn-ghost {
+        display: inline-flex; align-items: center; min-height: 48px; padding: 12px 22px;
+        border-radius: 999px; font-weight: 800; text-decoration: none; font-size: .95rem;
+      }
+      .btn-big { background: var(--accent); color: #fff; }
+      .btn-big:hover { background: #86682f; }
+      .btn-ghost { border: 1px solid var(--line); color: var(--ink); }
+      .btn-ghost:hover { border-color: var(--bronze); }
+      .credits { max-width: 760px; margin: 0 auto; padding: clamp(48px, 8vh, 72px) var(--pad) 0; }
+      .credits h2 { font-size: 1.15rem; color: var(--headline); margin: 0 0 12px; letter-spacing: -.01em; }
+      .credits p, .credits li { font-size: .86rem; color: var(--muted); }
+      .credits ul { margin: 0 0 16px; padding-left: 18px; }
+      .credits li { margin-bottom: 7px; }
+
+      /* ---------- footer (section shell) ---------- */
+      footer { border-top: 1px solid var(--line); margin-top: clamp(52px, 9vh, 88px); background: var(--bg); }
+      .foot-in { max-width: 860px; margin: 0 auto; padding: 34px var(--pad) 44px; }
+      .foot-in p { color: var(--muted); font-size: .9rem; margin: 0 0 10px; }
+      .foot-in .brand-line { color: var(--ink); font-weight: 700; }
+      .back-link { font-weight: 800; text-decoration: none; display: inline-block; margin-bottom: 16px; }
+</style>
+  </head>
+  <body>
+    <div id="progress" aria-hidden="true"></div>
+
+    <header class="scene scene-hero hero">
+      <img src="/history/img/mills-50-birds-eye-1884.webp" alt="Bird's eye view of Orlando in 1884, one year after Colonialtown's first plat: a small grid of streets and citrus groves fitted between the lakes, looking northeast" width="1600" height="711" fetchpriority="high" />
+      <div class="scene-in">
+        <p class="crumbs"><a href="/history.html">407 FYI History</a> · District Stories</p>
+        <p class="kicker" data-hero>District Story · Mills 50</p>
+        <h1 data-hero>Mills <em>50</em></h1>
+        <p class="era" data-hero>A district named for its own crossroads, platted as front porches in 1883 and remade twice by the people who moved in.</p>
+        <nav class="anchor-nav" data-hero aria-label="Chapters">
+          <a href="#plats">The Plats</a>
+          <a href="#corner">The Corner</a>
+          <a href="#saigon">Little Saigon</a>
+          <a href="#name">The Name</a>
+          <a href="#streets">Street Names</a>
+          <a href="#walk">Walk It Today</a>
+        </nav>
+        <p class="scroll-cue" data-hero>Scroll</p>
+      </div>
+      <p class="scene-cap">Orlando in 1884, a bird's eye view published for Sinclair's Real Estate Agency. Library of Congress, public domain.</p>
+    </header>
+
+    <main>
+      <section class="chapter" id="plats">
+        <p class="kicker" data-reveal>Chapter One · 1883 to 1925</p>
+        <h2 data-reveal>Homes Before the Corner</h2>
+        <p class="drop" data-reveal>Mills 50 began as somebody's front yard. The residential frame is Colonialtown, and its paperwork starts early: the earliest Colonialtown subdivision was platted in 1883, when Orlando was a courthouse town in the citrus groves and the land northeast of it was still being drawn into lots. The bird's eye view above was printed the following year to sell that Orlando, lakes, groves, grid and all.</p>
+        <p data-reveal>The developer who filled the frame in was Carl Dann. Colonialtown North was originally platted in 1911 as Highland Grove by H. Carl Dann, the largest Colonialtown subdivision was developed and promoted by Dann in 1913, and his 1913 work set the pattern: modest houses on shaded lots, close enough to downtown to walk the city's growth outward. Dann's 1925 addition expanded the neighborhood's border all the way to Colonial Drive, stitching the houses to the road the shops would claim.</p>
+        <div class="plate" data-reveal>
+          <figure>
+            <img src="/history/img/mills-50-sanborn-1919.webp" alt="Detail of the 1919 Sanborn fire insurance map of Orlando showing East Colonial Drive running past Park Lake and Lake Highland, with Hillcrest Avenue below it" width="1600" height="607" loading="lazy" decoding="async" />
+            <figcaption><strong>The frame, mapped in 1919.</strong> A Sanborn fire insurance plate catches East Colonial Drive where it passes Park Lake and Lake Highland, with Hillcrest Avenue in the blocks below. The houses came first; the corridor grew up to meet them. Library of Congress, public domain.</figcaption>
+          </figure>
+        </div>
+        <p data-reveal>The city records what the plats produced: the majority of Colonialtown's residential construction happened during the 1920s Florida Land Boom, with a second growth period between the Depression and World War II. Colonialtown South was designated a local historic district in 2000, a formal admission that the frame itself is the artifact.</p>
+        <div class="then-now" data-reveal>
+          <p class="tn-label">Then and Now</p>
+          <p>The porches Dann platted still stand behind the corridor, and the corner they grew toward is the one the guide walks today: the Mills 50 of Mills Market, Pho Hoa and Banh Mi Boy sits inside a neighborhood that was drawn as homes first, in 1883.</p>
+        </div>
+      </section>
+
+      <section class="chapter" id="corner">
+        <p class="kicker" data-reveal>Chapter Two · The Storefront Years</p>
+        <h2 data-reveal>A Corner Learns to Sell</h2>
+        <p class="drop" data-reveal>The district's own Main Street organization casts a wide frame: about a mile northeast of downtown, half a mile south of the Orlando Museum of Art, taking in Colonialtown, Lake Eola Heights, Park Lake Highland and Hillcrest. Commerce claimed the crossroads inside that frame early. The blocks around Colonial and Mills were a storefront retail shopping area in Orlando's early years, and many of those historic buildings remain standing, still retaining their facades' original sidewalk canopies.</p>
+        <div class="plate plate-narrow" data-reveal>
+          <figure>
+            <img src="/history/img/mills-50-lake-eola-1904.webp" alt="Hand colored postcard view from 1904: the Orange County courthouse with Lake Eola behind it, at the south end of the neighborhoods Mills 50 now counts in its frame" width="1400" height="930" loading="lazy" decoding="async" />
+            <figcaption><strong>The courthouse and Lake Eola, 1904.</strong> A Detroit Photographic Company postcard view toward Lake Eola, whose heights neighborhood the district now counts in its frame. New York Public Library, public domain.</figcaption>
+          </figure>
+        </div>
+        <p data-reveal>Mid century, the corner got its anchors, and both are documented to the day and the address. The Vogue Theatre at Colonial and Mills opened on Christmas Day 1940, a movie palace planted exactly on the crossroads. A few blocks north, the lumber company founded in 1933 as Central Florida Lumber and Supply Company, at North Mills Avenue and Nebraska Street, took its famous name in the early 1950s: Mills and Nebraska, pulled straight from a marketing campaign built on that address. On this corridor, even the businesses introduced themselves by intersection.</p>
+        <div class="then-now" data-reveal>
+          <p class="tn-label">Then and Now</p>
+          <p>The canopies the Main Street organization describes are still over the sidewalks, and the storefront rhythm they shaded is the one the guide's corridor keeps: small rooms, strong smells, signs close to the street, from King Bao to Kai Kai BBQ &amp; Dumplings.</p>
+        </div>
+      </section>
+
+      <section class="chapter" id="saigon">
+        <p class="kicker" data-reveal>Chapter Three · The Late 1970s Onward</p>
+        <h2 data-reveal>Little Saigon, Written in Steam</h2>
+        <p class="drop" data-reveal>The defining modern era arrived as resettlement. After the Vietnam War, the Catholic Charities refugee program began settling families in the Colonialtown area, and the guide's own Flashback tells the result plainly: starting in the late 1970s, Vietnamese refugees resettled through Catholic Charities established markets, bakeries and pho shops at the crossroads, and the area grew into Little Saigon.</p>
+        <p data-reveal>Central Florida Public Media traces the same arc at household scale: what started as one Vietnamese family finding success in a supermarket catering to their neighbors flourished into a thriving hot spot of Asian American owned businesses around the intersection. The restaurant community that grew from it began in the late 1970s, and by the time the district organization describes itself today, the verdict is built into its own overview: the cultural cornerstone of the district is the active Asian community, home to many Asian markets and restaurants offering Chinese, Japanese, Thai, Korean and Vietnamese food.</p>
+        <p data-reveal>The names stacked up honestly. The area became known as Little Saigon, or Little Vietnam, because that is who rebuilt it. The corner had been a plat, then a shopping strip. Now it was a hometown, written in steam over broth pots and in baguettes coming out of bakery ovens.</p>
+        <div class="then-now" data-reveal>
+          <p class="tn-label">Then and Now</p>
+          <p>Little Saigon never left; it became the menu. The guide sends you to Banh Mi Boy for baguettes that shatter, to Pho Hoa for the broth, and to Mills Market, the market at the intersection that Orlando Magazine calls the epicenter of what became Little Vietnam.</p>
+        </div>
+      </section>
+
+      <section class="chapter" id="name">
+        <p class="kicker" data-reveal>Chapter Four · 2008 and After</p>
+        <h2 data-reveal>The Name Is the Address</h2>
+        <p class="drop" data-reveal>Most districts are named for a person, a park or a hope. This one is named for a street corner, and its own organization says so without decoration: "Taking our namesake from the intersection of Mills Ave (17-92) and State Road 50 (Colonial Dr.), Mills 50 Main Street is a centrally located, unpretentious, urban district." Mills is the avenue. Fifty is the state road number. The name is an intersection address, not a person, a founding year or a business.</p>
+        <p data-reveal>The Mills 50 name itself arrived with the Main Street era: Orlando Main Streets was created by the city in 2008, and the name took hold around the time the old Mills and Nebraska lumber yard was sold to be developed as Mills Park. Before Mills 50, the same ground also went by ViMi, for Virginia Drive and Mills Avenue, one more address wearing a nickname.</p>
+        <div class="then-now" data-reveal>
+          <p class="tn-label">Then and Now</p>
+          <p>Stand at the intersection today and the name checks itself: Mills Avenue runs north through Zaru and Tori Tori, Colonial Drive runs east and west past the market blocks, and the guide's whole Mills 50 list fans out from the corner the district is named for.</p>
+        </div>
+      </section>
+
+      <section class="chapter" id="streets">
+        <p class="kicker" data-reveal>The Index in the Street Signs</p>
+        <h2 data-reveal>How the Streets Got Their Names</h2>
+        <p data-reveal>Read the signs around the corner and you read the district's whole method: one name documented to a man from England, one name owed to a creek full of ferns, one borrowed from a subdivision plat, and the most famous avenue of all with no documented namesake at all.</p>
+        <div class="panel" data-reveal>
+          <ul>
+            <li><strong>Mills Avenue:</strong> nobody knows, on the record. The research behind this page checked city, library, history center and magazine sources and found the avenue's roles documented, its namesake nowhere. Local lore candidates for a settler or official named Mills were confirmed in none of them. Until a plat, city directory or newspaper source surfaces, any Mills namesake is a guess, and this page does not guess.</li>
+            <li><strong>Colonial Drive:</strong> the full telling is in the downtown lesson: formerly Sweet Avenue, the Colonial name attributed to Jeanette Robinson Murphy imagining stately Colonial mansions along the newly paved road, and the 50 itself dating to the 1945 state renumbering.</li>
+            <li><strong>Bumby Avenue:</strong> named for Joseph Bumby, homesteader and businessman, whose name runs the length of the east side. Bumby came from England in 1873, sold hay, grain and fertilizer from a Church Street warehouse that served as the depot when the railroad arrived in 1880, founded the Bumby hardware stores, and built the Bumby Hardware building in 1886.</li>
+            <li><strong>Fern Creek Avenue:</strong> named for Fern Creek, the waterway east of the corridor. The Florida Historical Marker for Dickson Azalea Park describes the park beginning as a natural stream, later named Fern Creek, in a deep ravine surrounded by native ferns, palms and oaks, which is the best sourced account of the creek's own name as well.</li>
+            <li><strong>Thornton Avenue:</strong> its north end runs into Mills 50. The namesake is developer James Thornton of the 1913 Thornton Park plat, told in the Thornton Park lesson.</li>
+            <li><strong>Virginia Drive:</strong> the story that the streets around here were named for a developer's family members circulates locally, but no source consulted documents it for Virginia Drive. What is documented is the street's early fabric: two grocery stores stood on it in 1924, and in 1926 it became the first street in the Lake Formosa neighborhood to be paved with bricks and get streetlights.</li>
+          </ul>
+        </div>
+        <div class="note" data-reveal>
+          <p>Hillcrest Street and Park Lake Street also have no documented naming in the sources consulted. Park Lake sounds descriptive, a street by Park Lake, and descriptive is all that can honestly be said.</p>
+        </div>
+        <div class="then-now" data-reveal>
+          <p class="tn-label">Then and Now</p>
+          <p>The unknown name carries the district. Mills Avenue, the half of the most famous intersection in the guide with no documented namesake, is the street the guide's Mills 50 crawl runs on, from Mills Market at the corner north to Chewy Boba Company.</p>
+        </div>
+      </section>
+
+      <section class="chapter" id="walk">
+        <p class="kicker" data-reveal>The Story, On Foot</p>
+        <h2 data-reveal>Walk It Today</h2>
+        <p data-reveal>Run the district the way its history built it, as a crawl along one avenue. Start at the corner itself with <a href="/mills-50-district-guide.html">Mills Market</a>, then take the Little Saigon layer in order: a baguette at Banh Mi Boy, pho at Pho Hoa, and the Japanese craft the corridor added later, udon at Zaru, where the guide says the noodles are made in house and the slurping should be loud.</p>
+        <p data-reveal>Finish where Colonialtown's porches meet the avenue's night. Dinner at The Guesthouse or Cowboy Curry, something sweet at Chewy Boba Company, and a last drink at Will's Pub &amp; Lil Indie's, the bar and band room the guide closes its Mills 50 nights with. The plats are from 1883. The steam is from this morning. Both are the same neighborhood.</p>
+        <div class="handoff" data-reveal>
+          <a class="btn-big" href="/mills-50-district-guide.html">The Mills 50 district guide</a>
+          <a class="btn-ghost" href="/mills-50-finder.html">Browse Mills 50 places</a>
+          <a class="btn-ghost" href="/history.html">More district stories</a>
+        </div>
+      </section>
+
+      <section class="credits">
+        <h2>Images and sources</h2>
+        <p>Every photograph on this page is in the public domain. Follow any credit to its archive record.</p>
+        <ul>
+          <li>Bird's eye view of Orlando, 1884, published by J. J. Stoner for Sinclair's Real Estate Agency: <a href="https://commons.wikimedia.org/wiki/File:Bird%27s_Eye_View_of_Orlando_in_Florida_1884_Map.jpg" target="_blank" rel="noopener">Wikimedia Commons</a>, from the Library of Congress. Public domain.</li>
+          <li>Sanborn Fire Insurance Map of Orlando, February 1919, plate 19 (detail): <a href="https://commons.wikimedia.org/wiki/File:Sanborn_Fire_Insurance_Map_from_Orlando,_Orange_County,_Florida,_1919,_Plate_0019.jpg" target="_blank" rel="noopener">Wikimedia Commons</a>, from the Library of Congress. Public domain.</li>
+          <li>Court House and Lake Eola postcard, Detroit Photographic Company, 1904: <a href="https://commons.wikimedia.org/wiki/File:Court_House_and_Lake_Eola,_Orlando,_Fla_(NYPL_b12647398-67636).tiff" target="_blank" rel="noopener">New York Public Library</a>. Public domain.</li>
+        </ul>
+        <p>Story sources: Mills 50 Main Street, the City of Orlando, Central Florida Public Media, Orlando Magazine and the 407 FYI Flashbacks. The sourced district history, street by street, lives on <a href="/district-history.html#mills-50">the District Histories page</a>.</p>
+      </section>
+    </main>
+
+    <footer>
+      <div class="foot-in">
+        <a class="back-link" href="/">&larr; Back to the full guide</a>
+        <p class="brand-line">407 FYI, an independent Orlando guide. Details can change; confirm before you go.</p>
+        <p>Hand-verified Orlando places · Checked October 2026 · Local Picks are never sponsored · Corrections: <a href="mailto:mail@407.fyi">mail@407.fyi</a></p>
+        <p>Some links on 407 FYI are affiliate or referral links. We may earn a commission or credit at no extra cost to you. They never affect which places we list, rank, or recommend.</p>
+        <p><a href="/privacy.html">Privacy</a></p>
+      </div>
+    </footer>
+
+    <script src="/assets/gsap.min.js"></script>
+    <script src="/assets/ScrollTrigger.min.js"></script>
+    <script>
+    (function () {
+      var reduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      var lowPower = (navigator.deviceMemory && navigator.deviceMemory <= 2) ||
+        (navigator.hardwareConcurrency && navigator.hardwareConcurrency <= 2) ||
+        (navigator.connection && navigator.connection.saveData);
+      if (reduced || lowPower || !window.gsap || !window.ScrollTrigger) {
+        document.documentElement.classList.add('static');
+        var bar = document.getElementById('progress');
+        if (bar) bar.style.display = 'none';
+        return;
+      }
+      gsap.registerPlugin(ScrollTrigger);
+      gsap.to('#progress', { scaleX: 1, ease: 'none',
+        scrollTrigger: { start: 0, end: 'max', scrub: 0.3 } });
+      gsap.from('[data-hero]', { y: 34, opacity: 0, duration: 1.1, stagger: 0.13,
+        ease: 'power3.out', delay: 0.15, clearProps: 'all' });
+      gsap.utils.toArray('[data-reveal]').forEach(function (el) {
+        gsap.from(el, { y: 38, opacity: 0, duration: 0.95, ease: 'power3.out',
+          scrollTrigger: { trigger: el, start: 'top 86%' } });
+      });
+      gsap.utils.toArray('[data-parallax]').forEach(function (img) {
+        gsap.fromTo(img, { yPercent: -7 }, { yPercent: 7, ease: 'none',
+          scrollTrigger: { trigger: img.parentElement, start: 'top bottom', end: 'bottom top', scrub: true } });
+      });
+    })();
+    </script>
+
+<!-- 407 FYI guide chat widget. Self-contained: style + markup + script.
+     Talks to the Supabase chat edge function; answers come only from guide data. -->
+<style id="fyi-chat-css">
+.fyi-chat-btn{position:fixed;right:16px;bottom:16px;z-index:1200;display:flex;align-items:center;gap:8px;
+  padding:11px 16px;border-radius:999px;border:1px solid var(--accent,#d4b573);cursor:pointer;
+  background:var(--surface,#122419);color:var(--headline,#f6edd6);
+  font-family:"Manrope",ui-sans-serif,sans-serif;font-size:14px;font-weight:700;
+  box-shadow:0 8px 24px rgba(0,0,0,.35)}
+.fyi-chat-btn:hover{border-color:var(--focus,#d4b573)}
+.fyi-chat-btn svg{flex:none}
+.fyi-chat-panel{position:fixed;right:16px;bottom:70px;z-index:1200;width:min(384px,calc(100vw - 24px));
+  height:min(580px,calc(100dvh - 96px));display:none;flex-direction:column;overflow:hidden;
+  border-radius:16px;border:1px solid var(--line,#2f4a38);background:var(--surface,#122419);
+  box-shadow:0 18px 48px rgba(0,0,0,.45);font-family:"Manrope",ui-sans-serif,sans-serif}
+.fyi-chat-panel.open{display:flex}
+.fyi-chat-head{padding:14px 16px 10px;border-bottom:1px solid var(--line,#2f4a38);display:flex;gap:10px;align-items:flex-start}
+.fyi-chat-head h2{margin:0;font-family:"Urbanist","Manrope",sans-serif;font-size:19px;color:var(--headline,#f6edd6)}
+.fyi-chat-head p{margin:2px 0 0;font-size:12.5px;color:var(--muted,#c6bba2)}
+.fyi-chat-close{margin-left:auto;background:none;border:0;color:var(--muted,#c6bba2);font-size:20px;cursor:pointer;line-height:1;padding:2px 4px}
+.fyi-chat-msgs{flex:1;overflow-y:auto;padding:14px 14px 6px;display:flex;flex-direction:column;gap:10px}
+.fyi-chat-msg{max-width:88%;padding:9px 12px;border-radius:12px;font-size:14px;line-height:1.45;white-space:normal;overflow-wrap:break-word}
+.fyi-chat-msg p{margin:0 0 9px}
+.fyi-chat-msg p:last-child{margin-bottom:0}
+.fyi-chat-msg.bot{align-self:flex-start;background:var(--soft,#172a1f);color:var(--ink,#f0e8d5);border-bottom-left-radius:4px}
+.fyi-chat-msg.user{align-self:flex-end;background:var(--badge,#223c2b);color:var(--ink,#f0e8d5);border-bottom-right-radius:4px}
+.fyi-chat-msg.thinking{color:var(--muted,#c6bba2);font-style:italic}
+.fyi-chat-note{font:500 12px/1.5 Manrope,system-ui,sans-serif;color:var(--fyi-muted);background:var(--fyi-soft);border:1px dashed var(--fyi-line);border-radius:10px;padding:8px 10px;align-self:flex-start;max-width:96%}
+.fyi-chat-chips{display:flex;flex-wrap:wrap;gap:6px;align-self:flex-start;max-width:96%}
+.fyi-chat-chip{display:inline-block;padding:5px 10px;border-radius:999px;border:1px solid var(--line,#2f4a38);
+  background:var(--bg,#0a1811);color:var(--accent-ink,#d4b573);font-size:12.5px;font-weight:600;text-decoration:none}
+.fyi-chat-chip:hover{border-color:var(--accent,#d4b573)}
+.fyi-chat-chip small{color:var(--muted,#c6bba2);font-weight:500}
+.fyi-chat-form{display:flex;gap:8px;padding:10px;border-top:1px solid var(--line,#2f4a38)}
+.fyi-chat-input{flex:1;padding:10px 12px;border-radius:10px;border:1px solid var(--line,#2f4a38);
+  background:var(--bg,#0a1811);color:var(--ink,#f0e8d5);font:inherit;font-size:14px}
+.fyi-chat-input:focus{outline:2px solid var(--focus,#d4b573);outline-offset:0}
+.fyi-chat-send{padding:10px 14px;border-radius:10px;border:0;cursor:pointer;font:inherit;font-weight:800;
+  background:var(--accent,#d4b573);color:#122419}
+.fyi-chat-send:disabled{opacity:.55;cursor:wait}
+@media (max-width:480px){.fyi-chat-panel{right:8px;bottom:64px}.fyi-chat-btn{right:12px;bottom:12px}}
+</style>
+<button class="fyi-chat-btn" id="fyiChatBtn" aria-haspopup="dialog" aria-expanded="false">
+  <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+  Ask the guide
+</button>
+<section class="fyi-chat-panel" id="fyiChatPanel" role="dialog" aria-label="Ask the 407 FYI guide">
+  <div class="fyi-chat-head">
+    <div>
+      <h2>Ask 407 FYI</h2>
+      <p>Answers only from the guide's own listings.</p>
+    </div>
+    <button class="fyi-chat-close" id="fyiChatClose" aria-label="Close chat">&times;</button>
+  </div>
+  <div class="fyi-chat-msgs" id="fyiChatMsgs"></div>
+  <form class="fyi-chat-form" id="fyiChatForm">
+    <input class="fyi-chat-input" id="fyiChatInput" type="text" autocomplete="off" maxlength="500"
+      placeholder="Ask about places in Orlando..." aria-label="Your question">
+    <button class="fyi-chat-send" id="fyiChatSend" type="submit">Send</button>
+  </form>
+</section>
+<script id="fyi-chat-js">
+(() => {
+  const FN = 'https://xxdgxigwpnezsdvbiawi.supabase.co/functions/v1/chat';
+  const KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inh4ZGd4aWd3cG5lenNkdmJpYXdpIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTE2OTM0MDYsImV4cCI6MjEwNzI2OTQwNn0.3fuj9vjXspT31fQhgcejf4Thmk9yHPc7RSBZ0v97Gw4';
+  const btn = document.getElementById('fyiChatBtn');
+  const panel = document.getElementById('fyiChatPanel');
+  const msgs = document.getElementById('fyiChatMsgs');
+  const form = document.getElementById('fyiChatForm');
+  const input = document.getElementById('fyiChatInput');
+  const send = document.getElementById('fyiChatSend');
+  let opened = false, busy = false, noticeShown = false;
+  const history = [];
+  let visitor = '';
+  try {
+    visitor = localStorage.getItem('fyi-chat-visitor') || '';
+    if (!visitor) {
+      visitor = (crypto.randomUUID ? crypto.randomUUID() : String(Date.now()) + Math.random().toString(36).slice(2));
+      localStorage.setItem('fyi-chat-visitor', visitor);
+    }
+  } catch (e) { visitor = 'anon'; }
+  const track = (name) => { try { if (window.captureEvent) captureEvent(name, {}); else if (window.posthog) posthog.capture(name); } catch (e) {} };
+  const esc = (s) => s.replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+  const fmt = (s) => s.split(/\n\s*\n/).map((para) => '<p>' + esc(para)
+    .replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>')
+    .replace(/^\s*[-*]\s+/gm, '• ')
+    .replace(/mail@407\.fyi/g, '<a href="mailto:mail@407.fyi" style="color:var(--fyi-accent)">mail@407.fyi</a>')
+    .replace(/\n/g, '<br>') + '</p>').join('');
+  function addMsg(cls, text) {
+    const d = document.createElement('div');
+    d.className = 'fyi-chat-msg ' + cls;
+    d.innerHTML = fmt(text);
+    msgs.appendChild(d);
+    msgs.scrollTop = msgs.scrollHeight;
+    return d;
+  }
+  function addChips(venues) {
+    if (!venues || !venues.length) return;
+    const row = document.createElement('div');
+    row.className = 'fyi-chat-chips';
+    for (const v of venues) {
+      const a = document.createElement('a');
+      a.className = 'fyi-chat-chip';
+      a.href = '/venue/' + v.id + '.html';
+      a.innerHTML = esc(v.name) + ' <small>' + esc(v.district || '') + '</small>';
+      row.appendChild(a);
+    }
+    msgs.appendChild(row);
+    msgs.scrollTop = msgs.scrollHeight;
+  }
+  function addGoogleChips(links) {
+    if (!links || !links.length) return;
+    const row = document.createElement('div');
+    row.className = 'fyi-chat-chips';
+    for (const v of links) {
+      const a = document.createElement('a');
+      a.className = 'fyi-chat-chip';
+      a.href = v.url;
+      a.target = '_blank';
+      a.rel = 'noopener';
+      a.innerHTML = esc(v.name) + ' <small>on Google</small>';
+      row.appendChild(a);
+    }
+    msgs.appendChild(row);
+    msgs.scrollTop = msgs.scrollHeight;
+  }
+  function toggle(open) {
+    panel.classList.toggle('open', open);
+    btn.setAttribute('aria-expanded', String(open));
+    if (open) {
+      if (!opened) {
+        opened = true;
+        addMsg('bot', 'Hi, I answer from the 407 FYI guide: date nights, coffee, family spots, neighborhoods, whatever you are after. We are in soft opening, so you get eight questions a day: make them thorough ones, with the neighborhood, the occasion, and the mood in a single ask, and you will get a fuller answer. One more limit: the guide does not list hours, so for hours or a phone number I will point you to the place on Google. What are you looking for?');
+        track('chat_open');
+      }
+      setTimeout(() => input.focus(), 60);
+    }
+  }
+  btn.addEventListener('click', () => toggle(!panel.classList.contains('open')));
+  document.getElementById('fyiChatClose').addEventListener('click', () => toggle(false));
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && panel.classList.contains('open')) toggle(false); });
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const q = input.value.trim();
+    if (!q || busy) return;
+    busy = true; send.disabled = true; input.value = '';
+    addMsg('user', q);
+    history.push({ role: 'user', text: q });
+    const thinking = addMsg('bot thinking', 'Looking through the guide...');
+    try {
+      const ctrl = new AbortController();
+      const timer = setTimeout(() => ctrl.abort(), 30000);
+      const r = await fetch(FN, {
+        method: 'POST',
+        headers: { 'Authorization': 'Bearer ' + KEY, 'apikey': KEY, 'Content-Type': 'application/json' },
+        body: JSON.stringify({ question: q, history: history.slice(0, -1).slice(-6), visitor }),
+        signal: ctrl.signal,
+      });
+      clearTimeout(timer);
+      const data = await r.json();
+      thinking.remove();
+      if (!r.ok || !data.answer) throw new Error('bad response');
+      if (data.notice && !noticeShown) {
+        noticeShown = true;
+        const n = document.createElement('div');
+        n.className = 'fyi-chat-note';
+        n.textContent = data.notice;
+        msgs.appendChild(n);
+      }
+      addMsg('bot', data.answer);
+      addChips(data.venues);
+      addGoogleChips(data.google);
+      history.push({ role: 'assistant', text: data.answer });
+      track('chat_question');
+    } catch (err) {
+      thinking.remove();
+      addMsg('bot', 'Something went wrong on my end. The finder on this page can still help, or try me again in a moment.');
+    }
+    busy = false; send.disabled = false; input.focus();
+  });
+})();
+</script>
+  </body>
+</html>

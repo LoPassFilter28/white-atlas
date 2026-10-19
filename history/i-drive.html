@@ -1,0 +1,571 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="color-scheme" content="light dark" />
+    <title>International Drive: Named to Sound Important | 407 FYI</title>
+    <meta name="description" content="International Drive began as Finley Hamilton’s $90,000 land bet in 1968: a hotel his friends called a folly, a road paved in 1972 and named to sound big and important, then SeaWorld, Wet ’n Wild and the convention center the tourists paid for." />
+    <link rel="canonical" href="https://407.fyi/history/i-drive.html" />
+    <meta property="og:title" content="International Drive: Named to Sound Important · 407 FYI" />
+    <meta property="og:description" content="A hotel in the boondocks, a road named to sound big and important, and the corridor that taught Orlando how to be a vacation." />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://407.fyi/history/i-drive.html" />
+    <meta property="og:image" content="https://407.fyi/history/img/i-drive-wheel-hero.webp" />
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="preload" href="/fonts/manrope-latin.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="/fonts/fonts.css" />
+    <script>
+      try {
+        const savedTheme = localStorage.getItem('white-atlas-theme');
+        document.documentElement.dataset.theme = savedTheme === 'light' || savedTheme === 'dark' ? savedTheme : 'dark';
+      } catch (error) {
+        document.documentElement.dataset.theme = 'dark';
+      }
+    </script>
+<style>
+      /* Night Drive tokens + scene palette (DESIGN.MD: scroll editions and stories) */
+      :root {
+        color-scheme: dark;
+        --bg: #0a1811; --surface: #122419; --soft: #172a1f; --ink: #f0e8d5;
+        --muted: #c6bba2; --line: #2f4a38; --accent: #765b2f; --accent-ink: #d4b573;
+        --headline: #f6edd6; --focus: #d4b573;
+        --g1: #0d1512; --g2: #111c16; --g3: #141f18;
+        --bronze: #c19a5b; --parch: #f4efe1; --sage: #b9bfa4;
+        --pad: clamp(20px, 5vw, 40px);
+      }
+      * { box-sizing: border-box; }
+      @media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
+      body {
+        margin: 0; background: var(--g1); color: var(--ink);
+        font-family: "Manrope", system-ui, sans-serif; line-height: 1.65;
+        overflow-x: hidden;
+      }
+      h1, h2, h3, .display { font-family: "Urbanist", "Manrope", sans-serif; }
+      a { color: var(--accent-ink); }
+      a:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
+      .kicker {
+        font-family: "Urbanist", sans-serif; font-weight: 700; letter-spacing: .24em;
+        font-size: .72rem; text-transform: uppercase; color: var(--bronze); margin: 0 0 16px;
+      }
+      #progress {
+        position: fixed; top: 0; left: 0; right: 0; height: 3px; z-index: 900;
+        background: var(--bronze); transform: scaleX(0); transform-origin: 0 50%;
+      }
+      .static #progress { display: none; }
+
+      /* ---------- full-bleed scenes ---------- */
+      .scene {
+        position: relative; overflow: hidden; isolation: isolate;
+        background: var(--g2);
+      }
+      .scene > img {
+        position: absolute; inset: 0; width: 100%; height: 100%;
+        object-fit: cover; object-position: center; z-index: -2;
+      }
+      .scene::after {
+        content: ""; position: absolute; inset: 0; z-index: -1;
+        background: linear-gradient(180deg, rgba(13,21,18,.52), rgba(13,21,18,.06) 34%, rgba(13,21,18,.10) 62%, rgba(13,21,18,.88));
+      }
+      .scene-hero { min-height: 100svh; display: flex; align-items: flex-end; }
+      .scene-hero .scene-cap { bottom: 64px; }
+      .scene-mid { min-height: 78svh; display: flex; align-items: flex-end; }
+      .scene-in { width: 100%; max-width: 920px; margin: 0 auto; padding: clamp(56px, 10vh, 96px) var(--pad) clamp(40px, 7vh, 64px); }
+      .scene-cap {
+        position: absolute; right: 14px; bottom: 12px; z-index: 2; max-width: min(480px, 78vw);
+        font-size: .72rem; line-height: 1.45; color: rgba(244,239,225,.82); text-align: right;
+        text-shadow: 0 1px 8px rgba(0,0,0,.65);
+      }
+
+      /* ---------- hero ---------- */
+      .crumbs { font-size: .82rem; color: var(--muted); margin: 0 0 30px; text-shadow: 0 1px 8px rgba(0,0,0,.6); }
+      .crumbs a { font-weight: 700; }
+      .hero h1 {
+        font-size: clamp(3.2rem, 11.5vw, 7.6rem); font-weight: 850; line-height: .94;
+        letter-spacing: -.05em; text-transform: uppercase; color: var(--parch);
+        margin: 0 0 18px; text-shadow: 0 2px 26px rgba(0,0,0,.45);
+      }
+      .hero h1 em { font-style: normal; color: var(--bronze); }
+      .hero .era {
+        font-size: clamp(1.08rem, 2.7vw, 1.34rem); line-height: 1.5; color: var(--parch);
+        max-width: 600px; margin: 0; text-shadow: 0 1px 12px rgba(0,0,0,.7);
+      }
+      .anchor-nav { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 34px; }
+      .anchor-nav a {
+        border: 1px solid rgba(193,154,91,.55); border-radius: 999px; padding: 8px 14px;
+        font-size: .82rem; font-weight: 700; text-decoration: none; color: var(--parch);
+        background: rgba(13,21,18,.55); min-height: 42px; display: inline-flex; align-items: center;
+        backdrop-filter: blur(3px);
+      }
+      .anchor-nav a:hover { border-color: var(--bronze); }
+      .scroll-cue { margin: 40px 0 0; font-size: .74rem; letter-spacing: .26em; text-transform: uppercase; color: var(--sage); }
+
+      /* ---------- chapters ---------- */
+      main { display: block; }
+      .chapter { max-width: 760px; margin: 0 auto; padding: clamp(58px, 10vh, 96px) var(--pad) 0; }
+      .chapter h2 {
+        font-size: clamp(2rem, 5.6vw, 3.1rem); line-height: 1.04; letter-spacing: -.03em;
+        color: var(--headline); margin: 0 0 20px;
+      }
+      .chapter p { max-width: 68ch; margin: 0 0 18px; font-size: 1.03rem; }
+      .chapter p.lede { font-size: 1.14rem; color: var(--parch); }
+      .chapter .drop::first-letter {
+        font-family: "Urbanist", sans-serif; font-weight: 800; float: left;
+        font-size: 3.4em; line-height: .82; padding: 6px 10px 0 0; color: var(--bronze);
+      }
+
+      /* ---------- archival plates ---------- */
+      .plate { margin: clamp(30px, 6vh, 52px) auto; max-width: 960px; padding: 0 var(--pad); }
+      .plate figure {
+        margin: 0; background: var(--parch); padding: clamp(8px, 1.6vw, 14px);
+        border-radius: 4px; box-shadow: 0 24px 60px rgba(0,0,0,.5);
+      }
+      .plate img { display: block; width: 100%; height: auto; }
+      .plate figcaption {
+        color: #43503f; font-size: .82rem; line-height: 1.5;
+        padding: 10px 4px 2px;
+      }
+      .plate figcaption strong { color: #22331f; }
+      .plate-narrow { max-width: 700px; }
+      @media (min-width: 900px) {
+        .plate-side { float: right; width: 300px; margin: 6px -40px 18px 28px; padding: 0; }
+        .plate-side figure { box-shadow: 0 16px 40px rgba(0,0,0,.5); }
+      }
+
+      /* ---------- then and now ---------- */
+      .then-now {
+        clear: both; border: 1px solid rgba(193,154,91,.4); border-left: 3px solid var(--bronze);
+        background: var(--g2); border-radius: 0 14px 14px 0;
+        padding: 20px 22px; margin: clamp(30px, 6vh, 48px) 0 6px; max-width: 68ch;
+      }
+      .then-now .tn-label {
+        font-family: "Urbanist", sans-serif; font-weight: 700; letter-spacing: .24em;
+        font-size: .68rem; text-transform: uppercase; color: var(--bronze); margin: 0 0 10px;
+      }
+      .then-now p { margin: 0; color: var(--parch); }
+
+      /* ---------- panels, notes, lists ---------- */
+      .panel { background: var(--g3); border: 1px solid var(--line); border-radius: 14px; padding: 22px 24px; margin: 24px 0 6px; }
+      .panel ul { margin: 0; padding-left: 18px; }
+      .panel li { margin-bottom: 11px; }
+      .panel li:last-child { margin-bottom: 0; }
+      .panel li strong { color: var(--headline); }
+      .note {
+        border-left: 3px solid var(--bronze); background: var(--g2);
+        padding: 14px 18px; border-radius: 0 12px 12px 0; margin: 22px 0 6px; max-width: 68ch;
+      }
+      .note p { margin: 0; font-size: .97rem; }
+
+      /* ---------- handoff + credits ---------- */
+      .handoff { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
+      .btn-big, .btn-ghost {
+        display: inline-flex; align-items: center; min-height: 48px; padding: 12px 22px;
+        border-radius: 999px; font-weight: 800; text-decoration: none; font-size: .95rem;
+      }
+      .btn-big { background: var(--accent); color: #fff; }
+      .btn-big:hover { background: #86682f; }
+      .btn-ghost { border: 1px solid var(--line); color: var(--ink); }
+      .btn-ghost:hover { border-color: var(--bronze); }
+      .credits { max-width: 760px; margin: 0 auto; padding: clamp(48px, 8vh, 72px) var(--pad) 0; }
+      .credits h2 { font-size: 1.15rem; color: var(--headline); margin: 0 0 12px; letter-spacing: -.01em; }
+      .credits p, .credits li { font-size: .86rem; color: var(--muted); }
+      .credits ul { margin: 0 0 16px; padding-left: 18px; }
+      .credits li { margin-bottom: 7px; }
+
+      /* ---------- footer (section shell) ---------- */
+      footer { border-top: 1px solid var(--line); margin-top: clamp(52px, 9vh, 88px); background: var(--bg); }
+      .foot-in { max-width: 860px; margin: 0 auto; padding: 34px var(--pad) 44px; }
+      .foot-in p { color: var(--muted); font-size: .9rem; margin: 0 0 10px; }
+      .foot-in .brand-line { color: var(--ink); font-weight: 700; }
+      .back-link { font-weight: 800; text-decoration: none; display: inline-block; margin-bottom: 16px; }
+</style>
+  </head>
+  <body>
+    <div id="progress" aria-hidden="true"></div>
+
+    <header class="scene scene-hero hero">
+      <img src="/history/img/i-drive-wheel-hero.webp" alt="The observation wheel on International Drive lit in purple at night above the shops of the entertainment complex, September 2015" width="1600" height="900" fetchpriority="high" />
+      <div class="scene-in">
+        <p class="crumbs"><a href="/history.html">407 FYI History</a> · District Stories</p>
+        <p class="kicker" data-hero>District Story · International Drive</p>
+        <h1 data-hero>International <em>Drive</em></h1>
+        <p class="era" data-hero>A hotel in the boondocks, a road paved after it and named to sound big and important, and the corridor that taught Orlando how to be a vacation.</p>
+        <nav class="anchor-nav" data-hero aria-label="Chapters">
+          <a href="#folly">The Folly</a>
+          <a href="#road">The Road</a>
+          <a href="#hotels">Hotel Row</a>
+          <a href="#parks">The Parks</a>
+          <a href="#tax">The Tax</a>
+          <a href="#wheel">The Wheel</a>
+          <a href="#streets">Street Names</a>
+          <a href="#walk">Walk It Today</a>
+        </nav>
+        <p class="scroll-cue" data-hero>Scroll</p>
+      </div>
+      <p class="scene-cap">The Orlando Eye above the shops of I-Drive 360 in September 2015, months after it opened. Photograph by ADellaGuardia. CC0, Wikimedia Commons.</p>
+    </header>
+
+    <main>
+      <section class="chapter" id="folly">
+        <p class="kicker" data-reveal>Chapter One · 1968 to 1970</p>
+        <h2 data-reveal>The Hotel They Called a Folly</h2>
+        <p class="drop" data-reveal>Southwest Orlando was grove and ranch country well into the 1960s. Orange groves ran through the Dr. Phillips land down toward the Sand Lake chain, and the parcel north of Sand Lake Road and east of Interstate 4 was worth even less than grove land: sand, scrub and palmetto, the kind of ground locals drove past on the way somewhere else. In 1968 an attorney and developer named Finley Hamilton paid $90,000 for 10 acres of it.</p>
+        <p data-reveal>Hamilton was not buying scenery. Walt Disney World had been announced, and its gates would open to the southwest. Hamilton’s parcel sat east of I-4, close enough to catch the visitors the new park would pour into Central Florida, if anyone believed visitors would stay on this side of the highway. His friends did not. On the land he opened the Hilton Inn South in May 1970, a full 17 months before Walt Disney World opened on October 1, 1971.</p>
+        <div class="plate" data-reveal>
+          <figure>
+            <img src="/history/img/i-drive-orange-grove-1921.webp" alt="A hand colored postcard from 1921 showing rows of orange trees heavy with fruit in an Orlando grove" width="600" height="363" loading="lazy" decoding="async" />
+            <figcaption><strong>The grove country</strong> Orlando grew out of, on a postcard published in 1921. Hamilton’s parcel, decades later and a few miles southwest, was poorer land than this: sand, scrub and palmetto. E. C. Kropp Co. postcard, public domain, State Library of Florida via Wikimedia Commons.</figcaption>
+          </figure>
+        </div>
+        <p data-reveal>The hotel earned its nickname immediately. “They called the hotel Finley’s Folly, everyone, all of my friends,” Hamilton recalled. “They said it was in the boondocks, but it turned out to be highly successful.” The folly was the building, not the road that came later, and the joke aged badly for everyone who told it: the boondocks hotel was standing, occupied and proven before the first Disney guest arrived.</p>
+        <div class="then-now" data-reveal>
+          <p class="tn-label">Then and Now</p>
+          <p>The first hotel’s ground is still in the hospitality business. The Hilton Inn South property is a water park resort today, listed in the district guide as CoCo Key Water Park, at the north end of the drive Hamilton’s bet created.</p>
+        </div>
+      </section>
+
+      <section class="chapter" id="road">
+        <p class="kicker" data-reveal>Chapter Two · 1972</p>
+        <h2 data-reveal>A Road Paved After Its Hotel</h2>
+        <p class="drop" data-reveal>The hotel came first and the road came second, which is backwards from how most streets get built. In 1972, two years after the Hilton Inn South opened, Hamilton and Major Realty paved a one and a half mile stretch of road connecting Kirkman Road and Sand Lake Road, running past the hotel that had been waiting out there on its own.</p>
+        <p data-reveal>The name was Hamilton’s own, and he never pretended it described anything. “I came up with International Drive, because it sounded big and important,” he said. There was no airport, no world’s fair and no older road behind it. It was a prestige name laid on a short paved strip in the scrub, a bet that sounding big was a step toward becoming big.</p>
+        <div class="plate plate-narrow" data-reveal>
+          <figure>
+            <img src="/history/img/i-drive-i4-junction-1975.webp" alt="A black and white aerial photograph from 1975 showing Interstate 4 meeting the Florida Turnpike in Orange County, with open land around the ramps" width="600" height="485" loading="lazy" decoding="async" />
+            <figcaption><strong>Interstate 4 meeting the Florida Turnpike</strong> in Orange County, 1975. The young corridor grew up east of interchanges like this one, on land the highways had just made reachable. Department of Commerce photograph, public domain, State Archives of Florida via Wikimedia Commons.</figcaption>
+          </figure>
+        </div>
+        <p data-reveal>It worked faster than anyone had a right to expect. The paved mile and a half gave every developer in the region a front door to build on, and an address that sounded like a destination. What had been a driveway to one mocked hotel became, within a few years, the spine of Orlando’s visitor corridor.</p>
+        <div class="then-now" data-reveal>
+          <p class="tn-label">Then and Now</p>
+          <p>The short strip between Kirkman Road and Sand Lake Road is now part of an 11.1 mile thoroughfare. The name Hamilton chose for how it sounded now labels the whole district in the guide, from Sand Lake Road south past the convention center.</p>
+        </div>
+      </section>
+
+      <section class="chapter" id="hotels">
+        <p class="kicker" data-reveal>Chapter Three · 1973</p>
+        <h2 data-reveal>Hotel Row</h2>
+        <p class="drop" data-reveal>By early 1973 the bet was being copied at scale. Some $60 million had been spent building 11 hotels with 3,000 rooms along the west side of the drive, and half of those rooms had gone up during Walt Disney World’s first year alone. The corridor was no longer one man’s folly. It was a construction site with a name.</p>
+        <p data-reveal>The building answered a simple piece of arithmetic. Disney had built a park and almost nowhere for its visitors to sleep, eat or spend an evening. Land east of I-4 was cheap, the interstate put the park minutes away, and International Drive offered the one thing every hotel chain wanted: an address guests could remember. By the late 1970s the drive held 12 hotels and 24 restaurants, and it was still growing.</p>
+        <p data-reveal>What rose along the corridor in those years set the pattern the district still follows: big hotels first, restaurants and attractions filling the gaps between them, everything scaled for visitors who arrived by car and measured a vacation in park days. Hamilton had proven a hotel could survive in the boondocks. Hotel row proved the boondocks could become an industry.</p>
+        <div class="then-now" data-reveal>
+          <p class="tn-label">Then and Now</p>
+          <p>The guide’s corridor hotels carry the same logic at a larger scale: the Hyatt Regency Orlando, the Rosen Centre, the Rosen Plaza and the Hilton Orlando all stand on or beside the drive, serving the convention center and the parks at once.</p>
+        </div>
+      </section>
+
+      <section class="chapter" id="parks">
+        <p class="kicker" data-reveal>Chapter Four · 1973 to 1977</p>
+        <h2 data-reveal>A Second Park, Then the First Water Park</h2>
+        <p class="drop" data-reveal>On December 15, 1973, SeaWorld Orlando opened at the south end of the young corridor, the third park in the SeaWorld chain. The date mattered beyond one park’s ribbon cutting. With a second major attraction in town, Central Florida stopped being a one park trip and became a multi park destination, and International Drive sat between the gates.</p>
+        <p data-reveal>SeaWorld’s creator, George Millay, then invented the corridor’s second industry. On March 13, 1977, Wet ’n Wild opened on 12 acres at Sand Lake Road and International Drive, billed as the nation’s first water park. Disney’s River Country had debuted a year earlier, but Wet ’n Wild defined the formula the industry copied everywhere: wave pools, slides and splash zones combined in one standalone park built for a full day in the water.</p>
+        <div class="plate plate-side" data-reveal>
+          <figure>
+            <img src="/history/img/i-drive-seaworld-orca.webp" alt="A trainer balancing on the back of an orca as it surfaces in bright blue water at SeaWorld Orlando, photographed in 2008" width="1000" height="633" loading="lazy" decoding="async" />
+            <figcaption><strong>Katina, the matriarch orca,</strong> carrying a trainer at SeaWorld Orlando in 2008. The park that opened in 1973 made Orlando a multi park town. Photograph by Tim Ross, public domain, Wikimedia Commons.</figcaption>
+          </figure>
+        </div>
+        <p data-reveal>The water park outlasted most of the corridor’s first generation. Universal bought Wet ’n Wild in 1998, and it ran at the Sand Lake corner until it closed on December 31, 2016, making way for Universal’s own water park, Volcano Bay, which opened on May 25, 2017. The site where the water park idea was born is a hotel corner now, and the idea itself is in every Florida town with a wave pool.</p>
+        <div class="then-now" data-reveal>
+          <p class="tn-label">Then and Now</p>
+          <p>SeaWorld Orlando still anchors the south end of the district in the guide, with Aquatica Orlando and Discovery Cove beside it: the marine park cluster that began with one opening day in December 1973.</p>
+        </div>
+      </section>
+
+      <section class="chapter" id="tax">
+        <p class="kicker" data-reveal>Chapter Five · 1977 to 1983</p>
+        <h2 data-reveal>The Building the Tourists Paid For</h2>
+        <p class="drop" data-reveal>The corridor’s biggest building was paid for by the corridor’s own visitors. In 1977 a change in Florida law let counties collect a Tourist Development Tax, a levy on hotel stays, and in April 1978 Orange County voters approved a 2 percent version of it. The money was aimed at a convention center, and the natural place to put it was beside the hotels that would fill it: on International Drive.</p>
+        <p data-reveal>Phase I of the Orange County Convention and Civic Center was completed on February 25, 1983 at a cost of $54 million, and the Boston Pops performed at the grand opening the next day, February 26. A convention center changed what the drive was for. Theme park families came for a week in summer; conventions came all year, in suits, with expense accounts, and they needed meeting space, banquet halls and hotel rooms in the thousands.</p>
+        <p data-reveal>The center kept growing from that first phase into what the district now describes as the second largest convention center in the country. It also gave the corridor a second economy that did not depend on school holidays, and it is why the drive’s biggest hotels cluster at its south end, facing the center across the pavement.</p>
+        <div class="then-now" data-reveal>
+          <p class="tn-label">Then and Now</p>
+          <p>The Orange County Convention Center still anchors the south end of the district, and the guide’s convention hotels, the Hyatt Regency Orlando, the Rosen Centre and the Rosen Plaza among them, stand within a short walk of its halls.</p>
+        </div>
+      </section>
+
+      <div class="scene scene-mid">
+        <img src="/history/img/i-drive-wheel-night.webp" alt="The Orlando Eye glowing blue and red against the night sky over International Drive, photographed in February 2022" width="1200" height="1600" loading="lazy" decoding="async" data-parallax />
+        <p class="scene-cap">The wheel at night, February 2022. Photograph by Benoît Prieur. CC0, Wikimedia Commons.</p>
+      </div>
+
+      <section class="chapter" id="wheel">
+        <p class="kicker" data-reveal>Chapter Six · 1992 to 2025</p>
+        <h2 data-reveal>The District Grows Up, and a New Gate Opens</h2>
+        <p class="drop" data-reveal>A corridor built by individual bets eventually needed an institution. In 1992 the International Drive Master Transit and Improvement District was created, the first district of its type in Florida, giving the drive a body of its own to handle the unglamorous work of a resort strip: transit, medians, signage and the shared upkeep no single hotel would pay for alone.</p>
+        <p data-reveal>The corridor’s skyline arrived in 2015, when I-Drive 360 opened with a 400 foot observation wheel, the Orlando Eye, turning slowly above the midsection of the drive. The complex was renamed ICON Park in 2018, and the wheel became what the Hilton Inn South had been in 1970: the landmark you navigated by.</p>
+        <p data-reveal>The newest chapter opened a short ride south. On May 22, 2025, Universal Epic Universe opened along Universal Boulevard, the parallel road built for the convention era, as the fourth park at Universal Orlando Resort and the center of a 750 acre development. Universal’s own announcement called it the first major theme park to open in Orlando in 25 years. The corridor that began as one hotel in the boondocks now runs from a water park resort at Sand Lake Road to the newest theme park gate in Florida.</p>
+        <div class="then-now" data-reveal>
+          <p class="tn-label">Then and Now</p>
+          <p>The guide lists the wheel today as ICON Park &amp; The Orlando Eye, with Madame Tussauds Orlando and SEA LIFE Orlando Aquarium under the same roofline: an evening’s worth of the drive without leaving one complex.</p>
+        </div>
+      </section>
+
+      <section class="chapter" id="streets">
+        <p class="kicker" data-reveal>The Index in the Street Signs</p>
+        <h2 data-reveal>How the Streets Got Their Names</h2>
+        <p data-reveal>Three of this district’s street names carry a documented story, and the corridor is honest about the ones that do not.</p>
+        <div class="panel" data-reveal>
+          <ul>
+            <li><strong>International Drive:</strong> named by Finley Hamilton because it sounded big and important, in his own recollection. The paved road dates to 1972, two years after his hotel opened ahead of it.</li>
+            <li><strong>Sand Lake Road:</strong> the descriptive reading, for the Sand Lake chain at its west end, Big Sand Lake and Little Sand Lake, is geography rather than a documented naming act. As a road fact, it is State Road 482, and it begins at Apopka Vineland Road in Dr. Phillips.</li>
+            <li><strong>Universal Boulevard:</strong> its function is fully documented: it runs parallel to the midsection of International Drive, it carries the Orange County Convention Center traffic and the Universal Orlando address at 6000 Universal Boulevard, and the trolley’s Green Line has run on it since 2001. A formal naming act for it was not found in the sources consulted.</li>
+          </ul>
+        </div>
+        <div class="note" data-reveal>
+          <p>Kirkman Road’s Kirkman is undocumented: no Orlando source found in this research says which Kirkman, or which Kirkman family, the road was named for. Carrier Drive’s etymology is likewise unfound, and a link to the air conditioning company is a guess nobody sourced. Austrian Court, the themed side street off the corridor, has no documented origin either.</p>
+        </div>
+      </section>
+
+      <section class="chapter" id="walk">
+        <p class="kicker" data-reveal>The Story, On Foot</p>
+        <h2 data-reveal>Walk It Today</h2>
+        <p data-reveal>Start at the north end, where the story started: CoCo Key Water Park stands on the ground of the Hilton Inn South, Finley Hamilton’s so called folly. Head south down the corridor he named, past WonderWorks Orlando and the dinner shows and storefronts of the midsection, and stop where the wheel turns: ICON Park &amp; The Orlando Eye, with Madame Tussauds Orlando, SEA LIFE Orlando Aquarium and the Museum of Illusions Orlando in the same complex.</p>
+        <p data-reveal>Cross to Pointe Orlando for dinner at Taverna Opa or The Capital Grille, or hear the band at Mango’s Tropical Cafe, then keep south past the Hyatt Regency Orlando and the Rosen hotels to the Orange County Convention Center, the building the tourists paid for. If the appetite runs bigger, Sand Lake Road west of the interstate is Restaurant Row: Seasons 52, Eddie V’s Prime Seafood, Ocean Prime and Christini’s Ristorante Italiano line the old grove road. Finish the loop at the south end, where SeaWorld Orlando has been opening its gates since December 1973.</p>
+        <div class="handoff" data-reveal>
+          <a class="btn-big" href="/international-drive-district-guide.html">The International Drive district guide</a>
+          <a class="btn-ghost" href="/international-drive-finder.html">Browse International Drive places</a>
+          <a class="btn-ghost" href="/history.html">More district stories</a>
+        </div>
+      </section>
+
+      <section class="credits">
+        <h2>Images and sources</h2>
+        <p>Every photograph on this page is in the public domain or dedicated to the public domain under CC0. Follow any credit to its archive record.</p>
+        <ul>
+          <li>The Orlando Eye over the I-Drive 360 shops, September 2015: <a href="https://commons.wikimedia.org/wiki/File:Orlando_%22Eye%22_Ferris_Wheel_01.jpg" target="_blank" rel="noopener">ADellaGuardia, Wikimedia Commons</a>. CC0.</li>
+          <li>The Orlando Eye at night, February 2022: <a href="https://commons.wikimedia.org/wiki/File:Orlando_Eye_de_nuit_en_f%C3%A9vrier_2022.JPG" target="_blank" rel="noopener">Benoît Prieur, Wikimedia Commons</a>. CC0.</li>
+          <li>Orange grove postcard, Orlando, published 1921: <a href="https://commons.wikimedia.org/wiki/File:Orange_Groves_in_Orlando,_Florida.jpg" target="_blank" rel="noopener">E. C. Kropp Co., State Library of Florida</a>. Public domain.</li>
+          <li>Interstate 4 and Florida Turnpike junction aerial, 1975: <a href="https://commons.wikimedia.org/wiki/File:Aerial_view_of_the_junction_of_I-4_and_the_Florida_Turnpike,_Orange_County,_Florida.jpg" target="_blank" rel="noopener">Department of Commerce, State Archives of Florida</a>. Public domain.</li>
+          <li>Trainer riding the orca Katina at SeaWorld Orlando, 2008: <a href="https://commons.wikimedia.org/wiki/File:SeaWorldORL08-04-01a.JPG" target="_blank" rel="noopener">Tim Ross, Wikimedia Commons</a>. Public domain.</li>
+        </ul>
+        <p>Story sources: the I-Drive District timeline and economic history, the Orange County Convention Center record, Finley Hamilton’s recollections as quoted in the district research, Universal Orlando’s Epic Universe opening announcement and the 407 FYI Flashbacks. The sourced district history, street by street, lives on <a href="/district-history.html#i-drive">the District Histories page</a>.</p>
+      </section>
+    </main>
+
+    <footer>
+      <div class="foot-in">
+        <a class="back-link" href="/">&larr; Back to the full guide</a>
+        <p class="brand-line">407 FYI, an independent Orlando guide. Details can change; confirm before you go.</p>
+        <p>Hand-verified Orlando places · Checked October 2026 · Local Picks are never sponsored · Corrections: <a href="mailto:mail@407.fyi">mail@407.fyi</a></p>
+        <p>Some links on 407 FYI are affiliate or referral links. We may earn a commission or credit at no extra cost to you. They never affect which places we list, rank, or recommend.</p>
+        <p><a href="/privacy.html">Privacy</a></p>
+      </div>
+    </footer>
+
+    <script src="/assets/gsap.min.js"></script>
+    <script src="/assets/ScrollTrigger.min.js"></script>
+    <script>
+    (function () {
+      var reduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      var lowPower = (navigator.deviceMemory && navigator.deviceMemory <= 2) ||
+        (navigator.hardwareConcurrency && navigator.hardwareConcurrency <= 2) ||
+        (navigator.connection && navigator.connection.saveData);
+      if (reduced || lowPower || !window.gsap || !window.ScrollTrigger) {
+        document.documentElement.classList.add('static');
+        var bar = document.getElementById('progress');
+        if (bar) bar.style.display = 'none';
+        return;
+      }
+      gsap.registerPlugin(ScrollTrigger);
+      gsap.to('#progress', { scaleX: 1, ease: 'none',
+        scrollTrigger: { start: 0, end: 'max', scrub: 0.3 } });
+      gsap.from('[data-hero]', { y: 34, opacity: 0, duration: 1.1, stagger: 0.13,
+        ease: 'power3.out', delay: 0.15, clearProps: 'all' });
+      gsap.utils.toArray('[data-reveal]').forEach(function (el) {
+        gsap.from(el, { y: 38, opacity: 0, duration: 0.95, ease: 'power3.out',
+          scrollTrigger: { trigger: el, start: 'top 86%' } });
+      });
+      gsap.utils.toArray('[data-parallax]').forEach(function (img) {
+        gsap.fromTo(img, { yPercent: -7 }, { yPercent: 7, ease: 'none',
+          scrollTrigger: { trigger: img.parentElement, start: 'top bottom', end: 'bottom top', scrub: true } });
+      });
+    })();
+    </script>
+
+<!-- 407 FYI guide chat widget. Self-contained: style + markup + script.
+     Talks to the Supabase chat edge function; answers come only from guide data. -->
+<style id="fyi-chat-css">
+.fyi-chat-btn{position:fixed;right:16px;bottom:16px;z-index:1200;display:flex;align-items:center;gap:8px;
+  padding:11px 16px;border-radius:999px;border:1px solid var(--accent,#d4b573);cursor:pointer;
+  background:var(--surface,#122419);color:var(--headline,#f6edd6);
+  font-family:"Manrope",ui-sans-serif,sans-serif;font-size:14px;font-weight:700;
+  box-shadow:0 8px 24px rgba(0,0,0,.35)}
+.fyi-chat-btn:hover{border-color:var(--focus,#d4b573)}
+.fyi-chat-btn svg{flex:none}
+.fyi-chat-panel{position:fixed;right:16px;bottom:70px;z-index:1200;width:min(384px,calc(100vw - 24px));
+  height:min(580px,calc(100dvh - 96px));display:none;flex-direction:column;overflow:hidden;
+  border-radius:16px;border:1px solid var(--line,#2f4a38);background:var(--surface,#122419);
+  box-shadow:0 18px 48px rgba(0,0,0,.45);font-family:"Manrope",ui-sans-serif,sans-serif}
+.fyi-chat-panel.open{display:flex}
+.fyi-chat-head{padding:14px 16px 10px;border-bottom:1px solid var(--line,#2f4a38);display:flex;gap:10px;align-items:flex-start}
+.fyi-chat-head h2{margin:0;font-family:"Urbanist","Manrope",sans-serif;font-size:19px;color:var(--headline,#f6edd6)}
+.fyi-chat-head p{margin:2px 0 0;font-size:12.5px;color:var(--muted,#c6bba2)}
+.fyi-chat-close{margin-left:auto;background:none;border:0;color:var(--muted,#c6bba2);font-size:20px;cursor:pointer;line-height:1;padding:2px 4px}
+.fyi-chat-msgs{flex:1;overflow-y:auto;padding:14px 14px 6px;display:flex;flex-direction:column;gap:10px}
+.fyi-chat-msg{max-width:88%;padding:9px 12px;border-radius:12px;font-size:14px;line-height:1.45;white-space:normal;overflow-wrap:break-word}
+.fyi-chat-msg p{margin:0 0 9px}
+.fyi-chat-msg p:last-child{margin-bottom:0}
+.fyi-chat-msg.bot{align-self:flex-start;background:var(--soft,#172a1f);color:var(--ink,#f0e8d5);border-bottom-left-radius:4px}
+.fyi-chat-msg.user{align-self:flex-end;background:var(--badge,#223c2b);color:var(--ink,#f0e8d5);border-bottom-right-radius:4px}
+.fyi-chat-msg.thinking{color:var(--muted,#c6bba2);font-style:italic}
+.fyi-chat-note{font:500 12px/1.5 Manrope,system-ui,sans-serif;color:var(--fyi-muted);background:var(--fyi-soft);border:1px dashed var(--fyi-line);border-radius:10px;padding:8px 10px;align-self:flex-start;max-width:96%}
+.fyi-chat-chips{display:flex;flex-wrap:wrap;gap:6px;align-self:flex-start;max-width:96%}
+.fyi-chat-chip{display:inline-block;padding:5px 10px;border-radius:999px;border:1px solid var(--line,#2f4a38);
+  background:var(--bg,#0a1811);color:var(--accent-ink,#d4b573);font-size:12.5px;font-weight:600;text-decoration:none}
+.fyi-chat-chip:hover{border-color:var(--accent,#d4b573)}
+.fyi-chat-chip small{color:var(--muted,#c6bba2);font-weight:500}
+.fyi-chat-form{display:flex;gap:8px;padding:10px;border-top:1px solid var(--line,#2f4a38)}
+.fyi-chat-input{flex:1;padding:10px 12px;border-radius:10px;border:1px solid var(--line,#2f4a38);
+  background:var(--bg,#0a1811);color:var(--ink,#f0e8d5);font:inherit;font-size:14px}
+.fyi-chat-input:focus{outline:2px solid var(--focus,#d4b573);outline-offset:0}
+.fyi-chat-send{padding:10px 14px;border-radius:10px;border:0;cursor:pointer;font:inherit;font-weight:800;
+  background:var(--accent,#d4b573);color:#122419}
+.fyi-chat-send:disabled{opacity:.55;cursor:wait}
+@media (max-width:480px){.fyi-chat-panel{right:8px;bottom:64px}.fyi-chat-btn{right:12px;bottom:12px}}
+</style>
+<button class="fyi-chat-btn" id="fyiChatBtn" aria-haspopup="dialog" aria-expanded="false">
+  <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+  Ask the guide
+</button>
+<section class="fyi-chat-panel" id="fyiChatPanel" role="dialog" aria-label="Ask the 407 FYI guide">
+  <div class="fyi-chat-head">
+    <div>
+      <h2>Ask 407 FYI</h2>
+      <p>Answers only from the guide's own listings.</p>
+    </div>
+    <button class="fyi-chat-close" id="fyiChatClose" aria-label="Close chat">&times;</button>
+  </div>
+  <div class="fyi-chat-msgs" id="fyiChatMsgs"></div>
+  <form class="fyi-chat-form" id="fyiChatForm">
+    <input class="fyi-chat-input" id="fyiChatInput" type="text" autocomplete="off" maxlength="500"
+      placeholder="Ask about places in Orlando..." aria-label="Your question">
+    <button class="fyi-chat-send" id="fyiChatSend" type="submit">Send</button>
+  </form>
+</section>
+<script id="fyi-chat-js">
+(() => {
+  const FN = 'https://xxdgxigwpnezsdvbiawi.supabase.co/functions/v1/chat';
+  const KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inh4ZGd4aWd3cG5lenNkdmJpYXdpIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTE2OTM0MDYsImV4cCI6MjEwNzI2OTQwNn0.3fuj9vjXspT31fQhgcejf4Thmk9yHPc7RSBZ0v97Gw4';
+  const btn = document.getElementById('fyiChatBtn');
+  const panel = document.getElementById('fyiChatPanel');
+  const msgs = document.getElementById('fyiChatMsgs');
+  const form = document.getElementById('fyiChatForm');
+  const input = document.getElementById('fyiChatInput');
+  const send = document.getElementById('fyiChatSend');
+  let opened = false, busy = false, noticeShown = false;
+  const history = [];
+  let visitor = '';
+  try {
+    visitor = localStorage.getItem('fyi-chat-visitor') || '';
+    if (!visitor) {
+      visitor = (crypto.randomUUID ? crypto.randomUUID() : String(Date.now()) + Math.random().toString(36).slice(2));
+      localStorage.setItem('fyi-chat-visitor', visitor);
+    }
+  } catch (e) { visitor = 'anon'; }
+  const track = (name) => { try { if (window.captureEvent) captureEvent(name, {}); else if (window.posthog) posthog.capture(name); } catch (e) {} };
+  const esc = (s) => s.replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+  const fmt = (s) => s.split(/\n\s*\n/).map((para) => '<p>' + esc(para)
+    .replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>')
+    .replace(/^\s*[-*]\s+/gm, '• ')
+    .replace(/mail@407\.fyi/g, '<a href="mailto:mail@407.fyi" style="color:var(--fyi-accent)">mail@407.fyi</a>')
+    .replace(/\n/g, '<br>') + '</p>').join('');
+  function addMsg(cls, text) {
+    const d = document.createElement('div');
+    d.className = 'fyi-chat-msg ' + cls;
+    d.innerHTML = fmt(text);
+    msgs.appendChild(d);
+    msgs.scrollTop = msgs.scrollHeight;
+    return d;
+  }
+  function addChips(venues) {
+    if (!venues || !venues.length) return;
+    const row = document.createElement('div');
+    row.className = 'fyi-chat-chips';
+    for (const v of venues) {
+      const a = document.createElement('a');
+      a.className = 'fyi-chat-chip';
+      a.href = '/venue/' + v.id + '.html';
+      a.innerHTML = esc(v.name) + ' <small>' + esc(v.district || '') + '</small>';
+      row.appendChild(a);
+    }
+    msgs.appendChild(row);
+    msgs.scrollTop = msgs.scrollHeight;
+  }
+  function addGoogleChips(links) {
+    if (!links || !links.length) return;
+    const row = document.createElement('div');
+    row.className = 'fyi-chat-chips';
+    for (const v of links) {
+      const a = document.createElement('a');
+      a.className = 'fyi-chat-chip';
+      a.href = v.url;
+      a.target = '_blank';
+      a.rel = 'noopener';
+      a.innerHTML = esc(v.name) + ' <small>on Google</small>';
+      row.appendChild(a);
+    }
+    msgs.appendChild(row);
+    msgs.scrollTop = msgs.scrollHeight;
+  }
+  function toggle(open) {
+    panel.classList.toggle('open', open);
+    btn.setAttribute('aria-expanded', String(open));
+    if (open) {
+      if (!opened) {
+        opened = true;
+        addMsg('bot', 'Hi, I answer from the 407 FYI guide: date nights, coffee, family spots, neighborhoods, whatever you are after. We are in soft opening, so you get eight questions a day: make them thorough ones, with the neighborhood, the occasion, and the mood in a single ask, and you will get a fuller answer. One more limit: the guide does not list hours, so for hours or a phone number I will point you to the place on Google. What are you looking for?');
+        track('chat_open');
+      }
+      setTimeout(() => input.focus(), 60);
+    }
+  }
+  btn.addEventListener('click', () => toggle(!panel.classList.contains('open')));
+  document.getElementById('fyiChatClose').addEventListener('click', () => toggle(false));
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && panel.classList.contains('open')) toggle(false); });
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const q = input.value.trim();
+    if (!q || busy) return;
+    busy = true; send.disabled = true; input.value = '';
+    addMsg('user', q);
+    history.push({ role: 'user', text: q });
+    const thinking = addMsg('bot thinking', 'Looking through the guide...');
+    try {
+      const ctrl = new AbortController();
+      const timer = setTimeout(() => ctrl.abort(), 30000);
+      const r = await fetch(FN, {
+        method: 'POST',
+        headers: { 'Authorization': 'Bearer ' + KEY, 'apikey': KEY, 'Content-Type': 'application/json' },
+        body: JSON.stringify({ question: q, history: history.slice(0, -1).slice(-6), visitor }),
+        signal: ctrl.signal,
+      });
+      clearTimeout(timer);
+      const data = await r.json();
+      thinking.remove();
+      if (!r.ok || !data.answer) throw new Error('bad response');
+      if (data.notice && !noticeShown) {
+        noticeShown = true;
+        const n = document.createElement('div');
+        n.className = 'fyi-chat-note';
+        n.textContent = data.notice;
+        msgs.appendChild(n);
+      }
+      addMsg('bot', data.answer);
+      addChips(data.venues);
+      addGoogleChips(data.google);
+      history.push({ role: 'assistant', text: data.answer });
+      track('chat_question');
+    } catch (err) {
+      thinking.remove();
+      addMsg('bot', 'Something went wrong on my end. The finder on this page can still help, or try me again in a moment.');
+    }
+    busy = false; send.disabled = false; input.focus();
+  });
+})();
+</script>
+  </body>
+</html>
