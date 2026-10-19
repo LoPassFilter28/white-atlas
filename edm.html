@@ -1,0 +1,585 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="color-scheme" content="light dark" />
+    <title>The Orlando Sound: House, Techno and EDM in Orlando | 407 FYI</title>
+    <meta name="description" content="Orlando electronic music, room by room: house at Aero and Celine, the underground crews at Iron Cow, touring bills at The Vanguard, EDC each November, and the 1990s breaks story behind the Orlando sound." />
+    <link rel="canonical" href="https://407.fyi/edm.html" />
+    <meta property="og:title" content="The Orlando Sound: House, Techno and EDM · 407 FYI" />
+    <meta property="og:description" content="The rooms, the crews and the festival calendar of Orlando electronic music, plus the breaks history that made the Orlando sound." />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://407.fyi/edm.html" />
+    <meta property="og:image" content="https://407.fyi/og-image.png" />
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="preload" href="/fonts/manrope-latin.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="/fonts/fonts.css" />
+    <script>
+      try {
+        const savedTheme = localStorage.getItem('white-atlas-theme');
+        document.documentElement.dataset.theme = savedTheme === 'light' || savedTheme === 'dark' ? savedTheme : 'dark';
+      } catch (error) {
+        document.documentElement.dataset.theme = 'dark';
+      }
+    </script>
+<style>
+      /* Night Drive tokens (from the district guides) */
+      :root {
+        color-scheme: dark;
+        --bg: #0a1811; --surface: #122419; --soft: #172a1f; --ink: #f0e8d5;
+        --muted: #c6bba2; --line: #2f4a38; --accent: #765b2f; --accent-ink: #d4b573;
+        --headline: #f6edd6; --focus: #d4b573;
+        --d-a: #14231a; --d-b: #3a5a35; --d-c: #bd9049;
+        --pad: clamp(20px, 5vw, 40px);
+      }
+      * { box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
+      body {
+        margin: 0; background: var(--bg); color: var(--ink);
+        font-family: "Manrope", system-ui, sans-serif; line-height: 1.6;
+        overflow-x: hidden;
+      }
+      h1, h2, h3, .display { font-family: "Urbanist", "Manrope", sans-serif; }
+      a { color: var(--accent-ink); }
+      a:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
+      .kicker {
+        font-family: "Urbanist", sans-serif; font-weight: 700; letter-spacing: .22em;
+        font-size: .72rem; text-transform: uppercase; color: var(--accent-ink); margin: 0 0 14px;
+      }
+
+      /* ---------- hero ---------- */
+      .hero {
+        position: relative; padding: clamp(64px, 13vh, 130px) var(--pad) clamp(48px, 9vh, 84px);
+        background: radial-gradient(ellipse 90% 55% at 50% 112%, rgba(189,144,73,.26), transparent 60%),
+          linear-gradient(168deg, #1d3325, #14231a 55%, #0a1811);
+        border-bottom: 1px solid var(--line);
+      }
+      .hero-in { max-width: 860px; margin: 0 auto; }
+      .crumbs { font-size: .8rem; color: var(--muted); margin: 0 0 26px; }
+      .crumbs a { font-weight: 700; }
+      .hero-brand {
+        font-family: "Urbanist", sans-serif; font-weight: 700; letter-spacing: .22em;
+        font-size: .72rem; text-transform: uppercase; color: var(--accent-ink); text-decoration: none;
+      }
+      .hero h1 {
+        font-size: clamp(2.6rem, 8.5vw, 5.2rem); line-height: .98; letter-spacing: .01em;
+        color: var(--headline); margin: 18px 0 16px; text-transform: uppercase;
+      }
+      .hero .sub { font-size: clamp(1.05rem, 2.6vw, 1.3rem); color: var(--ink); max-width: 620px; margin: 0 0 10px; }
+      .hero .fine { color: var(--muted); max-width: 620px; margin: 0; }
+      .anchor-nav { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 30px; }
+      .anchor-nav a {
+        border: 1px solid var(--line); border-radius: 999px; padding: 8px 14px;
+        font-size: .82rem; font-weight: 700; text-decoration: none; background: rgba(255,255,255,.03);
+        min-height: 42px; display: inline-flex; align-items: center;
+      }
+      .anchor-nav a:hover { border-color: var(--accent-ink); }
+
+      /* ---------- sections ---------- */
+      main { display: block; }
+      .sec { max-width: 860px; margin: 0 auto; padding: clamp(52px, 9vh, 88px) var(--pad) 0; }
+      .sec h2 { font-size: clamp(1.7rem, 4.6vw, 2.4rem); line-height: 1.12; color: var(--headline); margin: 0 0 16px; }
+      .sec .lede { color: var(--muted); font-size: 1.04rem; max-width: 640px; margin: 0 0 26px; }
+      .sec p { max-width: 68ch; }
+      .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 14px; margin: 22px 0 6px; }
+      .card {
+        background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 20px;
+      }
+      .card h3 { margin: 0 0 6px; font-size: 1.12rem; color: var(--headline); }
+      .card .addr { font-weight: 800; color: var(--accent-ink); margin: 0 0 10px; font-size: .98rem; }
+      .card p { margin: 0; color: var(--muted); font-size: .94rem; }
+      .cols { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 22px 0 6px; }
+      @media (max-width: 680px) { .cols { grid-template-columns: 1fr; } }
+      .panel { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 20px 22px; }
+      .panel h3 { margin: 0 0 12px; font-size: 1.05rem; color: var(--headline); }
+      .panel ul, .plain-list { margin: 0; padding-left: 18px; }
+      .panel li, .plain-list li { margin-bottom: 9px; }
+      .panel li:last-child, .plain-list li:last-child { margin-bottom: 0; }
+      .note {
+        border-left: 3px solid var(--accent-ink); background: var(--soft);
+        padding: 14px 18px; border-radius: 0 12px 12px 0; margin: 22px 0 6px; max-width: 68ch;
+      }
+      .note p { margin: 0; }
+      .venue-links { list-style: none; margin: 0; padding: 0; }
+      .venue-links li { margin-bottom: 10px; }
+      .venue-links a { font-weight: 800; text-underline-offset: 3px; }
+      .venue-links span { color: var(--muted); }
+
+      /* ---------- jobs ---------- */
+      .job-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 14px; margin-top: 22px; }
+      .job { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 20px 22px; }
+      .job h3 { margin: 0 0 6px; font-size: 1.08rem; color: var(--headline); }
+      .job p { margin: 0 0 12px; color: var(--muted); font-size: .94rem; }
+      .job ul { list-style: none; margin: 0 0 14px; padding: 0; }
+      .job li { margin-bottom: 7px; }
+      .job li a { font-weight: 800; text-underline-offset: 3px; }
+      .job .browse { font-size: .86rem; font-weight: 800; text-transform: uppercase; letter-spacing: .08em; }
+
+      /* ---------- what to avoid ---------- */
+      .avoid { border-top: 1px solid var(--line); padding: 24px 0 6px; }
+      .avoid h3 { margin: 0 0 10px; font-size: 1.18rem; color: var(--headline); }
+      .avoid p { margin: 0 0 8px; max-width: 68ch; }
+      .avoid strong { color: var(--accent-ink); }
+      .flags { display: flex; flex-wrap: wrap; gap: 8px; margin: 18px 0 6px; }
+      .flags span {
+        border: 1px solid var(--accent); border-radius: 999px; padding: 7px 13px;
+        font-size: .85rem; font-weight: 700; color: var(--accent-ink); background: rgba(255,255,255,.03);
+      }
+      .rules { margin: 16px 0 0; padding-left: 20px; max-width: 68ch; }
+      .rules li { margin-bottom: 10px; }
+
+      .handoff { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 30px; }
+      .btn-big {
+        display: inline-flex; align-items: center; min-height: 52px; padding: 12px 22px;
+        background: var(--accent); color: #fff; font-weight: 800; border-radius: 999px; text-decoration: none;
+      }
+      .btn-big:hover { background: var(--accent-ink); color: #1d2a20; }
+      .btn-ghost {
+        display: inline-flex; align-items: center; min-height: 52px; padding: 12px 22px;
+        border: 1px solid var(--line); color: var(--accent-ink); font-weight: 800; border-radius: 999px; text-decoration: none;
+      }
+
+      footer { border-top: 1px solid var(--line); margin-top: clamp(52px, 9vh, 88px); }
+      .foot-in { max-width: 860px; margin: 0 auto; padding: 34px var(--pad) 44px; color: var(--muted); font-size: .9rem; }
+      .foot-in p { margin: 0 0 9px; }
+      .back-link { font-weight: 800; display: inline-block; margin-bottom: 16px; }
+      .brand-line { color: var(--ink); font-weight: 700; }
+
+      /* ---------- Light theme: app-page tokens ---------- */
+      html[data-theme="light"] {
+        color-scheme: light;
+        --bg: #faf6ec; --surface: #fffdf7; --soft: #f3ecd7; --ink: #1d2a20;
+        --muted: #4c5a45; --line: #ddd3ba; --accent: #8a5f0e; --accent-ink: #7c520c;
+        --headline: #123524; --focus: #8a5f0e;
+      }
+      html[data-theme="light"] .hero {
+        background: radial-gradient(ellipse 90% 55% at 50% 112%, rgba(163,129,63,.30), transparent 60%),
+          linear-gradient(168deg, color-mix(in srgb, var(--d-a) 24%, #faf6ec), color-mix(in srgb, var(--d-a) 40%, #faf6ec) 55%, color-mix(in srgb, var(--d-a) 14%, #faf6ec));
+      }
+      html[data-theme="light"] .anchor-nav a, html[data-theme="light"] .flags span { background: rgba(29,42,32,.04); }
+      html[data-theme="light"] .btn-big { background: var(--accent); color: #fff; }
+      html[data-theme="light"] .btn-big:hover { background: var(--accent-ink); color: #fff; }
+
+      @media print { .anchor-nav { display: none; } }
+      @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+      /* ---------- events ---------- */
+      .card .where { font-weight: 700; color: var(--ink); margin: 0 0 8px; font-size: .94rem; }
+      .card h3 a { text-decoration: none; }
+      .card h3 a:hover { text-decoration: underline; text-underline-offset: 3px; }
+      .wk {
+        font-family: "Urbanist", sans-serif; font-weight: 700; letter-spacing: .14em;
+        font-size: .95rem; text-transform: uppercase; color: var(--muted);
+        margin: 38px 0 2px;
+      }
+      .wk:first-of-type { margin-top: 6px; }
+      .ev-list { border-top: 1px solid var(--line); }
+      .ev {
+        display: grid; grid-template-columns: 150px 1fr; gap: 4px 20px;
+        padding: 17px 0; border-bottom: 1px solid var(--line);
+      }
+      .ev .d {
+        font-family: "Urbanist", sans-serif; font-weight: 800; color: var(--accent-ink);
+        font-size: .94rem; margin: 0; padding-top: 3px; line-height: 1.45;
+      }
+      .ev h3 { margin: 0 0 4px; font-size: 1.1rem; color: var(--headline); }
+      .ev .meta { margin: 0 0 5px; font-size: .95rem; color: var(--ink); }
+      .ev .meta a { font-weight: 800; text-underline-offset: 3px; }
+      .ev .blurb { margin: 0; color: var(--muted); font-size: .94rem; max-width: 62ch; }
+      @media (max-width: 640px) {
+        .ev { grid-template-columns: 1fr; }
+        .ev .d { padding-top: 0; }
+      }
+    </style>
+    
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"ItemList","name":"407 FYI: Orlando house, techno and EDM venues","numberOfItems":17,"itemListElement":[{"@type":"ListItem","position":1,"item":{"@type":"LocalBusiness","name":"Aero Rooftop Bar & Lounge","url":"https://407.fyi/venue/aero-rooftop-bar-lounge.html"}},{"@type":"ListItem","position":2,"item":{"@type":"LocalBusiness","name":"Celine Orlando","url":"https://407.fyi/venue/celine.html"}},{"@type":"ListItem","position":3,"item":{"@type":"LocalBusiness","name":"Proper Orlando","url":"https://407.fyi/venue/proper-orlando.html"}},{"@type":"ListItem","position":4,"item":{"@type":"LocalBusiness","name":"Iron Cow","url":"https://407.fyi/venue/iron-cow.html"}},{"@type":"ListItem","position":5,"item":{"@type":"LocalBusiness","name":"Euphoria Downtown","url":"https://407.fyi/venue/euphoria-downtown.html"}},{"@type":"ListItem","position":6,"item":{"@type":"LocalBusiness","name":"The Vanguard","url":"https://407.fyi/venue/vanguard.html"}},{"@type":"ListItem","position":7,"item":{"@type":"LocalBusiness","name":"Ohm Nightclub","url":"https://407.fyi/venue/tier-nightclub.html"}},{"@type":"ListItem","position":8,"item":{"@type":"LocalBusiness","name":"Aura Night Club","url":"https://407.fyi/venue/aura-night-club.html"}},{"@type":"ListItem","position":9,"item":{"@type":"LocalBusiness","name":"Yaz Orlando","url":"https://407.fyi/venue/yaz-orlando.html"}},{"@type":"ListItem","position":10,"item":{"@type":"LocalBusiness","name":"Wall Street Plaza","url":"https://407.fyi/venue/wall-street-plaza.html"}},{"@type":"ListItem","position":11,"item":{"@type":"LocalBusiness","name":"The Beacham & The Social","url":"https://407.fyi/venue/the-beacham.html"}},{"@type":"ListItem","position":12,"item":{"@type":"LocalBusiness","name":"The Social","url":"https://407.fyi/venue/the-social.html"}},{"@type":"ListItem","position":13,"item":{"@type":"LocalBusiness","name":"Barbarella Orlando","url":"https://407.fyi/venue/independent-bar.html"}},{"@type":"ListItem","position":14,"item":{"@type":"LocalBusiness","name":"House of Blues","url":"https://407.fyi/venue/house-of-blues.html"}},{"@type":"ListItem","position":15,"item":{"@type":"LocalBusiness","name":"Hard Rock Live","url":"https://407.fyi/venue/hard-rock-live.html"}},{"@type":"ListItem","position":16,"item":{"@type":"LocalBusiness","name":"Mango's Tropical Cafe","url":"https://407.fyi/venue/mangos.html"}},{"@type":"ListItem","position":17,"item":{"@type":"LocalBusiness","name":"Elixir Kitchen and Bar","url":"https://407.fyi/venue/elixir-kitchen-bar.html"}}]}</script>
+  </head>
+  <body>
+    <header class="hero">
+      <div class="hero-in">
+        <p class="crumbs"><a href="/">407 FYI</a> · House, Techno &amp; EDM</p>
+        <a class="hero-brand" href="/">407 FYI · A Nightlife Guide</a>
+        <h1>The Orlando Sound</h1>
+        <p class="sub">Orlando helped invent an American dance sound in the 1990s, lost it to a crackdown, and now hosts one of the country's biggest electronic festivals each fall, while the local crews keep the small rooms alive.</p>
+        <p class="fine">The rooms and crews below are the guide's own listings, checked against venue, promoter and festival sources in October 2026. For what is on this month, the events calendar carries the dates.</p>
+        <nav class="anchor-nav" aria-label="On this page">
+          <a href="#rooms">The rooms</a>
+          <a href="#crews">The crews</a>
+          <a href="#year">The year</a>
+          <a href="#history">The history</a>
+          <a href="#practical">Practical notes</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="sec" id="rooms">
+        <p class="kicker">Where It Plays</p>
+        <h2>The rooms, by sound</h2>
+        <p class="lede">Orlando's electronic scene is event driven. The same city holds a rooftop built on commercial house, a sushi spot that doubles as the underground's clubhouse, and a tire building from 1930 that graduated from the rave era to the touring circuit. Start with the sound you want.</p>
+
+        <h3 class="wk">House-leaning rooms</h3>
+        <div class="cards">
+          <article class="card">
+            <h3><a href="/venue/aero-rooftop-bar-lounge.html">Aero Rooftop Bar & Lounge</a></h3>
+            <p class="addr">Downtown</p>
+            <p>House and EDM under open skies, stated plainly by the venue itself. The reliable commercial house room, at rooftop scale above Orange Avenue.</p>
+          </article>
+          <article class="card">
+            <h3><a href="/venue/celine.html">Celine Orlando</a></h3>
+            <p class="addr">Downtown</p>
+            <p>Stacked rooms on Magnolia Avenue. House and tech house headline the bills, a speakeasy sits below, and the rooftop can carry a different sound on the same night.</p>
+          </article>
+          <article class="card">
+            <h3><a href="/venue/proper-orlando.html">Proper Orlando</a></h3>
+            <p class="addr">Downtown</p>
+            <p>A vinyl only DJ bar: records on an analog sound system, working the soul, disco and house end of the shelf at listening volume.</p>
+          </article>
+        </div>
+
+        <h3 class="wk">Techno and the underground</h3>
+        <p>Orlando's underground does not live behind one door. It lives in a Milk District sushi spot and in the crews who take rooms over for a night, so follow the names in the crews section as closely as the addresses.</p>
+        <div class="cards">
+          <article class="card">
+            <h3><a href="/venue/iron-cow.html">Iron Cow</a></h3>
+            <p class="addr">Milk District</p>
+            <p>The scene's clubhouse, hiding inside a sushi spot. Trance nights, drum and bass tour stops, house till late, and daytime techno parties when the crews take over.</p>
+          </article>
+          <article class="card">
+            <h3><a href="/venue/euphoria-downtown.html">Euphoria Downtown</a></h3>
+            <p class="addr">Downtown</p>
+            <p>A brunch to club room on South Orange Avenue. Its techno nights are talked about, but current listings lean brunch and party anthems, so count techno here as occasional rather than a standing room.</p>
+          </article>
+        </div>
+
+        <h3 class="wk">Big-room and touring rooms</h3>
+        <div class="cards">
+          <article class="card">
+            <h3><a href="/venue/vanguard.html">The Vanguard</a></h3>
+            <p class="addr">Downtown</p>
+            <p>Orlando's main mid size touring room, inside the historic Firestone building. House, techno, trance and dubstep rotate bill by bill, and Insomniac runs its official EDC parties here.</p>
+          </article>
+          <article class="card">
+            <h3><a href="/venue/tier-nightclub.html">Ohm Nightclub</a></h3>
+            <p class="addr">Downtown</p>
+            <p>The big two floor club formerly known as Tier. Today's mix runs college, hip hop and Latin nights more than the touring EDM it was built on.</p>
+          </article>
+          <article class="card">
+            <h3><a href="/venue/aura-night-club.html">Aura Night Club</a></h3>
+            <p class="addr">Downtown</p>
+            <p>An LED lit room in the Beacham complex, rotating EDM, hip hop and reggaeton with the booking.</p>
+          </article>
+          <article class="card">
+            <h3><a href="/venue/yaz-orlando.html">Yaz Orlando</a></h3>
+            <p class="addr">Downtown</p>
+            <p>A restaurant and lounge that deepens into a club room as the night goes on. Moody rather than maximal.</p>
+          </article>
+          <article class="card">
+            <h3><a href="/venue/wall-street-plaza.html">Wall Street Plaza</a></h3>
+            <p class="addr">Downtown</p>
+            <p>A one block bar crawl that lists EDM among its sounds, and the anchor of downtown's biggest party nights, Halloween and New Year's Eve above all.</p>
+          </article>
+        </div>
+
+        <h3 class="wk">Heritage rooms and the alternative floor</h3>
+        <div class="cards">
+          <article class="card">
+            <h3><a href="/venue/the-beacham.html">The Beacham</a></h3>
+            <p class="addr">Downtown</p>
+            <p>The room where Aahz happened. A touring live music hall today, and still home to the AAHZ Thanksgiving Eve reunion.</p>
+          </article>
+          <article class="card">
+            <h3><a href="/venue/the-social.html">The Social</a></h3>
+            <p class="addr">Downtown</p>
+            <p>The Beacham's connected sister room. Bands most nights, live electronic acts as special events.</p>
+          </article>
+          <article class="card">
+            <h3><a href="/venue/independent-bar.html">Barbarella Orlando</a></h3>
+            <p class="addr">Winter Park</p>
+            <p>Not house or techno, and proudly so: the city's surviving new wave and alternative dance floor, now settled in Winter Park.</p>
+          </article>
+        </div>
+        <div class="note">
+          <p>The concert halls get their electronic moments too. <a href="/venue/house-of-blues.html">House of Blues</a> at Disney Springs and <a href="/venue/hard-rock-live.html">Hard Rock Live</a> at CityWalk are live music rooms that occasionally host electronic and heritage bills, House of Blues including a Florida breaks bill with DJ Icey, DJ Magic Mike and DJ Sandy.</p>
+        </div>
+      </section>
+
+      <section class="sec" id="crews">
+        <p class="kicker">Who Throws It</p>
+        <h2>The crews</h2>
+        <p class="lede">Rooms are only half the map. These are the promoters and party crews whose names on a flyer tell you what the night will actually sound like.</p>
+        <div class="cols">
+          <div class="panel">
+            <h3>Insomniac and Factory 93</h3>
+            <p>The dominant electronic promoter in Orlando, through EDC and its official party network. Factory 93 is its house and techno arm and Bassrush its bass arm. Insomniac co presents the official EDC pre parties and afterparties at The Vanguard, and afterparties at Celine.</p>
+          </div>
+          <div class="panel">
+            <h3>BLNK CNVS Presents</h3>
+            <p>The most visible local co promoter on the Celine calendar, working across house, bass, hard dance and drum and bass bills, sometimes alongside national promoters.</p>
+          </div>
+          <div class="panel">
+            <h3>Shade</h3>
+            <p>The underground techno crew. Its parties land irregularly, roughly monthly, in small rooms: daytime sessions at <a href="/venue/iron-cow.html">Iron Cow</a>, and a tenth anniversary festival weekend takeover at <a href="/venue/mangos.html">Mango's Tropical Cafe</a> on International Drive in November 2026.</p>
+          </div>
+          <div class="panel">
+            <h3>Torque</h3>
+            <p>Orlando's drum and bass movement, established in 1999 and led by founder and resident DJ Circle K. One of the longest running drum and bass nights in America, it moves room to room and currently lands at Iron Cow.</p>
+          </div>
+          <div class="panel">
+            <h3>Lost in Trancelation</h3>
+            <p>The recurring trance night from Suzy Solar and Solar Power Music, built as a home for the trance family, with international guests and local residents. Its current home base is Iron Cow.</p>
+          </div>
+          <div class="panel">
+            <h3>Foundation Presents</h3>
+            <p>The independent concert promoter behind The Social and The Beacham, calling itself Central Florida's premier independent concert promoter. Mostly live bands, with the AAHZ heritage night as its electronic exception.</p>
+          </div>
+          <div class="panel">
+            <h3>AAHZ reunions</h3>
+            <p>The 1990s Beacham night survives as a heritage brand. Its Thanksgiving Eve gathering at The Beacham is an annual reunion for Orlando's original rave generation, built around era DJs Kimball Collins and DJ Icey.</p>
+          </div>
+        </div>
+        <div class="note">
+          <p>A generation earlier, HTG Events ran the touring bass and EDM bills of the Gilt era. That era is history now; the rooms and crews above are the current map.</p>
+        </div>
+      </section>
+
+      <section class="sec" id="year">
+        <p class="kicker">The Calendar</p>
+        <h2>The year in Orlando electronic music</h2>
+        <p class="lede">The scene has a shape across the year. Two festival peaks, two nights that belong to tradition, and one month that belongs to somebody else.</p>
+        <p><strong>November is the peak.</strong> EDC Orlando runs November 6 to 8, 2026 at Tinker Field, Insomniac's East Coast edition and a destination scale festival. Downtown becomes its second site: official pre parties and afterparties at The Vanguard and Celine, and spillover bills across downtown rooms, reaching spots like <a href="/venue/elixir-kitchen-bar.html">Elixir Kitchen and Bar</a>. Locals call the whole stretch EDC week.</p>
+        <p><strong>April is the bass anchor.</strong> Forbidden Kingdom, presented by Bassrush, takes the Central Florida Fairgrounds. The 2026 edition ran April 25 and 26: dubstep, drum and bass and riddim, well below EDC's scale and built for the bass crowd specifically.</p>
+        <p><strong>October stacks up.</strong> Pride weekend brings DJs and drag performers to Lake Eola Park for Come Out With Pride on October 17, 2026. A few weeks out from EDC, the Halloween season runs at club and block party scale, Wall Street Plaza above all. Orlando's Halloween is a club holiday, not a festival one.</p>
+        <p><strong>Two nights belong to tradition.</strong> Thanksgiving Eve belongs to the AAHZ reunion at The Beacham, where the original room fills with the original generation. New Year's Eve belongs to the block parties: Wall Street Plaza downtown and the Orange Ball Drop street party in Thornton Park.</p>
+        <p><strong>March belongs to Miami.</strong> Ultra and Miami Music Week are a drive south, and no Orlando satellite circuit comes with them. Orlando gets ordinary touring bills that month; its own peaks are April, October and November.</p>
+        <div class="note">
+          <p>For this month's actual dates, rooms and bills, see the <a href="/events.html">events calendar</a>, which is rebuilt at the start of every month.</p>
+        </div>
+      </section>
+
+      <section class="sec" id="history">
+        <p class="kicker">How Orlando Got This Sound</p>
+        <h2>A headquarters downtown</h2>
+        <p>In 1988, an acid house night at the Beacham Theatre on North Orange Avenue reshaped itself into AAHZ, a house music dance party that drew people from across Florida. Residents Kimball Collins and Dave Cannalte presided over the Saturday nights, and Orlando Weekly later wrote that they kick started an underground culture, spawned countless DJ careers, and gave Orlando its own summer of love in 1991 and 1992. At the time, only New York, San Francisco and Los Angeles had comparable scenes, and theirs were warehouse based. Orlando had a headquarters in the heart of downtown.</p>
+        <p>What the city exported was breaks. Braided from hip hop, Miami bass and electro, the breakbeat style was Orlando's original contribution to dance music, and it was named in real time: the Orlando Sentinel's 1997 feature was titled "The Orlando Sound." DJ Icey was the export engine, melding those ingredients during his residency at the Edge, founding his label Zone Records in 1993, and signing to Pete Tong's FFRR, which carried the sound to Britain. Chris Fortier, who came up under Collins and Cannalte, became the second pillar, producing as Fade and spreading the music through his Balance Record Pool. Baby Anne, recording for Zone among her labels, took the style to the national dance charts.</p>
+        <p>The rooms scaled with the sound. Insomniac's own history of the Florida scene calls the Edge, in the summer of 1993, the place where the Florida interpretation of rave was born. The scene then shifted to the Club at Firestone, in the 1930 Firestone tire building on Orange Avenue, a room Rolling Stone proclaimed the best dance club in the Southeast. That room never left: it is <a href="/venue/vanguard.html">The Vanguard</a>, Orlando's touring electronic room today.</p>
+        <p>The turn came from city hall. In 1997 Orlando passed its Rave Ordinance, a curfew that forced bars and clubs to close at 3 a.m., and a Florida law the same year barred licensed premises from being used for parties in the hours when alcohol sales were prohibited. The federal RAVE Act followed in 2003, expanding liability for promoters and venue owners. The word rave itself became unusable for a period; the weekly scene thinned to occasional one offs, and only the major festivals that could afford security and lawyers thrived.</p>
+        <p>The lineage runs straight to the present. EDC arrived at Tinker Field in 2011 and grew from a two day spring event into the November festival that now bends the whole city's calendar. The era never fully left the stage: AAHZ reunion bills return to The Beacham in the original room, breaks bills surface at House of Blues, and Rabbit in the Moon, central to the Florida rave story, played EDC Orlando in 2016.</p>
+        <p>This history is also a record collection. <a href="https://muse.ai/s/pico-nebula-rxe6fxpgxyuxbxtxd">Pico Nebula</a> is the guide editor's own DJ archive, a personal library of tracks and mixes from this city and its era, breaks included. It is a sister project of this guide rather than a sponsor, linked here because the breaks era is its home turf. For the Beacham's longer story in the guide's own voice, see <a href="/heritage.html">The Long View</a> and the <a href="/flashbacks-scroll.html">Flashbacks</a> stories.</p>
+      </section>
+
+      <section class="sec" id="practical">
+        <p class="kicker">Going Out</p>
+        <h2>Practical notes</h2>
+        <ul class="plain-list">
+          <li><strong>Pick the crew or the bill first, then the room.</strong> The headline rooms fill on touring bills and weekends; the small rooms fill when a crew takes them over. A quiet door on the wrong night tells you nothing about the room.</li>
+          <li><strong>For techno, follow dates, not doors.</strong> There is no standing techno club in Orlando. The reliable routes are Factory 93 bills around EDC, Shade parties in small rooms, and single techno bills at The Vanguard.</li>
+          <li><strong>Locals first:</strong> Iron Cow and the small room circuit downtown, Barbarella in Winter Park, and the listening bars. <strong>Tourist facing:</strong> the International Drive rooms and the Disney Springs and CityWalk concert halls. Celine sits between the two, a downtown room whose biggest weeks are festival driven.</li>
+          <li><strong>Festival weeks are a different city.</strong> During EDC week, downtown hosts official parties across several rooms and hotels book out. Forbidden Kingdom does the same at a smaller scale in April.</li>
+          <li><strong>Downtown is the center of gravity.</strong> It is where locals, students and visitors mix, and where nearly every room on this page stands. The corridors, International Drive, Disney Springs and CityWalk, are built for visitors and program accordingly.</li>
+        </ul>
+        <div class="handoff">
+          <a class="btn-big" href="/events.html">See the events calendar</a>
+          <a class="btn-ghost" href="/archive.html">Browse all Orlando places</a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="foot-in">
+        <a class="back-link" href="/">&larr; Back to the full guide</a>
+        <p class="brand-line">407 FYI, an independent Orlando guide. Details can change; confirm before you go.</p>
+        <p>Hand-verified Orlando places · Checked October 2026 · Local Picks are never sponsored · Corrections: <a href="mailto:mail@407.fyi">mail@407.fyi</a></p>
+        <p>Some links on 407 FYI are affiliate or referral links. We may earn a commission or credit at no extra cost to you. They never affect which places we list, rank, or recommend.</p>
+        <p><a href="/privacy.html">Privacy</a></p>
+      </div>
+    </footer>
+
+<!-- 407 FYI guide chat widget. Self-contained: style + markup + script.
+     Talks to the Supabase chat edge function; answers come only from guide data. -->
+<style id="fyi-chat-css">
+.fyi-chat-btn{position:fixed;right:16px;bottom:16px;z-index:1200;display:flex;align-items:center;gap:8px;
+  padding:11px 16px;border-radius:999px;border:1px solid var(--accent,#d4b573);cursor:pointer;
+  background:var(--surface,#122419);color:var(--headline,#f6edd6);
+  font-family:"Manrope",ui-sans-serif,sans-serif;font-size:14px;font-weight:700;
+  box-shadow:0 8px 24px rgba(0,0,0,.35)}
+.fyi-chat-btn:hover{border-color:var(--focus,#d4b573)}
+.fyi-chat-btn svg{flex:none}
+.fyi-chat-panel{position:fixed;right:16px;bottom:70px;z-index:1200;width:min(384px,calc(100vw - 24px));
+  height:min(580px,calc(100dvh - 96px));display:none;flex-direction:column;overflow:hidden;
+  border-radius:16px;border:1px solid var(--line,#2f4a38);background:var(--surface,#122419);
+  box-shadow:0 18px 48px rgba(0,0,0,.45);font-family:"Manrope",ui-sans-serif,sans-serif}
+.fyi-chat-panel.open{display:flex}
+.fyi-chat-head{padding:14px 16px 10px;border-bottom:1px solid var(--line,#2f4a38);display:flex;gap:10px;align-items:flex-start}
+.fyi-chat-head h2{margin:0;font-family:"Urbanist","Manrope",sans-serif;font-size:19px;color:var(--headline,#f6edd6)}
+.fyi-chat-head p{margin:2px 0 0;font-size:12.5px;color:var(--muted,#c6bba2)}
+.fyi-chat-close{margin-left:auto;background:none;border:0;color:var(--muted,#c6bba2);font-size:20px;cursor:pointer;line-height:1;padding:2px 4px}
+.fyi-chat-msgs{flex:1;overflow-y:auto;padding:14px 14px 6px;display:flex;flex-direction:column;gap:10px}
+.fyi-chat-msg{max-width:88%;padding:9px 12px;border-radius:12px;font-size:14px;line-height:1.45;white-space:normal;overflow-wrap:break-word}
+.fyi-chat-msg p{margin:0 0 9px}
+.fyi-chat-msg p:last-child{margin-bottom:0}
+.fyi-chat-msg.bot{align-self:flex-start;background:var(--soft,#172a1f);color:var(--ink,#f0e8d5);border-bottom-left-radius:4px}
+.fyi-chat-msg.user{align-self:flex-end;background:var(--badge,#223c2b);color:var(--ink,#f0e8d5);border-bottom-right-radius:4px}
+.fyi-chat-msg.thinking{color:var(--muted,#c6bba2);font-style:italic}
+.fyi-chat-note{font:500 12px/1.5 Manrope,system-ui,sans-serif;color:var(--fyi-muted);background:var(--fyi-soft);border:1px dashed var(--fyi-line);border-radius:10px;padding:8px 10px;align-self:flex-start;max-width:96%}
+.fyi-chat-chips{display:flex;flex-wrap:wrap;gap:6px;align-self:flex-start;max-width:96%}
+.fyi-chat-chip{display:inline-block;padding:5px 10px;border-radius:999px;border:1px solid var(--line,#2f4a38);
+  background:var(--bg,#0a1811);color:var(--accent-ink,#d4b573);font-size:12.5px;font-weight:600;text-decoration:none}
+.fyi-chat-chip:hover{border-color:var(--accent,#d4b573)}
+.fyi-chat-chip small{color:var(--muted,#c6bba2);font-weight:500}
+.fyi-chat-form{display:flex;gap:8px;padding:10px;border-top:1px solid var(--line,#2f4a38)}
+.fyi-chat-input{flex:1;padding:10px 12px;border-radius:10px;border:1px solid var(--line,#2f4a38);
+  background:var(--bg,#0a1811);color:var(--ink,#f0e8d5);font:inherit;font-size:14px}
+.fyi-chat-input:focus{outline:2px solid var(--focus,#d4b573);outline-offset:0}
+.fyi-chat-send{padding:10px 14px;border-radius:10px;border:0;cursor:pointer;font:inherit;font-weight:800;
+  background:var(--accent,#d4b573);color:#122419}
+.fyi-chat-send:disabled{opacity:.55;cursor:wait}
+@media (max-width:480px){.fyi-chat-panel{right:8px;bottom:64px}.fyi-chat-btn{right:12px;bottom:12px}}
+</style>
+<button class="fyi-chat-btn" id="fyiChatBtn" aria-haspopup="dialog" aria-expanded="false">
+  <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+  Ask the guide
+</button>
+<section class="fyi-chat-panel" id="fyiChatPanel" role="dialog" aria-label="Ask the 407 FYI guide">
+  <div class="fyi-chat-head">
+    <div>
+      <h2>Ask 407 FYI</h2>
+      <p>Answers only from the guide's own listings.</p>
+    </div>
+    <button class="fyi-chat-close" id="fyiChatClose" aria-label="Close chat">&times;</button>
+  </div>
+  <div class="fyi-chat-msgs" id="fyiChatMsgs"></div>
+  <form class="fyi-chat-form" id="fyiChatForm">
+    <input class="fyi-chat-input" id="fyiChatInput" type="text" autocomplete="off" maxlength="500"
+      placeholder="Ask about places in Orlando..." aria-label="Your question">
+    <button class="fyi-chat-send" id="fyiChatSend" type="submit">Send</button>
+  </form>
+</section>
+<script id="fyi-chat-js">
+(() => {
+  const FN = 'https://xxdgxigwpnezsdvbiawi.supabase.co/functions/v1/chat';
+  const KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inh4ZGd4aWd3cG5lenNkdmJpYXdpIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTE2OTM0MDYsImV4cCI6MjEwNzI2OTQwNn0.3fuj9vjXspT31fQhgcejf4Thmk9yHPc7RSBZ0v97Gw4';
+  const btn = document.getElementById('fyiChatBtn');
+  const panel = document.getElementById('fyiChatPanel');
+  const msgs = document.getElementById('fyiChatMsgs');
+  const form = document.getElementById('fyiChatForm');
+  const input = document.getElementById('fyiChatInput');
+  const send = document.getElementById('fyiChatSend');
+  let opened = false, busy = false, noticeShown = false;
+  const history = [];
+  let visitor = '';
+  try {
+    visitor = localStorage.getItem('fyi-chat-visitor') || '';
+    if (!visitor) {
+      visitor = (crypto.randomUUID ? crypto.randomUUID() : String(Date.now()) + Math.random().toString(36).slice(2));
+      localStorage.setItem('fyi-chat-visitor', visitor);
+    }
+  } catch (e) { visitor = 'anon'; }
+  const track = (name) => { try { if (window.captureEvent) captureEvent(name, {}); else if (window.posthog) posthog.capture(name); } catch (e) {} };
+  const esc = (s) => s.replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+  const fmt = (s) => s.split(/\n\s*\n/).map((para) => '<p>' + esc(para)
+    .replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>')
+    .replace(/^\s*[-*]\s+/gm, '• ')
+    .replace(/mail@407\.fyi/g, '<a href="mailto:mail@407.fyi" style="color:var(--fyi-accent)">mail@407.fyi</a>')
+    .replace(/\n/g, '<br>') + '</p>').join('');
+  function addMsg(cls, text) {
+    const d = document.createElement('div');
+    d.className = 'fyi-chat-msg ' + cls;
+    d.innerHTML = fmt(text);
+    msgs.appendChild(d);
+    msgs.scrollTop = msgs.scrollHeight;
+    return d;
+  }
+  function addChips(venues) {
+    if (!venues || !venues.length) return;
+    const row = document.createElement('div');
+    row.className = 'fyi-chat-chips';
+    for (const v of venues) {
+      const a = document.createElement('a');
+      a.className = 'fyi-chat-chip';
+      a.href = '/venue/' + v.id + '.html';
+      a.innerHTML = esc(v.name) + ' <small>' + esc(v.district || '') + '</small>';
+      row.appendChild(a);
+    }
+    msgs.appendChild(row);
+    msgs.scrollTop = msgs.scrollHeight;
+  }
+  function addGoogleChips(links) {
+    if (!links || !links.length) return;
+    const row = document.createElement('div');
+    row.className = 'fyi-chat-chips';
+    for (const v of links) {
+      const a = document.createElement('a');
+      a.className = 'fyi-chat-chip';
+      a.href = v.url;
+      a.target = '_blank';
+      a.rel = 'noopener';
+      a.innerHTML = esc(v.name) + ' <small>on Google</small>';
+      row.appendChild(a);
+    }
+    msgs.appendChild(row);
+    msgs.scrollTop = msgs.scrollHeight;
+  }
+  function toggle(open) {
+    panel.classList.toggle('open', open);
+    btn.setAttribute('aria-expanded', String(open));
+    if (open) {
+      if (!opened) {
+        opened = true;
+        addMsg('bot', 'Hi, I answer from the 407 FYI guide: date nights, coffee, family spots, neighborhoods, whatever you are after. We are in soft opening, so you get eight questions a day: make them thorough ones, with the neighborhood, the occasion, and the mood in a single ask, and you will get a fuller answer. One more limit: the guide does not list hours, so for hours or a phone number I will point you to the place on Google. What are you looking for?');
+        track('chat_open');
+      }
+      setTimeout(() => input.focus(), 60);
+    }
+  }
+  btn.addEventListener('click', () => toggle(!panel.classList.contains('open')));
+  document.getElementById('fyiChatClose').addEventListener('click', () => toggle(false));
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && panel.classList.contains('open')) toggle(false); });
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const q = input.value.trim();
+    if (!q || busy) return;
+    busy = true; send.disabled = true; input.value = '';
+    addMsg('user', q);
+    history.push({ role: 'user', text: q });
+    const thinking = addMsg('bot thinking', 'Looking through the guide...');
+    try {
+      const ctrl = new AbortController();
+      const timer = setTimeout(() => ctrl.abort(), 30000);
+      const r = await fetch(FN, {
+        method: 'POST',
+        headers: { 'Authorization': 'Bearer ' + KEY, 'apikey': KEY, 'Content-Type': 'application/json' },
+        body: JSON.stringify({ question: q, history: history.slice(0, -1).slice(-6), visitor }),
+        signal: ctrl.signal,
+      });
+      clearTimeout(timer);
+      const data = await r.json();
+      thinking.remove();
+      if (!r.ok || !data.answer) throw new Error('bad response');
+      if (data.notice && !noticeShown) {
+        noticeShown = true;
+        const n = document.createElement('div');
+        n.className = 'fyi-chat-note';
+        n.textContent = data.notice;
+        msgs.appendChild(n);
+      }
+      addMsg('bot', data.answer);
+      addChips(data.venues);
+      addGoogleChips(data.google);
+      history.push({ role: 'assistant', text: data.answer });
+      track('chat_question');
+    } catch (err) {
+      thinking.remove();
+      addMsg('bot', 'Something went wrong on my end. The finder on this page can still help, or try me again in a moment.');
+    }
+    busy = false; send.disabled = false; input.focus();
+  });
+})();
+</script>
+
+  </body>
+</html>
