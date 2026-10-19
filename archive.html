@@ -1764,7 +1764,7 @@ function init(){
   stampUpdated(document);capTeasers(document);
   var list=$("#venueList");if(list)new MutationObserver(function(){stampUpdated(list);capTeasers(list)}).observe(list,{childList:true});
   var params=new URLSearchParams(location.search);var mem=null;try{mem=JSON.parse(localStorage.getItem("fyi-filters-v1")||"null")}catch(e){}
-  var d=params.get("district")||(mem&&mem.d)||"",c=params.get("cat")||(mem&&mem.c)||"",q=params.get("q")||(mem&&mem.q)||"";
+  var d=params.get("district")||"",c=params.get("cat")||(mem&&mem.c)||"",q=params.get("q")||(mem&&mem.q)||"";
   if(q)try{setVibeMode(false)}catch(e){};if(d&&d!=="all")clickDistrict(d);if(c)clickCategory(c);if(q)setQuery(q);
   var selVals={zone:params.get("zone")||(mem&&mem.z)||"",occasion:params.get("occasion")||(mem&&mem.o)||"",daypart:params.get("daypart")||(mem&&mem.dp)||"",price:params.get("price")||(mem&&mem.pr)||""};
   Object.keys(selVals).forEach(function(id){var el=document.getElementById(id),v=selVals[id];if(el&&v&&el.value!==v&&Array.prototype.some.call(el.options,function(op){return op.value===v})){el.value=v;el.dispatchEvent(new Event("change",{bubbles:true}))}});
