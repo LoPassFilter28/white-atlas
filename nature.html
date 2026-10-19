@@ -1,0 +1,601 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="color-scheme" content="light dark" />
+    <title>The Wild Side: Springs, Trails, and the Florida Underneath Orlando | 407 FYI</title>
+    <meta name="description" content="Orlando springs, trails and wild country: Wekiwa and Kelly Park, Blue Spring and the manatee circuit, the Ocala forest springs, rail trails and wilderness areas, bioluminescence, and the Everglades headwaters at Shingle Creek." />
+    <link rel="canonical" href="https://407.fyi/nature.html" />
+    <meta property="og:title" content="The Wild Side: Springs, Trails and Florida Nature · 407 FYI" />
+    <meta property="og:description" content="The springs, trails and environmental wonders within reach of Orlando, with honest drives, seasons in plain words, and the headwaters story." />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://407.fyi/nature.html" />
+    <meta property="og:image" content="https://407.fyi/og-image.png" />
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="preload" href="/fonts/manrope-latin.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="/fonts/fonts.css" />
+    <script>
+      try {
+        const savedTheme = localStorage.getItem('white-atlas-theme');
+        document.documentElement.dataset.theme = savedTheme === 'light' || savedTheme === 'dark' ? savedTheme : 'dark';
+      } catch (error) {
+        document.documentElement.dataset.theme = 'dark';
+      }
+    </script>
+<style>
+      /* Night Drive tokens (from the district guides) */
+      :root {
+        color-scheme: dark;
+        --bg: #0a1811; --surface: #122419; --soft: #172a1f; --ink: #f0e8d5;
+        --muted: #c6bba2; --line: #2f4a38; --accent: #765b2f; --accent-ink: #d4b573;
+        --headline: #f6edd6; --focus: #d4b573;
+        --d-a: #14231a; --d-b: #3a5a35; --d-c: #bd9049;
+        --pad: clamp(20px, 5vw, 40px);
+      }
+      * { box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
+      body {
+        margin: 0; background: var(--bg); color: var(--ink);
+        font-family: "Manrope", system-ui, sans-serif; line-height: 1.6;
+        overflow-x: hidden;
+      }
+      h1, h2, h3, .display { font-family: "Urbanist", "Manrope", sans-serif; }
+      a { color: var(--accent-ink); }
+      a:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
+      .kicker {
+        font-family: "Urbanist", sans-serif; font-weight: 700; letter-spacing: .22em;
+        font-size: .72rem; text-transform: uppercase; color: var(--accent-ink); margin: 0 0 14px;
+      }
+
+      /* ---------- hero ---------- */
+      .hero {
+        position: relative; padding: clamp(64px, 13vh, 130px) var(--pad) clamp(48px, 9vh, 84px);
+        background: radial-gradient(ellipse 90% 55% at 50% 112%, rgba(189,144,73,.26), transparent 60%),
+          linear-gradient(168deg, #1d3325, #14231a 55%, #0a1811);
+        border-bottom: 1px solid var(--line);
+      }
+      .hero-in { max-width: 860px; margin: 0 auto; }
+      .crumbs { font-size: .8rem; color: var(--muted); margin: 0 0 26px; }
+      .crumbs a { font-weight: 700; }
+      .hero-brand {
+        font-family: "Urbanist", sans-serif; font-weight: 700; letter-spacing: .22em;
+        font-size: .72rem; text-transform: uppercase; color: var(--accent-ink); text-decoration: none;
+      }
+      .hero h1 {
+        font-size: clamp(2.6rem, 8.5vw, 5.2rem); line-height: .98; letter-spacing: .01em;
+        color: var(--headline); margin: 18px 0 16px; text-transform: uppercase;
+      }
+      .hero .sub { font-size: clamp(1.05rem, 2.6vw, 1.3rem); color: var(--ink); max-width: 620px; margin: 0 0 10px; }
+      .hero .fine { color: var(--muted); max-width: 620px; margin: 0; }
+      .anchor-nav { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 30px; }
+      .anchor-nav a {
+        border: 1px solid var(--line); border-radius: 999px; padding: 8px 14px;
+        font-size: .82rem; font-weight: 700; text-decoration: none; background: rgba(255,255,255,.03);
+        min-height: 42px; display: inline-flex; align-items: center;
+      }
+      .anchor-nav a:hover { border-color: var(--accent-ink); }
+
+      /* ---------- sections ---------- */
+      main { display: block; }
+      .sec { max-width: 860px; margin: 0 auto; padding: clamp(52px, 9vh, 88px) var(--pad) 0; }
+      .sec h2 { font-size: clamp(1.7rem, 4.6vw, 2.4rem); line-height: 1.12; color: var(--headline); margin: 0 0 16px; }
+      .sec .lede { color: var(--muted); font-size: 1.04rem; max-width: 640px; margin: 0 0 26px; }
+      .sec p { max-width: 68ch; }
+      .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 14px; margin: 22px 0 6px; }
+      .card {
+        background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 20px;
+      }
+      .card h3 { margin: 0 0 6px; font-size: 1.12rem; color: var(--headline); }
+      .card .addr { font-weight: 800; color: var(--accent-ink); margin: 0 0 10px; font-size: .98rem; }
+      .card p { margin: 0; color: var(--muted); font-size: .94rem; }
+      .cols { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 22px 0 6px; }
+      @media (max-width: 680px) { .cols { grid-template-columns: 1fr; } }
+      .panel { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 20px 22px; }
+      .panel h3 { margin: 0 0 12px; font-size: 1.05rem; color: var(--headline); }
+      .panel ul, .plain-list { margin: 0; padding-left: 18px; }
+      .panel li, .plain-list li { margin-bottom: 9px; }
+      .panel li:last-child, .plain-list li:last-child { margin-bottom: 0; }
+      .note {
+        border-left: 3px solid var(--accent-ink); background: var(--soft);
+        padding: 14px 18px; border-radius: 0 12px 12px 0; margin: 22px 0 6px; max-width: 68ch;
+      }
+      .note p { margin: 0; }
+      .venue-links { list-style: none; margin: 0; padding: 0; }
+      .venue-links li { margin-bottom: 10px; }
+      .venue-links a { font-weight: 800; text-underline-offset: 3px; }
+      .venue-links span { color: var(--muted); }
+
+      /* ---------- jobs ---------- */
+      .job-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 14px; margin-top: 22px; }
+      .job { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 20px 22px; }
+      .job h3 { margin: 0 0 6px; font-size: 1.08rem; color: var(--headline); }
+      .job p { margin: 0 0 12px; color: var(--muted); font-size: .94rem; }
+      .job ul { list-style: none; margin: 0 0 14px; padding: 0; }
+      .job li { margin-bottom: 7px; }
+      .job li a { font-weight: 800; text-underline-offset: 3px; }
+      .job .browse { font-size: .86rem; font-weight: 800; text-transform: uppercase; letter-spacing: .08em; }
+
+      /* ---------- what to avoid ---------- */
+      .avoid { border-top: 1px solid var(--line); padding: 24px 0 6px; }
+      .avoid h3 { margin: 0 0 10px; font-size: 1.18rem; color: var(--headline); }
+      .avoid p { margin: 0 0 8px; max-width: 68ch; }
+      .avoid strong { color: var(--accent-ink); }
+      .flags { display: flex; flex-wrap: wrap; gap: 8px; margin: 18px 0 6px; }
+      .flags span {
+        border: 1px solid var(--accent); border-radius: 999px; padding: 7px 13px;
+        font-size: .85rem; font-weight: 700; color: var(--accent-ink); background: rgba(255,255,255,.03);
+      }
+      .rules { margin: 16px 0 0; padding-left: 20px; max-width: 68ch; }
+      .rules li { margin-bottom: 10px; }
+
+      .handoff { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 30px; }
+      .btn-big {
+        display: inline-flex; align-items: center; min-height: 52px; padding: 12px 22px;
+        background: var(--accent); color: #fff; font-weight: 800; border-radius: 999px; text-decoration: none;
+      }
+      .btn-big:hover { background: var(--accent-ink); color: #1d2a20; }
+      .btn-ghost {
+        display: inline-flex; align-items: center; min-height: 52px; padding: 12px 22px;
+        border: 1px solid var(--line); color: var(--accent-ink); font-weight: 800; border-radius: 999px; text-decoration: none;
+      }
+
+      footer { border-top: 1px solid var(--line); margin-top: clamp(52px, 9vh, 88px); }
+      .foot-in { max-width: 860px; margin: 0 auto; padding: 34px var(--pad) 44px; color: var(--muted); font-size: .9rem; }
+      .foot-in p { margin: 0 0 9px; }
+      .back-link { font-weight: 800; display: inline-block; margin-bottom: 16px; }
+      .brand-line { color: var(--ink); font-weight: 700; }
+
+      /* ---------- Light theme: app-page tokens ---------- */
+      html[data-theme="light"] {
+        color-scheme: light;
+        --bg: #faf6ec; --surface: #fffdf7; --soft: #f3ecd7; --ink: #1d2a20;
+        --muted: #4c5a45; --line: #ddd3ba; --accent: #8a5f0e; --accent-ink: #7c520c;
+        --headline: #123524; --focus: #8a5f0e;
+      }
+      html[data-theme="light"] .hero {
+        background: radial-gradient(ellipse 90% 55% at 50% 112%, rgba(163,129,63,.30), transparent 60%),
+          linear-gradient(168deg, color-mix(in srgb, var(--d-a) 24%, #faf6ec), color-mix(in srgb, var(--d-a) 40%, #faf6ec) 55%, color-mix(in srgb, var(--d-a) 14%, #faf6ec));
+      }
+      html[data-theme="light"] .anchor-nav a, html[data-theme="light"] .flags span { background: rgba(29,42,32,.04); }
+      html[data-theme="light"] .btn-big { background: var(--accent); color: #fff; }
+      html[data-theme="light"] .btn-big:hover { background: var(--accent-ink); color: #fff; }
+
+      @media print { .anchor-nav { display: none; } }
+      @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+      /* ---------- events ---------- */
+      .card .where { font-weight: 700; color: var(--ink); margin: 0 0 8px; font-size: .94rem; }
+      .card h3 a { text-decoration: none; }
+      .card h3 a:hover { text-decoration: underline; text-underline-offset: 3px; }
+      .wk {
+        font-family: "Urbanist", sans-serif; font-weight: 700; letter-spacing: .14em;
+        font-size: .95rem; text-transform: uppercase; color: var(--muted);
+        margin: 38px 0 2px;
+      }
+      .wk:first-of-type { margin-top: 6px; }
+      .ev-list { border-top: 1px solid var(--line); }
+      .ev {
+        display: grid; grid-template-columns: 150px 1fr; gap: 4px 20px;
+        padding: 17px 0; border-bottom: 1px solid var(--line);
+      }
+      .ev .d {
+        font-family: "Urbanist", sans-serif; font-weight: 800; color: var(--accent-ink);
+        font-size: .94rem; margin: 0; padding-top: 3px; line-height: 1.45;
+      }
+      .ev h3 { margin: 0 0 4px; font-size: 1.1rem; color: var(--headline); }
+      .ev .meta { margin: 0 0 5px; font-size: .95rem; color: var(--ink); }
+      .ev .meta a { font-weight: 800; text-underline-offset: 3px; }
+      .ev .blurb { margin: 0; color: var(--muted); font-size: .94rem; max-width: 62ch; }
+      @media (max-width: 640px) {
+        .ev { grid-template-columns: 1fr; }
+        .ev .d { padding-top: 0; }
+      }
+    </style>
+    
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"ItemList","name":"407 FYI: Orlando nature listings","numberOfItems":4,"itemListElement":[{"@type":"ListItem","position":1,"item":{"@type":"LocalBusiness","name":"Wekiwa Springs State Park","url":"https://407.fyi/venue/wekiwa-springs.html"}},{"@type":"ListItem","position":2,"item":{"@type":"LocalBusiness","name":"Kelly Park / Rock Springs Run","url":"https://407.fyi/venue/kelly-park.html"}},{"@type":"ListItem","position":3,"item":{"@type":"LocalBusiness","name":"Blue Spring Manatee Kayak Tours","url":"https://407.fyi/venue/blue-spring-manatee-kayak.html"}},{"@type":"ListItem","position":4,"item":{"@type":"LocalBusiness","name":"Merritt Island Bioluminescence Kayak Tours","url":"https://407.fyi/venue/merritt-island-bioluminescence-kayak.html"}}]}</script>
+  </head>
+  <body>
+    <header class="hero">
+      <div class="hero-in">
+        <p class="crumbs"><a href="/">407 FYI</a> · Nature &amp; Springs</p>
+        <a class="hero-brand" href="/">407 FYI · A Nature Guide</a>
+        <h1>The Wild Side</h1>
+        <p class="sub">Orlando sits on top of one of the great spring systems on Earth, and at the headwaters of the Everglades. The springs hold about 72 degrees all year, the manatees come in with the cold, and the wild version of this region starts closer than the theme park version suggests, though some of it asks for a real drive, and this page says so.</p>
+        <p class="fine">Names with links are the guide's own listings. Everything else here is written up from state park, wildlife refuge and county sources, because the guide lists only the places it has verified as listings. Drives are honest ranges from downtown Orlando in normal traffic; weekend and holiday traffic to the springs runs longer.</p>
+        <nav class="anchor-nav" aria-label="On this page">
+          <a href="#springs">The springs</a>
+          <a href="#trails">The trails</a>
+          <a href="#moments">Signature moments</a>
+          <a href="#before-you-go">Before you go</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="sec" id="springs">
+        <p class="kicker">Cold Water, All Year</p>
+        <h2>The springs</h2>
+        <p class="lede">One piece of physics explains almost all of it: spring water holds about 72 degrees year round, and manatees need water warmer than about 68 degrees to survive the winter. That is why the same spring is a swim in July and a manatee refuge in January, and why some spring runs close to swimmers when the manatees move in.</p>
+
+        <h3 class="wk">Start close</h3>
+        <div class="cards">
+          <article class="card">
+            <h3><a href="/venue/wekiwa-springs.html">Wekiwa Springs State Park</a></h3>
+            <p class="addr">Apopka</p>
+            <p>The closest true spring to downtown Orlando, about 25 to 35 minutes out: some 7,000 acres at the head of the Wekiva River. Swimming and snorkeling stay in the spring basin; the river beyond it is for paddling, with rentals at the park concession, and trails run from under a mile to about 13.5 miles. Manatees visit the river now and then in winter, but this is not a manatee refuge, and this page will not sell it as one.</p>
+          </article>
+          <article class="card">
+            <h3><a href="/venue/kelly-park.html">Kelly Park / Rock Springs Run</a></h3>
+            <p class="addr">Apopka</p>
+            <p>An Orange County park built around Rock Springs, about 30 to 40 minutes out, and the region's natural lazy river: a spring run of about half to three quarters of a mile that carries you on a tube in roughly 15 to 30 minutes, in water near 72 degrees. The park is famous for filling early; the gates close when it reaches capacity, which happens fast on warm weekends.</p>
+          </article>
+        </div>
+        <div class="cols">
+          <div class="panel">
+            <h3>Blue Spring State Park</h3>
+            <p>A first magnitude spring on the St. Johns River at Orange City, about 45 to 55 minutes out, and the best known winter manatee refuge in the region. From mid-November through March the spring run closes to swimming and all water activities so wintering manatees can rest undisturbed, and the visit becomes boardwalk viewing over clear water, with manatees often in the hundreds on cold days. In the warm months the run reopens for swimming, snorkeling and paddling.</p>
+          </div>
+          <div class="panel">
+            <h3>De Leon Springs State Park</h3>
+            <p>About an hour to an hour and ten minutes north: a 625 acre park around a spring that pushes some 19 to 20 million gallons a day into a swimming area about 30 feet deep over the boil, at about 72 degrees. The Old Spanish Sugar Mill, where guests cook their own pancakes at the table, has operated since 1961, and the park's Old Methuselah cypress is estimated at 500 to 600 years old. Paddle Spring Garden Creek out toward Lake Woodruff; winter manatees visit the creek, occasionally rather than on schedule.</p>
+          </div>
+        </div>
+        <div class="note">
+          <p>The guide lists one way onto Blue Spring's water: <a href="/venue/blue-spring-manatee-kayak.html">Blue Spring Manatee Kayak Tours</a>, a paddle outfitter based at the park. The park itself is written up here from Florida State Parks sources.</p>
+        </div>
+
+        <h3 class="wk">The Ocala forest springs</h3>
+        <p>Three recreation areas in the Ocala National Forest, each holding about 72 degrees, each a different kind of day.</p>
+        <div class="cols">
+          <div class="panel">
+            <h3>Alexander Springs</h3>
+            <p>The friendliest of the forest springs for families and first timers: a first magnitude spring with a wide, gently sloping natural swimming basin, about an hour and 10 minutes to an hour and 20 minutes out. Swim, snorkel, or paddle the Alexander Creek run; there is a campground on site. Manatees are rare here; this is a swim and paddle day.</p>
+          </div>
+          <div class="panel">
+            <h3>Juniper Springs</h3>
+            <p>One of the oldest recreation areas in the forest, built in the 1930s by the Civilian Conservation Corps, with a stone walled spring pool and a historic millhouse, about an hour and 20 minutes to an hour and 30 minutes out. The swim is gentle. The adventure is Juniper Run, a 7 mile canoe and kayak run rated among the best in the country: narrow, winding and technical, not for beginners, and closed to paddleboards and inflatables.</p>
+          </div>
+          <div class="panel">
+            <h3>Salt Springs</h3>
+            <p>A mineral spring on the forest's north side, slightly warmer than most at about 72 to 74 degrees, and different in the water because of the minerals. A broad swim area, a boat launch onto Salt Springs Run and out to Lake George, and one of the largest campgrounds in the forest. About an hour and a half to an hour and 45 minutes out.</p>
+          </div>
+        </div>
+
+        <h3 class="wk">The river springs, west and north</h3>
+        <p>The long drives. Each of these is a full day, and the page treats them that way.</p>
+        <div class="cols">
+          <div class="panel">
+            <h3>Silver Springs State Park</h3>
+            <p>A first magnitude spring group near Ocala, and Florida's first tourist attraction, famous for glass bottom boats since the 1870s; about an hour and 20 minutes to an hour and a half out. Know before you go: there is no swimming, wading, snorkeling or fishing anywhere in the park or on the Silver River. The day is the boats, a paddle down the river, and the hiking trails. Manatees are regulars on the river, watched from boats and paddle craft, and wild rhesus macaques live along the banks, released in the 1930s and best given a wide berth.</p>
+          </div>
+          <div class="panel">
+            <h3>Rainbow Springs and the Rainbow River</h3>
+            <p>The headsprings of the Rainbow River at Dunnellon, one of the largest spring groups in Florida by flow, about an hour and a half to an hour and 45 minutes out. The headsprings swim area runs 10 to 18 feet deep over white sand and limestone. Tubing does not happen at the headsprings: it uses a separate park entrance and floats about two hours, in season only, daily from Memorial Day to Labor Day and on weekends in April, May and September, and disposable containers are prohibited on the river. Below the park the river itself runs five to six clear miles to the Withlacoochee, and the common paddle, from KP Hole County Park, is a different trip from the headsprings swim.</p>
+          </div>
+          <div class="panel">
+            <h3>Ichetucknee Springs State Park</h3>
+            <p>Eight or more springs feeding a six mile river that is clear end to end; the headspring is a National Natural Landmark. In summer this is Florida's defining tube float: tubing season runs from the Saturday before Memorial Day through Labor Day, the North Entrance is capped at 750 tubers a day, and no food, drink or disposable items go on the river. Snorkelers head for Blue Hole Spring; scuba is allowed October to March, in Blue Hole only, and only for cave certified divers. The drive is two hours 15 minutes to two hours 30 minutes. A full day trip, not a quick add on.</p>
+          </div>
+        </div>
+
+        <h3 class="wk">The Gulf side: manatee country</h3>
+        <div class="cols">
+          <div class="panel">
+            <h3>Three Sisters Springs and Crystal River</h3>
+            <p>The winter manatee capital, about an hour and 45 minutes to two hours west. Three Sisters Springs sits inside the Crystal River National Wildlife Refuge: 57 acres with boardwalk viewing and over two miles of trails. Manatee season runs November 15 to March 31, with warm water sanctuaries in effect; paddle craft are not allowed inside Three Sisters in season and return April 1 to November 14, and there is no swimming from the land side, swimmers arrive by water. Crystal River is the only place in the United States where swimming with wild manatees is legally permitted, under federal passive observation rules: look, do not touch, never enter a posted sanctuary. Peak density is mid-January to mid-February; a smaller resident group stays year round.</p>
+          </div>
+          <div class="panel">
+            <h3>Weeki Wachee Springs State Park</h3>
+            <p>The mermaid spring at Spring Hill, about an hour and 45 minutes to two hours out. Live mermaid shows have run since 1947 in a submerged theater seating about 400, Buccaneer Bay inside the park is a spring fed water park with slides and a swim area, and there is a riverboat cruise and paddling on the Weeki Wachee River, one of the clearest short spring runs in the state. Manatees turn up on the river, especially in the cooler months.</p>
+          </div>
+        </div>
+
+        <h3 class="wk">The private two</h3>
+        <p>Privately owned, and a different product from the state parks: private rules, private land, and a livelier summer weekend scene at one of them. Labeled plainly, as they should be.</p>
+        <div class="cols">
+          <div class="panel">
+            <h3>Ginnie Springs (private)</h3>
+            <p>A privately owned park on the Santa Fe River near High Springs: over 200 acres with seven springs at about 72 degrees for swimming, snorkeling, tubing, paddling and camping. Divers come for the Ginnie Ballroom and the Devil's Spring System, open only to certified divers. There are no lifeguards, and pets are not allowed. The drive is two hours 15 minutes to two hours 30 minutes, and the summer weekend scene here is livelier than any state park on this page.</p>
+          </div>
+          <div class="panel">
+            <h3>Devil's Den Prehistoric Spring (private)</h3>
+            <p>A privately owned underground spring inside a dry cave at Williston, reached through a karst window in the cave roof, about an hour and 45 minutes to two hours out. The water holds about 72 degrees, the pool is about 120 feet across, and the maximum depth is about 54 feet. This is snorkel and scuba only; there is no general swimming, and entry runs on reservations with timed slots. Pleistocene fossils, including saber toothed cats and mastodons, were found here, which earns the prehistoric label, and on cold mornings steam rises from the opening, which is how it got its name.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="sec" id="trails">
+        <p class="kicker">On Foot and On Wheels</p>
+        <h2>The trails</h2>
+        <p class="lede">The city's own loops and garden paths live on the parks page. These are the longer systems beyond it: rail trails you ride to lunch, levees you share with alligators and otters, and wilderness areas that earn the word.</p>
+        <div class="cols">
+          <div class="panel">
+            <h3>West Orange Trail</h3>
+            <p>A 22 mile paved rail trail from Killarney through Oakland and downtown Winter Garden to Apopka, built largely on old railroad alignments and run by Orange County Parks and Recreation. Stations and outposts along the route provide parking, water and restrooms, bike rental sits at the Killarney end, and the trail connects west to the South Lake and Lake Minneola Scenic trails as a segment of the Florida Coast to Coast Trail. It is the region's best ride to lunch trail: Winter Garden's Plant Street is directly on the route. About 25 to 35 minutes to the Winter Garden stations.</p>
+          </div>
+          <div class="panel">
+            <h3>The Seminole spine: Wekiva, Cross Seminole and Cady Way</h3>
+            <p>Three paved trails that work as one system north and east of the city. The Seminole Wekiva Trail runs just under 14 miles on the former Orange Belt Railway through Altamonte Springs, Longwood, Lake Mary and Heathrow toward Sanford, with a section near the Wekiva River designated part of the Florida National Scenic Trail, and it connects to the Cross Seminole Trail over I-4. The Cross Seminole runs about 23 continuous miles through Winter Springs, Oviedo and Longwood toward Sanford, still growing toward 28. At its south end it meets the Cady Way Trail, about six miles through Winter Park and Baldwin Park into Orlando, which links onward to the Orlando Urban Trail. Trailheads run from in town to about 35 minutes out.</p>
+          </div>
+          <div class="panel">
+            <h3>Little Econ Greenway</h3>
+            <p>A paved trail of about 7.4 miles along the Little Econlockhatchee River, from the Alafaya Trail area through Jay Blanchard Park to Forsyth Road, about 20 to 30 minutes out. Riverside recreation, picnicking and wildlife watching, and the county notes the greenway will eventually extend to about 10 miles and link UCF to the Cady Way Trail and the Cross Seminole system. Osprey, hawks, turtles, otters and alligators are all realistic sightings.</p>
+          </div>
+          <div class="panel">
+            <h3>Lake Apopka Loop Trail</h3>
+            <p>A gravel levee trail of more than 20 miles along the lake's edge through the Lake Apopka North Shore property, currently an out and back along the northern half, with four trailheads: Green Mountain, the North Shore at McDonald Canal, Magnolia Park, and the historic pump house. Hiking, biking and horseback riding, with no drinking water along the route. Keep it distinct from the Wildlife Drive in the moments below: the loop is the on foot and on bike version of the same restoration landscape. About 35 to 50 minutes depending on the trailhead.</p>
+          </div>
+          <div class="panel">
+            <h3>Black Bear Wilderness Area</h3>
+            <p>About 1,600 acres of St. Johns River floodplain in northwest Seminole County, near Sanford: wet prairie, hydric hammock and cypress swamp, on an approximately 7.1 mile loop along historic levees and boardwalks, following blue blazes. The county is blunt about it and this page is too: remote trail, rough and uneven terrain, slopes, roots and animal burrows, limited emergency access, and real flooding in the summer rainy season. The wildlife is the payoff: white tailed deer, swallow tailed kites, river otters, alligators, and the Florida black bear the area is named for. About 35 to 45 minutes.</p>
+          </div>
+          <div class="panel">
+            <h3>Econ River Wilderness Area</h3>
+            <p>A Seminole County wilderness area on the west bank of the Econlockhatchee River, south of Oviedo, about 25 to 35 minutes out. Pine and palmetto on the west side, oak hammock with cypress along the river, trails for hikers, bikes and horses. Firebreaks are soft sand and sections go wet in the rainy season, so it reads as a short, genuinely wild hike rather than a manicured park walk.</p>
+          </div>
+          <div class="panel">
+            <h3>Tibet-Butler Preserve</h3>
+            <p>A 440 acre Orange County preserve on the shore of Lake Tibet in the Butler Chain of Lakes, about 25 to 35 minutes out, and quiet in a way that surprises people this close to the theme park corridor. About 3.6 miles of trails through bay swamp, cypress swamp, marsh, pine flatwoods and scrub, plus the Vera Carter Environmental Center with exhibits and a butterfly garden. Wildlife includes gopher tortoises, river otters, alligators, bald eagles and osprey, and the preserve is a site on the Great Florida Birding and Wildlife Trail.</p>
+          </div>
+          <div class="panel">
+            <h3>Split Oak Forest</h3>
+            <p>A nearly 1,700 acre preserve straddling Orange and Osceola counties, acquired in 1994 with mitigation funding to offset habitat lost to development, with conservation easements held by the state wildlife agency and real hiking trails through scrub and flatwoods managed for gopher tortoises. The context, stated plainly and neutrally: the approved SR 534 expressway extension route crosses the southern edge; easements on about 60 acres were released in 2024 and on about 55.5 nearby acres in June 2026, the expressway authority has committed about 1,550 acres of nearby land as conservation mitigation, and in January 2026 the Orange County Commission voted to challenge the acquisition. As of this writing the road is not built and the preserve is open. About 35 to 45 minutes, southeast of the airport.</p>
+          </div>
+          <div class="panel">
+            <h3>Disney Wilderness Preserve</h3>
+            <p>About 11,500 acres managed by The Nature Conservancy at the head of the Greater Everglades watershed, about 45 to 55 minutes south. The Walt Disney Company bought the former Walker Ranch in the early 1990s and transferred it to the Conservancy as the first large scale off site mitigation project of its kind, offsetting wetlands lost to Walt Disney World construction. Former cattle ranch has been restored to longleaf pine savanna and wetlands around cypress lined Lake Russell. Trails range from a half mile loop to about 5.3 miles, and more than 1,000 species of plants and animals are recorded, bald eagles, sandhill cranes, wood storks, gopher tortoises and reintroduced red cockaded woodpeckers among them.</p>
+          </div>
+        </div>
+        <div class="note">
+          <p>The in-town connectors, the Orlando Urban Trail, the Cady Way Trail and the Lake Baldwin loop, are covered with the parks they stitch together on the <a href="/parks.html">parks and gardens page</a>.</p>
+        </div>
+      </section>
+
+      <section class="sec" id="moments">
+        <p class="kicker">In Season</p>
+        <h2>Signature moments</h2>
+        <p class="lede">Florida nature runs on seasons, not schedules. These are the moments worth planning a month around.</p>
+
+        <h3 class="wk">Water that glows</h3>
+        <p>On the Space Coast lagoons, summer belongs to the dinoflagellates: microscopic plankton that flash blue green when the water is disturbed, roughly June through October, strongest in July and August, so every paddle stroke and passing fish leaves a lit trail. Winter has its own, stranger version: bioluminescent comb jellies, from late November to April and best in January and February, individual glowing animals you can see and gently hold; despite the name, they do not sting. Brightness depends on moon phase, water temperature and recent weather, the dark nights near a new moon are best, and no operator can guarantee a strong bloom. About 55 minutes to an hour and 10 minutes to the Merritt Island and Titusville launches.</p>
+        <div class="note">
+          <p>The guide lists the night paddle: <a href="/venue/merritt-island-bioluminescence-kayak.html">Merritt Island Bioluminescence Kayak Tours</a>, launching from Kiwanis Island Park. The darker water is Haulover Canal, inside the refuge below.</p>
+        </div>
+
+        <h3 class="wk">Manatee season</h3>
+        <p>The rule is a temperature: manatees depend on water warmer than about 68 degrees to survive winter, so as rivers and coastal water cool in the fall they travel to springs and other warm water sites, and they disperse again in spring. The honest season near Orlando is mid-November through March, densest in the coldest weeks, playing out at Blue Spring's boardwalks and at Three Sisters Springs in Crystal River. A resident handful of manatees can be found at Crystal River year round, and Haulover Canal at Merritt Island has a manatee observation deck. Disturbing manatees at a warm water site can push them out into cold water that can kill them, which is why the etiquette in the last section is not decorative. On the water: go slow in posted manatee zones, wear polarized glasses to spot them, watch for the circular footprints a submerged manatee leaves on the surface, and report an injured, distressed or dead manatee to the FWC Wildlife Alert Hotline at 888-404-FWCC (3922). It is illegal to harass, feed, disturb or harm a manatee.</p>
+
+        <h3 class="wk">The refuge and the drive</h3>
+        <p>Merritt Island National Wildlife Refuge is a 140,000 acre refuge established in 1963 on the same barrier island as Kennedy Space Center, managed by the U.S. Fish and Wildlife Service; 357 bird species have been identified there to date. The signature experience is the Black Point Wildlife Drive, a seven mile one way auto loop along dikes through managed impoundments, where the car works as a viewing blind. The cool winter months, November through April, are the best birding; winter peak concentrations of waterfowl often exceed 100,000 birds, with peak populations in January and February, arrivals beginning as early as September and the northward migration starting in early March. Year round residents include roseate spoonbills, reddish egrets, herons and egrets, bald eagles, and Florida scrub jays in the scrub tracts. Early morning and late afternoon are the active times. Manatees gather at Haulover Canal, which also hosts a bioluminescence launch. About 55 minutes to an hour and 10 minutes to Titusville and the refuge.</p>
+
+        <h3 class="wk">The lake that came back</h3>
+        <p>Lake Apopka was one of the premier bass fishing lakes in the nation before farm discharge from the muck farms on its north shore fed a massive algae bloom that killed the aquatic vegetation and the fishery. The north shore itself is former lake bottom: about 20,000 acres separated from the lake by a levee in 1941 and drained for farming in the rich muck soils. The Friends of Lake Apopka campaigned for cleanup, the Lake Apopka Restoration Act passed in 1996 authorized the farm buyout, and the St. Johns River Water Management District has been converting the farmland back to functioning marsh ever since, including a marsh flow way that filters lake water through restored wetlands. The way in is the Lake Apopka Wildlife Drive: an 11 mile one way drive at a 10 mph speed limit through the restored marsh, open Fridays, Saturdays, Sundays and most federal holidays, and free. More than 360 bird species have been documented on the drive route, and the district counts 377 species on the property, ranking it among the top three birding areas in the state alongside Everglades National Park and Merritt Island; alligators, bobcats and otters are routine, and in winter more than 150 species regularly use the property. About 35 to 45 minutes to the Lust Road entrance in Apopka.</p>
+
+        <h3 class="wk">Where the Everglades begins</h3>
+        <p>The Everglades does not start in South Florida. Its northernmost headwaters are in the Orlando metro. Shingle Creek, a roughly 23 mile creek that begins in southern Orange County a few miles east of International Drive, is generally considered the northernmost headwaters of the Everglades watershed. It flows south through Kissimmee into Lake Tohopekaliga. Shingle Creek and Lake Tohopekaliga form the headwaters of the Kissimmee Chain of Lakes, which discharges down the Kissimmee River to Lake Okeechobee, and from there, historically, sheet flow fed the Everglades. The U.S. Army Corps of Engineers puts the same point at basin scale: the 3,000 square mile Kissimmee Basin begins near Orlando, with tributaries including Shingle Creek, Reedy Creek and Boggy Creek, running through more than two dozen chain lakes to the Kissimmee River and Lake Okeechobee.</p>
+        <p>The creek's name comes from the cypress shingles cut from its banks in the late 1800s, and you can paddle Shingle Creek itself from Shingle Creek Regional Park in Kissimmee. The walkable version of the same story is the Disney Wilderness Preserve in the trails above, ranchland restored at the head of this same watershed, offsetting the wetlands a theme park empire paved. The restoration footnote is sobering: the Kissimmee River was channelized into the C-38 canal between 1962 and 1970, shortening its 103 mile run to about 56 miles and damaging the valley ecosystem, and restoration since the 1990s has re-established about 40 square miles of historic river floodplain along a 43 mile restoration area. Orlando's water story is the Everglades' first chapter, at its best and its worst.</p>
+
+        <h3 class="wk">A bird found nowhere else</h3>
+        <p>The Florida scrub jay is the only bird species endemic to Florida, found nowhere else on Earth, and is federally listed as threatened. It lives only in oak scrub: low, sandy, fire maintained habitat that is one of the most developed and fragmented landscapes in the state. Family groups hold territories of roughly 25 acres, with grown young staying on as helpers, and population estimates suggest a decline on the order of 90 percent since the early 1800s, driven by habitat loss and fire suppression. The reliable place near Orlando is Lyonia Preserve in Deltona, about 40 to 50 minutes out, with an environmental center next to the public library and jays habituated enough to be found on the trails in the morning; Jay Watch, Audubon Florida's citizen science survey, covers Lyonia and Blue Spring, and the scrub tracts at Merritt Island hold jays too. Watch and photograph, never feed: feeding delays nesting and habituates the birds, and the famous head landing photos happen without it.</p>
+      </section>
+
+      <section class="sec" id="before-you-go">
+        <p class="kicker">Before You Go</p>
+        <h2>Safety and etiquette, plainly</h2>
+        <p class="lede">All of the following is FWC guidance and park practice. None of it is meant to scare you off the water; it is what makes the water safe to be on.</p>
+        <ul class="plain-list">
+          <li><strong>Assume the gator is there.</strong> Alligators live in every Florida county and in essentially any fresh or brackish water, including the lakes and rivers beside trails in this guide. The statewide population is estimated at about 1.3 million. Keep a safe distance if you see one. Serious injuries are rare in Florida, and distance is the main reason.</li>
+          <li><strong>Never feed an alligator.</strong> It is illegal, and fed alligators lose their natural wariness and learn to associate people with food, which is what turns a wild animal into a dangerous one.</li>
+          <li><strong>Swim only in designated swimming areas, during daylight, and never with a pet.</strong> Alligators are most active between dusk and dawn. This is why the springs in this guide with marked swim areas are the right places to swim, and unmarked lake and river banks are not.</li>
+          <li><strong>Keep pets on a leash and away from the water's edge,</strong> and never let a pet swim in fresh or brackish water. Pets resemble natural prey.</li>
+          <li><strong>If an alligator appears to pose a threat to people, pets or property,</strong> call the FWC Nuisance Alligator Hotline at 866-FWC-GATOR (866-392-4286). Do not try to move it yourself.</li>
+          <li><strong>Manatees are protected.</strong> Never touch, chase, feed or ride one, and never enter a posted manatee sanctuary. Disturbing manatees at a warm water site can push them into cold water that can kill them.</li>
+          <li><strong>On the Silver River, give the wild monkeys a wide berth</strong> and never feed them.</li>
+          <li><strong>Parks fill, and gates close.</strong> The famous springs reach capacity fast on warm weekends, so go early, and carry water anywhere the trail is long: the Lake Apopka levee trails have no drinking water along the route.</li>
+          <li><strong>At night kayak launches,</strong> stay in the boat or on the bank edge the operator designates.</li>
+        </ul>
+        <div class="handoff">
+          <a class="btn-big" href="/archive.html">Browse all Orlando places</a>
+          <a class="btn-ghost" href="/parks.html">See the parks and gardens</a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="foot-in">
+        <a class="back-link" href="/">&larr; Back to the full guide</a>
+        <p class="brand-line">407 FYI, an independent Orlando guide. Details can change; confirm before you go.</p>
+        <p>Hand-verified Orlando places · Checked October 2026 · Local Picks are never sponsored · Corrections: <a href="mailto:mail@407.fyi">mail@407.fyi</a></p>
+        <p>Some links on 407 FYI are affiliate or referral links. We may earn a commission or credit at no extra cost to you. They never affect which places we list, rank, or recommend.</p>
+        <p><a href="/privacy.html">Privacy</a></p>
+      </div>
+    </footer>
+
+<!-- 407 FYI guide chat widget. Self-contained: style + markup + script.
+     Talks to the Supabase chat edge function; answers come only from guide data. -->
+<style id="fyi-chat-css">
+.fyi-chat-btn{position:fixed;right:16px;bottom:16px;z-index:1200;display:flex;align-items:center;gap:8px;
+  padding:11px 16px;border-radius:999px;border:1px solid var(--accent,#d4b573);cursor:pointer;
+  background:var(--surface,#122419);color:var(--headline,#f6edd6);
+  font-family:"Manrope",ui-sans-serif,sans-serif;font-size:14px;font-weight:700;
+  box-shadow:0 8px 24px rgba(0,0,0,.35)}
+.fyi-chat-btn:hover{border-color:var(--focus,#d4b573)}
+.fyi-chat-btn svg{flex:none}
+.fyi-chat-panel{position:fixed;right:16px;bottom:70px;z-index:1200;width:min(384px,calc(100vw - 24px));
+  height:min(580px,calc(100dvh - 96px));display:none;flex-direction:column;overflow:hidden;
+  border-radius:16px;border:1px solid var(--line,#2f4a38);background:var(--surface,#122419);
+  box-shadow:0 18px 48px rgba(0,0,0,.45);font-family:"Manrope",ui-sans-serif,sans-serif}
+.fyi-chat-panel.open{display:flex}
+.fyi-chat-head{padding:14px 16px 10px;border-bottom:1px solid var(--line,#2f4a38);display:flex;gap:10px;align-items:flex-start}
+.fyi-chat-head h2{margin:0;font-family:"Urbanist","Manrope",sans-serif;font-size:19px;color:var(--headline,#f6edd6)}
+.fyi-chat-head p{margin:2px 0 0;font-size:12.5px;color:var(--muted,#c6bba2)}
+.fyi-chat-close{margin-left:auto;background:none;border:0;color:var(--muted,#c6bba2);font-size:20px;cursor:pointer;line-height:1;padding:2px 4px}
+.fyi-chat-msgs{flex:1;overflow-y:auto;padding:14px 14px 6px;display:flex;flex-direction:column;gap:10px}
+.fyi-chat-msg{max-width:88%;padding:9px 12px;border-radius:12px;font-size:14px;line-height:1.45;white-space:normal;overflow-wrap:break-word}
+.fyi-chat-msg p{margin:0 0 9px}
+.fyi-chat-msg p:last-child{margin-bottom:0}
+.fyi-chat-msg.bot{align-self:flex-start;background:var(--soft,#172a1f);color:var(--ink,#f0e8d5);border-bottom-left-radius:4px}
+.fyi-chat-msg.user{align-self:flex-end;background:var(--badge,#223c2b);color:var(--ink,#f0e8d5);border-bottom-right-radius:4px}
+.fyi-chat-msg.thinking{color:var(--muted,#c6bba2);font-style:italic}
+.fyi-chat-note{font:500 12px/1.5 Manrope,system-ui,sans-serif;color:var(--fyi-muted);background:var(--fyi-soft);border:1px dashed var(--fyi-line);border-radius:10px;padding:8px 10px;align-self:flex-start;max-width:96%}
+.fyi-chat-chips{display:flex;flex-wrap:wrap;gap:6px;align-self:flex-start;max-width:96%}
+.fyi-chat-chip{display:inline-block;padding:5px 10px;border-radius:999px;border:1px solid var(--line,#2f4a38);
+  background:var(--bg,#0a1811);color:var(--accent-ink,#d4b573);font-size:12.5px;font-weight:600;text-decoration:none}
+.fyi-chat-chip:hover{border-color:var(--accent,#d4b573)}
+.fyi-chat-chip small{color:var(--muted,#c6bba2);font-weight:500}
+.fyi-chat-form{display:flex;gap:8px;padding:10px;border-top:1px solid var(--line,#2f4a38)}
+.fyi-chat-input{flex:1;padding:10px 12px;border-radius:10px;border:1px solid var(--line,#2f4a38);
+  background:var(--bg,#0a1811);color:var(--ink,#f0e8d5);font:inherit;font-size:14px}
+.fyi-chat-input:focus{outline:2px solid var(--focus,#d4b573);outline-offset:0}
+.fyi-chat-send{padding:10px 14px;border-radius:10px;border:0;cursor:pointer;font:inherit;font-weight:800;
+  background:var(--accent,#d4b573);color:#122419}
+.fyi-chat-send:disabled{opacity:.55;cursor:wait}
+@media (max-width:480px){.fyi-chat-panel{right:8px;bottom:64px}.fyi-chat-btn{right:12px;bottom:12px}}
+</style>
+<button class="fyi-chat-btn" id="fyiChatBtn" aria-haspopup="dialog" aria-expanded="false">
+  <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+  Ask the guide
+</button>
+<section class="fyi-chat-panel" id="fyiChatPanel" role="dialog" aria-label="Ask the 407 FYI guide">
+  <div class="fyi-chat-head">
+    <div>
+      <h2>Ask 407 FYI</h2>
+      <p>Answers only from the guide's own listings.</p>
+    </div>
+    <button class="fyi-chat-close" id="fyiChatClose" aria-label="Close chat">&times;</button>
+  </div>
+  <div class="fyi-chat-msgs" id="fyiChatMsgs"></div>
+  <form class="fyi-chat-form" id="fyiChatForm">
+    <input class="fyi-chat-input" id="fyiChatInput" type="text" autocomplete="off" maxlength="500"
+      placeholder="Ask about places in Orlando..." aria-label="Your question">
+    <button class="fyi-chat-send" id="fyiChatSend" type="submit">Send</button>
+  </form>
+</section>
+<script id="fyi-chat-js">
+(() => {
+  const FN = 'https://xxdgxigwpnezsdvbiawi.supabase.co/functions/v1/chat';
+  const KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inh4ZGd4aWd3cG5lenNkdmJpYXdpIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTE2OTM0MDYsImV4cCI6MjEwNzI2OTQwNn0.3fuj9vjXspT31fQhgcejf4Thmk9yHPc7RSBZ0v97Gw4';
+  const btn = document.getElementById('fyiChatBtn');
+  const panel = document.getElementById('fyiChatPanel');
+  const msgs = document.getElementById('fyiChatMsgs');
+  const form = document.getElementById('fyiChatForm');
+  const input = document.getElementById('fyiChatInput');
+  const send = document.getElementById('fyiChatSend');
+  let opened = false, busy = false, noticeShown = false;
+  const history = [];
+  let visitor = '';
+  try {
+    visitor = localStorage.getItem('fyi-chat-visitor') || '';
+    if (!visitor) {
+      visitor = (crypto.randomUUID ? crypto.randomUUID() : String(Date.now()) + Math.random().toString(36).slice(2));
+      localStorage.setItem('fyi-chat-visitor', visitor);
+    }
+  } catch (e) { visitor = 'anon'; }
+  const track = (name) => { try { if (window.captureEvent) captureEvent(name, {}); else if (window.posthog) posthog.capture(name); } catch (e) {} };
+  const esc = (s) => s.replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+  const fmt = (s) => s.split(/\n\s*\n/).map((para) => '<p>' + esc(para)
+    .replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>')
+    .replace(/^\s*[-*]\s+/gm, '• ')
+    .replace(/mail@407\.fyi/g, '<a href="mailto:mail@407.fyi" style="color:var(--fyi-accent)">mail@407.fyi</a>')
+    .replace(/\n/g, '<br>') + '</p>').join('');
+  function addMsg(cls, text) {
+    const d = document.createElement('div');
+    d.className = 'fyi-chat-msg ' + cls;
+    d.innerHTML = fmt(text);
+    msgs.appendChild(d);
+    msgs.scrollTop = msgs.scrollHeight;
+    return d;
+  }
+  function addChips(venues) {
+    if (!venues || !venues.length) return;
+    const row = document.createElement('div');
+    row.className = 'fyi-chat-chips';
+    for (const v of venues) {
+      const a = document.createElement('a');
+      a.className = 'fyi-chat-chip';
+      a.href = '/venue/' + v.id + '.html';
+      a.innerHTML = esc(v.name) + ' <small>' + esc(v.district || '') + '</small>';
+      row.appendChild(a);
+    }
+    msgs.appendChild(row);
+    msgs.scrollTop = msgs.scrollHeight;
+  }
+  function addGoogleChips(links) {
+    if (!links || !links.length) return;
+    const row = document.createElement('div');
+    row.className = 'fyi-chat-chips';
+    for (const v of links) {
+      const a = document.createElement('a');
+      a.className = 'fyi-chat-chip';
+      a.href = v.url;
+      a.target = '_blank';
+      a.rel = 'noopener';
+      a.innerHTML = esc(v.name) + ' <small>on Google</small>';
+      row.appendChild(a);
+    }
+    msgs.appendChild(row);
+    msgs.scrollTop = msgs.scrollHeight;
+  }
+  function toggle(open) {
+    panel.classList.toggle('open', open);
+    btn.setAttribute('aria-expanded', String(open));
+    if (open) {
+      if (!opened) {
+        opened = true;
+        addMsg('bot', 'Hi, I answer from the 407 FYI guide: date nights, coffee, family spots, neighborhoods, whatever you are after. We are in soft opening, so you get eight questions a day: make them thorough ones, with the neighborhood, the occasion, and the mood in a single ask, and you will get a fuller answer. One more limit: the guide does not list hours, so for hours or a phone number I will point you to the place on Google. What are you looking for?');
+        track('chat_open');
+      }
+      setTimeout(() => input.focus(), 60);
+    }
+  }
+  btn.addEventListener('click', () => toggle(!panel.classList.contains('open')));
+  document.getElementById('fyiChatClose').addEventListener('click', () => toggle(false));
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && panel.classList.contains('open')) toggle(false); });
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const q = input.value.trim();
+    if (!q || busy) return;
+    busy = true; send.disabled = true; input.value = '';
+    addMsg('user', q);
+    history.push({ role: 'user', text: q });
+    const thinking = addMsg('bot thinking', 'Looking through the guide...');
+    try {
+      const ctrl = new AbortController();
+      const timer = setTimeout(() => ctrl.abort(), 30000);
+      const r = await fetch(FN, {
+        method: 'POST',
+        headers: { 'Authorization': 'Bearer ' + KEY, 'apikey': KEY, 'Content-Type': 'application/json' },
+        body: JSON.stringify({ question: q, history: history.slice(0, -1).slice(-6), visitor }),
+        signal: ctrl.signal,
+      });
+      clearTimeout(timer);
+      const data = await r.json();
+      thinking.remove();
+      if (!r.ok || !data.answer) throw new Error('bad response');
+      if (data.notice && !noticeShown) {
+        noticeShown = true;
+        const n = document.createElement('div');
+        n.className = 'fyi-chat-note';
+        n.textContent = data.notice;
+        msgs.appendChild(n);
+      }
+      addMsg('bot', data.answer);
+      addChips(data.venues);
+      addGoogleChips(data.google);
+      history.push({ role: 'assistant', text: data.answer });
+      track('chat_question');
+    } catch (err) {
+      thinking.remove();
+      addMsg('bot', 'Something went wrong on my end. The finder on this page can still help, or try me again in a moment.');
+    }
+    busy = false; send.disabled = false; input.focus();
+  });
+})();
+</script>
+
+  </body>
+</html>

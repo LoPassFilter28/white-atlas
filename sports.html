@@ -1,0 +1,741 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="color-scheme" content="light dark" />
+    <title>Orlando Sports: Teams, Stadiums and Where to Watch | 407 FYI</title>
+    <meta name="description" content="Orlando sports in one local guide: Magic and Solar Bears nights at Kia Center, City and Pride at Inter&amp;Co Stadium, UCF, bowl season, golf, baseball day trips, Daytona and where to watch." />
+    <link rel="canonical" href="https://407.fyi/sports.html" />
+    <meta property="og:title" content="Orlando Sports · 407 FYI" />
+    <meta property="og:description" content="Downtown game nights, UCF Saturdays, bowl season, winter golf, baseball day trips and the rooms where Orlando watches." />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://407.fyi/sports.html" />
+    <meta property="og:image" content="https://407.fyi/og-image.png" />
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="preload" href="/fonts/manrope-latin.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="/fonts/fonts.css" />
+    <script>
+      try {
+        const savedTheme = localStorage.getItem('white-atlas-theme');
+        document.documentElement.dataset.theme = savedTheme === 'light' || savedTheme === 'dark' ? savedTheme : 'dark';
+      } catch (error) {
+        document.documentElement.dataset.theme = 'dark';
+      }
+    </script>
+<style>
+      /* Night Drive tokens (from the district guides) */
+      :root {
+        color-scheme: dark;
+        --bg: #0a1811; --surface: #122419; --soft: #172a1f; --ink: #f0e8d5;
+        --muted: #c6bba2; --line: #2f4a38; --accent: #765b2f; --accent-ink: #d4b573;
+        --headline: #f6edd6; --focus: #d4b573;
+        --d-a: #14231a; --d-b: #3a5a35; --d-c: #bd9049;
+        --pad: clamp(20px, 5vw, 40px);
+      }
+      * { box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
+      body {
+        margin: 0; background: var(--bg); color: var(--ink);
+        font-family: "Manrope", system-ui, sans-serif; line-height: 1.6;
+        overflow-x: hidden;
+      }
+      h1, h2, h3, .display { font-family: "Urbanist", "Manrope", sans-serif; }
+      a { color: var(--accent-ink); }
+      a:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
+      .kicker {
+        font-family: "Urbanist", sans-serif; font-weight: 700; letter-spacing: .22em;
+        font-size: .72rem; text-transform: uppercase; color: var(--accent-ink); margin: 0 0 14px;
+      }
+
+      /* ---------- hero ---------- */
+      .hero {
+        position: relative; padding: clamp(64px, 13vh, 130px) var(--pad) clamp(48px, 9vh, 84px);
+        background: radial-gradient(ellipse 90% 55% at 50% 112%, rgba(189,144,73,.26), transparent 60%),
+          linear-gradient(168deg, #1d3325, #14231a 55%, #0a1811);
+        border-bottom: 1px solid var(--line);
+      }
+      .hero-in { max-width: 860px; margin: 0 auto; }
+      .crumbs { font-size: .8rem; color: var(--muted); margin: 0 0 26px; }
+      .crumbs a { font-weight: 700; }
+      .hero-brand {
+        font-family: "Urbanist", sans-serif; font-weight: 700; letter-spacing: .22em;
+        font-size: .72rem; text-transform: uppercase; color: var(--accent-ink); text-decoration: none;
+      }
+      .hero h1 {
+        font-size: clamp(2.6rem, 8.5vw, 5.2rem); line-height: .98; letter-spacing: .01em;
+        color: var(--headline); margin: 18px 0 16px; text-transform: uppercase;
+      }
+      .hero .sub { font-size: clamp(1.05rem, 2.6vw, 1.3rem); color: var(--ink); max-width: 620px; margin: 0 0 10px; }
+      .hero .fine { color: var(--muted); max-width: 620px; margin: 0; }
+      .anchor-nav { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 30px; }
+      .anchor-nav a {
+        border: 1px solid var(--line); border-radius: 999px; padding: 8px 14px;
+        font-size: .82rem; font-weight: 700; text-decoration: none; background: rgba(255,255,255,.03);
+        min-height: 42px; display: inline-flex; align-items: center;
+      }
+      .anchor-nav a:hover { border-color: var(--accent-ink); }
+
+      /* ---------- sections ---------- */
+      main { display: block; }
+      .sec { max-width: 860px; margin: 0 auto; padding: clamp(52px, 9vh, 88px) var(--pad) 0; }
+      .sec h2 { font-size: clamp(1.7rem, 4.6vw, 2.4rem); line-height: 1.12; color: var(--headline); margin: 0 0 16px; }
+      .sec .lede { color: var(--muted); font-size: 1.04rem; max-width: 640px; margin: 0 0 26px; }
+      .sec p { max-width: 68ch; }
+      .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 14px; margin: 22px 0 6px; }
+      .card {
+        background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 20px;
+      }
+      .card h3 { margin: 0 0 6px; font-size: 1.12rem; color: var(--headline); }
+      .card .addr { font-weight: 800; color: var(--accent-ink); margin: 0 0 10px; font-size: .98rem; }
+      .card p { margin: 0; color: var(--muted); font-size: .94rem; }
+      .cols { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 22px 0 6px; }
+      @media (max-width: 680px) { .cols { grid-template-columns: 1fr; } }
+      .panel { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 20px 22px; }
+      .panel h3 { margin: 0 0 12px; font-size: 1.05rem; color: var(--headline); }
+      .panel ul, .plain-list { margin: 0; padding-left: 18px; }
+      .panel li, .plain-list li { margin-bottom: 9px; }
+      .panel li:last-child, .plain-list li:last-child { margin-bottom: 0; }
+      .note {
+        border-left: 3px solid var(--accent-ink); background: var(--soft);
+        padding: 14px 18px; border-radius: 0 12px 12px 0; margin: 22px 0 6px; max-width: 68ch;
+      }
+      .note p { margin: 0; }
+      .venue-links { list-style: none; margin: 0; padding: 0; }
+      .venue-links li { margin-bottom: 10px; }
+      .venue-links a { font-weight: 800; text-underline-offset: 3px; }
+      .venue-links span { color: var(--muted); }
+
+      /* ---------- jobs ---------- */
+      .job-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 14px; margin-top: 22px; }
+      .job { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 20px 22px; }
+      .job h3 { margin: 0 0 6px; font-size: 1.08rem; color: var(--headline); }
+      .job p { margin: 0 0 12px; color: var(--muted); font-size: .94rem; }
+      .job ul { list-style: none; margin: 0 0 14px; padding: 0; }
+      .job li { margin-bottom: 7px; }
+      .job li a { font-weight: 800; text-underline-offset: 3px; }
+      .job .browse { font-size: .86rem; font-weight: 800; text-transform: uppercase; letter-spacing: .08em; }
+
+      /* ---------- what to avoid ---------- */
+      .avoid { border-top: 1px solid var(--line); padding: 24px 0 6px; }
+      .avoid h3 { margin: 0 0 10px; font-size: 1.18rem; color: var(--headline); }
+      .avoid p { margin: 0 0 8px; max-width: 68ch; }
+      .avoid strong { color: var(--accent-ink); }
+      .flags { display: flex; flex-wrap: wrap; gap: 8px; margin: 18px 0 6px; }
+      .flags span {
+        border: 1px solid var(--accent); border-radius: 999px; padding: 7px 13px;
+        font-size: .85rem; font-weight: 700; color: var(--accent-ink); background: rgba(255,255,255,.03);
+      }
+      .rules { margin: 16px 0 0; padding-left: 20px; max-width: 68ch; }
+      .rules li { margin-bottom: 10px; }
+
+      .handoff { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 30px; }
+      .btn-big {
+        display: inline-flex; align-items: center; min-height: 52px; padding: 12px 22px;
+        background: var(--accent); color: #fff; font-weight: 800; border-radius: 999px; text-decoration: none;
+      }
+      .btn-big:hover { background: var(--accent-ink); color: #1d2a20; }
+      .btn-ghost {
+        display: inline-flex; align-items: center; min-height: 52px; padding: 12px 22px;
+        border: 1px solid var(--line); color: var(--accent-ink); font-weight: 800; border-radius: 999px; text-decoration: none;
+      }
+
+      footer { border-top: 1px solid var(--line); margin-top: clamp(52px, 9vh, 88px); }
+      .foot-in { max-width: 860px; margin: 0 auto; padding: 34px var(--pad) 44px; color: var(--muted); font-size: .9rem; }
+      .foot-in p { margin: 0 0 9px; }
+      .back-link { font-weight: 800; display: inline-block; margin-bottom: 16px; }
+      .brand-line { color: var(--ink); font-weight: 700; }
+
+      /* ---------- Light theme: app-page tokens ---------- */
+      html[data-theme="light"] {
+        color-scheme: light;
+        --bg: #faf6ec; --surface: #fffdf7; --soft: #f3ecd7; --ink: #1d2a20;
+        --muted: #4c5a45; --line: #ddd3ba; --accent: #8a5f0e; --accent-ink: #7c520c;
+        --headline: #123524; --focus: #8a5f0e;
+      }
+      html[data-theme="light"] .hero {
+        background: radial-gradient(ellipse 90% 55% at 50% 112%, rgba(163,129,63,.30), transparent 60%),
+          linear-gradient(168deg, color-mix(in srgb, var(--d-a) 24%, #faf6ec), color-mix(in srgb, var(--d-a) 40%, #faf6ec) 55%, color-mix(in srgb, var(--d-a) 14%, #faf6ec));
+      }
+      html[data-theme="light"] .anchor-nav a, html[data-theme="light"] .flags span { background: rgba(29,42,32,.04); }
+      html[data-theme="light"] .btn-big { background: var(--accent); color: #fff; }
+      html[data-theme="light"] .btn-big:hover { background: var(--accent-ink); color: #fff; }
+
+      @media print { .anchor-nav { display: none; } }
+      @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+      /* ---------- events ---------- */
+      .card .where { font-weight: 700; color: var(--ink); margin: 0 0 8px; font-size: .94rem; }
+      .card h3 a { text-decoration: none; }
+      .card h3 a:hover { text-decoration: underline; text-underline-offset: 3px; }
+      .wk {
+        font-family: "Urbanist", sans-serif; font-weight: 700; letter-spacing: .14em;
+        font-size: .95rem; text-transform: uppercase; color: var(--muted);
+        margin: 38px 0 2px;
+      }
+      .wk:first-of-type { margin-top: 6px; }
+      .ev-list { border-top: 1px solid var(--line); }
+      .ev {
+        display: grid; grid-template-columns: 150px 1fr; gap: 4px 20px;
+        padding: 17px 0; border-bottom: 1px solid var(--line);
+      }
+      .ev .d {
+        font-family: "Urbanist", sans-serif; font-weight: 800; color: var(--accent-ink);
+        font-size: .94rem; margin: 0; padding-top: 3px; line-height: 1.45;
+      }
+      .ev h3 { margin: 0 0 4px; font-size: 1.1rem; color: var(--headline); }
+      .ev .meta { margin: 0 0 5px; font-size: .95rem; color: var(--ink); }
+      .ev .meta a { font-weight: 800; text-underline-offset: 3px; }
+      .ev .blurb { margin: 0; color: var(--muted); font-size: .94rem; max-width: 62ch; }
+      @media (max-width: 640px) {
+        .ev { grid-template-columns: 1fr; }
+        .ev .d { padding-top: 0; }
+      }
+      .sport-meta { font-weight: 800; color: var(--accent-ink); margin: 0 0 8px; font-size: .94rem; }
+      .card h3 a, .panel h3 a { text-decoration: none; }
+      .card h3 a:hover, .panel h3 a:hover { text-decoration: underline; text-underline-offset: 3px; }
+      .team-intro { margin-top: 28px; }
+      .team-intro:first-of-type { margin-top: 8px; }
+      .plain-name { color: var(--headline); font-weight: 800; }
+    </style>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"ItemList","name":"Orlando sports guide listings and watch spots","itemListElement":[{"@type":"ListItem","position":1,"item":{"@type":"LocalBusiness","name":"Kia Center","url":"https://407.fyi/venue/kia-center.html"}},{"@type":"ListItem","position":2,"item":{"@type":"LocalBusiness","name":"Inter&Co Stadium","url":"https://407.fyi/venue/inter-co-stadium.html"}},{"@type":"ListItem","position":3,"item":{"@type":"LocalBusiness","name":"Tom's Watch Bar","url":"https://407.fyi/venue/toms-watch-bar-orlando.html"}},{"@type":"ListItem","position":4,"item":{"@type":"LocalBusiness","name":"Reeves Sports Bar","url":"https://407.fyi/venue/reeves-sports-bar.html"}},{"@type":"ListItem","position":5,"item":{"@type":"LocalBusiness","name":"Wall Street Plaza","url":"https://407.fyi/venue/wall-street-plaza.html"}},{"@type":"ListItem","position":6,"item":{"@type":"LocalBusiness","name":"Fixtion Restaurant & Bar","url":"https://407.fyi/venue/fixtion.html"}},{"@type":"ListItem","position":7,"item":{"@type":"LocalBusiness","name":"Stadium Club","url":"https://407.fyi/venue/stadium-club.html"}},{"@type":"ListItem","position":8,"item":{"@type":"LocalBusiness","name":"Yard House","url":"https://407.fyi/venue/yard-house.html"}},{"@type":"ListItem","position":9,"item":{"@type":"LocalBusiness","name":"Murphy's Pub Orlando","url":"https://407.fyi/venue/murphys-pub-orlando.html"}},{"@type":"ListItem","position":10,"item":{"@type":"LocalBusiness","name":"Cavo's Bar & Kitchen","url":"https://407.fyi/venue/cavos-bar-kitchen.html"}},{"@type":"ListItem","position":11,"item":{"@type":"LocalBusiness","name":"The Porch Winter Park","url":"https://407.fyi/venue/the-porch-winter-park.html"}},{"@type":"ListItem","position":12,"item":{"@type":"LocalBusiness","name":"The Porch South Orange","url":"https://407.fyi/venue/the-porch-south-orange.html"}},{"@type":"ListItem","position":13,"item":{"@type":"LocalBusiness","name":"Duffy's Sports Grill","url":"https://407.fyi/venue/duffy-s-sports-grill.html"}},{"@type":"ListItem","position":14,"item":{"@type":"LocalBusiness","name":"Knight Library","url":"https://407.fyi/venue/knight-library.html"}},{"@type":"ListItem","position":15,"item":{"@type":"LocalBusiness","name":"Paddy's Pub Longwood","url":"https://407.fyi/venue/paddys-pub-longwood.html"}},{"@type":"ListItem","position":16,"item":{"@type":"LocalBusiness","name":"Ain't Miss Behavin' Sports and Tiki Bar","url":"https://407.fyi/venue/aint-miss-behavin.html"}},{"@type":"ListItem","position":17,"item":{"@type":"LocalBusiness","name":"Boxi Park Lake Nona","url":"https://407.fyi/venue/boxi-park.html"}}]}</script>
+  </head>
+  <body>
+    <header class="hero">
+      <div class="hero-in">
+        <p class="crumbs"><a href="/">407 FYI</a> · Sports</p>
+        <a class="hero-brand" href="/">407 FYI · A Sports Guide</a>
+        <h1>Orlando Sports</h1>
+        <p class="sub">Magic nights downtown, soccer under the canopy, UCF Saturdays, winter golf, Daytona day trips, and the rooms where Orlando watches when it is not in the building.</p>
+        <p class="fine"><a href="/venue/kia-center.html">Kia Center</a> and <a href="/venue/inter-co-stadium.html">Inter&amp;Co Stadium</a> are guide listings. The other stadiums and arenas on this page are named as local landmarks, not dressed up as listings. Dates can change, so confirm before you go.</p>
+        <nav class="anchor-nav" aria-label="On this page">
+          <a href="#right-now">Right now</a>
+          <a href="#teams">Teams and rooms</a>
+          <a href="#bowls">Bowl season</a>
+          <a href="#golf">Golf</a>
+          <a href="#baseball">Baseball</a>
+          <a href="#daytona">Daytona</a>
+          <a href="#watch">Where to watch</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="sec" id="overview">
+        <p class="kicker">The Local Frame</p>
+        <h2>A year that keeps changing rooms</h2>
+        <p class="lede">Orlando's sports year runs on a calendar, not a single season. Fall belongs to downtown game nights and college football. The holidays bring bowl games. Winter turns toward golf and Daytona. Spring and summer carry soccer, volleyball and minor league baseball.</p>
+        <p>The useful question is not just who is playing. It is what kind of night each room makes: Church Street before a Magic game, The Wall in full voice at the soccer stadium, a student-led bounce in east Orlando, or a neighborhood bar when you do not have a ticket.</p>
+        <p>This page keeps the durable frames in front and puts the current home dates in one short section. The monthly <a href="/events.html">events calendar</a> carries the day-by-day version.</p>
+      </section>
+
+      <section class="sec" id="right-now">
+        <p class="kicker">October and November</p>
+        <h2>Right now</h2>
+        <p class="lede">The near-term home anchors, kept brief on purpose. Use the <a href="/events.html">events calendar</a> for the full schedule and the rest of the city's week.</p>
+        <div class="cards">
+          <article class="card">
+            <h3>Orlando Magic</h3>
+            <p class="addr">Kia Center</p>
+            <p>Home opener Oct 21 vs Atlanta Hawks. Then Oct 23 vs Minnesota Timberwolves, Nov 1 vs Boston Celtics and Nov 2 vs Washington Wizards.</p>
+          </article>
+          <article class="card">
+            <h3>Orlando Solar Bears</h3>
+            <p class="addr">Kia Center</p>
+            <p>Oct 24 vs South Carolina Stingrays, Oct 28 vs Florida Everblades, Oct 30 vs Jacksonville for Boo With The Bears, and Nov 3 vs Atlanta.</p>
+          </article>
+          <article class="card">
+            <h3>Orlando City SC</h3>
+            <p class="addr">Inter&amp;Co Stadium</p>
+            <p>Oct 24 vs New York City FC, then Decision Day on Nov 7 vs New England Revolution, with playoff seeding on the line.</p>
+          </article>
+          <article class="card">
+            <h3>Orlando Pride</h3>
+            <p class="addr">Home regular season complete</p>
+            <p>The Pride's 2026 home regular season is over. Their regular-season finale is at Seattle on Nov 1, and home dates return next season.</p>
+          </article>
+          <article class="card">
+            <h3>UCF Football</h3>
+            <p class="addr">Acrisure Bounce House</p>
+            <p>Oct 24 vs BYU for Homecoming, Oct 30 vs Baylor for the Space Game, Nov 14 vs Arizona State, and Nov 20 vs Iowa State for Senior Knight.</p>
+          </article>
+          <article class="card">
+            <h3>UCF Basketball</h3>
+            <p class="addr">Addition Financial Arena</p>
+            <p>The men's season opener is Nov 2 vs Florida Gulf Coast, the first home date in a November to March run.</p>
+          </article>
+          <article class="card">
+            <h3>Osceola Magic</h3>
+            <p class="addr">Silver Spurs Arena</p>
+            <p>The G League home slate opens Nov 8 in Kissimmee and runs through mid-March.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="sec" id="teams">
+        <p class="kicker">Teams and Rooms</p>
+        <h2>Where the crowds gather</h2>
+        <p class="lede">Downtown has the guide-listed rooms. East Orlando has the college campus. Kissimmee has the developmental league version of the Magic, in a rodeo arena.</p>
+
+        <h3 class="wk">Downtown</h3>
+        <div class="team-intro">
+          <h3><a href="/venue/kia-center.html">Kia Center</a></h3>
+          <p>Orlando's big room on Church Street is home to the Magic and the Solar Bears. Guests praise the views even from the cheap seats, and the streets around the building carry the before and after ritual on game nights.</p>
+        </div>
+        <div class="cols">
+          <div class="panel">
+            <h3>Orlando Magic</h3>
+            <p>NBA basketball from late October into April, with playoffs after. The building is at its loudest when the city treats the night as a downtown occasion rather than just a game.</p>
+          </div>
+          <div class="panel">
+            <h3>Orlando Solar Bears</h3>
+            <p>ECHL hockey on the AdventHealth Rink at Kia Center. The Solar Bears are the Tampa Bay Lightning affiliate and are owned and operated by the Orlando Magic organization. The season runs October into April, with theme nights, promotions and the loudest crowds for Florida Everblades rivalry games.</p>
+          </div>
+        </div>
+
+        <div class="team-intro">
+          <h3><a href="/venue/inter-co-stadium.html">Inter&amp;Co Stadium</a></h3>
+          <p>The soccer-specific stadium opened in 2017 with a steep single bowl and a canopy roof that traps noise. The Wall fills the north end. Section 12 holds 49 rainbow-colored seats as a permanent memorial to the Pulse victims.</p>
+        </div>
+        <div class="cols">
+          <div class="panel">
+            <h3>Orlando City SC</h3>
+            <p>Major League Soccer from late February to early November. The Wall stands and sings for the full match, Church Street is the pregame ritual, and select matches carry the club's 407 Nights promotion with a $4.07 concession menu.</p>
+          </div>
+          <div class="panel">
+            <h3>Orlando Pride</h3>
+            <p>The Pride's 2026 season was the club's 11th NWSL campaign. The home regular season is already done, with the last home match on Oct 2 and the finale on the road. The crowd is younger and more family-heavy than City matchdays, in the same building and under the same Wall.</p>
+          </div>
+        </div>
+
+        <h3 class="wk">East Orlando and Kissimmee</h3>
+        <div class="cols">
+          <div class="panel">
+            <h3>UCF Football</h3>
+            <p>The current name is Acrisure Bounce House. It replaced FBC Mortgage Stadium on July 1, 2025, after the sponsor rebranded. Bounce House was already the nickname, earned because the steel stands visibly shake when the crowd jumps together.</p>
+            <p>The on-campus Big 12 stadium opened in 2007 and holds 45,906 after the Roth Tower expansion. The student section drives the bounce. The Space Game leans into UCF's NASA ties; the 50-yard line is aligned with Kennedy Space Center Launch Pad 39A. Knight Library is the guide's college-bar anchor for this crowd.</p>
+          </div>
+          <div class="panel">
+            <h3>UCF Basketball</h3>
+            <p>Addition Financial Arena sits at Knights Plaza on campus and holds 9,432. The student section is the Knightmare and the building's nickname is The Dungeon. It is steep, loud and small by power-conference standards, which is the point on Big 12 nights.</p>
+          </div>
+          <div class="panel">
+            <h3>Orlando Valkyries</h3>
+            <p>Major League Volleyball at Addition Financial Arena, with a season that runs January to May. Orlando is a charter franchise and won the league championship in 2025. Pro volleyball in a college arena makes for an intimate, family-priced night, and the club hosted the league All-Star Match in March 2026.</p>
+          </div>
+          <div class="panel">
+            <h3>Osceola Magic</h3>
+            <p>The Orlando Magic's NBA G League affiliate plays at Silver Spurs Arena in Kissimmee, roughly 25 miles south of downtown. The home season runs November into March. It is the cheapest real pro basketball seat in the metro, and future NBA players pass through on two-way contracts.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="sec" id="bowls">
+        <p class="kicker">Postseason Football</p>
+        <h2>Bowl season and the renovation shuffle</h2>
+        <p class="lede">Camping World Stadium is in the middle of a $400 million renovation running through 2026, with completion in 2027. Capacity is limited this fall, and one Orlando bowl has moved across town.</p>
+        <div class="cols">
+          <div class="panel">
+            <h3>Florida Blue Florida Classic</h3>
+            <p class="sport-meta">Sat Nov 21, 2026</p>
+            <p>Florida A&amp;M vs Bethune-Cookman. The HBCU rivalry is a full weekend takeover, not just a game. Confirm the stadium before setting the plan; this page does not guess at the 2026 venue.</p>
+          </div>
+          <div class="panel">
+            <h3>StaffDNA Cure Bowl</h3>
+            <p class="sport-meta">Tue Dec 22, 2026 · Acrisure Bounce House</p>
+            <p>This one did move, from Camping World Stadium to the UCF campus because of the renovation. The game raises money for cancer research, with UCF College of Medicine researchers among the beneficiaries.</p>
+          </div>
+          <div class="panel">
+            <h3>Pop-Tarts Bowl</h3>
+            <p class="sport-meta">Tue Dec 29, 2026 · Camping World Stadium</p>
+            <p>ACC vs Big 12 at limited capacity. The edible-mascot spectacle is now the modern identity of the game.</p>
+          </div>
+          <div class="panel">
+            <h3>Citrus Bowl</h3>
+            <p class="sport-meta">Sat Jan 2, 2027 · Camping World Stadium</p>
+            <p>SEC vs Big Ten at limited capacity. The game is one of the oldest bowls in the country and was first played in 1947 as the Tangerine Bowl.</p>
+          </div>
+        </div>
+        <div class="note">
+          <p>The Pro Bowl Games will not be back: the NFL eliminated the game in 2026, and Orlando hosted its final stadium edition in 2025.</p>
+        </div>
+      </section>
+
+      <section class="sec" id="golf">
+        <p class="kicker">Golf</p>
+        <h2>Golf across the calendar</h2>
+        <p class="lede">Orlando golf does not sit in one month. Bay Hill belongs to early March, Grande Lakes to December, and Lake Nona to the turn of February.</p>
+        <div class="cols">
+          <div class="panel">
+            <h3>Arnold Palmer Invitational</h3>
+            <p class="sport-meta">Early March · Bay Hill Club and Lodge</p>
+            <p>A PGA Tour Signature Event at the course Arnold Palmer owned and lived beside. It is the most gallery-friendly big-time golf week in town, with close ropes. Akshay Bhatia won the 2026 edition in a playoff.</p>
+          </div>
+          <div class="panel">
+            <h3>PNC Championship</h3>
+            <p class="sport-meta">Dec 17 to 20, 2026 · Grande Lakes</p>
+            <p>Major champions paired with a family member in a scramble at the Ritz-Carlton Golf Club. Competition rounds are Dec 19 and 20. Brooks Koepka makes his debut alongside his father, Bob. The mood is relaxed, legends are within arm's reach, and kids are welcome.</p>
+          </div>
+          <div class="panel">
+            <h3>LPGA Tournament of Champions</h3>
+            <p class="sport-meta">Feb 4 to 7, 2027 · Lake Nona</p>
+            <p>The Hilton Grand Vacations Tournament of Champions is the LPGA season opener at Lake Nona Golf and Country Club, with recent LPGA champions and a celebrity field. The galleries are small and access is high. Its concert series runs at Boxi Park during tournament week.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="sec" id="baseball">
+        <p class="kicker">Baseball Day Trips</p>
+        <h2>No Orlando team, honest day trips</h2>
+        <p class="lede">Orlando itself has no affiliated minor-league team. A local who wants a ballgame drives to Lakeland or Daytona, both about an hour away in normal traffic.</p>
+        <div class="cols">
+          <div class="panel">
+            <h3>Lakeland Flying Tigers</h3>
+            <p class="sport-meta">Lakeland · Single-A</p>
+            <p>The Detroit Tigers affiliate has played in the Florida State League since 1963. Publix Field at Joker Marchant Stadium holds 8,500, and the season runs April into September.</p>
+          </div>
+          <div class="panel">
+            <h3>Daytona Tortugas</h3>
+            <p class="sport-meta">Daytona Beach · Single-A</p>
+            <p>The Cincinnati Reds affiliate plays at Jackie Robinson Ballpark, a historic park recently designated a National Commemorative Site and named for Robinson's 1946 spring training there. The season runs April into September; pair the game with the beach and the drive earns its keep.</p>
+          </div>
+          <div class="panel">
+            <h3>Spring Training in Lakeland</h3>
+            <p class="sport-meta">Late February into late March</p>
+            <p>The one true day-trip camp is Detroit at the same Lakeland ballpark. TigerTown has hosted the Tigers since 1934, the longest team-city relationship in spring training, and 2026 marked 90 consecutive springs there.</p>
+          </div>
+          <div class="panel">
+            <h3>The Longer Camps</h3>
+            <p>The Tampa Bay camps are roughly an hour and a half to two hours each way. North Port, Port St. Lucie and West Palm Beach are two hours or more. Those are full-day commitments, not Orlando add-ons.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="sec" id="daytona">
+        <p class="kicker">Day Trip</p>
+        <h2>Daytona and the winter races</h2>
+        <p class="lede">Daytona International Speedway is roughly 55 to 60 miles east, about an hour on I-4 when traffic behaves. On race weekends, plan on far longer and make it a full day.</p>
+        <div class="cols">
+          <div class="panel">
+            <h3>Rolex 24 at Daytona</h3>
+            <p class="sport-meta">Jan 28 to 31, 2027</p>
+            <p>The 24-hour sports car race is the connoisseur's weekend: infield camping, a ferris wheel and racing through the night.</p>
+          </div>
+          <div class="panel">
+            <h3>Daytona 500</h3>
+            <p class="sport-meta">Feb 21, 2027</p>
+            <p>The 69th Daytona 500 moves off its traditional Presidents' Day weekend slot. For locals who go, it is the pilgrimage: an early start, a long day and no pretending the drive home will be quick.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="sec" id="watch">
+        <p class="kicker">Where to Watch</p>
+        <h2>When you are not in the building</h2>
+        <p class="lede">Tom's Watch Bar and Reeves Sports Bar carry the guide's watch-party tag. The rest are the sports bars and gathering places around them, organized by the kind of night they make.</p>
+
+        <h3 class="wk">The tagged watch-party rooms</h3>
+        <div class="cards">
+          <article class="card">
+            <h3><a href="/venue/toms-watch-bar-orlando.html">Tom's Watch Bar</a></h3>
+            <p class="addr">I-Drive</p>
+            <p>A sports bar built like a stadium, with an oversized stadium screen, wall-to-wall screens and the rooftop Sky Bar. It is the convention corridor's watch spot.</p>
+          </article>
+          <article class="card">
+            <h3><a href="/venue/reeves-sports-bar.html">Reeves Sports Bar</a></h3>
+            <p class="addr">Downtown</p>
+            <p>A polished room on Central Boulevard, walking distance from Kia Center. It reads as a neighborhood bar first and a sports bar second.</p>
+          </article>
+        </div>
+
+        <h3 class="wk">Downtown and the corridors</h3>
+        <div class="cards">
+          <article class="card">
+            <h3><a href="/venue/wall-street-plaza.html">Wall Street Plaza</a></h3>
+            <p class="addr">Downtown</p>
+            <p>One downtown block that becomes the fan gathering point on big game nights, with the whole street given over to the party.</p>
+          </article>
+          <article class="card">
+            <h3><a href="/venue/fixtion.html">Fixtion Restaurant &amp; Bar</a></h3>
+            <p class="addr">Downtown</p>
+            <p>Comfort food, big booths and a giant screen on game days on Orange Avenue, before the room turns toward DJs after dark.</p>
+          </article>
+          <article class="card">
+            <h3><a href="/venue/stadium-club.html">Stadium Club</a></h3>
+            <p class="addr">Lake Buena Vista</p>
+            <p>A stadium-style room inside Caribe Royale, built around a wraparound ribbon screen. The parks corridor's spectacle option.</p>
+          </article>
+          <article class="card">
+            <h3><a href="/venue/yard-house.html">Yard House</a></h3>
+            <p class="addr">ICON Park</p>
+            <p>The big-room guarantee at ICON Park: a wall of taps, a glass-enclosed keg room and a menu wide enough for mixed groups on game and convention nights.</p>
+          </article>
+          <article class="card">
+            <h3><a href="/venue/murphys-pub-orlando.html">Murphy's Pub Orlando</a></h3>
+            <p class="addr">International Drive</p>
+            <p>A British-style soccer pub where any shirt is welcome. The screens carry Premier League football and expats treat the room as a home away from home.</p>
+          </article>
+          <article class="card">
+            <h3><a href="/venue/cavos-bar-kitchen.html">Cavo's Bar &amp; Kitchen</a></h3>
+            <p class="addr">Thornton Park</p>
+            <p>The neighborhood sports bar on East Washington, and Eagles country in Orlando. The cheesesteak earns the trip on its own.</p>
+          </article>
+        </div>
+
+        <h3 class="wk">Neighborhood rooms</h3>
+        <div class="cards">
+          <article class="card">
+            <h3><a href="/venue/the-porch-winter-park.html">The Porch Winter Park</a></h3>
+            <p class="addr">Winter Park</p>
+            <p>A converted garage turned open sports bar, with big screens, games and a broad comfort food menu built for a crew.</p>
+          </article>
+          <article class="card">
+            <h3><a href="/venue/the-porch-south-orange.html">The Porch South Orange</a></h3>
+            <p class="addr">SoDo</p>
+            <p>Front porch energy in a welcoming neighborhood room, with a patio built for game-day crowds and a hearty Southern menu.</p>
+          </article>
+          <article class="card">
+            <h3><a href="/venue/duffy-s-sports-grill.html">Duffy's Sports Grill</a></h3>
+            <p class="addr">Lake Mary</p>
+            <p>The north-side suburban option: TVs everywhere, a busy patio and a family-friendly game-day room.</p>
+          </article>
+          <article class="card">
+            <h3><a href="/venue/knight-library.html">Knight Library</a></h3>
+            <p class="addr">UCF Area</p>
+            <p>UCF's rite-of-passage college bar on University Boulevard. Loud, packed and high energy, it pairs naturally with Bounce House and Addition Financial Arena nights.</p>
+          </article>
+          <article class="card">
+            <h3><a href="/venue/paddys-pub-longwood.html">Paddy's Pub Longwood</a></h3>
+            <p class="addr">Longwood</p>
+            <p>A no-frills neighborhood sports pub with pool tables, dart boards and TVs tuned to the games.</p>
+          </article>
+          <article class="card">
+            <h3><a href="/venue/aint-miss-behavin.html">Ain't Miss Behavin' Sports and Tiki Bar</a></h3>
+            <p class="addr">Winter Park</p>
+            <p>A cozy sports and tiki hybrid with a local crowd, karaoke nights and a back tiki bar.</p>
+          </article>
+          <article class="card">
+            <h3><a href="/venue/boxi-park.html">Boxi Park Lake Nona</a></h3>
+            <p class="addr">Lake Nona</p>
+            <p>An open-air food park built from shipping containers, with a stage and room to wander. It hosts the concert side of LPGA Tournament of Champions week in Lake Nona.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="sec" id="more">
+        <p class="kicker">Also on the Local Map</p>
+        <h2>Pickleball, and a standing note</h2>
+        <div class="cols">
+          <div class="panel">
+            <h3>Orlando Squeeze</h3>
+            <p>Major League Pickleball's Orlando team formed in 2023 and has a league championship to its name. Its home events run at the USTA National Campus in Lake Nona. MLP is a touring league that runs spring into summer, so check the current stop before planning around it.</p>
+          </div>
+          <div class="panel">
+            <h3>How this page stays current</h3>
+            <p>The seasonal frames are the durable part. The short right-now anchors are refreshed alongside the monthly <a href="/events.html">events calendar</a>, which is rebuilt at the start of every month.</p>
+          </div>
+        </div>
+        <div class="handoff">
+          <a class="btn-big" href="/events.html">See the events calendar</a>
+          <a class="btn-ghost" href="/archive.html">Browse all Orlando places</a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="foot-in">
+        <a class="back-link" href="/">&larr; Back to the full guide</a>
+        <p class="brand-line">407 FYI, an independent Orlando guide. Details can change; confirm before you go.</p>
+        <p>Hand-verified Orlando places · Checked October 2026 · Local Picks are never sponsored · Corrections: <a href="mailto:mail@407.fyi">mail@407.fyi</a></p>
+        <p>Some links on 407 FYI are affiliate or referral links. We may earn a commission or credit at no extra cost to you. They never affect which places we list, rank, or recommend.</p>
+        <p><a href="/privacy.html">Privacy</a></p>
+      </div>
+    </footer>
+
+<!-- 407 FYI guide chat widget. Self-contained: style + markup + script.
+     Talks to the Supabase chat edge function; answers come only from guide data. -->
+<style id="fyi-chat-css">
+.fyi-chat-btn{position:fixed;right:16px;bottom:16px;z-index:1200;display:flex;align-items:center;gap:8px;
+  padding:11px 16px;border-radius:999px;border:1px solid var(--accent,#d4b573);cursor:pointer;
+  background:var(--surface,#122419);color:var(--headline,#f6edd6);
+  font-family:"Manrope",ui-sans-serif,sans-serif;font-size:14px;font-weight:700;
+  box-shadow:0 8px 24px rgba(0,0,0,.35)}
+.fyi-chat-btn:hover{border-color:var(--focus,#d4b573)}
+.fyi-chat-btn svg{flex:none}
+.fyi-chat-panel{position:fixed;right:16px;bottom:70px;z-index:1200;width:min(384px,calc(100vw - 24px));
+  height:min(580px,calc(100dvh - 96px));display:none;flex-direction:column;overflow:hidden;
+  border-radius:16px;border:1px solid var(--line,#2f4a38);background:var(--surface,#122419);
+  box-shadow:0 18px 48px rgba(0,0,0,.45);font-family:"Manrope",ui-sans-serif,sans-serif}
+.fyi-chat-panel.open{display:flex}
+.fyi-chat-head{padding:14px 16px 10px;border-bottom:1px solid var(--line,#2f4a38);display:flex;gap:10px;align-items:flex-start}
+.fyi-chat-head h2{margin:0;font-family:"Urbanist","Manrope",sans-serif;font-size:19px;color:var(--headline,#f6edd6)}
+.fyi-chat-head p{margin:2px 0 0;font-size:12.5px;color:var(--muted,#c6bba2)}
+.fyi-chat-close{margin-left:auto;background:none;border:0;color:var(--muted,#c6bba2);font-size:20px;cursor:pointer;line-height:1;padding:2px 4px}
+.fyi-chat-msgs{flex:1;overflow-y:auto;padding:14px 14px 6px;display:flex;flex-direction:column;gap:10px}
+.fyi-chat-msg{max-width:88%;padding:9px 12px;border-radius:12px;font-size:14px;line-height:1.45;white-space:normal;overflow-wrap:break-word}
+.fyi-chat-msg p{margin:0 0 9px}
+.fyi-chat-msg p:last-child{margin-bottom:0}
+.fyi-chat-msg.bot{align-self:flex-start;background:var(--soft,#172a1f);color:var(--ink,#f0e8d5);border-bottom-left-radius:4px}
+.fyi-chat-msg.user{align-self:flex-end;background:var(--badge,#223c2b);color:var(--ink,#f0e8d5);border-bottom-right-radius:4px}
+.fyi-chat-msg.thinking{color:var(--muted,#c6bba2);font-style:italic}
+.fyi-chat-note{font:500 12px/1.5 Manrope,system-ui,sans-serif;color:var(--fyi-muted);background:var(--fyi-soft);border:1px dashed var(--fyi-line);border-radius:10px;padding:8px 10px;align-self:flex-start;max-width:96%}
+.fyi-chat-chips{display:flex;flex-wrap:wrap;gap:6px;align-self:flex-start;max-width:96%}
+.fyi-chat-chip{display:inline-block;padding:5px 10px;border-radius:999px;border:1px solid var(--line,#2f4a38);
+  background:var(--bg,#0a1811);color:var(--accent-ink,#d4b573);font-size:12.5px;font-weight:600;text-decoration:none}
+.fyi-chat-chip:hover{border-color:var(--accent,#d4b573)}
+.fyi-chat-chip small{color:var(--muted,#c6bba2);font-weight:500}
+.fyi-chat-form{display:flex;gap:8px;padding:10px;border-top:1px solid var(--line,#2f4a38)}
+.fyi-chat-input{flex:1;padding:10px 12px;border-radius:10px;border:1px solid var(--line,#2f4a38);
+  background:var(--bg,#0a1811);color:var(--ink,#f0e8d5);font:inherit;font-size:14px}
+.fyi-chat-input:focus{outline:2px solid var(--focus,#d4b573);outline-offset:0}
+.fyi-chat-send{padding:10px 14px;border-radius:10px;border:0;cursor:pointer;font:inherit;font-weight:800;
+  background:var(--accent,#d4b573);color:#122419}
+.fyi-chat-send:disabled{opacity:.55;cursor:wait}
+@media (max-width:480px){.fyi-chat-panel{right:8px;bottom:64px}.fyi-chat-btn{right:12px;bottom:12px}}
+</style>
+<button class="fyi-chat-btn" id="fyiChatBtn" aria-haspopup="dialog" aria-expanded="false">
+  <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+  Ask the guide
+</button>
+<section class="fyi-chat-panel" id="fyiChatPanel" role="dialog" aria-label="Ask the 407 FYI guide">
+  <div class="fyi-chat-head">
+    <div>
+      <h2>Ask 407 FYI</h2>
+      <p>Answers only from the guide's own listings.</p>
+    </div>
+    <button class="fyi-chat-close" id="fyiChatClose" aria-label="Close chat">&times;</button>
+  </div>
+  <div class="fyi-chat-msgs" id="fyiChatMsgs"></div>
+  <form class="fyi-chat-form" id="fyiChatForm">
+    <input class="fyi-chat-input" id="fyiChatInput" type="text" autocomplete="off" maxlength="500"
+      placeholder="Ask about places in Orlando..." aria-label="Your question">
+    <button class="fyi-chat-send" id="fyiChatSend" type="submit">Send</button>
+  </form>
+</section>
+<script id="fyi-chat-js">
+(() => {
+  const FN = 'https://xxdgxigwpnezsdvbiawi.supabase.co/functions/v1/chat';
+  const KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inh4ZGd4aWd3cG5lenNkdmJpYXdpIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTE2OTM0MDYsImV4cCI6MjEwNzI2OTQwNn0.3fuj9vjXspT31fQhgcejf4Thmk9yHPc7RSBZ0v97Gw4';
+  const btn = document.getElementById('fyiChatBtn');
+  const panel = document.getElementById('fyiChatPanel');
+  const msgs = document.getElementById('fyiChatMsgs');
+  const form = document.getElementById('fyiChatForm');
+  const input = document.getElementById('fyiChatInput');
+  const send = document.getElementById('fyiChatSend');
+  let opened = false, busy = false, noticeShown = false;
+  const history = [];
+  let visitor = '';
+  try {
+    visitor = localStorage.getItem('fyi-chat-visitor') || '';
+    if (!visitor) {
+      visitor = (crypto.randomUUID ? crypto.randomUUID() : String(Date.now()) + Math.random().toString(36).slice(2));
+      localStorage.setItem('fyi-chat-visitor', visitor);
+    }
+  } catch (e) { visitor = 'anon'; }
+  const track = (name) => { try { if (window.captureEvent) captureEvent(name, {}); else if (window.posthog) posthog.capture(name); } catch (e) {} };
+  const esc = (s) => s.replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+  const fmt = (s) => s.split(/\n\s*\n/).map((para) => '<p>' + esc(para)
+    .replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>')
+    .replace(/^\s*[-*]\s+/gm, '• ')
+    .replace(/mail@407\.fyi/g, '<a href="mailto:mail@407.fyi" style="color:var(--fyi-accent)">mail@407.fyi</a>')
+    .replace(/\n/g, '<br>') + '</p>').join('');
+  function addMsg(cls, text) {
+    const d = document.createElement('div');
+    d.className = 'fyi-chat-msg ' + cls;
+    d.innerHTML = fmt(text);
+    msgs.appendChild(d);
+    msgs.scrollTop = msgs.scrollHeight;
+    return d;
+  }
+  function addChips(venues) {
+    if (!venues || !venues.length) return;
+    const row = document.createElement('div');
+    row.className = 'fyi-chat-chips';
+    for (const v of venues) {
+      const a = document.createElement('a');
+      a.className = 'fyi-chat-chip';
+      a.href = '/venue/' + v.id + '.html';
+      a.innerHTML = esc(v.name) + ' <small>' + esc(v.district || '') + '</small>';
+      row.appendChild(a);
+    }
+    msgs.appendChild(row);
+    msgs.scrollTop = msgs.scrollHeight;
+  }
+  function addGoogleChips(links) {
+    if (!links || !links.length) return;
+    const row = document.createElement('div');
+    row.className = 'fyi-chat-chips';
+    for (const v of links) {
+      const a = document.createElement('a');
+      a.className = 'fyi-chat-chip';
+      a.href = v.url;
+      a.target = '_blank';
+      a.rel = 'noopener';
+      a.innerHTML = esc(v.name) + ' <small>on Google</small>';
+      row.appendChild(a);
+    }
+    msgs.appendChild(row);
+    msgs.scrollTop = msgs.scrollHeight;
+  }
+  function toggle(open) {
+    panel.classList.toggle('open', open);
+    btn.setAttribute('aria-expanded', String(open));
+    if (open) {
+      if (!opened) {
+        opened = true;
+        addMsg('bot', 'Hi, I answer from the 407 FYI guide: date nights, coffee, family spots, neighborhoods, whatever you are after. We are in soft opening, so you get eight questions a day: make them thorough ones, with the neighborhood, the occasion, and the mood in a single ask, and you will get a fuller answer. One more limit: the guide does not list hours, so for hours or a phone number I will point you to the place on Google. What are you looking for?');
+        track('chat_open');
+      }
+      setTimeout(() => input.focus(), 60);
+    }
+  }
+  btn.addEventListener('click', () => toggle(!panel.classList.contains('open')));
+  document.getElementById('fyiChatClose').addEventListener('click', () => toggle(false));
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && panel.classList.contains('open')) toggle(false); });
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const q = input.value.trim();
+    if (!q || busy) return;
+    busy = true; send.disabled = true; input.value = '';
+    addMsg('user', q);
+    history.push({ role: 'user', text: q });
+    const thinking = addMsg('bot thinking', 'Looking through the guide...');
+    try {
+      const ctrl = new AbortController();
+      const timer = setTimeout(() => ctrl.abort(), 30000);
+      const r = await fetch(FN, {
+        method: 'POST',
+        headers: { 'Authorization': 'Bearer ' + KEY, 'apikey': KEY, 'Content-Type': 'application/json' },
+        body: JSON.stringify({ question: q, history: history.slice(0, -1).slice(-6), visitor }),
+        signal: ctrl.signal,
+      });
+      clearTimeout(timer);
+      const data = await r.json();
+      thinking.remove();
+      if (!r.ok || !data.answer) throw new Error('bad response');
+      if (data.notice && !noticeShown) {
+        noticeShown = true;
+        const n = document.createElement('div');
+        n.className = 'fyi-chat-note';
+        n.textContent = data.notice;
+        msgs.appendChild(n);
+      }
+      addMsg('bot', data.answer);
+      addChips(data.venues);
+      addGoogleChips(data.google);
+      history.push({ role: 'assistant', text: data.answer });
+      track('chat_question');
+    } catch (err) {
+      thinking.remove();
+      addMsg('bot', 'Something went wrong on my end. The finder on this page can still help, or try me again in a moment.');
+    }
+    busy = false; send.disabled = false; input.focus();
+  });
+})();
+</script>
+
+  </body>
+</html>
