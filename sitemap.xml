@@ -274,6 +274,66 @@
     <priority>0.8</priority>
   </url>
 <url>
+    <loc>https://407.fyi/history/winter-park.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+<url>
+    <loc>https://407.fyi/history/downtown.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+<url>
+    <loc>https://407.fyi/history/mills-50.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+<url>
+    <loc>https://407.fyi/history/milk-district.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+<url>
+    <loc>https://407.fyi/history/thornton-park.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+<url>
+    <loc>https://407.fyi/history/ivanhoe-village.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+<url>
+    <loc>https://407.fyi/history/disney-springs.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+<url>
+    <loc>https://407.fyi/history/i-drive.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+<url>
+    <loc>https://407.fyi/history/universal.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+<url>
+    <loc>https://407.fyi/history/college-park.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+<url>
+    <loc>https://407.fyi/history/audubon-park.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+<url>
+    <loc>https://407.fyi/history/lake-nona.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+<url>
     <loc>https://407.fyi/history.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
