@@ -1657,11 +1657,11 @@ function render(){
     return pins.slice(0,8);
   }
   function clearFiltersKeepVibe(){
+    const had=state.zone!=='all'||state.category!=='all'||state.occasion!=='all'||state.daypart!=='all'||state.price!=='all'||state.collection!=='all'||state.district!=='all'||!!state.localGuide;
     state.zone='all';state.category='all';state.occasion='all';state.daypart='all';state.price='all';state.collection='all';state.district='all';state.localGuide=null;state.open=null;
     const z=$('#zone'),o=$('#occasion'),dp=$('#daypart'),pr=$('#price');
     if(z)z.value='all';if(o)o.value='all';if(dp)dp.value='all';if(pr)pr.value='all';
-    render();
-    if(state.vibe)vibeStatus.textContent='Closest matches first. Showing all '+state.vibe.ids.length+' matches.';
+    return had;
   }
   function clearVibeResults(){vibeSeq++;if(vibeCtrl){vibeCtrl.abort();vibeCtrl=null}state.vibe=null;vibeChip.hidden=true;vibeStatus.textContent='';render()}
   function setVibeMode(on){
@@ -1693,17 +1693,12 @@ function render(){
       const pinIds=vibeIntentPins(q);
       const ids=[...pinIds,...rankedIds.filter(id=>!pinIds.includes(id))].slice(0,24);
       if(!ids.length){state.vibe=null;vibeChip.hidden=true;vibeStatus.textContent='No strong matches for that vibe. Try different words, or switch back to Places.';render();searchInput.dispatchEvent(new Event('input',{bubbles:true}));return}
+      const hadFilters=clearFiltersKeepVibe();
       state.vibe={q:q,ids:ids};state.open=null;
       vibeChipText.textContent='\u201C'+q+'\u201D';vibeChip.hidden=false;
       captureEvent('search',{query:q,results:filtered().length,mode:'vibe'});
       render();
-      const shownCount=filtered().length;
-      if(shownCount<ids.length){
-        vibeStatus.innerHTML='Closest matches first. Only '+shownCount+' of '+ids.length+' matches are showing because your filters are on. <button type="button" id="vibeShowAll" class="vibe-showall">Show all '+ids.length+'</button>';
-        const sab=$('#vibeShowAll');if(sab)sab.addEventListener('click',clearFiltersKeepVibe);
-      }else{
-        vibeStatus.textContent='Closest matches first. Your filters still apply on top.';
-      }
+      vibeStatus.textContent=hadFilters?'Closest matches first. Your filters were cleared for this search.':'Closest matches first.';
       searchInput.dispatchEvent(new Event('input',{bubbles:true}));
     }catch(e){
       if(mySeq!==vibeSeq)return;
