@@ -522,6 +522,18 @@
 @media (min-width:760px){.rn-grid{grid-template-columns:repeat(3,1fr)}}
 .rn-grid .pick-card{text-decoration:none}
 .rn-loading{grid-column:1/-1;color:var(--muted);font-size:.88rem}
+/* Skeleton loading cards for the Right Now grid, sized to the measured loaded
+   pick-cards (see white-atlas-build/skeleton-audit/): the shell reuses
+   .pick-card geometry exactly, bars stand in for its text lines. */
+.skel-sr{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+.skel-card{pointer-events:none}
+.skel-bar{display:block;border-radius:6px;background:color-mix(in srgb,var(--ink) 13%,transparent);animation:skel-pulse 1.6s ease-in-out infinite alternate}
+.skel-card .skel-k{width:36%;height:10px}
+.skel-card .skel-n{width:68%;height:15px}
+.skel-card .skel-m{width:54%;height:10px}
+.skel-card .skel-g{width:27%;height:10px;margin-top:auto}
+@keyframes skel-pulse{from{opacity:.45}to{opacity:.9}}
+@media(prefers-reduced-motion:reduce){.skel-bar{animation:none;opacity:.65}}
 .rn-controls{margin-top:16px;display:grid;gap:8px;justify-items:start}
 .rn-dist{font-weight:700;color:var(--accent-ink)}
 .picks-note{margin:10px 2px 0;color:var(--muted);font-size:.78rem}
@@ -594,7 +606,7 @@ html[data-theme="dark"] .export-trigger:hover,html[data-theme="dark"] .export-tr
       <div class="layer-head">
         <div><h2 id="rnTitle">Right Now</h2><p id="rnSub">Places that fit this part of the day.</p></div>
       </div>
-      <div class="rn-grid" id="rnGrid"><p class="rn-loading">Loading the guide…</p></div>
+      <div class="rn-grid" id="rnGrid"><span class="skel-sr" role="status">Loading the guide…</span><div class="pick-card skel-card" aria-hidden="true"><span class="skel-bar skel-k"></span><span class="skel-bar skel-n"></span><span class="skel-bar skel-m"></span><span class="skel-bar skel-g"></span></div><div class="pick-card skel-card" aria-hidden="true"><span class="skel-bar skel-k"></span><span class="skel-bar skel-n"></span><span class="skel-bar skel-m"></span><span class="skel-bar skel-g"></span></div><div class="pick-card skel-card" aria-hidden="true"><span class="skel-bar skel-k"></span><span class="skel-bar skel-n"></span><span class="skel-bar skel-m"></span><span class="skel-bar skel-g"></span></div><div class="pick-card skel-card" aria-hidden="true"><span class="skel-bar skel-k"></span><span class="skel-bar skel-n"></span><span class="skel-bar skel-m"></span><span class="skel-bar skel-g"></span></div><div class="pick-card skel-card" aria-hidden="true"><span class="skel-bar skel-k"></span><span class="skel-bar skel-n"></span><span class="skel-bar skel-m"></span><span class="skel-bar skel-g"></span></div><div class="pick-card skel-card" aria-hidden="true"><span class="skel-bar skel-k"></span><span class="skel-bar skel-n"></span><span class="skel-bar skel-m"></span><span class="skel-bar skel-g"></span></div></div>
       <div class="rn-controls">
         <button class="location-btn" id="rnNear" type="button" aria-pressed="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="3"></circle><path d="M12 2v3M12 19v3M2 12h3M19 12h3"></path><circle cx="12" cy="12" r="8"></circle></svg><span class="nearest-copy"><span class="nearest-title">Nearest to me</span><span class="nearest-detail">Tap once to sort these by distance</span></span><span class="nearest-action">Find</span></button>
         <span class="location-status" id="rnStatus" role="status">Fits are picked from the guide's own notes on each place, never from opening hours, which this guide doesn't track. Location is requested only when you tap.</span>
