@@ -138,6 +138,7 @@ body.flashbacks-page .flashbacks-head{border-top:1px solid var(--line)}
 #vibeClear{margin-left:auto;flex:0 0 auto;border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:8px;min-height:38px;padding:5px 14px;font:inherit;font-size:.78rem;font-weight:800;cursor:pointer}
 .vibe-status{display:block;margin-top:6px;font-size:.8rem;color:var(--muted);line-height:1.35}
 .vibe-status:empty{display:none}
+.vibe-showall{background:none;border:0;padding:0;font:inherit;color:var(--accent);text-decoration:underline;cursor:pointer}
 #clearSearch{position:absolute;right:5px;top:7px;width:44px;height:44px;border:0;background:transparent;color:var(--muted);font-size:1.25rem;display:none}
 .list-shortcuts{display:grid;grid-template-columns:1fr;gap:8px;margin-top:10px}
 .list-shortcut{min-height:46px;display:flex;align-items:center;justify-content:space-between;gap:10px;padding:9px 12px;border:1px solid var(--line);border-radius:5px;background:var(--surface);color:var(--accent-ink);font-size:.78rem;font-weight:800;text-align:left}
@@ -1568,12 +1569,99 @@ function render(){
         (p.tags||[]).forEach(t=>{(String(t).toLowerCase().match(/[a-z0-9]+/g)||[]).forEach(w=>hay.add(w))});
         ((p.category||'').toLowerCase().match(/[a-z0-9]+/g)||[]).forEach(w=>hay.add(w));
         ((p.categoryDetail||'').toLowerCase().match(/[a-z0-9]+/g)||[]).forEach(w=>hay.add(w));
-        let th=0;toks.forEach(t=>{if(hay.has(t))th++});
+        let th=0;toks.forEach(t=>{for(const w of hay){if(w===t||(t.length>=3&&(w.startsWith(t)||t.startsWith(w)))){th++;break}}});
         let oh=0;(p.occasions||[]).forEach(o=>{if(toks.has(o))oh++});
         s+=0.04*th+0.03*oh;
       }
       return {id:r.id,score:s};
     }).sort((a,b)=>(b.score-a.score)||(a.id<b.id?1:-1));
+  }
+  // Deterministic intent pins for vibe search (the same pattern as the
+  // guide chatbot's area scan): when the phrase names a kind of place and
+  // an area, the guide's own category and district data outrank embedding
+  // similarity, so "beer downtown" leads with downtown beer spots instead
+  // of whatever the semantic tail drags in.
+  const VIBE_CAT_GROUPS=[
+    {label:'beer',q:/\b(beer|brewery|breweries|brewpub|taproom|ale|ipa|lager)\b/,terms:['beer','brew','taproom'],cats:['Breweries'],weak:false},
+    {label:'pizza',q:/\b(pizza|pizzeria)\b/,terms:['pizza','pizzeria']},
+    {label:'sushi',q:/\b(sushi|omakase)\b/,terms:['sushi','omakase']},
+    {label:'ramen and noodles',q:/\b(ramen|noodles?|pho)\b/,terms:['ramen','noodle','pho']},
+    {label:'tacos and Mexican',q:/\b(tacos?|mexican|burritos?|taqueria)\b/,terms:['taco','mexican','taqueria']},
+    {label:'burgers',q:/\bburgers?\b/,terms:['burger']},
+    {label:'coffee',q:/\b(coffee|espresso|cafe)\b/,terms:['coffee','espresso'],cats:['Coffee & cafes'],weak:false},
+    {label:'ice cream and dessert',q:/\b(ice cream|gelato|desserts?|sweets|frozen yogurt)\b/,terms:['ice cream','gelato','dessert','sweets'],cats:['Sweets']},
+    {label:'steakhouse',q:/\b(steaks?|steakhouse|chophouse)\b/,terms:['steak','chophouse']},
+    {label:'Italian',q:/\b(italian|pasta)\b/,terms:['italian']},
+    {label:'breakfast and brunch',q:/\b(breakfast|brunch|pancakes?)\b/,terms:['breakfast','brunch']},
+    {label:'barbecue',q:/\b(bbq|barbecue|barbeque|brisket)\b/,terms:['bbq','barbecue','smokehouse']},
+    {label:'seafood',q:/\b(seafood|oysters?|crab|lobster)\b/,terms:['seafood']},
+    {label:'bakery and donuts',q:/\b(bakery|donuts?|doughnuts?|bagels?)\b/,terms:['bakery','donut','doughnut','bagel']}
+  ];
+  const VIBE_AREA_ALIASES=[
+    {q:/\b(disney|magic kingdom|epcot|hollywood studios|animal kingdom|lake buena vista|flamingo crossings)\b/,ids:['disney-area','disney-springs']},
+    {q:/\bcelebration\b/,ids:[],labels:['Celebration'],labelScope:['disney-area','kissimmee']},
+    {q:/\b(universal|citywalk|islands of adventure|epic universe)\b/,ids:['universal']},
+    {q:/\b(i-drive|international drive|icon park|pointe orlando|seaworld|sea world|sand lake|dr\.? phillips|millenia)\b/,ids:['i-drive'],labels:['Sand Lake','Dr Phillips','Dr. Phillips','Dellagio','Millenia','Mall at Millenia','ICON Park','Pointe Orlando','SeaWorld Orlando']},
+    {q:/\bwinter park\b/,ids:['winter-park']},
+    {q:/\bdowntown\b/,ids:['downtown','thornton-park']},
+    {q:/\bmills 50\b/,ids:['mills-50']},
+    {q:/\bmilk district\b/,ids:['milk-district']},
+    {q:/\blake nona\b/,ids:['lake-nona']},
+    {q:/\b(kissimmee|192)\b/,ids:['kissimmee']},
+    {q:/\b(airport|mco|orlando international)\b/,ids:[],labels:['Airport Corridor','Lee Vista']},
+    {q:/\b(ucf|university of central florida)\b/,ids:['ucf']},
+    {q:/\bsanford\b/,ids:['sanford']},
+    {q:/\bwinter garden\b/,ids:['winter-garden']},
+    {q:/\bcollege park\b/,ids:['college-park']},
+    {q:/\bivanhoe\b/,ids:['ivanhoe-village']},
+    {q:/\baudubon\b/,ids:['audubon-park']},
+    {q:/\bbaldwin park\b/,ids:['baldwin-park']},
+    {q:/\bmaitland\b/,ids:['maitland']},
+    {q:/\boviedo\b/,ids:['oviedo']},
+    {q:/\bsodo\b/,ids:['sodo']},
+    {q:/\bcurry ford\b/,ids:['hourglass']}
+  ];
+  const VIBE_NONFOOD=['Attractions','Hotels','Museums & landmarks','Parks & outdoors','Nightlife & music'];
+  function vibeTermHit(tokens,term){
+    if(term.includes(' '))return tokens.join(' ').includes(term);
+    for(const w of tokens){if(w===term||w.startsWith(term)||term.startsWith(w))return true}
+    return false;
+  }
+  function vibeCatStrength(p,g){
+    const head=((p.name||'')+' '+(p.category||'')+' '+(p.categoryDetail||'')+' '+((p.tags||[]).join(' '))).toLowerCase().match(/[a-z0-9]+/g)||[];
+    if((g.cats&&g.cats.includes(p.category))||g.terms.some(t=>vibeTermHit(head,t)))return 2;
+    if(g.weak===false||VIBE_NONFOOD.includes(p.category))return 0;
+    const desc=((p.description||'').toLowerCase().match(/[a-z0-9]+/g)||[]);
+    return g.terms.some(t=>vibeTermHit(desc,t))?1:0;
+  }
+  function vibeInArea(p,a){return a.ids.includes(p.district_id)||(a.labels&&a.labels.includes(p.district)&&(!a.labelScope||a.labelScope.includes(p.district_id)))}
+  function vibeIntentPins(q){
+    const text=q.toLowerCase();
+    const areas=VIBE_AREA_ALIASES.filter(a=>a.q.test(text));
+    const cats=VIBE_CAT_GROUPS.filter(g=>g.q.test(text));
+    if(!cats.length)return [];
+    const pins=[];
+    const push=(p)=>{if(!pins.includes(p.id))pins.push(p.id)};
+    for(const g of cats.slice(0,2)){
+      const scored=PLACES.map(p=>({p,s:vibeCatStrength(p,g)})).filter(x=>x.s>0);
+      let placed=false;
+      for(const a of areas.slice(0,2)){
+        const inStrong=scored.filter(x=>x.s===2&&vibeInArea(x.p,a)).map(x=>x.p);
+        const inWeak=scored.filter(x=>x.s===1&&vibeInArea(x.p,a)).map(x=>x.p);
+        inStrong.slice(0,6).forEach(push);
+        if(inStrong.length&&inStrong.length<=2)inWeak.slice(0,4-inStrong.length).forEach(push);
+        if(inStrong.length||inWeak.length)placed=true;
+      }
+      if(!placed)scored.filter(x=>x.s===2).slice(0,6).forEach(push);
+    }
+    return pins.slice(0,8);
+  }
+  function clearFiltersKeepVibe(){
+    state.zone='all';state.category='all';state.occasion='all';state.daypart='all';state.price='all';state.collection='all';state.district='all';state.localGuide=null;state.open=null;
+    const z=$('#zone'),o=$('#occasion'),dp=$('#daypart'),pr=$('#price');
+    if(z)z.value='all';if(o)o.value='all';if(dp)dp.value='all';if(pr)pr.value='all';
+    render();
+    if(state.vibe)vibeStatus.textContent='Closest matches first. Showing all '+state.vibe.ids.length+' matches.';
   }
   function clearVibeResults(){vibeSeq++;if(vibeCtrl){vibeCtrl.abort();vibeCtrl=null}state.vibe=null;vibeChip.hidden=true;vibeStatus.textContent='';render()}
   function setVibeMode(on){
@@ -1601,13 +1689,21 @@ function render(){
       if(!r.ok)throw new Error('vibe '+r.status);
       const d=await r.json();
       if(mySeq!==vibeSeq)return;
-      const ids=rerankVibe(q,(d.results||[])).map(x=>x.id);
+      const rankedIds=rerankVibe(q,(d.results||[])).map(x=>x.id);
+      const pinIds=vibeIntentPins(q);
+      const ids=[...pinIds,...rankedIds.filter(id=>!pinIds.includes(id))].slice(0,24);
       if(!ids.length){state.vibe=null;vibeChip.hidden=true;vibeStatus.textContent='No strong matches for that vibe. Try different words, or switch back to Places.';render();searchInput.dispatchEvent(new Event('input',{bubbles:true}));return}
       state.vibe={q:q,ids:ids};state.open=null;
       vibeChipText.textContent='\u201C'+q+'\u201D';vibeChip.hidden=false;
-      vibeStatus.textContent='Closest matches first. Your filters still apply on top.';
       captureEvent('search',{query:q,results:filtered().length,mode:'vibe'});
       render();
+      const shownCount=filtered().length;
+      if(shownCount<ids.length){
+        vibeStatus.innerHTML='Closest matches first. Only '+shownCount+' of '+ids.length+' matches are showing because your filters are on. <button type="button" id="vibeShowAll" class="vibe-showall">Show all '+ids.length+'</button>';
+        const sab=$('#vibeShowAll');if(sab)sab.addEventListener('click',clearFiltersKeepVibe);
+      }else{
+        vibeStatus.textContent='Closest matches first. Your filters still apply on top.';
+      }
       searchInput.dispatchEvent(new Event('input',{bubbles:true}));
     }catch(e){
       if(mySeq!==vibeSeq)return;
