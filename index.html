@@ -631,6 +631,7 @@ html[data-theme="dark"] .export-trigger:hover,html[data-theme="dark"] .export-tr
     .near-full{display:block;margin-top:14px;text-align:center;color:var(--accent-ink);font-weight:800;font-size:.85rem;text-underline-offset:3px}
     @media (prefers-reduced-motion: reduce){.near-window,.near-modal-backdrop,.near-row,.near-window .location-btn{animation:none}}
   </style>
+<style>.district-index-note{margin:14px 0 0;color:var(--muted);font-size:.9rem}.district-index-note a{color:var(--accent-ink);font-weight:700}</style>
 </head>
 <body>
 <a class="skip-link" href="#districts">Skip to district stories</a>
@@ -717,7 +718,7 @@ html[data-theme="dark"] .export-trigger:hover,html[data-theme="dark"] .export-tr
       <div class="layer-head">
         <div><h2 id="districtsTitle">Districts</h2><p>Every district and area in the guide. Where a district has a story, its link opens the story; the rest open their guide page, every place on it.</p></div>
       </div>
-      <div class="district-index"><div class="di-group"><h3>Downtown and its neighborhoods</h3><ul><li><a href="/history/downtown.html">Downtown Orlando</a></li><li><a href="/history/thornton-park.html">Thornton Park</a></li><li><a href="/history/mills-50.html">Mills 50</a></li><li><a href="/history/milk-district.html">Milk District</a></li><li><a href="/history/ivanhoe-village.html">Ivanhoe Village</a></li><li><a href="/history/college-park.html">College Park</a></li><li><a href="/history/audubon-park.html">Audubon Park</a></li><li><a href="/hourglass-finder.html">Hourglass</a></li><li><a href="/sodo-finder.html">SoDo</a></li></ul></div><div class="di-group"><h3>Winter Park and the north side</h3><ul><li><a href="/history/winter-park.html">Winter Park</a></li><li><a href="/baldwin-park-finder.html">Baldwin Park</a></li><li><a href="/maitland-finder.html">Maitland</a></li><li><a href="/oviedo-finder.html">Oviedo</a></li><li><a href="/sanford-finder.html">Sanford</a></li></ul></div><div class="di-group"><h3>The visitor corridors</h3><ul><li><a href="/history/i-drive.html">International Drive</a></li><li><a href="/history/universal.html">Universal</a></li><li><a href="/history/disney-springs.html">Disney Springs</a></li><li><a href="/disney-area-finder.html">Disney Area</a></li><li><a href="/kissimmee-finder.html">Kissimmee</a></li><li><a href="/history/lake-nona.html">Lake Nona</a></li></ul></div><div class="di-group"><h3>East, west, and beyond</h3><ul><li><a href="/ucf-finder.html">UCF</a></li><li><a href="/winter-garden-finder.html">Winter Garden</a></li><li><a href="/more-orlando-finder.html">More Orlando</a></li></ul></div></div>
+      <div class="district-index"><div class="di-group"><h3>Downtown and its neighborhoods</h3><ul><li><a href="/history/downtown.html">Downtown Orlando</a></li><li><a href="/history/thornton-park.html">Thornton Park</a></li><li><a href="/history/mills-50.html">Mills 50</a></li><li><a href="/history/milk-district.html">Milk District</a></li><li><a href="/history/ivanhoe-village.html">Ivanhoe Village</a></li><li><a href="/history/college-park.html">College Park</a></li><li><a href="/history/audubon-park.html">Audubon Park</a></li><li><a href="/hourglass-finder.html">Hourglass</a></li><li><a href="/sodo-finder.html">SoDo</a></li></ul></div><div class="di-group"><h3>Winter Park and the north side</h3><ul><li><a href="/history/winter-park.html">Winter Park</a></li><li><a href="/baldwin-park-finder.html">Baldwin Park</a></li><li><a href="/maitland-finder.html">Maitland</a></li><li><a href="/oviedo-finder.html">Oviedo</a></li><li><a href="/sanford-finder.html">Sanford</a></li></ul></div><div class="di-group"><h3>The visitor corridors</h3><ul><li><a href="/history/i-drive.html">International Drive</a></li><li><a href="/history/universal.html">Universal</a></li><li><a href="/history/disney-springs.html">Disney Springs</a></li><li><a href="/disney-area-finder.html">Disney Area</a></li><li><a href="/kissimmee-finder.html">Kissimmee</a></li><li><a href="/history/lake-nona.html">Lake Nona</a></li></ul></div><div class="di-group"><h3>East, west, and beyond</h3><ul><li><a href="/ucf-finder.html">UCF</a></li><li><a href="/winter-garden-finder.html">Winter Garden</a></li></ul></div></div><p class="district-index-note">Plus the rest of the metro, grouped by their own names: <a href="/more-orlando-finder.html">Other Orlando Areas</a>.</p>
     </section>
     
 
@@ -908,7 +909,7 @@ document.addEventListener('click',e=>{
   }
 });
 /* load */
-fetch('places.json?v=20261019p2').then(r=>{if(!r.ok)throw new Error('places.json HTTP '+r.status);return r.json()}).then(d=>{
+fetch('places.json?v=20261019p3').then(r=>{if(!r.ok)throw new Error('places.json HTTP '+r.status);return r.json()}).then(d=>{
   PLACES=d.places||[];
   const vc=$('#venueCount');if(vc)vc.textContent=PLACES.length;
   renderPicks();renderRightNow();
@@ -1138,7 +1139,7 @@ fetch('places.json?v=20261019p2').then(r=>{if(!r.ok)throw new Error('places.json
   }
   function load(){
     if(places) { render(); return; }
-    fetch('places.json?v=20261019p2').then(function(r){ return r.json(); }).then(function(d){ places = (d && d.places) ? d.places : d; render(); })
+    fetch('places.json?v=20261019p3').then(function(r){ return r.json(); }).then(function(d){ places = (d && d.places) ? d.places : d; render(); })
     .catch(function(){ listEl.innerHTML = '<p class="location-status">The guide could not load here. <a href="/nearest.html">Open the full page</a> instead.</p>'; });
   }
   function open(){ lastFocus = document.activeElement; modal.hidden = false; document.body.style.overflow = 'hidden'; load(); setTimeout(function(){ btn.focus(); }, 60); }
