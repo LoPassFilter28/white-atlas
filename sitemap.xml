@@ -177,14 +177,34 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://407.fyi/longwood-finder.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://407.fyi/universal-finder.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://407.fyi/windermere-finder.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://407.fyi/altamonte-springs-finder.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://407.fyi/audubon-park-finder.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://407.fyi/avalon-waterford-finder.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://407.fyi/college-park-finder.html</loc>
@@ -215,6 +235,11 @@
     <loc>https://407.fyi/baldwin-park-finder.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://407.fyi/casselberry-finder.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://407.fyi/winter-garden-finder.html</loc>
@@ -354,6 +379,11 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://407.fyi/south-orlando-finder.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://407.fyi/privacy.html</loc>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
@@ -484,6 +514,11 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://407.fyi/venue/cheese-to-share.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://407.fyi/venue/chef-mickeys.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -560,6 +595,11 @@
   </url>
   <url>
     <loc>https://407.fyi/venue/francescos.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://407.fyi/venue/fresco-pizzeria.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -994,6 +1034,11 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://407.fyi/venue/vespr-coffeebar.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://407.fyi/venue/tori-tori.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -1060,6 +1105,16 @@
   </url>
   <url>
     <loc>https://407.fyi/venue/wills-pub.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://407.fyi/venue/windermere-brewing-company.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://407.fyi/venue/windermere-farmers-market.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -1154,11 +1209,6 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://407.fyi/venue/eggdose.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://407.fyi/venue/cfs-coffee.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -1184,6 +1234,11 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://407.fyi/venue/bowigens-beer-company.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://407.fyi/venue/pannullos-italian.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -1200,6 +1255,11 @@
   </url>
   <url>
     <loc>https://407.fyi/venue/the-alfond-inn.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://407.fyi/venue/the-bakery-colombian-cafe.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -1614,11 +1674,6 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://407.fyi/venue/maitland-chocolate-factory.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://407.fyi/venue/metro-diner.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -1850,6 +1905,11 @@
   </url>
   <url>
     <loc>https://407.fyi/venue/kelly-s-homemade-ice-cream.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://407.fyi/venue/kelly-s-homemade-ice-cream-windermere.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -2249,6 +2309,11 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://407.fyi/venue/bella-tuscany.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://407.fyi/venue/domu-chibi-ramen.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -2314,6 +2379,11 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://407.fyi/venue/super-recipes-cafe.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://407.fyi/venue/tactical-brewing-company.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -2330,6 +2400,11 @@
   </url>
   <url>
     <loc>https://407.fyi/venue/tikka-shack-indian-grub.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://407.fyi/venue/tims-wine-market.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -2520,6 +2595,11 @@
   </url>
   <url>
     <loc>https://407.fyi/venue/cafe-34-istanbul.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://407.fyi/venue/cafe-coqui.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -3154,6 +3234,11 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://407.fyi/venue/dixie-cream-cafe.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://407.fyi/venue/saigon-flavors.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -3195,6 +3280,11 @@
   </url>
   <url>
     <loc>https://407.fyi/venue/ivanhoe-village-food-tour.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://407.fyi/venue/jacobs-cafe-restaurant.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -3245,6 +3335,11 @@
   </url>
   <url>
     <loc>https://407.fyi/venue/the-hampton-social-pointe-orlando.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://407.fyi/venue/the-humble-crumb.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -3300,6 +3395,11 @@
   </url>
   <url>
     <loc>https://407.fyi/venue/norman-s-orlando.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://407.fyi/venue/nunos-cafe.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>

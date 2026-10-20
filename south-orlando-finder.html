@@ -1,0 +1,762 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="color-scheme" content="light dark" />
+    <title>South Orlando Finder &middot; 407 FYI</title>
+    <meta name="description" content="South Orlando is the working half of the map: the Orange Blossom Trail&#x27;s dining rooms, the Florida Mall&#x27;s orbit, Conway&#x27;s neighborhood joints and the airport corridor&#x27;s kitchens. The full South Orlando list with full cards, addresses, descriptions and directions, on 407 FYI." />
+    <link rel="canonical" href="https://407.fyi/south-orlando-finder.html" />
+    <meta property="og:title" content="South Orlando Finder &middot; 407 FYI" />
+    <meta property="og:description" content="South Orlando is the working half of the map: the Orange Blossom Trail&#x27;s dining rooms, the Florida Mall&#x27;s orbit, Conway&#x27;s neighborhood joints and the airport corridor&#x27;s kitchens. The full South Orlando list with full cards, addresses, descriptions and directions, on 407 FYI." />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://407.fyi/south-orlando-finder.html" />
+    <meta property="og:image" content="https://407.fyi/og-image.png" />
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"407 FYI","item":"https://407.fyi/"},{"@type":"ListItem","position":2,"name":"South Orlando","item":"https://407.fyi/south-orlando-finder.html"}]}</script>
+    <link rel="preload" href="/fonts/manrope-latin.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="/fonts/fonts.css" />
+<script>
+      try {
+        const savedTheme = localStorage.getItem('white-atlas-theme');
+        document.documentElement.dataset.theme = savedTheme === 'light' || savedTheme === 'dark' ? savedTheme : 'dark';
+      } catch (error) {
+        document.documentElement.dataset.theme = 'dark';
+      }
+    </script>
+    <style>
+      /* Night Drive tokens (from the district guides) */
+      :root {
+        color-scheme: dark;
+        --bg: #0a1811; --surface: #122419; --soft: #172a1f; --ink: #f0e8d5;
+        --muted: #c6bba2; --line: #2f4a38; --accent: #765b2f; --accent-ink: #d4b573;
+        --headline: #f6edd6; --focus: #d4b573;
+        --d-a: #14231a; --d-b: #3a5a35; --d-c: #bd9049;
+        --pad: clamp(20px, 5vw, 40px);
+      }
+      * { box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
+      body {
+        margin: 0; background: var(--bg); color: var(--ink);
+        font-family: "Manrope", system-ui, sans-serif; line-height: 1.6;
+        overflow-x: hidden;
+      }
+      h1, h2, h3, .display { font-family: "Urbanist", "Manrope", sans-serif; }
+      a { color: var(--accent-ink); }
+      a:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
+      .kicker {
+        font-family: "Urbanist", sans-serif; font-weight: 700; letter-spacing: .22em;
+        font-size: .72rem; text-transform: uppercase; color: var(--accent-ink); margin: 0 0 14px;
+      }
+
+      /* ---------- hero ---------- */
+      .hero {
+        position: relative; padding: clamp(64px, 13vh, 130px) var(--pad) clamp(48px, 9vh, 84px);
+        background: radial-gradient(ellipse 90% 55% at 50% 112%, rgba(189,144,73,.26), transparent 60%),
+          linear-gradient(168deg, #1d3325, #14231a 55%, #0a1811);
+        border-bottom: 1px solid var(--line);
+      }
+      .hero-in { max-width: 860px; margin: 0 auto; }
+      .crumbs { font-size: .8rem; color: var(--muted); margin: 0 0 26px; }
+      .crumbs a { font-weight: 700; }
+      .hero-brand {
+        font-family: "Urbanist", sans-serif; font-weight: 700; letter-spacing: .22em;
+        font-size: .72rem; text-transform: uppercase; color: var(--accent-ink); text-decoration: none;
+      }
+      .hero h1 {
+        font-size: clamp(2.6rem, 8.5vw, 5.2rem); line-height: .98; letter-spacing: .01em;
+        color: var(--headline); margin: 18px 0 16px; text-transform: uppercase;
+      }
+      .hero .sub { font-size: clamp(1.05rem, 2.6vw, 1.3rem); color: var(--ink); max-width: 620px; margin: 0 0 10px; }
+      .hero .fine { color: var(--muted); max-width: 620px; margin: 0; }
+      .anchor-nav { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 30px; }
+      .anchor-nav a {
+        border: 1px solid var(--line); border-radius: 999px; padding: 8px 14px;
+        font-size: .82rem; font-weight: 700; text-decoration: none; background: rgba(255,255,255,.03);
+        min-height: 42px; display: inline-flex; align-items: center;
+      }
+      .anchor-nav a:hover { border-color: var(--accent-ink); }
+
+      /* ---------- sections ---------- */
+      main { display: block; }
+      .sec { max-width: 860px; margin: 0 auto; padding: clamp(52px, 9vh, 88px) var(--pad) 0; }
+      .sec h2 { font-size: clamp(1.7rem, 4.6vw, 2.4rem); line-height: 1.12; color: var(--headline); margin: 0 0 16px; }
+      .sec .lede { color: var(--muted); font-size: 1.04rem; max-width: 640px; margin: 0 0 26px; }
+      .sec p { max-width: 68ch; }
+      .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 14px; margin: 22px 0 6px; }
+      .card {
+        background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 20px;
+      }
+      .card h3 { margin: 0 0 6px; font-size: 1.12rem; color: var(--headline); }
+      .card .addr { font-weight: 800; color: var(--accent-ink); margin: 0 0 10px; font-size: .98rem; }
+      .card p { margin: 0; color: var(--muted); font-size: .94rem; }
+      .cols { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 22px 0 6px; }
+      @media (max-width: 680px) { .cols { grid-template-columns: 1fr; } }
+      .panel { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 20px 22px; }
+      .panel h3 { margin: 0 0 12px; font-size: 1.05rem; color: var(--headline); }
+      .panel ul, .plain-list { margin: 0; padding-left: 18px; }
+      .panel li, .plain-list li { margin-bottom: 9px; }
+      .panel li:last-child, .plain-list li:last-child { margin-bottom: 0; }
+      .note {
+        border-left: 3px solid var(--accent-ink); background: var(--soft);
+        padding: 14px 18px; border-radius: 0 12px 12px 0; margin: 22px 0 6px; max-width: 68ch;
+      }
+      .note p { margin: 0; }
+      .venue-links { list-style: none; margin: 0; padding: 0; }
+      .venue-links li { margin-bottom: 10px; }
+      .venue-links a { font-weight: 800; text-underline-offset: 3px; }
+      .venue-links span { color: var(--muted); }
+
+      /* ---------- jobs ---------- */
+      .job-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 14px; margin-top: 22px; }
+      .job { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 20px 22px; }
+      .job h3 { margin: 0 0 6px; font-size: 1.08rem; color: var(--headline); }
+      .job p { margin: 0 0 12px; color: var(--muted); font-size: .94rem; }
+      .job ul { list-style: none; margin: 0 0 14px; padding: 0; }
+      .job li { margin-bottom: 7px; }
+      .job li a { font-weight: 800; text-underline-offset: 3px; }
+      .job .browse { font-size: .86rem; font-weight: 800; text-transform: uppercase; letter-spacing: .08em; }
+
+      /* ---------- what to avoid ---------- */
+      .avoid { border-top: 1px solid var(--line); padding: 24px 0 6px; }
+      .avoid h3 { margin: 0 0 10px; font-size: 1.18rem; color: var(--headline); }
+      .avoid p { margin: 0 0 8px; max-width: 68ch; }
+      .avoid strong { color: var(--accent-ink); }
+      .flags { display: flex; flex-wrap: wrap; gap: 8px; margin: 18px 0 6px; }
+      .flags span {
+        border: 1px solid var(--accent); border-radius: 999px; padding: 7px 13px;
+        font-size: .85rem; font-weight: 700; color: var(--accent-ink); background: rgba(255,255,255,.03);
+      }
+      .rules { margin: 16px 0 0; padding-left: 20px; max-width: 68ch; }
+      .rules li { margin-bottom: 10px; }
+
+      .handoff { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 30px; }
+      .btn-big {
+        display: inline-flex; align-items: center; min-height: 52px; padding: 12px 22px;
+        background: var(--accent); color: #fff; font-weight: 800; border-radius: 999px; text-decoration: none;
+      }
+      .btn-big:hover { background: var(--accent-ink); color: #1d2a20; }
+      .btn-ghost {
+        display: inline-flex; align-items: center; min-height: 52px; padding: 12px 22px;
+        border: 1px solid var(--line); color: var(--accent-ink); font-weight: 800; border-radius: 999px; text-decoration: none;
+      }
+
+      footer { border-top: 1px solid var(--line); margin-top: clamp(52px, 9vh, 88px); }
+      .foot-in { max-width: 860px; margin: 0 auto; padding: 34px var(--pad) 44px; color: var(--muted); font-size: .9rem; }
+      .foot-in p { margin: 0 0 9px; }
+      .back-link { font-weight: 800; display: inline-block; margin-bottom: 16px; }
+      .brand-line { color: var(--ink); font-weight: 700; }
+
+      /* ---------- Light theme: app-page tokens ---------- */
+      html[data-theme="light"] {
+        color-scheme: light;
+        --bg: #faf6ec; --surface: #fffdf7; --soft: #f3ecd7; --ink: #1d2a20;
+        --muted: #4c5a45; --line: #ddd3ba; --accent: #8a5f0e; --accent-ink: #7c520c;
+        --headline: #123524; --focus: #8a5f0e;
+      }
+      html[data-theme="light"] .hero {
+        background: radial-gradient(ellipse 90% 55% at 50% 112%, rgba(163,129,63,.30), transparent 60%),
+          linear-gradient(168deg, color-mix(in srgb, var(--d-a) 24%, #faf6ec), color-mix(in srgb, var(--d-a) 40%, #faf6ec) 55%, color-mix(in srgb, var(--d-a) 14%, #faf6ec));
+      }
+      html[data-theme="light"] .anchor-nav a, html[data-theme="light"] .flags span { background: rgba(29,42,32,.04); }
+      html[data-theme="light"] .btn-big { background: var(--accent); color: #fff; }
+      html[data-theme="light"] .btn-big:hover { background: var(--accent-ink); color: #fff; }
+
+      @media print { .anchor-nav { display: none; } }
+      @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+    
+      /* ---------- finder pages (Seam 2 additions) ---------- */
+      .count {
+        font-family: "Urbanist", sans-serif; font-weight: 700; letter-spacing: .14em;
+        font-size: .8rem; text-transform: uppercase; color: var(--accent-ink); margin: 0;
+      }
+      .vlist { display: grid; gap: 14px; margin-top: 22px; }
+      .vcard {
+        background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 20px 22px;
+      }
+      .vcard h3 { margin: 0 0 4px; font-size: 1.15rem; color: var(--headline); }
+      .vcard h3 a { color: var(--headline); text-decoration: none; }
+      .vcard h3 a:hover { color: var(--accent-ink); text-decoration: underline; text-underline-offset: 3px; }
+      .badge {
+        display: inline-block; vertical-align: middle; margin-left: 8px;
+        border: 1px solid var(--accent); border-radius: 999px; padding: 2px 9px;
+        font-family: "Manrope", sans-serif; font-size: .68rem; font-weight: 800;
+        letter-spacing: .08em; text-transform: uppercase; color: var(--accent-ink);
+        background: rgba(255,255,255,.03); white-space: nowrap;
+      }
+      .vcard .meta { margin: 0 0 2px; font-weight: 800; color: var(--accent-ink); font-size: .92rem; }
+      .vcard .addr { margin: 0 0 8px; color: var(--muted); font-size: .9rem; }
+      .vcard .desc { margin: 0 0 10px; max-width: 68ch; }
+      .vcard .dirs { margin: 0; font-size: .88rem; font-weight: 800; }
+      .strip { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 22px; }
+      .strip a {
+        border: 1px solid var(--line); border-radius: 999px; padding: 8px 14px;
+        font-size: .82rem; font-weight: 700; text-decoration: none; background: rgba(255,255,255,.03);
+        min-height: 42px; display: inline-flex; align-items: center;
+      }
+      .strip a:hover { border-color: var(--accent-ink); }
+      .strip a[aria-current="page"] { border-color: var(--accent-ink); color: var(--headline); }
+      html[data-theme="light"] .badge, html[data-theme="light"] .strip a { background: rgba(29,42,32,.04); }
+      /* ---------- Phase 4 additions ---------- */
+      .crumbs [aria-current="page"] { color: var(--ink); font-weight: 700; }
+      .grouphead {
+        font-family: "Urbanist", sans-serif; font-size: 1.35rem; color: var(--headline);
+        margin: 30px 0 0; letter-spacing: .01em;
+      }
+      .vlist .grouphead:first-child { margin-top: 0; }
+      .checked {
+        max-width: 860px; margin: 0 auto; padding: 34px var(--pad) 64px;
+        color: var(--muted); font-size: .85rem;
+      }
+    </style>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"ItemList","name":"407 FYI places: South Orlando","numberOfItems":14,"itemListElement":[{"@type":"ListItem","position":1,"item":{"@type":"LocalBusiness","name":"Amar Orlando","address":{"@type":"PostalAddress","streetAddress":"8001 S Orange Blossom Trl, Ste #1510","addressLocality":"Orlando","addressRegion":"FL","postalCode":"32809","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":28.44597,"longitude":-81.39538},"priceRange":"$$","category":"Mediterranean","url":"https://407.fyi/venue/amar-orlando.html"}},{"@type":"ListItem","position":2,"item":{"@type":"LocalBusiness","name":"Bombay Street Kitchen","address":{"@type":"PostalAddress","streetAddress":"6215 S Orange Blossom Trl, Orlando","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":28.46689,"longitude":-81.39625},"priceRange":"$$","category":"Indian","url":"https://407.fyi/venue/bombay-street.html"}},{"@type":"ListItem","position":3,"item":{"@type":"LocalBusiness","name":"El Cilantrillo","address":{"@type":"PostalAddress","streetAddress":"El Cilantrillo Restaurant, 1301 Florida Mall Ave, Orlando, FL 32809-7731","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":28.44955,"longitude":-81.39691},"priceRange":"$$","category":"Latin & Caribbean","url":"https://407.fyi/venue/el-cilantrillo.html"}},{"@type":"ListItem","position":4,"item":{"@type":"LocalBusiness","name":"Beef Bae","address":{"@type":"PostalAddress","streetAddress":"10249 S John Young Pkwy Ste 109","addressLocality":"Orlando","addressRegion":"FL","postalCode":"32837","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":28.41729,"longitude":-81.42171},"priceRange":"$$","category":"BBQ","url":"https://407.fyi/venue/beef-bae.html"}},{"@type":"ListItem","position":5,"item":{"@type":"LocalBusiness","name":"Caravan Uzbek & Turkish Cuisine","address":{"@type":"PostalAddress","streetAddress":"8015 S Orange Ave","addressLocality":"Orlando","addressRegion":"FL","postalCode":"32809","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":28.45326,"longitude":-81.3639},"priceRange":"$$","category":"Mediterranean","url":"https://407.fyi/venue/caravan-uzbek-turkish-cuisine.html"}},{"@type":"ListItem","position":6,"item":{"@type":"LocalBusiness","name":"El Paraíso Del Marisco","address":{"@type":"PostalAddress","streetAddress":"8421 S Orange Blossom Trl Ste 156","addressLocality":"Orlando","addressRegion":"FL","postalCode":"32809","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":28.44255,"longitude":-81.40108},"priceRange":"$$","category":"Seafood","url":"https://407.fyi/venue/el-para-so-del-marisco.html"}},{"@type":"ListItem","position":7,"item":{"@type":"LocalBusiness","name":"Marlow's Tavern","address":{"@type":"PostalAddress","streetAddress":"6889 Eagle Watch Dr","addressLocality":"Orlando","addressRegion":"FL","postalCode":"32822","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":28.46345,"longitude":-81.30698},"priceRange":"$$","category":"American","url":"https://407.fyi/venue/marlow-s-tavern.html"}},{"@type":"ListItem","position":8,"item":{"@type":"LocalBusiness","name":"Uncle Tony's Backyard BBQ Orlando","address":{"@type":"PostalAddress","streetAddress":"Uncle Tony's Backyard BBQ Orlando, 6807 S Orange Ave, Orlando, FL 32809-6025, United States","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":28.46406,"longitude":-81.36691},"priceRange":"$$","category":"BBQ","url":"https://407.fyi/venue/uncle-tonys-backyard-bbq-orlando.html"}},{"@type":"ListItem","position":9,"item":{"@type":"LocalBusiness","name":"Happy Snapper Seafood Restaurant","address":{"@type":"PostalAddress","streetAddress":"Happy Snapper Seafood Restaurant, 6327 Orange Ave S, Orlando, FL 32809-5109, United States","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":28.46853,"longitude":-81.36743},"priceRange":"$$","category":"Seafood","url":"https://407.fyi/venue/happy-snapper-seafood-restaurant.html"}},{"@type":"ListItem","position":10,"item":{"@type":"LocalBusiness","name":"Orlando Watersports Complex","address":{"@type":"PostalAddress","streetAddress":"8615 Florida Rock Rd","addressLocality":"Orlando","addressRegion":"FL","postalCode":"32824","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":28.44252,"longitude":-81.3713},"priceRange":"$$","category":"Attractions","url":"https://407.fyi/venue/orlando-watersports-complex.html"}},{"@type":"ListItem","position":11,"item":{"@type":"LocalBusiness","name":"Crayola Experience","address":{"@type":"PostalAddress","streetAddress":"8001 S Orange Blossom Trl","addressLocality":"Orlando","addressRegion":"FL","postalCode":"32809","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":28.44495,"longitude":-81.39171},"priceRange":"$$","category":"Attractions","url":"https://407.fyi/venue/crayola-experience-orlando.html"}},{"@type":"ListItem","position":12,"item":{"@type":"LocalBusiness","name":"Sazoncito Latin Food","address":{"@type":"PostalAddress","streetAddress":"4542 S Semoran Blvd","addressLocality":"Orlando","addressRegion":"FL","postalCode":"32822","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":28.49748,"longitude":-81.31201},"priceRange":"$","category":"Latin & Caribbean","url":"https://407.fyi/venue/sazoncito-latin-food.html"}},{"@type":"ListItem","position":13,"item":{"@type":"LocalBusiness","name":"Amazonica","address":{"@type":"PostalAddress","streetAddress":"8001 S Orange Blossom Trl Kiosk TT124","addressLocality":"Orlando","addressRegion":"FL","postalCode":"32809","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":28.44597,"longitude":-81.39538},"priceRange":"$$","category":"Coffee & cafes","url":"https://407.fyi/venue/amazonica-florida-mall.html"}},{"@type":"ListItem","position":14,"item":{"@type":"LocalBusiness","name":"Bar One Orlando","address":{"@type":"PostalAddress","streetAddress":"Bar One Orlando, 1516 McCoy Rd","addressLocality":"Orlando","addressRegion":"FL","postalCode":"32809","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":28.45081,"longitude":-81.35958},"priceRange":"$","category":"Bars & lounges","url":"https://407.fyi/venue/bar-one-orlando.html"}}]}</script>
+    <style id="ask-local-css">
+      /* Pick an Occasion in South Orlando : occasion tabs over the
+         district's own listings, Night Drive tokens only. */
+      .ask-box { margin-top: 4px; padding: 18px; border: 1px solid var(--line); border-radius: 14px; background: var(--soft); }
+      .ask-tabs { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+      .ask-tab {
+        appearance: none; border: 1px solid var(--line); background: var(--surface); color: var(--ink);
+        border-radius: 999px; padding: 9px 16px; min-height: 42px; font: inherit; font-size: .88rem;
+        font-weight: 800; cursor: pointer;
+      }
+      .ask-tab:hover { border-color: var(--accent-ink); }
+      .ask-tab[aria-selected="true"] { background: var(--accent); border-color: var(--accent); color: #fff; }
+      .ask-tab:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+      .ask-panel:focus-visible { outline: 2px solid var(--focus); outline-offset: 4px; }
+      .ask-block { margin-bottom: 16px; }
+      .ask-block:last-child { margin-bottom: 4px; }
+      .ask-block h3 {
+        margin: 0 0 6px; font-size: .74rem; font-weight: 800; letter-spacing: .09em;
+        text-transform: uppercase; color: var(--accent-ink);
+      }
+      .ask-block h3 span { color: var(--muted); letter-spacing: .02em; text-transform: none; font-weight: 700; }
+      .ask-rows { border-top: 1px solid var(--line); }
+      .ask-row {
+        display: flex; align-items: center; gap: 14px; padding: 11px 4px;
+        border-bottom: 1px solid var(--line); text-decoration: none; color: var(--ink);
+      }
+      .ask-row:active { transform: scale(.99); }
+      .ask-main { flex: 1 1 auto; min-width: 0; display: flex; flex-direction: column; gap: 1px; }
+      .ask-name { font-weight: 800; font-size: 1rem; line-height: 1.25; overflow-wrap: anywhere; }
+      .ask-meta { color: var(--muted); font-size: .8rem; line-height: 1.35; overflow-wrap: anywhere; }
+      .ask-dist { flex: 0 0 auto; color: var(--accent-ink); font-weight: 800; font-size: .95rem; white-space: nowrap; text-align: right; }
+      .ask-near {
+        display: inline-flex; align-items: center; gap: 8px; min-height: 42px; padding: 9px 14px;
+        border: 0; border-radius: 10px; background: var(--accent); color: #fff;
+        font: inherit; font-size: .85rem; font-weight: 800; cursor: pointer;
+      }
+      .ask-near:active { transform: scale(.97); }
+      .ask-status { color: var(--muted); font-size: .85rem; margin: 8px 0 0; }
+    </style>
+  </head>
+  <body>
+    <header class="hero">
+      <div class="hero-in">
+        <p class="crumbs"><a href="/">407 FYI</a> &middot; <span aria-current="page">South Orlando</span></p>
+        <a class="hero-brand" href="/">407 FYI &middot; A District Finder</a>
+        <h1>South Orlando</h1>
+        <p class="sub">South Orlando is the working half of the map: the Orange Blossom Trail&#x27;s dining rooms, the Florida Mall&#x27;s orbit, Conway&#x27;s neighborhood joints and the airport corridor&#x27;s kitchens. It is where the city&#x27;s Latin, Uzbek, Indian and seafood cooking runs deep without a district brand to sell it. This page simply gives the cluster the name residents already use.</p>
+        <p class="count">14 hand-verified places</p>
+        <nav class="anchor-nav" aria-label="On this page">
+          <a href="#top-picks">Top picks</a>
+          <a href="#ask-local">Pick an Occasion</a>
+          <a href="#places">The places</a>
+          <a href="#nearby">Nearby districts</a>
+          <a href="/archive.html?district=south-orlando">Open in the full finder</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="sec" id="top-picks">
+        <p class="kicker">Top Picks</p>
+        <h2>Where to start in South Orlando</h2>
+        <p class="lede">New to the district? Start with these three, then work down the full list below.</p>
+        <div class="vlist">
+        <article class="vcard">
+          <h3><a href="/venue/amar-orlando.html">Amar Orlando</a></h3>
+          <p class="meta">Mediterranean &middot; $$</p>
+          <p class="addr">8001 S Orange Blossom Trl, Ste #1510, Orlando, FL 32809</p>
+          <p class="desc">Amar Orlando serves Lebanese cooking in a calm, intimate room just outside the Florida Mall food court, a step up in polish from its surroundings. Guests rave about the hummus, calling it the best they have had, and the chicken shawarma and mixed grill platter carry that same care. Portions run modest, so order a spread and let the Taste of Lebanon platter do the touring.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=Amar+Orlando+8001+S+Orange+Blossom+Trl%2C+Ste+%231510%2C+Orlando%2C+FL+32809" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/venue/amazonica-florida-mall.html">Amazonica</a></h3>
+          <p class="meta">Coffee &amp; cafes &middot; $$</p>
+          <p class="addr">8001 S Orange Blossom Trl Kiosk TT124, Orlando, FL 32809</p>
+          <p class="desc">A bright Colombian kiosk inside The Florida Mall turning out obleas layered with arequipe, acai bowls with Nutella and fresh fruit, and a proper cortadito. Guests praise the friendly counter staff and call the arepas exquisite, with cholados and Dubai chocolate for the sweet finish. It is a quick, tropical pause between stores that beats the standard food court routine.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=Amazonica+8001+S+Orange+Blossom+Trl+Kiosk+TT124%2C+Orlando%2C+FL+32809" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/venue/bar-one-orlando.html">Bar One Orlando</a></h3>
+          <p class="meta">Bars &amp; lounges &middot; $</p>
+          <p class="addr">Bar One Orlando, 1516 McCoy Rd, Orlando, FL 32809</p>
+          <p class="desc">Bar One looks tiny from the street, but inside it is a cozy, very clean neighborhood bar on McCoy Road with a pool table and dart boards. The patio is the charmer, with picnic tables, cornhole, giant Jenga and a warm fire pit under the string lights. Order the wings (guests swear you will order another round), the Venezuelan empanadas and tequenos, and expect bartenders who remember you and your drink.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=Bar+One+Orlando+Bar+One+Orlando%2C+1516+McCoy+Rd%2C+Orlando%2C+FL+32809" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        </div>
+      </section>
+
+      <section class="sec" id="ask-local">
+        <h2>Pick an Occasion</h2>
+        <div class="ask-box" id="askBox">
+          <p class="ask-status">Loading the guide...</p>
+        </div>
+      </section>
+
+      <section class="sec" id="places">
+        <p class="kicker">The Full List</p>
+        <h2>Every place in South Orlando</h2>
+        <p class="lede">Full cards for the whole district, Local Picks first, then A to Z. Every name opens its own page, with directions and more nearby. The map, filters and export live in the full finder.</p>
+        <div class="vlist">
+        <article class="vcard">
+          <h3><a href="/venue/amar-orlando.html">Amar Orlando</a></h3>
+          <p class="meta">Mediterranean &middot; $$</p>
+          <p class="addr">8001 S Orange Blossom Trl, Ste #1510, Orlando, FL 32809</p>
+          <p class="desc">Amar Orlando serves Lebanese cooking in a calm, intimate room just outside the Florida Mall food court, a step up in polish from its surroundings. Guests rave about the hummus, calling it the best they have had, and the chicken shawarma and mixed grill platter carry that same care. Portions run modest, so order a spread and let the Taste of Lebanon platter do the touring.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=Amar+Orlando+8001+S+Orange+Blossom+Trl%2C+Ste+%231510%2C+Orlando%2C+FL+32809" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/venue/amazonica-florida-mall.html">Amazonica</a></h3>
+          <p class="meta">Coffee &amp; cafes &middot; $$</p>
+          <p class="addr">8001 S Orange Blossom Trl Kiosk TT124, Orlando, FL 32809</p>
+          <p class="desc">A bright Colombian kiosk inside The Florida Mall turning out obleas layered with arequipe, acai bowls with Nutella and fresh fruit, and a proper cortadito. Guests praise the friendly counter staff and call the arepas exquisite, with cholados and Dubai chocolate for the sweet finish. It is a quick, tropical pause between stores that beats the standard food court routine.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=Amazonica+8001+S+Orange+Blossom+Trl+Kiosk+TT124%2C+Orlando%2C+FL+32809" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/venue/bar-one-orlando.html">Bar One Orlando</a></h3>
+          <p class="meta">Bars &amp; lounges &middot; $</p>
+          <p class="addr">Bar One Orlando, 1516 McCoy Rd, Orlando, FL 32809</p>
+          <p class="desc">Bar One looks tiny from the street, but inside it is a cozy, very clean neighborhood bar on McCoy Road with a pool table and dart boards. The patio is the charmer, with picnic tables, cornhole, giant Jenga and a warm fire pit under the string lights. Order the wings (guests swear you will order another round), the Venezuelan empanadas and tequenos, and expect bartenders who remember you and your drink.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=Bar+One+Orlando+Bar+One+Orlando%2C+1516+McCoy+Rd%2C+Orlando%2C+FL+32809" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/venue/beef-bae.html">Beef Bae</a></h3>
+          <p class="meta">BBQ &middot; $$</p>
+          <p class="addr">10249 S John Young Pkwy Ste 109, Orlando, FL 32837</p>
+          <p class="desc">Beef Bae, the South Orlando spot formerly known as Charcoal Zyka, runs American barbecue through a Zabiha halal kitchen, and regulars say the pairing works. Guests praise the beef short ribs for their tenderness, the ribs fall off the bone, and the Portuguese chicken has been the hallmark since the start. An Inferno Burger brings the heat, and a mango lassi cools it back down.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=Beef+Bae+10249+S+John+Young+Pkwy+Ste+109%2C+Orlando%2C+FL+32837" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/venue/bombay-street.html">Bombay Street Kitchen</a></h3>
+          <p class="meta">Indian &middot; $$</p>
+          <p class="addr">6215 S Orange Blossom Trl, Orlando</p>
+          <p class="desc">Bombay Street Kitchen trades the standard curry-house script for the street carts of Mumbai, Delhi, Chennai and Bangalore, a bright, buzzy room on Orange Blossom Trail with a Michelin Bib Gourmand to its name. Guests work through pani puri, crispy kurkuri bhindi bhel and a gunpowder ghee dosa with perfectly spiced potatoes, then finish with Bombay falooda or rasmalai. The cooking is bold and fresh enough that guests say it takes them back to India, and that one visit turns into a craving for the next.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=Bombay+Street+Kitchen+6215+S+Orange+Blossom+Trl%2C+Orlando" target="_blank" rel="noopener">Directions &rarr;</a> &middot; <a class="iglink" href="https://www.instagram.com/bombaystreetkitchenorlando" target="_blank" rel="noopener" aria-label="Bombay Street Kitchen on Instagram"><svg class="ig-glyph" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="vertical-align:-2px;margin-right:3px"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg> @bombaystreetkitchenorlando</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/venue/caravan-uzbek-turkish-cuisine.html">Caravan Uzbek &amp; Turkish Cuisine</a></h3>
+          <p class="meta">Mediterranean &middot; $$</p>
+          <p class="addr">8015 S Orange Ave, Orlando, FL 32809</p>
+          <p class="desc">Caravan is a small, cozy room on South Orange Ave where Uzbek and Turkish cooking share one table, fully halal and family run. Guests come for the mixed grill and lamb skewers, flaky samsa, fragrant To&#x27;y Osh pilaf, and fried laghman, with honey cake to finish. The welcome is the other half of the draw: people keep describing a place that made them feel like family.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=Caravan+Uzbek+%26+Turkish+Cuisine+8015+S+Orange+Ave%2C+Orlando%2C+FL+32809" target="_blank" rel="noopener">Directions &rarr;</a> &middot; <a class="iglink" href="https://www.instagram.com/caravanhalal" target="_blank" rel="noopener" aria-label="Caravan Uzbek &amp; Turkish Cuisine on Instagram"><svg class="ig-glyph" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="vertical-align:-2px;margin-right:3px"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg> @caravanhalal</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/venue/crayola-experience-orlando.html">Crayola Experience</a></h3>
+          <p class="meta">Attractions &middot; $$</p>
+          <p class="addr">8001 S Orange Blossom Trl, Orlando, FL 32809</p>
+          <p class="desc">A hands-on color playground inside The Florida Mall, built for younger kids. Children name and wrap their own custom crayons, melt wax into shapes, try drip art, and watch their coloring come to life on screen. Guests call it creativity packed into every corner: colorful, playful, and easy to wander at your own pace indoors.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=Crayola+Experience+8001+S+Orange+Blossom+Trl%2C+Orlando%2C+FL+32809" target="_blank" rel="noopener">Directions &rarr;</a> &middot; <a class="iglink" href="https://www.instagram.com/visitcrayolaorl" target="_blank" rel="noopener" aria-label="Crayola Experience on Instagram"><svg class="ig-glyph" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="vertical-align:-2px;margin-right:3px"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg> @visitcrayolaorl</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/venue/el-cilantrillo.html">El Cilantrillo</a></h3>
+          <p class="meta">Latin &amp; Caribbean &middot; $$</p>
+          <p class="addr">El Cilantrillo Restaurant, 1301 Florida Mall Ave, Orlando, FL 32809-7731</p>
+          <p class="desc">El Cilantrillo is South Orlando&#x27;s big Puerto Rican table, a lively, salsa-filled room near the Florida Mall where the portions come generous and the cooking tastes made with love. Guests come for mofongo relleno, a massive chuleta kan kan, arroz con gandules and tostones rellenos, with coconut mojitos that regulars rave about. Diners born on the island call it true Puerto Rican sazón, the kind of food that takes you straight back. When the room fills, the kitchen takes its time, so order a mojito and settle in.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=El+Cilantrillo+El+Cilantrillo+Restaurant%2C+1301+Florida+Mall+Ave%2C+Orlando%2C+FL+32809-7731" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/venue/el-para-so-del-marisco.html">El Paraíso Del Marisco</a></h3>
+          <p class="meta">Seafood &middot; $$</p>
+          <p class="addr">8421 S Orange Blossom Trl Ste 156, Orlando, FL 32809</p>
+          <p class="desc">El Paraíso Del Marisco cooks the Ecuadorian and Peruvian seafood that Orlando&#x27;s Latin families describe as tasting like home. Encebollado arrives the way Manabí cooks it, the ceviche mixto snaps bright and fresh, and the chaulafán de mariscos is built to share, with bolón de verde for the plantain devotees. Plates are made to order, so the kitchen takes its time, in a warm, unfussy, family-run room.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=El+Para%C3%ADso+Del+Marisco+8421+S+Orange+Blossom+Trl+Ste+156%2C+Orlando%2C+FL+32809" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/venue/happy-snapper-seafood-restaurant.html">Happy Snapper Seafood Restaurant</a></h3>
+          <p class="meta">Seafood &middot; $$</p>
+          <p class="addr">Happy Snapper Seafood Restaurant, 6327 Orange Ave S, Orlando, FL 32809-5109, United States</p>
+          <p class="desc">A tiny, family-run seafood joint on South Orange Avenue that guests keep calling a hole-in-the-wall gem. The grouper sandwich is the order regulars defend, the deep-fried whole snapper arrives crackling, and the blue crab bisque earns its own following, all cooked, as one guest put it, perfectly, not over salted or over spiced. Seating is limited because the room is small, and that is part of the deal.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=Happy+Snapper+Seafood+Restaurant+Happy+Snapper+Seafood+Restaurant%2C+6327+Orange+Ave+S%2C+Orlando%2C+FL+32809-5109%2C+United+States" target="_blank" rel="noopener">Directions &rarr;</a> &middot; <a class="iglink" href="https://www.instagram.com/happysnapperseafood" target="_blank" rel="noopener" aria-label="Happy Snapper Seafood Restaurant on Instagram"><svg class="ig-glyph" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="vertical-align:-2px;margin-right:3px"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg> @happysnapperseafood</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/venue/marlow-s-tavern.html">Marlow&#x27;s Tavern</a></h3>
+          <p class="meta">American &middot; $$</p>
+          <p class="addr">6889 Eagle Watch Dr, Orlando, FL 32822</p>
+          <p class="desc">A neighborhood tavern in Lee Vista that treats first timers like regulars in the making, starting with pub chips loaded with blue cheese and bacon on the house. The kitchen runs scratch American: hand-cut tavern fries, crab dip, asparagus fries, shrimp and grits, and a Black and Blue burger. Guests call it a hidden gem, warm and lively without trying too hard.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=Marlow%27s+Tavern+6889+Eagle+Watch+Dr%2C+Orlando%2C+FL+32822" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/venue/orlando-watersports-complex.html">Orlando Watersports Complex</a></h3>
+          <p class="meta">Attractions &middot; $$</p>
+          <p class="addr">8615 Florida Rock Rd, Orlando, FL 32824</p>
+          <p class="desc">A laid-back cable park where beginners and pros share the water, with an inflatable Aqua Park for bouncing between runs. Coaches teach first timers on the beginner cable while experienced riders lap the main cables, and Nautique boat pulls round out the day. Guests call the staff encouraging and genuinely invested in your success, the kind of place where kids forget their phones for hours.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=Orlando+Watersports+Complex+8615+Florida+Rock+Rd%2C+Orlando%2C+FL+32824" target="_blank" rel="noopener">Directions &rarr;</a> &middot; <a class="iglink" href="https://www.instagram.com/orlandowatersports" target="_blank" rel="noopener" aria-label="Orlando Watersports Complex on Instagram"><svg class="ig-glyph" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="vertical-align:-2px;margin-right:3px"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg> @orlandowatersports</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/venue/sazoncito-latin-food.html">Sazoncito Latin Food</a></h3>
+          <p class="meta">Latin &amp; Caribbean &middot; $</p>
+          <p class="addr">4542 S Semoran Blvd, Orlando, FL 32822</p>
+          <p class="desc">A humble Conway counter serving Dominican comfort food that guests describe as tasting like home. Mofongo with chicharron, bistec encebollado, rabo guisado and sancocho dominicano come out fresh and generous, at prices guests call great value. The room runs lively, with sports-bar energy, and the music keeps it loud.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=Sazoncito+Latin+Food+4542+S+Semoran+Blvd%2C+Orlando%2C+FL+32822" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        <article class="vcard">
+          <h3><a href="/venue/uncle-tonys-backyard-bbq-orlando.html">Uncle Tony&#x27;s Backyard BBQ Orlando</a></h3>
+          <p class="meta">BBQ &middot; $$</p>
+          <p class="addr">Uncle Tony&#x27;s Backyard BBQ Orlando, 6807 S Orange Ave, Orlando, FL 32809-6025, United States</p>
+          <p class="desc">A hole-in-the-wall on South Orange Avenue with a small-town feel that makes you forget you are in a big city. Brisket and dino beef ribs lead, with Brisket Birria Tacos and the Mac Daddy Burger showing the kitchen&#x27;s playful side, and a sweet vinegar barbecue sauce guests call worth the trip alone. The sides are no afterthought here; the mac and cheese is the one guests say stays on their mind.</p>
+          <p class="dirs"><a href="https://www.google.com/maps/search/?api=1&amp;query=Uncle+Tony%27s+Backyard+BBQ+Orlando+Uncle+Tony%27s+Backyard+BBQ+Orlando%2C+6807+S+Orange+Ave%2C+Orlando%2C+FL+32809-6025%2C+United+States" target="_blank" rel="noopener">Directions &rarr;</a></p>
+        </article>
+        </div>
+      </section>
+
+      <section class="sec" id="map">
+        <p class="kicker">On the Map</p>
+        <h2>South Orlando on the map</h2>
+        <p class="lede">The full finder plots every place on this list on its map, with filters for category, price and occasion alongside.</p>
+        <div class="handoff">
+          <a class="btn-ghost" href="/archive.html?district=south-orlando">See South Orlando on the map</a>
+        </div>
+      </section>
+
+      <section class="sec" id="nearby">
+        <p class="kicker">Keep Going</p>
+        <h2>Nearby districts</h2>
+        <p class="lede">The closest district lists to South Orlando, by geography. Every district has a finder page, and the full set lives in the finder.</p>
+        <nav class="strip" aria-label="Nearby district finder pages">
+          <a href="/sodo-finder.html">SoDo</a>
+          <a href="/more-orlando-finder.html">Other Orlando Areas</a>
+          <a href="/hourglass-finder.html">Hourglass</a>
+          <a href="/universal-finder.html">Universal</a>
+        </nav>
+        <div class="handoff">
+        </div>
+      </section>
+      <p class="checked">List last checked October 2026</p>
+    </main>
+
+<footer>
+      <div class="foot-in">
+        <a class="back-link" href="/">&larr; Back to the full guide</a>
+        <p class="brand-line">407 FYI, an independent Orlando guide. Details can change; confirm before you go.</p>
+        <p>Hand-verified Orlando places · Checked October 2026 · Local Picks are never sponsored · Corrections: <a href="mailto:mail@407.fyi">mail@407.fyi</a></p>
+        <p>Some links on 407 FYI are affiliate or referral links. We may earn a commission or credit at no extra cost to you. They never affect which places we list, rank, or recommend.</p>
+        <p><a href="/privacy.html">Privacy</a></p>
+      </div>
+    </footer>
+<style id="fyi-chat-css">
+.fyi-chat-btn{position:fixed;right:16px;bottom:16px;z-index:1200;display:flex;align-items:center;gap:9px;
+  padding:15px 22px;border-radius:999px;border:2px solid #f6edd6;cursor:pointer;
+  background:var(--accent,#d4b573);color:#122419;
+  font-family:"Manrope",ui-sans-serif,sans-serif;font-size:16px;font-weight:800;letter-spacing:.01em;
+  box-shadow:0 12px 32px rgba(0,0,0,.5),0 0 0 5px rgba(212,181,115,.28)}
+.fyi-chat-btn:hover{filter:brightness(1.07)}
+.fyi-chat-btn svg{width:20px;height:20px}
+.fyi-chat-btn:hover{border-color:var(--focus,#d4b573)}
+.fyi-chat-btn svg{flex:none}
+.fyi-chat-panel{position:fixed;right:16px;bottom:70px;z-index:1200;width:min(384px,calc(100vw - 24px));
+  height:min(580px,calc(100dvh - 96px));display:none;flex-direction:column;overflow:hidden;
+  border-radius:16px;border:1px solid var(--line,#2f4a38);background:var(--surface,#122419);
+  box-shadow:0 18px 48px rgba(0,0,0,.45);font-family:"Manrope",ui-sans-serif,sans-serif}
+.fyi-chat-panel.open{display:flex}
+.fyi-chat-head{padding:14px 16px 10px;border-bottom:1px solid var(--line,#2f4a38);display:flex;gap:10px;align-items:flex-start}
+.fyi-chat-head h2{margin:0;font-family:"Urbanist","Manrope",sans-serif;font-size:19px;color:var(--headline,#f6edd6)}
+.fyi-chat-head p{margin:2px 0 0;font-size:12.5px;color:var(--muted,#c6bba2)}
+.fyi-chat-close{margin-left:auto;background:none;border:0;color:var(--muted,#c6bba2);font-size:20px;cursor:pointer;line-height:1;padding:2px 4px}
+.fyi-chat-msgs{flex:1;overflow-y:auto;padding:14px 14px 6px;display:flex;flex-direction:column;gap:10px}
+.fyi-chat-msg{max-width:88%;padding:9px 12px;border-radius:12px;font-size:14px;line-height:1.45;white-space:normal;overflow-wrap:break-word}
+.fyi-chat-msg p{margin:0 0 9px}
+.fyi-chat-msg p:last-child{margin-bottom:0}
+.fyi-chat-msg.bot{align-self:flex-start;background:var(--soft,#172a1f);color:var(--ink,#f0e8d5);border-bottom-left-radius:4px}
+.fyi-chat-msg.user{align-self:flex-end;background:var(--badge,#223c2b);color:var(--ink,#f0e8d5);border-bottom-right-radius:4px}
+.fyi-chat-msg.thinking{color:var(--muted,#c6bba2);font-style:italic}
+.fyi-chat-note{font:500 12px/1.5 Manrope,system-ui,sans-serif;color:var(--fyi-muted);background:var(--fyi-soft);border:1px dashed var(--fyi-line);border-radius:10px;padding:8px 10px;align-self:flex-start;max-width:96%}
+.fyi-chat-chips{display:flex;flex-wrap:wrap;gap:6px;align-self:flex-start;max-width:96%}
+.fyi-chat-chip{display:inline-block;padding:5px 10px;border-radius:999px;border:1px solid var(--line,#2f4a38);
+  background:var(--bg,#0a1811);color:var(--accent-ink,#d4b573);font-size:12.5px;font-weight:600;text-decoration:none}
+.fyi-chat-chip:hover{border-color:var(--accent,#d4b573)}
+.fyi-chat-chip small{color:var(--muted,#c6bba2);font-weight:500}
+.fyi-chat-form{display:flex;gap:8px;padding:10px;border-top:1px solid var(--line,#2f4a38)}
+.fyi-chat-input{flex:1;padding:10px 12px;border-radius:10px;border:1px solid var(--line,#2f4a38);
+  background:var(--bg,#0a1811);color:var(--ink,#f0e8d5);font:inherit;font-size:16px}
+.fyi-chat-input:focus{outline:2px solid var(--focus,#d4b573);outline-offset:0}
+.fyi-chat-send{padding:10px 14px;border-radius:10px;border:0;cursor:pointer;font:inherit;font-weight:800;
+  background:var(--accent,#d4b573);color:#122419}
+.fyi-chat-send:disabled{opacity:.55;cursor:wait}
+@media (max-width:480px){.fyi-chat-panel{right:8px;bottom:64px}.fyi-chat-btn{right:12px;bottom:12px}}
+</style>
+<button class="fyi-chat-btn" id="fyiChatBtn" aria-haspopup="dialog" aria-expanded="false">
+  <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+  ChatFYI
+</button>
+<section class="fyi-chat-panel" id="fyiChatPanel" role="dialog" aria-label="ChatFYI, the 407 FYI guide chat">
+  <div class="fyi-chat-head">
+    <div>
+      <h2>ChatFYI</h2>
+      <p>Answers only from the guide's own listings.</p>
+    </div>
+    <button class="fyi-chat-close" id="fyiChatClose" aria-label="Close chat">&times;</button>
+  </div>
+  <div class="fyi-chat-msgs" id="fyiChatMsgs"></div>
+  <form class="fyi-chat-form" id="fyiChatForm">
+    <input class="fyi-chat-input" id="fyiChatInput" type="text" autocomplete="off" maxlength="500"
+      placeholder="Ask about places in Orlando..." aria-label="Your question">
+    <button class="fyi-chat-send" id="fyiChatSend" type="submit">Send</button>
+  </form>
+</section>
+<script id="fyi-chat-js">
+(() => {
+  const FN = 'https://xxdgxigwpnezsdvbiawi.supabase.co/functions/v1/chat';
+  const KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inh4ZGd4aWd3cG5lenNkdmJpYXdpIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTE2OTM0MDYsImV4cCI6MjEwNzI2OTQwNn0.3fuj9vjXspT31fQhgcejf4Thmk9yHPc7RSBZ0v97Gw4';
+  const btn = document.getElementById('fyiChatBtn');
+  const panel = document.getElementById('fyiChatPanel');
+  const msgs = document.getElementById('fyiChatMsgs');
+  const form = document.getElementById('fyiChatForm');
+  const input = document.getElementById('fyiChatInput');
+  const send = document.getElementById('fyiChatSend');
+  let opened = false, busy = false, noticeShown = false;
+  const history = [];
+  let visitor = '';
+  try {
+    visitor = localStorage.getItem('fyi-chat-visitor') || '';
+    if (!visitor) {
+      visitor = (crypto.randomUUID ? crypto.randomUUID() : String(Date.now()) + Math.random().toString(36).slice(2));
+      localStorage.setItem('fyi-chat-visitor', visitor);
+    }
+  } catch (e) { visitor = 'anon'; }
+  const track = (name) => { try { if (window.captureEvent) captureEvent(name, {}); else if (window.posthog) posthog.capture(name); } catch (e) {} };
+  const esc = (s) => s.replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+  const fmt = (s) => s.split(/\n\s*\n/).map((para) => '<p>' + esc(para)
+    .replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>')
+    .replace(/^\s*[-*]\s+/gm, '• ')
+    .replace(/mail@407\.fyi/g, '<a href="mailto:mail@407.fyi" style="color:var(--fyi-accent)">mail@407.fyi</a>')
+    .replace(/\n/g, '<br>') + '</p>').join('');
+  function addMsg(cls, text) {
+    const d = document.createElement('div');
+    d.className = 'fyi-chat-msg ' + cls;
+    d.innerHTML = fmt(text);
+    msgs.appendChild(d);
+    msgs.scrollTop = msgs.scrollHeight;
+    return d;
+  }
+  function addChips(venues) {
+    if (!venues || !venues.length) return;
+    const row = document.createElement('div');
+    row.className = 'fyi-chat-chips';
+    for (const v of venues) {
+      const a = document.createElement('a');
+      a.className = 'fyi-chat-chip';
+      a.href = '/venue/' + v.id + '.html';
+      a.innerHTML = esc(v.name) + ' <small>' + esc(v.district || '') + '</small>';
+      row.appendChild(a);
+    }
+    msgs.appendChild(row);
+    msgs.scrollTop = msgs.scrollHeight;
+  }
+  function addGoogleChips(links) {
+    if (!links || !links.length) return;
+    const row = document.createElement('div');
+    row.className = 'fyi-chat-chips';
+    for (const v of links) {
+      const a = document.createElement('a');
+      a.className = 'fyi-chat-chip';
+      a.href = v.url;
+      a.target = '_blank';
+      a.rel = 'noopener';
+      a.innerHTML = esc(v.name) + ' <small>on Google</small>';
+      row.appendChild(a);
+    }
+    msgs.appendChild(row);
+    msgs.scrollTop = msgs.scrollHeight;
+  }
+  function toggle(open) {
+    panel.classList.toggle('open', open);
+    btn.setAttribute('aria-expanded', String(open));
+    if (open) {
+      if (!opened) {
+        opened = true;
+        addMsg('bot', 'Hi, I answer from the 407 FYI guide: date nights, coffee, family spots, neighborhoods, whatever you are after. We are in soft opening, so you get eight questions a day: make them thorough ones, with the neighborhood, the occasion, and the mood in a single ask, and you will get a fuller answer. One more limit: the guide does not list hours, so for hours or a phone number I will point you to the place on Google. What are you looking for?');
+        track('chat_open');
+      }
+      setTimeout(() => input.focus(), 60);
+    }
+  }
+  btn.addEventListener('click', () => toggle(!panel.classList.contains('open')));
+  document.getElementById('fyiChatClose').addEventListener('click', () => toggle(false));
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && panel.classList.contains('open')) toggle(false); });
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const q = input.value.trim();
+    if (!q || busy) return;
+    busy = true; send.disabled = true; input.value = '';
+    addMsg('user', q);
+    history.push({ role: 'user', text: q });
+    const thinking = addMsg('bot thinking', 'Looking through the guide...');
+    try {
+      const ctrl = new AbortController();
+      const timer = setTimeout(() => ctrl.abort(), 30000);
+      const r = await fetch(FN, {
+        method: 'POST',
+        headers: { 'Authorization': 'Bearer ' + KEY, 'apikey': KEY, 'Content-Type': 'application/json' },
+        body: JSON.stringify({ question: q, history: history.slice(0, -1).slice(-6), visitor }),
+        signal: ctrl.signal,
+      });
+      clearTimeout(timer);
+      const data = await r.json();
+      thinking.remove();
+      if (!r.ok || !data.answer) throw new Error('bad response');
+      if (data.notice && !noticeShown) {
+        noticeShown = true;
+        const n = document.createElement('div');
+        n.className = 'fyi-chat-note';
+        n.textContent = data.notice;
+        msgs.appendChild(n);
+      }
+      addMsg('bot', data.answer);
+      addChips(data.venues);
+      addGoogleChips(data.google);
+      history.push({ role: 'assistant', text: data.answer });
+      track('chat_question');
+    } catch (err) {
+      thinking.remove();
+      addMsg('bot', 'Something went wrong on my end. The finder on this page can still help, or try me again in a moment.');
+    }
+    busy = false; send.disabled = false; input.focus();
+  });
+})();
+</script>
+  <script id="ask-local-js">
+/* Pick an Occasion in South Orlando : the home scenario planner's
+   pattern (fits right now, closest fits, ChatFYI chip) tucked into one
+   district page, pre-filtered to that district. Data: places.json. */
+(function(){
+  var box = document.getElementById('askBox');
+  if(!box) return;
+  var DISTRICT_ID = 'south-orlando';
+  var TABS = [
+    { key:'family',     label:'Family',     q:'family' },
+    { key:'date',       label:'Date night', q:'date night' },
+    { key:'friends',    label:'Groups',     q:'groups' },
+    { key:'convention', label:'Convention', q:'convention' }
+  ];
+  var PICK_ORDER = ['ava','quesa-loco','rusteak-thornton-park','fogo-orlando-vineland','the-guesthouse','fixtion','wall-street-plaza','elixir-kitchen-bar','iron-cow','toms-watch-bar-orlando','baires-grill-orlando','boxi-park','disney-springs-district','evermore-orlando-resort','orlando-vineland-premium-outlets','black-hammock-restaurant','imperial-on-park','prato'];
+  var DP_LABEL = { breakfast:'Breakfast & coffee', brunch:'Brunch time', lunch:'Lunch hour', dinner:'Dinner & drinks', late:'Late night' };
+  function currentDaypart(d){ var h = d.getHours(); return h < 5 ? 'late' : h < 10 ? 'breakfast' : h < 12 ? 'brunch' : h < 17 ? 'lunch' : h < 22 ? 'dinner' : 'late'; }
+  function esc(s){ return String(s == null ? '' : s).replace(/[&<>"]/g, function(c){ return { '&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;' }[c]; }); }
+  function fitsNow(p, dp){ return !Array.isArray(p.dayparts) || !p.dayparts.length || p.dayparts.indexOf(dp) !== -1; }
+  function byGuideOrder(list){
+    return list.slice().sort(function(a, b){
+      var ia = PICK_ORDER.indexOf(a.id), ib = PICK_ORDER.indexOf(b.id);
+      if(ia !== -1 || ib !== -1) return (ia === -1 ? 1e9 : ia) - (ib === -1 ? 1e9 : ib);
+      return 0;
+    });
+  }
+  var myPos = null;
+  function distOf(p){
+    var rad = Math.PI / 180;
+    var dLat = (p.lat - myPos.lat) * rad, dLng = (p.lng - myPos.lng) * rad;
+    var a = Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+            Math.cos(myPos.lat * rad) * Math.cos(p.lat * rad) * Math.sin(dLng / 2) * Math.sin(dLng / 2);
+    return 3958.8 * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+  }
+  function rowHTML(p, dist){
+    var meta = esc(p.category) + (p.price ? ' \u00b7 ' + esc(p.price) : '');
+    var d = dist != null ? '<span class="ask-dist">' + (dist < 0.1 ? '&lt;0.1' : dist.toFixed(1)) + ' mi</span>' : '';
+    return '<a class="ask-row" href="/venue/' + encodeURIComponent(p.id) + '.html"><span class="ask-main"><span class="ask-name">' + esc(p.name) + '</span><span class="ask-meta">' + meta + '</span></span>' + d + '</a>';
+  }
+  var localPlaces = [];
+  function poolFor(key){
+    return localPlaces.filter(function(p){ return (p.occasions || []).indexOf(key) !== -1; });
+  }
+  function renderPanel(tab){
+    var panel = document.getElementById('askpanel-' + tab.key);
+    if(!panel) return;
+    var pool = poolFor(tab.key);
+    var dp = currentDaypart(new Date());
+    var fits = byGuideOrder(pool.filter(function(p){ return fitsNow(p, dp); }));
+    if(!fits.length) fits = byGuideOrder(pool);
+    var html = '<div class="ask-block"><h3>Fits right now <span>\u00b7 ' + esc(DP_LABEL[dp]) + '</span></h3><div class="ask-rows">' +
+      fits.slice(0, 4).map(function(p){ return rowHTML(p, null); }).join('') + '</div></div>';
+    html += '<div class="ask-block"><h3>Closest fits</h3><div class="ask-closest">';
+    if(myPos){
+      var sorted = pool.slice().sort(function(a, b){ return distOf(a) - distOf(b); });
+      html += '<div class="ask-rows">' + sorted.slice(0, 5).map(function(p){ return rowHTML(p, distOf(p)); }).join('') + '</div>';
+    } else {
+      html += '<button class="ask-near" type="button">Nearest to me</button><p class="ask-status">Tap to sort these by distance from you. Location stays in your browser.</p>';
+    }
+    html += '</div></div>';
+    panel.innerHTML = html;
+    var nearBtn = panel.querySelector('.ask-near');
+    if(nearBtn) nearBtn.addEventListener('click', function(){
+      var status = panel.querySelector('.ask-status');
+      if(!navigator.geolocation){ status.textContent = 'Location is unavailable in this browser.'; return; }
+      status.textContent = 'Locating...';
+      navigator.geolocation.getCurrentPosition(function(pos){
+        myPos = { lat: pos.coords.latitude, lng: pos.coords.longitude };
+        renderPanel(tab);
+      }, function(){ status.textContent = 'Location did not come through. Check the browser prompt and tap again.'; },
+      { enableHighAccuracy: false, timeout: 10000, maximumAge: 300000 });
+    });
+  }
+  function build(){
+    var visible = TABS.filter(function(t){ return poolFor(t.key).length > 0; });
+    if(!visible.length){
+      box.innerHTML = '<p class="ask-status">No occasion picks for this district yet. The full list below has everything.</p>';
+      return;
+    }
+    var html = '<div class="ask-tabs" role="tablist" aria-label="Occasions in South Orlando">';
+    visible.forEach(function(t, i){
+      html += '<button class="ask-tab" type="button" role="tab" id="asktab-' + t.key + '" data-occ="' + t.key +
+        '" aria-controls="askpanel-' + t.key + '" aria-selected="' + (i === 0 ? 'true' : 'false') +
+        '" tabindex="' + (i === 0 ? '0' : '-1') + '">' + esc(t.label) + '</button>';
+    });
+    html += '</div>';
+    visible.forEach(function(t, i){
+      html += '<div class="ask-panel" role="tabpanel" id="askpanel-' + t.key + '" aria-labelledby="asktab-' + t.key + '" tabindex="0"' + (i === 0 ? '' : ' hidden') + '></div>';
+    });
+    box.innerHTML = html;
+    var tabEls = Array.prototype.slice.call(box.querySelectorAll('.ask-tab'));
+    function activate(tab, focus){
+      tabEls.forEach(function(el){
+        var on = el.getAttribute('data-occ') === tab.key;
+        el.setAttribute('aria-selected', String(on));
+        el.tabIndex = on ? 0 : -1;
+        document.getElementById('askpanel-' + el.getAttribute('data-occ')).hidden = !on;
+      });
+      renderPanel(tab);
+      if(focus) document.getElementById('asktab-' + tab.key).focus();
+    }
+    tabEls.forEach(function(el){
+      el.addEventListener('click', function(){
+        activate(visible[tabEls.indexOf(el)], false);
+      });
+    });
+    box.querySelector('.ask-tabs').addEventListener('keydown', function(e){
+      var i = tabEls.indexOf(document.activeElement);
+      if(i < 0) return;
+      var n = null;
+      if(e.key === 'ArrowRight') n = (i + 1) % tabEls.length;
+      else if(e.key === 'ArrowLeft') n = (i - 1 + tabEls.length) % tabEls.length;
+      else if(e.key === 'Home') n = 0;
+      else if(e.key === 'End') n = tabEls.length - 1;
+      if(n !== null){ e.preventDefault(); activate(visible[n], true); }
+    });
+    activate(visible[0], false);
+  }
+  fetch('places.json?v=20261019p3')
+    .then(function(r){ if(!r.ok) throw new Error('places.json HTTP ' + r.status); return r.json(); })
+    .then(function(d){
+      localPlaces = (d.places || []).filter(function(p){ return p.district_id === DISTRICT_ID; });
+      build();
+    })
+    .catch(function(){
+      box.innerHTML = '<p class="ask-status">The guide could not load here. The full list below still works.</p>';
+    });
+})();
+</script>
+  </body>
+</html>
