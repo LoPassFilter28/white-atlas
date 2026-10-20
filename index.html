@@ -408,6 +408,17 @@
   .brand-407{font-family:"Urbanist","Manrope",ui-sans-serif,sans-serif;font-weight:700;font-size:clamp(2.5rem,8vw,5rem);letter-spacing:.06em;line-height:1;white-space:nowrap;color:var(--ink)}.footer{flex-wrap:wrap}.footer .foot-col{flex:0 0 auto;min-width:150px}.footer .foot-col a{overflow-wrap:normal;word-break:normal}.footer .foot-main{flex:1 1 320px}
 .ask-row{display:flex;align-items:center;gap:14px;flex-wrap:wrap}.ask-row-label{width:96px;flex:none;font-weight:800;font-size:.85rem;color:var(--headline)}.ask-pill-all{background:transparent;color:var(--accent-ink)}
 .ask-panel{padding:clamp(20px,3vw,28px);display:flex;flex-direction:column;justify-content:center;gap:16px}.ask-pills{display:flex;flex-wrap:wrap;gap:8px}.ask-pill{display:inline-flex;align-items:center;min-height:44px;padding:9px 18px;border:1px solid var(--line);border-radius:999px;background:var(--bg);color:var(--ink);font-size:.88rem;font-weight:800;text-decoration:none}.ask-pill:hover,.ask-pill:focus-visible{border-color:var(--accent);background:var(--soft);outline:0}.ask-panel-more{margin:0;color:var(--muted);font-size:.82rem;line-height:1.45}.ask-panel-more a{color:var(--accent-ink);font-weight:700;text-decoration:none}.ask-panel-more a:hover{text-decoration:underline}
+.ask-panel{padding:clamp(14px,2.4vw,22px);gap:2px}
+.ask-route{position:relative;display:flex;align-items:center;gap:10px 14px;flex-wrap:wrap;padding:8px 2px;border-bottom:1px solid var(--line)}
+.ask-route:last-child{border-bottom:0}
+.ask-route-main{display:flex;align-items:baseline;gap:6px 10px;flex-wrap:wrap;color:var(--ink);text-decoration:none;min-width:0}
+.ask-route-main::after{content:'';position:absolute;inset:0}
+.ask-route-main:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.ask-route-name{font-weight:800;font-size:1rem;color:var(--headline)}
+.ask-route-main:hover .ask-route-name{color:var(--accent-ink)}
+.ask-route-hook{color:var(--muted);font-size:.82rem}
+.ask-route .ask-pills{position:relative;z-index:1;margin-left:auto}
+.ask-route .ask-pill{min-height:36px;padding:6px 13px;font-size:.8rem}
 </style>
   
 <link rel="icon" href="/favicon.ico" sizes="any"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest"><meta name="theme-color" content="#0a1811"><script type="application/ld+json">{
@@ -507,7 +518,7 @@
   }
  ]
 }</script><style id="phase2-home-css">
-/* ===== Phase 2 home additions: nav, district covers, Right Now, Ask results, browse CTA ===== */
+/* ===== Phase 2 home additions: nav, district covers, Ask results, browse CTA ===== */
 .home-nav{display:flex;flex-wrap:wrap;gap:8px;margin:22px 0 4px}
 .home-nav a{display:inline-flex;align-items:center;min-height:44px;padding:9px 15px;border:1px solid var(--line);border-radius:999px;color:var(--ink);font-size:.78rem;font-weight:700;text-decoration:none;background:var(--surface)}
 .home-nav a:hover{border-color:var(--accent)}
@@ -518,23 +529,7 @@
 .cover-card{min-height:190px}
 .cover-link{text-decoration:none}
 .cover-quote{position:relative;z-index:2;display:block;font-size:.78rem;line-height:1.45;color:rgba(253,246,227,.92);font-style:italic}
-.rn-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
-@media (min-width:760px){.rn-grid{grid-template-columns:repeat(3,1fr)}}
-.rn-grid .pick-card{text-decoration:none}
-.rn-loading{grid-column:1/-1;color:var(--muted);font-size:.88rem}
-/* Skeleton loading cards for the Right Now grid, sized to the measured loaded
-   pick-cards (see white-atlas-build/skeleton-audit/): the shell reuses
-   .pick-card geometry exactly, bars stand in for its text lines. */
-.skel-sr{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
-.skel-card{pointer-events:none}
-.skel-bar{display:block;border-radius:6px;background:color-mix(in srgb,var(--ink) 13%,transparent);animation:skel-pulse 1.6s ease-in-out infinite alternate}
-.skel-card .skel-k{width:36%;height:10px}
-.skel-card .skel-n{width:68%;height:15px}
-.skel-card .skel-m{width:54%;height:10px}
-.skel-card .skel-g{width:27%;height:10px;margin-top:auto}
-@keyframes skel-pulse{from{opacity:.45}to{opacity:.9}}
-@media(prefers-reduced-motion:reduce){.skel-bar{animation:none;opacity:.65}}
-.rn-controls{margin-top:16px;display:grid;gap:8px;justify-items:start}
+.rn-controls{margin-top:24px;border-top:1px solid var(--line);padding-top:20px;display:grid;gap:8px;justify-items:start}
 .rn-dist{font-weight:700;color:var(--accent-ink)}
 .picks-note{margin:10px 2px 0;color:var(--muted);font-size:.78rem}
 .picks-rail .pick-card{text-decoration:none}
@@ -563,9 +558,6 @@ html[data-theme="dark"] .export-trigger:hover,html[data-theme="dark"] .export-tr
 .mast .primary-actions .hero-search{max-width:none;flex:1 1 100%}
 }
 
-/* deepening: reserve the Right Now grid height so its data fill cannot shift the page */
-.rn-grid{min-height:432px}
-@media(min-width:760px){.rn-grid{min-height:280px}}
 .district-index{display:grid;grid-template-columns:1fr;gap:20px}@media(min-width:720px){.district-index{grid-template-columns:repeat(2,1fr)}}@media(min-width:1080px){.district-index{grid-template-columns:repeat(4,1fr)}}.di-group h3{font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin:0 0 10px}.di-group ul{list-style:none;margin:0;padding:0;display:grid;gap:7px}.di-group a{color:var(--ink);text-decoration:none;font-weight:600}.di-group a:hover{color:var(--accent-ink);text-decoration:underline}
 /* Home integration: Sections shelf kickers and hooks, district story doors. */
 .section-kicker{position:relative;z-index:2;display:block;color:#dfc084;font-size:.68rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase}
@@ -596,11 +588,7 @@ html[data-theme="dark"] .export-trigger:hover,html[data-theme="dark"] .export-tr
     .near-door:hover{background:var(--soft)}
   </style>
 <style>
-    /* Round 4: fused Right Now, browse wide button, nearest window, toggle label, slim sections */
-    .rn-fused{margin-top:28px;border-top:1px solid var(--line);padding-top:22px}
-    .ask-sub-head h3{font-family:"Urbanist","Manrope",sans-serif;font-size:1.35rem;font-weight:800;color:var(--headline);margin:0 0 4px}
-    .ask-sub-head p{color:var(--muted);margin:0 0 14px}
-    .rn-fused .location-status{display:block;margin:12px 2px 14px}
+    /* Round 4: browse wide button, nearest window, toggle label, slim sections */
     .browse-btn{text-decoration:none;margin-top:10px}
     .sec-sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
     #sectionCovers .district-card{min-height:100px}
@@ -668,27 +656,20 @@ html[data-theme="dark"] .export-trigger:hover,html[data-theme="dark"] .export-tr
 
     <section class="ask-local" id="ask" aria-labelledby="askLocalTitle">
       <div class="ask-local-copy">
-        <p class="ask-local-kicker">A shortcut to local knowledge</p>
         <h2 id="askLocalTitle">Ask a Local</h2>
-        <p class="ask-local-intro">What’s the occasion? Pick a guide, or open the whole city’s shortlist.</p>
+        <p class="ask-local-intro">Pick an occasion to start, or open a district page for its full shortlist.</p>
       </div>
       <div class="ask-panel">
-        <div class="ask-row"><span class="ask-row-label">Family</span><div class="ask-pills"><a class="ask-pill" href="/i-drive-family-guide.html">I-Drive</a><a class="ask-pill" href="/universal-family-guide.html">Universal</a><a class="ask-pill" href="/winter-park-family-guide.html">Winter Park</a><a class="ask-pill ask-pill-all" href="/archive.html?occasion=family">All family spots</a></div></div>
-        <div class="ask-row"><span class="ask-row-label">Date night</span><div class="ask-pills"><a class="ask-pill" href="/i-drive-date-night-guide.html">I-Drive</a><a class="ask-pill" href="/downtown-date-night-guide.html">Downtown</a><a class="ask-pill" href="/winter-park-date-night-guide.html">Winter Park</a><a class="ask-pill ask-pill-all" href="/archive.html?occasion=date">All date spots</a></div></div>
-        <div class="ask-row"><span class="ask-row-label">Groups</span><div class="ask-pills"><a class="ask-pill" href="/i-drive-groups-guide.html">I-Drive</a><a class="ask-pill" href="/downtown-groups-guide.html">Downtown</a><a class="ask-pill ask-pill-all" href="/archive.html?occasion=friends">All group spots</a></div></div>
-        <div class="ask-row"><span class="ask-row-label">Convention</span><div class="ask-pills"><a class="ask-pill" href="/i-drive-convention-guide.html">I-Drive</a><a class="ask-pill" href="/convention.html">Guidebook</a><a class="ask-pill" href="/i-drive-playbook.html">I-Drive playbook</a><a class="ask-pill ask-pill-all" href="/archive.html?occasion=convention">All convention spots</a></div></div>
-        <div class="ask-row"><span class="ask-row-label">Worth the drive</span><div class="ask-pills"><a class="ask-pill" href="/day-trips-finder.html">Day trips</a><a class="ask-pill ask-pill-all" href="/archive.html?district=day-trips">All day trip spots</a></div></div>
-        <p class="ask-panel-more">Building your own list instead? <a href="/archive.html">Custom Planners</a> opens the full guide with every filter.</p>
+        <div class="ask-route"><a class="ask-route-main" href="/archive.html?occasion=family"><span class="ask-route-name">Family</span><span class="ask-route-hook">Days out with kids</span></a><div class="ask-pills"><a class="ask-pill" href="/i-drive-family-guide.html">I-Drive</a><a class="ask-pill" href="/universal-family-guide.html">Universal</a><a class="ask-pill" href="/winter-park-family-guide.html">Winter Park</a></div></div>
+        <div class="ask-route"><a class="ask-route-main" href="/archive.html?occasion=date"><span class="ask-route-name">Date night</span><span class="ask-route-hook">Dinner and drinks for two</span></a><div class="ask-pills"><a class="ask-pill" href="/i-drive-date-night-guide.html">I-Drive</a><a class="ask-pill" href="/downtown-date-night-guide.html">Downtown</a><a class="ask-pill" href="/winter-park-date-night-guide.html">Winter Park</a></div></div>
+        <div class="ask-route"><a class="ask-route-main" href="/archive.html?occasion=friends"><span class="ask-route-name">Groups</span><span class="ask-route-hook">Room for the whole crew</span></a><div class="ask-pills"><a class="ask-pill" href="/i-drive-groups-guide.html">I-Drive</a><a class="ask-pill" href="/downtown-groups-guide.html">Downtown</a></div></div>
+        <div class="ask-route"><a class="ask-route-main" href="/archive.html?occasion=convention"><span class="ask-route-name">Convention</span><span class="ask-route-hook">After the sessions end</span></a><div class="ask-pills"><a class="ask-pill" href="/i-drive-convention-guide.html">I-Drive</a><a class="ask-pill" href="/convention.html">Guidebook</a><a class="ask-pill" href="/i-drive-playbook.html">I-Drive playbook</a></div></div>
+        <div class="ask-route"><a class="ask-route-main" href="/day-trips-finder.html"><span class="ask-route-name">Worth the drive</span><span class="ask-route-hook">Springs, small towns, detours</span></a></div>
       </div>
     
-      <div class="rn-fused" id="right-now">
-        <div class="ask-sub-head"><h3 id="rnTitle">Right Now</h3><p id="rnSub">Places that fit this part of the day.</p></div>
-        <div class="rn-grid" id="rnGrid"><span class="skel-sr" role="status">Loading the guide…</span><div class="pick-card skel-card" aria-hidden="true"><span class="skel-bar skel-k"></span><span class="skel-bar skel-n"></span><span class="skel-bar skel-m"></span><span class="skel-bar skel-g"></span></div><div class="pick-card skel-card" aria-hidden="true"><span class="skel-bar skel-k"></span><span class="skel-bar skel-n"></span><span class="skel-bar skel-m"></span><span class="skel-bar skel-g"></span></div><div class="pick-card skel-card" aria-hidden="true"><span class="skel-bar skel-k"></span><span class="skel-bar skel-n"></span><span class="skel-bar skel-m"></span><span class="skel-bar skel-g"></span></div><div class="pick-card skel-card" aria-hidden="true"><span class="skel-bar skel-k"></span><span class="skel-bar skel-n"></span><span class="skel-bar skel-m"></span><span class="skel-bar skel-g"></span></div><div class="pick-card skel-card" aria-hidden="true"><span class="skel-bar skel-k"></span><span class="skel-bar skel-n"></span><span class="skel-bar skel-m"></span><span class="skel-bar skel-g"></span></div><div class="pick-card skel-card" aria-hidden="true"><span class="skel-bar skel-k"></span><span class="skel-bar skel-n"></span><span class="skel-bar skel-m"></span><span class="skel-bar skel-g"></span></div></div>
-        <span class="location-status" id="rnStatus" role="status">Fits are picked from the guide's own notes on each place, never from opening hours, which this guide doesn't track. Location is requested only when you tap.</span>
-        <div class="rn-controls">
-        <button class="location-btn" id="rnNear" type="button" aria-pressed="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="3"></circle><path d="M12 2v3M12 19v3M2 12h3M19 12h3"></path><circle cx="12" cy="12" r="8"></circle></svg><span class="nearest-copy"><span class="nearest-title">Nearest to me</span><span class="nearest-detail">Tap once to sort these by distance</span></span><span class="nearest-action">Find</span></button>
+      <div class="rn-controls">
+        <button class="location-btn" id="rnNear" type="button" aria-pressed="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="3"></circle><path d="M12 2v3M12 19v3M2 12h3M19 12h3"></path><circle cx="12" cy="12" r="8"></circle></svg><span class="nearest-copy"><span class="nearest-title">Nearest to me</span><span class="nearest-detail">Tap to sort every place by distance</span></span><span class="nearest-action">Find</span></button>
         <a class="location-btn browse-btn" href="/archive.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"></path><circle cx="8.5" cy="6" r="1.3" fill="currentColor" stroke="none"></circle><circle cx="15.5" cy="12" r="1.3" fill="currentColor" stroke="none"></circle><circle cx="8.5" cy="18" r="1.3" fill="currentColor" stroke="none"></circle></svg><span class="nearest-copy"><span class="nearest-title">Browse all places</span><span class="nearest-detail">The full guide, every district and category</span></span><span class="nearest-action">Open</span></a>
-        </div>
       </div>
     </section>
 
@@ -728,7 +709,7 @@ html[data-theme="dark"] .export-trigger:hover,html[data-theme="dark"] .export-tr
 <script>
 /* ===== 407 FYI home (Phase 2) =====
    Data: places.json (shared with the archive). Helpers copied from the
-   guide's own logic so Right Now / Ask a Local use the same rules. */
+   guide's own logic so Ask a Local uses the same rules. */
 const $=s=>document.querySelector(s);
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const PICK_ORDER=['ava','quesa-loco','rusteak-thornton-park','fogo-orlando-vineland','the-guesthouse','fixtion','wall-street-plaza','elixir-kitchen-bar','iron-cow','toms-watch-bar-orlando','baires-grill-orlando','boxi-park','disney-springs-district','evermore-orlando-resort','orlando-vineland-premium-outlets','black-hammock-restaurant','imperial-on-park','prato'];
@@ -851,46 +832,6 @@ function renderPicks(){
   const rail=$('#picksRail');if(!rail)return;
   rail.innerHTML=PICK_ORDER.map(id=>PLACES.find(p=>p.id===id)).filter(Boolean).map(p=>venueCard(p,'Local Pick')).join('');
 }
-/* Right Now: the guide's own daypart logic, read against the clock.
-   Editorial fit only, never opening hours. */
-const DP_LABEL={breakfast:'Breakfast & coffee',brunch:'Brunch time',lunch:'Lunch hour',dinner:'Dinner & drinks',late:'Late night'};
-function currentDaypart(d){const h=d.getHours();return h<5?'late':h<10?'breakfast':h<12?'brunch':h<17?'lunch':h<22?'dinner':'late'}
-function rnList(){
-  const dp=currentDaypart(new Date());
-  let pool=PLACES.filter(p=>dayparts(p).includes(dp));
-  if(myPos)pool=pool.slice().sort((a,b)=>distanceMiles(a)-distanceMiles(b));
-  else pool=[...pool.filter(p=>PICK_ORDER.includes(p.id)).sort((a,b)=>PICK_ORDER.indexOf(a.id)-PICK_ORDER.indexOf(b.id)),...pool.filter(p=>!PICK_ORDER.includes(p.id))];
-  return {dp,list:pool.slice(0,6)};
-}
-function renderRightNow(){
-  const grid=$('#rnGrid');if(!grid)return;
-  const {dp,list}=rnList();
-  $('#rnSub').textContent=`${DP_LABEL[dp]} in Orlando, places that fit this part of the day.`;
-  grid.innerHTML=list.map(p=>venueCard(p,PICK_ORDER.includes(p.id)?'Local Pick':DP_LABEL[dp])).join('')||'<p class="rn-loading">Nothing in the guide fits this moment, browse the full list instead.</p>';
-}
-const rnNear=$('#rnNear'),rnStatus=$('#rnStatus');
-function setRnControl(title,detail,action,active){
-  rnNear.classList.toggle('active',!!active);rnNear.setAttribute('aria-pressed',String(!!active));
-  rnNear.querySelector('.nearest-title').textContent=title;
-  rnNear.querySelector('.nearest-detail').textContent=detail;
-  rnNear.querySelector('.nearest-action').textContent=action;
-}
-rnNear.addEventListener('click',()=>{
-  if(myPos){myPos=null;setRnControl('Nearest to me','Tap once to sort these by distance','Find',false);rnStatus.textContent='Location off. Right Now is back in guide order.';renderRightNow();return}
-  if(!navigator.geolocation){setRnControl('Nearest to me','Location is unavailable in this browser','Unavailable');rnStatus.textContent='Nearest sorting is unavailable here; the picks above still fit the moment.';return}
-  setRnControl('Finding your location','Waiting for permission…','···');
-  rnStatus.textContent='Your browser may ask for location permission.';
-  navigator.geolocation.getCurrentPosition(pos=>{
-    myPos={lat:pos.coords.latitude,lng:pos.coords.longitude};
-    setRnControl('Nearest first','Closest fitting places are now first','On',true);
-    rnStatus.textContent='Sorted by approximate straight-line distance. Tap again to turn it off.';
-    renderRightNow();
-  },err=>{
-    setRnControl('Nearest to me','Tap to try again','Retry');
-    const messages={1:'Location permission was denied; places remain in guide order.',2:'Your location is unavailable; places remain in guide order.',3:'Location timed out; places remain in guide order.'};
-    rnStatus.textContent=messages[err.code]||'Location is unavailable; places remain in guide order.';
-  },{enableHighAccuracy:false,maximumAge:300000,timeout:15000});
-});
 /* reveal on scroll (same pattern as the guide) */
 if('IntersectionObserver'in window){const revealObserver=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('inview');revealObserver.unobserve(entry.target)}}),{threshold:.06});document.querySelectorAll('.reveal').forEach(el=>revealObserver.observe(el))}
 else document.querySelectorAll('.reveal').forEach(el=>el.classList.add('inview'));
@@ -912,9 +853,8 @@ document.addEventListener('click',e=>{
 fetch('places.json?v=20261019p3').then(r=>{if(!r.ok)throw new Error('places.json HTTP '+r.status);return r.json()}).then(d=>{
   PLACES=d.places||[];
   const vc=$('#venueCount');if(vc)vc.textContent=PLACES.length;
-  renderPicks();renderRightNow();
+  renderPicks();
 }).catch(err=>{
-  const grid=$('#rnGrid');if(grid)grid.innerHTML='<p class="rn-loading">The guide data could not load here, the <a href="/archive.html">full guide</a> has everything.</p>';
   if(window.console)console.error(err);
 });
 </script>
@@ -1146,6 +1086,8 @@ fetch('places.json?v=20261019p3').then(r=>{if(!r.ok)throw new Error('places.json
   function close(){ modal.hidden = true; document.body.style.overflow = ''; if(lastFocus) lastFocus.focus(); }
   var nav = document.getElementById('navNearLink');
   if(nav) nav.addEventListener('click', function(e){ e.preventDefault(); open(); });
+  var rnBtn = document.getElementById('rnNear');
+  if(rnBtn) rnBtn.addEventListener('click', function(e){ e.preventDefault(); open(); });
   modal.querySelectorAll('[data-near-close]').forEach(function(el){ el.addEventListener('click', close); });
   document.addEventListener('keydown', function(e){ if(e.key === 'Escape' && !modal.hidden) close(); });
   btn.addEventListener('click', function(){
