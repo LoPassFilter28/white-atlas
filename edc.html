@@ -58,7 +58,32 @@
           linear-gradient(168deg, #1d3325, #14231a 55%, #0a1811);
         border-bottom: 1px solid var(--line);
       }
-      .hero-in { max-width: 860px; margin: 0 auto; }
+      .hero-in { max-width: 860px; margin: 0 auto; position: relative; z-index: 2; }
+
+      /* ---------- hero photo + glow (EDC imagery round) ---------- */
+      .hero-img-wrap { position: absolute; inset: 0; z-index: 0; overflow: hidden; }
+      .hero-img {
+        width: 100%; height: 100%; display: block; object-fit: cover; object-position: 50% 32%;
+        animation: heroDrift 38s ease-in-out infinite alternate; will-change: transform;
+      }
+      .hero-shade {
+        position: absolute; inset: 0;
+        background: radial-gradient(ellipse 78% 64% at 38% 30%, rgba(8,20,14,.84), rgba(8,20,14,.48) 55%, transparent 78%),
+          linear-gradient(180deg, rgba(10,24,17,.78), rgba(10,24,17,.48) 46%, rgba(10,24,17,.94)),
+          radial-gradient(ellipse 90% 55% at 50% 112%, rgba(189,144,73,.20), transparent 60%);
+      }
+      .hero-glow {
+        position: absolute; z-index: 1; left: 50%; top: 58%; width: 62vw; height: 62vw;
+        max-width: 720px; max-height: 720px; border-radius: 50%; pointer-events: none;
+        background: radial-gradient(circle, rgba(212,181,115,.32), rgba(58,90,53,.20) 55%, transparent 70%);
+        filter: blur(64px); transform: translate(-50%, -50%);
+        animation: glowPulse 9s ease-in-out infinite; will-change: transform, opacity;
+      }
+      @keyframes heroDrift { from { transform: scale(1.03); } to { transform: scale(1.13) translateY(-1.6%); } }
+      @keyframes glowPulse {
+        0%, 100% { opacity: .55; transform: translate(-50%, -50%) scale(1); }
+        50% { opacity: .95; transform: translate(-50%, -53%) scale(1.09); }
+      }
       .crumbs { font-size: .8rem; color: var(--muted); margin: 0 0 26px; }
       .crumbs a { font-weight: 700; }
       .hero-brand {
@@ -108,6 +133,45 @@
       .venue-links li { margin-bottom: 10px; }
       .venue-links a { font-weight: 800; text-underline-offset: 3px; }
       .venue-links span { color: var(--muted); }
+
+      /* ---------- EDC imagery: band, figures, marquee, reveals ---------- */
+      .band { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 28px 0 6px; }
+      .band figure, .fig { margin: 0; }
+      .shot { overflow: hidden; border-radius: 14px; border: 1px solid var(--line); background: var(--surface); }
+      .shot img { width: 100%; height: 100%; display: block; object-fit: cover; }
+      .band .shot { aspect-ratio: 3 / 2; }
+      .band img { aspect-ratio: 3 / 2; }
+      figcaption { font-size: .82rem; color: var(--muted); margin-top: 8px; line-height: 1.45; }
+      figcaption b { color: var(--accent-ink); font-weight: 700; }
+      .fig-row { display: grid; grid-template-columns: 1fr 288px; gap: 26px; align-items: start; }
+      .fig-row .shot { aspect-ratio: 4 / 5; }
+      .fig-row .shot img { aspect-ratio: 4 / 5; }
+      @media (max-width: 680px) {
+        .band { grid-template-columns: 1fr; }
+        .band .shot, .band img { aspect-ratio: 16 / 10; }
+        .fig-row { grid-template-columns: 1fr; }
+        .fig-row .shot, .fig-row .shot img { aspect-ratio: 16 / 10; }
+      }
+      .marquee {
+        border-bottom: 1px solid var(--line); background: var(--surface);
+        overflow: hidden; padding: 13px 0;
+        -webkit-mask-image: linear-gradient(90deg, transparent, #000 7%, #000 93%, transparent);
+        mask-image: linear-gradient(90deg, transparent, #000 7%, #000 93%, transparent);
+      }
+      .marquee-track { display: flex; width: max-content; animation: marqueeMove 32s linear infinite; will-change: transform; }
+      .mq-group { display: flex; align-items: center; flex: none; }
+      .mq-group span {
+        font-family: "Urbanist", sans-serif; font-weight: 700; letter-spacing: .18em;
+        text-transform: uppercase; font-size: .8rem; color: var(--muted);
+        padding: 0 16px; white-space: nowrap;
+      }
+      .mq-group .dot { color: var(--accent-ink); padding: 0; font-size: .62rem; }
+      @keyframes marqueeMove { to { transform: translateX(-50%); } }
+
+      /* Scroll reveals: hidden state exists only when JS is running (.js on <html>) */
+      .js .rv { opacity: 0; transform: translateY(16px); transition: opacity .7s ease, transform .7s cubic-bezier(.2,.6,.2,1); }
+      .js .rv.in { opacity: 1; transform: none; }
+      .js .rv-d1 { transition-delay: .08s; } .js .rv-d2 { transition-delay: .16s; } .js .rv-d3 { transition-delay: .24s; }
 
       /* ---------- jobs ---------- */
       .job-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 14px; margin-top: 22px; }
@@ -160,12 +224,22 @@
         background: radial-gradient(ellipse 90% 55% at 50% 112%, rgba(163,129,63,.30), transparent 60%),
           linear-gradient(168deg, color-mix(in srgb, var(--d-a) 24%, #faf6ec), color-mix(in srgb, var(--d-a) 40%, #faf6ec) 55%, color-mix(in srgb, var(--d-a) 14%, #faf6ec));
       }
+      html[data-theme="light"] .hero-shade {
+        background: radial-gradient(ellipse 78% 64% at 38% 30%, rgba(250,246,236,.90), rgba(250,246,236,.58) 55%, transparent 78%),
+          linear-gradient(180deg, rgba(250,246,236,.92), rgba(250,246,236,.78) 46%, rgba(250,246,236,.97)),
+          radial-gradient(ellipse 90% 55% at 50% 112%, rgba(163,129,63,.20), transparent 60%);
+      }
+      html[data-theme="light"] .hero-glow { background: radial-gradient(circle, rgba(163,129,63,.22), rgba(58,90,53,.10) 55%, transparent 70%); }
       html[data-theme="light"] .anchor-nav a, html[data-theme="light"] .flags span { background: rgba(29,42,32,.04); }
       html[data-theme="light"] .btn-big { background: var(--accent); color: #fff; }
       html[data-theme="light"] .btn-big:hover { background: var(--accent-ink); color: #fff; }
 
-      @media print { .anchor-nav { display: none; } }
-      @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+      @media print { .anchor-nav, .marquee { display: none; } }
+      @media (prefers-reduced-motion: reduce) {
+        html { scroll-behavior: auto; }
+        .hero-img, .hero-glow, .marquee-track { animation: none; }
+        .js .rv { opacity: 1; transform: none; transition: none; }
+      }
 
       /* ---------- events ---------- */
       .card .where { font-weight: 700; color: var(--ink); margin: 0 0 8px; font-size: .94rem; }
@@ -200,6 +274,12 @@
   </head>
   <body>
     <header class="hero">
+      <div class="hero-img-wrap">
+        <img class="hero-img" src="/assets/edc/hero-stage-dusk.jpg" width="1080" height="720" fetchpriority="high"
+          alt="The kineticFIELD main stage at EDC Orlando at dusk, lit in violet and gold above a full crowd" />
+        <div class="hero-shade"></div>
+        <div class="hero-glow" aria-hidden="true"></div>
+      </div>
       <div class="hero-in">
         <p class="crumbs"><a href="/">407 FYI</a> · <a href="/edm.html">EDM</a> · EDC Orlando</p>
         <a class="hero-brand" href="/">407 FYI · A Nightlife Guide</a>
@@ -210,24 +290,61 @@
       </div>
     </header>
 
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <div class="mq-group"><span>kineticFIELD</span><span class="dot">✦</span><span>circuitGROUNDS</span><span class="dot">✦</span><span>neonGARDEN</span><span class="dot">✦</span><span>stereoBLOOM</span><span class="dot">✦</span><span>Factory 93</span><span class="dot">✦</span><span>Bassrush</span><span class="dot">✦</span><span>Tinker Field</span><span class="dot">✦</span><span>November 6 to 8, 2026</span><span class="dot">✦</span></div>
+        <div class="mq-group"><span>kineticFIELD</span><span class="dot">✦</span><span>circuitGROUNDS</span><span class="dot">✦</span><span>neonGARDEN</span><span class="dot">✦</span><span>stereoBLOOM</span><span class="dot">✦</span><span>Factory 93</span><span class="dot">✦</span><span>Bassrush</span><span class="dot">✦</span><span>Tinker Field</span><span class="dot">✦</span><span>November 6 to 8, 2026</span><span class="dot">✦</span></div>
+      </div>
+    </div>
+
     <main>
-<section class="sec" id="weekend">
+<section class="sec rv" id="weekend">
         <p class="kicker">The Weekend</p>
         <h2>Three nights at Tinker Field</h2>
         <p class="lede">EDC Orlando is Insomniac's East Coast edition of Electric Daisy Carnival, and it runs November 6 to 8, 2026 at Tinker Field, the old ballpark grounds west of downtown. For one weekend the field becomes the biggest dance floor in Florida: multiple stages, carnival scale production, and a crowd that flies in for it.</p>
         <p>Insomniac runs the festival through its brand arms, and Orlando feels both of them. Factory 93 is the house and techno arm and has run stage takeovers at EDC Orlando; Bassrush is the bass arm, behind the circuitGROUNDS stage identity. Which arm you follow decides which festival you get.</p>
+        <div class="band">
+          <figure class="rv">
+            <div class="shot"><img src="/assets/edc/stage-night.jpg" width="840" height="560" loading="lazy" alt="The kineticFIELD stage at night, flame cannons firing above a packed crowd" /></div>
+            <figcaption><b>kineticFIELD after dark.</b> Flame cannons over a full house.</figcaption>
+          </figure>
+          <figure class="rv rv-d1">
+            <div class="shot"><img src="/assets/edc/owl-eyes.jpg" width="840" height="561" loading="lazy" alt="Close view of the glowing owl eyes at the center of the kineticFIELD stage" /></div>
+            <figcaption><b>The owl.</b> The watching face at the heart of the main stage.</figcaption>
+          </figure>
+          <figure class="rv rv-d2">
+            <div class="shot"><img src="/assets/edc/circuit-grounds.jpg" width="840" height="560" loading="lazy" alt="The circuitGROUNDS stage and its crowd at dusk, ringed with flame effects" /></div>
+            <figcaption><b>circuitGROUNDS at dusk.</b> The Bassrush end of the field.</figcaption>
+          </figure>
+        </div>
       </section>
 
-      <section class="sec" id="since-2011">
+      <section class="sec rv" id="since-2011">
         <p class="kicker">The Roots</p>
         <h2>Here since 2011</h2>
-        <p>Tinker Field has been EDC's Orlando home since the show first debuted here in 2011. The debut was a different scale of thing: about 12,000 people on the Friday and over 20,000 on the Saturday, with Paul van Dyk, Diplo and Benny Benassi headlining and two then rising names, Porter Robinson and Skrillex, lower on the bill. The festival that returns each November grew out of that weekend, in the city that had already given American dance music the Florida breaks. The longer story of that sound lives in the <a href="/edm.html#history">EDM section's history</a>.</p>
+        <div class="fig-row">
+          <div>
+            <p>Tinker Field has been EDC's Orlando home since the show first debuted here in 2011. The debut was a different scale of thing: about 12,000 people on the Friday and over 20,000 on the Saturday, with Paul van Dyk, Diplo and Benny Benassi headlining and two then rising names, Porter Robinson and Skrillex, lower on the bill. The festival that returns each November grew out of that weekend, in the city that had already given American dance music the Florida breaks. The longer story of that sound lives in the <a href="/edm.html#history">EDM section's history</a>.</p>
+          </div>
+          <figure class="fig rv">
+            <div class="shot"><img src="/assets/edc/daisies-night.jpg" width="576" height="720" loading="lazy" alt="Illuminated daisy sculptures glowing green, white and pink against the night sky" /></div>
+            <figcaption><b>The namesake.</b> The electric daisies, lit after dark.</figcaption>
+          </figure>
+        </div>
       </section>
 
-      <section class="sec" id="downtown">
+      <section class="sec rv" id="downtown">
         <p class="kicker">EDC Week</p>
         <h2>Downtown is the second site</h2>
-        <p class="lede">The festival officially starts before it starts. Insomniac presents the official EDC pre parties and afterparties across four nights in November, and downtown's two headline rooms carry them.</p>
+        <div class="fig-row">
+          <div>
+            <p class="lede">The festival officially starts before it starts. Insomniac presents the official EDC pre parties and afterparties across four nights in November: downtown's headline rooms carry them, and a Washington Street gastropub joins the official bills.</p>
+          </div>
+          <figure class="fig rv">
+            <div class="shot"><img src="/assets/edc/dj-portrait.jpg" width="576" height="720" loading="lazy" alt="A DJ performing with one hand on her headphones, hair in motion" /></div>
+            <figcaption><b>On the decks.</b> The 2025 edition, before the week spilled downtown.</figcaption>
+          </figure>
+        </div>
         <div class="cards">
           <article class="card">
             <h3><a href="/venue/vanguard.html">The Vanguard</a></h3>
@@ -242,13 +359,13 @@
           <article class="card">
             <h3><a href="/venue/elixir-kitchen-bar.html">Elixir Kitchen and Bar</a></h3>
             <p class="addr">Downtown</p>
-            <p>Proof the week spills past the headline clubs: in 2025 the downtown takeover reached rooms like Elixir, a gastropub by day that ends up on EDC week bills.</p>
+            <p>Official afterparties all three nights in a Washington Street gastropub: Adventure Club on Friday, November 6, AYYBO on Saturday, November 7, and Meduza on Sunday, November 8, 21+. All three come straight off the festival bill; Adventure Club plays a Friday sunset set at Tinker Field, Meduza plays Sunday.</p>
           </article>
         </div>
         <p>New for 2026, the week also has an official home base: Hotel EDC Orlando, at Margaritaville Resort Orlando, the first East Coast edition of Insomniac's hotel takeover format with Vibee.</p>
       </section>
 
-      <section class="sec" id="practical">
+      <section class="sec rv" id="practical">
         <p class="kicker">Practical Notes</p>
         <h2>Going</h2>
         <p>Plan the whole week, not just the weekend: the official parties start before the festival gates and the downtown rooms stay on festival time throughout. The <a href="/events.html">events calendar</a> carries EDC week with dates and sources, and the <a href="/edm.html">EDM section</a> maps the rooms themselves. Festival dates and party bills are checked against official sources and can change; confirm before you go.</p>
@@ -259,11 +376,28 @@
       <div class="foot-in">
         <a class="back-link" href="/">&larr; Back to the full guide</a>
         <p class="brand-line">407 FYI, an independent Orlando guide. Details can change; confirm before you go.</p>
+        <p>Festival photography: EDC Orlando 2025, from Insomniac's official EDC Orlando photo gallery.</p>
         <p>Hand-verified Orlando places · Checked October 2026 · Local Picks are never sponsored · Corrections: <a href="mailto:mail@407.fyi">mail@407.fyi</a></p>
         <p>Some links on 407 FYI are affiliate or referral links. We may earn a commission or credit at no extra cost to you. They never affect which places we list, rank, or recommend.</p>
         <p><a href="/privacy.html">Privacy</a></p>
       </div>
     </footer>
+
+<!-- Scroll reveals: progressive enhancement only. Without JS, or with
+     reduced motion, nothing is ever hidden. -->
+<script>
+  (function () {
+    var reduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (reduced || !('IntersectionObserver' in window)) return;
+    document.documentElement.classList.add('js');
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+      });
+    }, { threshold: 0.05, rootMargin: '0px 0px -6% 0px' });
+    document.querySelectorAll('.rv').forEach(function (el) { io.observe(el); });
+  })();
+</script>
 
 <!-- 407 FYI guide chat widget. Self-contained: style + markup + script.
      Talks to the Supabase chat edge function; answers come only from guide data. -->
