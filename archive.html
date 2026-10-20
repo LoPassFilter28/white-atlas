@@ -940,10 +940,10 @@ html:not([data-theme="dark"]) .upd-tag{color:#7c520c;background:rgba(124,82,12,.
      hard term to match somewhere; quality words (best, acclaimed, ...) only
      rank, they never gate. */
   const SEARCH_FIELDS=[
-    ['name',100],['categoryDetail',60],['category',55],['tags',45],['district',40],
+    ['name',100],['categoryDetail',60],['category',55],['tags',45],['district',40],['districtName',40],
     ['occasions',40],['dayparts',35],['address',25],['price',20],['area',12],['description',10]
   ];
-  const OCCASION_WORDS={date:'date night romantic anniversary special occasion celebration couples honeymoon',family:'family kids children child friendly',friends:'friends group groups gathering party',solo:'solo alone quiet',convention:'convention conference business event groups'};
+  const OCCASION_WORDS={date:'date night romantic anniversary special occasion couples honeymoon',family:'family kids children child friendly',friends:'friends group groups gathering party',solo:'solo alone quiet',convention:'convention conference business event groups'};
   const DAYPART_WORDS={breakfast:'breakfast morning',brunch:'brunch',lunch:'lunch',dinner:'dinner evening supper',late:'late night tonight evening'};
   function priceWords(p){
     if(String(p.price||'').toLowerCase()==='free')return 'free no cost';
@@ -955,7 +955,7 @@ html:not([data-theme="dark"]) .upd-tag{color:#7c520c;background:rgba(124,82,12,.
     return '';
   }
   const stemWord=w=>w.length>3&&w.endsWith('s')?w.slice(0,-1):w;
-  const TERM_EXPANSIONS={dinner:['dining','supper'],dining:['dinner'],cheap:['budget','affordable','inexpensive','value'],kid:['kids','family','children'],kids:['kid','family','children'],children:['kids','family'],tonight:['late','evening','dinner'],ride:['tour'],tour:['ride'],eats:['food','dining'],fancy:['upscale','fine','elegant','refined'],upscale:['fancy','fine','elegant'],elegant:['fancy','upscale','fine'],fine:['upscale','fancy','elegant']};
+  const TERM_EXPANSIONS={dinner:['dining','supper'],dining:['dinner'],cheap:['budget','affordable','inexpensive','value'],kid:['kids','family','children'],kids:['kid','family','children'],children:['kids','family'],tonight:['late','evening','dinner'],ride:['tour'],tour:['ride'],eats:['food','dining'],fancy:['upscale','fine','elegant','refined'],upscale:['fancy','fine','elegant'],elegant:['fancy','upscale','fine'],fine:['upscale','fancy','elegant'],vegetarian:['vegan'],dog:['pet']};
   const STOP_TERMS=new Set(['the','a','an','and','or','of','to','in','near','me','my','for','with','at','on','by','from','where','what','find','some','any','things','thing','do','does']);
   const SOFT_TERMS=new Set(['best','top','acclaimed','finest','great','famous','popular','favorite','favourite','most','renowned','celebrated','food','restaurant','restaurants','place','places','spot','spots','eatery','cuisine']);
   const ACCLAIM_TERMS=new Set(['anniversary','acclaimed','celebration','celebrate','occasion','best','finest','fancy','luxury','michelin','decorated','award','awards','romantic']);
@@ -976,50 +976,141 @@ html:not([data-theme="dark"]) .upd-tag{color:#7c520c;background:rgba(124,82,12,.
     if(searchIndexFor===PLACES)return searchIndex;
     searchIndexFor=PLACES;
     searchIndex=PLACES.map(p=>{
-      const raw={name:p.name||'',categoryDetail:p.categoryDetail||'',category:p.category||'',tags:(p.tags||[]).join(' '),district:p.district||'',area:specificArea(p),address:p.address||'',description:publicDescription(p),
+      const raw={name:p.name||'',categoryDetail:p.categoryDetail||'',category:p.category||'',tags:(p.tags||[]).join(' '),district:p.district||'',districtName:DISTRICT_NAMES[p.district_id]||'',area:specificArea(p),address:p.address||'',description:publicDescription(p),
         occasions:occasions(p).map(o=>OCCASION_WORDS[o]||o).join(' '),dayparts:dayparts(p).map(d=>DAYPART_WORDS[d]||d).join(' '),price:priceWords(p)};
       const fields={};
       for(const [key]of SEARCH_FIELDS){const text=normalizeSearch(raw[key]);fields[key]={text,words:text?text.split(' '):[]};}
-      return {fields,acclaim:acclaimSignal(p)};
+      return {fields,acclaim:acclaimSignal(p),category:p.category||''};
     });
     return searchIndex;
   }
   function termLevel(term,words,isName){
     const st=stemWord(term);let best=0;
-    const allow=isName?(term.length>=5?2:term.length>=4?1:0):(term.length>=8?2:term.length>=5?1:0);
+    // Fuzzy allowance (fix round 2026-10-20): the name field allows at most
+    // 1 edit at any length (2 edits put a roller coaster first for
+    // "lobster roll" and a museum as the only "kosher" hit); other fields
+    // allow no fuzzy below 6 letters (the 5-letter "halal"/"hall" collision
+    // inflated counts), 1 edit at 6-7 letters, 2 edits at 8+.
+    const allow=isName?(term.length>=4?1:0):(term.length>=8?2:term.length>=6?1:0);
     for(const word of words){
       if(stemWord(word)===st)return 3;
-      if(best<2&&term.length>=4&&(word.includes(term)||(word.length>=4&&term.includes(word)&&word.length>=term.length-1)))best=2;
-      else if(best<1&&allow&&Math.abs(term.length-word.length)<=allow&&editDistance(term,word)<=allow)best=1;
+      if(best<2&&term.length>=4){
+        // Prefix match counts only when the remainder is a plural or
+        // possessive suffix, so "polish" stops matching "polished" and
+        // "work" stops matching "wonderworks", while "sandwich" still
+        // resolves inside "sandwiches".
+        const rem=word.startsWith(term)?word.slice(term.length):null;
+        if(rem!==null&&(rem===''||rem==='s'||rem==='es'))best=2;
+        else if(word.length>=4&&term.includes(word)&&word.length>=term.length-1)best=2;
+      }
+      if(best<1&&allow&&Math.abs(term.length-word.length)<=allow&&editDistance(term,word)<=allow)best=1;
     }
     return best;
   }
   const LEVEL_FACTOR={0:0,1:0.3,2:0.55,3:1};
+  /* Vocabulary fix round 2026-10-20 (audit 2). Phrase substitutions rescue
+     intent phrases the term engine cannot hear ("things to do" is all stop
+     words; "near the parks" heard green parks instead of theme parks).
+     Generic occasion words (group, friendly, celebration) score through the
+     occasions expansion text but never satisfy a hard term through it, so
+     they stop flooding results; the record's own tags, name and description
+     still satisfy them. Meal words cannot be satisfied by the dayparts
+     expansion on non-food categories, so attractions stop answering
+     "dinner". Taught cuisine phrases must appear as a phrase in a head
+     field to include a record, so "soul food downtown" is an honest zero.
+     Cheap intent (cheap, inexpensive, budget, affordable) is a price
+     policy, not a text word: those terms never satisfy through any field;
+     only records whose own price field is the lowest tier ($, or free)
+     can answer a cheap query, so a "dining" tag or a description claim
+     can no longer flood it. A fuzzy-only (level 1) match includes a record only when corroborated:
+     in the name field, in two or more fields, or in any field for a term of
+     7+ letters, where a 1-edit match is unambiguous. */
+  const PHRASE_SUBS=[['things to do','attractions'],['near the parks','theme parks']];
+  const OCCASION_GENERIC=new Set(['group','groups','friendly','celebration']);
+  const MEAL_TERMS=new Set(['breakfast','lunch','dinner','brunch']);
+  const NONFOOD_MEAL_CATS=new Set(['Attractions','Parks & outdoors','Museums & landmarks']);
+  const CUISINE_PHRASES=['soul food','puerto rican','middle eastern','dim sum','hot pot','bubble tea','milk tea','ice cream'];
+  const CHEAP_TERMS=new Set(['cheap','inexpensive','budget','affordable']);
+  const HEAD_FIELD_KEYS=['name','categoryDetail','category','tags'];
+  let gatedPhrasesCache=null;
+  function cuisinePhraseGates(){
+    if(gatedPhrasesCache)return gatedPhrasesCache;
+    const idx=buildSearchIndex();
+    gatedPhrasesCache=CUISINE_PHRASES.filter(ph=>idx.some(e=>HEAD_FIELD_KEYS.some(k=>e.fields[k].text.includes(ph))));
+    return gatedPhrasesCache;
+  }
   function scorePlace(pi,query){
     const entry=buildSearchIndex()[pi];if(!entry)return -1;
-    const q=normalizeSearch(query);if(!q)return 0;
+    let q=normalizeSearch(query);if(!q)return 0;
+    for(const [from,to]of PHRASE_SUBS)if(q.includes(from))q=q.split(from).join(to);
+    const petGate=q.includes('dog friendly')||q.includes('pet friendly');
+    const gates=cuisinePhraseGates().filter(ph=>q.includes(ph));
     let terms=q.split(' ').filter(t=>!STOP_TERMS.has(t));
     if(!terms.length)terms=q.split(' ');
-    const hard=terms.filter(t=>!SOFT_TERMS.has(t)),soft=terms.filter(t=>SOFT_TERMS.has(t));
-    let score=0,phraseField=0;
-    for(const [key,weight]of SEARCH_FIELDS){if(entry.fields[key].text.includes(q))phraseField=Math.max(phraseField,weight);}
-    const termScore=term=>{
-      let best=-1;
+    const allTerms=terms;
+    const cheapGate=terms.some(t=>CHEAP_TERMS.has(t)||CHEAP_TERMS.has(stemWord(t)));
+    let hard=terms.filter(t=>!SOFT_TERMS.has(t)),soft=terms.filter(t=>SOFT_TERMS.has(t));
+    if(petGate){const drop=t=>!['dog','pet','friendly'].includes(t);hard=hard.filter(drop);soft=soft.filter(drop);}
+    if(cheapGate){const drop=t=>!CHEAP_TERMS.has(t)&&!CHEAP_TERMS.has(stemWord(t));hard=hard.filter(drop);soft=soft.filter(drop);}
+    for(const ph of gates){const words=ph.split(' ');hard=hard.filter(t=>!words.includes(t));soft=soft.filter(t=>!words.includes(t));}
+    let score=0;
+    if(petGate){
+      // Pet intent is a policy, not a food word: hot dog stands carry "dog"
+      // in the name but nothing about pets. Score only real pet evidence.
+      let petScore=0;
+      if(entry.fields.tags.text.includes('pet friendly'))petScore=90;
+      else if((entry.fields.name.text+' '+entry.fields.categoryDetail.text).includes('dog park'))petScore=80;
+      else if(entry.fields.description.text.includes('dog friendly')||entry.fields.description.text.includes('dog menu'))petScore=40;
+      if(!petScore)return -1;
+      score+=petScore;
+    }
+    if(cheapGate){
+      // Cheap intent is a price policy, not a text word: only the lowest
+      // price tier answers, whatever a record's tags or description claim.
+      // The tier is read from the record's own price field, the same field
+      // priceWords() translates for the text engine.
+      const rawPrice=String((PLACES[pi]||{}).price||'');
+      const runs=rawPrice.match(/\$+/g)||[];const tier=runs.reduce((m,r)=>Math.max(m,r.length),0);
+      if(!(rawPrice.toLowerCase()==='free'||tier===1))return -1;
+      score+=20;
+    }
+    for(const ph of gates){
+      let phBest=0;
+      for(const [key,weight]of SEARCH_FIELDS){if(HEAD_FIELD_KEYS.includes(key)&&entry.fields[key].text.includes(ph))phBest=Math.max(phBest,weight);}
+      if(!phBest)return -1;
+      score+=phBest;
+    }
+    const termEval=term=>{
       const candidates=[term,...(TERM_EXPANSIONS[stemWord(term)]||TERM_EXPANSIONS[term]||[])];
+      const skipDayparts=MEAL_TERMS.has(term)&&NONFOOD_MEAL_CATS.has(entry.category);
+      const generic=OCCASION_GENERIC.has(term)||candidates.some(c=>OCCASION_GENERIC.has(c));
+      let best=-1,satisfied=false,nameFuzzy=false,fuzzyFields=0;
       for(const [key,weight]of SEARCH_FIELDS){
+        if(skipDayparts&&key==='dayparts')continue;
         const words=entry.fields[key].words;if(!words.length)continue;
         let level=0;for(const cand of candidates){const l=termLevel(cand,words,key==='name');if(l>level)level=l;if(level===3)break;}
-        if(level>0)best=Math.max(best,weight*LEVEL_FACTOR[level]);
+        if(level>0){
+          best=Math.max(best,weight*LEVEL_FACTOR[level]);
+          if(level>=2){if(key!=='occasions'||!generic)satisfied=true;}
+          else if(key==='name')nameFuzzy=true;
+          else if(key!=='occasions')fuzzyFields++;
+        }
       }
-      return best;
+      if(!satisfied&&(nameFuzzy||fuzzyFields>=2||(term.length>=7&&fuzzyFields>=1)))satisfied=true;
+      return {score:best,satisfied};
     };
-    for(const term of hard){const s=termScore(term);if(s<0)return -1;score+=s;}
+    for(const term of hard){const r=termEval(term);if(!r.satisfied)return -1;score+=r.score;}
     let softHit=false;
-    for(const term of soft){const s=termScore(term);if(s>=0){softHit=true;score+=s;}}
-    if(!hard.length&&!softHit&&entry.acclaim<=0)return -1;
+    for(const term of soft){const r=termEval(term);if(r.satisfied){softHit=true;score+=Math.max(0,r.score);}}
+    if(!hard.length&&!gates.length&&!petGate&&!cheapGate&&!softHit&&entry.acclaim<=0)return -1;
+    let phraseField=0;
+    for(const [key,weight]of SEARCH_FIELDS){if(entry.fields[key].text.includes(q))phraseField=Math.max(phraseField,weight);}
     if(phraseField)score+=phraseField*1.2;
-    if(terms.some(t=>ACCLAIM_TERMS.has(t)||ACCLAIM_TERMS.has(stemWord(t))))score+=entry.acclaim*12;
-    else if(terms.includes('date')&&terms.includes('night'))score+=entry.acclaim*3;
+    // An exact district label match outranks cross-field term matches, so
+    // "Winter Garden" leads with Winter Garden, not Winter Park gardens.
+    if(entry.fields.district.text.includes(q)||entry.fields.districtName.text.includes(q))score+=120;
+    if(allTerms.some(t=>ACCLAIM_TERMS.has(t)||ACCLAIM_TERMS.has(stemWord(t))))score+=entry.acclaim*12;
+    else if(allTerms.includes('date')&&allTerms.includes('night'))score+=entry.acclaim*3;
     return score;
   }
   function matchesQuery(p,query){
@@ -1632,7 +1723,18 @@ function render(){
     {label:'poke',q:/\bpoke\b/,terms:['poke']},
     {label:'live music',q:/\b(live music|concerts?|music venues?)\b/,terms:['live music','concert','music venue'],cats:['Nightlife & music']},
     {label:'food halls and food trucks',q:/\b(food halls?|food trucks?)\b/,terms:['food hall','food truck']},
-    {label:'attractions and things to do',q:/\b(attractions?|things to do|theme parks?|amusement parks?)\b/,terms:['attraction','theme park','amusement'],cats:['Attractions'],weak:false}
+    {label:'attractions and things to do',q:/\b(attractions?|things to do|theme parks?|amusement parks?)\b/,terms:['attraction','theme park','amusement'],cats:['Attractions'],weak:false},
+    {label:'ethiopian and filipino',q:/\b(ethiopian|filipino)\b/,terms:['ethiopian','filipino'],weak:false},
+    {label:'korean',q:/\bkorean\b/,terms:['korean'],weak:false},
+    {label:'tapas and Spanish',q:/\b(tapas|spanish)\b/,terms:['tapas','spanish'],weak:false},
+    {label:'hawaiian',q:/\bhawaiian\b/,terms:['hawaiian'],weak:false},
+    {label:'cajun and creole',q:/\b(cajun|creole)\b/,terms:['cajun','creole'],weak:false},
+    {label:'southern',q:/\bsouthern\b/,terms:['southern'],weak:false},
+    {label:'deli',q:/\b(deli|delicatessen)\b/,terms:['deli','delicatessen']},
+    {label:'gastropub',q:/\bgastropubs?\b/,terms:['gastropub']},
+    {label:'farmers markets',q:/\bfarmers markets?\b/,terms:['farmers market']},
+    {label:'museums and landmarks',q:/\b(museums?|landmarks?)\b/,terms:['museum','landmark'],cats:['Museums & landmarks'],weak:false},
+    {label:'hotels and stays',q:/\b(hotels?|resorts?|lodging|places to stay)\b/,terms:['hotel','resort'],cats:['Hotels'],weak:false}
   ];
   const VIBE_AREA_ALIASES=[
     {q:/\b(disney|magic kingdom|epcot|hollywood studios|animal kingdom|lake buena vista|flamingo crossings)\b/,ids:['disney-area','disney-springs']},
@@ -1663,18 +1765,25 @@ function render(){
     {q:/\bcasselberry\b/,ids:[],labels:['Casselberry'],labelScope:['day-trips','unassigned']},
     {q:/\baltamonte springs\b/,ids:[],labels:['Altamonte Springs'],labelScope:['day-trips','unassigned']},
     {q:/\bapopka\b/,ids:[],labels:['Apopka'],labelScope:['day-trips','unassigned']},
-    {q:/\blake mary\b/,ids:[],labels:['Lake Mary'],labelScope:['day-trips','unassigned']},
+    {q:/\blake mary\b/,ids:[],labels:['Lake Mary'],labelScope:['day-trips','unassigned','sanford']},
     {q:/\bclermont\b/,ids:[],labels:['Clermont'],labelScope:['day-trips','unassigned']},
     {q:/\bwinter haven\b/,ids:[],labels:['Winter Haven'],labelScope:['day-trips','unassigned']},
     {q:/\brestaurant row\b/,ids:[],labels:['Sand Lake'],labelScope:['i-drive']},
     {q:/\bpark ave(nue)?\b/,ids:[],labels:['Park Ave'],labelScope:['winter-park']},
     {q:/\bsouth orlando\b/,ids:[],labels:['South Orlando']},
+    {q:/\bflorida mall\b/,ids:[],labels:['Florida Mall'],labelScope:['unassigned']},
+    {q:/\bmetrowest\b/,ids:[],labels:['Metrowest'],labelScope:['unassigned']},
+    {q:/\bsouth obt\b/,ids:[],labels:['South OBT'],labelScope:['unassigned']},
     {q:/\b(near the parks|theme parks?)\b/,ids:['disney-area','disney-springs','universal','kissimmee']}
   ];
   const VIBE_NONFOOD=['Attractions','Hotels','Museums & landmarks','Parks & outdoors','Nightlife & music'];
   function vibeTermHit(tokens,term){
     if(term.includes(' '))return tokens.join(' ').includes(term);
-    for(const w of tokens){if(w===term||w.startsWith(term)||term.startsWith(w))return true}
+    // Prefix relations need a real stem on the short side: without the
+    // length floors, one-letter tokens from possessives ("Mickey's" -> "s")
+    // made "spanish" and "southern" match half the guide, and the token
+    // "hot" (Hot Dogs) matched the term "hotel".
+    for(const w of tokens){if(w===term||(term.length>=3&&w.startsWith(term))||(w.length>=4&&term.startsWith(w)))return true}
     return false;
   }
   function vibeCatStrength(p,g){
@@ -1699,10 +1808,10 @@ function render(){
         const inStrong=scored.filter(x=>x.s===2&&vibeInArea(x.p,a)).map(x=>x.p);
         const inWeak=scored.filter(x=>x.s===1&&vibeInArea(x.p,a)).map(x=>x.p);
         inStrong.slice(0,6).forEach(push);
-        if(inStrong.length&&inStrong.length<=2)inWeak.slice(0,4-inStrong.length).forEach(push);
+        if(inStrong.length<=2)inWeak.slice(0,4-inStrong.length).forEach(push);
         if(inStrong.length||inWeak.length)placed=true;
       }
-      if(!placed)scored.filter(x=>x.s===2).slice(0,6).forEach(push);
+      if(!placed)scored.filter(x=>x.s===2).map(x=>x.p).slice(0,6).forEach(push);
     }
     return pins.slice(0,8);
   }
