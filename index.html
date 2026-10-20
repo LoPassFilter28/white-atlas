@@ -87,9 +87,6 @@
     .map-entry{width:100%;margin:24px 0 4px;padding:0;border:1px solid #6d5529;background:#12291c;color:var(--on-accent);display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:stretch;text-align:left;overflow:hidden}
     .map-entry-copy{display:grid;grid-template-columns:50px minmax(0,1fr);align-items:center;gap:15px;padding:19px 21px}.map-entry-icon{width:50px;height:50px;display:grid;place-items:center;border:1px solid rgba(255,255,255,.28);background:#1e3d27}.map-entry-icon svg{width:27px;height:27px;color:#c9a55c}.map-entry-label{display:block;color:#c9a55c;font-size:.72rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase}.map-entry-title{display:block;margin-top:2px;font-size:clamp(1.25rem,3vw,1.65rem);font-weight:800;line-height:1.05;letter-spacing:-.025em}.map-entry-detail{display:block;margin-top:5px;color:#d8cdb2;font-size:.78rem;line-height:1.35}
     .map-entry-action{min-width:158px;display:flex;align-items:center;justify-content:center;gap:9px;padding:18px 22px;border-left:1px solid rgba(255,255,255,.2);background:#b08a48;color:#221a08;font-size:.88rem;font-weight:800}.map-entry-action::after{content:'→';font-size:1.06rem}.map-entry:hover .map-entry-action,.map-entry:focus-visible .map-entry-action{background:#c9a55c}.map-entry:focus-visible{outline:3px solid var(--focus);outline-offset:2px}
-    .ask-local{margin:28px 0 0;background:var(--surface);color:var(--ink);border:1px solid var(--line);display:grid;grid-template-columns:minmax(230px,.72fr) minmax(0,1.28fr);align-items:stretch}
-    .ask-local-copy{padding:clamp(22px,4vw,32px);border-right:1px solid var(--line);display:flex;flex-direction:column;justify-content:center}.ask-local-kicker{margin:0 0 8px;color:var(--accent-ink);font-size:.78rem;font-weight:800}.ask-local h2{margin:0;color:var(--headline);font-size:clamp(1.85rem,4.8vw,3.15rem);line-height:.98;letter-spacing:-.05em}.ask-local-intro{margin:14px 0 0;color:var(--muted);font-size:.88rem;line-height:1.45}
-    .ask-picks-link{grid-column:1/-1;display:flex;align-items:center;justify-content:space-between;gap:18px;border-top:1px solid var(--line);padding:15px clamp(22px,4vw,32px);color:var(--accent-ink);text-decoration:none}.ask-picks-link:hover strong,.ask-picks-link:focus-visible strong{text-decoration:underline;text-underline-offset:3px}.ask-picks-link span{color:var(--muted);font-size:.78rem}.ask-picks-link strong{display:inline-flex;align-items:center;gap:8px;white-space:nowrap;font-size:.88rem}.ask-picks-link strong::after{content:'↓';font-size:1.06rem;color:var(--accent-ink)}
     .scanner-start{display:none;padding:4px 0 30px;border-bottom:1px solid var(--line)}
     html.scanner-mode .scanner-start{display:block}
     html.scanner-mode .app>:not(.mast):not(.scanner-start){display:none!important}
@@ -248,7 +245,7 @@
     html[data-theme="dark"] .nearest-action{background:#17130b;color:#c9a55c}html[data-theme="dark"] .location-btn{--nearest-ping:#c9a55c}html[data-theme="dark"] .location-btn.active{background:#14231a;border-color:var(--accent)}html[data-theme="dark"] .location-btn.active .nearest-action{background:var(--accent);color:var(--on-accent)}html[data-theme="dark"] .map-frame{border-color:#33503c;background:#08170e}html[data-theme="dark"] #map:focus-visible{box-shadow:inset 0 0 0 3px var(--focus)}html[data-theme="dark"] .map-brand{border-left-color:var(--accent)}html[data-theme="dark"] .legend-dot{background:var(--accent)}html[data-theme="dark"] .zoom-stack button{border-color:#33503c;background:rgba(8,20,12,.94)}html[data-theme="dark"] .zoom-stack button:active{background:var(--accent);color:var(--on-accent)}html[data-theme="dark"] .map-selection{box-shadow:0 10px 36px rgba(0,0,0,.58)}html[data-theme="dark"] .export-backdrop{background:rgba(4,10,7,.82)}
     html[data-theme="dark"] .history-tier-title{border-color:var(--line);background:#1a2f21;color:var(--accent-ink)}html[data-theme="dark"] .copy-status{background:var(--accent);color:var(--on-accent)}html[data-theme="dark"] option{background:var(--surface);color:var(--ink)}html[data-theme="dark"] .export-sheet{box-shadow:0 26px 90px rgba(0,0,0,.72)}html[data-theme="dark"] .finder{background:color-mix(in srgb,var(--bg) 96%,transparent)}html[data-theme="dark"] .tag.soon{color:var(--muted)}html[data-theme="dark"] .flashbacks{border-top-color:var(--headline)}
     @media(max-width:620px){
-      .app{padding-bottom:116px}.mast{padding-top:22px}.mast-row{margin-bottom:46px}.map-entry{grid-template-columns:1fr;margin-top:18px}.map-entry-copy{grid-template-columns:42px minmax(0,1fr);gap:12px;padding:16px}.map-entry-icon{width:42px;height:42px}.map-entry-icon svg{width:23px;height:23px}.map-entry-action{min-width:0;justify-content:space-between;padding:13px 16px;border-left:0;border-top:1px solid rgba(255,255,255,.2)}.venue-row{grid-template-columns:minmax(0,1fr) 70px}.venue-quick-actions{width:68px;margin:9px 0 9px 6px}.quick-directions,.copy-place,.flag-closure{width:68px;min-height:38px;padding:6px 4px;font-size:.72rem}.quick-directions::after{content:' ↗'}.data-out{align-items:flex-start}.data-out-note{max-width:48%}.copy-list{white-space:normal;text-align:center}.ask-local{grid-template-columns:1fr;margin-top:20px}.ask-local-copy{padding:22px 18px;border-right:0;border-bottom:1px solid var(--line)}.ask-picks-link{align-items:flex-start;padding:15px 18px}.ask-picks-link span{max-width:105px}.ask-picks-link strong{white-space:normal;text-align:right;justify-content:flex-end}.filters{grid-template-columns:1fr}.smart-filters{grid-template-columns:1fr 1fr}.finder{padding-top:10px}.location-bar{align-items:flex-start}.location-status{padding-top:3px}.map-head{align-items:flex-start}.map-head p{max-width:48%}.map-frame{height:min(62vh,480px);min-height:350px}.map-note{flex-direction:column;gap:4px}.venue-toggle{grid-template-columns:32px minmax(0,1fr);gap:9px;padding:19px 0}.venue-detail{padding-left:41px}.detail-grid{grid-template-columns:1fr;gap:16px}.detail-block.wide{grid-column:auto}.summary{padding-top:22px}.description{font-size:.88rem}.footer{flex-direction:column}.category-pills{display:flex;flex-wrap:wrap;gap:6px}.category-pill{flex:0 0 auto;min-height:42px;padding:8px 11px;font-size:.72rem}
+      .app{padding-bottom:116px}.mast{padding-top:22px}.mast-row{margin-bottom:46px}.map-entry{grid-template-columns:1fr;margin-top:18px}.map-entry-copy{grid-template-columns:42px minmax(0,1fr);gap:12px;padding:16px}.map-entry-icon{width:42px;height:42px}.map-entry-icon svg{width:23px;height:23px}.map-entry-action{min-width:0;justify-content:space-between;padding:13px 16px;border-left:0;border-top:1px solid rgba(255,255,255,.2)}.venue-row{grid-template-columns:minmax(0,1fr) 70px}.venue-quick-actions{width:68px;margin:9px 0 9px 6px}.quick-directions,.copy-place,.flag-closure{width:68px;min-height:38px;padding:6px 4px;font-size:.72rem}.quick-directions::after{content:' ↗'}.data-out{align-items:flex-start}.data-out-note{max-width:48%}.copy-list{white-space:normal;text-align:center}.filters{grid-template-columns:1fr}.smart-filters{grid-template-columns:1fr 1fr}.finder{padding-top:10px}.location-bar{align-items:flex-start}.location-status{padding-top:3px}.map-head{align-items:flex-start}.map-head p{max-width:48%}.map-frame{height:min(62vh,480px);min-height:350px}.map-note{flex-direction:column;gap:4px}.venue-toggle{grid-template-columns:32px minmax(0,1fr);gap:9px;padding:19px 0}.venue-detail{padding-left:41px}.detail-grid{grid-template-columns:1fr;gap:16px}.detail-block.wide{grid-column:auto}.summary{padding-top:22px}.description{font-size:.88rem}.footer{flex-direction:column}.category-pills{display:flex;flex-wrap:wrap;gap:6px}.category-pill{flex:0 0 auto;min-height:42px;padding:8px 11px;font-size:.72rem}
     }
     @media(max-width:620px){
       .scanner-head{display:block;padding-top:16px}.scanner-head p{max-width:none;margin-top:8px;text-align:left}.scanner-ask-head{display:block}.scanner-ask-head p{margin-top:3px;text-align:left}.scanner-ask-options{grid-template-columns:1fr}.scanner-start{padding-bottom:22px}
@@ -368,7 +365,7 @@
       .venue-quick-actions .copy-place,.venue-quick-actions .flag-closure{display:none}
       .venue-quick-actions{align-self:start;margin-top:14px}
       .district-name,.pick-card-name,.category-option,.list-shortcut,.nearest-title,.nearest-detail{overflow-wrap:anywhere;word-break:normal}
-      .layer-head>*,.district-card>*,.pick-card>*,.ask-local>*,.nearest-copy,.summary>*{min-width:0;max-width:100%}
+      .layer-head>*,.district-card>*,.pick-card>*,.nearest-copy,.summary>*{min-width:0;max-width:100%}
     }
     @media(min-width:1500px){
       :root{--max:1340px}
@@ -406,19 +403,6 @@
     @media(pointer:coarse){#map{touch-action:pan-y}}
     @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
   .brand-407{font-family:"Urbanist","Manrope",ui-sans-serif,sans-serif;font-weight:700;font-size:clamp(2.5rem,8vw,5rem);letter-spacing:.06em;line-height:1;white-space:nowrap;color:var(--ink)}.footer{flex-wrap:wrap}.footer .foot-col{flex:0 0 auto;min-width:150px}.footer .foot-col a{overflow-wrap:normal;word-break:normal}.footer .foot-main{flex:1 1 320px}
-.ask-row{display:flex;align-items:center;gap:14px;flex-wrap:wrap}.ask-row-label{width:96px;flex:none;font-weight:800;font-size:.85rem;color:var(--headline)}.ask-pill-all{background:transparent;color:var(--accent-ink)}
-.ask-panel{padding:clamp(20px,3vw,28px);display:flex;flex-direction:column;justify-content:center;gap:16px}.ask-pills{display:flex;flex-wrap:wrap;gap:8px}.ask-pill{display:inline-flex;align-items:center;min-height:44px;padding:9px 18px;border:1px solid var(--line);border-radius:999px;background:var(--bg);color:var(--ink);font-size:.88rem;font-weight:800;text-decoration:none}.ask-pill:hover,.ask-pill:focus-visible{border-color:var(--accent);background:var(--soft);outline:0}.ask-panel-more{margin:0;color:var(--muted);font-size:.82rem;line-height:1.45}.ask-panel-more a{color:var(--accent-ink);font-weight:700;text-decoration:none}.ask-panel-more a:hover{text-decoration:underline}
-.ask-panel{padding:clamp(14px,2.4vw,22px);gap:2px}
-.ask-route{position:relative;display:flex;align-items:center;gap:10px 14px;flex-wrap:wrap;padding:8px 2px;border-bottom:1px solid var(--line)}
-.ask-route:last-child{border-bottom:0}
-.ask-route-main{display:flex;align-items:baseline;gap:6px 10px;flex-wrap:wrap;color:var(--ink);text-decoration:none;min-width:0}
-.ask-route-main::after{content:'';position:absolute;inset:0}
-.ask-route-main:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
-.ask-route-name{font-weight:800;font-size:1rem;color:var(--headline)}
-.ask-route-main:hover .ask-route-name{color:var(--accent-ink)}
-.ask-route-hook{color:var(--muted);font-size:.82rem}
-.ask-route .ask-pills{position:relative;z-index:1;margin-left:auto}
-.ask-route .ask-pill{min-height:36px;padding:6px 13px;font-size:.8rem}
 </style>
   
 <link rel="icon" href="/favicon.ico" sizes="any"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest"><meta name="theme-color" content="#0a1811"><script type="application/ld+json">{
@@ -529,7 +513,6 @@
 .cover-card{min-height:190px}
 .cover-link{text-decoration:none}
 .cover-quote{position:relative;z-index:2;display:block;font-size:.78rem;line-height:1.45;color:rgba(253,246,227,.92);font-style:italic}
-.rn-controls{margin-top:24px;border-top:1px solid var(--line);padding-top:20px;display:grid;gap:8px;justify-items:start}
 .rn-dist{font-weight:700;color:var(--accent-ink)}
 .picks-note{margin:10px 2px 0;color:var(--muted);font-size:.78rem}
 .picks-rail .pick-card{text-decoration:none}
@@ -589,11 +572,12 @@ html[data-theme="dark"] .export-trigger:hover,html[data-theme="dark"] .export-tr
   </style>
 <style>
     /* Round 4: browse wide button, nearest window, toggle label, slim sections */
-    .browse-btn{text-decoration:none;margin-top:10px}
     .sec-sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
     #sectionCovers .district-card{min-height:100px}
     #sectionCovers .district-filter{padding:20px 14px 10px;gap:2px}
     #sectionCovers .section-hook{font-size:.84rem;line-height:1.32}
+    #sectionCovers{grid-auto-rows:1fr}
+    #sectionCovers .cover-link{justify-content:flex-start}
     .district-index ul{display:grid;grid-template-columns:1fr 1fr;column-gap:20px}
     .theme-toggle-text{position:static!important;width:auto!important;height:auto!important;clip:auto!important;overflow:visible!important;font-size:.8rem}
     .near-modal{position:fixed;inset:0;z-index:1400;display:flex;align-items:flex-end;justify-content:center}
@@ -635,7 +619,7 @@ html[data-theme="dark"] .export-trigger:hover,html[data-theme="dark"] .export-tr
       <div class="mast-title-row"><h1 class="brand-407" id="guideTitle">407&nbsp;FYI</h1></div>
       
       <nav class="home-nav" aria-label="Guide sections">
-        <a href="/nearest.html" id="navNearLink">Nearest</a><a href="/events.html">Events</a><a href="#ask">Ask a Local</a><a href="#sections">Sections</a><a href="#districts">Districts</a><a class="home-nav-cta" href="/archive.html">Browse all places</a>
+        <a href="/nearest.html" id="navNearLink">Nearest</a><a href="/events.html">Events</a><a href="#sections">Sections</a><a href="#districts">Districts</a><a class="home-nav-cta" href="/archive.html">Browse all places</a>
       </nav>
       <div class="primary-actions">
         <form class="hero-search" id="heroForm" action="/archive.html" method="get" role="search">
@@ -654,24 +638,7 @@ html[data-theme="dark"] .export-trigger:hover,html[data-theme="dark"] .export-tr
       </div>
     </header>
 
-    <section class="ask-local" id="ask" aria-labelledby="askLocalTitle">
-      <div class="ask-local-copy">
-        <h2 id="askLocalTitle">Ask a Local</h2>
-        <p class="ask-local-intro">Pick an occasion to start, or open a district page for its full shortlist.</p>
-      </div>
-      <div class="ask-panel">
-        <div class="ask-route"><a class="ask-route-main" href="/archive.html?occasion=family"><span class="ask-route-name">Family</span><span class="ask-route-hook">Days out with kids</span></a><div class="ask-pills"><a class="ask-pill" href="/i-drive-family-guide.html">I-Drive</a><a class="ask-pill" href="/universal-family-guide.html">Universal</a><a class="ask-pill" href="/winter-park-family-guide.html">Winter Park</a></div></div>
-        <div class="ask-route"><a class="ask-route-main" href="/archive.html?occasion=date"><span class="ask-route-name">Date night</span><span class="ask-route-hook">Dinner and drinks for two</span></a><div class="ask-pills"><a class="ask-pill" href="/i-drive-date-night-guide.html">I-Drive</a><a class="ask-pill" href="/downtown-date-night-guide.html">Downtown</a><a class="ask-pill" href="/winter-park-date-night-guide.html">Winter Park</a></div></div>
-        <div class="ask-route"><a class="ask-route-main" href="/archive.html?occasion=friends"><span class="ask-route-name">Groups</span><span class="ask-route-hook">Room for the whole crew</span></a><div class="ask-pills"><a class="ask-pill" href="/i-drive-groups-guide.html">I-Drive</a><a class="ask-pill" href="/downtown-groups-guide.html">Downtown</a></div></div>
-        <div class="ask-route"><a class="ask-route-main" href="/archive.html?occasion=convention"><span class="ask-route-name">Convention</span><span class="ask-route-hook">After the sessions end</span></a><div class="ask-pills"><a class="ask-pill" href="/i-drive-convention-guide.html">I-Drive</a><a class="ask-pill" href="/convention.html">Guidebook</a><a class="ask-pill" href="/i-drive-playbook.html">I-Drive playbook</a></div></div>
-        <div class="ask-route"><a class="ask-route-main" href="/day-trips-finder.html"><span class="ask-route-name">Worth the drive</span><span class="ask-route-hook">Springs, small towns, detours</span></a></div>
-      </div>
-    
-      <div class="rn-controls">
-        <button class="location-btn" id="rnNear" type="button" aria-pressed="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="3"></circle><path d="M12 2v3M12 19v3M2 12h3M19 12h3"></path><circle cx="12" cy="12" r="8"></circle></svg><span class="nearest-copy"><span class="nearest-title">Nearest to me</span><span class="nearest-detail">Tap to sort every place by distance</span></span><span class="nearest-action">Find</span></button>
-        <a class="location-btn browse-btn" href="/archive.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"></path><circle cx="8.5" cy="6" r="1.3" fill="currentColor" stroke="none"></circle><circle cx="15.5" cy="12" r="1.3" fill="currentColor" stroke="none"></circle><circle cx="8.5" cy="18" r="1.3" fill="currentColor" stroke="none"></circle></svg><span class="nearest-copy"><span class="nearest-title">Browse all places</span><span class="nearest-detail">The full guide, every district and category</span></span><span class="nearest-action">Open</span></a>
-      </div>
-    </section>
+
 
     <section class="layer events-feature-layer" id="events-feature" aria-labelledby="eventsFeatureTitle">
       <a class="evf-btn" href="/events.html">
@@ -709,7 +676,7 @@ html[data-theme="dark"] .export-trigger:hover,html[data-theme="dark"] .export-tr
 <script>
 /* ===== 407 FYI home (Phase 2) =====
    Data: places.json (shared with the archive). Helpers copied from the
-   guide's own logic so Ask a Local uses the same rules. */
+   guide's own logic. */
 const $=s=>document.querySelector(s);
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const PICK_ORDER=['ava','quesa-loco','rusteak-thornton-park','fogo-orlando-vineland','the-guesthouse','fixtion','wall-street-plaza','elixir-kitchen-bar','iron-cow','toms-watch-bar-orlando','baires-grill-orlando','boxi-park','disney-springs-district','evermore-orlando-resort','orlando-vineland-premium-outlets','black-hammock-restaurant','imperial-on-park','prato'];
@@ -1086,8 +1053,6 @@ fetch('places.json?v=20261019p3').then(r=>{if(!r.ok)throw new Error('places.json
   function close(){ modal.hidden = true; document.body.style.overflow = ''; if(lastFocus) lastFocus.focus(); }
   var nav = document.getElementById('navNearLink');
   if(nav) nav.addEventListener('click', function(e){ e.preventDefault(); open(); });
-  var rnBtn = document.getElementById('rnNear');
-  if(rnBtn) rnBtn.addEventListener('click', function(e){ e.preventDefault(); open(); });
   modal.querySelectorAll('[data-near-close]').forEach(function(el){ el.addEventListener('click', close); });
   document.addEventListener('keydown', function(e){ if(e.key === 'Escape' && !modal.hidden) close(); });
   btn.addEventListener('click', function(){
