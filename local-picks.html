@@ -1,0 +1,445 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="color-scheme" content="light dark" />
+    <title>Local Picks: Where a Local Sends You First | 407 FYI</title>
+    <meta name="description" content="The 407 FYI short list: the places a local sends you to first in Orlando. Chosen by editors, never sponsored." />
+    <link rel="canonical" href="https://407.fyi/local-picks.html" />
+    <meta property="og:title" content="Local Picks · 407 FYI" />
+    <meta property="og:description" content="The places a local sends you to first. Never sponsored." />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://407.fyi/local-picks.html" />
+    <meta property="og:image" content="https://407.fyi/og-image.png" />
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="preload" href="/fonts/manrope-latin.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="/fonts/fonts.css" />
+    <script>
+      try {
+        const savedTheme = localStorage.getItem('white-atlas-theme');
+        document.documentElement.dataset.theme = savedTheme === 'light' || savedTheme === 'dark' ? savedTheme : 'dark';
+      } catch (error) {
+        document.documentElement.dataset.theme = 'dark';
+      }
+    </script>
+<style>
+      /* Night Drive tokens (from the district guides) */
+      :root {
+        color-scheme: dark;
+        --bg: #0a1811; --surface: #122419; --soft: #172a1f; --ink: #f0e8d5;
+        --muted: #c6bba2; --line: #2f4a38; --accent: #765b2f; --accent-ink: #d4b573;
+        --headline: #f6edd6; --focus: #d4b573;
+        --d-a: #14231a; --d-b: #3a5a35; --d-c: #bd9049;
+        --pad: clamp(20px, 5vw, 40px);
+      }
+      * { box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
+      body {
+        margin: 0; background: var(--bg); color: var(--ink);
+        font-family: "Manrope", system-ui, sans-serif; line-height: 1.6;
+        overflow-x: hidden;
+      }
+      h1, h2, h3, .display { font-family: "Urbanist", "Manrope", sans-serif; }
+      a { color: var(--accent-ink); }
+      a:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
+      .kicker {
+        font-family: "Urbanist", sans-serif; font-weight: 700; letter-spacing: .22em;
+        font-size: .72rem; text-transform: uppercase; color: var(--accent-ink); margin: 0 0 14px;
+      }
+
+      /* ---------- hero ---------- */
+      .hero {
+        position: relative; padding: clamp(64px, 13vh, 130px) var(--pad) clamp(48px, 9vh, 84px);
+        background: radial-gradient(ellipse 90% 55% at 50% 112%, rgba(189,144,73,.26), transparent 60%),
+          linear-gradient(168deg, #1d3325, #14231a 55%, #0a1811);
+        border-bottom: 1px solid var(--line);
+      }
+      .hero-in { max-width: 860px; margin: 0 auto; }
+      .crumbs { font-size: .8rem; color: var(--muted); margin: 0 0 26px; }
+      .crumbs a { font-weight: 700; }
+      .hero-brand {
+        font-family: "Urbanist", sans-serif; font-weight: 700; letter-spacing: .22em;
+        font-size: .72rem; text-transform: uppercase; color: var(--accent-ink); text-decoration: none;
+      }
+      .hero h1 {
+        font-size: clamp(2.6rem, 8.5vw, 5.2rem); line-height: .98; letter-spacing: .01em;
+        color: var(--headline); margin: 18px 0 16px; text-transform: uppercase;
+      }
+      .hero .sub { font-size: clamp(1.05rem, 2.6vw, 1.3rem); color: var(--ink); max-width: 620px; margin: 0 0 10px; }
+      .hero .fine { color: var(--muted); max-width: 620px; margin: 0; }
+      .anchor-nav { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 30px; }
+      .anchor-nav a {
+        border: 1px solid var(--line); border-radius: 999px; padding: 8px 14px;
+        font-size: .82rem; font-weight: 700; text-decoration: none; background: rgba(255,255,255,.03);
+        min-height: 42px; display: inline-flex; align-items: center;
+      }
+      .anchor-nav a:hover { border-color: var(--accent-ink); }
+
+      /* ---------- sections ---------- */
+      main { display: block; }
+      .sec { max-width: 860px; margin: 0 auto; padding: clamp(52px, 9vh, 88px) var(--pad) 0; }
+      .sec h2 { font-size: clamp(1.7rem, 4.6vw, 2.4rem); line-height: 1.12; color: var(--headline); margin: 0 0 16px; }
+      .sec .lede { color: var(--muted); font-size: 1.04rem; max-width: 640px; margin: 0 0 26px; }
+      .sec p { max-width: 68ch; }
+      .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 14px; margin: 22px 0 6px; }
+      .card {
+        background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 20px;
+      }
+      .card h3 { margin: 0 0 6px; font-size: 1.12rem; color: var(--headline); }
+      .card .addr { font-weight: 800; color: var(--accent-ink); margin: 0 0 10px; font-size: .98rem; }
+      .card p { margin: 0; color: var(--muted); font-size: .94rem; }
+      .cols { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 22px 0 6px; }
+      @media (max-width: 680px) { .cols { grid-template-columns: 1fr; } }
+      .panel { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 20px 22px; }
+      .panel h3 { margin: 0 0 12px; font-size: 1.05rem; color: var(--headline); }
+      .panel ul, .plain-list { margin: 0; padding-left: 18px; }
+      .panel li, .plain-list li { margin-bottom: 9px; }
+      .panel li:last-child, .plain-list li:last-child { margin-bottom: 0; }
+      .note {
+        border-left: 3px solid var(--accent-ink); background: var(--soft);
+        padding: 14px 18px; border-radius: 0 12px 12px 0; margin: 22px 0 6px; max-width: 68ch;
+      }
+      .note p { margin: 0; }
+      .venue-links { list-style: none; margin: 0; padding: 0; }
+      .venue-links li { margin-bottom: 10px; }
+      .venue-links a { font-weight: 800; text-underline-offset: 3px; }
+      .venue-links span { color: var(--muted); }
+
+      /* ---------- jobs ---------- */
+      .job-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 14px; margin-top: 22px; }
+      .job { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 20px 22px; }
+      .job h3 { margin: 0 0 6px; font-size: 1.08rem; color: var(--headline); }
+      .job p { margin: 0 0 12px; color: var(--muted); font-size: .94rem; }
+      .job ul { list-style: none; margin: 0 0 14px; padding: 0; }
+      .job li { margin-bottom: 7px; }
+      .job li a { font-weight: 800; text-underline-offset: 3px; }
+      .job .browse { font-size: .86rem; font-weight: 800; text-transform: uppercase; letter-spacing: .08em; }
+
+      /* ---------- what to avoid ---------- */
+      .avoid { border-top: 1px solid var(--line); padding: 24px 0 6px; }
+      .avoid h3 { margin: 0 0 10px; font-size: 1.18rem; color: var(--headline); }
+      .avoid p { margin: 0 0 8px; max-width: 68ch; }
+      .avoid strong { color: var(--accent-ink); }
+      .flags { display: flex; flex-wrap: wrap; gap: 8px; margin: 18px 0 6px; }
+      .flags span {
+        border: 1px solid var(--accent); border-radius: 999px; padding: 7px 13px;
+        font-size: .85rem; font-weight: 700; color: var(--accent-ink); background: rgba(255,255,255,.03);
+      }
+      .rules { margin: 16px 0 0; padding-left: 20px; max-width: 68ch; }
+      .rules li { margin-bottom: 10px; }
+
+      .handoff { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 30px; }
+      .btn-big {
+        display: inline-flex; align-items: center; min-height: 52px; padding: 12px 22px;
+        background: var(--accent); color: #fff; font-weight: 800; border-radius: 999px; text-decoration: none;
+      }
+      .btn-big:hover { background: var(--accent-ink); color: #1d2a20; }
+      .btn-ghost {
+        display: inline-flex; align-items: center; min-height: 52px; padding: 12px 22px;
+        border: 1px solid var(--line); color: var(--accent-ink); font-weight: 800; border-radius: 999px; text-decoration: none;
+      }
+
+      footer { border-top: 1px solid var(--line); margin-top: clamp(52px, 9vh, 88px); }
+      .foot-in { max-width: 860px; margin: 0 auto; padding: 34px var(--pad) 44px; color: var(--muted); font-size: .9rem; }
+      .foot-in p { margin: 0 0 9px; }
+      .back-link { font-weight: 800; display: inline-block; margin-bottom: 16px; }
+      .brand-line { color: var(--ink); font-weight: 700; }
+
+      /* ---------- Light theme: app-page tokens ---------- */
+      html[data-theme="light"] {
+        color-scheme: light;
+        --bg: #faf6ec; --surface: #fffdf7; --soft: #f3ecd7; --ink: #1d2a20;
+        --muted: #4c5a45; --line: #ddd3ba; --accent: #8a5f0e; --accent-ink: #7c520c;
+        --headline: #123524; --focus: #8a5f0e;
+      }
+      html[data-theme="light"] .hero {
+        background: radial-gradient(ellipse 90% 55% at 50% 112%, rgba(163,129,63,.30), transparent 60%),
+          linear-gradient(168deg, color-mix(in srgb, var(--d-a) 24%, #faf6ec), color-mix(in srgb, var(--d-a) 40%, #faf6ec) 55%, color-mix(in srgb, var(--d-a) 14%, #faf6ec));
+      }
+      html[data-theme="light"] .anchor-nav a, html[data-theme="light"] .flags span { background: rgba(29,42,32,.04); }
+      html[data-theme="light"] .btn-big { background: var(--accent); color: #fff; }
+      html[data-theme="light"] .btn-big:hover { background: var(--accent-ink); color: #fff; }
+
+      @media print { .anchor-nav { display: none; } }
+      @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+      /* ---------- events ---------- */
+      .card .where { font-weight: 700; color: var(--ink); margin: 0 0 8px; font-size: .94rem; }
+      .card h3 a { text-decoration: none; }
+      .card h3 a:hover { text-decoration: underline; text-underline-offset: 3px; }
+      .wk {
+        font-family: "Urbanist", sans-serif; font-weight: 700; letter-spacing: .14em;
+        font-size: .95rem; text-transform: uppercase; color: var(--muted);
+        margin: 38px 0 2px;
+      }
+      .wk:first-of-type { margin-top: 6px; }
+      .ev-list { border-top: 1px solid var(--line); }
+      .ev {
+        display: grid; grid-template-columns: 150px 1fr; gap: 4px 20px;
+        padding: 17px 0; border-bottom: 1px solid var(--line);
+      }
+      .ev .d {
+        font-family: "Urbanist", sans-serif; font-weight: 800; color: var(--accent-ink);
+        font-size: .94rem; margin: 0; padding-top: 3px; line-height: 1.45;
+      }
+      .ev h3 { margin: 0 0 4px; font-size: 1.1rem; color: var(--headline); }
+      .ev .meta { margin: 0 0 5px; font-size: .95rem; color: var(--ink); }
+      .ev .meta a { font-weight: 800; text-underline-offset: 3px; }
+      .ev .blurb { margin: 0; color: var(--muted); font-size: .94rem; max-width: 62ch; }
+      @media (max-width: 640px) {
+        .ev { grid-template-columns: 1fr; }
+        .ev .d { padding-top: 0; }
+      }
+    .picks-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:14px;margin-top:22px}
+      .pick-card{display:flex;flex-direction:column;gap:5px;min-height:136px;padding:15px 16px;border:1px solid var(--line);border-top:3px solid var(--accent-ink);border-radius:12px;background:var(--surface);color:var(--ink);text-align:left;text-decoration:none}
+      .pick-card:hover{background:var(--soft)}
+      .pick-card-kicker{color:var(--accent-ink);font-size:.72rem;font-weight:800;letter-spacing:.09em;text-transform:uppercase}
+      .pick-card-name{font-size:1.06rem;font-weight:800;line-height:1.16;letter-spacing:-.01em}
+      .pick-card-meta{color:var(--muted);font-size:.72rem;line-height:1.35}
+      .pick-card-go{margin-top:auto;color:var(--accent-ink);font-size:.72rem;font-weight:800}
+      .picks-note{margin-top:20px;color:var(--muted);font-size:.85rem}
+    </style>
+    
+    
+  </head>
+  <body>
+    <header class="hero">
+      <div class="hero-in">
+        <p class="crumbs"><a href="/">407 FYI</a> · Local Picks</p>
+        <a class="hero-brand" href="/">407 FYI · Orlando, Like a Local</a>
+        <h1>Local Picks</h1>
+        <p class="sub">The short list. When a local gets asked where to go in Orlando and has five seconds to answer, these are the names that come out.</p>
+        <p class="fine">Local Picks are chosen by editors and are never sponsored. No venue can pay to be listed, ranked or picked on this page.</p>
+        <nav class="anchor-nav" aria-label="On this page"><a href="#picks">The picks</a><a href="/events.html">Events</a><a href="/#sections">The sections</a></nav>
+      </div>
+    </header>
+
+    <main>
+<section class="sec" id="picks">
+        <p class="kicker">The Short List</p>
+        <h2>Where a local sends you first</h2>
+        <p class="lede">Every guide has a long answer. This is the short one: the places that come up when a local is asked, with no time to think, where they would send a friend first. Tap any card for the place itself, its story, and what people are saying about it.</p>
+        <div class="picks-grid">
+          <a class="pick-card" href="/venue/ava.html"><span class="pick-card-kicker">Local Pick</span><span class="pick-card-name">AVA Mediterranean</span><span class="pick-card-meta">Mediterranean · Winter Park</span><span class="pick-card-go">View place</span></a>
+          <a class="pick-card" href="/venue/quesa-loco.html"><span class="pick-card-kicker">Local Pick</span><span class="pick-card-name">QuesaLoco</span><span class="pick-card-meta">Mexican · College Park</span><span class="pick-card-go">View place</span></a>
+          <a class="pick-card" href="/venue/rusteak-thornton-park.html"><span class="pick-card-kicker">Local Pick</span><span class="pick-card-name">Rusteak</span><span class="pick-card-meta">American · Downtown & Lake Eola</span><span class="pick-card-go">View place</span></a>
+          <a class="pick-card" href="/venue/fogo-orlando-vineland.html"><span class="pick-card-kicker">Local Pick</span><span class="pick-card-name">Fogo de Chão, Vineland Pointe</span><span class="pick-card-meta">Fine dining & steak · Disney & Lake Buena Vista</span><span class="pick-card-go">View place</span></a>
+          <a class="pick-card" href="/venue/the-guesthouse.html"><span class="pick-card-kicker">Local Pick</span><span class="pick-card-name">The Guesthouse</span><span class="pick-card-meta">Bars & lounges · Mills 50 & Ivanhoe</span><span class="pick-card-go">View place</span></a>
+          <a class="pick-card" href="/venue/fixtion.html"><span class="pick-card-kicker">Local Pick</span><span class="pick-card-name">Fixtion Restaurant & Bar</span><span class="pick-card-meta">American · Downtown & Lake Eola</span><span class="pick-card-go">View place</span></a>
+          <a class="pick-card" href="/venue/wall-street-plaza.html"><span class="pick-card-kicker">Local Pick</span><span class="pick-card-name">Wall Street Plaza</span><span class="pick-card-meta">Nightlife & music · Downtown & Lake Eola</span><span class="pick-card-go">View place</span></a>
+          <a class="pick-card" href="/venue/elixir-kitchen-bar.html"><span class="pick-card-kicker">Local Pick</span><span class="pick-card-name">Elixir Kitchen and Bar</span><span class="pick-card-meta">Bars & lounges · Downtown & Lake Eola</span><span class="pick-card-go">View place</span></a>
+          <a class="pick-card" href="/venue/iron-cow.html"><span class="pick-card-kicker">Local Pick</span><span class="pick-card-name">Iron Cow</span><span class="pick-card-meta">Japanese & sushi · Mills 50 & Ivanhoe</span><span class="pick-card-go">View place</span></a>
+          <a class="pick-card" href="/venue/toms-watch-bar-orlando.html"><span class="pick-card-kicker">Local Pick</span><span class="pick-card-name">Tom's Watch Bar</span><span class="pick-card-meta">Bars & lounges · Universal & I-Drive</span><span class="pick-card-go">View place</span></a>
+          <a class="pick-card" href="/venue/baires-grill-orlando.html"><span class="pick-card-kicker">Local Pick</span><span class="pick-card-name">Baires Grill</span><span class="pick-card-meta">Latin & Caribbean · Universal & I-Drive</span><span class="pick-card-go">View place</span></a>
+          <a class="pick-card" href="/venue/boxi-park.html"><span class="pick-card-kicker">Local Pick</span><span class="pick-card-name">Boxi Park Lake Nona</span><span class="pick-card-meta">Restaurants · Lake Nona</span><span class="pick-card-go">View place</span></a>
+          <a class="pick-card" href="/venue/disney-springs-district.html"><span class="pick-card-kicker">Local Pick</span><span class="pick-card-name">Disney Springs</span><span class="pick-card-meta">Markets & shops · Disney & Lake Buena Vista</span><span class="pick-card-go">View place</span></a>
+          <a class="pick-card" href="/venue/evermore-orlando-resort.html"><span class="pick-card-kicker">Local Pick</span><span class="pick-card-name">Evermore Orlando Resort</span><span class="pick-card-meta">Hotels · Disney & Lake Buena Vista</span><span class="pick-card-go">View place</span></a>
+          <a class="pick-card" href="/venue/orlando-vineland-premium-outlets.html"><span class="pick-card-kicker">Local Pick</span><span class="pick-card-name">Orlando Vineland Premium Outlets</span><span class="pick-card-meta">Markets & shops · Disney & Lake Buena Vista</span><span class="pick-card-go">View place</span></a>
+          <a class="pick-card" href="/venue/black-hammock-restaurant.html"><span class="pick-card-kicker">Local Pick</span><span class="pick-card-name">Black Hammock Restaurant</span><span class="pick-card-meta">Restaurants · Oviedo</span><span class="pick-card-go">View place</span></a>
+          <a class="pick-card" href="/venue/imperial-on-park.html"><span class="pick-card-kicker">Local Pick</span><span class="pick-card-name">The Imperial on Park</span><span class="pick-card-meta">Bars & lounges · Winter Park</span><span class="pick-card-go">View place</span></a>
+          <a class="pick-card" href="/venue/prato.html"><span class="pick-card-kicker">Local Pick</span><span class="pick-card-name">Prato</span><span class="pick-card-meta">Italian · Winter Park</span><span class="pick-card-go">View place</span></a>
+        </div>
+        <p class="picks-note">Local Picks are never sponsored. No venue can pay to be on this list, and affiliate links never change its order.</p>
+      </section>
+    </main>
+
+    <footer>
+      <div class="foot-in">
+        <a class="back-link" href="/">&larr; Back to the full guide</a>
+        <p class="brand-line">407 FYI, an independent Orlando guide. Details can change; confirm before you go.</p>
+        <p>Hand-verified Orlando places · Checked October 2026 · Local Picks are never sponsored · Corrections: <a href="mailto:mail@407.fyi">mail@407.fyi</a></p>
+        <p>Some links on 407 FYI are affiliate or referral links. We may earn a commission or credit at no extra cost to you. They never affect which places we list, rank, or recommend.</p>
+        <p><a href="/privacy.html">Privacy</a></p>
+      </div>
+    </footer>
+
+<!-- 407 FYI guide chat widget. Self-contained: style + markup + script.
+     Talks to the Supabase chat edge function; answers come only from guide data. -->
+<style id="fyi-chat-css">
+.fyi-chat-btn{position:fixed;right:16px;bottom:16px;z-index:1200;display:flex;align-items:center;gap:9px;
+  padding:15px 22px;border-radius:999px;border:2px solid #f6edd6;cursor:pointer;
+  background:var(--accent,#d4b573);color:#122419;
+  font-family:"Manrope",ui-sans-serif,sans-serif;font-size:16px;font-weight:800;letter-spacing:.01em;
+  box-shadow:0 12px 32px rgba(0,0,0,.5),0 0 0 5px rgba(212,181,115,.28)}
+.fyi-chat-btn:hover{filter:brightness(1.07)}
+.fyi-chat-btn svg{width:20px;height:20px}
+.fyi-chat-btn:hover{border-color:var(--focus,#d4b573)}
+.fyi-chat-btn svg{flex:none}
+.fyi-chat-panel{position:fixed;right:16px;bottom:70px;z-index:1200;width:min(384px,calc(100vw - 24px));
+  height:min(580px,calc(100dvh - 96px));display:none;flex-direction:column;overflow:hidden;
+  border-radius:16px;border:1px solid var(--line,#2f4a38);background:var(--surface,#122419);
+  box-shadow:0 18px 48px rgba(0,0,0,.45);font-family:"Manrope",ui-sans-serif,sans-serif}
+.fyi-chat-panel.open{display:flex}
+.fyi-chat-head{padding:14px 16px 10px;border-bottom:1px solid var(--line,#2f4a38);display:flex;gap:10px;align-items:flex-start}
+.fyi-chat-head h2{margin:0;font-family:"Urbanist","Manrope",sans-serif;font-size:19px;color:var(--headline,#f6edd6)}
+.fyi-chat-head p{margin:2px 0 0;font-size:12.5px;color:var(--muted,#c6bba2)}
+.fyi-chat-close{margin-left:auto;background:none;border:0;color:var(--muted,#c6bba2);font-size:20px;cursor:pointer;line-height:1;padding:2px 4px}
+.fyi-chat-msgs{flex:1;overflow-y:auto;padding:14px 14px 6px;display:flex;flex-direction:column;gap:10px}
+.fyi-chat-msg{max-width:88%;padding:9px 12px;border-radius:12px;font-size:14px;line-height:1.45;white-space:normal;overflow-wrap:break-word}
+.fyi-chat-msg p{margin:0 0 9px}
+.fyi-chat-msg p:last-child{margin-bottom:0}
+.fyi-chat-msg.bot{align-self:flex-start;background:var(--soft,#172a1f);color:var(--ink,#f0e8d5);border-bottom-left-radius:4px}
+.fyi-chat-msg.user{align-self:flex-end;background:var(--badge,#223c2b);color:var(--ink,#f0e8d5);border-bottom-right-radius:4px}
+.fyi-chat-msg.thinking{color:var(--muted,#c6bba2);font-style:italic}
+.fyi-chat-note{font:500 12px/1.5 Manrope,system-ui,sans-serif;color:var(--fyi-muted);background:var(--fyi-soft);border:1px dashed var(--fyi-line);border-radius:10px;padding:8px 10px;align-self:flex-start;max-width:96%}
+.fyi-chat-chips{display:flex;flex-wrap:wrap;gap:6px;align-self:flex-start;max-width:96%}
+.fyi-chat-chip{display:inline-block;padding:5px 10px;border-radius:999px;border:1px solid var(--line,#2f4a38);
+  background:var(--bg,#0a1811);color:var(--accent-ink,#d4b573);font-size:12.5px;font-weight:600;text-decoration:none}
+.fyi-chat-chip:hover{border-color:var(--accent,#d4b573)}
+.fyi-chat-chip small{color:var(--muted,#c6bba2);font-weight:500}
+.fyi-chat-form{display:flex;gap:8px;padding:10px;border-top:1px solid var(--line,#2f4a38)}
+.fyi-chat-input{flex:1;padding:10px 12px;border-radius:10px;border:1px solid var(--line,#2f4a38);
+  background:var(--bg,#0a1811);color:var(--ink,#f0e8d5);font:inherit;font-size:14px}
+.fyi-chat-input:focus{outline:2px solid var(--focus,#d4b573);outline-offset:0}
+.fyi-chat-send{padding:10px 14px;border-radius:10px;border:0;cursor:pointer;font:inherit;font-weight:800;
+  background:var(--accent,#d4b573);color:#122419}
+.fyi-chat-send:disabled{opacity:.55;cursor:wait}
+@media (max-width:480px){.fyi-chat-panel{right:8px;bottom:64px}.fyi-chat-btn{right:12px;bottom:12px}}
+</style>
+<button class="fyi-chat-btn" id="fyiChatBtn" aria-haspopup="dialog" aria-expanded="false">
+  <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+  ChatFYI
+</button>
+<section class="fyi-chat-panel" id="fyiChatPanel" role="dialog" aria-label="ChatFYI, the 407 FYI guide chat">
+  <div class="fyi-chat-head">
+    <div>
+      <h2>ChatFYI</h2>
+      <p>Answers only from the guide's own listings.</p>
+    </div>
+    <button class="fyi-chat-close" id="fyiChatClose" aria-label="Close chat">&times;</button>
+  </div>
+  <div class="fyi-chat-msgs" id="fyiChatMsgs"></div>
+  <form class="fyi-chat-form" id="fyiChatForm">
+    <input class="fyi-chat-input" id="fyiChatInput" type="text" autocomplete="off" maxlength="500"
+      placeholder="Ask about places in Orlando..." aria-label="Your question">
+    <button class="fyi-chat-send" id="fyiChatSend" type="submit">Send</button>
+  </form>
+</section>
+<script id="fyi-chat-js">
+(() => {
+  const FN = 'https://xxdgxigwpnezsdvbiawi.supabase.co/functions/v1/chat';
+  const KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inh4ZGd4aWd3cG5lenNkdmJpYXdpIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTE2OTM0MDYsImV4cCI6MjEwNzI2OTQwNn0.3fuj9vjXspT31fQhgcejf4Thmk9yHPc7RSBZ0v97Gw4';
+  const btn = document.getElementById('fyiChatBtn');
+  const panel = document.getElementById('fyiChatPanel');
+  const msgs = document.getElementById('fyiChatMsgs');
+  const form = document.getElementById('fyiChatForm');
+  const input = document.getElementById('fyiChatInput');
+  const send = document.getElementById('fyiChatSend');
+  let opened = false, busy = false, noticeShown = false;
+  const history = [];
+  let visitor = '';
+  try {
+    visitor = localStorage.getItem('fyi-chat-visitor') || '';
+    if (!visitor) {
+      visitor = (crypto.randomUUID ? crypto.randomUUID() : String(Date.now()) + Math.random().toString(36).slice(2));
+      localStorage.setItem('fyi-chat-visitor', visitor);
+    }
+  } catch (e) { visitor = 'anon'; }
+  const track = (name) => { try { if (window.captureEvent) captureEvent(name, {}); else if (window.posthog) posthog.capture(name); } catch (e) {} };
+  const esc = (s) => s.replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+  const fmt = (s) => s.split(/\n\s*\n/).map((para) => '<p>' + esc(para)
+    .replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>')
+    .replace(/^\s*[-*]\s+/gm, '• ')
+    .replace(/mail@407\.fyi/g, '<a href="mailto:mail@407.fyi" style="color:var(--fyi-accent)">mail@407.fyi</a>')
+    .replace(/\n/g, '<br>') + '</p>').join('');
+  function addMsg(cls, text) {
+    const d = document.createElement('div');
+    d.className = 'fyi-chat-msg ' + cls;
+    d.innerHTML = fmt(text);
+    msgs.appendChild(d);
+    msgs.scrollTop = msgs.scrollHeight;
+    return d;
+  }
+  function addChips(venues) {
+    if (!venues || !venues.length) return;
+    const row = document.createElement('div');
+    row.className = 'fyi-chat-chips';
+    for (const v of venues) {
+      const a = document.createElement('a');
+      a.className = 'fyi-chat-chip';
+      a.href = '/venue/' + v.id + '.html';
+      a.innerHTML = esc(v.name) + ' <small>' + esc(v.district || '') + '</small>';
+      row.appendChild(a);
+    }
+    msgs.appendChild(row);
+    msgs.scrollTop = msgs.scrollHeight;
+  }
+  function addGoogleChips(links) {
+    if (!links || !links.length) return;
+    const row = document.createElement('div');
+    row.className = 'fyi-chat-chips';
+    for (const v of links) {
+      const a = document.createElement('a');
+      a.className = 'fyi-chat-chip';
+      a.href = v.url;
+      a.target = '_blank';
+      a.rel = 'noopener';
+      a.innerHTML = esc(v.name) + ' <small>on Google</small>';
+      row.appendChild(a);
+    }
+    msgs.appendChild(row);
+    msgs.scrollTop = msgs.scrollHeight;
+  }
+  function toggle(open) {
+    panel.classList.toggle('open', open);
+    btn.setAttribute('aria-expanded', String(open));
+    if (open) {
+      if (!opened) {
+        opened = true;
+        addMsg('bot', 'Hi, I answer from the 407 FYI guide: date nights, coffee, family spots, neighborhoods, whatever you are after. We are in soft opening, so you get eight questions a day: make them thorough ones, with the neighborhood, the occasion, and the mood in a single ask, and you will get a fuller answer. One more limit: the guide does not list hours, so for hours or a phone number I will point you to the place on Google. What are you looking for?');
+        track('chat_open');
+      }
+      setTimeout(() => input.focus(), 60);
+    }
+  }
+  btn.addEventListener('click', () => toggle(!panel.classList.contains('open')));
+  document.getElementById('fyiChatClose').addEventListener('click', () => toggle(false));
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && panel.classList.contains('open')) toggle(false); });
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const q = input.value.trim();
+    if (!q || busy) return;
+    busy = true; send.disabled = true; input.value = '';
+    addMsg('user', q);
+    history.push({ role: 'user', text: q });
+    const thinking = addMsg('bot thinking', 'Looking through the guide...');
+    try {
+      const ctrl = new AbortController();
+      const timer = setTimeout(() => ctrl.abort(), 30000);
+      const r = await fetch(FN, {
+        method: 'POST',
+        headers: { 'Authorization': 'Bearer ' + KEY, 'apikey': KEY, 'Content-Type': 'application/json' },
+        body: JSON.stringify({ question: q, history: history.slice(0, -1).slice(-6), visitor }),
+        signal: ctrl.signal,
+      });
+      clearTimeout(timer);
+      const data = await r.json();
+      thinking.remove();
+      if (!r.ok || !data.answer) throw new Error('bad response');
+      if (data.notice && !noticeShown) {
+        noticeShown = true;
+        const n = document.createElement('div');
+        n.className = 'fyi-chat-note';
+        n.textContent = data.notice;
+        msgs.appendChild(n);
+      }
+      addMsg('bot', data.answer);
+      addChips(data.venues);
+      addGoogleChips(data.google);
+      history.push({ role: 'assistant', text: data.answer });
+      track('chat_question');
+    } catch (err) {
+      thinking.remove();
+      addMsg('bot', 'Something went wrong on my end. The finder on this page can still help, or try me again in a moment.');
+    }
+    busy = false; send.disabled = false; input.focus();
+  });
+})();
+</script>
+
+  </body>
+</html>

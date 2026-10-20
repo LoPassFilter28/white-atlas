@@ -611,6 +611,7 @@ html:not([data-theme="dark"]) .upd-tag{color:#7c520c;background:rgba(124,82,12,.
 .topbar .theme-toggle-text{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}}html:not([data-theme="dark"]) .cred-strip a{color:var(--accent-ink)}
 #venueList{min-height:100vh}
 </style>
+<style>.theme-toggle-text{position:static!important;width:auto!important;height:auto!important;clip:auto!important;overflow:visible!important;font-size:.8rem}</style>
 </head>
 <body><a class="skip-link" href="#venueList">Skip to places</a>
   <a class="skip-link" href="#venueList">Skip to venue list</a>
@@ -623,7 +624,7 @@ html:not([data-theme="dark"]) .upd-tag{color:#7c520c;background:rgba(124,82,12,.
         <button class="view-tab" id="mapView" type="button" aria-pressed="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m3 6 5-3 8 3 5-3v15l-5 3-8-3-5 3zM8 3v15M16 6v15"></path></svg><span>Map</span></button>
       </div>
       <button class="view-tab export-tab" id="exportTab" type="button" aria-pressed="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"></path><path d="m7 10 5 5 5-5"></path><path d="M5 21h14"></path></svg><span>Export</span></button>
-      <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false" aria-label="Switch to dark mode"><svg class="theme-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 15.2A8.5 8.5 0 0 1 8.8 4a8.5 8.5 0 1 0 11.2 11.2Z"></path></svg><svg class="theme-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path></svg><span class="theme-toggle-text">Dark mode</span></button>
+      <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false" aria-label="Switch theme"><span class="theme-toggle-text">🌙 Dark</span></button>
     </header>
     <h1 style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap">Browse every place in the 407 FYI Orlando guide</h1>
 
@@ -778,7 +779,7 @@ html:not([data-theme="dark"]) .upd-tag{color:#7c520c;background:rgba(124,82,12,.
     <section class="export-sheet" id="exportDialog" role="dialog" aria-modal="true" aria-labelledby="exportTitle" aria-describedby="exportIntro">
       <header class="export-head">
         <div><h2 id="exportTitle">Export</h2><p id="exportIntro">Choose what to take and how to use it.</p></div>
-        <div class="export-head-actions"><button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false" aria-label="Switch to dark mode"><svg class="theme-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 15.2A8.5 8.5 0 0 1 8.8 4a8.5 8.5 0 1 0 11.2 11.2Z"></path></svg><svg class="theme-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path></svg><span class="theme-toggle-text">Dark mode</span></button><button class="export-close" id="closeExport" type="button" aria-label="Close Export Center">×</button></div>
+        <div class="export-head-actions"><button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false" aria-label="Switch theme"><span class="theme-toggle-text">🌙 Dark</span></button><button class="export-close" id="closeExport" type="button" aria-label="Close Export Center">×</button></div>
       </header>
       <div class="export-scroll">
         <fieldset class="export-group">
@@ -899,7 +900,7 @@ html:not([data-theme="dark"]) .upd-tag{color:#7c520c;background:rgba(124,82,12,.
     themeButtons.forEach(button=>{
       button.setAttribute('aria-pressed',String(dark));
       button.setAttribute('aria-label',dark?'Switch to light mode':'Switch to dark mode');
-      button.querySelector('.theme-toggle-text').textContent=dark?'Light mode':'Dark mode';
+      button.querySelector('.theme-toggle-text').textContent=dark?'☀️ Light':'🌙 Dark';
     });
     syncMapTheme(dark);
   }
@@ -954,9 +955,9 @@ html:not([data-theme="dark"]) .upd-tag{color:#7c520c;background:rgba(124,82,12,.
     return '';
   }
   const stemWord=w=>w.length>3&&w.endsWith('s')?w.slice(0,-1):w;
-  const TERM_EXPANSIONS={dinner:['dining','supper'],dining:['dinner'],cheap:['budget','affordable','inexpensive','value'],kid:['kids','family','children'],kids:['kid','family','children'],children:['kids','family'],tonight:['late','evening','dinner'],ride:['tour'],tour:['ride'],eats:['food','dining']};
+  const TERM_EXPANSIONS={dinner:['dining','supper'],dining:['dinner'],cheap:['budget','affordable','inexpensive','value'],kid:['kids','family','children'],kids:['kid','family','children'],children:['kids','family'],tonight:['late','evening','dinner'],ride:['tour'],tour:['ride'],eats:['food','dining'],fancy:['upscale','fine','elegant','refined'],upscale:['fancy','fine','elegant'],elegant:['fancy','upscale','fine'],fine:['upscale','fancy','elegant']};
   const STOP_TERMS=new Set(['the','a','an','and','or','of','to','in','near','me','my','for','with','at','on','by','from','where','what','find','some','any','things','thing','do','does']);
-  const SOFT_TERMS=new Set(['best','top','acclaimed','finest','great','famous','popular','favorite','favourite','most','renowned','celebrated']);
+  const SOFT_TERMS=new Set(['best','top','acclaimed','finest','great','famous','popular','favorite','favourite','most','renowned','celebrated','food','restaurant','restaurants','place','places','spot','spots','eatery','cuisine']);
   const ACCLAIM_TERMS=new Set(['anniversary','acclaimed','celebration','celebrate','occasion','best','finest','fancy','luxury','michelin','decorated','award','awards','romantic']);
   function acclaimSignal(p){
     const t=p.tags||[];let s=0;
@@ -985,7 +986,7 @@ html:not([data-theme="dark"]) .upd-tag{color:#7c520c;background:rgba(124,82,12,.
   }
   function termLevel(term,words,isName){
     const st=stemWord(term);let best=0;
-    const allow=isName?(term.length>=5?2:term.length>=4?1:0):(term.length>=8?2:term.length>=4?1:0);
+    const allow=isName?(term.length>=5?2:term.length>=4?1:0):(term.length>=8?2:term.length>=5?1:0);
     for(const word of words){
       if(stemWord(word)===st)return 3;
       if(best<2&&term.length>=4&&(word.includes(term)||(word.length>=4&&term.includes(word)&&word.length>=term.length-1)))best=2;
@@ -1615,13 +1616,29 @@ function render(){
     {label:'breakfast and brunch',q:/\b(breakfast|brunch|pancakes?)\b/,terms:['breakfast','brunch']},
     {label:'barbecue',q:/\b(bbq|barbecue|barbeque|brisket)\b/,terms:['bbq','barbecue','smokehouse']},
     {label:'seafood',q:/\b(seafood|oysters?|crab|lobster)\b/,terms:['seafood']},
-    {label:'bakery and donuts',q:/\b(bakery|donuts?|doughnuts?|bagels?)\b/,terms:['bakery','donut','doughnut','bagel']}
+    {label:'bakery and donuts',q:/\b(bakery|donuts?|doughnuts?|bagels?)\b/,terms:['bakery','donut','doughnut','bagel']},
+    {label:'bars',q:/\b(cocktails?|wine bars?|sports bars?|dive bars?|tiki bars?|speakeasy|rooftop bars?|bars?)\b/,terms:['cocktail','wine bar','sports bar','dive bar','tiki bar','speakeasy','rooftop'],cats:['Bars & lounges'],weak:false},
+    {label:'chinese',q:/\bchinese\b/,terms:['chinese'],cats:['Chinese'],weak:false},
+    {label:'thai',q:/\bthai\b/,terms:['thai'],weak:false},
+    {label:'vietnamese',q:/\bvietnamese\b/,terms:['vietnamese'],weak:false},
+    {label:'latin and caribbean',q:/\b(cuban|puerto rican|dominican|colombian|peruvian|brazilian|caribbean|latin)\b/,terms:['cuban','puerto rican','dominican','colombian','peruvian','brazilian','caribbean','latin'],cats:['Latin & Caribbean'],weak:false},
+    {label:'mediterranean',q:/\b(mediterranean|greek|turkish|lebanese|middle eastern)\b/,terms:['mediterranean','greek','turkish','lebanese','middle eastern'],cats:['Mediterranean'],weak:false},
+    {label:'japanese',q:/\b(hibachi|izakaya|japanese)\b/,terms:['hibachi','izakaya','japanese'],cats:['Japanese & sushi'],weak:false},
+    {label:'indian',q:/\bindian\b/,terms:['indian'],cats:['Indian'],weak:false},
+    {label:'soul food',q:/\bsoul food\b/,terms:['soul food'],weak:false},
+    {label:'dim sum',q:/\bdim sum\b/,terms:['dim sum']},
+    {label:'hot pot',q:/\bhot ?pot\b/,terms:['hot pot']},
+    {label:'boba and bubble tea',q:/\b(boba|bubble tea|milk tea)\b/,terms:['boba','bubble tea','milk tea']},
+    {label:'poke',q:/\bpoke\b/,terms:['poke']},
+    {label:'live music',q:/\b(live music|concerts?|music venues?)\b/,terms:['live music','concert','music venue'],cats:['Nightlife & music']},
+    {label:'food halls and food trucks',q:/\b(food halls?|food trucks?)\b/,terms:['food hall','food truck']},
+    {label:'attractions and things to do',q:/\b(attractions?|things to do|theme parks?|amusement parks?)\b/,terms:['attraction','theme park','amusement'],cats:['Attractions'],weak:false}
   ];
   const VIBE_AREA_ALIASES=[
     {q:/\b(disney|magic kingdom|epcot|hollywood studios|animal kingdom|lake buena vista|flamingo crossings)\b/,ids:['disney-area','disney-springs']},
     {q:/\bcelebration\b/,ids:[],labels:['Celebration'],labelScope:['disney-area','kissimmee']},
     {q:/\b(universal|citywalk|islands of adventure|epic universe)\b/,ids:['universal']},
-    {q:/\b(i-drive|international drive|icon park|pointe orlando|seaworld|sea world|sand lake|dr\.? phillips|millenia)\b/,ids:['i-drive'],labels:['Sand Lake','Dr Phillips','Dr. Phillips','Dellagio','Millenia','Mall at Millenia','ICON Park','Pointe Orlando','SeaWorld Orlando']},
+    {q:/\b(i-drive|international drive|icon park|pointe orlando|seaworld|sea world|sand lake|dr\.? phillips|millenia|convention center|occc)\b/,ids:['i-drive'],labels:['Sand Lake','Dr Phillips','Dr. Phillips','Dellagio','Millenia','Mall at Millenia','ICON Park','Pointe Orlando','SeaWorld Orlando']},
     {q:/\bwinter park\b/,ids:['winter-park']},
     {q:/\bdowntown\b/,ids:['downtown','thornton-park']},
     {q:/\bmills 50\b/,ids:['mills-50']},
@@ -1639,7 +1656,20 @@ function render(){
     {q:/\bmaitland\b/,ids:['maitland']},
     {q:/\boviedo\b/,ids:['oviedo']},
     {q:/\bsodo\b/,ids:['sodo']},
-    {q:/\bcurry ford\b/,ids:['hourglass']}
+    {q:/\bcurry ford\b/,ids:['hourglass']},
+    {q:/\blongwood\b/,ids:[],labels:['Longwood'],labelScope:['day-trips','more']},
+    {q:/\bmount dora\b/,ids:[],labels:['Mount Dora'],labelScope:['day-trips','more']},
+    {q:/\bdeland\b/,ids:[],labels:['DeLand'],labelScope:['day-trips','more']},
+    {q:/\bcasselberry\b/,ids:[],labels:['Casselberry'],labelScope:['day-trips','more']},
+    {q:/\baltamonte springs\b/,ids:[],labels:['Altamonte Springs'],labelScope:['day-trips','more']},
+    {q:/\bapopka\b/,ids:[],labels:['Apopka'],labelScope:['day-trips','more']},
+    {q:/\blake mary\b/,ids:[],labels:['Lake Mary'],labelScope:['day-trips','more']},
+    {q:/\bclermont\b/,ids:[],labels:['Clermont'],labelScope:['day-trips','more']},
+    {q:/\bwinter haven\b/,ids:[],labels:['Winter Haven'],labelScope:['day-trips','more']},
+    {q:/\brestaurant row\b/,ids:[],labels:['Sand Lake'],labelScope:['i-drive']},
+    {q:/\bpark ave(nue)?\b/,ids:[],labels:['Park Ave'],labelScope:['winter-park']},
+    {q:/\bsouth orlando\b/,ids:[],labels:['South Orlando']},
+    {q:/\b(near the parks|theme parks?)\b/,ids:['disney-area','disney-springs','universal','kissimmee']}
   ];
   const VIBE_NONFOOD=['Attractions','Hotels','Museums & landmarks','Parks & outdoors','Nightlife & music'];
   function vibeTermHit(tokens,term){
@@ -1828,7 +1858,7 @@ function render(){
     if(bootParams.get('export')==='1')openExportCenter();
     if(bootParams.get('flashbacks')==='1')openFlashbacks();
   }
-  window.__placesReady=fetch('places.json?v=20261019p1').then(r=>{if(!r.ok)throw new Error('places.json HTTP '+r.status);return r.json()}).then(d=>{PLACES=d.places||[];VIATOR_DEEP_LINKS=d.viator||{};GYG_DEEP_LINKS=d.gyg||{};SOVRN_LINKS=d.sovrn||{};startApp();});
+  window.__placesReady=fetch('places.json?v=20261019p2').then(r=>{if(!r.ok)throw new Error('places.json HTTP '+r.status);return r.json()}).then(d=>{PLACES=d.places||[];VIATOR_DEEP_LINKS=d.viator||{};GYG_DEEP_LINKS=d.gyg||{};SOVRN_LINKS=d.sovrn||{};startApp();});
   window.__placesReady.catch(err=>{const rc=$('#resultCount');if(rc)rc.textContent='The place list could not load. Check your connection, then reload this page.';const vl=$('#venueList');if(vl)vl.innerHTML='';if(window.console)console.error(err);});
   </script>
 
@@ -1940,11 +1970,13 @@ if(document.readyState==="complete")polishReady();else window.addEventListener("
 <!-- 407 FYI guide chat widget. Self-contained: style + markup + script.
      Talks to the Supabase chat edge function; answers come only from guide data. -->
 <style id="fyi-chat-css">
-.fyi-chat-btn{position:fixed;right:16px;bottom:16px;z-index:1200;display:flex;align-items:center;gap:8px;
-  padding:11px 16px;border-radius:999px;border:1px solid var(--accent,#d4b573);cursor:pointer;
-  background:var(--surface,#122419);color:var(--headline,#f6edd6);
-  font-family:"Manrope",ui-sans-serif,sans-serif;font-size:14px;font-weight:700;
-  box-shadow:0 8px 24px rgba(0,0,0,.35)}
+.fyi-chat-btn{position:fixed;right:16px;bottom:16px;z-index:1200;display:flex;align-items:center;gap:9px;
+  padding:15px 22px;border-radius:999px;border:2px solid #f6edd6;cursor:pointer;
+  background:var(--accent,#d4b573);color:#122419;
+  font-family:"Manrope",ui-sans-serif,sans-serif;font-size:16px;font-weight:800;letter-spacing:.01em;
+  box-shadow:0 12px 32px rgba(0,0,0,.5),0 0 0 5px rgba(212,181,115,.28)}
+.fyi-chat-btn:hover{filter:brightness(1.07)}
+.fyi-chat-btn svg{width:20px;height:20px}
 .fyi-chat-btn:hover{border-color:var(--focus,#d4b573)}
 .fyi-chat-btn svg{flex:none}
 .fyi-chat-panel{position:fixed;right:16px;bottom:70px;z-index:1200;width:min(384px,calc(100vw - 24px));
@@ -1980,12 +2012,12 @@ if(document.readyState==="complete")polishReady();else window.addEventListener("
 </style>
 <button class="fyi-chat-btn" id="fyiChatBtn" aria-haspopup="dialog" aria-expanded="false">
   <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
-  Ask the guide
+  ChatFYI
 </button>
-<section class="fyi-chat-panel" id="fyiChatPanel" role="dialog" aria-label="Ask the 407 FYI guide">
+<section class="fyi-chat-panel" id="fyiChatPanel" role="dialog" aria-label="ChatFYI, the 407 FYI guide chat">
   <div class="fyi-chat-head">
     <div>
-      <h2>Ask 407 FYI</h2>
+      <h2>ChatFYI</h2>
       <p>Answers only from the guide's own listings.</p>
     </div>
     <button class="fyi-chat-close" id="fyiChatClose" aria-label="Close chat">&times;</button>

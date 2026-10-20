@@ -71,7 +71,7 @@
     .app{max-width:var(--max);margin:0 auto;padding:0 var(--pad) 116px}
     .mast{padding:42px 0 26px;border-bottom:1px solid var(--line)}
     .mast-row{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;margin-bottom:58px}
-    .mast-count{display:grid;justify-items:start;gap:10px}
+    .mast-count{display:grid;justify-items:end;gap:10px}
     .count{font-size:.78rem;font-weight:700;color:var(--muted);letter-spacing:.02em}
     .count b{color:var(--ink)}
     .mast-count .theme-toggle{min-height:44px;padding:7px 10px}
@@ -577,6 +577,60 @@ html[data-theme="dark"] .export-trigger:hover,html[data-theme="dark"] .export-tr
 #districts .layer-head p a:hover{text-decoration:underline}
 @media(max-width:620px){.story-door{top:12px;right:12px}}</style>
 
+<style>
+    /* Home reorg staging additions: events wide button */
+    .evf-kicker{color:var(--accent-ink);font-size:.72rem;font-weight:800;letter-spacing:.09em;text-transform:uppercase}
+    .evf-btn{position:relative;display:flex;flex-direction:column;gap:5px;padding:24px 64px 24px 22px;border:1px solid var(--line);border-top:3px solid var(--accent);border-radius:14px;background:var(--surface);text-decoration:none;transition:transform .16s ease,background .2s ease,box-shadow .2s ease}
+    .evf-btn:hover{background:var(--soft);transform:translateY(-2px);box-shadow:0 14px 30px rgba(0,0,0,.28)}
+    .evf-btn:active{transform:scale(.99)}
+    .evf-title{font-family:"Urbanist","Manrope",sans-serif;font-size:2rem;font-weight:800;line-height:1.05;letter-spacing:-.01em;color:var(--headline)}
+    .evf-sub{color:var(--muted);font-size:.9rem;font-weight:600;max-width:56ch}
+    .evf-arrow{position:absolute;right:22px;top:50%;transform:translateY(-50%);font-size:1.7rem;color:var(--accent-ink);transition:transform .18s ease}
+    .evf-btn:hover .evf-arrow{transform:translateY(-50%) translateX(6px)}
+    @media (prefers-reduced-motion: reduce){.evf-btn,.evf-arrow{transition:none}}
+    </style>
+<style>
+    /* Home reorg staging additions: nearest door */
+    .near-door{display:flex;flex-direction:column;gap:2px;margin:0 0 12px;padding:14px 16px;border:1px solid var(--line);border-left:3px solid var(--accent);border-radius:10px;background:var(--surface);color:var(--headline);font-weight:800;font-size:1rem;text-decoration:none}
+    .near-door span{color:var(--muted);font-weight:600;font-size:.8rem}
+    .near-door:hover{background:var(--soft)}
+  </style>
+<style>
+    /* Round 4: fused Right Now, browse wide button, nearest window, toggle label, slim sections */
+    .rn-fused{margin-top:28px;border-top:1px solid var(--line);padding-top:22px}
+    .ask-sub-head h3{font-family:"Urbanist","Manrope",sans-serif;font-size:1.35rem;font-weight:800;color:var(--headline);margin:0 0 4px}
+    .ask-sub-head p{color:var(--muted);margin:0 0 14px}
+    .rn-fused .location-status{display:block;margin:12px 2px 14px}
+    .browse-btn{text-decoration:none;margin-top:10px}
+    .sec-sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+    #sectionCovers .district-card{min-height:100px}
+    #sectionCovers .district-filter{padding:20px 14px 10px;gap:2px}
+    #sectionCovers .section-hook{font-size:.84rem;line-height:1.32}
+    .district-index ul{display:grid;grid-template-columns:1fr 1fr;column-gap:20px}
+    .theme-toggle-text{position:static!important;width:auto!important;height:auto!important;clip:auto!important;overflow:visible!important;font-size:.8rem}
+    .near-modal{position:fixed;inset:0;z-index:1400;display:flex;align-items:flex-end;justify-content:center}
+    .near-modal[hidden]{display:none}
+    .near-modal-backdrop{position:absolute;inset:0;background:rgba(4,10,7,.72);animation:nearFade .2s ease both}
+    .near-window{position:relative;width:min(560px,100%);max-height:88dvh;display:flex;flex-direction:column;background:var(--surface);border:1px solid var(--line);border-bottom:0;border-radius:18px 18px 0 0;padding:20px 18px calc(16px + env(safe-area-inset-bottom));box-shadow:0 -18px 60px rgba(0,0,0,.5);animation:nearUp .32s cubic-bezier(.2,.9,.3,1.1) both}
+    @keyframes nearFade{from{opacity:0}to{opacity:1}}
+    @keyframes nearUp{from{opacity:0;transform:translateY(26px) scale(.98)}to{opacity:1;transform:none}}
+    @keyframes nearPop{0%{transform:scale(.96);opacity:.3}60%{transform:scale(1.015);opacity:1}100%{transform:scale(1)}}
+    @keyframes nearRowPop{0%{opacity:0;transform:translateY(10px) scale(.98)}100%{opacity:1;transform:none}}
+    .near-window-head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:14px}
+    .near-window-head h2{font-family:"Urbanist","Manrope",sans-serif;font-size:1.4rem;font-weight:800;color:var(--headline);margin:0}
+    .near-close{width:42px;height:42px;border-radius:50%;border:1px solid var(--line);background:var(--soft);color:var(--ink);font-size:1.3rem;cursor:pointer;flex:none}
+    .near-close:active{transform:scale(.92)}
+    .near-window .location-btn{animation:nearPop .45s cubic-bezier(.2,.9,.3,1.25) both}
+    .near-window .near-list{margin-top:14px;border-top:1px solid var(--line);overflow-y:auto;min-height:0}
+    .near-row{display:flex;align-items:center;gap:14px;padding:13px 6px;border-bottom:1px solid var(--line);text-decoration:none;color:var(--ink);animation:nearRowPop .34s cubic-bezier(.2,.9,.3,1.15) both;animation-delay:calc(var(--i,0) * 18ms)}
+    .near-row:active{transform:scale(.99)}
+    .near-main{flex:1 1 auto;min-width:0;display:flex;flex-direction:column;gap:1px}
+    .near-name{font-weight:800;font-size:1.02rem;line-height:1.25;overflow-wrap:anywhere}
+    .near-meta{color:var(--muted);font-size:.8rem;line-height:1.35;overflow-wrap:anywhere}
+    .near-dist{flex:0 0 auto;color:var(--accent-ink);font-weight:800;font-size:.95rem;white-space:nowrap;text-align:right}
+    .near-full{display:block;margin-top:14px;text-align:center;color:var(--accent-ink);font-weight:800;font-size:.85rem;text-underline-offset:3px}
+    @media (prefers-reduced-motion: reduce){.near-window,.near-modal-backdrop,.near-row,.near-window .location-btn{animation:none}}
+  </style>
 </head>
 <body>
 <a class="skip-link" href="#districts">Skip to district stories</a>
@@ -585,14 +639,14 @@ html[data-theme="dark"] .export-trigger:hover,html[data-theme="dark"] .export-tr
       <div class="mast-row">
         <div class="mast-count">
           
-          <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false" aria-label="Switch to dark mode"><svg class="theme-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 15.2A8.5 8.5 0 0 1 8.8 4a8.5 8.5 0 1 0 11.2 11.2Z"></path></svg><svg class="theme-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path></svg><span class="theme-toggle-text">Dark mode</span></button>
+          <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false" aria-label="Switch theme"><span class="theme-toggle-text">🌙 Dark</span></button>
         </div>
       </div>
       <p class="context" id="guideContext">A local field guide to Orlando favorites.</p>
       <div class="mast-title-row"><h1 class="brand-407" id="guideTitle">407&nbsp;FYI</h1></div>
       
       <nav class="home-nav" aria-label="Guide sections">
-        <a href="#right-now">Right Now</a><a href="#districts">District Stories</a><a href="#picks">Local Picks</a><a href="/events.html">Events</a><a href="#ask">Ask a Local</a><a class="home-nav-cta" href="/archive.html">Browse all places</a>
+        <a href="/nearest.html" id="navNearLink">Nearest</a><a href="/events.html">Events</a><a href="#ask">Ask a Local</a><a href="#sections">Sections</a><a href="#districts">Districts</a><a class="home-nav-cta" href="/archive.html">Browse all places</a>
       </nav>
       <div class="primary-actions">
         <form class="hero-search" id="heroForm" action="/archive.html" method="get" role="search">
@@ -611,66 +665,6 @@ html[data-theme="dark"] .export-trigger:hover,html[data-theme="dark"] .export-tr
       </div>
     </header>
 
-    <section class="layer rn-layer" id="right-now" aria-labelledby="rnTitle">
-      <div class="layer-head">
-        <div><h2 id="rnTitle">Right Now</h2><p id="rnSub">Places that fit this part of the day.</p></div>
-      </div>
-      <div class="rn-grid" id="rnGrid"><span class="skel-sr" role="status">Loading the guide…</span><div class="pick-card skel-card" aria-hidden="true"><span class="skel-bar skel-k"></span><span class="skel-bar skel-n"></span><span class="skel-bar skel-m"></span><span class="skel-bar skel-g"></span></div><div class="pick-card skel-card" aria-hidden="true"><span class="skel-bar skel-k"></span><span class="skel-bar skel-n"></span><span class="skel-bar skel-m"></span><span class="skel-bar skel-g"></span></div><div class="pick-card skel-card" aria-hidden="true"><span class="skel-bar skel-k"></span><span class="skel-bar skel-n"></span><span class="skel-bar skel-m"></span><span class="skel-bar skel-g"></span></div><div class="pick-card skel-card" aria-hidden="true"><span class="skel-bar skel-k"></span><span class="skel-bar skel-n"></span><span class="skel-bar skel-m"></span><span class="skel-bar skel-g"></span></div><div class="pick-card skel-card" aria-hidden="true"><span class="skel-bar skel-k"></span><span class="skel-bar skel-n"></span><span class="skel-bar skel-m"></span><span class="skel-bar skel-g"></span></div><div class="pick-card skel-card" aria-hidden="true"><span class="skel-bar skel-k"></span><span class="skel-bar skel-n"></span><span class="skel-bar skel-m"></span><span class="skel-bar skel-g"></span></div></div>
-      <div class="rn-controls">
-        <button class="location-btn" id="rnNear" type="button" aria-pressed="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="3"></circle><path d="M12 2v3M12 19v3M2 12h3M19 12h3"></path><circle cx="12" cy="12" r="8"></circle></svg><span class="nearest-copy"><span class="nearest-title">Nearest to me</span><span class="nearest-detail">Tap once to sort these by distance</span></span><span class="nearest-action">Find</span></button>
-        <span class="location-status" id="rnStatus" role="status">Fits are picked from the guide's own notes on each place, never from opening hours, which this guide doesn't track. Location is requested only when you tap.</span>
-      </div>
-    </section>
-
-    <section class="layer districts-layer" id="districts" aria-labelledby="districtsTitle">
-      <div class="layer-head">
-        <div><h2 id="districtsTitle">District Stories</h2><p>Twelve neighborhoods, twelve stories: Orlando the way a local would show it to you. Every district also has its full history told in the <a href="/history.html">History</a> section.</p></div>
-      </div>
-      <div class="covers-grid" id="districtCovers">
-        <article class="district-card cover-card" style="--dg1:#0a2114;--dg2:#3c4527;--dg3:#a3813f"><a class="district-filter cover-link" href="/winter-park-district-guide.html"><span class="district-photo" aria-hidden="true"></span><span class="district-name">Winter Park</span><span class="cover-quote">&ldquo;Ask a Winter Park local where to eat, and watch their face change.&rdquo;</span><span class="district-count">72 places</span></a><a class="story-door" href="/history/winter-park.html">Read the story</a></article>
-        <article class="district-card cover-card" style="--dg1:#0a2621;--dg2:#2e5d52;--dg3:#ab8448"><a class="district-filter cover-link" href="/disney-springs-district-guide.html"><span class="district-photo" aria-hidden="true"></span><span class="district-name">Disney Springs</span><span class="cover-quote">&ldquo;Here is the local’s secret: the best night at Disney World never enters a park.&rdquo;</span><span class="district-count">18 places</span></a><a class="story-door" href="/history/disney-springs.html">Read the story</a></article>
-        <article class="district-card cover-card" style="--dg1:#2a1d10;--dg2:#71502a;--dg3:#b2945e"><a class="district-filter cover-link" href="/milk-district-guide.html"><span class="district-photo" aria-hidden="true"></span><span class="district-name">Milk District</span><span class="cover-quote">&ldquo;Every city has a sandwich shop its people would defend. Orlando’s is Beefy King.&rdquo;</span><span class="district-count">21 places</span></a><a class="story-door" href="/history/milk-district.html">Read the story</a></article>
-        <article class="district-card cover-card" style="--dg1:#241518;--dg2:#5c322e;--dg3:#ab7442"><a class="district-filter cover-link" href="/thornton-park-district-guide.html"><span class="district-photo" aria-hidden="true"></span><span class="district-name">Thornton Park</span><span class="cover-quote">&ldquo;Thornton Park is Orlando’s front porch.&rdquo;</span><span class="district-count">11 places</span></a><a class="story-door" href="/history/thornton-park.html">Read the story</a></article>
-        <article class="district-card cover-card" style="--dg1:#0c232b;--dg2:#2f5457;--dg3:#a37f3e"><a class="district-filter cover-link" href="/mills-50-district-guide.html"><span class="district-photo" aria-hidden="true"></span><span class="district-name">Mills 50</span><span class="cover-quote">&ldquo;Mills 50 does not ease you in: steam first.&rdquo;</span><span class="district-count">35 places</span></a><a class="story-door" href="/history/mills-50.html">Read the story</a></article>
-        <article class="district-card cover-card" style="--dg1:#1f2513;--dg2:#4d552c;--dg3:#ad8745"><a class="district-filter cover-link" href="/ivanhoe-village-district-guide.html"><span class="district-photo" aria-hidden="true"></span><span class="district-name">Ivanhoe Village</span><span class="cover-quote">&ldquo;Nobody stumbles into Ivanhoe Village by accident. Someone who loves this city grabs your sleeve: trust me, the lake.&rdquo;</span><span class="district-count">18 places</span></a><a class="story-door" href="/history/ivanhoe-village.html">Read the story</a></article>
-        <article class="district-card cover-card" style="--dg1:#0d1711;--dg2:#333f27;--dg3:#a3813f"><a class="district-filter cover-link" href="/downtown-orlando-district-guide.html"><span class="district-photo" aria-hidden="true"></span><span class="district-name">Downtown Orlando</span><span class="cover-quote">&ldquo;Downtown is where Orlando clocks in, and somewhere along the way it learned to stay out late.&rdquo;</span><span class="district-count">50 places</span></a><a class="story-door" href="/history/downtown.html">Read the story</a></article>
-        <article class="district-card cover-card" style="--dg1:#26150b;--dg2:#71401f;--dg3:#bd9049"><a class="district-filter cover-link" href="/international-drive-district-guide.html"><span class="district-photo" aria-hidden="true"></span><span class="district-name">International Drive</span><span class="cover-quote">&ldquo;Every city has a street it shows off. Orlando’s glows.&rdquo;</span><span class="district-count">94 places</span></a><a class="story-door" href="/history/i-drive.html">Read the story</a></article>
-        <article class="district-card cover-card" style="--dg1:#091f1d;--dg2:#2a4f40;--dg3:#a07e42"><a class="district-filter cover-link" href="/lake-nona-district-guide.html"><span class="district-photo" aria-hidden="true"></span><span class="district-name">Lake Nona</span><span class="cover-quote">&ldquo;Lake Nona feels like the future snuck in early. Appetite first.&rdquo;</span><span class="district-count">23 places</span></a><a class="story-door" href="/history/lake-nona.html">Read the story</a></article>
-        <article class="district-card cover-card" style="--dg1:#0b201b;--dg2:#2e5044;--dg3:#af8847"><a class="district-filter cover-link" href="/universal-district-guide.html"><span class="district-photo" aria-hidden="true"></span><span class="district-name">Universal</span><span class="cover-quote">&ldquo;Locals know it is two trips in one: parks by day, CityWalk by dark.&rdquo;</span><span class="district-count">23 places</span></a><a class="story-door" href="/history/universal.html">Read the story</a></article>
-        <article class="district-card cover-card" style="--dg1:#13220e;--dg2:#425c28;--dg3:#ac8a45"><a class="district-filter cover-link" href="/audubon-park-district-guide.html"><span class="district-photo" aria-hidden="true"></span><span class="district-name">Audubon Park</span><span class="cover-quote">&ldquo;Orlando has louder neighborhoods. None greener.&rdquo;</span><span class="district-count">10 places</span></a><a class="story-door" href="/history/audubon-park.html">Read the story</a></article>
-        <article class="district-card cover-card" style="--dg1:#201110;--dg2:#583622;--dg3:#a87f40"><a class="district-filter cover-link" href="/college-park-district-guide.html"><span class="district-photo" aria-hidden="true"></span><span class="district-name">College Park</span><span class="cover-quote">&ldquo;College Park never needed a theme.&rdquo;</span><span class="district-count">12 places</span></a><a class="story-door" href="/history/college-park.html">Read the story</a></article>
-      </div>
-    </section>
-
-    <section class="layer sections-layer" id="sections" aria-labelledby="sectionsTitle">
-      <div class="layer-head">
-        <div><h2 id="sectionsTitle">The Sections</h2><p>More than listings: the calendar, the scenes and the long stories that sit alongside the places.</p></div>
-      </div>
-      <div class="covers-grid" id="sectionCovers">
-        <article class="district-card cover-card" style="--dg1:#101d12;--dg2:#3a4d27;--dg3:#a3813f"><a class="district-filter cover-link" href="/events.html"><span class="district-photo" aria-hidden="true"></span><span class="section-kicker">The calendar</span><span class="district-name">Events Calendar</span><span class="cover-quote section-hook">Orlando, week by week: concerts, games, markets and one-night-only things.</span></a></article>
-        <article class="district-card cover-card" style="--dg1:#1d1220;--dg2:#4a2c44;--dg3:#a87f5e"><a class="district-filter cover-link" href="/edm.html"><span class="district-photo" aria-hidden="true"></span><span class="section-kicker">After dark</span><span class="district-name">EDM &amp; Nightlife</span><span class="cover-quote section-hook">The rooms, the crews and the festival weeks behind the Orlando sound.</span></a></article>
-        <article class="district-card cover-card" style="--dg1:#0c1f26;--dg2:#27506b;--dg3:#ab8448"><a class="district-filter cover-link" href="/sports.html"><span class="district-photo" aria-hidden="true"></span><span class="section-kicker">Game day</span><span class="district-name">Sports</span><span class="cover-quote section-hook">Magic, City, Pride, UCF and the long baseball spring, plus where to watch.</span></a></article>
-        <article class="district-card cover-card" style="--dg1:#0e2412;--dg2:#2f5d33;--dg3:#a8a04e"><a class="district-filter cover-link" href="/parks.html"><span class="district-photo" aria-hidden="true"></span><span class="section-kicker">Outdoors</span><span class="district-name">Parks &amp; Gardens</span><span class="cover-quote section-hook">The city’s green rooms: lake loops, dog parks, gardens and sunset spots.</span></a></article>
-        <article class="district-card cover-card" style="--dg1:#0a201c;--dg2:#1f5246;--dg3:#7fa35a"><a class="district-filter cover-link" href="/nature.html"><span class="district-photo" aria-hidden="true"></span><span class="section-kicker">The wild side</span><span class="district-name">Nature &amp; Springs</span><span class="cover-quote section-hook">Springs, trails and the wild Florida underneath Orlando.</span></a></article>
-        <article class="district-card cover-card" style="--dg1:#221709;--dg2:#6b4a24;--dg3:#bd9049"><a class="district-filter cover-link" href="/history.html"><span class="district-photo" aria-hidden="true"></span><span class="section-kicker">The archive</span><span class="district-name">History</span><span class="cover-quote section-hook">Flashbacks, district histories and the long stories behind the street names.</span></a></article>
-      </div>
-    </section>
-
-    <section class="layer district-index-layer" id="every-district" aria-labelledby="everyDistrictTitle">
-      <div class="layer-head">
-        <div><h2 id="everyDistrictTitle">Every district</h2><p>The stories are above. These are the working lists: every district and area in the guide, one finder page each, every place on it.</p></div>
-      </div>
-      <div class="district-index"><div class="di-group"><h3>Downtown and its neighborhoods</h3><ul><li><a href="/downtown-orlando-finder.html">Downtown Orlando</a></li><li><a href="/thornton-park-finder.html">Thornton Park</a></li><li><a href="/mills-50-finder.html">Mills 50</a></li><li><a href="/milk-district-finder.html">Milk District</a></li><li><a href="/ivanhoe-village-finder.html">Ivanhoe Village</a></li><li><a href="/college-park-finder.html">College Park</a></li><li><a href="/audubon-park-finder.html">Audubon Park</a></li><li><a href="/hourglass-finder.html">Hourglass</a></li><li><a href="/sodo-finder.html">SoDo</a></li></ul></div><div class="di-group"><h3>Winter Park and the north side</h3><ul><li><a href="/winter-park-finder.html">Winter Park</a></li><li><a href="/baldwin-park-finder.html">Baldwin Park</a></li><li><a href="/maitland-finder.html">Maitland</a></li><li><a href="/oviedo-finder.html">Oviedo</a></li><li><a href="/sanford-finder.html">Sanford</a></li></ul></div><div class="di-group"><h3>The visitor corridors</h3><ul><li><a href="/international-drive-finder.html">International Drive</a></li><li><a href="/universal-finder.html">Universal</a></li><li><a href="/disney-springs-finder.html">Disney Springs</a></li><li><a href="/disney-area-finder.html">Disney Area</a></li><li><a href="/kissimmee-finder.html">Kissimmee</a></li><li><a href="/lake-nona-finder.html">Lake Nona</a></li></ul></div><div class="di-group"><h3>East, west, and beyond</h3><ul><li><a href="/ucf-finder.html">UCF</a></li><li><a href="/winter-garden-finder.html">Winter Garden</a></li><li><a href="/more-orlando-finder.html">More Orlando</a></li></ul></div></div>
-    </section>
-
-    <section class="layer picks-layer" id="picks" aria-labelledby="picksRailTitle">
-      <div class="layer-head">
-        <div><h2 id="picksRailTitle">Local Picks</h2><p>The short list. Eighteen places a local sends you to first.</p></div>
-      </div>
-      <div class="picks-rail" id="picksRail"></div>
-      <p class="picks-note">Local Picks are never sponsored, no venue can pay to be on this list.</p>
-    </section>
-
     <section class="ask-local" id="ask" aria-labelledby="askLocalTitle">
       <div class="ask-local-copy">
         <p class="ask-local-kicker">A shortcut to local knowledge</p>
@@ -685,9 +679,47 @@ html[data-theme="dark"] .export-trigger:hover,html[data-theme="dark"] .export-tr
         <div class="ask-row"><span class="ask-row-label">Worth the drive</span><div class="ask-pills"><a class="ask-pill" href="/day-trips-finder.html">Day trips</a><a class="ask-pill ask-pill-all" href="/archive.html?district=day-trips">All day trip spots</a></div></div>
         <p class="ask-panel-more">Building your own list instead? <a href="/archive.html">Custom Planners</a> opens the full guide with every filter.</p>
       </div>
+    
+      <div class="rn-fused" id="right-now">
+        <div class="ask-sub-head"><h3 id="rnTitle">Right Now</h3><p id="rnSub">Places that fit this part of the day.</p></div>
+        <div class="rn-grid" id="rnGrid"><span class="skel-sr" role="status">Loading the guide…</span><div class="pick-card skel-card" aria-hidden="true"><span class="skel-bar skel-k"></span><span class="skel-bar skel-n"></span><span class="skel-bar skel-m"></span><span class="skel-bar skel-g"></span></div><div class="pick-card skel-card" aria-hidden="true"><span class="skel-bar skel-k"></span><span class="skel-bar skel-n"></span><span class="skel-bar skel-m"></span><span class="skel-bar skel-g"></span></div><div class="pick-card skel-card" aria-hidden="true"><span class="skel-bar skel-k"></span><span class="skel-bar skel-n"></span><span class="skel-bar skel-m"></span><span class="skel-bar skel-g"></span></div><div class="pick-card skel-card" aria-hidden="true"><span class="skel-bar skel-k"></span><span class="skel-bar skel-n"></span><span class="skel-bar skel-m"></span><span class="skel-bar skel-g"></span></div><div class="pick-card skel-card" aria-hidden="true"><span class="skel-bar skel-k"></span><span class="skel-bar skel-n"></span><span class="skel-bar skel-m"></span><span class="skel-bar skel-g"></span></div><div class="pick-card skel-card" aria-hidden="true"><span class="skel-bar skel-k"></span><span class="skel-bar skel-n"></span><span class="skel-bar skel-m"></span><span class="skel-bar skel-g"></span></div></div>
+        <span class="location-status" id="rnStatus" role="status">Fits are picked from the guide's own notes on each place, never from opening hours, which this guide doesn't track. Location is requested only when you tap.</span>
+        <div class="rn-controls">
+        <button class="location-btn" id="rnNear" type="button" aria-pressed="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="3"></circle><path d="M12 2v3M12 19v3M2 12h3M19 12h3"></path><circle cx="12" cy="12" r="8"></circle></svg><span class="nearest-copy"><span class="nearest-title">Nearest to me</span><span class="nearest-detail">Tap once to sort these by distance</span></span><span class="nearest-action">Find</span></button>
+        <a class="location-btn browse-btn" href="/archive.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"></path><circle cx="8.5" cy="6" r="1.3" fill="currentColor" stroke="none"></circle><circle cx="15.5" cy="12" r="1.3" fill="currentColor" stroke="none"></circle><circle cx="8.5" cy="18" r="1.3" fill="currentColor" stroke="none"></circle></svg><span class="nearest-copy"><span class="nearest-title">Browse all places</span><span class="nearest-detail">The full guide, every district and category</span></span><span class="nearest-action">Open</span></a>
+        </div>
+      </div>
     </section>
 
-    <div class="browse-cta"><a class="browse-cta-btn" href="/archive.html">Browse all places<span>Search, district tabs, the map and export, the whole guide, one door.</span></a></div>
+    <section class="layer events-feature-layer" id="events-feature" aria-labelledby="eventsFeatureTitle">
+      <a class="evf-btn" href="/events.html">
+        <span class="evf-kicker">October / November</span>
+        <span class="evf-title" id="eventsFeatureTitle">Events Calendar</span>
+        <span class="evf-sub">Concerts, games, festivals and holiday nights, week by week. Dates checked against official sources; confirm before you go.</span>
+        <span class="evf-arrow" aria-hidden="true">&rarr;</span>
+      </a>
+    </section>
+
+    <section class="layer sections-layer" id="sections" aria-labelledby="sectionsTitle">
+      <h2 id="sectionsTitle" class="sec-sr">The Sections</h2>
+      <div class="covers-grid" id="sectionCovers">
+        
+        <article class="district-card cover-card" style="--dg1:#12240f;--dg2:#3d5231;--dg3:#bd9049"><a class="district-filter cover-link" href="/local-picks.html"><span class="district-photo" aria-hidden="true"></span><span class="section-kicker">The short list</span><span class="district-name">Local Picks</span><span class="cover-quote section-hook">The places a local sends you to first. Never sponsored, and no venue can buy its way on.</span></a></article>
+        <article class="district-card cover-card" style="--dg1:#1d1220;--dg2:#4a2c44;--dg3:#a87f5e"><a class="district-filter cover-link" href="/edm.html"><span class="district-photo" aria-hidden="true"></span><span class="section-kicker">After dark</span><span class="district-name">EDM &amp; Nightlife</span><span class="cover-quote section-hook">The rooms, the crews and the festival weeks behind the Orlando sound.</span></a></article>
+        <article class="district-card cover-card" style="--dg1:#0c1f26;--dg2:#27506b;--dg3:#ab8448"><a class="district-filter cover-link" href="/sports.html"><span class="district-photo" aria-hidden="true"></span><span class="section-kicker">Game day</span><span class="district-name">Sports</span><span class="cover-quote section-hook">Magic, City, Pride, UCF and the long baseball spring, plus where to watch.</span></a></article>
+        <article class="district-card cover-card" style="--dg1:#0e2412;--dg2:#2f5d33;--dg3:#a8a04e"><a class="district-filter cover-link" href="/parks.html"><span class="district-photo" aria-hidden="true"></span><span class="section-kicker">Outdoors</span><span class="district-name">Parks &amp; Gardens</span><span class="cover-quote section-hook">The city’s green rooms: lake loops, dog parks, gardens and sunset spots.</span></a></article>
+        <article class="district-card cover-card" style="--dg1:#0a201c;--dg2:#1f5246;--dg3:#7fa35a"><a class="district-filter cover-link" href="/nature.html"><span class="district-photo" aria-hidden="true"></span><span class="section-kicker">The wild side</span><span class="district-name">Nature &amp; Springs</span><span class="cover-quote section-hook">Springs, trails and the wild Florida underneath Orlando.</span></a></article>
+        <article class="district-card cover-card" style="--dg1:#221709;--dg2:#6b4a24;--dg3:#bd9049"><a class="district-filter cover-link" href="/history.html"><span class="district-photo" aria-hidden="true"></span><span class="section-kicker">The archive</span><span class="district-name">History</span><span class="cover-quote section-hook">Flashbacks, district histories and the long stories behind the street names.</span></a></article>
+      </div>
+    </section>
+
+    <section class="layer districts-layer" id="districts" aria-labelledby="districtsTitle">
+      <div class="layer-head">
+        <div><h2 id="districtsTitle">Districts</h2><p>Every district and area in the guide. Where a district has a story, its link opens the story; the rest open their guide page, every place on it.</p></div>
+      </div>
+      <div class="district-index"><div class="di-group"><h3>Downtown and its neighborhoods</h3><ul><li><a href="/history/downtown.html">Downtown Orlando</a></li><li><a href="/history/thornton-park.html">Thornton Park</a></li><li><a href="/history/mills-50.html">Mills 50</a></li><li><a href="/history/milk-district.html">Milk District</a></li><li><a href="/history/ivanhoe-village.html">Ivanhoe Village</a></li><li><a href="/history/college-park.html">College Park</a></li><li><a href="/history/audubon-park.html">Audubon Park</a></li><li><a href="/hourglass-finder.html">Hourglass</a></li><li><a href="/sodo-finder.html">SoDo</a></li></ul></div><div class="di-group"><h3>Winter Park and the north side</h3><ul><li><a href="/history/winter-park.html">Winter Park</a></li><li><a href="/baldwin-park-finder.html">Baldwin Park</a></li><li><a href="/maitland-finder.html">Maitland</a></li><li><a href="/oviedo-finder.html">Oviedo</a></li><li><a href="/sanford-finder.html">Sanford</a></li></ul></div><div class="di-group"><h3>The visitor corridors</h3><ul><li><a href="/history/i-drive.html">International Drive</a></li><li><a href="/history/universal.html">Universal</a></li><li><a href="/history/disney-springs.html">Disney Springs</a></li><li><a href="/disney-area-finder.html">Disney Area</a></li><li><a href="/kissimmee-finder.html">Kissimmee</a></li><li><a href="/history/lake-nona.html">Lake Nona</a></li></ul></div><div class="di-group"><h3>East, west, and beyond</h3><ul><li><a href="/ucf-finder.html">UCF</a></li><li><a href="/winter-garden-finder.html">Winter Garden</a></li><li><a href="/more-orlando-finder.html">More Orlando</a></li></ul></div></div>
+    </section>
+    
 
 <div class="cred-strip"><strong><span id="credCount">647</span> hand-verified places</strong> · Checked October 2026 · Local Picks are never sponsored · Corrections: <a href="mailto:mail@407.fyi">mail@407.fyi</a></div><footer class="footer"><div class="foot-col"><h3>Districts</h3><ul><li><a href="/winter-park-district-guide.html">Winter Park</a></li><li><a href="/downtown-orlando-district-guide.html">Downtown Orlando</a></li><li><a href="/mills-50-district-guide.html">Mills 50</a></li><li><a href="/milk-district-guide.html">Milk District</a></li><li><a href="/international-drive-district-guide.html">International Drive</a></li><li><a href="#districts">All 12 districts</a></li></ul></div><div class="foot-col"><h3>About</h3><ul><li><a href="/whats-new.html">What's new</a></li><li><a href="/convention.html">Convention guide</a></li><li><a href="/i-drive-playbook.html">I-Drive playbook</a></li><li><a href="/archive.html?flashbacks=1">Flashbacks: Orlando history</a></li><li><a href="/archive.html?export=1">Export the guide</a></li></ul></div><div class="foot-col foot-main"><span><strong>407 FYI</strong> · Details can change. Confirm before you go.</span> <a href="mailto:mail@407.fyi?subject=407%20FYI%20%E2%80%94%20venue%20correction&amp;body=Venue%20name%3A%0AWhat%20changed%3A%0ASource%20or%20details%3A">Flag a closure / suggest an edit</a> <a href="https://www.instagram.com/407.fyi" target="_blank" rel="noopener">Instagram · @407.fyi</a> <span class="aff-disclosure">407 FYI is free and reader supported. Some ticket, hotel, and dining links are affiliate or referral links. If you book or buy through one, we may earn a commission or a dining credit at no extra cost to you. No venue can pay to be listed, ranked, picked, or recommended here, and affiliate links never change the order of anything. Local Picks are chosen by editors and are never sponsored.</span><nav class="footer-legal"><a href="mailto:mail@407.fyi?subject=407%20FYI%20contact">Contact</a><a href="/privacy.html">Privacy Policy</a></nav></div></footer>
   </main>
@@ -752,7 +784,7 @@ function setTheme(theme){
   themeButtons.forEach(button=>{
     button.setAttribute('aria-pressed',String(dark));
     button.setAttribute('aria-label',dark?'Switch to light mode':'Switch to dark mode');
-    button.querySelector('.theme-toggle-text').textContent=dark?'Light mode':'Dark mode';
+    button.querySelector('.theme-toggle-text').textContent=dark?'☀️ Light':'🌙 Dark';
   });
 }
 themeButtons.forEach(button=>button.addEventListener('click',()=>{
@@ -876,7 +908,7 @@ document.addEventListener('click',e=>{
   }
 });
 /* load */
-fetch('places.json?v=20261019p1').then(r=>{if(!r.ok)throw new Error('places.json HTTP '+r.status);return r.json()}).then(d=>{
+fetch('places.json?v=20261019p2').then(r=>{if(!r.ok)throw new Error('places.json HTTP '+r.status);return r.json()}).then(d=>{
   PLACES=d.places||[];
   const vc=$('#venueCount');if(vc)vc.textContent=PLACES.length;
   renderPicks();renderRightNow();
@@ -889,11 +921,13 @@ fetch('places.json?v=20261019p1').then(r=>{if(!r.ok)throw new Error('places.json
 <!-- 407 FYI guide chat widget. Self-contained: style + markup + script.
      Talks to the Supabase chat edge function; answers come only from guide data. -->
 <style id="fyi-chat-css">
-.fyi-chat-btn{position:fixed;right:16px;bottom:16px;z-index:1200;display:flex;align-items:center;gap:8px;
-  padding:11px 16px;border-radius:999px;border:1px solid var(--accent,#d4b573);cursor:pointer;
-  background:var(--surface,#122419);color:var(--headline,#f6edd6);
-  font-family:"Manrope",ui-sans-serif,sans-serif;font-size:14px;font-weight:700;
-  box-shadow:0 8px 24px rgba(0,0,0,.35)}
+.fyi-chat-btn{position:fixed;right:16px;bottom:16px;z-index:1200;display:flex;align-items:center;gap:9px;
+  padding:15px 22px;border-radius:999px;border:2px solid #f6edd6;cursor:pointer;
+  background:var(--accent,#d4b573);color:#122419;
+  font-family:"Manrope",ui-sans-serif,sans-serif;font-size:16px;font-weight:800;letter-spacing:.01em;
+  box-shadow:0 12px 32px rgba(0,0,0,.5),0 0 0 5px rgba(212,181,115,.28)}
+.fyi-chat-btn:hover{filter:brightness(1.07)}
+.fyi-chat-btn svg{width:20px;height:20px}
 .fyi-chat-btn:hover{border-color:var(--focus,#d4b573)}
 .fyi-chat-btn svg{flex:none}
 .fyi-chat-panel{position:fixed;right:16px;bottom:70px;z-index:1200;width:min(384px,calc(100vw - 24px));
@@ -927,14 +961,24 @@ fetch('places.json?v=20261019p1').then(r=>{if(!r.ok)throw new Error('places.json
 .fyi-chat-send:disabled{opacity:.55;cursor:wait}
 @media (max-width:480px){.fyi-chat-panel{right:8px;bottom:64px}.fyi-chat-btn{right:12px;bottom:12px}}
 </style>
-<button class="fyi-chat-btn" id="fyiChatBtn" aria-haspopup="dialog" aria-expanded="false">
+<div class="near-modal" id="nearModal" hidden role="dialog" aria-modal="true" aria-labelledby="nearModalTitle">
+    <div class="near-modal-backdrop" data-near-close></div>
+    <div class="near-window">
+      <div class="near-window-head"><h2 id="nearModalTitle">Nearest First</h2><button class="near-close" type="button" data-near-close aria-label="Close">&times;</button></div>
+      <button class="location-btn" id="modalNearBtn" type="button" aria-pressed="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="3"></circle><path d="M12 2v3M12 19v3M2 12h3M19 12h3"></path><circle cx="12" cy="12" r="8"></circle></svg><span class="nearest-copy"><span class="nearest-title">Nearest to me</span><span class="nearest-detail">Tap to sort every place by distance</span></span><span class="nearest-action">Find</span></button>
+      <p class="location-status" id="modalNearStatus" role="status">Location is requested only when you tap, and it stays in your browser.</p>
+      <div class="near-list" id="modalNearList"><p class="location-status">Loading the guide...</p></div>
+      <a class="near-full" href="/nearest.html">Open the full Nearest First page</a>
+    </div>
+  </div>
+  <button class="fyi-chat-btn" id="fyiChatBtn" aria-haspopup="dialog" aria-expanded="false">
   <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
-  Ask the guide
+  ChatFYI
 </button>
-<section class="fyi-chat-panel" id="fyiChatPanel" role="dialog" aria-label="Ask the 407 FYI guide">
+<section class="fyi-chat-panel" id="fyiChatPanel" role="dialog" aria-label="ChatFYI, the 407 FYI guide chat">
   <div class="fyi-chat-head">
     <div>
-      <h2>Ask 407 FYI</h2>
+      <h2>ChatFYI</h2>
       <p>Answers only from the guide's own listings.</p>
     </div>
     <button class="fyi-chat-close" id="fyiChatClose" aria-label="Close chat">&times;</button>
@@ -1068,5 +1112,56 @@ fetch('places.json?v=20261019p1').then(r=>{if(!r.ok)throw new Error('places.json
 })();
 </script>
 
+<script>
+(function(){
+  var modal = document.getElementById('nearModal'); if(!modal) return;
+  var listEl = document.getElementById('modalNearList'), btn = document.getElementById('modalNearBtn'),
+      statusEl = document.getElementById('modalNearStatus'), places = null, myPos = null, lastFocus = null;
+  function esc(s){ return String(s==null?'':s).replace(/[&<>"]/g, function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]; }); }
+  function distMi(a,b,c,d){ var R=3958.8,t=Math.PI/180,dl=(c-a)*t,dn=(d-b)*t,x=Math.sin(dl/2)*Math.sin(dl/2)+Math.cos(a*t)*Math.cos(c*t)*Math.sin(dn/2)*Math.sin(dn/2); return 2*R*Math.asin(Math.sqrt(x)); }
+  function render(){
+    if(!places) return;
+    var rows = places.slice();
+    if(myPos){ rows.forEach(function(p){ p._d = distMi(myPos.lat, myPos.lng, p.lat, p.lng); }); rows.sort(function(a,b){ return a._d - b._d; }); }
+    listEl.innerHTML = rows.map(function(p, i){
+      var meta = esc(p.category) + ' \u00b7 ' + esc(p.district || 'Orlando');
+      var d = myPos ? '<span class="near-dist">' + (p._d < 0.1 ? '&lt;0.1' : p._d.toFixed(1)) + ' mi</span>' : '';
+      return '<a class="near-row" style="--i:' + (i % 24) + '" href="/venue/' + encodeURIComponent(p.id) + '.html"><span class="near-main"><span class="near-name">' + esc(p.name) + '</span><span class="near-meta">' + meta + '</span></span>' + d + '</a>';
+    }).join('');
+  }
+  function setBtn(title, detail, action, active){
+    btn.querySelector('.nearest-title').textContent = title;
+    btn.querySelector('.nearest-detail').textContent = detail;
+    btn.querySelector('.nearest-action').textContent = action;
+    btn.classList.toggle('active', !!active);
+    btn.setAttribute('aria-pressed', active ? 'true' : 'false');
+  }
+  function load(){
+    if(places) { render(); return; }
+    fetch('places.json?v=20261019p2').then(function(r){ return r.json(); }).then(function(d){ places = (d && d.places) ? d.places : d; render(); })
+    .catch(function(){ listEl.innerHTML = '<p class="location-status">The guide could not load here. <a href="/nearest.html">Open the full page</a> instead.</p>'; });
+  }
+  function open(){ lastFocus = document.activeElement; modal.hidden = false; document.body.style.overflow = 'hidden'; load(); setTimeout(function(){ btn.focus(); }, 60); }
+  function close(){ modal.hidden = true; document.body.style.overflow = ''; if(lastFocus) lastFocus.focus(); }
+  var nav = document.getElementById('navNearLink');
+  if(nav) nav.addEventListener('click', function(e){ e.preventDefault(); open(); });
+  modal.querySelectorAll('[data-near-close]').forEach(function(el){ el.addEventListener('click', close); });
+  document.addEventListener('keydown', function(e){ if(e.key === 'Escape' && !modal.hidden) close(); });
+  btn.addEventListener('click', function(){
+    if(myPos){ myPos = null; setBtn('Nearest to me','Tap to sort every place by distance','Find',false); statusEl.textContent = 'Location off. The list is back in guide order.'; render(); return; }
+    if(!navigator.geolocation){ setBtn('Nearest to me','Location is unavailable in this browser','Unavailable',false); statusEl.textContent = 'Nearest sorting is unavailable in this browser.'; return; }
+    setBtn('Finding you','One moment','...',false); statusEl.textContent = 'Locating...';
+    navigator.geolocation.getCurrentPosition(function(pos){
+      myPos = {lat: pos.coords.latitude, lng: pos.coords.longitude};
+      setBtn('Nearest first','Every place, closest first','On',true);
+      statusEl.textContent = 'Sorted by distance from you. Tap the button again to go back to guide order.';
+      render();
+    }, function(){
+      setBtn('Nearest to me','Tap to try again','Retry',false);
+      statusEl.textContent = 'Location did not come through. Check the browser prompt and tap again.';
+    }, {enableHighAccuracy:false, timeout:10000, maximumAge:300000});
+  });
+})();
+</script>
 </body>
 </html>
