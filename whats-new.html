@@ -32,6 +32,16 @@
   footer a{color:var(--bronze);text-decoration:none}
 </style>
   <link rel="stylesheet" href="/fonts/fonts.css">
+
+<style>
+/* imagery wave 1: photo band */
+.photo-band{position:relative;margin:0;overflow:hidden;background:#0d1512}
+.photo-band img{width:100%;height:100%;display:block;object-fit:cover;object-position:center 42%;filter:sepia(.26) saturate(.84) contrast(1.04) brightness(.95)}
+.photo-band figcaption{position:absolute;left:20px;bottom:14px;max-width:540px;background:rgba(13,21,18,.58);padding:7px 11px;border-radius:8px;backdrop-filter:blur(4px);color:#f4efe1;font-size:.8rem;line-height:1.45}
+.photo-band figcaption .hero-credit{display:block;color:rgba(244,239,225,.78);font-size:.72rem}
+.photo-band figcaption a{color:#d4b573}
+@media (max-width:640px){.photo-band figcaption{left:14px;max-width:72%;bottom:12px}}
+</style>
 </head>
 <body>
 <header><a class="brand" href="/">407 FYI</a><nav><a href="/">Full guide</a></nav></header>
@@ -39,6 +49,8 @@
   <p class="eyebrow">Changelog</p>
   <h1>What's new in the guide</h1>
   <p class="lede">Every verification pass, correction, addition, and removal, on the record. Places are checked against primary sources; when a listing changes, it is noted here. Spotted something off? <a href="mailto:mail@407.fyi" style="color:var(--bronze)">mail@407.fyi</a>.</p>
+
+  <figure class="photo-band" style="height:300px;"><img src="assets/hero-whats-new.webp" alt="Downtown Orlando high-rises seen across Lake Eola" width="1440" height="1150" decoding="async" /><figcaption>Downtown Orlando from Lake Eola Park. <span class="hero-credit">Photo: <a href="https://commons.wikimedia.org/wiki/File:High-rises_in_Orlando_from_Lake_Eola_Park_(May_2023).jpg" target="_blank" rel="noopener">&ldquo;High-rises in Orlando from Lake Eola Park (May 2023)&rdquo;</a> by Benoît Prieur, <a href="https://creativecommons.org/publicdomain/zero/1.0" target="_blank" rel="noopener">CC0</a>, via Wikimedia Commons.</span></figcaption></figure>
 
     <article>
     <time datetime="2026-10-21">October 21, 2026</time>
