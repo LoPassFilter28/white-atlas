@@ -399,6 +399,16 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://407.fyi/venue/alexandria-market.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://407.fyi/venue/aloma-bowl.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://407.fyi/venue/amar-orlando.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -839,6 +849,11 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://407.fyi/venue/pereira-latin-products.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://407.fyi/venue/perlas-pizza.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -1079,6 +1094,11 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://407.fyi/venue/vivahealthy-pink-house.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://407.fyi/venue/voodoo.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -1130,6 +1150,11 @@
   </url>
   <url>
     <loc>https://407.fyi/venue/woodys.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://407.fyi/venue/zackleys.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
