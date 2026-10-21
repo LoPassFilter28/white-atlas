@@ -84,6 +84,44 @@
         0%, 100% { opacity: .55; transform: translate(-50%, -50%) scale(1); }
         50% { opacity: .95; transform: translate(-50%, -53%) scale(1.09); }
       }
+
+      /* ---------- EDC motion pilot v1 (2026-10-20) ----------
+         Transform and opacity only. Calm gate (.calm: reduced motion,
+         low-power hardware, save-data) removes every layer; .paused
+         stops all animation off-screen and when the tab is hidden. */
+      .hero-aurora { position: absolute; z-index: 1; border-radius: 50%; pointer-events: none; filter: blur(70px); will-change: transform, opacity; }
+      .aurora-a { left: -8%; top: -14%; width: 46vw; height: 46vw; max-width: 560px; max-height: 560px;
+        background: radial-gradient(circle, rgba(112,84,178,.32), rgba(112,84,178,0) 68%); animation: auroraA 26s ease-in-out infinite alternate; }
+      .aurora-b { right: -10%; bottom: -20%; width: 52vw; height: 52vw; max-width: 640px; max-height: 640px;
+        background: radial-gradient(circle, rgba(38,110,104,.28), rgba(38,110,104,0) 68%); animation: auroraB 32s ease-in-out infinite alternate; }
+      @keyframes auroraA { from { transform: translate(0,0) scale(1); opacity: .5; } to { transform: translate(9%,12%) scale(1.15); opacity: .85; } }
+      @keyframes auroraB { from { transform: translate(0,0) scale(1.1); opacity: .8; } to { transform: translate(-8%,-10%) scale(.96); opacity: .5; } }
+      @supports ((-webkit-background-clip: text) or (background-clip: text)) {
+        .hero h1 {
+          background: linear-gradient(100deg, var(--headline) 42%, #e8cf9a 50%, var(--headline) 58%);
+          background-size: 220% 100%; background-position: 112% 0;
+          -webkit-background-clip: text; background-clip: text;
+          -webkit-text-fill-color: transparent; color: transparent;
+          animation: h1Sheen 7.5s ease-in-out infinite;
+        }
+      }
+      @keyframes h1Sheen { 0%, 58% { background-position: 112% 0; } 88%, 100% { background-position: -12% 0; } }
+      .js .px { --py: 0px; }
+      .js .px img { transform: translateY(var(--py)) scale(1.14); will-change: transform; }
+      .sec .kicker::before { content: ""; display: inline-block; width: 26px; height: 2px; background: var(--accent-ink); vertical-align: middle; margin: -2px 10px 0 0; }
+      .js .sec .kicker::before { transform: scaleX(0); transform-origin: left center; transition: transform .9s cubic-bezier(.2,.6,.2,1) .2s; }
+      .js .sec.in .kicker::before { transform: scaleX(1); }
+      @media (hover: hover) and (pointer: fine) {
+        .card, .job { transition: transform .35s cubic-bezier(.2,.6,.2,1), border-color .35s ease; }
+        .card:hover, .job:hover { transform: translateY(-3px); border-color: var(--accent-ink); }
+        .marquee:hover .marquee-track { animation-play-state: paused; }
+      }
+      html.paused .hero-img, html.paused .hero-glow, html.paused .hero-aurora,
+      html.paused .marquee-track, html.paused .hero h1 { animation-play-state: paused; }
+      html.calm .hero-aurora { display: none; }
+      html.calm .hero-img, html.calm .hero-glow, html.calm .marquee-track { animation: none; }
+      html.lite .hero-aurora { display: none; }
+      html.lite .hero h1 { animation: none; }
       .crumbs { font-size: .8rem; color: var(--muted); margin: 0 0 26px; }
       .crumbs a { font-weight: 700; }
       .hero-brand {
@@ -230,15 +268,18 @@
           radial-gradient(ellipse 90% 55% at 50% 112%, rgba(163,129,63,.20), transparent 60%);
       }
       html[data-theme="light"] .hero-glow { background: radial-gradient(circle, rgba(163,129,63,.22), rgba(58,90,53,.10) 55%, transparent 70%); }
+      html[data-theme="light"] .aurora-a { background: radial-gradient(circle, rgba(112,84,178,.15), rgba(112,84,178,0) 68%); }
+      html[data-theme="light"] .aurora-b { background: radial-gradient(circle, rgba(38,110,104,.13), rgba(38,110,104,0) 68%); }
       html[data-theme="light"] .anchor-nav a, html[data-theme="light"] .flags span { background: rgba(29,42,32,.04); }
       html[data-theme="light"] .btn-big { background: var(--accent); color: #fff; }
       html[data-theme="light"] .btn-big:hover { background: var(--accent-ink); color: #fff; }
 
-      @media print { .anchor-nav, .marquee { display: none; } }
+      @media print { .anchor-nav, .marquee, .hero-aurora { display: none; } }
       @media (prefers-reduced-motion: reduce) {
         html { scroll-behavior: auto; }
-        .hero-img, .hero-glow, .marquee-track { animation: none; }
+        .hero-img, .hero-glow, .hero-aurora, .marquee-track, .hero h1 { animation: none; }
         .js .rv { opacity: 1; transform: none; transition: none; }
+        .js .px img { transform: none; }
       }
 
       /* ---------- events ---------- */
@@ -279,6 +320,8 @@
           alt="The kineticFIELD main stage at EDC Orlando at dusk, lit in violet and gold above a full crowd" />
         <div class="hero-shade"></div>
         <div class="hero-glow" aria-hidden="true"></div>
+        <div class="hero-aurora aurora-a" aria-hidden="true"></div>
+        <div class="hero-aurora aurora-b" aria-hidden="true"></div>
       </div>
       <div class="hero-in">
         <p class="crumbs"><a href="/">407 FYI</a> · <a href="/edm.html">EDM</a> · EDC Orlando</p>
@@ -305,15 +348,15 @@
         <p>Insomniac runs the festival through its brand arms, and Orlando feels both of them. Factory 93 is the house and techno arm and has run stage takeovers at EDC Orlando; Bassrush is the bass arm, behind the circuitGROUNDS stage identity. Which arm you follow decides which festival you get.</p>
         <div class="band">
           <figure class="rv">
-            <div class="shot"><img src="/assets/edc/stage-night.jpg" width="840" height="560" loading="lazy" alt="The kineticFIELD stage at night, flame cannons firing above a packed crowd" /></div>
+            <div class="shot px"><img src="/assets/edc/stage-night.jpg" width="840" height="560" loading="lazy" alt="The kineticFIELD stage at night, flame cannons firing above a packed crowd" /></div>
             <figcaption><b>kineticFIELD after dark.</b> Flame cannons over a full house.</figcaption>
           </figure>
           <figure class="rv rv-d1">
-            <div class="shot"><img src="/assets/edc/owl-eyes.jpg" width="840" height="561" loading="lazy" alt="Close view of the glowing owl eyes at the center of the kineticFIELD stage" /></div>
+            <div class="shot px"><img src="/assets/edc/owl-eyes.jpg" width="840" height="561" loading="lazy" alt="Close view of the glowing owl eyes at the center of the kineticFIELD stage" /></div>
             <figcaption><b>The owl.</b> The watching face at the heart of the main stage.</figcaption>
           </figure>
           <figure class="rv rv-d2">
-            <div class="shot"><img src="/assets/edc/circuit-grounds.jpg" width="840" height="560" loading="lazy" alt="The circuitGROUNDS stage and its crowd at dusk, ringed with flame effects" /></div>
+            <div class="shot px"><img src="/assets/edc/circuit-grounds.jpg" width="840" height="560" loading="lazy" alt="The circuitGROUNDS stage and its crowd at dusk, ringed with flame effects" /></div>
             <figcaption><b>circuitGROUNDS at dusk.</b> The Bassrush end of the field.</figcaption>
           </figure>
         </div>
@@ -327,7 +370,7 @@
             <p>Tinker Field has been EDC's Orlando home since the show first debuted here in 2011. The debut was a different scale of thing: about 12,000 people on the Friday and over 20,000 on the Saturday, with Paul van Dyk, Diplo and Benny Benassi headlining and two then rising names, Porter Robinson and Skrillex, lower on the bill. The festival that returns each November grew out of that weekend, in the city that had already given American dance music the Florida breaks. The longer story of that sound lives in the <a href="/edm.html#history">EDM section's history</a>.</p>
           </div>
           <figure class="fig rv">
-            <div class="shot"><img src="/assets/edc/daisies-night.jpg" width="576" height="720" loading="lazy" alt="Illuminated daisy sculptures glowing green, white and pink against the night sky" /></div>
+            <div class="shot px"><img src="/assets/edc/daisies-night.jpg" width="576" height="720" loading="lazy" alt="Illuminated daisy sculptures glowing green, white and pink against the night sky" /></div>
             <figcaption><b>The namesake.</b> The electric daisies, lit after dark.</figcaption>
           </figure>
         </div>
@@ -341,7 +384,7 @@
             <p class="lede">The festival officially starts before it starts. Insomniac presents the official EDC pre parties and afterparties across four nights in November: downtown's headline rooms carry them, and a Washington Street gastropub joins the official bills.</p>
           </div>
           <figure class="fig rv">
-            <div class="shot"><img src="/assets/edc/dj-portrait.jpg" width="576" height="720" loading="lazy" alt="A DJ performing with one hand on her headphones, hair in motion" /></div>
+            <div class="shot px"><img src="/assets/edc/dj-portrait.jpg" width="576" height="720" loading="lazy" alt="A DJ performing with one hand on her headphones, hair in motion" /></div>
             <figcaption><b>On the decks.</b> The 2025 edition, before the week spilled downtown.</figcaption>
           </figure>
         </div>
@@ -383,19 +426,67 @@
       </div>
     </footer>
 
-<!-- Scroll reveals: progressive enhancement only. Without JS, or with
-     reduced motion, nothing is ever hidden. -->
+<!-- Scroll reveals + EDC motion pilot: progressive enhancement only.
+     Calm hardware (reduced motion, few cores, low memory, save-data)
+     gets a fully static page: nothing hidden, nothing moving. -->
 <script>
   (function () {
+    var root = document.documentElement;
     var reduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    if (reduced || !('IntersectionObserver' in window)) return;
-    document.documentElement.classList.add('js');
+    var saveData = !!(navigator.connection && navigator.connection.saveData);
+    var lowPower = (navigator.hardwareConcurrency && navigator.hardwareConcurrency <= 4) ||
+                   (navigator.deviceMemory && navigator.deviceMemory <= 4);
+    if (reduced || saveData || !('IntersectionObserver' in window)) {
+      root.classList.add('calm');
+      return;
+    }
+    root.classList.add('js');
+    if (lowPower) root.classList.add('lite');
     var io = new IntersectionObserver(function (entries) {
       entries.forEach(function (e) {
         if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
       });
     }, { threshold: 0.05, rootMargin: '0px 0px -6% 0px' });
     document.querySelectorAll('.rv').forEach(function (el) { io.observe(el); });
+
+    /* Pause every ambient animation when the hero leaves the screen
+       or the tab hides: zero motion cost for the rest of the read. */
+    var heroVisible = true;
+    function setPaused() { root.classList.toggle('paused', document.hidden || !heroVisible); }
+    var hero = document.querySelector('.hero');
+    if (hero) {
+      new IntersectionObserver(function (entries) {
+        heroVisible = entries[0].isIntersecting; setPaused();
+      }, { threshold: 0 }).observe(hero);
+    }
+    document.addEventListener('visibilitychange', setPaused);
+
+    /* Parallax: one passive scroll listener, one rAF per frame,
+       writes a translate var only for frames near the viewport. */
+    var shots = Array.prototype.slice.call(document.querySelectorAll('.px'));
+    if (shots.length && !lowPower) {
+      var active = new Set(), ticking = false;
+      var pio = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) active.add(e.target); else active.delete(e.target);
+        });
+      }, { rootMargin: '20% 0px 20% 0px' });
+      shots.forEach(function (el) { pio.observe(el); });
+      function update() {
+        ticking = false;
+        var vh = window.innerHeight;
+        active.forEach(function (el) {
+          var r = el.getBoundingClientRect();
+          var p = (r.top + r.height / 2 - vh / 2) / vh;
+          var y = Math.max(-10, Math.min(10, -p * 20));
+          el.style.setProperty('--py', y.toFixed(1) + 'px');
+        });
+      }
+      function onScroll() { if (!ticking) { ticking = true; requestAnimationFrame(update); } }
+      window.addEventListener('scroll', onScroll, { passive: true });
+      window.addEventListener('resize', onScroll);
+      update();
+    }
   })();
 </script>
 
