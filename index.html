@@ -294,11 +294,6 @@
     .mast .lede{color:rgba(247,239,219,.9)}
     html.scanner-mode .primary-actions,body.flashbacks-page .primary-actions,html.scanner-mode .mast .location-status,body.flashbacks-page .mast .location-status{display:none}
     .hero-search{position:relative;margin-top:26px;max-width:660px}
-    .home-vibe-row{display:flex;align-items:center;gap:12px;margin-top:12px;flex-wrap:wrap;flex:1 1 100%}
-    .home-vibe-modes{display:inline-flex;border:1px solid var(--line);border-radius:999px;overflow:hidden}
-    .home-vibe-mode{border:0;background:transparent;color:var(--muted);font:inherit;font-size:.8rem;font-weight:800;padding:9px 15px;cursor:pointer}
-    .home-vibe-mode.active{background:var(--accent);color:var(--on-accent)}
-    .home-vibe-hint{font-size:.82rem;color:var(--muted)}
     .hero-search svg{position:absolute;left:16px;top:50%;transform:translateY(-50%);width:21px;height:21px;color:#7c520c;pointer-events:none}
     .hero-search input{width:100%;height:58px;border:1px solid rgba(247,239,219,.45);border-radius:12px;background:rgba(255,253,247,.97);color:#1d2a20;padding:0 58px 0 48px;font-size:1.06rem;font-weight:700;outline:none;box-shadow:0 10px 26px rgba(10,25,15,.28)}
     .hero-search input::placeholder{color:#6b725f}
@@ -607,7 +602,7 @@ html[data-theme="dark"] .export-trigger:hover,html[data-theme="dark"] .export-tr
 
 <style>
 /* imagery wave 1: photo band */
-.photo-band{position:relative;margin:0;overflow:hidden;background:#0d1512}
+.photo-band{position:relative;margin:0;overflow:hidden;border-radius:20px;background:#0d1512}
 .photo-band img{width:100%;height:100%;display:block;object-fit:cover;object-position:center 42%;filter:sepia(.26) saturate(.84) contrast(1.04) brightness(.95)}
 .photo-band figcaption{position:absolute;left:20px;bottom:14px;max-width:540px;background:rgba(13,21,18,.58);padding:7px 11px;border-radius:8px;backdrop-filter:blur(4px);color:#f4efe1;font-size:.8rem;line-height:1.45}
 .photo-band figcaption .hero-credit{display:block;color:rgba(244,239,225,.78);font-size:.72rem}
@@ -634,16 +629,9 @@ html[data-theme="dark"] .export-trigger:hover,html[data-theme="dark"] .export-tr
       <div class="primary-actions">
         <form class="hero-search" id="heroForm" action="/archive.html" method="get" role="search">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-4-4"></path></svg>
-          <input id="heroSearch" name="q" type="search" placeholder="Describe the vibe…" autocomplete="off" aria-label="Search all Orlando places">
+          <input id="heroSearch" name="q" type="search" placeholder="Search places…" autocomplete="off" aria-label="Search all Orlando places">
           <button class="hero-search-go" type="submit" aria-label="Go to search results">→</button>
         </form>
-        <div class="home-vibe-row">
-          <div class="home-vibe-modes" role="group" aria-label="Search mode">
-            <button type="button" id="homeModePlaces" class="home-vibe-mode" aria-pressed="false">Places</button>
-            <button type="button" id="homeModeVibe" class="home-vibe-mode active" aria-pressed="true">By vibe</button>
-          </div>
-          <span class="home-vibe-hint" id="homeVibeHint">By vibe: describe a feeling or an occasion. Try "quiet rooftop for a date".</span>
-        </div>
         
       </div>
     </header>
@@ -768,27 +756,9 @@ function goSearch(q){
   if(q){try{if(window.posthog&&typeof window.posthog.capture==='function')window.posthog.capture('search',{query:q,results:searchMatchCount(q)})}catch(error){}}
   location.href=q?('/archive.html?q='+encodeURIComponent(q)):'/archive.html';
 }
-let homeVibe=true;
-const homeModePlaces=$('#homeModePlaces'),homeModeVibe=$('#homeModeVibe'),homeVibeHint=$('#homeVibeHint');
-function setHomeVibe(on){
-  homeVibe=on;
-  homeModePlaces.classList.toggle('active',!on);homeModePlaces.setAttribute('aria-pressed',String(!on));
-  homeModeVibe.classList.toggle('active',on);homeModeVibe.setAttribute('aria-pressed',String(on));
-  homeVibeHint.textContent=on?'By vibe: describe a feeling or an occasion. Try "quiet rooftop for a date".':'By place: search a name, a neighborhood, or a kind of place. Try "coffee" or "Winter Park".';
-  heroInput.placeholder=on?'Describe the vibe…':'Search places…';
-  heroInput.focus();
-}
-homeModePlaces.addEventListener('click',()=>{if(homeVibe)setHomeVibe(false)});
-homeModeVibe.addEventListener('click',()=>{if(!homeVibe)setHomeVibe(true)});
-function goVibe(q){
-  q=String(q||'').trim();
-  if(q){try{if(window.posthog&&typeof window.posthog.capture==='function')window.posthog.capture('search',{query:q,mode:'vibe'})}catch(error){}}
-  location.href=q?('/archive.html?vibe='+encodeURIComponent(q)):'/archive.html';
-}
-heroForm.addEventListener('submit',e=>{e.preventDefault();if(homeVibe)goVibe(heroInput.value);else goSearch(heroInput.value)});
+heroForm.addEventListener('submit',e=>{e.preventDefault();goSearch(heroInput.value)});
 let heroTimer=0;
 heroInput.addEventListener('input',()=>{
-  if(homeVibe)return;
   clearTimeout(heroTimer);
   const q=heroInput.value.trim();
   if(q.length>=3)heroTimer=setTimeout(()=>goSearch(q),800);

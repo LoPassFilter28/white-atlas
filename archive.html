@@ -126,19 +126,6 @@ body.flashbacks-page .flashbacks-head{border-top:1px solid var(--line)}
 .search-wrap svg{position:absolute;left:16px;top:50%;transform:translateY(-50%);width:21px;color:var(--muted);pointer-events:none}
 #search{width:100%;height:58px;border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:12px;padding:0 46px 0 48px;font-size:1.06rem;font-weight:700;outline:none;box-shadow:0 5px 18px color-mix(in srgb,var(--headline) 7%,transparent);transition:border-color var(--dur-ui) ease,box-shadow var(--dur-ui) ease}
 #search:focus{border-color:var(--focus);box-shadow:0 0 0 3px color-mix(in srgb,var(--focus) 28%,transparent),0 7px 22px color-mix(in srgb,var(--headline) 10%,transparent)}
-.vibe-row{display:flex;align-items:center;gap:12px;margin-top:10px;flex-wrap:wrap}
-.vibe-modes{display:inline-flex;border:1px solid var(--line);border-radius:999px;overflow:hidden}
-.vibe-mode{border:0;background:transparent;color:var(--muted);font:inherit;font-size:.8rem;font-weight:800;padding:9px 15px;cursor:pointer}
-.vibe-mode.active{background:var(--accent);color:var(--on-accent)}
-.vibe-hint{font-size:.8rem;color:var(--muted)}
-.vibe-chip{display:flex;margin-top:10px;align-items:center;gap:10px;border:1px solid var(--accent);border-radius:12px;padding:10px 12px;background:color-mix(in srgb,var(--accent) 12%,transparent)}
-.vibe-chip[hidden]{display:none}
-.vibe-chip-label{font-size:.9rem;font-weight:600;min-width:0;line-height:1.35}
-.vibe-chip-label b{color:var(--accent-ink)}
-#vibeClear{margin-left:auto;flex:0 0 auto;border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:8px;min-height:38px;padding:5px 14px;font:inherit;font-size:.78rem;font-weight:800;cursor:pointer}
-.vibe-status{display:block;margin-top:6px;font-size:.8rem;color:var(--muted);line-height:1.35}
-.vibe-status:empty{display:none}
-.vibe-showall{background:none;border:0;padding:0;font:inherit;color:var(--accent);text-decoration:underline;cursor:pointer}
 #clearSearch{position:absolute;right:5px;top:7px;width:44px;height:44px;border:0;background:transparent;color:var(--muted);font-size:1.25rem;display:none}
 .list-shortcuts{display:grid;grid-template-columns:1fr;gap:8px;margin-top:10px}
 .list-shortcut{min-height:46px;display:flex;align-items:center;justify-content:space-between;gap:10px;padding:9px 12px;border:1px solid var(--line);border-radius:5px;background:var(--surface);color:var(--accent-ink);font-size:.78rem;font-weight:800;text-align:left}
@@ -716,18 +703,9 @@ html:not([data-theme="dark"]) .upd-tag{color:#7c520c;background:rgba(124,82,12,.
     <section class="finder" id="finder" aria-label="Find places">
       <div class="search-wrap">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-4-4"></path></svg>
-        <input id="search" type="search" placeholder="Describe the vibe…" autocomplete="off" aria-label="Search all Orlando places">
+        <input id="search" type="search" placeholder="Search places…" autocomplete="off" aria-label="Search all Orlando places">
         <button id="clearSearch" aria-label="Clear search">×</button>
       </div>
-      <div class="vibe-row" id="vibeRow">
-        <div class="vibe-modes" role="group" aria-label="Search mode">
-          <button type="button" id="modePlaces" class="vibe-mode" aria-pressed="false">Places</button>
-          <button type="button" id="modeVibe" class="vibe-mode active" aria-pressed="true">By vibe</button>
-        </div>
-        <span class="vibe-hint" id="vibeHint">By vibe: describe a feeling or an occasion, then press Enter. Try "quiet rooftop for a date".</span>
-      </div>
-      <div class="vibe-chip" id="vibeChip" hidden><span class="vibe-chip-label">Vibe matches for <b id="vibeChipText"></b>. Closest first.</span><button id="vibeClear" type="button" aria-label="Clear vibe search">Clear</button></div>
-      <span class="vibe-status" id="vibeStatus" role="status"></span>
       <div class="location-bar"><button class="location-btn" id="locationBtn" type="button" aria-pressed="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="3"></circle><path d="M12 2v3M12 19v3M2 12h3M19 12h3"></path><circle cx="12" cy="12" r="8"></circle></svg><span class="nearest-copy"><span class="nearest-title">Nearest to me</span><span class="nearest-detail">Tap once to see distance on every place</span></span><span class="nearest-action">Find</span></button><span class="location-status" id="locationStatus" role="status">Location is requested only when you tap. Approximate distance stays in this session.</span></div>
       <div class="ref-bar" id="refBar">
         <div class="ref-wrap">
@@ -877,7 +855,7 @@ html:not([data-theme="dark"]) .upd-tag{color:#7c520c;background:rgba(124,82,12,.
   };
   const EOLA_HISTORY_PLACES=new Set(['lake-eola','rusteak-thornton-park','june-orlando']);
   
-  const state={query:'',zone:'all',category:'all',occasion:'all',daypart:'all',price:'all',collection:'all',district:'all',sort:'guide',open:null,position:null,refLabel:null,watchId:null,view:'list',localGuide:null,vibe:null,vibeMode:true};
+  const state={query:'',zone:'all',category:'all',occasion:'all',daypart:'all',price:'all',collection:'all',district:'all',sort:'guide',open:null,position:null,refLabel:null,watchId:null,view:'list',localGuide:null};
   const DEFAULT_EXPORT_FIELDS=['district','priceBand','description','whyGo','address'];
   const EXPORT_FIELD_LABELS={district:'District',priceBand:'Price band',description:'Description',whyGo:'Why go',address:'Address'};
   const exportState={scope:'current',format:'markdown',pdfApplied:false,lastFocus:null,navPressed:null};
@@ -1286,10 +1264,6 @@ function filtered(){
       &&(state.occasion==='all'||occasions(p).includes(state.occasion))
       &&(state.daypart==='all'||dayparts(p).includes(state.daypart))
       &&(state.price==='all'||priceBand(p)===state.price));
-    if(state.vibe&&state.vibe.ids&&state.vibe.ids.length){
-      const rank=new Map(state.vibe.ids.map((id,ix)=>[id,ix]));
-      return list.filter(p=>rank.has(p.id)).sort((a,b)=>rank.get(a.id)-rank.get(b.id));
-    }
     if(q){
       const scored=[];
       for(const p of list){const i=PLACES.indexOf(p);const s=scorePlace(i,q);if(s>=0)scored.push({p,i,s});}
@@ -1508,7 +1482,6 @@ function filtered(){
     ($('#askLocalStatus')||{}).textContent='Choose one to see tailored results below.';
   }
   function resetFilters(){
-    if(state.vibe)clearVibeResults();
     state.query='';state.zone='all';state.category='all';state.occasion='all';state.daypart='all';state.price='all';state.collection='all';state.district='all';
     $('#search').value='';const heroInput=$('#heroSearch');if(heroInput)heroInput.value='';$('#clearSearch').style.display='none';$('#zone').value='all';$('#occasion').value='all';$('#daypart').value='all';$('#price').value='all';resetAskLocal();
   }
@@ -1532,11 +1505,11 @@ function observeDistrictSections(){if(groupObserver)groupObserver.disconnect();g
 function buildDistrictTabs(){const el=$('#districtTabs');if(!el||el.dataset.built)return;el.dataset.built='1';const counts={};for(const p of PLACES){const k=districtKeyOf(p)||'more';counts[k]=(counts[k]||0)+1;}let h='<button type="button" class="district-tab" data-dtab="all" aria-pressed="true"><strong>All</strong><span>'+PLACES.length+'</span></button>';for(const d of [...DISTRICTS,...AREAS]){h+='<button type="button" class="district-tab" data-dtab="'+d.key+'" aria-pressed="false"><strong>'+esc(d.name)+'</strong><span>'+(counts[d.key]||0)+'</span></button>';}el.innerHTML=h;el.addEventListener('click',e=>{const b=e.target.closest('[data-dtab]');if(!b)return;setDistrictTab(b.dataset.dtab);});}
 function setDistrictTab(key){if(state.district===key&&key!=='all')return;resetFilters();if(key!=='all')state.district=key;state.open=null;setViewMode('list');render();}
 function syncDistrictTabs(){document.querySelectorAll('[data-dtab]').forEach(b=>{const k=b.dataset.dtab;b.setAttribute('aria-pressed',String(k==='all'?state.district==='all':k===state.district));});}
-function isDefaultBrowse(){return !state.vibe&&!state.query.trim()&&state.collection==='all'&&!state.localGuide&&state.zone==='all'&&state.district==='all'&&state.category==='all'&&state.occasion==='all'&&state.daypart==='all'&&state.price==='all'&&state.sort!=='distance';}
+function isDefaultBrowse(){return !state.query.trim()&&state.collection==='all'&&!state.localGuide&&state.zone==='all'&&state.district==='all'&&state.category==='all'&&state.occasion==='all'&&state.daypart==='all'&&state.price==='all'&&state.sort!=='distance';}
 function render(){
     const list=filtered();
     $('#resultCount').textContent=`${list.length} ${list.length===1?'place':'places'}`;
-    const notes=[];if(state.collection==='picks')notes.push('Local Picks');if(state.localGuide)notes.push(LOCAL_GUIDE_LABELS[state.localGuide]);if(state.zone!=='all')notes.push(ZONES[state.zone]);if(state.district!=='all')notes.push(state.district==='more'?'Other Orlando Areas':DISTRICT_NAMES[state.district]);if(state.category!=='all')notes.push(state.category.startsWith('cat:')?state.category.slice(4):CATEGORIES[state.category]);if(state.occasion!=='all')notes.push($('#occasion').selectedOptions[0].textContent);if(state.daypart!=='all')notes.push($('#daypart').selectedOptions[0].textContent);if(state.price!=='all')notes.push(state.price==='$$$'?'$$$+':state.price);if(state.query)notes.push(`“${state.query}”`);if(state.vibe)notes.push('matched by vibe');if(state.sort==='distance'&&state.position)notes.push('nearest first');
+    const notes=[];if(state.collection==='picks')notes.push('Local Picks');if(state.localGuide)notes.push(LOCAL_GUIDE_LABELS[state.localGuide]);if(state.zone!=='all')notes.push(ZONES[state.zone]);if(state.district!=='all')notes.push(state.district==='more'?'Other Orlando Areas':DISTRICT_NAMES[state.district]);if(state.category!=='all')notes.push(state.category.startsWith('cat:')?state.category.slice(4):CATEGORIES[state.category]);if(state.occasion!=='all')notes.push($('#occasion').selectedOptions[0].textContent);if(state.daypart!=='all')notes.push($('#daypart').selectedOptions[0].textContent);if(state.price!=='all')notes.push(state.price==='$$$'?'$$$+':state.price);if(state.query)notes.push(`“${state.query}”`);if(state.sort==='distance'&&state.position)notes.push('nearest first');
     $('#filterNote').textContent=notes.join(' · ')||'All of Greater Orlando';
     if(exportState.pdfApplied)renderPrintSheet(exportList(),DEFAULT_EXPORT_FIELDS,exportScopeLabel());
     const grouped=isDefaultBrowse();$('#venueList').innerHTML=(list.length?inkindBanner():'')+(grouped?groupedListHtml(list):list.map(card).join(''));syncDistrictTabs();if(grouped)observeDistrictSections();$('#venueList').hidden=state.view==='map';$('#empty').hidden=state.view==='map'||list.length>0;
@@ -1634,12 +1607,12 @@ function render(){
   $('#zoomIn').addEventListener('click',()=>{if(mapReady)map.zoomIn()});
   $('#zoomOut').addEventListener('click',()=>{if(mapReady)map.zoomOut()});
   $('#mapSelection').addEventListener('click',e=>{if(e.target.closest('.selection-close'))closeMapSelection()});
-  const scheduleSearchRender=debounce(()=>{render();scheduleSearchFit();const q=state.query.trim();if(q)captureEvent('search',{query:q,results:filtered().length});},200);$('#search').addEventListener('input',e=>{resetAskLocal();if(state.vibeMode){const hv=$('#heroSearch');if(hv)hv.value=e.target.value;$('#clearSearch').style.display=e.target.value?'block':'none';return}state.query=e.target.value;state.open=null;const heroInput=$('#heroSearch');if(heroInput)heroInput.value=e.target.value;$('#clearSearch').style.display=state.query?'block':'none';scheduleSearchRender()});
-  $('#clearSearch').addEventListener('click',()=>{resetAskLocal();if(state.vibeMode)clearVibeResults();$('#search').value='';const heroInput=$('#heroSearch');if(heroInput)heroInput.value='';state.query='';state.open=null;$('#clearSearch').style.display='none';render();fitAfterRender();$('#search').focus()});
+  const scheduleSearchRender=debounce(()=>{render();scheduleSearchFit();const q=state.query.trim();if(q)captureEvent('search',{query:q,results:filtered().length});},200);$('#search').addEventListener('input',e=>{resetAskLocal();state.query=e.target.value;state.open=null;const heroInput=$('#heroSearch');if(heroInput)heroInput.value=e.target.value;$('#clearSearch').style.display=state.query?'block':'none';scheduleSearchRender()});
+  $('#clearSearch').addEventListener('click',()=>{resetAskLocal();$('#search').value='';const heroInput=$('#heroSearch');if(heroInput)heroInput.value='';state.query='';state.open=null;$('#clearSearch').style.display='none';render();fitAfterRender();$('#search').focus()});
   const heroSearchInput=$('#heroSearch');
   if(heroSearchInput){
-    heroSearchInput.addEventListener('input',e=>{resetAskLocal();if(state.vibeMode){$('#search').value=e.target.value;$('#clearSearch').style.display=e.target.value?'block':'none';return}state.query=e.target.value;state.open=null;$('#search').value=e.target.value;$('#clearSearch').style.display=state.query?'block':'none';scheduleSearchRender()});
-    heroSearchInput.addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();if(state.vibeMode){$('#search').value=e.target.value;runVibe()}scrollToBrowse()}});
+    heroSearchInput.addEventListener('input',e=>{resetAskLocal();state.query=e.target.value;state.open=null;$('#search').value=e.target.value;$('#clearSearch').style.display=state.query?'block':'none';scheduleSearchRender()});
+    heroSearchInput.addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();scrollToBrowse()}});
   }
   function scrollToBrowse(){const smooth=!matchMedia('(prefers-reduced-motion: reduce)').matches;$('#finder')?.scrollIntoView({block:'start',behavior:smooth?'smooth':'auto'})}
   $('#heroSearchGo')?.addEventListener('click',scrollToBrowse);
@@ -1667,7 +1640,7 @@ function render(){
       state.refLabel=null;$('#refChip').classList.remove('on');$('#centerMe').textContent='My position';
       state.sort='distance';
       btn.disabled=false;setLocationControl('Nearest first','Closest places are now at the top','On',true);$('#centerMe').disabled=false;
-      $('#locationStatus').textContent=state.vibe?'Your location is set. Distances are on each card; matches stay in vibe order.':'Sorted by approximate straight-line distance. Tap again to turn it off.';render();
+      $('#locationStatus').textContent='Sorted by approximate straight-line distance. Tap again to turn it off.';render();
       if(firstNearest)playNearestArrival();
     },err=>{
       if(state.watchId!==null)navigator.geolocation.clearWatch(state.watchId);state.watchId=null;btn.disabled=false;setLocationControl('Nearest to me','Tap to try again','Retry');
@@ -1675,222 +1648,7 @@ function render(){
       $('#locationStatus').textContent=state.position?('Location was not updated; still measuring from '+(state.refLabel||'your reference point')+'.'):(messages[err.code]||'Location is unavailable; places remain in guide order.');
     },{enableHighAccuracy:false,maximumAge:300000,timeout:15000});
   }
-  // Vibe search: semantic matching through the Supabase pgvector endpoint.
-  const VIBE_FN='https://xxdgxigwpnezsdvbiawi.supabase.co/functions/v1/vibe';
-  const VIBE_KEY='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inh4ZGd4aWd3cG5lenNkdmJpYXdpIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTE2OTM0MDYsImV4cCI6MjEwNzI2OTQwNn0.3fuj9vjXspT31fQhgcejf4Thmk9yHPc7RSBZ0v97Gw4';
-  const vibeHint=$('#vibeHint'),vibeChip=$('#vibeChip'),vibeChipText=$('#vibeChipText'),vibeStatus=$('#vibeStatus'),modePlaces=$('#modePlaces'),modeVibe=$('#modeVibe'),searchInput=$('#search');
-  let vibeSeq=0,vibeCtrl=null;
-  const RERANK_STOP=new Set('with that feels like some somewhere place places good great best night dinner lunch brunch the and for out'.split(' '));
-  function rerankVibe(q,results){
-    const toks=new Set((q.toLowerCase().match(/[a-z0-9]+/g)||[]).filter(t=>t.length>=4&&!RERANK_STOP.has(t)));
-    if(!toks.size)return results;
-    const byId={};PLACES.forEach(p=>byId[p.id]=p);
-    return results.map(r=>{
-      const p=byId[r.id];let s=(typeof r.similarity==='number')?r.similarity:0;
-      if(p){
-        const hay=new Set();
-        (p.tags||[]).forEach(t=>{(String(t).toLowerCase().match(/[a-z0-9]+/g)||[]).forEach(w=>hay.add(w))});
-        ((p.category||'').toLowerCase().match(/[a-z0-9]+/g)||[]).forEach(w=>hay.add(w));
-        ((p.categoryDetail||'').toLowerCase().match(/[a-z0-9]+/g)||[]).forEach(w=>hay.add(w));
-        let th=0;toks.forEach(t=>{for(const w of hay){if(w===t||(t.length>=3&&(w.startsWith(t)||t.startsWith(w)))){th++;break}}});
-        let oh=0;(p.occasions||[]).forEach(o=>{if(toks.has(o))oh++});
-        s+=0.04*th+0.03*oh;
-      }
-      return {id:r.id,score:s};
-    }).sort((a,b)=>(b.score-a.score)||(a.id<b.id?1:-1));
-  }
-  // Deterministic intent pins for vibe search (the same pattern as the
-  // guide chatbot's area scan): when the phrase names a kind of place and
-  // an area, the guide's own category and district data outrank embedding
-  // similarity, so "beer downtown" leads with downtown beer spots instead
-  // of whatever the semantic tail drags in.
-  const VIBE_CAT_GROUPS=[
-    {label:'beer',q:/\b(beer|brewery|breweries|brewpub|taproom|ale|ipa|lager)\b/,terms:['beer','brew','taproom'],cats:['Breweries'],weak:false},
-    {label:'pizza',q:/\b(pizza|pizzeria)\b/,terms:['pizza','pizzeria']},
-    {label:'sushi',q:/\b(sushi|omakase)\b/,terms:['sushi','omakase']},
-    {label:'ramen and noodles',q:/\b(ramen|noodles?|pho)\b/,terms:['ramen','noodle','pho']},
-    {label:'tacos and Mexican',q:/\b(tacos?|mexican|burritos?|taqueria)\b/,terms:['taco','mexican','taqueria']},
-    {label:'burgers',q:/\bburgers?\b/,terms:['burger']},
-    {label:'coffee',q:/\b(coffee|espresso|cafe)\b/,terms:['coffee','espresso'],cats:['Coffee & cafes'],weak:false},
-    {label:'ice cream and dessert',q:/\b(ice cream|gelato|desserts?|sweets|frozen yogurt)\b/,terms:['ice cream','gelato','dessert','sweets'],cats:['Sweets']},
-    {label:'steakhouse',q:/\b(steaks?|steakhouse|chophouse)\b/,terms:['steak','chophouse']},
-    {label:'Italian',q:/\b(italian|pasta)\b/,terms:['italian']},
-    {label:'breakfast and brunch',q:/\b(breakfast|brunch|pancakes?)\b/,terms:['breakfast','brunch']},
-    {label:'barbecue',q:/\b(bbq|barbecue|barbeque|brisket)\b/,terms:['bbq','barbecue','smokehouse']},
-    {label:'seafood',q:/\b(seafood|oysters?|crab|lobster)\b/,terms:['seafood']},
-    {label:'bakery and donuts',q:/\b(bakery|donuts?|doughnuts?|bagels?)\b/,terms:['bakery','donut','doughnut','bagel']},
-    {label:'bars',q:/\b(cocktails?|wine bars?|sports bars?|dive bars?|tiki bars?|speakeasy|rooftop bars?|bars?)\b/,terms:['cocktail','wine bar','sports bar','dive bar','tiki bar','speakeasy','rooftop'],cats:['Bars & lounges'],weak:false},
-    {label:'chinese',q:/\bchinese\b/,terms:['chinese'],cats:['Chinese'],weak:false},
-    {label:'thai',q:/\bthai\b/,terms:['thai'],weak:false},
-    {label:'vietnamese',q:/\bvietnamese\b/,terms:['vietnamese'],weak:false},
-    {label:'latin and caribbean',q:/\b(cuban|puerto rican|dominican|colombian|peruvian|brazilian|caribbean|latin)\b/,terms:['cuban','puerto rican','dominican','colombian','peruvian','brazilian','caribbean','latin'],cats:['Latin & Caribbean'],weak:false},
-    {label:'mediterranean',q:/\b(mediterranean|greek|turkish|lebanese|middle eastern)\b/,terms:['mediterranean','greek','turkish','lebanese','middle eastern'],cats:['Mediterranean'],weak:false},
-    {label:'japanese',q:/\b(hibachi|izakaya|japanese)\b/,terms:['hibachi','izakaya','japanese'],cats:['Japanese & sushi'],weak:false},
-    {label:'indian',q:/\bindian\b/,terms:['indian'],cats:['Indian'],weak:false},
-    {label:'soul food',q:/\bsoul food\b/,terms:['soul food'],weak:false},
-    {label:'dim sum',q:/\bdim sum\b/,terms:['dim sum']},
-    {label:'hot pot',q:/\bhot ?pot\b/,terms:['hot pot']},
-    {label:'boba and bubble tea',q:/\b(boba|bubble tea|milk tea)\b/,terms:['boba','bubble tea','milk tea']},
-    {label:'poke',q:/\bpoke\b/,terms:['poke']},
-    {label:'live music',q:/\b(live music|concerts?|music venues?)\b/,terms:['live music','concert','music venue'],cats:['Nightlife & music']},
-    {label:'food halls and food trucks',q:/\b(food halls?|food trucks?)\b/,terms:['food hall','food truck']},
-    {label:'attractions and things to do',q:/\b(attractions?|things to do|theme parks?|amusement parks?)\b/,terms:['attraction','theme park','amusement'],cats:['Attractions'],weak:false},
-    {label:'ethiopian and filipino',q:/\b(ethiopian|filipino)\b/,terms:['ethiopian','filipino'],weak:false},
-    {label:'korean',q:/\bkorean\b/,terms:['korean'],weak:false},
-    {label:'tapas and Spanish',q:/\b(tapas|spanish)\b/,terms:['tapas','spanish'],weak:false},
-    {label:'hawaiian',q:/\bhawaiian\b/,terms:['hawaiian'],weak:false},
-    {label:'cajun and creole',q:/\b(cajun|creole)\b/,terms:['cajun','creole'],weak:false},
-    {label:'southern',q:/\bsouthern\b/,terms:['southern'],weak:false},
-    {label:'deli',q:/\b(deli|delicatessen)\b/,terms:['deli','delicatessen']},
-    {label:'gastropub',q:/\bgastropubs?\b/,terms:['gastropub']},
-    {label:'farmers markets',q:/\bfarmers markets?\b/,terms:['farmers market']},
-    {label:'museums and landmarks',q:/\b(museums?|landmarks?)\b/,terms:['museum','landmark'],cats:['Museums & landmarks'],weak:false},
-    {label:'hotels and stays',q:/\b(hotels?|resorts?|lodging|places to stay)\b/,terms:['hotel','resort'],cats:['Hotels'],weak:false},
-    {label:'french',q:/\bfrench\b/,terms:['french'],weak:false},
-    {label:'fondue',q:/\bfondue\b/,terms:['fondue']},
-    {label:'wine shops',q:/\b(wine shops?|wine market|wine stores?)\b/,terms:['wine shop','wine market','wine store']},
-    {label:'bowling',q:/\b(bowling|billiards)\b/,terms:['bowling','billiards','leagues']},
-    {label:'halal',q:/\bhalal\b/,terms:['halal'],weak:false},
-    {label:'empanadas',q:/\bempanadas?\b/,terms:['empanada']},
-    {label:'healthy and meal prep',q:/\b(meal prep|acai|smoothies?|healthy)\b/,terms:['meal prep','acai','smoothie','healthy']}
-  ];
-  const VIBE_AREA_ALIASES=[
-    {q:/\b(disney|magic kingdom|epcot|hollywood studios|animal kingdom|lake buena vista|flamingo crossings)\b/,ids:['disney-area','disney-springs']},
-    {q:/\bcelebration\b/,ids:[],labels:['Celebration'],labelScope:['disney-area','kissimmee']},
-    {q:/\b(universal|citywalk|islands of adventure|epic universe)\b/,ids:['universal']},
-    {q:/\b(i-drive|international drive|icon park|pointe orlando|seaworld|sea world|sand lake|dr\.? phillips|millenia|convention center|occc)\b/,ids:['i-drive'],labels:['Sand Lake','Dr Phillips','Dr. Phillips','Dellagio','Millenia','Mall at Millenia','ICON Park','Pointe Orlando','SeaWorld Orlando']},
-    {q:/\bwinter park\b/,ids:['winter-park']},
-    {q:/\bdowntown\b/,ids:['downtown','thornton-park']},
-    {q:/\bmills 50\b/,ids:['mills-50']},
-    {q:/\bmilk district\b/,ids:['milk-district']},
-    {q:/\blake nona\b/,ids:['lake-nona']},
-    {q:/\b(kissimmee|192)\b/,ids:['kissimmee']},
-    {q:/\b(airport|mco|orlando international)\b/,ids:[],labels:['Airport Corridor','Lee Vista']},
-    {q:/\b(ucf|university of central florida|university|full sail)\b/,ids:['ucf']},
-    {q:/\bsanford\b/,ids:['sanford']},
-    {q:/\bwinter garden\b/,ids:['winter-garden']},
-    {q:/\bcollege park\b/,ids:['college-park']},
-    {q:/\bivanhoe\b/,ids:['ivanhoe-village']},
-    {q:/\baudubon\b/,ids:['audubon-park']},
-    {q:/\bbaldwin park\b/,ids:['baldwin-park']},
-    {q:/\bmaitland\b/,ids:['maitland']},
-    {q:/\boviedo\b/,ids:['oviedo']},
-    {q:/\bsodo\b/,ids:['sodo']},
-    {q:/\bcurry ford\b/,ids:['hourglass']},
-    {q:/\blongwood\b/,ids:['longwood']},
-    {q:/\bmount dora\b/,ids:[],labels:['Mount Dora'],labelScope:['day-trips','unassigned']},
-    {q:/\bdeland\b/,ids:[],labels:['DeLand'],labelScope:['day-trips','unassigned']},
-    {q:/\bcasselberry\b/,ids:['casselberry']},
-    {q:/\baltamonte springs\b/,ids:['altamonte-springs']},
-    {q:/\bapopka\b/,ids:[],labels:['Apopka'],labelScope:['day-trips','unassigned']},
-    {q:/\blake mary\b/,ids:[],labels:['Lake Mary'],labelScope:['day-trips','unassigned','sanford']},
-    {q:/\bclermont\b/,ids:[],labels:['Clermont'],labelScope:['day-trips','unassigned']},
-    {q:/\bwinter haven\b/,ids:[],labels:['Winter Haven'],labelScope:['day-trips','unassigned']},
-    {q:/\brestaurant row\b/,ids:[],labels:['Sand Lake'],labelScope:['i-drive']},
-    {q:/\bpark ave(nue)?\b/,ids:[],labels:['Park Ave'],labelScope:['winter-park']},
-    {q:/\bsouth orlando\b/,ids:['south-orlando']},
-    {q:/\bflorida mall\b/,ids:[],labels:['Florida Mall'],labelScope:['south-orlando']},
-    {q:/\bmetrowest\b/,ids:[],labels:['Metrowest'],labelScope:['unassigned']},
-    {q:/\bsouth obt\b/,ids:[],labels:['South OBT'],labelScope:['south-orlando']},
-    {q:/\bavalon park\b/,ids:['avalon-waterford']},
-    {q:/\bwaterford lakes\b/,ids:['avalon-waterford']},
-    {q:/\bwindermere\b/,ids:['windermere']},
-    {q:/\b(near the parks|theme parks?)\b/,ids:['disney-area','disney-springs','universal','kissimmee']}
-  ];
-  const VIBE_NONFOOD=['Attractions','Hotels','Museums & landmarks','Parks & outdoors','Nightlife & music'];
-  function vibeTermHit(tokens,term){
-    if(term.includes(' '))return tokens.join(' ').includes(term);
-    // Prefix relations need a real stem on the short side: without the
-    // length floors, one-letter tokens from possessives ("Mickey's" -> "s")
-    // made "spanish" and "southern" match half the guide, and the token
-    // "hot" (Hot Dogs) matched the term "hotel".
-    for(const w of tokens){if(w===term||(term.length>=3&&w.startsWith(term))||(w.length>=4&&term.startsWith(w)))return true}
-    return false;
-  }
-  function vibeCatStrength(p,g){
-    const head=((p.name||'')+' '+(p.category||'')+' '+(p.categoryDetail||'')+' '+((p.tags||[]).join(' '))).toLowerCase().match(/[a-z0-9]+/g)||[];
-    if((g.cats&&g.cats.includes(p.category))||g.terms.some(t=>vibeTermHit(head,t)))return 2;
-    if(g.weak===false||VIBE_NONFOOD.includes(p.category))return 0;
-    const desc=((p.description||'').toLowerCase().match(/[a-z0-9]+/g)||[]);
-    return g.terms.some(t=>vibeTermHit(desc,t))?1:0;
-  }
-  function vibeInArea(p,a){return a.ids.includes(p.district_id)||(a.labels&&a.labels.includes(p.district)&&(!a.labelScope||a.labelScope.includes(p.district_id||'unassigned')))}
-  function vibeIntentPins(q){
-    const text=q.toLowerCase();
-    const areas=VIBE_AREA_ALIASES.filter(a=>a.q.test(text));
-    const cats=VIBE_CAT_GROUPS.filter(g=>g.q.test(text));
-    if(!cats.length)return [];
-    const pins=[];
-    const push=(p)=>{if(!pins.includes(p.id))pins.push(p.id)};
-    for(const g of cats.slice(0,2)){
-      const scored=PLACES.map(p=>({p,s:vibeCatStrength(p,g)})).filter(x=>x.s>0);
-      let placed=false;
-      for(const a of areas.slice(0,2)){
-        const inStrong=scored.filter(x=>x.s===2&&vibeInArea(x.p,a)).map(x=>x.p);
-        const inWeak=scored.filter(x=>x.s===1&&vibeInArea(x.p,a)).map(x=>x.p);
-        inStrong.slice(0,6).forEach(push);
-        if(inStrong.length<=2)inWeak.slice(0,4-inStrong.length).forEach(push);
-        if(inStrong.length||inWeak.length)placed=true;
-      }
-      if(!placed)scored.filter(x=>x.s===2).map(x=>x.p).slice(0,6).forEach(push);
-    }
-    return pins.slice(0,8);
-  }
-  function clearFiltersKeepVibe(){
-    const had=state.zone!=='all'||state.category!=='all'||state.occasion!=='all'||state.daypart!=='all'||state.price!=='all'||state.collection!=='all'||state.district!=='all'||!!state.localGuide;
-    state.zone='all';state.category='all';state.occasion='all';state.daypart='all';state.price='all';state.collection='all';state.district='all';state.localGuide=null;state.open=null;
-    const z=$('#zone'),o=$('#occasion'),dp=$('#daypart'),pr=$('#price');
-    if(z)z.value='all';if(o)o.value='all';if(dp)dp.value='all';if(pr)pr.value='all';
-    return had;
-  }
-  function clearVibeResults(){vibeSeq++;if(vibeCtrl){vibeCtrl.abort();vibeCtrl=null}state.vibe=null;vibeChip.hidden=true;vibeStatus.textContent='';render()}
-  function setVibeMode(on){
-    vibeSeq++;if(vibeCtrl){vibeCtrl.abort();vibeCtrl=null}
-    state.vibeMode=on;
-    modePlaces.classList.toggle('active',!on);modePlaces.setAttribute('aria-pressed',String(!on));
-    modeVibe.classList.toggle('active',on);modeVibe.setAttribute('aria-pressed',String(on));
-    vibeHint.textContent=on?'By vibe: describe a feeling or an occasion, then press Enter. Try "quiet rooftop for a date".':'By place: search a name, a neighborhood, or a kind of place. Try "coffee" or "Winter Park".';
-    searchInput.placeholder=on?'Describe the vibe…':'Search places…';
-    if(on){state.query='';state.vibe=null;vibeChip.hidden=true;vibeStatus.textContent='';render()}
-    else clearVibeResults();
-  }
-  async function runVibe(){
-    const q=searchInput.value.trim();
-    if(q.length<2){vibeStatus.textContent='Give me a few words about the vibe you want.';return}
-    const mySeq=++vibeSeq;
-    if(vibeCtrl)vibeCtrl.abort();
-    vibeCtrl=new AbortController();
-    const ctrl=vibeCtrl;
-    const timer=setTimeout(()=>{if(vibeCtrl===ctrl)ctrl.abort()},12000);
-    vibeStatus.textContent='Reading the vibe…';
-    try{
-      const r=await fetch(VIBE_FN,{method:'POST',headers:{'Authorization':'Bearer '+VIBE_KEY,'apikey':VIBE_KEY,'Content-Type':'application/json'},body:JSON.stringify({query:q,count:60}),signal:ctrl.signal});
-      if(mySeq!==vibeSeq)return;
-      if(!r.ok)throw new Error('vibe '+r.status);
-      const d=await r.json();
-      if(mySeq!==vibeSeq)return;
-      const rankedIds=rerankVibe(q,(d.results||[])).map(x=>x.id);
-      const pinIds=vibeIntentPins(q);
-      const ids=[...pinIds,...rankedIds.filter(id=>!pinIds.includes(id))].slice(0,24);
-      if(!ids.length){state.vibe=null;vibeChip.hidden=true;vibeStatus.textContent='No strong matches for that vibe. Try different words, or switch back to Places.';render();searchInput.dispatchEvent(new Event('input',{bubbles:true}));return}
-      const hadFilters=clearFiltersKeepVibe();
-      state.vibe={q:q,ids:ids};state.open=null;
-      vibeChipText.textContent='\u201C'+q+'\u201D';vibeChip.hidden=false;
-      captureEvent('search',{query:q,results:filtered().length,mode:'vibe'});
-      render();
-      vibeStatus.textContent=hadFilters?'Closest matches first. Your filters were cleared for this search.':'Closest matches first.';
-      searchInput.dispatchEvent(new Event('input',{bubbles:true}));
-    }catch(e){
-      if(mySeq!==vibeSeq)return;
-      state.vibe=null;vibeChip.hidden=true;
-      vibeStatus.textContent='Vibe search is unavailable right now. Places search still works.';
-      render();
-    }finally{clearTimeout(timer);if(vibeCtrl===ctrl)vibeCtrl=null}
-  }
-  modePlaces.addEventListener('click',()=>{if(state.vibeMode)setVibeMode(false)});
-  modeVibe.addEventListener('click',()=>{if(!state.vibeMode)setVibeMode(true)});
-  $('#vibeClear').addEventListener('click',clearVibeResults);
-  searchInput.addEventListener('keydown',e=>{if(state.vibeMode&&e.key==='Enter'){e.preventDefault();runVibe()}});
+
   // Reference point: measure from a typed place or address instead of the device position.
   const refInput=$('#refInput'),refSuggest=$('#refSuggest'),refChip=$('#refChip'),refChipName=$('#refChipName');
   let refTimer=null,refItems=[],refActive=-1,refSeq=0;
@@ -1936,7 +1694,7 @@ function render(){
     $('#centerMe').disabled=false;$('#centerMe').textContent='Reference point';
     refChipName.textContent=it.label;refChip.classList.add('on');
     setLocationControl('Nearest to me','Tap once to use your own location instead','Find',true);
-    $('#locationStatus').textContent=state.vibe?('Measuring from '+it.label+'. Distances are on each card; matches stay in vibe order.'):('Sorted by approximate distance from '+it.label+'. Directions start there too.');
+    $('#locationStatus').textContent='Sorted by approximate distance from '+it.label+'. Directions start there too.';
     refInput.value='';refClose();render();
     if(firstNearest)playNearestArrival();
   }
@@ -2025,7 +1783,7 @@ function capTeasers(root){var ts=$$('#venueList .venue-history',root);ts.forEach
 function stampUpdated(root){$$("article.venue[data-id]",root).forEach(function(a){if(UPDATED[a.dataset.id]&&!a.querySelector(".upd-tag")){var t=a.querySelector(".venue-title");if(t){var s=document.createElement("span");s.className="upd-tag";s.textContent="Updated Oct 2026";t.appendChild(s)}}})}
 function updateIntro(){var el=$("#districtIntro");if(!el)return;var k=activeKey();var txt=INTROS[k]||"";if(txt){el.textContent=txt;el.hidden=false}else{el.hidden=true}}
 var syncT=null;var lastSyncedDistrict=null,popApply=false;
-function syncURL(){clearTimeout(syncT);syncT=setTimeout(function(){var d=activeKey(),c=activeChip(),q=($("#search")||{}).value||($("#heroSearch")||{}).value||"";if(typeof state!=="undefined"&&state.vibeMode&&!state.vibe)q="";var z=($("#zone")||{}).value||"all",o=($("#occasion")||{}).value||"all",dp=($("#daypart")||{}).value||"all",pr=($("#price")||{}).value||"all";var fcb=$$("[data-category-option]").filter(function(b){return b.getAttribute("aria-pressed")==="true"})[0];var fc=fcb?fcb.dataset.categoryOption:"";var p=new URLSearchParams();if(d&&d!=="all")p.set("district",d);if(c)p.set("cat",c);if(typeof state!=="undefined"&&state.vibe&&state.vibe.q)p.set("vibe",state.vibe.q);else if(q)p.set("q",q);var qs=p.toString();var url=qs?("?"+qs):location.pathname;try{if(!popApply&&lastSyncedDistrict!==null&&d!==lastSyncedDistrict)history.pushState(null,"",url);else history.replaceState(null,"",url)}catch(e){}lastSyncedDistrict=d;try{localStorage.setItem("fyi-filters-v1",JSON.stringify({d:d,c:c,q:(typeof state!=="undefined"&&state.vibe)?"":q,z:z,o:o,dp:dp,pr:pr,fc:fc}))}catch(e){}updateIntro()},350)}
+function syncURL(){clearTimeout(syncT);syncT=setTimeout(function(){var d=activeKey(),c=activeChip(),q=($("#search")||{}).value||($("#heroSearch")||{}).value||"";var z=($("#zone")||{}).value||"all",o=($("#occasion")||{}).value||"all",dp=($("#daypart")||{}).value||"all",pr=($("#price")||{}).value||"all";var fcb=$$("[data-category-option]").filter(function(b){return b.getAttribute("aria-pressed")==="true"})[0];var fc=fcb?fcb.dataset.categoryOption:"";var p=new URLSearchParams();if(d&&d!=="all")p.set("district",d);if(c)p.set("cat",c);if(q)p.set("q",q);var qs=p.toString();var url=qs?("?"+qs):location.pathname;try{if(!popApply&&lastSyncedDistrict!==null&&d!==lastSyncedDistrict)history.pushState(null,"",url);else history.replaceState(null,"",url)}catch(e){}lastSyncedDistrict=d;try{localStorage.setItem("fyi-filters-v1",JSON.stringify({d:d,c:c,q:q,z:z,o:o,dp:dp,pr:pr,fc:fc}))}catch(e){}updateIntro()},350)}
 function suggestions(q){if(!q||typeof PLACES==="undefined")return[];var names=PLACES.map(function(p){return p.name});var ds=PLACES.map(function(p){return p.district});var all=names.concat(ds.filter(function(v,i){return ds.indexOf(v)===i}));var maxD=Math.max(2,Math.floor(q.length/3));var scored=all.map(function(n){return{n:n,d:lev(q,n)}}).filter(function(x){return x.d<=maxD||x.n.toLowerCase().indexOf(q.toLowerCase())===0}).sort(function(a,b){return a.d-b.d});var out=[];scored.forEach(function(x){if(out.indexOf(x.n)<0)out.push(x.n)});return out.slice(0,3)}
 function fillDidYouMean(){var box=$("#didYouMean");if(!box)return;box.innerHTML="";var q=($("#search")||{}).value||($("#heroSearch")||{}).value||"";var s=suggestions(q);if(!s.length)return;var lab=document.createElement("span");lab.textContent="Did you mean:";lab.style.cssText="align-self:center;color:var(--muted);font-size:.88rem";box.appendChild(lab);s.forEach(function(n){var b=document.createElement("button");b.type="button";b.textContent=n;b.addEventListener("click",function(){setQuery(n);var l=$("#venueList");if(l)l.scrollIntoView({behavior:"smooth",block:"start"})});box.appendChild(b)})}
 function init(){
@@ -2035,22 +1793,21 @@ function init(){
   stampUpdated(document);capTeasers(document);
   var list=$("#venueList");if(list)new MutationObserver(function(){stampUpdated(list);capTeasers(list)}).observe(list,{childList:true});
   var params=new URLSearchParams(location.search);var mem=null;try{mem=JSON.parse(localStorage.getItem("fyi-filters-v1")||"null")}catch(e){}
-  var d=params.get("district")||"",c=params.get("cat")||(mem&&mem.c)||"",q=params.get("q")||(mem&&mem.q)||"";
-  if(q)try{setVibeMode(false)}catch(e){};if(d&&d!=="all")clickDistrict(d);if(c)clickCategory(c);if(q)setQuery(q);
+  var d=params.get("district")||"",c=params.get("cat")||(mem&&mem.c)||"",q=params.get("q")||params.get("vibe")||(mem&&mem.q)||"";
+  if(d&&d!=="all")clickDistrict(d);if(c)clickCategory(c);if(q)setQuery(q);
   var selVals={zone:params.get("zone")||(mem&&mem.z)||"",occasion:params.get("occasion")||(mem&&mem.o)||"",daypart:params.get("daypart")||(mem&&mem.dp)||"",price:params.get("price")||(mem&&mem.pr)||""};
   Object.keys(selVals).forEach(function(id){var el=document.getElementById(id),v=selVals[id];if(el&&v&&el.value!==v&&Array.prototype.some.call(el.options,function(op){return op.value===v})){el.value=v;el.dispatchEvent(new Event("change",{bubbles:true}))}});
   var fcv=(mem&&mem.fc)||"";if(fcv&&!c){var ob=$$("[data-category-option]").filter(function(b){return b.dataset.categoryOption===fcv})[0];if(ob&&ob.getAttribute("aria-pressed")!=="true")ob.click()}
     var vp=params.get("venue");if(vp&&typeof PLACES!=="undefined"&&PLACES.some(function(p){return p.id===vp})){setTimeout(function(){try{openPick(vp);var pp=PLACES.find(function(p){return p.id===vp});var kk=(typeof districtKeyOf==="function"&&pp)?(districtKeyOf(pp)||("loc-"+String(pp.district||"Orlando").toLowerCase().replace(/[^a-z0-9]+/g,"-"))):null;if(kk&&typeof fillDistrictSection==="function")fillDistrictSection(kk);requestAnimationFrame(function(){var el=document.querySelector('[data-id="'+vp+'"]');if(el)el.scrollIntoView({block:"center"})})}catch(e){}},90)}
-  var vb=params.get("vibe");if(vb){setTimeout(function(){try{setVibeMode(true);var si=$("#search");if(si)si.value=vb;runVibe();var fel=$("#finder");if(fel)fel.scrollIntoView()}catch(e){}},150)}
   updateIntro();
   document.addEventListener("click",function(e){if(e.target.closest("#districtTabs,[data-category-chip],[data-district]"))syncURL()});
   document.addEventListener("input",function(e){if(e.target.id==="search"||e.target.id==="heroSearch")syncURL()});
   document.addEventListener("change",function(e){if(["zone","occasion","daypart","price"].indexOf(e.target.id)>=0)syncURL()});
   document.addEventListener("click",function(e){if(e.target.closest("[data-category-option]"))syncURL()});
   lastSyncedDistrict=activeKey();syncURL();
-  window.addEventListener("popstate",function(){var pp=new URLSearchParams(location.search);popApply=true;var nd=pp.get("district")||"all";if(nd!==activeKey())clickDistrict(nd);var nc=pp.get("cat")||"";var ac=activeChip();if(nc!==ac){if(ac)clickCategory(ac);if(nc)clickCategory(nc)}var nq=pp.get("q")||"";var cq=($("#search")||{}).value||($("#heroSearch")||{}).value||"";if(nq!==cq)setQuery(nq);var no=pp.get("occasion")||"all",oe=$("#occasion");if(oe&&oe.value!==no&&Array.prototype.some.call(oe.options,function(op){return op.value===no})){oe.value=no;oe.dispatchEvent(new Event("change",{bubbles:true}))}var nv=pp.get("vibe")||"";if(nv){try{setVibeMode(true);var si2=$("#search");if(si2)si2.value=nv;runVibe()}catch(e){}}else if(typeof state!=="undefined"&&state.vibe){if(nq){try{setVibeMode(false)}catch(e){}}else{var vc2=$("#vibeClear");if(vc2)vc2.click()}}setTimeout(function(){popApply=false},700)});
+  window.addEventListener("popstate",function(){var pp=new URLSearchParams(location.search);popApply=true;var nd=pp.get("district")||"all";if(nd!==activeKey())clickDistrict(nd);var nc=pp.get("cat")||"";var ac=activeChip();if(nc!==ac){if(ac)clickCategory(ac);if(nc)clickCategory(nc)}var nq=pp.get("q")||pp.get("vibe")||"";var cq=($("#search")||{}).value||($("#heroSearch")||{}).value||"";if(nq!==cq)setQuery(nq);var no=pp.get("occasion")||"all",oe=$("#occasion");if(oe&&oe.value!==no&&Array.prototype.some.call(oe.options,function(op){return op.value===no})){oe.value=no;oe.dispatchEvent(new Event("change",{bubbles:true}))}setTimeout(function(){popApply=false},700)});
   var pc=$("#popChips");if(pc)pc.addEventListener("click",function(e){var b=e.target.closest("button[data-q]");if(!b)return;setQuery(b.dataset.q);var l=$("#venueList");if(l)l.scrollIntoView({behavior:"smooth",block:"start"})});
-  var rf=$("#resetFilters");if(rf)rf.addEventListener("click",function(){var vcb=$("#vibeClear");if(vcb&&typeof state!=="undefined"&&state.vibe)vcb.click();setQuery("");if(activeKey()!=="all")clickDistrict("all");var ac=activeChip();if(ac)clickCategory(ac);syncURL()});
+  var rf=$("#resetFilters");if(rf)rf.addEventListener("click",function(){setQuery("");if(activeKey()!=="all")clickDistrict("all");var ac=activeChip();if(ac)clickCategory(ac);syncURL()});
   var em=$("#empty");if(em)new MutationObserver(function(){if(!em.hidden)fillDidYouMean()}).observe(em,{attributes:true,attributeFilter:["hidden"]});
   var row=$("#districtTabs");if(row)row.addEventListener("keydown",function(e){if(["ArrowRight","ArrowLeft","Home","End"].indexOf(e.key)<0)return;var t=tabs();if(!t.length)return;var i=t.indexOf(document.activeElement);if(i<0)return;e.preventDefault();var n=e.key==="Home"?0:e.key==="End"?t.length-1:(i+(e.key==="ArrowRight"?1:-1)+t.length)%t.length;t[n].focus();t[n].click()});
   var nav=row?row.closest(".district-tabs"):null;
