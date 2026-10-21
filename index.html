@@ -604,6 +604,16 @@ html[data-theme="dark"] .export-trigger:hover,html[data-theme="dark"] .export-tr
     @media (prefers-reduced-motion: reduce){.near-window,.near-modal-backdrop,.near-row,.near-window .location-btn{animation:none}}
   </style>
 <style>.district-index-note{margin:14px 0 0;color:var(--muted);font-size:.9rem}.district-index-note a{color:var(--accent-ink);font-weight:700}</style>
+
+<style>
+/* imagery wave 1: photo band */
+.photo-band{position:relative;margin:0;overflow:hidden;background:#0d1512}
+.photo-band img{width:100%;height:100%;display:block;object-fit:cover;object-position:center 42%;filter:sepia(.26) saturate(.84) contrast(1.04) brightness(.95)}
+.photo-band figcaption{position:absolute;left:20px;bottom:14px;max-width:540px;background:rgba(13,21,18,.58);padding:7px 11px;border-radius:8px;backdrop-filter:blur(4px);color:#f4efe1;font-size:.8rem;line-height:1.45}
+.photo-band figcaption .hero-credit{display:block;color:rgba(244,239,225,.78);font-size:.72rem}
+.photo-band figcaption a{color:#d4b573}
+@media (max-width:640px){.photo-band figcaption{left:14px;max-width:72%;bottom:12px}}
+</style>
 </head>
 <body>
 <a class="skip-link" href="#districts">Skip to district stories</a>
@@ -637,6 +647,8 @@ html[data-theme="dark"] .export-trigger:hover,html[data-theme="dark"] .export-tr
         
       </div>
     </header>
+
+    <figure class="photo-band" style="height:400px;"><img src="assets/hero-index.webp" alt="Downtown Orlando high-rises seen across Lake Eola" width="1920" height="1440" decoding="async" /><figcaption>Downtown Orlando from Lake Eola Park. <span class="hero-credit">Photo: <a href="https://commons.wikimedia.org/wiki/File:High-rises_in_Orlando_from_Lake_Eola_Park_(May_2023)_-_5.JPG" target="_blank" rel="noopener">&ldquo;High-rises in Orlando from Lake Eola Park (May 2023) - 5&rdquo;</a> by Benoît Prieur, <a href="https://creativecommons.org/publicdomain/zero/1.0" target="_blank" rel="noopener">CC0</a>, via Wikimedia Commons.</span></figcaption></figure>
 
 
 

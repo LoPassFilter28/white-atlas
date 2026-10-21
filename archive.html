@@ -612,6 +612,16 @@ html:not([data-theme="dark"]) .upd-tag{color:#7c520c;background:rgba(124,82,12,.
 #venueList{min-height:100vh}
 </style>
 <style>.theme-toggle-text{position:static!important;width:auto!important;height:auto!important;clip:auto!important;overflow:visible!important;font-size:.8rem}</style>
+
+<style>
+/* imagery wave 1: photo band */
+.photo-band{position:relative;margin:0;overflow:hidden;background:#0d1512}
+.photo-band img{width:100%;height:100%;display:block;object-fit:cover;object-position:center 42%;filter:sepia(.26) saturate(.84) contrast(1.04) brightness(.95)}
+.photo-band figcaption{position:absolute;left:20px;bottom:14px;max-width:540px;background:rgba(13,21,18,.58);padding:7px 11px;border-radius:8px;backdrop-filter:blur(4px);color:#f4efe1;font-size:.8rem;line-height:1.45}
+.photo-band figcaption .hero-credit{display:block;color:rgba(244,239,225,.78);font-size:.72rem}
+.photo-band figcaption a{color:#d4b573}
+@media (max-width:640px){.photo-band figcaption{left:14px;max-width:72%;bottom:12px}}
+</style>
 </head>
 <body><a class="skip-link" href="#venueList">Skip to places</a>
   <a class="skip-link" href="#venueList">Skip to venue list</a>
@@ -626,6 +636,7 @@ html:not([data-theme="dark"]) .upd-tag{color:#7c520c;background:rgba(124,82,12,.
       <button class="view-tab export-tab" id="exportTab" type="button" aria-pressed="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"></path><path d="m7 10 5 5 5-5"></path><path d="M5 21h14"></path></svg><span>Export</span></button>
       <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false" aria-label="Switch theme"><span class="theme-toggle-text">🌙 Dark</span></button>
     </header>
+    <figure class="photo-band" style="height:190px;"><img src="assets/hero-archive.webp" alt="Downtown Orlando high-rises seen across Lake Eola" width="1440" height="1080" decoding="async" /><figcaption>Downtown Orlando from Lake Eola. <span class="hero-credit">Photo: <a href="https://commons.wikimedia.org/wiki/File:High-rises_in_Orlando,_Florida_from_Lake_Eola_(May_2023).jpg" target="_blank" rel="noopener">&ldquo;High-rises in Orlando, Florida from Lake Eola (May 2023)&rdquo;</a> by Benoît Prieur, <a href="https://creativecommons.org/publicdomain/zero/1.0" target="_blank" rel="noopener">CC0</a>, via Wikimedia Commons.</span></figcaption></figure>
     <h1 style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap">Browse every place in the 407 FYI Orlando guide</h1>
 
 
