@@ -309,6 +309,59 @@
         .ev { grid-template-columns: 1fr; }
         .ev .d { padding-top: 0; }
       }
+
+      /* ---------- EDC motion pilot v2 (2026-10-20): particle orbs + word reveals ----------
+         Rides the v1 gate tiers. Full (.js): orb field + staggered word rises.
+         Calm tier (html.lite, low power): fewer orbs, opacity-only word fades.
+         Static (html.calm, no-JS, reduced motion): neither. The hidden states
+         below exist only under .js, and .wr markup is only ever created by
+         the gated script, so content is fully visible if animation never runs. */
+      .orb-field {
+        position: absolute; inset: 0; z-index: 1; width: 100%; height: 100%;
+        display: block; pointer-events: none;
+      }
+      html:not(.js) .orb-field, html.calm .orb-field { display: none; }
+      .js .wr .wm {
+        display: inline-block; overflow: hidden; vertical-align: bottom;
+        padding-bottom: .12em; margin-bottom: -.12em;
+      }
+      .js .wr .wi {
+        display: inline-block; opacity: 0; transform: translateY(118%);
+        transition: transform .85s cubic-bezier(.2,.6,.2,1) var(--d, 0s),
+                    opacity .6s ease var(--d, 0s);
+        will-change: transform, opacity;
+      }
+      .js .hero .wr.play .wi,
+      .js .sec.in .wr .wi { opacity: 1; transform: translateY(0); }
+      /* Calm tier: no travel, just a soft fade, same stagger. */
+      html.lite .wr .wi {
+        transform: none; transition: opacity .45s ease var(--d, 0s);
+      }
+      /* The v1 headline sheen cannot survive word-splitting as an h1
+         background: background-clip:text on the h1 stops painting through
+         transformed child spans, which left the split headline invisible.
+         So when the script splits the h1 (.wr), the sheen moves onto the
+         word spans themselves: each word carries the same gradient and the
+         same 7.5s sweep, in sync. */
+      @supports ((-webkit-background-clip: text) or (background-clip: text)) {
+        .js .hero h1.wr { background: none; animation: none; }
+        .js .hero h1.wr .wi {
+          background: linear-gradient(100deg, var(--headline) 42%, #e8cf9a 50%, var(--headline) 58%);
+          background-size: 220% 100%; background-position: 112% 0;
+          -webkit-background-clip: text; background-clip: text;
+          -webkit-text-fill-color: transparent; color: transparent;
+          animation: h1Sheen 7.5s ease-in-out infinite;
+        }
+      }
+      html.paused .hero h1.wr .wi { animation-play-state: paused; }
+      html.lite .hero h1.wr .wi { animation: none; }
+      /* Static safety: even if .wr markup somehow exists, nothing stays hidden. */
+      html.calm .wr .wi { opacity: 1 !important; transform: none !important; transition: none !important; }
+      @media (prefers-reduced-motion: reduce) {
+        .orb-field { display: none; }
+        .js .wr .wi { opacity: 1; transform: none; transition: none; animation: none; }
+      }
+      @media print { .orb-field { display: none; } }
     </style>
     
     
@@ -322,6 +375,7 @@
         <div class="hero-glow" aria-hidden="true"></div>
         <div class="hero-aurora aurora-a" aria-hidden="true"></div>
         <div class="hero-aurora aurora-b" aria-hidden="true"></div>
+        <canvas class="orb-field" id="orbField" aria-hidden="true"></canvas>
       </div>
       <div class="hero-in">
         <p class="crumbs"><a href="/">407 FYI</a> · <a href="/edm.html">EDM</a> · EDC Orlando</p>
@@ -970,6 +1024,124 @@
       window.addEventListener('scroll', onScroll, { passive: true });
       window.addEventListener('resize', onScroll);
       update();
+    }
+
+    /* ---- Motion pilot v2: word-by-word header reveals ----
+       Runs only past the gate above (never under .calm / reduced motion /
+       save-data). Words are split here, never in the markup, so a no-JS or
+       gated visit sees plain, fully visible headers. Section headers play
+       off the same .in the reveal observer already adds; the hero plays
+       on load. Calm tier (lowPower) keeps the stagger but the CSS swaps
+       the rise for an opacity-only fade. */
+    var stagger = lowPower ? 45 : 95;
+    function splitWords(el, baseDelay) {
+      var text = el.textContent.trim().replace(/\s+/g, ' ');
+      if (!text) return;
+      el.setAttribute('aria-label', text);
+      el.classList.add('wr');
+      el.textContent = '';
+      text.split(' ').forEach(function (word, i) {
+        var mask = document.createElement('span');
+        mask.className = 'wm';
+        mask.setAttribute('aria-hidden', 'true');
+        var inner = document.createElement('span');
+        inner.className = 'wi';
+        inner.style.setProperty('--d', (baseDelay + i * stagger) + 'ms');
+        inner.textContent = word;
+        mask.appendChild(inner);
+        el.appendChild(mask);
+        el.appendChild(document.createTextNode(' '));
+      });
+    }
+    var heroH1 = document.querySelector('.hero h1');
+    if (heroH1) {
+      splitWords(heroH1, lowPower ? 60 : 160);
+      requestAnimationFrame(function () {
+        setTimeout(function () { heroH1.classList.add('play'); }, 60);
+        /* Safety: never leave the hero mid-reveal if a frame was dropped. */
+        setTimeout(function () { heroH1.classList.add('play'); }, 1400);
+      });
+    }
+    document.querySelectorAll('.sec h2').forEach(function (h) { splitWords(h, 40); });
+
+    /* ---- Motion pilot v2: particle orbs ----
+       Soft sprites in the site palette only (bronze, sage, smoky green),
+       pre-rendered once to offscreen canvases, then composited with
+       drawImage: no gradients are painted per frame. Counts are capped,
+       DPR is capped, and the loop draws nothing while the v1 .paused
+       class is on (hero off-screen or tab hidden). */
+    var orbCanvas = document.getElementById('orbField');
+    if (orbCanvas && orbCanvas.getContext && hero) {
+      var octx = orbCanvas.getContext('2d');
+      var ORB_COLORS = [
+        [212, 181, 115],  /* bronze (accent-ink) */
+        [189, 144, 73],   /* deep bronze */
+        [185, 191, 164],  /* sage */
+        [58, 90, 53],     /* smoky green */
+        [240, 232, 213]   /* parchment, faintest */
+      ];
+      var sprites = ORB_COLORS.map(function (c) {
+        var s = document.createElement('canvas');
+        s.width = s.height = 128;
+        var g = s.getContext('2d');
+        var grad = g.createRadialGradient(64, 64, 0, 64, 64, 64);
+        grad.addColorStop(0, 'rgba(' + c[0] + ',' + c[1] + ',' + c[2] + ',0.85)');
+        grad.addColorStop(0.55, 'rgba(' + c[0] + ',' + c[1] + ',' + c[2] + ',0.32)');
+        grad.addColorStop(1, 'rgba(' + c[0] + ',' + c[1] + ',' + c[2] + ',0)');
+        g.fillStyle = grad;
+        g.fillRect(0, 0, 128, 128);
+        return s;
+      });
+      var orbs = [], orbW = 0, orbH = 0;
+      var alphaScale = root.dataset.theme === 'light' ? 0.5 : 1;
+      function seedOrbs() {
+        var count = lowPower ? 6 : (orbW < 640 ? 9 : 16);
+        orbs = [];
+        for (var i = 0; i < count; i++) {
+          orbs.push({
+            bx: Math.random(), by: Math.random(),
+            r: 34 + Math.random() * 76,
+            sprite: sprites[i % sprites.length],
+            phase: Math.random() * Math.PI * 2,
+            sx: 0.00011 + Math.random() * 0.00013,
+            sy: 0.00009 + Math.random() * 0.00011,
+            ampX: 14 + Math.random() * 30,
+            ampY: 10 + Math.random() * 22,
+            alpha: (0.10 + Math.random() * 0.13) * alphaScale,
+            pulse: 0.0004 + Math.random() * 0.0005
+          });
+        }
+      }
+      function sizeOrbs() {
+        var rect = hero.getBoundingClientRect();
+        var dpr = Math.min(window.devicePixelRatio || 1, lowPower ? 1 : 1.5);
+        orbW = Math.max(1, Math.round(rect.width));
+        orbH = Math.max(1, Math.round(rect.height));
+        orbCanvas.width = Math.round(orbW * dpr);
+        orbCanvas.height = Math.round(orbH * dpr);
+        octx.setTransform(dpr, 0, 0, dpr, 0, 0);
+        if (!orbs.length) seedOrbs();
+      }
+      var orbResizeTimer = null;
+      window.addEventListener('resize', function () {
+        clearTimeout(orbResizeTimer);
+        orbResizeTimer = setTimeout(sizeOrbs, 180);
+      });
+      sizeOrbs();
+      (function orbTick(now) {
+        requestAnimationFrame(orbTick);
+        if (root.classList.contains('paused') || !orbW) return;
+        octx.clearRect(0, 0, orbW, orbH);
+        for (var i = 0; i < orbs.length; i++) {
+          var o = orbs[i];
+          var x = o.bx * orbW + Math.sin(now * o.sx + o.phase) * o.ampX;
+          var y = o.by * orbH + Math.cos(now * o.sy + o.phase * 1.7) * o.ampY;
+          var a = o.alpha * (0.78 + 0.22 * Math.sin(now * o.pulse + o.phase));
+          octx.globalAlpha = Math.max(0, a);
+          octx.drawImage(o.sprite, x - o.r, y - o.r, o.r * 2, o.r * 2);
+        }
+        octx.globalAlpha = 1;
+      })(0);
     }
   })();
 </script>
