@@ -103,6 +103,93 @@
       .anchor-nav a:hover { border-color: var(--bronze); }
       .scroll-cue { margin: 40px 0 0; font-size: .74rem; letter-spacing: .26em; text-transform: uppercase; color: var(--sage); }
 
+
+      /* ---------- hero treatment v3: graded image, tuned scrim, type plate ---------- */
+      .scene-hero {
+        background:
+          radial-gradient(90% 70% at 85% -10%, rgba(193,154,91,.16), rgba(193,154,91,0) 55%),
+          radial-gradient(120% 90% at 8% 110%, rgba(185,191,164,.10), rgba(185,191,164,0) 55%),
+          repeating-radial-gradient(circle at 88% -20%, rgba(244,239,225,.05) 0 1px, rgba(244,239,225,0) 1px 26px),
+          linear-gradient(180deg, var(--g2), var(--g1));
+      }
+      .scene-hero > img {
+        filter: sepia(.26) saturate(.84) contrast(1.04) brightness(.95);
+      }
+      .scene-hero::before {
+        content: ""; position: absolute; inset: 0; z-index: -1;
+        background: linear-gradient(165deg, rgba(193,154,91,.20), rgba(17,28,22,.22) 78%);
+        mix-blend-mode: soft-light;
+      }
+      .scene-hero::after {
+        background:
+          radial-gradient(130% 95% at 14% 90%, rgba(13,21,18,.62), rgba(13,21,18,0) 62%),
+          linear-gradient(90deg, rgba(13,21,18,.48) 0%, rgba(13,21,18,.24) 34%, rgba(13,21,18,0) 64%),
+          linear-gradient(180deg,
+            rgba(13,21,18,.68) 0%,
+            rgba(13,21,18,.38) 22%,
+            rgba(13,21,18,.34) 42%,
+            rgba(13,21,18,.56) 58%,
+            rgba(13,21,18,.78) 72%,
+            rgba(13,21,18,.92) 86%,
+            rgba(13,21,18,.98) 100%);
+      }
+      .scene-hero .scene-in { position: relative; z-index: 1; }
+      .scene-hero .scene-cap {
+        left: 20px; right: auto; bottom: 14px; max-width: 540px;
+        background: rgba(13,21,18,.58); padding: 7px 11px;
+        border-radius: 8px; backdrop-filter: blur(4px); text-shadow: none;
+      }
+      .hero .crumbs { color: rgba(244,239,225,.88); text-shadow: 0 1px 10px rgba(0,0,0,.75); }
+      .hero .kicker { display: flex; align-items: center; gap: 14px; }
+      .hero .kicker::before {
+        content: ""; flex: none; width: 38px; height: 2px; background: var(--bronze);
+      }
+      .hero h1 {
+        text-wrap: balance;
+        text-shadow: 0 1px 2px rgba(10,16,13,.6), 0 12px 48px rgba(13,21,18,.6);
+      }
+      .hero .era {
+        font-weight: 560;
+        text-shadow: 0 1px 3px rgba(10,16,13,.65), 0 6px 30px rgba(13,21,18,.55);
+      }
+      .hero .anchor-nav a {
+        background: rgba(13,21,18,.68); border-color: rgba(193,154,91,.7);
+        backdrop-filter: blur(6px) saturate(1.15);
+        box-shadow: 0 4px 18px rgba(0,0,0,.35);
+      }
+      .hero .anchor-nav a:hover { background: rgba(38,32,20,.82); }
+      .scene-hero--deep::after {
+        background:
+          radial-gradient(130% 95% at 14% 90%, rgba(13,21,18,.70), rgba(13,21,18,0) 62%),
+          linear-gradient(90deg, rgba(13,21,18,.54) 0%, rgba(13,21,18,.28) 34%, rgba(13,21,18,0) 64%),
+          linear-gradient(180deg,
+            rgba(13,21,18,.74) 0%,
+            rgba(13,21,18,.48) 22%,
+            rgba(13,21,18,.46) 42%,
+            rgba(13,21,18,.64) 58%,
+            rgba(13,21,18,.84) 72%,
+            rgba(13,21,18,.95) 86%,
+            rgba(13,21,18,.99) 100%);
+      }
+      @media (max-width: 640px) {
+        .scene-hero .scene-in { padding-bottom: 104px; }
+        .scene-hero .scene-cap { left: 14px; right: auto; max-width: 63%; text-align: left; bottom: 12px; }
+        .scene-hero::after {
+          background:
+            linear-gradient(180deg, rgba(13,21,18,0) 24%, rgba(13,21,18,.34) 48%, rgba(13,21,18,.50) 72%, rgba(13,21,18,.58) 100%),
+            radial-gradient(130% 95% at 14% 90%, rgba(13,21,18,.62), rgba(13,21,18,0) 62%),
+            linear-gradient(90deg, rgba(13,21,18,.48) 0%, rgba(13,21,18,.24) 34%, rgba(13,21,18,0) 64%),
+            linear-gradient(180deg, rgba(13,21,18,.68) 0%, rgba(13,21,18,.38) 22%, rgba(13,21,18,.34) 42%, rgba(13,21,18,.56) 58%, rgba(13,21,18,.78) 72%, rgba(13,21,18,.92) 86%, rgba(13,21,18,.98) 100%);
+        }
+        .scene-hero--deep::after {
+          background:
+            linear-gradient(180deg, rgba(13,21,18,0) 24%, rgba(13,21,18,.34) 48%, rgba(13,21,18,.50) 72%, rgba(13,21,18,.58) 100%),
+            radial-gradient(130% 95% at 14% 90%, rgba(13,21,18,.70), rgba(13,21,18,0) 62%),
+            linear-gradient(90deg, rgba(13,21,18,.54) 0%, rgba(13,21,18,.28) 34%, rgba(13,21,18,0) 64%),
+            linear-gradient(180deg, rgba(13,21,18,.74) 0%, rgba(13,21,18,.48) 22%, rgba(13,21,18,.46) 42%, rgba(13,21,18,.64) 58%, rgba(13,21,18,.84) 72%, rgba(13,21,18,.95) 86%, rgba(13,21,18,.99) 100%);
+        }
+      }
+
       /* ---------- chapters ---------- */
       main { display: block; }
       .chapter { max-width: 760px; margin: 0 auto; padding: clamp(58px, 10vh, 96px) var(--pad) 0; }
@@ -182,7 +269,7 @@
   <body>
     <div id="progress" aria-hidden="true"></div>
 
-    <header class="scene scene-hero hero">
+    <header class="scene scene-hero scene-hero--deep hero">
       <img src="/history/img/ivanhoe-village-lake-ivanhoe-hero.webp" alt="Postcard view of Lake Ivanhoe, about 1915: a moss hung dead tree standing in the water, houses and a red roofed building on the far shore under a sunset sky" width="1440" height="909" fetchpriority="high" />
       <div class="scene-in">
         <p class="crumbs"><a href="/history.html">407 FYI History</a> · District Stories</p>
