@@ -271,10 +271,19 @@
 html[data-theme="light"] .hero.has-photo{--ink:#f4efe1;--headline:#f6edd6;--muted:#cdbfa3;--accent-ink:#d4b573}
 @media (max-width:640px){.hero-cap{left:14px;max-width:63%;bottom:12px}.hero.has-photo .hero-in{padding-bottom:66px}}
 </style>
-</head>
+<style>
+.hero-plate{margin:6px auto clamp(28px,5vh,44px);max-width:960px;padding:0 20px}
+.hero-plate.narrow{max-width:700px}
+.hero-plate figure{margin:0;background:#f4efe1;padding:clamp(8px,1.6vw,14px);border-radius:4px;box-shadow:0 24px 60px rgba(0,0,0,.5)}
+.hero-plate img{display:block;width:100%;height:auto}
+.hero-plate figcaption{color:#43503f;font-size:.82rem;line-height:1.5;padding:10px 4px 2px}
+.hero-plate figcaption .hero-credit{display:block;color:#5c6a58;font-size:.72rem;margin-top:2px}
+.hero-plate figcaption a{color:#7c520c}
+.has-photo .hero-in{padding-bottom:18px}
+</style></head>
   <body>
     <header class="hero has-photo">
-      <div class="hero-photo"><img src="assets/hero-casselberry-finder.webp" alt="North Triplet Lake seen from Secret Lake Park in Casselberry" width="1920" height="1036" fetchpriority="high" decoding="async" /></div>
+      
       <div class="hero-in">
         <p class="crumbs"><a href="/">407 FYI</a> &middot; <span aria-current="page">Casselberry</span></p>
         <a class="hero-brand" href="/">407 FYI &middot; A District Finder</a>
@@ -291,7 +300,7 @@ html[data-theme="light"] .hero.has-photo{--ink:#f4efe1;--headline:#f6edd6;--mute
         </nav>
       </div>
           <p class="hero-cap">North Triplet Lake, from Secret Lake Park. <span class="hero-credit">Photo: <a href="https://commons.wikimedia.org/wiki/File:Casselberry_northtriplet.jpg" target="_blank" rel="noopener">&ldquo;Casselberry northtriplet&rdquo;</a> by Seldom4, public domain, via Wikimedia Commons.</span></p>
-    </header>
+    <div class="hero-plate"><figure><img src="assets/hero-casselberry-finder.webp" alt="North Triplet Lake seen from Secret Lake Park in Casselberry" width="1920" height="1036" fetchpriority="high" decoding="async" /><figcaption></figcaption></figure></div></header>
 
     <main>
       <section class="sec" id="top-picks">
