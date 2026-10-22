@@ -230,10 +230,19 @@
 html[data-theme="light"] .hero.has-photo{--ink:#f4efe1;--headline:#f6edd6;--muted:#cdbfa3;--accent-ink:#d4b573}
 @media (max-width:640px){.hero-cap{left:14px;max-width:63%;bottom:12px}.hero.has-photo .hero-in{padding-bottom:66px}}
 </style>
-</head>
+<style>
+.hero-plate{margin:6px auto clamp(28px,5vh,44px);max-width:960px;padding:0 20px}
+.hero-plate.narrow{max-width:700px}
+.hero-plate figure{margin:0;background:#f4efe1;padding:clamp(8px,1.6vw,14px);border-radius:4px;box-shadow:0 24px 60px rgba(0,0,0,.5)}
+.hero-plate img{display:block;width:100%;height:auto}
+.hero-plate figcaption{color:#43503f;font-size:.82rem;line-height:1.5;padding:10px 4px 2px}
+.hero-plate figcaption .hero-credit{display:block;color:#5c6a58;font-size:.72rem;margin-top:2px}
+.hero-plate figcaption a{color:#7c520c}
+.has-photo .hero-in{padding-bottom:18px}
+</style></head>
   <body>
     <header class="hero has-photo">
-      <div class="hero-photo"><img src="/assets/venue-maple-street-biscuit-company.webp" alt="Maple Street Biscuit Company chicken biscuit" width="1040" height="1360" fetchpriority="high" decoding="async" /></div>
+      
       <div class="hero-in">
         <p class="crumbs"><a href="/">407 FYI</a> &middot; <a href="/disney-area-finder.html">Disney Area</a> &middot; <span aria-current="page">Maple Street Biscuit Company</span></p>
         <a class="hero-brand" href="/">407 FYI &middot; A Venue Page</a>
@@ -241,7 +250,7 @@ html[data-theme="light"] .hero.has-photo{--ink:#f4efe1;--headline:#f6edd6;--mute
         <p class="sub">Breakfast & brunch · Breakfast · $$ · Disney Area</p>
       </div>
           <p class="hero-cap">The chicken biscuit at Maple Street Biscuit Company. <span class="hero-credit">Photo: <a href="https://www.maplestreetbiscuits.com/" target="_blank" rel="noopener">Maple Street Biscuit Company</a>.</span></p>
-    </header>
+    <div class="hero-plate narrow"><figure><img src="/assets/venue-maple-street-biscuit-company.webp" alt="Maple Street Biscuit Company chicken biscuit" width="1040" height="1360" fetchpriority="high" decoding="async" /><figcaption></figcaption></figure></div></header>
 
     <main>
       <section class="sec" id="story">
