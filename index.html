@@ -4,6 +4,16 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="color-scheme" content="light dark">
+  <script>/* Home build 2026-10-22: capability tier. FULL = rich treatment, STANDARD = essential motion, LEAN = static prized. No data-tier (no JS) renders LEAN. */
+(function(){var h=document.documentElement;try{
+var rm=matchMedia('(prefers-reduced-motion: reduce)').matches;
+var c=navigator.connection||{};var sd=!!c.saveData;var et=c.effectiveType||'';
+var dm=navigator.deviceMemory, hc=navigator.hardwareConcurrency||0;
+var lean=rm||sd||et==='slow-2g'||et==='2g'||(dm&&dm<=2)||(hc&&hc<=2&&dm&&dm<=4);
+var full=!lean&&((dm&&dm>=8)||(!dm&&hc>=8)||(dm&&dm>=4&&hc>=6));
+h.dataset.tier=lean?'lean':(full?'full':'standard');
+h.dataset.motion=lean?'off':'on';
+}catch(e){h.dataset.tier='lean';}})();</script>
   <script>(function(){var q=new URLSearchParams(location.search);if(q.has('venue')||q.has('district')||q.has('cat')||q.has('q')||q.has('vibe')){location.replace('/archive.html'+location.search);}})();</script>
 
   <title>407 FYI: Orlando Restaurants, Landmarks &amp; New Openings</title>
@@ -609,8 +619,65 @@ html[data-theme="dark"] .export-trigger:hover,html[data-theme="dark"] .export-tr
 .photo-band figcaption a{color:#d4b573}
 @media (max-width:640px){.photo-band figcaption{left:14px;max-width:72%;bottom:12px}}
 </style>
+
+<style id="home-build-20261022">
+/* ===== Home build 2026-10-22 (PROTOTYPE, not shipped): header overhaul, Cards, ChatFYI family, spacing rhythm ===== */
+:root{--home-gap:32px}
+@media (max-width:620px){:root{--home-gap:24px}}
+
+/* --- Workstream D: one vertical rhythm between major blocks --- */
+.photo-band{margin-top:var(--home-gap)}
+.layer{padding-top:0;margin-top:var(--home-gap)}
+.cred-strip{margin-top:var(--home-gap)}
+.footer{margin-top:var(--home-gap)}
+.footer .foot-col ul{display:grid;gap:0}
+.footer .foot-col a{padding-top:3px;padding-bottom:3px}
+.app{padding-bottom:88px}
+@media (max-width:620px){.app{padding-bottom:88px}}
+
+/* --- Workstream A: mast balance (desktop grid) --- */
+@media (min-width:1024px){
+  .mast{grid-template-rows:auto auto auto auto}
+  .mast-title-row{grid-row:3;align-self:center}
+  .home-nav{grid-row:3;align-self:center;align-content:center}
+  .primary-actions{grid-row:4;align-self:center}
+}
+
+/* --- Workstream A: nav = exactly two actions --- */
+.home-nav{gap:10px;margin:20px 0 2px}
+.home-nav a{transition:transform var(--dur-ui) var(--ease-ui),box-shadow var(--dur-ui) var(--ease-ui),border-color var(--dur-ui) var(--ease-ui)}
+
+/* Nearest: the prized possession button */
+.home-nav a.nearest-prized{position:relative;overflow:hidden;min-height:48px;padding:11px 22px;border-radius:999px;
+  border:1px solid #e6cd8f;color:#fffaf0;font-size:.86rem;font-weight:800;letter-spacing:.015em;
+  background:linear-gradient(155deg,#85652c 0%,#6e5222 58%,#5f471d 100%);
+  box-shadow:0 10px 26px rgba(24,32,18,.38),0 0 0 3px rgba(193,154,91,.26),0 0 18px rgba(193,154,91,.35),inset 0 1px 0 rgba(246,237,214,.5)}
+.home-nav a.nearest-prized:hover{border-color:#efdca6;filter:brightness(1.07)}
+.home-nav a.nearest-prized:focus-visible{outline:3px solid var(--focus);outline-offset:2px}
+/* Glisten sweep: once on first open. FULL and STANDARD run it; LEAN / no-JS / reduced-motion stay static prized. */
+html[data-tier="full"] .home-nav a.nearest-prized::after,
+html[data-tier="standard"] .home-nav a.nearest-prized::after{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;
+  background:linear-gradient(115deg,transparent 30%,rgba(255,250,240,.42) 48%,transparent 66%);
+  transform:translateX(-130%);animation:prizedGlisten 1.25s cubic-bezier(.2,.72,.25,1) .45s 1 both}
+@keyframes prizedGlisten{to{transform:translateX(130%)}}
+html[data-tier="full"] .home-nav a.nearest-prized:hover{transform:translateY(-1px)}
+@media (prefers-reduced-motion: reduce){
+  .home-nav a.nearest-prized::after,.fyi-chat-btn::after{animation:none!important}
+  .home-nav a{transition:none!important}
+}
+
+/* Browse All: the quieter secondary action */
+.home-nav a.browse-quiet{min-height:48px;padding:11px 20px;font-size:.84rem;background:var(--surface)}
+.home-nav a.browse-quiet:hover{border-color:var(--accent)}
+
+/* --- Workstream B: Cards = number + title, typography only (PiK0 ruling 2026-10-22: abandon the icons) --- */
+#sectionCovers .district-filter.cover-link{padding:18px 16px 15px;gap:0;justify-content:space-between}
+.card-num{display:block;font-family:Urbanist,Manrope,sans-serif;font-size:.82rem;font-weight:700;letter-spacing:.34em;color:var(--dg3,#c19a5b)}
+#sectionCovers .district-name{display:block;width:100%;font-size:clamp(1.35rem,2.1vw,1.68rem);font-weight:700;letter-spacing:.01em;border-top:1px solid var(--dg3,#c19a5b);padding-top:12px}
+</style>
 </head>
 <body>
+
 <a class="skip-link" href="#districts">Skip to district stories</a>
   <main class="app">
     <header class="mast">
@@ -623,8 +690,8 @@ html[data-theme="dark"] .export-trigger:hover,html[data-theme="dark"] .export-tr
       <p class="context" id="guideContext">A local field guide to Orlando favorites.</p>
       <div class="mast-title-row"><h1 class="brand-407" id="guideTitle">407&nbsp;FYI</h1></div>
       
-      <nav class="home-nav" aria-label="Guide sections">
-        <a href="/nearest.html" id="navNearLink">Nearest</a><a href="/events.html">Events</a><a href="#sections">The Sections</a><a href="#districts">Sections</a><a class="home-nav-cta" href="/archive.html">Browse all places</a>
+      <nav class="home-nav" aria-label="Guide actions">
+        <a class="nearest-prized" href="/nearest.html" id="navNearLink">Nearest</a><a class="home-nav-cta browse-quiet" href="/archive.html">Browse All</a>
       </nav>
       <div class="primary-actions">
         <form class="hero-search" id="heroForm" action="/archive.html" method="get" role="search">
@@ -642,6 +709,7 @@ html[data-theme="dark"] .export-trigger:hover,html[data-theme="dark"] .export-tr
 
     <section class="layer events-feature-layer" id="events-feature" aria-labelledby="eventsFeatureTitle">
       <a class="evf-btn" href="/events.html">
+        
         <span class="evf-kicker">October / November</span>
         <span class="evf-title" id="eventsFeatureTitle">Events Calendar</span>
         <span class="evf-sub">Concerts, games, festivals and holiday nights, week by week. Dates checked against official sources; confirm before you go.</span>
@@ -650,15 +718,15 @@ html[data-theme="dark"] .export-trigger:hover,html[data-theme="dark"] .export-tr
     </section>
 
     <section class="layer sections-layer" id="sections" aria-labelledby="sectionsTitle">
-      <h2 id="sectionsTitle" class="sec-sr">The Sections</h2>
+      <h2 id="sectionsTitle" class="sec-sr">Cards</h2>
       <div class="covers-grid" id="sectionCovers">
         
-        <article class="district-card cover-card" style="--dg1:#12240f;--dg2:#3d5231;--dg3:#bd9049"><a class="district-filter cover-link" href="/local-picks.html"><span class="district-photo" aria-hidden="true"></span><span class="section-kicker">The short list</span><span class="district-name">Local Picks</span><span class="cover-quote section-hook">The places a local sends you to first.</span></a></article>
-        <article class="district-card cover-card" style="--dg1:#1d1220;--dg2:#4a2c44;--dg3:#a87f5e"><a class="district-filter cover-link" href="/edm.html"><span class="district-photo" aria-hidden="true"></span><span class="section-kicker">After dark</span><span class="district-name">EDM &amp; Nightlife</span><span class="cover-quote section-hook">The rooms, the crews and the festival weeks behind the Orlando sound.</span></a></article>
-        <article class="district-card cover-card" style="--dg1:#0c1f26;--dg2:#27506b;--dg3:#ab8448"><a class="district-filter cover-link" href="/sports.html"><span class="district-photo" aria-hidden="true"></span><span class="section-kicker">Game day</span><span class="district-name">Sports</span><span class="cover-quote section-hook">Magic, City, Pride, UCF and the long baseball spring, plus where to watch.</span></a></article>
-        <article class="district-card cover-card" style="--dg1:#0e2412;--dg2:#2f5d33;--dg3:#a8a04e"><a class="district-filter cover-link" href="/parks.html"><span class="district-photo" aria-hidden="true"></span><span class="section-kicker">Outdoors</span><span class="district-name">Parks &amp; Gardens</span><span class="cover-quote section-hook">The city’s green rooms: lake loops, dog parks, gardens and sunset spots.</span></a></article>
-        <article class="district-card cover-card" style="--dg1:#0a201c;--dg2:#1f5246;--dg3:#7fa35a"><a class="district-filter cover-link" href="/nature.html"><span class="district-photo" aria-hidden="true"></span><span class="section-kicker">The wild side</span><span class="district-name">Nature &amp; Springs</span><span class="cover-quote section-hook">Springs, trails and the wild Florida underneath Orlando.</span></a></article>
-        <article class="district-card cover-card" style="--dg1:#221709;--dg2:#6b4a24;--dg3:#bd9049"><a class="district-filter cover-link" href="/history.html"><span class="district-photo" aria-hidden="true"></span><span class="section-kicker">The archive</span><span class="district-name">History</span><span class="cover-quote section-hook">Flashbacks, district histories and the long stories behind the street names.</span></a></article>
+        <article class="district-card cover-card" style="--dg1:#12240f;--dg2:#3d5231;--dg3:#bd9049"><a class="district-filter cover-link" href="/local-picks.html"><span class="card-num" aria-hidden="true">01</span><span class="district-name">Local Picks</span></a></article>
+        <article class="district-card cover-card" style="--dg1:#1d1220;--dg2:#4a2c44;--dg3:#a87f5e"><a class="district-filter cover-link" href="/edm.html"><span class="card-num" aria-hidden="true">02</span><span class="district-name">EDM &amp; Nightlife</span></a></article>
+        <article class="district-card cover-card" style="--dg1:#0c1f26;--dg2:#27506b;--dg3:#ab8448"><a class="district-filter cover-link" href="/sports.html"><span class="card-num" aria-hidden="true">03</span><span class="district-name">Sports</span></a></article>
+        <article class="district-card cover-card" style="--dg1:#0e2412;--dg2:#2f5d33;--dg3:#a8a04e"><a class="district-filter cover-link" href="/parks.html"><span class="card-num" aria-hidden="true">04</span><span class="district-name">Parks &amp; Gardens</span></a></article>
+        <article class="district-card cover-card" style="--dg1:#0a201c;--dg2:#1f5246;--dg3:#7fa35a"><a class="district-filter cover-link" href="/nature.html"><span class="card-num" aria-hidden="true">05</span><span class="district-name">Nature &amp; Springs</span></a></article>
+        <article class="district-card cover-card" style="--dg1:#221709;--dg2:#6b4a24;--dg3:#bd9049"><a class="district-filter cover-link" href="/history.html"><span class="card-num" aria-hidden="true">06</span><span class="district-name">History</span></a></article>
       </div>
     </section>
 
@@ -812,14 +880,16 @@ fetch('places.json?v=20261021p2').then(r=>{if(!r.ok)throw new Error('places.json
      Talks to the Supabase chat edge function; answers come only from guide data. -->
 <style id="fyi-chat-css">
 .fyi-chat-btn{position:fixed;right:16px;bottom:16px;z-index:1200;display:flex;align-items:center;gap:9px;
-  padding:15px 22px;border-radius:999px;border:2px solid #f6edd6;cursor:pointer;
-  background:var(--accent,#d4b573);color:#122419;
-  font-family:"Manrope",ui-sans-serif,sans-serif;font-size:16px;font-weight:800;letter-spacing:.01em;
-  box-shadow:0 12px 32px rgba(0,0,0,.5),0 0 0 5px rgba(212,181,115,.28)}
-.fyi-chat-btn:hover{filter:brightness(1.07)}
-.fyi-chat-btn svg{width:20px;height:20px}
-.fyi-chat-btn:hover{border-color:var(--focus,#d4b573)}
-.fyi-chat-btn svg{flex:none}
+  padding:16px 24px;border-radius:999px;border:1px solid #e6cd8f;cursor:pointer;overflow:hidden;
+  background:linear-gradient(155deg,#85652c 0%,#6e5222 58%,#5f471d 100%);color:#fffaf0;
+  font-family:"Manrope",ui-sans-serif,sans-serif;font-size:17px;font-weight:800;letter-spacing:.015em;
+  box-shadow:0 14px 34px rgba(0,0,0,.5),0 0 0 4px rgba(193,154,91,.30),0 0 22px rgba(193,154,91,.38),inset 0 1px 0 rgba(246,237,214,.5)}
+.fyi-chat-btn:hover{filter:brightness(1.08)}
+.fyi-chat-btn svg{width:20px;height:20px;flex:none}
+html[data-tier="full"] .fyi-chat-btn::after{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;
+  background:linear-gradient(115deg,transparent 30%,rgba(255,250,240,.34) 48%,transparent 66%);
+  transform:translateX(-130%);animation:fyiSheen 1.15s cubic-bezier(.2,.72,.25,1) .9s 1 both}
+@keyframes fyiSheen{to{transform:translateX(130%)}}
 .fyi-chat-panel{position:fixed;right:16px;bottom:70px;z-index:1200;width:min(384px,calc(100vw - 24px));
   height:min(580px,calc(100dvh - 96px));display:none;flex-direction:column;overflow:hidden;
   border-radius:16px;border:1px solid var(--line,#2f4a38);background:var(--surface,#122419);
