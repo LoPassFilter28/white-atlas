@@ -436,13 +436,13 @@
 <!-- 407 FYI guide chat widget. Self-contained: style + markup + script.
      Talks to the Supabase chat edge function; answers come only from guide data. -->
 <style id="fyi-chat-css">
-.fyi-chat-btn{position:fixed;right:16px;bottom:16px;z-index:1200;display:flex;align-items:center;gap:9px;
-  padding:16px 24px;border-radius:999px;border:1px solid #e6cd8f;cursor:pointer;overflow:hidden;
+.fyi-chat-btn{position:fixed;right:16px;bottom:16px;z-index:1200;display:flex;align-items:center;gap:9px;box-sizing:border-box;
+  min-height:48px;padding:11px 22px;border-radius:999px;border:1px solid #e6cd8f;cursor:pointer;overflow:hidden;
   background:linear-gradient(155deg,#85652c 0%,#6e5222 58%,#5f471d 100%);color:#fffaf0;
-  font-family:"Manrope",ui-sans-serif,sans-serif;font-size:17px;font-weight:800;letter-spacing:.015em;
+  font-family:"Manrope",ui-sans-serif,sans-serif;font-size:.86rem;font-weight:800;letter-spacing:.015em;
   box-shadow:0 14px 34px rgba(0,0,0,.5),0 0 0 4px rgba(193,154,91,.30),0 0 22px rgba(193,154,91,.38),inset 0 1px 0 rgba(246,237,214,.5)}
 .fyi-chat-btn:hover{filter:brightness(1.08)}
-.fyi-chat-btn svg{width:20px;height:20px;flex:none}
+.fyi-chat-btn svg{width:18px;height:18px;flex:none}
 html[data-tier="full"] .fyi-chat-btn::after{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;
   background:linear-gradient(115deg,transparent 30%,rgba(255,250,240,.34) 48%,transparent 66%);
   transform:translateX(-130%);animation:fyiSheen 1.15s cubic-bezier(.2,.72,.25,1) .9s 1 both}
