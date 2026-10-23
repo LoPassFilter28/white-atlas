@@ -211,7 +211,14 @@
       .vcard .addr { margin: 0; color: var(--muted); font-size: .9rem; }
       @media (max-width: 640px) { .facts { grid-template-columns: 1fr; } }
     </style>
-  </head>
+  <style data-cardsys>
+/* cardsys: similar rail cards (2026-10-23 overhaul) */
+.vcard{display:flex;gap:12px;align-items:flex-start}
+.vcard .vthumb{flex:0 0 86px;width:86px;height:86px;border-radius:10px;object-fit:cover;display:block}
+.vcard .vmain{flex:1;min-width:0}
+.vcard .vsub{margin:4px 0 0;font-size:.86rem;line-height:1.45;color:var(--muted,#c6bba2)}
+@media (min-width:1000px){.vlist{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start}}
+</style></head>
   <body>
     <header class="hero">
       <div class="hero-in">
@@ -240,41 +247,41 @@
         </div>
       </section>
 
-      <section class="sec" id="similar">
+      <section class="sec" id="district-story"><p class="kicker">District Stories</p><h2>Orlando&#x27;s long memory</h2><p class="lede">The guide keeps the long memory of Orlando&#x27;s districts in one place: the names, the plats and the stories behind the streets.</p><p><a class="btn-ghost" href="/history.html">Browse the district stories &rarr;</a></p></section><section class="sec" id="similar">
         <p class="kicker">Similar Feel</p>
         <h2>More places with this feel</h2>
         <p class="lede">Matched by vibe, not by neighborhood: the places across Greater Orlando closest in spirit to Zorba&#x27;s Kitchen.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/over-the-top-pita.html">Over The Top Pita</a></h3>
-          <p class="meta">Mediterranean &middot; Clermont &middot; $</p>
+          <img class="vthumb" src="/assets/venue-over-the-top-pita.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/over-the-top-pita.html">Over The Top Pita</a></h3>
+          <p class="meta">Mediterranean &middot; Clermont &middot; $</p><p class="vsub">Family-run, no-frills counter on Citrus Tower Boulevard in Clermont where every wrap is made to order.</p>
           <p class="addr">Over the Top Pita, 240 Citrus Tower Blvd, Clermont, FL 34711-2704</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/cafe-34-istanbul.html">Cafe 34 Istanbul</a></h3>
-          <p class="meta">Mediterranean &middot; International Drive &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-cafe-34-istanbul.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/cafe-34-istanbul.html">Cafe 34 Istanbul</a></h3>
+          <p class="meta">Mediterranean &middot; International Drive &middot; $$</p><p class="vsub">Cafe 34 Istanbul brings a lively, linger-worthy taste of Turkey to International Drive, all grill smoke and warm welcome.</p>
           <p class="addr">Cafe 34 Istanbul, 8255 International Dr, Orlando, FL 32819-9326, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/lale-mediterranean.html">Lale Mediterranean Cuisine</a></h3>
-          <p class="meta">Mediterranean &middot; Winter Park &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/lale-mediterranean.html">Lale Mediterranean Cuisine</a></h3>
+          <p class="meta">Mediterranean &middot; Winter Park &middot; $$</p><p class="vsub">A cozy, family-run Turkish room on Park Avenue in Winter Park, warm and intimate.</p>
           <p class="addr">521 S Park Ave, Winter Park, FL 32789</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/beirut-grill-and-deli.html">Beirut Grill and Deli</a></h3>
-          <p class="meta">Mediterranean &middot; Oviedo &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-beirut-grill-and-deli.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/beirut-grill-and-deli.html">Beirut Grill and Deli</a></h3>
+          <p class="meta">Mediterranean &middot; Oviedo &middot; $$</p><p class="vsub">Family-owned halal Lebanese kitchen on Alafaya Trail, where everything tastes homemade and the room feels like family.</p>
           <p class="addr">Beirut Grill and Deli, 3100 Alafaya Trl, Oviedo, FL 32765-9466, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/taverna-opa.html">Taverna Opa</a></h3>
-          <p class="meta">Mediterranean &middot; International Drive &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/taverna-opa.html">Taverna Opa</a></h3>
+          <p class="meta">Mediterranean &middot; International Drive &middot; $$</p><p class="vsub">A festive, high-energy Greek taverna at Pointe Orlando where dinner turns into a celebration, napkins flying as confetti.</p>
           <p class="addr">9101 International Dr, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/theos-kitchen.html">Theo&#x27;s Kitchen</a></h3>
-          <p class="meta">Mediterranean &middot; Curry Ford &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/theos-kitchen.html">Theo&#x27;s Kitchen</a></h3>
+          <p class="meta">Mediterranean &middot; Curry Ford &middot; $$</p><p class="vsub">Family-owned on Curry Ford, a staple that plays a rare double act locals keep coming back for.</p>
           <p class="addr">Theo&#x27;s Kitchen, 2952 Curry Ford Rd, Orlando, FL 32806, United States</p>
-        </article>
+        </div></article>
         </div>
       </section>
 
@@ -284,35 +291,35 @@
         <p class="lede">Other places in Hourglass, closest to Zorba&#x27;s Kitchen first.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/pine-and-oak-tavern.html">Pine &amp; Oak Tavern</a></h3>
-          <p class="meta">American &middot; Tavern &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-pine-and-oak-tavern.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/pine-and-oak-tavern.html">Pine &amp; Oak Tavern</a></h3>
+          <p class="meta">American &middot; Tavern &middot; $$</p><p class="vsub">A clubby tavern inside the revived Rio Pinar golf course, fairways beyond the patio and a relaxing, neighborhood feel.</p>
           <p class="addr">8600 El Prado Ave, Orlando, FL 32825</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/marios-pizza.html">Mario&#x27;s Pizza</a></h3>
-          <p class="meta">Pizza &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/marios-pizza.html">Mario&#x27;s Pizza</a></h3>
+          <p class="meta">Pizza &middot; $$</p><p class="vsub">Family-run on Curry Ford Road, where guests say the pies taste like real pizza from New York.</p>
           <p class="addr">Mario&#x27;s Pizza, 7213 Curry Ford Rd, Orlando, FL 32822-5805, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/bachata-breeze.html">Bachata Breeze Restaurant</a></h3>
-          <p class="meta">Latin &amp; Caribbean &middot; Dominican &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/bachata-breeze.html">Bachata Breeze Restaurant</a></h3>
+          <p class="meta">Latin &amp; Caribbean &middot; Dominican &middot; $$</p><p class="vsub">On Curry Ford Road, a Dominican buffet and full menu by day, then live Latin music and dancing after dark.</p>
           <p class="addr">5773 Curry Ford Rd, Orlando, FL 32822</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/pio-pio-latin-cuisine.html">Pio Pio Latin Cuisine</a></h3>
-          <p class="meta">Latin &amp; Caribbean &middot; Latin &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-pio-pio-latin-cuisine.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/pio-pio-latin-cuisine.html">Pio Pio Latin Cuisine</a></h3>
+          <p class="meta">Latin &amp; Caribbean &middot; Latin &middot; $$</p><p class="vsub">On South Semoran, the Colombian staple locals lean on, a warm, family-style room where plates land generous and homestyle.</p>
           <p class="addr">2259 S Semoran Blvd, Orlando, FL 32822</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/twistee-treat.html">Twistee Treat</a></h3>
-          <p class="meta">Sweets &middot; Ice Cream &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/twistee-treat.html">Twistee Treat</a></h3>
+          <p class="meta">Sweets &middot; Ice Cream &middot; $</p><p class="vsub">A towering ice-cream cone building marks this Curry Ford Road spot, an old-school soft-serve landmark pouring since 1983.</p>
           <p class="addr">Twistee Treat, 4500 Curry Ford Rd, Orlando, FL 32812</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/grocery-hermanos.html">Grocery Los Hermanos</a></h3>
-          <p class="meta">Mexican &middot; Taqueria &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/grocery-hermanos.html">Grocery Los Hermanos</a></h3>
+          <p class="meta">Mexican &middot; Taqueria &middot; $</p><p class="vsub">A family-run market and taqueria on Curry Ford where guests say the food tastes homemade and very fresh.</p>
           <p class="addr">4130 Curry Ford Rd, Orlando, FL 32806</p>
-        </article>
+        </div></article>
         </div>
         <div class="handoff">
           <a class="btn-ghost" href="/hourglass-finder.html">See the full Hourglass list</a>

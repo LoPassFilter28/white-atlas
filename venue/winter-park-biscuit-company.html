@@ -211,7 +211,14 @@
       .vcard .addr { margin: 0; color: var(--muted); font-size: .9rem; }
       @media (max-width: 640px) { .facts { grid-template-columns: 1fr; } }
     </style>
-  </head>
+  <style data-cardsys>
+/* cardsys: similar rail cards (2026-10-23 overhaul) */
+.vcard{display:flex;gap:12px;align-items:flex-start}
+.vcard .vthumb{flex:0 0 86px;width:86px;height:86px;border-radius:10px;object-fit:cover;display:block}
+.vcard .vmain{flex:1;min-width:0}
+.vcard .vsub{margin:4px 0 0;font-size:.86rem;line-height:1.45;color:var(--muted,#c6bba2)}
+@media (min-width:1000px){.vlist{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start}}
+</style></head>
   <body>
     <header class="hero">
       <div class="hero-in">
@@ -236,46 +243,46 @@
         <div class="actions">
           <a class="action" href="https://www.google.com/maps/search/?api=1&amp;query=Winter+Park+Biscuit+Company+3201+Corrine+Dr%2C+Orlando%2C+FL+32803-2224%2C+United+States" target="_blank" rel="noopener">Directions &rarr;</a>
           <a class="action" href="/archive.html?venue=winter-park-biscuit-company">Open in the full finder</a>
-          <a class="action" href="/audubon-park-district-guide.html">Read the Audubon Park story</a>
+          <a class="action" href="/history/audubon-park.html">Read the Audubon Park story</a>
           <a class="action action-ig" href="https://www.instagram.com/winterparkbiscuitco" target="_blank" rel="noopener"><svg class="ig-glyph" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="vertical-align:-2px;margin-right:6px"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg> Instagram</a>
         </div>
       </section>
 
-      <section class="sec" id="similar">
+      <section class="sec" id="district-story"><p class="kicker">District Story</p><h2>The story of Audubon Park</h2><p class="lede">Platted as Lakewood Estates in 1937, built out for the bases, and renamed, by tradition, for its birds.</p><p><a class="btn-ghost" href="/history/audubon-park.html">Read the Audubon Park story &rarr;</a></p></section><section class="sec" id="similar">
         <p class="kicker">Similar Feel</p>
         <h2>More places with this feel</h2>
         <p class="lede">Matched by vibe, not by neighborhood: the places across Greater Orlando closest in spirit to Winter Park Biscuit Company.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/east-end-market.html">East End Market</a></h3>
-          <p class="meta">Markets &amp; shops &middot; Audubon Park &middot; $</p>
+          <img class="vthumb" src="/assets/venue-east-end-market.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/east-end-market.html">East End Market</a></h3>
+          <p class="meta">Markets &amp; shops &middot; Audubon Park &middot; $</p><p class="vsub">Local makers under one Audubon Park roof: Gideon&#x27;s Bakehouse, Olde Hearth Bread, Lineage Coffee, Domu, La Femme du Fromage, Dochi and Hinckley&#x27;s.</p>
           <p class="addr">3201 Corrine Dr, Orlando, FL 32803</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/rise-southern-biscuits-winter-park.html">Rise Southern Biscuits &amp; Righteous Chicken - Winter Park</a></h3>
-          <p class="meta">American &middot; Winter Park &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/rise-southern-biscuits-winter-park.html">Rise Southern Biscuits &amp; Righteous Chicken - Winter Park</a></h3>
+          <p class="meta">American &middot; Winter Park &middot; $$</p><p class="vsub">A casual counter-service spot where biscuits come out fresh and warm, crispy on the outside and soft inside.</p>
           <p class="addr">110 S Orlando Ave Ste 6, Winter Park, FL 32789</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/buttermilk.html">Buttermilk Bakery</a></h3>
-          <p class="meta">Bakeries &middot; Winter Park &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-buttermilk.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/buttermilk.html">Buttermilk Bakery</a></h3>
+          <p class="meta">Bakeries &middot; Winter Park &middot; $$</p><p class="vsub">A cozy Winter Park bakery where the case fills fresh every morning and choosing just a few treats is the hard part.</p>
           <p class="addr">Buttermilk Bakery, 1198 N Orange Ave, Winter Park, FL 32789-4908</p>
-        </article>
+        </div></article>
                 <article class="vcard">
-          <h3><a href="/venue/egg-dose.html">Egg Dose</a></h3>
-          <p class="meta">Breakfast &amp; brunch &middot; Ivanhoe Village &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/egg-dose.html">Egg Dose</a></h3>
+          <p class="meta">Breakfast &amp; brunch &middot; Ivanhoe Village &middot; $$</p><p class="vsub">Guests call them perfect: the Maple Dose stacks thick-cut bacon, soft scrambled eggs, cheddar and maple syrup on brioche French toast.</p>
           <p class="addr">1412 Alden Rd, Orlando, FL 32803</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/maple-street-biscuit-company.html">Maple Street Biscuit Company</a></h3>
-          <p class="meta">Breakfast &amp; brunch &middot; Disney Area &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-maple-street-biscuit-company.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/maple-street-biscuit-company.html">Maple Street Biscuit Company</a></h3>
+          <p class="meta">Breakfast &amp; brunch &middot; Disney Area &middot; $$</p><p class="vsub">Scratch-baked biscuits carry the Southern comfort at this Glass House Lane counter, and guests describe a warm, family vibe.</p>
           <p class="addr">Maple Street Biscuit Company, 11810 Glass House Ln, Orlando, FL 32836-3794</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/domu.html">Domu</a></h3>
-          <p class="meta">Noodles &amp; Southeast Asian &middot; Audubon Park &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/domu.html">Domu</a></h3>
+          <p class="meta">Noodles &amp; Southeast Asian &middot; Audubon Park &middot; $$</p><p class="vsub">The East End Market original is a compact, buzzing ramen room Orlando keeps talking about.</p>
           <p class="addr">3201 Corrine Dr, Orlando, FL 32803</p>
-        </article>
+        </div></article>
         </div>
       </section>
 
@@ -285,35 +292,35 @@
         <p class="lede">Other places in Audubon Park, closest to Winter Park Biscuit Company first.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/east-end-market.html">East End Market</a></h3>
-          <p class="meta">Markets &amp; shops · Food Hall &middot; $</p>
+          <img class="vthumb" src="/assets/venue-east-end-market.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/east-end-market.html">East End Market</a></h3>
+          <p class="meta">Markets &amp; shops · Food Hall &middot; $</p><p class="vsub">Local makers under one Audubon Park roof: Gideon&#x27;s Bakehouse, Olde Hearth Bread, Lineage Coffee, Domu, La Femme du Fromage, Dochi and Hinckley&#x27;s.</p>
           <p class="addr">3201 Corrine Dr, Orlando, FL 32803</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/lineage-coffee-roasting.html">Lineage Coffee Roasting</a></h3>
-          <p class="meta">Coffee &amp; cafes · Coffee Shop &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-lineage-coffee-roasting.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/lineage-coffee-roasting.html">Lineage Coffee Roasting</a></h3>
+          <p class="meta">Coffee &amp; cafes · Coffee Shop &middot; $$</p><p class="vsub">Tucked in the back of East End Market, a working roastery where the cup shows the craft, from flat whites to cold brew.</p>
           <p class="addr">3201 Corrine Dr, Orlando, FL 32803-2224, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/hinckleys-fancy-meats.html">Hinckley&#x27;s Fancy Meats</a></h3>
-          <p class="meta">Markets &amp; shops · Butcher Shop &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/hinckleys-fancy-meats.html">Hinckley&#x27;s Fancy Meats</a></h3>
+          <p class="meta">Markets &amp; shops · Butcher Shop &middot; $$</p><p class="vsub">A craft butcher stall inside East End Market, old-school in the best way, with house-cured meats in the case and a deli counter.</p>
           <p class="addr">3201 Corrine Dr #104, Orlando, FL 32803</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/domu.html">Domu</a></h3>
-          <p class="meta">Noodles &amp; Southeast Asian · Noodles &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/domu.html">Domu</a></h3>
+          <p class="meta">Noodles &amp; Southeast Asian · Noodles &middot; $$</p><p class="vsub">The East End Market original is a compact, buzzing ramen room Orlando keeps talking about.</p>
           <p class="addr">3201 Corrine Dr, Orlando, FL 32803</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/kelly-s-homemade-ice-cream.html">Kelly&#x27;s Homemade Ice Cream</a></h3>
-          <p class="meta">Sweets · Ice Cream &middot; $</p>
+          <img class="vthumb" src="/assets/venue-kelly-s-homemade-ice-cream.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/kelly-s-homemade-ice-cream.html">Kelly&#x27;s Homemade Ice Cream</a></h3>
+          <p class="meta">Sweets · Ice Cream &middot; $</p><p class="vsub">Small-batch ice cream churned with monthly flavors like Cookie Monster, Mexican Chocolate, Key Lime Pie and Coquito, plus flights and Dog Pops.</p>
           <p class="addr">3114 Corrine Dr, Orlando, FL</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/coro.html">Coro</a></h3>
-          <p class="meta">American &middot; $$$</p>
+          <img class="vthumb" src="/assets/venue-coro.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/coro.html">Coro</a></h3>
+          <p class="meta">American &middot; $$$</p><p class="vsub">An intimate Corrine Drive room where Chef Tim Lovero changes the menu with the seasons and his mood.</p>
           <p class="addr">Coro, 3022 Corrine Dr, Orlando, FL 32803-2204</p>
-        </article>
+        </div></article>
         </div>
         <div class="handoff">
           <a class="btn-ghost" href="/audubon-park-finder.html">See the full Audubon Park list</a>

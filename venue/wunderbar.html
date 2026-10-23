@@ -211,7 +211,14 @@
       .vcard .addr { margin: 0; color: var(--muted); font-size: .9rem; }
       @media (max-width: 640px) { .facts { grid-template-columns: 1fr; } }
     </style>
-  </head>
+  <style data-cardsys>
+/* cardsys: similar rail cards (2026-10-23 overhaul) */
+.vcard{display:flex;gap:12px;align-items:flex-start}
+.vcard .vthumb{flex:0 0 86px;width:86px;height:86px;border-radius:10px;object-fit:cover;display:block}
+.vcard .vmain{flex:1;min-width:0}
+.vcard .vsub{margin:4px 0 0;font-size:.86rem;line-height:1.45;color:var(--muted,#c6bba2)}
+@media (min-width:1000px){.vlist{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start}}
+</style></head>
   <body>
     <header class="hero">
       <div class="hero-in">
@@ -239,41 +246,41 @@
         </div>
       </section>
 
-      <section class="sec" id="similar">
+      <section class="sec" id="district-story"><p class="kicker">District Story</p><h2>The story of Orlando</h2><p class="lede">A hotel in the boondocks, a road paved after it and named to sound big and important, and the corridor that taught Orlando how to be a vacation.</p><p><a class="btn-ghost" href="/history/i-drive.html">Read the Orlando story &rarr;</a></p></section><section class="sec" id="similar">
         <p class="kicker">Similar Feel</p>
         <h2>More places with this feel</h2>
         <p class="lede">Matched by vibe, not by neighborhood: the places across Greater Orlando closest in spirit to Wunderbar.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/jojo-s-shake-bar-pointe-orlando.html">JoJo&#x27;s Shake Bar</a></h3>
-          <p class="meta">Sweets &middot; Pointe Orlando &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-jojo-s-shake-bar-pointe-orlando.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/jojo-s-shake-bar-pointe-orlando.html">JoJo&#x27;s Shake Bar</a></h3>
+          <p class="meta">Sweets &middot; Pointe Orlando &middot; $$</p><p class="vsub">A retro diner at Pointe Orlando where the shakes arrive wearing their own desserts.</p>
           <p class="addr">9101 International Dr Ste 1208, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/amazonica-florida-mall.html">Amazonica</a></h3>
-          <p class="meta">Coffee &amp; cafes &middot; Florida Mall &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/amazonica-florida-mall.html">Amazonica</a></h3>
+          <p class="meta">Coffee &amp; cafes &middot; Florida Mall &middot; $$</p><p class="vsub">A bright Colombian kiosk inside The Florida Mall, turning out obleas with arequipe, acai bowls with Nutella and fruit, and a proper cortadito.</p>
           <p class="addr">8001 S Orange Blossom Trl Kiosk TT124, Orlando, FL 32809</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/chickpeas-fresh-mediterranean-kitchen.html">Chickpeas Fresh Mediterranean Kitchen</a></h3>
-          <p class="meta">Mediterranean &middot; Millenia &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/chickpeas-fresh-mediterranean-kitchen.html">Chickpeas Fresh Mediterranean Kitchen</a></h3>
+          <p class="meta">Mediterranean &middot; Millenia &middot; $$</p><p class="vsub">A Mall at Millenia food court counter with a loyal following for falafel one guest called the best they have had in Florida.</p>
           <p class="addr">4200 Conroy Rd, Orlando, FL 32839</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/living-room-bar.html">The Living Room Bar</a></h3>
-          <p class="meta">Bars &amp; lounges &middot; Lake Nona &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-living-room-bar.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/living-room-bar.html">The Living Room Bar</a></h3>
+          <p class="meta">Bars &amp; lounges &middot; Lake Nona &middot; $$</p><p class="vsub">The Wave Hotel&#x27;s Lake Nona lounge is eclectic and art-filled, arranged around a pink dogwood tree with low chairs.</p>
           <p class="addr">6100 Wave Hotel Dr, Orlando, FL 32827</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/american-social.html">American Social</a></h3>
-          <p class="meta">American &middot; Dr. Phillips &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-american-social.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/american-social.html">American Social</a></h3>
+          <p class="meta">American &middot; Dr. Phillips &middot; $$</p><p class="vsub">Restaurant Row&#x27;s high-energy sports lounge has screens in every sightline and a room built for game day.</p>
           <p class="addr">7335 W Sand Lake Rd Ste 101, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/domu.html">Domu</a></h3>
-          <p class="meta">Noodles &amp; Southeast Asian &middot; Audubon Park &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/domu.html">Domu</a></h3>
+          <p class="meta">Noodles &amp; Southeast Asian &middot; Audubon Park &middot; $$</p><p class="vsub">The East End Market original is a compact, buzzing ramen room Orlando keeps talking about.</p>
           <p class="addr">3201 Corrine Dr, Orlando, FL 32803</p>
-        </article>
+        </div></article>
         </div>
       </section>
 
@@ -283,35 +290,35 @@
         <p class="lede">Other places in International Drive, closest to Wunderbar first.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/the-cheesecake-factory.html">The Cheesecake Factory</a></h3>
-          <p class="meta">Restaurants &middot; Restaurant &middot; $</p>
+          <img class="vthumb" src="/assets/venue-the-cheesecake-factory.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/the-cheesecake-factory.html">The Cheesecake Factory</a></h3>
+          <p class="meta">Restaurants &middot; Restaurant &middot; $</p><p class="vsub">The Mall at Millenia outpost of the famously sprawling menu, where the move is to order across it, from avocado eggrolls to Chicken Pasta Da Vinci.</p>
           <p class="addr">4200 Conroy Rd Space A-148, Orlando, FL 32839</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/chickpeas-fresh-mediterranean-kitchen.html">Chickpeas Fresh Mediterranean Kitchen</a></h3>
-          <p class="meta">Mediterranean &middot; Mediterranean &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/chickpeas-fresh-mediterranean-kitchen.html">Chickpeas Fresh Mediterranean Kitchen</a></h3>
+          <p class="meta">Mediterranean &middot; Mediterranean &middot; $$</p><p class="vsub">A Mall at Millenia food court counter with a loyal following for falafel one guest called the best they have had in Florida.</p>
           <p class="addr">4200 Conroy Rd, Orlando, FL 32839</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/keke-s-breakfast-cafe.html">Keke&#x27;s Breakfast Cafe</a></h3>
-          <p class="meta">Breakfast &amp; brunch &middot; Breakfast &middot; $</p>
+          <img class="vthumb" src="/assets/venue-keke-s-breakfast-cafe.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/keke-s-breakfast-cafe.html">Keke&#x27;s Breakfast Cafe</a></h3>
+          <p class="meta">Breakfast &amp; brunch &middot; Breakfast &middot; $</p><p class="vsub">Breakfast done by hand near Millenia: coffee ground in house, eggs cracked to order, real butter and no microwave.</p>
           <p class="addr">4192 Conroy Rd, Orlando, FL</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/the-licking.html">The Licking</a></h3>
-          <p class="meta">Restaurants &middot; Soul Food &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-the-licking.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/the-licking.html">The Licking</a></h3>
+          <p class="meta">Restaurants &middot; Soul Food &middot; $$</p><p class="vsub">DJ Khaled&#x27;s soul food spot across from the Mall at Millenia: loud, lively and generous.</p>
           <p class="addr">4706 Millenia Plaza Way, Orlando, FL 32839</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/ford-s-garage-international-outlets.html">Ford&#x27;s Garage</a></h3>
-          <p class="meta">Burgers &amp; sandwiches &middot; Burger Bar &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-ford-s-garage-international-outlets.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/ford-s-garage-international-outlets.html">Ford&#x27;s Garage</a></h3>
+          <p class="meta">Burgers &amp; sandwiches &middot; Burger Bar &middot; $$</p><p class="vsub">A burger bar dressed as a 1920s service station at the outlets, with vintage Fords overhead and shop rags for napkins.</p>
           <p class="addr">4971 International Dr Ste 3D.09, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/disney-character-warehouse.html">Disney Character Warehouse</a></h3>
-          <p class="meta">Markets &amp; shops &middot; Disney Outlet Store &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/disney-character-warehouse.html">Disney Character Warehouse</a></h3>
+          <p class="meta">Markets &amp; shops &middot; Disney Outlet Store &middot; $</p><p class="vsub">Disney&#x27;s own closeout store inside the International Premium Outlets, where cleared park merchandise lands at outlet prices.</p>
           <p class="addr">4969 International Dr, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         </div>
         <div class="handoff">
           <a class="btn-ghost" href="/international-drive-finder.html">See the full International Drive list</a>

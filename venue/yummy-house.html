@@ -211,7 +211,14 @@
       .vcard .addr { margin: 0; color: var(--muted); font-size: .9rem; }
       @media (max-width: 640px) { .facts { grid-template-columns: 1fr; } }
     </style>
-  </head>
+  <style data-cardsys>
+/* cardsys: similar rail cards (2026-10-23 overhaul) */
+.vcard{display:flex;gap:12px;align-items:flex-start}
+.vcard .vthumb{flex:0 0 86px;width:86px;height:86px;border-radius:10px;object-fit:cover;display:block}
+.vcard .vmain{flex:1;min-width:0}
+.vcard .vsub{margin:4px 0 0;font-size:.86rem;line-height:1.45;color:var(--muted,#c6bba2)}
+@media (min-width:1000px){.vlist{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start}}
+</style></head>
   <body>
     <header class="hero">
       <div class="hero-in">
@@ -239,41 +246,41 @@
         </div>
       </section>
 
-      <section class="sec" id="similar">
+      <section class="sec" id="district-story"><p class="kicker">District Stories</p><h2>Orlando&#x27;s long memory</h2><p class="lede">The guide keeps the long memory of Orlando&#x27;s districts in one place: the names, the plats and the stories behind the streets.</p><p><a class="btn-ghost" href="/history.html">Browse the district stories &rarr;</a></p></section><section class="sec" id="similar">
         <p class="kicker">Similar Feel</p>
         <h2>More places with this feel</h2>
         <p class="lede">Matched by vibe, not by neighborhood: the places across Greater Orlando closest in spirit to Yummy House.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/lams-garden.html">Lam&#x27;s Garden Chinese Restaurant</a></h3>
-          <p class="meta">Chinese &middot; Milk District &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-lams-garden.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/lams-garden.html">Lam&#x27;s Garden Chinese Restaurant</a></h3>
+          <p class="meta">Chinese &middot; Milk District &middot; $$</p><p class="vsub">An old-school, family-owned Cantonese room on East Colonial Drive that has served the corridor since 1975.</p>
           <p class="addr">2505 E Colonial Dr, Orlando, FL 32803</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/lucky-china.html">Lucky China</a></h3>
-          <p class="meta">Chinese &middot; University &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/lucky-china.html">Lucky China</a></h3>
+          <p class="meta">Chinese &middot; University &middot; $</p><p class="vsub">A no-frills takeout staple in Aloma Square that regulars prize for one thing above all: consistency.</p>
           <p class="addr">Lucky China, 6756 Aloma Ave, Winter Park, FL 32792</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/yh-seafood-clubhouse.html">YH Seafood Clubhouse</a></h3>
-          <p class="meta">Chinese &middot; Orlando &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/yh-seafood-clubhouse.html">YH Seafood Clubhouse</a></h3>
+          <p class="meta">Chinese &middot; Orlando &middot; $$</p><p class="vsub">Turkey Lake Road&#x27;s Cantonese room, refined and warm, where round tables fill with family-style plates.</p>
           <p class="addr">YH Seafood Clubhouse, 8081 Turkey Lake Rd, Orlando, FL 32819-7321, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/camille.html">Camille</a></h3>
-          <p class="meta">Noodles &amp; Southeast Asian &middot; Baldwin Park &middot; $$$$</p>
+          <img class="vthumb" src="/assets/venue-camille.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/camille.html">Camille</a></h3>
+          <p class="meta">Noodles &amp; Southeast Asian &middot; Baldwin Park &middot; $$$$</p><p class="vsub">Chef Tung Phan named this Baldwin Park counter for his daughter, pairing Vietnamese flavors with French forms in an intimate room.</p>
           <p class="addr">Camille, 4962 New Broad St, Orlando, FL 32814-6415</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/kaya.html">Kaya</a></h3>
-          <p class="meta">Fine dining &amp; steak &middot; Mills 50 &middot; $$$$</p>
+          <img class="vthumb" src="/assets/venue-kaya.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/kaya.html">Kaya</a></h3>
+          <p class="meta">Fine dining &amp; steak &middot; Mills 50 &middot; $$$$</p><p class="vsub">Filipino cooking in a cozy house on Thornton Avenue that feels like grandma&#x27;s house, if grandma cooked at a very high level.</p>
           <p class="addr">618 N Thornton Ave, Orlando, FL 32803</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/moon-wok.html">Moon Wok Kitchen &amp; Lounge</a></h3>
-          <p class="meta">Chinese &middot; I-Drive &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-moon-wok.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/moon-wok.html">Moon Wok Kitchen &amp; Lounge</a></h3>
+          <p class="meta">Chinese &middot; I-Drive &middot; $$</p><p class="vsub">International Drive has plenty of Chinese takeout, but this one has a moonlit lounge attached, all glow and dressed-up energy.</p>
           <p class="addr">11701 International Dr Ste 300, Orlando, FL 32821</p>
-        </article>
+        </div></article>
         </div>
       </section>
 
@@ -283,20 +290,20 @@
         <p class="lede">Other places in Altamonte Springs, closest to Yummy House first.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/burger-vault.html">Burger Vault</a></h3>
-          <p class="meta">Burgers &amp; sandwiches · Burgers &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-burger-vault.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/burger-vault.html">Burger Vault</a></h3>
+          <p class="meta">Burgers &amp; sandwiches · Burgers &middot; $$</p><p class="vsub">Small mom-and-pop counter on State Road 436 in Altamonte Springs, building halal burgers guests call juicy and wonderfully messy.</p>
           <p class="addr">Burger Vault, 520 W State Road 436, Altamonte Springs, FL 32714-4000, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/jadore-the-french-bakery.html">J&#x27;Adore the French Bakery</a></h3>
-          <p class="meta">Bakeries · Bakery &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/jadore-the-french-bakery.html">J&#x27;Adore the French Bakery</a></h3>
+          <p class="meta">Bakeries · Bakery &middot; $$</p><p class="vsub">Unassuming little French bakery in Altamonte Springs that regulars describe as a sleeper.</p>
           <p class="addr">J&#x27;Adore the French Bakery, 910 Sand Lake Rd, Altamonte Springs, FL 32714-7053, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/soulicious-vegan-kitchen.html">Soulicious Vegan Kitchen</a></h3>
-          <p class="meta">Restaurants · Soul Food &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/soulicious-vegan-kitchen.html">Soulicious Vegan Kitchen</a></h3>
+          <p class="meta">Restaurants · Soul Food &middot; $$</p><p class="vsub">Inside Apopka&#x27;s Halls On 5th, vegan soul food with no compromise: fried oyster mushroom chick&#x27;n, sliders, and mac and cheese.</p>
           <p class="addr">Soulicious Vegan Kitchen, 15 E 5th St, Apopka, FL 32703-5244, United States</p>
-        </article>
+        </div></article>
         </div>
         <div class="handoff">
           <a class="btn-ghost" href="/altamonte-springs-finder.html">See the full Altamonte Springs list</a>

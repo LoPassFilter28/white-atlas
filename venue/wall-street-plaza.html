@@ -221,7 +221,14 @@
 .take .take-label{font-size:.72rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--accent-ink);margin:0 0 8px}
 
 </style>
-  </head>
+  <style data-cardsys>
+/* cardsys: similar rail cards (2026-10-23 overhaul) */
+.vcard{display:flex;gap:12px;align-items:flex-start}
+.vcard .vthumb{flex:0 0 86px;width:86px;height:86px;border-radius:10px;object-fit:cover;display:block}
+.vcard .vmain{flex:1;min-width:0}
+.vcard .vsub{margin:4px 0 0;font-size:.86rem;line-height:1.45;color:var(--muted,#c6bba2)}
+@media (min-width:1000px){.vlist{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start}}
+</style></head>
   <body>
     <header class="hero">
       <div class="hero-in">
@@ -246,7 +253,7 @@
         <div class="actions">
           <a class="action" href="https://www.google.com/maps/search/?api=1&amp;query=Wall+Street+Plaza+25+Wall+St%2C+Orlando%2C+FL+32801" target="_blank" rel="noopener">Directions &rarr;</a>
           <a class="action" href="/archive.html?venue=wall-street-plaza">Open in the full finder</a>
-          <a class="action" href="/downtown-orlando-district-guide.html">Read the Downtown Orlando story</a>
+          <a class="action" href="/history/downtown.html">Read the Downtown Orlando story</a>
           <a class="action action-ig" href="https://www.instagram.com/wallstreetorlando" target="_blank" rel="noopener"><svg class="ig-glyph" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="vertical-align:-2px;margin-right:6px"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg> Instagram</a>
         </div>
       </section>
@@ -275,41 +282,41 @@
         </div>
       </section>
 
-<section class="sec" id="similar">
+<section class="sec" id="district-story"><p class="kicker">District Story</p><h2>The story of Downtown</h2><p class="lede">A fort, a courthouse plat and a citrus boom built it. A name nobody can prove still runs it.</p><p><a class="btn-ghost" href="/history/downtown.html">Read the Downtown story &rarr;</a></p></section><section class="sec" id="similar">
         <p class="kicker">Similar Feel</p>
         <h2>More places with this feel</h2>
         <p class="lede">Matched by vibe, not by neighborhood: the places across Greater Orlando closest in spirit to Wall Street Plaza.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/rivals-activity-bar.html">The Villa</a></h3>
-          <p class="meta">Bars &amp; lounges &middot; Wall Street Plaza &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/rivals-activity-bar.html">The Villa</a></h3>
+          <p class="meta">Bars &amp; lounges &middot; Wall Street Plaza &middot; $$</p><p class="vsub">Now The Villa, a playful, high-energy Wall Street Plaza hangout built around arcade cabinets, board games and video game stations.</p>
           <p class="addr">25 Wall St Bldg B, Orlando, FL 32801</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/the-social.html">The Social</a></h3>
-          <p class="meta">Nightlife &amp; music &middot; Downtown &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/the-social.html">The Social</a></h3>
+          <p class="meta">Nightlife &amp; music &middot; Downtown &middot; $$</p><p class="vsub">A small brick-walled room on North Orange Avenue where indie bands play close enough to lock eyes with.</p>
           <p class="addr">54 N Orange Ave, Orlando, FL 32801</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/euphoria-downtown.html">Euphoria Downtown</a></h3>
-          <p class="meta">Bars &amp; lounges &middot; Downtown &middot; $$$</p>
+          <div class="vmain"><h3><a href="/venue/euphoria-downtown.html">Euphoria Downtown</a></h3>
+          <p class="meta">Bars &amp; lounges &middot; Downtown &middot; $$$</p><p class="vsub">On South Orange Avenue, brunch with bottomless mimosas and lamb chops gives way to Techno Euphoria nights on a big sound system.</p>
           <p class="addr">110 S Orange Ave, Orlando, FL 32801</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/fixtion.html">Fixtion Restaurant &amp; Bar</a></h3>
-          <p class="meta">American &middot; Downtown &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/fixtion.html">Fixtion Restaurant &amp; Bar</a></h3>
+          <p class="meta">American &middot; Downtown &middot; $$</p><p class="vsub">On Orange Avenue, comfort food and huge comfy booths early, club energy after dark, shape-shifting through the day.</p>
           <p class="addr">15 N Orange Ave, Orlando, FL 32801</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/f-d-cantina.html">F&amp;D Cantina</a></h3>
-          <p class="meta">Mexican &middot; Thornton Park &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-f-d-cantina.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/f-d-cantina.html">F&amp;D Cantina</a></h3>
+          <p class="meta">Mexican &middot; Thornton Park &middot; $$</p><p class="vsub">On East Central, Thornton Park&#x27;s festive cantina, a dog-friendly patio room where regulars dream about birria tacos and the watermelon margarita.</p>
           <p class="addr">617 E Central Blvd, Orlando, FL 32801</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/aero-rooftop-bar-lounge.html">Aero Rooftop Bar &amp; Lounge</a></h3>
-          <p class="meta">Nightlife &amp; music &middot; Downtown &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-aero-rooftop-bar-lounge.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/aero-rooftop-bar-lounge.html">Aero Rooftop Bar &amp; Lounge</a></h3>
+          <p class="meta">Nightlife &amp; music &middot; Downtown &middot; $$</p><p class="vsub">A small rooftop with big energy: open-air dancing above North Orange Avenue, skyline behind the DJ, lasers over the crowd.</p>
           <p class="addr">60 N Orange Ave, Orlando, FL 32801</p>
-        </article>
+        </div></article>
         </div>
       </section>
 
@@ -319,35 +326,35 @@
         <p class="lede">Other places in Downtown Orlando, Local Picks first, then the closest to Wall Street Plaza.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/fixtion.html">Fixtion Restaurant &amp; Bar</a> <span class="badge">Local Pick</span></h3>
-          <p class="meta">American · American Restaurant &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/fixtion.html">Fixtion Restaurant &amp; Bar</a> <span class="badge">Local Pick</span></h3>
+          <p class="meta">American · American Restaurant &middot; $$</p><p class="vsub">On Orange Avenue, comfort food and huge comfy booths early, club energy after dark, shape-shifting through the day.</p>
           <p class="addr">15 N Orange Ave, Orlando, FL 32801</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/elixir-kitchen-bar.html">Elixir Kitchen and Bar</a> <span class="badge">Local Pick</span></h3>
-          <p class="meta">Bars &amp; lounges · Bar &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-elixir-kitchen-bar.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/elixir-kitchen-bar.html">Elixir Kitchen and Bar</a> <span class="badge">Local Pick</span></h3>
+          <p class="meta">Bars &amp; lounges · Bar &middot; $$</p><p class="vsub">A rustic-hip gastropub in one of downtown&#x27;s original buildings, and very much the neighborhood&#x27;s spot.</p>
           <p class="addr">9 W Washington St, Orlando, FL 32801</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/aura-night-club.html">Aura Night Club</a></h3>
-          <p class="meta">Nightlife &amp; music · Club &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/aura-night-club.html">Aura Night Club</a></h3>
+          <p class="meta">Nightlife &amp; music · Club &middot; $$</p><p class="vsub">About the floor here: an LED-lit room in the Beacham complex on North Orange, hopping between EDM, hip-hop and reggaeton.</p>
           <p class="addr">49 N Orange Ave, Orlando, FL 32801</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/tier-nightclub.html">Ohm Nightclub</a></h3>
-          <p class="meta">Nightlife &amp; music · Club &middot; $$$</p>
+          <div class="vmain"><h3><a href="/venue/tier-nightclub.html">Ohm Nightclub</a></h3>
+          <p class="meta">Nightlife &amp; music · Club &middot; $$$</p><p class="vsub">Downtown&#x27;s big-room club, formerly Tier, packs two floors, with skyboxes over the floor and bottle service for groups.</p>
           <p class="addr">20 E Central Blvd, Orlando, FL 32801</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/the-beacham.html">The Beacham &amp; The Social</a></h3>
-          <p class="meta">Nightlife &amp; music · Music Venue &middot; $$$</p>
+          <img class="vthumb" src="/assets/venue-the-beacham.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/the-beacham.html">The Beacham &amp; The Social</a></h3>
+          <p class="meta">Nightlife &amp; music · Music Venue &middot; $$$</p><p class="vsub">On Orange Avenue, this century-old vaudeville theater still runs on live music, balcony sightlines and LED walls, historic and electric.</p>
           <p class="addr">46 N Orange Ave, Orlando, FL 32801</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/the-social.html">The Social</a></h3>
-          <p class="meta">Nightlife &amp; music · Music Venue &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/the-social.html">The Social</a></h3>
+          <p class="meta">Nightlife &amp; music · Music Venue &middot; $$</p><p class="vsub">A small brick-walled room on North Orange Avenue where indie bands play close enough to lock eyes with.</p>
           <p class="addr">54 N Orange Ave, Orlando, FL 32801</p>
-        </article>
+        </div></article>
         </div>
         <div class="handoff">
           <a class="btn-ghost" href="/downtown-orlando-finder.html">See the full Downtown Orlando list</a>

@@ -211,7 +211,14 @@
       .vcard .addr { margin: 0; color: var(--muted); font-size: .9rem; }
       @media (max-width: 640px) { .facts { grid-template-columns: 1fr; } }
     </style>
-  </head>
+  <style data-cardsys>
+/* cardsys: similar rail cards (2026-10-23 overhaul) */
+.vcard{display:flex;gap:12px;align-items:flex-start}
+.vcard .vthumb{flex:0 0 86px;width:86px;height:86px;border-radius:10px;object-fit:cover;display:block}
+.vcard .vmain{flex:1;min-width:0}
+.vcard .vsub{margin:4px 0 0;font-size:.86rem;line-height:1.45;color:var(--muted,#c6bba2)}
+@media (min-width:1000px){.vlist{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start}}
+</style></head>
   <body>
     <header class="hero">
       <div class="hero-in">
@@ -236,46 +243,46 @@
         <div class="actions">
           <a class="action" href="https://www.google.com/maps/search/?api=1&amp;query=Ziggie%27s+Pizza+Ziggie%27s+Pizza%2C+603+Virginia+Dr%2C+Orlando%2C+FL+32803-1844%2C+United+States" target="_blank" rel="noopener">Directions &rarr;</a>
           <a class="action" href="/archive.html?venue=ziggies-pizza">Open in the full finder</a>
-          <a class="action" href="/ivanhoe-village-district-guide.html">Read the Ivanhoe Village story</a>
+          <a class="action" href="/history/ivanhoe-village.html">Read the Ivanhoe Village story</a>
           <a class="action action-ig" href="https://www.instagram.com/ziggiespizza" target="_blank" rel="noopener"><svg class="ig-glyph" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="vertical-align:-2px;margin-right:6px"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg> Instagram</a>
         </div>
       </section>
 
-      <section class="sec" id="similar">
+      <section class="sec" id="district-story"><p class="kicker">District Story</p><h2>The story of Ivanhoe Village</h2><p class="lede">A lake named for a novel, a shore of cotton, pineapples and amusement rides, and a main street that kept reinventing itself around the water.</p><p><a class="btn-ghost" href="/history/ivanhoe-village.html">Read the Ivanhoe Village story &rarr;</a></p></section><section class="sec" id="similar">
         <p class="kicker">Similar Feel</p>
         <h2>More places with this feel</h2>
         <p class="lede">Matched by vibe, not by neighborhood: the places across Greater Orlando closest in spirit to Ziggie&#x27;s Pizza.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/brews-and-bites-tour.html">Brews and Bites Walking Tour</a></h3>
-          <p class="meta">Attractions &middot; Ivanhoe Village &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/brews-and-bites-tour.html">Brews and Bites Walking Tour</a></h3>
+          <p class="meta">Attractions &middot; Ivanhoe Village &middot; $$</p><p class="vsub">Through Ivanhoe Village breweries and bars, guides guests call knowledgeable and upbeat share plenty of local history along the way.</p>
           <p class="addr">Ten10 Brewing Company, 1010 Virginia Dr, Orlando, FL 32803</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/ivanhoe-village-food-tour.html">Ivanhoe Village Food Tour</a></h3>
-          <p class="meta">Attractions &middot; Ivanhoe Village &middot; $$$</p>
+          <img class="vthumb" src="/assets/venue-ivanhoe-village-food-tour.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/ivanhoe-village-food-tour.html">Ivanhoe Village Food Tour</a></h3>
+          <p class="meta">Attractions &middot; Ivanhoe Village &middot; $$$</p><p class="vsub">A knowledgeable local guide leads this well-organized walk through a lakefront vintage district of shops and cafes, stop by tasting stop.</p>
           <p class="addr">1211 N Orange Ave, Orlando, FL 32804</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/lukes-new-york-bagels.html">Luke&#x27;s New York Bagels</a></h3>
-          <p class="meta">Bakeries &middot; Ivanhoe Village &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/lukes-new-york-bagels.html">Luke&#x27;s New York Bagels</a></h3>
+          <p class="meta">Bakeries &middot; Ivanhoe Village &middot; $$</p><p class="vsub">Gainesville-born, New York style bagels, now at a stall inside City Food Hall in Ivanhoe Village.</p>
           <p class="addr">1412 Alden Rd, Orlando, FL 32803</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/santiagos-bodega.html">Santiago&#x27;s Bodega</a></h3>
-          <p class="meta">Mediterranean &middot; Ivanhoe Village &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/santiagos-bodega.html">Santiago&#x27;s Bodega</a></h3>
+          <p class="meta">Mediterranean &middot; Ivanhoe Village &middot; $$</p><p class="vsub">Lively and eclectic on Virginia Drive, a tapas room built for sharing plates out on the patio.</p>
           <p class="addr">Santiago&#x27;s Bodega, 802 Virginia Dr, Orlando, FL 32803</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/egg-dose.html">Egg Dose</a></h3>
-          <p class="meta">Breakfast &amp; brunch &middot; Ivanhoe Village &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/egg-dose.html">Egg Dose</a></h3>
+          <p class="meta">Breakfast &amp; brunch &middot; Ivanhoe Village &middot; $$</p><p class="vsub">Guests call them perfect: the Maple Dose stacks thick-cut bacon, soft scrambled eggs, cheddar and maple syrup on brioche French toast.</p>
           <p class="addr">1412 Alden Rd, Orlando, FL 32803</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/nuris.html">Nuri&#x27;s</a></h3>
-          <p class="meta">Pizza &middot; Orlando &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/nuris.html">Nuri&#x27;s</a></h3>
+          <p class="meta">Pizza &middot; Orlando &middot; $$</p><p class="vsub">Downtown&#x27;s tavern-style pizza joint on East Pine, all cracker-crisp, paper-thin crust party-cut into squares you keep grabbing.</p>
           <p class="addr">Nuri&#x27;s, 63 E Pine St, Orlando, FL 32801-2617, United States</p>
-        </article>
+        </div></article>
         </div>
       </section>
 
@@ -285,35 +292,35 @@
         <p class="lede">Other places in Ivanhoe Village, closest to Ziggie&#x27;s Pizza first.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/brews-and-bites-tour.html">Brews and Bites Walking Tour</a></h3>
-          <p class="meta">Attractions &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/brews-and-bites-tour.html">Brews and Bites Walking Tour</a></h3>
+          <p class="meta">Attractions &middot; $$</p><p class="vsub">Through Ivanhoe Village breweries and bars, guides guests call knowledgeable and upbeat share plenty of local history along the way.</p>
           <p class="addr">Ten10 Brewing Company, 1010 Virginia Dr, Orlando, FL 32803</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/the-pinery.html">The Pinery</a></h3>
-          <p class="meta">American &middot; $$$</p>
+          <img class="vthumb" src="/assets/venue-the-pinery.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/the-pinery.html">The Pinery</a></h3>
+          <p class="meta">American &middot; $$$</p><p class="vsub">Warm and lakeside on Lake Ivanhoe, Florida cooking in a rustic, elegant room guests call fabulous.</p>
           <p class="addr">The Pinery, 295 NE Ivanhoe Blvd, Orlando, FL 32804-6434</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/4-hens-creole-kitchen.html">4 Hens Creole Kitchen</a></h3>
-          <p class="meta">Restaurants · Creole Kitchen &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/4-hens-creole-kitchen.html">4 Hens Creole Kitchen</a></h3>
+          <p class="meta">Restaurants · Creole Kitchen &middot; $$</p><p class="vsub">Inside City Food Hall, chill and soulful cooking with a NOLA spirit, music in the air, and seasoning guests call out of this world.</p>
           <p class="addr">1412 Alden Rd, Orlando, FL 32803</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/cfh-orlando.html">CFH Orlando</a></h3>
-          <p class="meta">Markets &amp; shops · Food Hall &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/cfh-orlando.html">CFH Orlando</a></h3>
+          <p class="meta">Markets &amp; shops · Food Hall &middot; $$</p><p class="vsub">The central bar inside City Food Hall gives Ivanhoe Village a social, unhurried pause between food runs, with specials guests found tasty.</p>
           <p class="addr">1412 Alden Rd, Orlando, FL 32803</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/city-food-hall.html">City Food Hall</a></h3>
-          <p class="meta">Markets &amp; shops · Food Hall &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-city-food-hall.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/city-food-hall.html">City Food Hall</a></h3>
+          <p class="meta">Markets &amp; shops · Food Hall &middot; $$</p><p class="vsub">Modern and bustling on Alden Road, chef-driven stalls under one roof so a group can split across smash burgers, sushi, pasta and tacos.</p>
           <p class="addr">City Food Hall, 1412 Alden Rd, Orlando, FL 32803-1862</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/egg-dose.html">Egg Dose</a></h3>
-          <p class="meta">Breakfast &amp; brunch · Breakfast Sandwiches &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/egg-dose.html">Egg Dose</a></h3>
+          <p class="meta">Breakfast &amp; brunch · Breakfast Sandwiches &middot; $$</p><p class="vsub">Guests call them perfect: the Maple Dose stacks thick-cut bacon, soft scrambled eggs, cheddar and maple syrup on brioche French toast.</p>
           <p class="addr">1412 Alden Rd, Orlando, FL 32803</p>
-        </article>
+        </div></article>
         </div>
         <div class="handoff">
           <a class="btn-ghost" href="/ivanhoe-village-finder.html">See the full Ivanhoe Village list</a>

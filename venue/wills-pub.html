@@ -211,7 +211,14 @@
       .vcard .addr { margin: 0; color: var(--muted); font-size: .9rem; }
       @media (max-width: 640px) { .facts { grid-template-columns: 1fr; } }
     </style>
-  </head>
+  <style data-cardsys>
+/* cardsys: similar rail cards (2026-10-23 overhaul) */
+.vcard{display:flex;gap:12px;align-items:flex-start}
+.vcard .vthumb{flex:0 0 86px;width:86px;height:86px;border-radius:10px;object-fit:cover;display:block}
+.vcard .vmain{flex:1;min-width:0}
+.vcard .vsub{margin:4px 0 0;font-size:.86rem;line-height:1.45;color:var(--muted,#c6bba2)}
+@media (min-width:1000px){.vlist{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start}}
+</style></head>
   <body>
     <header class="hero">
       <div class="hero-in">
@@ -236,46 +243,46 @@
         <div class="actions">
           <a class="action" href="https://www.google.com/maps/search/?api=1&amp;query=Will%27s+Pub+%26+Lil+Indie%27s+1042+N+Mills+Ave%2C+Orlando%2C+FL+32803" target="_blank" rel="noopener">Directions &rarr;</a>
           <a class="action" href="/archive.html?venue=wills-pub">Open in the full finder</a>
-          <a class="action" href="/mills-50-district-guide.html">Read the Mills 50 story</a>
+          <a class="action" href="/history/mills-50.html">Read the Mills 50 story</a>
           <a class="action action-ig" href="https://www.instagram.com/willspub" target="_blank" rel="noopener"><svg class="ig-glyph" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="vertical-align:-2px;margin-right:6px"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg> Instagram</a>
         </div>
       </section>
 
-      <section class="sec" id="similar">
+      <section class="sec" id="district-story"><p class="kicker">District Story</p><h2>The story of Mills 50</h2><p class="lede">A district named for its own crossroads, platted as front porches in 1883 and remade twice by the people who moved in.</p><p><a class="btn-ghost" href="/history/mills-50.html">Read the Mills 50 story &rarr;</a></p></section><section class="sec" id="similar">
         <p class="kicker">Similar Feel</p>
         <h2>More places with this feel</h2>
         <p class="lede">Matched by vibe, not by neighborhood: the places across Greater Orlando closest in spirit to Will&#x27;s Pub &amp; Lil Indie&#x27;s.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/the-social.html">The Social</a></h3>
-          <p class="meta">Nightlife &amp; music &middot; Downtown &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/the-social.html">The Social</a></h3>
+          <p class="meta">Nightlife &amp; music &middot; Downtown &middot; $$</p><p class="vsub">A small brick-walled room on North Orange Avenue where indie bands play close enough to lock eyes with.</p>
           <p class="addr">54 N Orange Ave, Orlando, FL 32801</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/sparrow.html">Sparrow Orlando</a></h3>
-          <p class="meta">Bars &amp; lounges &middot; Mills 50 &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-sparrow.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/sparrow.html">Sparrow Orlando</a></h3>
+          <p class="meta">Bars &amp; lounges &middot; Mills 50 &middot; $$</p><p class="vsub">An intimate, moody wine bar on North Orange Avenue, all low light, vinyl in the air and an unhurried pace.</p>
           <p class="addr">807 N Orange Ave, Orlando, FL 32801</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/yaz-orlando.html">Yaz Orlando</a></h3>
-          <p class="meta">Nightlife &amp; music &middot; Downtown &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/yaz-orlando.html">Yaz Orlando</a></h3>
+          <p class="meta">Nightlife &amp; music &middot; Downtown &middot; $$</p><p class="vsub">On North Orange Avenue, dinner and lounge come first, then the room deepens into a club as the night goes on, low-lit and moody.</p>
           <p class="addr">114 N Orange Ave, Orlando, FL 32801</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/bar-one-orlando.html">Bar One Orlando</a></h3>
-          <p class="meta">Bars &amp; lounges &middot; Orlando &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/bar-one-orlando.html">Bar One Orlando</a></h3>
+          <p class="meta">Bars &amp; lounges &middot; Orlando &middot; $</p><p class="vsub">Tiny from the street, but inside a cozy, very clean neighborhood bar on McCoy Road with pool and darts.</p>
           <p class="addr">Bar One Orlando, 1516 McCoy Rd, Orlando, FL 32809</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/grape-the-grain.html">Grape &amp; the Grain</a></h3>
-          <p class="meta">Bars &amp; lounges &middot; 1110 Virginia Dr &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-grape-the-grain.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/grape-the-grain.html">Grape &amp; the Grain</a></h3>
+          <p class="meta">Bars &amp; lounges &middot; 1110 Virginia Dr &middot; $$</p><p class="vsub">Unpretentious Mills 50 wine bar where the real draw is the covered back patio guests call the best in Orlando.</p>
           <p class="addr">Grape &amp; the Grain, 1110 Virginia Dr, Orlando, FL 32803</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/the-guesthouse.html">The Guesthouse</a></h3>
-          <p class="meta">Bars &amp; lounges &middot; Mills 50 &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/the-guesthouse.html">The Guesthouse</a></h3>
+          <p class="meta">Bars &amp; lounges &middot; Mills 50 &middot; $$</p><p class="vsub">Mills 50&#x27;s plant-filled living room, greenery trailing over white walls around a square bar.</p>
           <p class="addr">1321 N Mills Ave, Orlando, FL 32803</p>
-        </article>
+        </div></article>
         </div>
       </section>
 
@@ -285,35 +292,35 @@
         <p class="lede">Other places in Mills 50, Local Picks first, then the closest to Will&#x27;s Pub &amp; Lil Indie&#x27;s.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/the-guesthouse.html">The Guesthouse</a> <span class="badge">Local Pick</span></h3>
-          <p class="meta">Bars &amp; lounges · Cocktail Bar &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/the-guesthouse.html">The Guesthouse</a> <span class="badge">Local Pick</span></h3>
+          <p class="meta">Bars &amp; lounges · Cocktail Bar &middot; $$</p><p class="vsub">Mills 50&#x27;s plant-filled living room, greenery trailing over white walls around a square bar.</p>
           <p class="addr">1321 N Mills Ave, Orlando, FL 32803</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/black-rooster-taqueria.html">Black Rooster Taqueria</a></h3>
-          <p class="meta">Mexican &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/black-rooster-taqueria.html">Black Rooster Taqueria</a></h3>
+          <p class="meta">Mexican &middot; $$</p><p class="vsub">A small, lively Mills 50 room with a dive-bar soul and a chef&#x27;s hand on the tacos.</p>
           <p class="addr">1323 N Mills Ave, Orlando, FL 32803</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/grape-the-grain.html">Grape &amp; the Grain</a></h3>
-          <p class="meta">Bars &amp; lounges · Bar &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-grape-the-grain.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/grape-the-grain.html">Grape &amp; the Grain</a></h3>
+          <p class="meta">Bars &amp; lounges · Bar &middot; $$</p><p class="vsub">Unpretentious Mills 50 wine bar where the real draw is the covered back patio guests call the best in Orlando.</p>
           <p class="addr">Grape &amp; the Grain, 1110 Virginia Dr, Orlando, FL 32803</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/framework-craft-coffee-house.html">Framework Craft Coffee House</a></h3>
-          <p class="meta">Coffee &amp; cafes · Cafe &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/framework-craft-coffee-house.html">Framework Craft Coffee House</a></h3>
+          <p class="meta">Coffee &amp; cafes · Cafe &middot; $</p><p class="vsub">What grew from the Vita Luna coffee cart is now a cozy, artsy Mills 50 hub built on a pay-what-you-can welcome.</p>
           <p class="addr">1201 N Mills Ave, Orlando, FL 32803</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/ten10-brewing.html">Ten10 Brewing</a></h3>
-          <p class="meta">Breweries · Brewery &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/ten10-brewing.html">Ten10 Brewing</a></h3>
+          <p class="meta">Breweries · Brewery &middot; $$</p><p class="vsub">Laid-back neighborhood taproom on Virginia Drive in Mills 50, all about good beer, good tunes and good people.</p>
           <p class="addr">Ten10 Brewing, 1010 Virginia Dr, Orlando, FL 32803-2532</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/bites-and-bubbles.html">Bites &amp; Bubbles</a></h3>
-          <p class="meta">American · New American &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/bites-and-bubbles.html">Bites &amp; Bubbles</a></h3>
+          <p class="meta">American · New American &middot; $$</p><p class="vsub">Date-night polish meets neighborhood warmth on North Mills, topped by a romantic rooftop lounge made for sunset.</p>
           <p class="addr">1618 N Mills Ave, Orlando, FL 32803</p>
-        </article>
+        </div></article>
         </div>
         <div class="handoff">
           <a class="btn-ghost" href="/mills-50-finder.html">See the full Mills 50 list</a>

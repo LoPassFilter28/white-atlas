@@ -211,7 +211,14 @@
       .vcard .addr { margin: 0; color: var(--muted); font-size: .9rem; }
       @media (max-width: 640px) { .facts { grid-template-columns: 1fr; } }
     </style>
-  </head>
+  <style data-cardsys>
+/* cardsys: similar rail cards (2026-10-23 overhaul) */
+.vcard{display:flex;gap:12px;align-items:flex-start}
+.vcard .vthumb{flex:0 0 86px;width:86px;height:86px;border-radius:10px;object-fit:cover;display:block}
+.vcard .vmain{flex:1;min-width:0}
+.vcard .vsub{margin:4px 0 0;font-size:.86rem;line-height:1.45;color:var(--muted,#c6bba2)}
+@media (min-width:1000px){.vlist{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start}}
+</style></head>
   <body>
     <header class="hero">
       <div class="hero-in">
@@ -236,45 +243,45 @@
         <div class="actions">
           <a class="action" href="https://www.google.com/maps/search/?api=1&amp;query=Wine+%26+Corks+420+E+Church+St+Ste+108%2C+Orlando%2C+FL+32801" target="_blank" rel="noopener">Directions &rarr;</a>
           <a class="action" href="/archive.html?venue=wine-corks">Open in the full finder</a>
-          <a class="action" href="/thornton-park-district-guide.html">Read the Thornton Park story</a>
+          <a class="action" href="/history/thornton-park.html">Read the Thornton Park story</a>
         </div>
       </section>
 
-      <section class="sec" id="similar">
+      <section class="sec" id="district-story"><p class="kicker">District Story</p><h2>The story of Thornton Park</h2><p class="lede">A name written on a plat in 1913, east of Lake Eola, and still carried by brick streets and bungalows today.</p><p><a class="btn-ghost" href="/history/thornton-park.html">Read the Thornton Park story &rarr;</a></p></section><section class="sec" id="similar">
         <p class="kicker">Similar Feel</p>
         <h2>More places with this feel</h2>
         <p class="lede">Matched by vibe, not by neighborhood: the places across Greater Orlando closest in spirit to Wine &amp; Corks.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/wine-room-park-avenue.html">The Wine Room on Park Avenue</a></h3>
-          <p class="meta">Bars &amp; lounges &middot; Winter Park &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-wine-room-park-avenue.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/wine-room-park-avenue.html">The Wine Room on Park Avenue</a></h3>
+          <p class="meta">Bars &amp; lounges &middot; Winter Park &middot; $$</p><p class="vsub">Wine tasting without the intimidation: load a Tasting Card and pour your own tastes, from a sip to a full glass, off a wall of wines.</p>
           <p class="addr">270 S Park Ave, Winter Park, FL 32789</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/flutes-champagne-bar.html">480N Wine Bar</a></h3>
-          <p class="meta">Bars &amp; lounges &middot; Winter Park &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/flutes-champagne-bar.html">480N Wine Bar</a></h3>
+          <p class="meta">Bars &amp; lounges &middot; Winter Park &middot; $$</p><p class="vsub">Reborn from Flutes Champagne Bar in Winter Park Village, a chic, moody lounge with a Parisian streak.</p>
           <p class="addr">480 N Orlando Ave Ste 133, Winter Park, FL 32789</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/outpost-neighborhood-tavern.html">Outpost Neighborhood Tavern</a></h3>
-          <p class="meta">American &middot; Thornton Park &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-outpost-neighborhood-tavern.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/outpost-neighborhood-tavern.html">Outpost Neighborhood Tavern</a></h3>
+          <p class="meta">American &middot; Thornton Park &middot; $$</p><p class="vsub">Two blocks off Lake Eola, a welcoming room guests call a cross between a sports bar and a boutique restaurant, with a lively patio and trivia leagues.</p>
           <p class="addr">227 N Eola Dr, Orlando, FL 32801</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/wine-4-oysters.html">Wine 4 Oysters</a></h3>
-          <p class="meta">Seafood &middot; Orlando &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-wine-4-oysters.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/wine-4-oysters.html">Wine 4 Oysters</a></h3>
+          <p class="meta">Seafood &middot; Orlando &middot; $$</p><p class="vsub">In plain sight on South Alafaya Trail, an intimate little room built for date night.</p>
           <p class="addr">Wine 4 Oysters, 1957 Alafaya Trl S, Orlando, FL 32828-8732, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/vines-by-h.html">Vines by H</a></h3>
-          <p class="meta">Fine dining &amp; steak &middot; Sand Lake &middot; $$$</p>
+          <img class="vthumb" src="/assets/venue-vines-by-h.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/vines-by-h.html">Vines by H</a></h3>
+          <p class="meta">Fine dining &amp; steak &middot; Sand Lake &middot; $$$</p><p class="vsub">Restaurant Row&#x27;s long-running wine and jazz room is back under a new name at the same Sand Lake address.</p>
           <p class="addr">7533 W Sand Lake Rd, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/f-d-cantina.html">F&amp;D Cantina</a></h3>
-          <p class="meta">Mexican &middot; Thornton Park &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-f-d-cantina.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/f-d-cantina.html">F&amp;D Cantina</a></h3>
+          <p class="meta">Mexican &middot; Thornton Park &middot; $$</p><p class="vsub">On East Central, Thornton Park&#x27;s festive cantina, a dog-friendly patio room where regulars dream about birria tacos and the watermelon margarita.</p>
           <p class="addr">617 E Central Blvd, Orlando, FL 32801</p>
-        </article>
+        </div></article>
         </div>
       </section>
 
@@ -284,35 +291,35 @@
         <p class="lede">Other places in Thornton Park, Local Picks first, then the closest to Wine &amp; Corks.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/rusteak-thornton-park.html">Rusteak</a> <span class="badge">Local Pick</span></h3>
-          <p class="meta">American · New American &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-rusteak-thornton-park.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/rusteak-thornton-park.html">Rusteak</a> <span class="badge">Local Pick</span></h3>
+          <p class="meta">American · New American &middot; $$</p><p class="vsub">On the Lake Eola corner in Thornton Park, a neighborhood spot cooking like it has something to prove, polished, relaxed but never stiff.</p>
           <p class="addr">101 S Eola Dr, Suite 103, Orlando, FL 32801</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/the-escobar-kitchen.html">The Escobar Kitchen</a></h3>
-          <p class="meta">Japanese &amp; sushi · Sushi &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-the-escobar-kitchen.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/the-escobar-kitchen.html">The Escobar Kitchen</a></h3>
+          <p class="meta">Japanese &amp; sushi · Sushi &middot; $$</p><p class="vsub">Family-run sushi inside a wine shop on East Church Street, rolling Latin-flavored rolls regulars say they dream about.</p>
           <p class="addr">The Escobar Kitchen, 420 E Church St, Orlando, FL 32801-2775</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/the-stubborn-mule.html">The Stubborn Mule</a></h3>
-          <p class="meta">American · New American &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/the-stubborn-mule.html">The Stubborn Mule</a></h3>
+          <p class="meta">American · New American &middot; $$</p><p class="vsub">Steps from the swans of Lake Eola, Moscow mules are the calling card in a cozy, lively room regulars call simply a vibe.</p>
           <p class="addr">100 S Eola Dr #103, Orlando, FL 32801</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/orlando-farmers-market.html">Orlando Farmers Market</a></h3>
-          <p class="meta">Markets &amp; shops · Farmers Market &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/orlando-farmers-market.html">Orlando Farmers Market</a></h3>
+          <p class="meta">Markets &amp; shops · Farmers Market &middot; $</p><p class="vsub">Every Sunday, the Lake Eola lakefront becomes a shaded, dog-friendly stretch of vendors with live music and a wine and beer garden.</p>
           <p class="addr">20 N Eola Dr, Orlando, FL 32801</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/f-d-cantina.html">F&amp;D Cantina</a></h3>
-          <p class="meta">Mexican &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-f-d-cantina.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/f-d-cantina.html">F&amp;D Cantina</a></h3>
+          <p class="meta">Mexican &middot; $$</p><p class="vsub">On East Central, Thornton Park&#x27;s festive cantina, a dog-friendly patio room where regulars dream about birria tacos and the watermelon margarita.</p>
           <p class="addr">617 E Central Blvd, Orlando, FL 32801</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/osteria-ester.html">Osteria Ester</a></h3>
-          <p class="meta">Italian &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/osteria-ester.html">Osteria Ester</a></h3>
+          <p class="meta">Italian &middot; $$</p><p class="vsub">The Good Salt group brings its touch to Italian American cooking on East Central, a warm room that reads as a neighborhood red sauce joint.</p>
           <p class="addr">629 E Central Blvd, Orlando, FL</p>
-        </article>
+        </div></article>
         </div>
         <div class="handoff">
           <a class="btn-ghost" href="/thornton-park-finder.html">See the full Thornton Park list</a>

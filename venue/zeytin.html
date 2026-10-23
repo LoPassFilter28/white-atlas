@@ -211,7 +211,14 @@
       .vcard .addr { margin: 0; color: var(--muted); font-size: .9rem; }
       @media (max-width: 640px) { .facts { grid-template-columns: 1fr; } }
     </style>
-  </head>
+  <style data-cardsys>
+/* cardsys: similar rail cards (2026-10-23 overhaul) */
+.vcard{display:flex;gap:12px;align-items:flex-start}
+.vcard .vthumb{flex:0 0 86px;width:86px;height:86px;border-radius:10px;object-fit:cover;display:block}
+.vcard .vmain{flex:1;min-width:0}
+.vcard .vsub{margin:4px 0 0;font-size:.86rem;line-height:1.45;color:var(--muted,#c6bba2)}
+@media (min-width:1000px){.vlist{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start}}
+</style></head>
   <body>
     <header class="hero">
       <div class="hero-in">
@@ -236,45 +243,45 @@
         <div class="actions">
           <a class="action" href="https://www.google.com/maps/search/?api=1&amp;query=Zeytin+Turkish+Cuisine+Zeytin+Turkish+Cuisine%2C+4439+Edgewater+Dr%2C+Orlando%2C+FL+32804-1229" target="_blank" rel="noopener">Directions &rarr;</a>
           <a class="action" href="/archive.html?venue=zeytin">Open in the full finder</a>
-          <a class="action" href="/college-park-district-guide.html">Read the College Park story</a>
+          <a class="action" href="/history/college-park.html">Read the College Park story</a>
         </div>
       </section>
 
-      <section class="sec" id="similar">
+      <section class="sec" id="district-story"><p class="kicker">District Story</p><h2>The story of College Park</h2><p class="lede">A neighborhood named for colleges it never had, branded on citrus land in 1921, and still legible in every street sign you pass today.</p><p><a class="btn-ghost" href="/history/college-park.html">Read the College Park story &rarr;</a></p></section><section class="sec" id="similar">
         <p class="kicker">Similar Feel</p>
         <h2>More places with this feel</h2>
         <p class="lede">Matched by vibe, not by neighborhood: the places across Greater Orlando closest in spirit to Zeytin Turkish Cuisine.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/bosphorous-turkish.html">Bosphorous Turkish Cuisine</a></h3>
-          <p class="meta">Mediterranean &middot; Winter Park &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-bosphorous-turkish.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/bosphorous-turkish.html">Bosphorous Turkish Cuisine</a></h3>
+          <p class="meta">Mediterranean &middot; Winter Park &middot; $$</p><p class="vsub">A family-owned Turkish table on Park Avenue, warm and celebratory, where hollow lavas bread arrives puffed and blistered for the dips.</p>
           <p class="addr">108 S Park Ave, Winter Park, FL 32789</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/turci-pasta.html">Turci Pasta</a></h3>
-          <p class="meta">Italian &middot; College Park &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-turci-pasta.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/turci-pasta.html">Turci Pasta</a></h3>
+          <p class="meta">Italian &middot; College Park &middot; $$</p><p class="vsub">On Edgewater Drive in College Park, a cozy, romantic hole in the wall where you can watch fresh pasta made in house.</p>
           <p class="addr">Turci Pasta, 2120 Edgewater Dr, Orlando, FL 32804</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/lale-mediterranean.html">Lale Mediterranean Cuisine</a></h3>
-          <p class="meta">Mediterranean &middot; Winter Park &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/lale-mediterranean.html">Lale Mediterranean Cuisine</a></h3>
+          <p class="meta">Mediterranean &middot; Winter Park &middot; $$</p><p class="vsub">A cozy, family-run Turkish room on Park Avenue in Winter Park, warm and intimate.</p>
           <p class="addr">521 S Park Ave, Winter Park, FL 32789</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/bosphorous-lake-nona.html">Bosphorous Turkish Cuisine</a></h3>
-          <p class="meta">Mediterranean &middot; Lake Nona &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-bosphorous-lake-nona.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/bosphorous-lake-nona.html">Bosphorous Turkish Cuisine</a></h3>
+          <p class="meta">Mediterranean &middot; Lake Nona &middot; $$</p><p class="vsub">Warm and laid-back in Lake Nona Town Center, with lavas bread landing puffed from the oven to tear and share.</p>
           <p class="addr">6900 Tavistock Lakes Blvd, Suite 100, Orlando, FL 32827</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/cups-pups.html">Cups and Pups</a></h3>
-          <p class="meta">Coffee &amp; cafes &middot; College Park &middot; $</p>
+          <img class="vthumb" src="/assets/venue-cups-pups.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/cups-pups.html">Cups and Pups</a></h3>
+          <p class="meta">Coffee &amp; cafes &middot; College Park &middot; $</p><p class="vsub">On Edgewater Drive in College Park, this cute, cheerful coffee stop has become a neighborhood ritual.</p>
           <p class="addr">2413 Edgewater Dr, Orlando, FL 32804</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/camille.html">Camille</a></h3>
-          <p class="meta">Noodles &amp; Southeast Asian &middot; Baldwin Park &middot; $$$$</p>
+          <img class="vthumb" src="/assets/venue-camille.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/camille.html">Camille</a></h3>
+          <p class="meta">Noodles &amp; Southeast Asian &middot; Baldwin Park &middot; $$$$</p><p class="vsub">Chef Tung Phan named this Baldwin Park counter for his daughter, pairing Vietnamese flavors with French forms in an intimate room.</p>
           <p class="addr">Camille, 4962 New Broad St, Orlando, FL 32814-6415</p>
-        </article>
+        </div></article>
         </div>
       </section>
 
@@ -284,35 +291,35 @@
         <p class="lede">Other places in College Park, Local Picks first, then the closest to Zeytin Turkish Cuisine.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/quesa-loco.html">QuesaLoco</a> <span class="badge">Local Pick</span></h3>
-          <p class="meta">Mexican · Birria Tacos &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-quesa-loco.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/quesa-loco.html">QuesaLoco</a> <span class="badge">Local Pick</span></h3>
+          <p class="meta">Mexican · Birria Tacos &middot; $$</p><p class="vsub">Birria country on Fairbanks Ave, in a colorful room with Dia de los Muertos murals and the joyful chaos of its food truck days.</p>
           <p class="addr">971 W Fairbanks Ave, Orlando, FL 32804</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/laspada-s-original-cheesesteaks-and-hoagies.html">LaSpada&#x27;s Original Cheesesteaks and Hoagies</a></h3>
-          <p class="meta">Burgers &amp; sandwiches · Sandwiches &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-laspada-s-original-cheesesteaks-and-hoagies.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/laspada-s-original-cheesesteaks-and-hoagies.html">LaSpada&#x27;s Original Cheesesteaks and Hoagies</a></h3>
+          <p class="meta">Burgers &amp; sandwiches · Sandwiches &middot; $$</p><p class="vsub">On Lee Road, Delco standards come to College Park with an old-school, no-frills, family-run counter.</p>
           <p class="addr">1010 Lee Rd, Orlando, FL 32810</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/ollies-public-house.html">Ollie&#x27;s Public House</a></h3>
-          <p class="meta">Bars &amp; lounges · Pub &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/ollies-public-house.html">Ollie&#x27;s Public House</a></h3>
+          <p class="meta">Bars &amp; lounges · Pub &middot; $$</p><p class="vsub">Easy neighborhood-pub rhythm on Edgewater Drive, with a lively dog-friendly patio and rotating craft taps.</p>
           <p class="addr">Ollie&#x27;s Public House, 3400 Edgewater Dr, Orlando, FL 32804-3602, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/blue-coast-burrito.html">Blue Coast Burrito</a></h3>
-          <p class="meta">Mexican · Burrito Shop &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/blue-coast-burrito.html">Blue Coast Burrito</a></h3>
+          <p class="meta">Mexican · Burrito Shop &middot; $</p><p class="vsub">On North Orange Blossom Trail, fast casual done honestly: fresh, build-your-own burritos and bowls.</p>
           <p class="addr">2311 N Orange Blossom Trl, Orlando, FL 32804</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/the-current-seafood-counter.html">The Current Seafood Counter</a></h3>
-          <p class="meta">Seafood &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/the-current-seafood-counter.html">The Current Seafood Counter</a></h3>
+          <p class="meta">Seafood &middot; $$</p><p class="vsub">New England fish shack spirit comes to College Park, with counter-service ease and a clean, casual room.</p>
           <p class="addr">The Current Seafood Counter, 2425 Edgewater Dr, Orlando, FL 32804-5303, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/cups-pups.html">Cups and Pups</a></h3>
-          <p class="meta">Coffee &amp; cafes · Coffee Shop &middot; $</p>
+          <img class="vthumb" src="/assets/venue-cups-pups.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/cups-pups.html">Cups and Pups</a></h3>
+          <p class="meta">Coffee &amp; cafes · Coffee Shop &middot; $</p><p class="vsub">On Edgewater Drive in College Park, this cute, cheerful coffee stop has become a neighborhood ritual.</p>
           <p class="addr">2413 Edgewater Dr, Orlando, FL 32804</p>
-        </article>
+        </div></article>
         </div>
         <div class="handoff">
           <a class="btn-ghost" href="/college-park-finder.html">See the full College Park list</a>

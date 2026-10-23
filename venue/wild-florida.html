@@ -211,7 +211,14 @@
       .vcard .addr { margin: 0; color: var(--muted); font-size: .9rem; }
       @media (max-width: 640px) { .facts { grid-template-columns: 1fr; } }
     </style>
-  </head>
+  <style data-cardsys>
+/* cardsys: similar rail cards (2026-10-23 overhaul) */
+.vcard{display:flex;gap:12px;align-items:flex-start}
+.vcard .vthumb{flex:0 0 86px;width:86px;height:86px;border-radius:10px;object-fit:cover;display:block}
+.vcard .vmain{flex:1;min-width:0}
+.vcard .vsub{margin:4px 0 0;font-size:.86rem;line-height:1.45;color:var(--muted,#c6bba2)}
+@media (min-width:1000px){.vlist{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start}}
+</style></head>
   <body>
     <header class="hero">
       <div class="hero-in">
@@ -242,41 +249,41 @@
         </div>
       </section>
 
-      <section class="sec" id="similar">
+      <section class="sec" id="district-story"><p class="kicker">District Stories</p><h2>Orlando&#x27;s long memory</h2><p class="lede">The guide keeps the long memory of Orlando&#x27;s districts in one place: the names, the plats and the stories behind the streets.</p><p><a class="btn-ghost" href="/history.html">Browse the district stories &rarr;</a></p></section><section class="sec" id="similar">
         <p class="kicker">Similar Feel</p>
         <h2>More places with this feel</h2>
         <p class="lede">Matched by vibe, not by neighborhood: the places across Greater Orlando closest in spirit to Wild Florida.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/boggy-creek-airboat-adventures.html">Boggy Creek Airboat Adventures</a></h3>
-          <p class="meta">Attractions &middot; Kissimmee &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/boggy-creek-airboat-adventures.html">Boggy Creek Airboat Adventures</a></h3>
+          <p class="meta">Attractions &middot; Kissimmee &middot; $$</p><p class="vsub">From Southport Road, airboats skim East Lake Tohopekaliga into marsh grass where captains spot gators, turtles and wading birds.</p>
           <p class="addr">2001 E Southport Rd, Kissimmee, FL 34746</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/gatorland.html">Gatorland</a></h3>
-          <p class="meta">Attractions &middot; South Orlando &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/gatorland.html">Gatorland</a></h3>
+          <p class="meta">Attractions &middot; South Orlando &middot; $$</p><p class="vsub">Old Florida, unpolished and proud: gators launch for chicken at the Gator Jumparoo Show while handlers work the sand nearby.</p>
           <p class="addr">14501 S Orange Blossom Trl, Orlando, FL 32837</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/black-hammock-restaurant.html">Black Hammock Restaurant</a></h3>
-          <p class="meta">Restaurants &middot; Oviedo &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/black-hammock-restaurant.html">Black Hammock Restaurant</a></h3>
+          <p class="meta">Restaurants &middot; Oviedo &middot; $$</p><p class="vsub">An Old Florida fish camp on Lake Jesup, where the menu leans into the setting: gator bites, fried gator tail, catfish nuggets, a gator burger.</p>
           <p class="addr">2316 Black Hammock Fish Camp Rd, Oviedo, FL 32765</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/dezerland-park-orlando.html">Dezerland Park Orlando</a></h3>
-          <p class="meta">Attractions &middot; International Drive &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/dezerland-park-orlando.html">Dezerland Park Orlando</a></h3>
+          <p class="meta">Attractions &middot; International Drive &middot; $$</p><p class="vsub">Guests keep landing on the same word for this International Drive indoor complex: huge.</p>
           <p class="addr">5250 International Dr, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/evermore-orlando-resort.html">Evermore Orlando Resort</a></h3>
-          <p class="meta">Hotels &middot; Disney Area &middot; $$$</p>
+          <img class="vthumb" src="/assets/venue-evermore-orlando-resort.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/evermore-orlando-resort.html">Evermore Orlando Resort</a></h3>
+          <p class="meta">Hotels &middot; Disney Area &middot; $$$</p><p class="vsub">The centerpiece is Evermore Bay, a crystal lagoon with its own beach that leaves guests saying the resort feels like it is out of the country.</p>
           <p class="addr">1590 Evermore Way, Orlando, FL 32836</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/blue-spring-manatee-kayak.html">Blue Spring Manatee Kayak Tours</a></h3>
-          <p class="meta">Attractions &middot; Orange City &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-blue-spring-manatee-kayak.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/blue-spring-manatee-kayak.html">Blue Spring Manatee Kayak Tours</a></h3>
+          <p class="meta">Attractions &middot; Orange City &middot; $$</p><p class="vsub">At Blue Spring State Park, guided kayaks slip into clear, 72-degree spring water where manatees roll and graze beneath the boat.</p>
           <p class="addr">Blue Spring State Park, 2100 W French Ave, Orange City, FL 32763</p>
-        </article>
+        </div></article>
         </div>
       </section>
 
@@ -286,35 +293,35 @@
         <p class="lede">Other places in Day Trips, closest to Wild Florida first.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/legoland-florida.html">Legoland Florida</a></h3>
-          <p class="meta">Attractions · Attraction &middot; $$$</p>
+          <img class="vthumb" src="/assets/venue-legoland-florida.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/legoland-florida.html">Legoland Florida</a></h3>
+          <p class="meta">Attractions · Attraction &middot; $$$</p><p class="vsub">On the old Cypress Gardens grounds in Winter Haven, this is the hands-on park for kids who build, relaxed next to the mega parks.</p>
           <p class="addr">1 Legoland Way, Winter Haven, FL 33884</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/peppa-pig-theme-park.html">Peppa Pig Theme Park Florida</a></h3>
-          <p class="meta">Attractions · Attraction &middot; $$$</p>
+          <img class="vthumb" src="/assets/venue-peppa-pig-theme-park.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/peppa-pig-theme-park.html">Peppa Pig Theme Park Florida</a></h3>
+          <p class="meta">Attractions · Attraction &middot; $$$</p><p class="vsub">Next to LEGOLAND in Winter Haven, this toddler-scaled first theme park stays gentle, colorful and relaxed for little kids.</p>
           <p class="addr">1 Legoland Way, Winter Haven, FL 33884</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/lego-galaxy-galacticoaster.html">LEGO Galaxy + Galacticoaster</a></h3>
-          <p class="meta">Attractions &middot; $$$</p>
+          <img class="vthumb" src="/assets/venue-lego-galaxy-galacticoaster.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/lego-galaxy-galacticoaster.html">LEGO Galaxy + Galacticoaster</a></h3>
+          <p class="meta">Attractions &middot; $$$</p><p class="vsub">At LEGOLAND Florida, young riders head into a brick-built space adventure on Galacticoaster, an indoor launch coaster gentle enough for a first.</p>
           <p class="addr">LEGOLAND Florida Resort, 1 Legoland Way, Winter Haven, FL 33884</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/sea-life-florida-legoland.html">SEA LIFE Florida</a></h3>
-          <p class="meta">Attractions &middot; $$$</p>
+          <div class="vmain"><h3><a href="/venue/sea-life-florida-legoland.html">SEA LIFE Florida</a></h3>
+          <p class="meta">Attractions &middot; $$$</p><p class="vsub">Inside LEGOLAND Florida, tanks are built like theme park sets, a theme park under the sea where habitats riff on rides and coasters.</p>
           <p class="addr">LEGOLAND Florida Resort, 1 Legoland Way, Winter Haven, FL 33884</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/revolution-off-road-atv.html">Revolution Adventures</a></h3>
-          <p class="meta">Attractions &middot; $$$</p>
+          <img class="vthumb" src="/assets/venue-revolution-off-road-atv.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/revolution-off-road-atv.html">Revolution Adventures</a></h3>
+          <p class="meta">Attractions &middot; $$$</p><p class="vsub">In Clermont, trade park lines for mud: guided ATV rides, side-by-side buggies and the Mucky Duck, which splashes from trail into water.</p>
           <p class="addr">4000 FL-33, Clermont, FL 34714</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/merritt-island-bioluminescence-kayak.html">Merritt Island Bioluminescence Kayak Tours</a></h3>
-          <p class="meta">Attractions &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/merritt-island-bioluminescence-kayak.html">Merritt Island Bioluminescence Kayak Tours</a></h3>
+          <p class="meta">Attractions &middot; $$</p><p class="vsub">On dark lagoon water around Merritt Island, dinoflagellates flare electric blue with every paddle stroke through a clear kayak.</p>
           <p class="addr">951 Kiwanis Island Park Rd, Merritt Island, FL 32952</p>
-        </article>
+        </div></article>
         </div>
         <div class="handoff">
           <a class="btn-ghost" href="/day-trips-finder.html">See the full Day Trips list</a>
