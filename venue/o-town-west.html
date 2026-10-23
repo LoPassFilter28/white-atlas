@@ -211,7 +211,14 @@
       .vcard .addr { margin: 0; color: var(--muted); font-size: .9rem; }
       @media (max-width: 640px) { .facts { grid-template-columns: 1fr; } }
     </style>
-  </head>
+  <style data-cardsys>
+/* cardsys: similar rail cards (2026-10-23 overhaul) */
+.vcard{display:flex;gap:12px;align-items:flex-start}
+.vcard .vthumb{flex:0 0 86px;width:86px;height:86px;border-radius:10px;object-fit:cover;display:block}
+.vcard .vmain{flex:1;min-width:0}
+.vcard .vsub{margin:4px 0 0;font-size:.86rem;line-height:1.45;color:var(--muted,#c6bba2)}
+@media (min-width:1000px){.vlist{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start}}
+</style></head>
   <body>
     <header class="hero">
       <div class="hero-in">
@@ -236,45 +243,45 @@
         <div class="actions">
           <a class="action" href="https://www.google.com/maps/search/?api=1&amp;query=O-Town+West+8652+Fenton+St%2C+Orlando%2C+FL+32836" target="_blank" rel="noopener">Directions &rarr;</a>
           <a class="action" href="/archive.html?venue=o-town-west">Open in the full finder</a>
-          <a class="action" href="/universal-district-guide.html">Read the Universal story</a>
+          <a class="action" href="/history/universal.html">Read the Universal story</a>
         </div>
       </section>
 
-      <section class="sec" id="similar">
+      <section class="sec" id="district-story"><p class="kicker">District Story</p><h2>The story of Universal</h2><p class="lede">A district with the shortest paper trail in Orlando: land bought quietly, built fast, and later bought back.</p><p><a class="btn-ghost" href="/history/universal.html">Read the Universal story &rarr;</a></p></section><section class="sec" id="similar">
         <p class="kicker">Similar Feel</p>
         <h2>More places with this feel</h2>
         <p class="lede">Matched by vibe, not by neighborhood: the places across Greater Orlando closest in spirit to O-Town West.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/tier-nightclub.html">Ohm Nightclub</a></h3>
-          <p class="meta">Nightlife &amp; music &middot; Downtown &middot; $$$</p>
+          <div class="vmain"><h3><a href="/venue/tier-nightclub.html">Ohm Nightclub</a></h3>
+          <p class="meta">Nightlife &amp; music &middot; Downtown &middot; $$$</p><p class="vsub">Downtown&#x27;s big-room club, formerly Tier, packs two floors, with skyboxes over the floor and bottle service for groups.</p>
           <p class="addr">20 E Central Blvd, Orlando, FL 32801</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/kappo-tsan.html">Kappo Sushi</a></h3>
-          <p class="meta">Japanese &amp; sushi &middot; Disney Area &middot; $$$</p>
+          <div class="vmain"><h3><a href="/venue/kappo-tsan.html">Kappo Sushi</a></h3>
+          <p class="meta">Japanese &amp; sushi &middot; Disney Area &middot; $$$</p><p class="vsub">A serene, chef-led counter in O-Town West where the omakase unfolds course by course, refined and tranquil.</p>
           <p class="addr">11815 Glass House Lane, Orlando, FL 32836</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/mikado.html">Mikado</a></h3>
-          <p class="meta">Japanese &amp; sushi &middot; Metrowest &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/mikado.html">Mikado</a></h3>
+          <p class="meta">Japanese &amp; sushi &middot; Metrowest &middot; $$</p><p class="vsub">Unassuming room on Raleigh Street in Metrowest, and the sashimi is why guests keep coming back.</p>
           <p class="addr">Mikado, 6417 Raleigh St, Orlando, FL 32835-5739, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/epic-universe.html">Universal Epic Universe</a></h3>
-          <p class="meta">Parks &amp; outdoors &middot; Universal &middot; $$$$</p>
+          <img class="vthumb" src="/assets/venue-epic-universe.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/epic-universe.html">Universal Epic Universe</a></h3>
+          <p class="meta">Parks &amp; outdoors &middot; Universal &middot; $$$$</p><p class="vsub">Universal&#x27;s newest park still makes guests reach for the word epic, and the scale backs them up.</p>
           <p class="addr">1001 Epic Blvd, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/universal-stella-nova-resort.html">Universal Stella Nova Resort</a></h3>
-          <p class="meta">Hotels &middot; Universal &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/universal-stella-nova-resort.html">Universal Stella Nova Resort</a></h3>
+          <p class="meta">Hotels &middot; Universal &middot; $$</p><p class="vsub">The value-tier basecamp for Epic Universe, space-themed, a 10-15 minute stroll away, with modern, clean, good-sized rooms.</p>
           <p class="addr">4500 Epic Blvd, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/yaz-orlando.html">Yaz Orlando</a></h3>
-          <p class="meta">Nightlife &amp; music &middot; Downtown &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/yaz-orlando.html">Yaz Orlando</a></h3>
+          <p class="meta">Nightlife &amp; music &middot; Downtown &middot; $$</p><p class="vsub">On North Orange Avenue, dinner and lounge come first, then the room deepens into a club as the night goes on, low-lit and moody.</p>
           <p class="addr">114 N Orange Ave, Orlando, FL 32801</p>
-        </article>
+        </div></article>
         </div>
       </section>
 
@@ -284,35 +291,35 @@
         <p class="lede">Other places in Universal, closest to O-Town West first.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/sals-pizza-bar.html">Sal&#x27;s Pizza Bar</a></h3>
-          <p class="meta">Pizza &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/sals-pizza-bar.html">Sal&#x27;s Pizza Bar</a></h3>
+          <p class="meta">Pizza &middot; $$</p><p class="vsub">Family-owned on Daryl Carter Parkway, turning out Brooklyn-style pies that transplanted New Yorkers say taste just like home.</p>
           <p class="addr">Sal&#x27;s Pizza Bar, 11020 Daryl Carter Pkwy, Orlando, FL 32836, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/universal-terra-luna-resort.html">Universal Terra Luna Resort</a></h3>
-          <p class="meta">Hotels &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/universal-terra-luna-resort.html">Universal Terra Luna Resort</a></h3>
+          <p class="meta">Hotels &middot; $$</p><p class="vsub">Stella Nova&#x27;s sister resort on Epic Boulevard, clean and modern, with an exploration theme and a big resort pool.</p>
           <p class="addr">5500 Epic Blvd, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/topgolf-orlando.html">Topgolf Orlando</a></h3>
-          <p class="meta">Attractions · Golf Entertainment &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/topgolf-orlando.html">Topgolf Orlando</a></h3>
+          <p class="meta">Attractions · Golf Entertainment &middot; $$</p><p class="vsub">Part driving range, part restaurant, part rooftop hangout on Universal Boulevard, with climate-controlled bays and a terrace with fire pits.</p>
           <p class="addr">9295 Universal Blvd, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/universal-stella-nova-resort.html">Universal Stella Nova Resort</a></h3>
-          <p class="meta">Hotels &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/universal-stella-nova-resort.html">Universal Stella Nova Resort</a></h3>
+          <p class="meta">Hotels &middot; $$</p><p class="vsub">The value-tier basecamp for Epic Universe, space-themed, a 10-15 minute stroll away, with modern, clean, good-sized rooms.</p>
           <p class="addr">4500 Epic Blvd, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/half-barrel-beer-project.html">Half Barrel Beer Project</a></h3>
-          <p class="meta">Breweries · Brewery &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/half-barrel-beer-project.html">Half Barrel Beer Project</a></h3>
+          <p class="meta">Breweries · Brewery &middot; $$</p><p class="vsub">Small, family-owned brewery on Universal Boulevard with a chill, welcoming feel guests keep mentioning.</p>
           <p class="addr">Half Barrel Beer Project, 9650 Universal Blvd, Orlando, FL 32819-8766, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/beths-burger-bar.html">Beth&#x27;s Burger Bar</a></h3>
-          <p class="meta">Burgers &amp; sandwiches · Burgers &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/beths-burger-bar.html">Beth&#x27;s Burger Bar</a></h3>
+          <p class="meta">Burgers &amp; sandwiches · Burgers &middot; $$</p><p class="vsub">Old-school diner feel on Universal Boulevard, built around build-your-own burgers from patty to last pickle.</p>
           <p class="addr">Beth&#x27;s Burger Bar, 9938 Universal Blvd, Orlando, FL 32819-8702, United States</p>
-        </article>
+        </div></article>
         </div>
         <div class="handoff">
           <a class="btn-ghost" href="/universal-finder.html">See the full Universal list</a>

@@ -211,7 +211,14 @@
       .vcard .addr { margin: 0; color: var(--muted); font-size: .9rem; }
       @media (max-width: 640px) { .facts { grid-template-columns: 1fr; } }
     </style>
-  </head>
+  <style data-cardsys>
+/* cardsys: similar rail cards (2026-10-23 overhaul) */
+.vcard{display:flex;gap:12px;align-items:flex-start}
+.vcard .vthumb{flex:0 0 86px;width:86px;height:86px;border-radius:10px;object-fit:cover;display:block}
+.vcard .vmain{flex:1;min-width:0}
+.vcard .vsub{margin:4px 0 0;font-size:.86rem;line-height:1.45;color:var(--muted,#c6bba2)}
+@media (min-width:1000px){.vlist{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start}}
+</style></head>
   <body>
     <header class="hero">
       <div class="hero-in">
@@ -236,46 +243,46 @@
         <div class="actions">
           <a class="action" href="https://www.google.com/maps/search/?api=1&amp;query=Orlando+Farmers+Market+20+N+Eola+Dr%2C+Orlando%2C+FL+32801" target="_blank" rel="noopener">Directions &rarr;</a>
           <a class="action" href="/archive.html?venue=orlando-farmers-market">Open in the full finder</a>
-          <a class="action" href="/thornton-park-district-guide.html">Read the Thornton Park story</a>
+          <a class="action" href="/history/thornton-park.html">Read the Thornton Park story</a>
           <a class="action action-ig" href="https://www.instagram.com/orlandofarmersmarket" target="_blank" rel="noopener"><svg class="ig-glyph" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="vertical-align:-2px;margin-right:6px"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg> Instagram</a>
         </div>
       </section>
 
-      <section class="sec" id="similar">
+      <section class="sec" id="district-story"><p class="kicker">District Story</p><h2>The story of Lake Eola</h2><p class="lede">A name written on a plat in 1913, east of Lake Eola, and still carried by brick streets and bungalows today.</p><p><a class="btn-ghost" href="/history/thornton-park.html">Read the Lake Eola story &rarr;</a></p></section><section class="sec" id="similar">
         <p class="kicker">Similar Feel</p>
         <h2>More places with this feel</h2>
         <p class="lede">Matched by vibe, not by neighborhood: the places across Greater Orlando closest in spirit to Orlando Farmers Market.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/winter-park-farmers-market.html">Winter Park Farmers Market</a></h3>
-          <p class="meta">Markets &amp; shops &middot; Winter Park &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/winter-park-farmers-market.html">Winter Park Farmers Market</a></h3>
+          <p class="meta">Markets &amp; shops &middot; Winter Park &middot; $$</p><p class="vsub">Every Saturday morning, Central Park West Meadow fills with a laid-back, strollable market locals treat as a tradition.</p>
           <p class="addr">150 N New York Ave, Winter Park, FL 32789</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/lake-eola.html">Lake Eola Park &amp; Linton E. Allen Memorial Fountain</a></h3>
-          <p class="meta">Parks &amp; outdoors &middot; Downtown &middot; $</p>
+          <img class="vthumb" src="/assets/venue-lake-eola.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/lake-eola.html">Lake Eola Park &amp; Linton E. Allen Memorial Fountain</a></h3>
+          <p class="meta">Parks &amp; outdoors &middot; Downtown &middot; $</p><p class="vsub">Downtown&#x27;s lake is the city&#x27;s front porch, with swans, pedal boats, a lit fountain, and a shaded loop around the shore.</p>
           <p class="addr">Lake Eola Park, 512 E Washington St, Orlando, FL 32801-1941</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/marketplace-at-avalon-park.html">Marketplace at Avalon Park</a></h3>
-          <p class="meta">Markets &amp; shops &middot; Orlando &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-marketplace-at-avalon-park.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/marketplace-at-avalon-park.html">Marketplace at Avalon Park</a></h3>
+          <p class="meta">Markets &amp; shops &middot; Orlando &middot; $$</p><p class="vsub">Avalon Park&#x27;s food hall and front porch, a lively casual hall of local vendors where the crew never has to agree on one menu.</p>
           <p class="addr">Marketplace at Avalon Park, 3801 Avalon Park East Blvd, Orlando, FL 32828, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/everoak.html">Everoak Farm</a></h3>
-          <p class="meta">Markets &amp; shops &middot; University &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/everoak.html">Everoak Farm</a></h3>
+          <p class="meta">Markets &amp; shops &middot; University &middot; $</p><p class="vsub">A family-run regenerative farm on Carrington Drive growing Certified Naturally Grown produce with no sprays in living soil.</p>
           <p class="addr">Everoak Farm, 2335 Carrington Dr, Orlando, FL 32807</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/lake-meadow-naturals.html">Lake Meadow Naturals</a></h3>
-          <p class="meta">Markets &amp; shops &middot; Ocoee &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/lake-meadow-naturals.html">Lake Meadow Naturals</a></h3>
+          <p class="meta">Markets &amp; shops &middot; Ocoee &middot; $$</p><p class="vsub">Working farm in Ocoee whose store sells what the land makes: eggs you pick yourself, uncured bacon, turkeys raised on site.</p>
           <p class="addr">Lake Meadow Naturals, 10000 Mark Adam Rd, Ocoee, FL 34761-3246, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/boca-kitchen-bar-market.html">Boca Kitchen Bar Market</a></h3>
-          <p class="meta">American &middot; Winter Park &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-boca-kitchen-bar-market.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/boca-kitchen-bar-market.html">Boca Kitchen Bar Market</a></h3>
+          <p class="meta">American &middot; Winter Park &middot; $$</p><p class="vsub">Park Avenue cooking built around what Florida farms deliver, a farm-to-table menu of handcrafted plates that shifts with the market.</p>
           <p class="addr">358 N Park Ave, Winter Park, FL 32789</p>
-        </article>
+        </div></article>
         </div>
       </section>
 
@@ -285,35 +292,35 @@
         <p class="lede">Other places in Thornton Park, Local Picks first, then the closest to Orlando Farmers Market.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/rusteak-thornton-park.html">Rusteak</a> <span class="badge">Local Pick</span></h3>
-          <p class="meta">American · New American &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-rusteak-thornton-park.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/rusteak-thornton-park.html">Rusteak</a> <span class="badge">Local Pick</span></h3>
+          <p class="meta">American · New American &middot; $$</p><p class="vsub">On the Lake Eola corner in Thornton Park, a neighborhood spot cooking like it has something to prove, polished, relaxed but never stiff.</p>
           <p class="addr">101 S Eola Dr, Suite 103, Orlando, FL 32801</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/f-d-cantina.html">F&amp;D Cantina</a></h3>
-          <p class="meta">Mexican &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-f-d-cantina.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/f-d-cantina.html">F&amp;D Cantina</a></h3>
+          <p class="meta">Mexican &middot; $$</p><p class="vsub">On East Central, Thornton Park&#x27;s festive cantina, a dog-friendly patio room where regulars dream about birria tacos and the watermelon margarita.</p>
           <p class="addr">617 E Central Blvd, Orlando, FL 32801</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/osteria-ester.html">Osteria Ester</a></h3>
-          <p class="meta">Italian &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/osteria-ester.html">Osteria Ester</a></h3>
+          <p class="meta">Italian &middot; $$</p><p class="vsub">The Good Salt group brings its touch to Italian American cooking on East Central, a warm room that reads as a neighborhood red sauce joint.</p>
           <p class="addr">629 E Central Blvd, Orlando, FL</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/jinya-ramen-bar.html">Jinya Ramen Bar</a></h3>
-          <p class="meta">Noodles &amp; Southeast Asian · Ramen &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-jinya-ramen-bar.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/jinya-ramen-bar.html">Jinya Ramen Bar</a></h3>
+          <p class="meta">Noodles &amp; Southeast Asian · Ramen &middot; $$</p><p class="vsub">Lights stay dim and bowls run deep on North Summerlin, with broth simmered the slow way and a sleek room that fills fast.</p>
           <p class="addr">Jinya Ramen Bar, 8 N Summerlin Ave, Orlando, FL 32801-2930, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/the-stubborn-mule.html">The Stubborn Mule</a></h3>
-          <p class="meta">American · New American &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/the-stubborn-mule.html">The Stubborn Mule</a></h3>
+          <p class="meta">American · New American &middot; $$</p><p class="vsub">Steps from the swans of Lake Eola, Moscow mules are the calling card in a cozy, lively room regulars call simply a vibe.</p>
           <p class="addr">100 S Eola Dr #103, Orlando, FL 32801</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/outpost-neighborhood-tavern.html">Outpost Neighborhood Tavern</a></h3>
-          <p class="meta">American · Tavern &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-outpost-neighborhood-tavern.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/outpost-neighborhood-tavern.html">Outpost Neighborhood Tavern</a></h3>
+          <p class="meta">American · Tavern &middot; $$</p><p class="vsub">Two blocks off Lake Eola, a welcoming room guests call a cross between a sports bar and a boutique restaurant, with a lively patio and trivia leagues.</p>
           <p class="addr">227 N Eola Dr, Orlando, FL 32801</p>
-        </article>
+        </div></article>
         </div>
         <div class="handoff">
           <a class="btn-ghost" href="/thornton-park-finder.html">See the full Thornton Park list</a>

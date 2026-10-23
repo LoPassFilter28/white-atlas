@@ -211,7 +211,14 @@
       .vcard .addr { margin: 0; color: var(--muted); font-size: .9rem; }
       @media (max-width: 640px) { .facts { grid-template-columns: 1fr; } }
     </style>
-  </head>
+  <style data-cardsys>
+/* cardsys: similar rail cards (2026-10-23 overhaul) */
+.vcard{display:flex;gap:12px;align-items:flex-start}
+.vcard .vthumb{flex:0 0 86px;width:86px;height:86px;border-radius:10px;object-fit:cover;display:block}
+.vcard .vmain{flex:1;min-width:0}
+.vcard .vsub{margin:4px 0 0;font-size:.86rem;line-height:1.45;color:var(--muted,#c6bba2)}
+@media (min-width:1000px){.vlist{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start}}
+</style></head>
   <body>
     <header class="hero">
       <div class="hero-in">
@@ -240,41 +247,41 @@
         </div>
       </section>
 
-      <section class="sec" id="similar">
+      <section class="sec" id="district-story"><p class="kicker">District Stories</p><h2>Orlando&#x27;s long memory</h2><p class="lede">The guide keeps the long memory of Orlando&#x27;s districts in one place: the names, the plats and the stories behind the streets.</p><p><a class="btn-ghost" href="/history.html">Browse the district stories &rarr;</a></p></section><section class="sec" id="similar">
         <p class="kicker">Similar Feel</p>
         <h2>More places with this feel</h2>
         <p class="lede">Matched by vibe, not by neighborhood: the places across Greater Orlando closest in spirit to Paloma Parlor.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/framework-craft-coffee-house.html">Framework Craft Coffee House</a></h3>
-          <p class="meta">Coffee &amp; cafes &middot; Mills 50 &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/framework-craft-coffee-house.html">Framework Craft Coffee House</a></h3>
+          <p class="meta">Coffee &amp; cafes &middot; Mills 50 &middot; $</p><p class="vsub">What grew from the Vita Luna coffee cart is now a cozy, artsy Mills 50 hub built on a pay-what-you-can welcome.</p>
           <p class="addr">1201 N Mills Ave, Orlando, FL 32803</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/qreate-coffee.html">Qreate Coffee</a></h3>
-          <p class="meta">Coffee &amp; cafes &middot; Orlando &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-qreate-coffee.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/qreate-coffee.html">Qreate Coffee</a></h3>
+          <p class="meta">Coffee &amp; cafes &middot; Orlando &middot; $$</p><p class="vsub">Just off Mills on Woodward Street, part coffee lab and part creative studio, with a small-town feel guests do not expect.</p>
           <p class="addr">1212 Woodward St #1, Orlando, FL 32803</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/deeply-coffee.html">Deeply Coffee</a></h3>
-          <p class="meta">Coffee &amp; cafes &middot; Orlando &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/deeply-coffee.html">Deeply Coffee</a></h3>
+          <p class="meta">Coffee &amp; cafes &middot; Orlando &middot; $$</p><p class="vsub">A few steps off Magnolia downtown, a bright, minimalist room where the vibe stays chill and soothing.</p>
           <p class="addr">Deeply Coffee, 111 N Magnolia Ave, Orlando, FL 32801-2304, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/foxtail-coffee.html">Foxtail Coffee</a></h3>
-          <p class="meta">Coffee &amp; cafes &middot; Orlando &middot; $</p>
+          <img class="vthumb" src="/assets/venue-foxtail-coffee.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/foxtail-coffee.html">Foxtail Coffee</a></h3>
+          <p class="meta">Coffee &amp; cafes &middot; Orlando &middot; $</p><p class="vsub">Orlando-born chain that still pours like a neighborhood shop, with a peaceful, low-key room in the Hourglass District.</p>
           <p class="addr">2401 Curry Ford Rd, Orlando, FL 32806</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/premium-matcha-cafe-maiko.html">Premium Matcha Cafe Maiko</a></h3>
-          <p class="meta">Coffee &amp; cafes &middot; Orlando &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/premium-matcha-cafe-maiko.html">Premium Matcha Cafe Maiko</a></h3>
+          <p class="meta">Coffee &amp; cafes &middot; Orlando &middot; $$</p><p class="vsub">Cute, cozy counter on Mills Ave devoted to real matcha, whisked to order.</p>
           <p class="addr">Premium Matcha Cafe Maiko, 639 Mills Ave N, Orlando, FL 32803-4640, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/east-end-market.html">East End Market</a></h3>
-          <p class="meta">Markets &amp; shops &middot; Audubon Park &middot; $</p>
+          <img class="vthumb" src="/assets/venue-east-end-market.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/east-end-market.html">East End Market</a></h3>
+          <p class="meta">Markets &amp; shops &middot; Audubon Park &middot; $</p><p class="vsub">Local makers under one Audubon Park roof: Gideon&#x27;s Bakehouse, Olde Hearth Bread, Lineage Coffee, Domu, La Femme du Fromage, Dochi and Hinckley&#x27;s.</p>
           <p class="addr">3201 Corrine Dr, Orlando, FL 32803</p>
-        </article>
+        </div></article>
         </div>
       </section>
 
@@ -284,35 +291,35 @@
         <p class="lede">Other places in Windermere, closest to Paloma Parlor first.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/windermere-farmers-market.html">Windermere Farmers Market</a></h3>
-          <p class="meta">Markets &amp; shops · Farmers Market &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/windermere-farmers-market.html">Windermere Farmers Market</a></h3>
+          <p class="meta">Markets &amp; shops · Farmers Market &middot; $</p><p class="vsub">Every Friday, Town Square Park fills with a small hometown market: fresh produce, seafood, breads, local honey, and plants.</p>
           <p class="addr">520 Main St, Windermere, FL 34786</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/fresco-pizzeria.html">Fresco Pizzeria</a></h3>
-          <p class="meta">Pizza · Wood-Fired Pizza &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/fresco-pizzeria.html">Fresco Pizzeria</a></h3>
+          <p class="meta">Pizza · Wood-Fired Pizza &middot; $$</p><p class="vsub">A wood-fired pizzeria from the Scialoia family, whose Dr.</p>
           <p class="addr">527 Main St, Windermere, FL 34786</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/dixie-cream-cafe.html">Dixie Cream Cafe</a></h3>
-          <p class="meta">Coffee &amp; cafes · Breakfast Cafe &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/dixie-cream-cafe.html">Dixie Cream Cafe</a></h3>
+          <p class="meta">Coffee &amp; cafes · Breakfast Cafe &middot; $$</p><p class="vsub">An independently owned Main Street room with 1950s diner warmth and a from-scratch Southern kitchen.</p>
           <p class="addr">434 Main St, Windermere, FL 34786</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/tims-wine-market.html">Tim&#x27;s Wine Market</a></h3>
-          <p class="meta">Markets &amp; shops · Wine Shop &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/tims-wine-market.html">Tim&#x27;s Wine Market</a></h3>
+          <p class="meta">Markets &amp; shops · Wine Shop &middot; $$</p><p class="vsub">The Windermere storefront of Orlando&#x27;s long-running independent wine shop, with siblings on Orange Avenue and in Sanford.</p>
           <p class="addr">428 Main St, Windermere, FL 34786</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/windermere-brewing-company.html">Windermere Brewing Company</a></h3>
-          <p class="meta">Breweries · Brewery &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-windermere-brewing-company.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/windermere-brewing-company.html">Windermere Brewing Company</a></h3>
+          <p class="meta">Breweries · Brewery &middot; $$</p><p class="vsub">Windermere&#x27;s hometown brewery, a block off Main Street with a dog-friendly backyard and rotating food trucks.</p>
           <p class="addr">111 W 5th Ave, Windermere, FL 34786</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/bella-tuscany.html">Bella Tuscany</a></h3>
-          <p class="meta">Italian · Tuscan &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-bella-tuscany.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/bella-tuscany.html">Bella Tuscany</a></h3>
+          <p class="meta">Italian · Tuscan &middot; $$</p><p class="vsub">A family-owned Tuscan room in Summerport with a wine list past 700 bottles and Wine Spectator recognition.</p>
           <p class="addr">13424 Summerport Village Pkwy, Windermere, FL 34786</p>
-        </article>
+        </div></article>
         </div>
         <div class="handoff">
           <a class="btn-ghost" href="/windermere-finder.html">See the full Windermere list</a>

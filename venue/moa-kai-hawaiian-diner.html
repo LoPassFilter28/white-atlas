@@ -211,7 +211,14 @@
       .vcard .addr { margin: 0; color: var(--muted); font-size: .9rem; }
       @media (max-width: 640px) { .facts { grid-template-columns: 1fr; } }
     </style>
-  </head>
+  <style data-cardsys>
+/* cardsys: similar rail cards (2026-10-23 overhaul) */
+.vcard{display:flex;gap:12px;align-items:flex-start}
+.vcard .vthumb{flex:0 0 86px;width:86px;height:86px;border-radius:10px;object-fit:cover;display:block}
+.vcard .vmain{flex:1;min-width:0}
+.vcard .vsub{margin:4px 0 0;font-size:.86rem;line-height:1.45;color:var(--muted,#c6bba2)}
+@media (min-width:1000px){.vlist{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start}}
+</style></head>
   <body>
     <header class="hero">
       <div class="hero-in">
@@ -236,46 +243,46 @@
         <div class="actions">
           <a class="action" href="https://www.google.com/maps/search/?api=1&amp;query=Moa+Kai+Hawaiian+Diner+Moa+Kai+Hawaiian+Diner%2C+2217+E+Colonial+Dr%2C+Orlando%2C+FL+32803-4911%2C+United+States" target="_blank" rel="noopener">Directions &rarr;</a>
           <a class="action" href="/archive.html?venue=moa-kai-hawaiian-diner">Open in the full finder</a>
-          <a class="action" href="/milk-district-guide.html">Read the Milk District story</a>
+          <a class="action" href="/history/milk-district.html">Read the Milk District story</a>
           <a class="action action-ig" href="https://www.instagram.com/moakaidiner" target="_blank" rel="noopener"><svg class="ig-glyph" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="vertical-align:-2px;margin-right:6px"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg> Instagram</a>
         </div>
       </section>
 
-      <section class="sec" id="similar">
+      <section class="sec" id="district-story"><p class="kicker">District Story</p><h2>The story of Orlando</h2><p class="lede">One cow, twenty acres and a dairy on the edge of town: the neighborhood that grew up around the T.G. Lee plant and took its name from the milk.</p><p><a class="btn-ghost" href="/history/milk-district.html">Read the Orlando story &rarr;</a></p></section><section class="sec" id="similar">
         <p class="kicker">Similar Feel</p>
         <h2>More places with this feel</h2>
         <p class="lede">Matched by vibe, not by neighborhood: the places across Greater Orlando closest in spirit to Moa Kai Hawaiian Diner.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/aloha-hawaiian-kitchen.html">Aloha Hawaiian Kitchen</a></h3>
-          <p class="meta">Restaurants &middot; Airport Corridor &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/aloha-hawaiian-kitchen.html">Aloha Hawaiian Kitchen</a></h3>
+          <p class="meta">Restaurants &middot; Airport Corridor &middot; $$</p><p class="vsub">Laid-back island counter near the airport serving the plate lunch guests call the best Hawaiian food on the mainland.</p>
           <p class="addr">Aloha Hawaiian Kitchen, 6125 S Semoran Blvd, Orlando, FL 32822-1500</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/kai-asian-street-fare.html">Kai Asian Street Fare</a></h3>
-          <p class="meta">Noodles &amp; Southeast Asian &middot; Winter Park &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/kai-asian-street-fare.html">Kai Asian Street Fare</a></h3>
+          <p class="meta">Noodles &amp; Southeast Asian &middot; Winter Park &middot; $$</p><p class="vsub">Casual, unpretentious spot on State Road 436 serving craveable Asian street food under one roof.</p>
           <p class="addr">1555 State Rd 436 Ste 1171, Winter Park, FL 32792</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/viet-nomz.html">Viet-Nomz</a></h3>
-          <p class="meta">Noodles &amp; Southeast Asian &middot; Alahoya/East side &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-viet-nomz.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/viet-nomz.html">Viet-Nomz</a></h3>
+          <p class="meta">Noodles &amp; Southeast Asian &middot; Alahoya/East side &middot; $$</p><p class="vsub">Cute, cozy fast-casual Vietnamese spot on East Colonial Drive with a friendly, welcoming feel.</p>
           <p class="addr">11798 E Colonial Dr, Orlando, FL 32817</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/mosonori.html">Mosonori</a></h3>
-          <p class="meta">Japanese &amp; sushi &middot; I-Drive Area &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/mosonori.html">Mosonori</a></h3>
+          <p class="meta">Japanese &amp; sushi &middot; I-Drive Area &middot; $$</p><p class="vsub">Chef Henry Moso&#x27;s handroll bar on Sand Lake Road is a calm, minimalist counter where temaki are handed straight to you, crisp.</p>
           <p class="addr">Mosonori, 7541 W Sand Lake Rd, Orlando, FL 32819-5109</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/zaru.html">Zaru</a></h3>
-          <p class="meta">Japanese &amp; sushi &middot; Mills 50 &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-zaru.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/zaru.html">Zaru</a></h3>
+          <p class="meta">Japanese &amp; sushi &middot; Mills 50 &middot; $$</p><p class="vsub">A small, minimal udon room on East Colonial built around one obsession: springy Sanuki-style noodles.</p>
           <p class="addr">Zaru, 1114 E Colonial Dr, Orlando, FL 32803-4636</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/kaya.html">Kaya</a></h3>
-          <p class="meta">Fine dining &amp; steak &middot; Mills 50 &middot; $$$$</p>
+          <img class="vthumb" src="/assets/venue-kaya.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/kaya.html">Kaya</a></h3>
+          <p class="meta">Fine dining &amp; steak &middot; Mills 50 &middot; $$$$</p><p class="vsub">Filipino cooking in a cozy house on Thornton Avenue that feels like grandma&#x27;s house, if grandma cooked at a very high level.</p>
           <p class="addr">618 N Thornton Ave, Orlando, FL 32803</p>
-        </article>
+        </div></article>
         </div>
       </section>
 
@@ -285,35 +292,35 @@
         <p class="lede">Other places in Milk District, Local Picks first, then the closest to Moa Kai Hawaiian Diner.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/iron-cow.html">Iron Cow</a> <span class="badge">Local Pick</span></h3>
-          <p class="meta">Japanese &amp; sushi · Sushi &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/iron-cow.html">Iron Cow</a> <span class="badge">Local Pick</span></h3>
+          <p class="meta">Japanese &amp; sushi · Sushi &middot; $$</p><p class="vsub">Part hi-fi sushi lounge, part underground club, the Milk District&#x27;s good contradiction.</p>
           <p class="addr">2438 E Robinson St, Suite A, Orlando, FL 32803</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/chicken-fire.html">Chicken Fire</a></h3>
-          <p class="meta">American &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/chicken-fire.html">Chicken Fire</a></h3>
+          <p class="meta">American &middot; $$</p><p class="vsub">No-frills, welcoming hot chicken joint on East Colonial Drive, Nashville style with soul.</p>
           <p class="addr">Chicken Fire, 2425 E Colonial Dr, Orlando, FL 32803-5018</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/lams-garden.html">Lam&#x27;s Garden Chinese Restaurant</a></h3>
-          <p class="meta">Chinese · Cantonese Dim Sum &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-lams-garden.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/lams-garden.html">Lam&#x27;s Garden Chinese Restaurant</a></h3>
+          <p class="meta">Chinese · Cantonese Dim Sum &middot; $$</p><p class="vsub">An old-school, family-owned Cantonese room on East Colonial Drive that has served the corridor since 1975.</p>
           <p class="addr">2505 E Colonial Dr, Orlando, FL 32803</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/fuwa-fuwa.html">Fluffy Fluffy Dessert Cafe</a></h3>
-          <p class="meta">Sweets · Dessert &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-fuwa-fuwa.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/fuwa-fuwa.html">Fluffy Fluffy Dessert Cafe</a></h3>
+          <p class="meta">Sweets · Dessert &middot; $$</p><p class="vsub">Japanese souffle pancakes are made the slow way here, whipped and cooked to order until each one wobbles like a cloud.</p>
           <p class="addr">2008 E Colonial Dr, Orlando, FL</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/smoke-donuts.html">Smoke &amp; Donuts BBQ</a></h3>
-          <p class="meta">BBQ &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/smoke-donuts.html">Smoke &amp; Donuts BBQ</a></h3>
+          <p class="meta">BBQ &middot; $$</p><p class="vsub">Low and slow barbecue pairs with made-to-order cake donuts in this casual, family-run Milk District room.</p>
           <p class="addr">601 N Primrose Dr, Orlando, FL 32803</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/se7en-bites.html">Se7en Bites</a></h3>
-          <p class="meta">Bakeries · Bakery &middot; $</p>
+          <img class="vthumb" src="/assets/venue-se7en-bites.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/se7en-bites.html">Se7en Bites</a></h3>
+          <p class="meta">Bakeries · Bakery &middot; $</p><p class="vsub">Bustling, homey Southern bakery cafe on Primrose Drive, owner on the floor, running like a well-oiled machine.</p>
           <p class="addr">617 N Primrose Dr, Orlando, FL 32803</p>
-        </article>
+        </div></article>
         </div>
         <div class="handoff">
           <a class="btn-ghost" href="/milk-district-finder.html">See the full Milk District list</a>

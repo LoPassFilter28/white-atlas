@@ -211,7 +211,14 @@
       .vcard .addr { margin: 0; color: var(--muted); font-size: .9rem; }
       @media (max-width: 640px) { .facts { grid-template-columns: 1fr; } }
     </style>
-  </head>
+  <style data-cardsys>
+/* cardsys: similar rail cards (2026-10-23 overhaul) */
+.vcard{display:flex;gap:12px;align-items:flex-start}
+.vcard .vthumb{flex:0 0 86px;width:86px;height:86px;border-radius:10px;object-fit:cover;display:block}
+.vcard .vmain{flex:1;min-width:0}
+.vcard .vsub{margin:4px 0 0;font-size:.86rem;line-height:1.45;color:var(--muted,#c6bba2)}
+@media (min-width:1000px){.vlist{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start}}
+</style></head>
   <body>
     <header class="hero">
       <div class="hero-in">
@@ -236,45 +243,45 @@
         <div class="actions">
           <a class="action" href="https://www.google.com/maps/search/?api=1&amp;query=Mochiry+20+S+Orange+Ave%2C+Orlando%2C+FL+32801" target="_blank" rel="noopener">Directions &rarr;</a>
           <a class="action" href="/archive.html?venue=mochiry">Open in the full finder</a>
-          <a class="action" href="/downtown-orlando-district-guide.html">Read the Downtown Orlando story</a>
+          <a class="action" href="/history/downtown.html">Read the Downtown Orlando story</a>
         </div>
       </section>
 
-      <section class="sec" id="similar">
+      <section class="sec" id="district-story"><p class="kicker">District Story</p><h2>The story of Downtown</h2><p class="lede">A fort, a courthouse plat and a citrus boom built it. A name nobody can prove still runs it.</p><p><a class="btn-ghost" href="/history/downtown.html">Read the Downtown story &rarr;</a></p></section><section class="sec" id="similar">
         <p class="kicker">Similar Feel</p>
         <h2>More places with this feel</h2>
         <p class="lede">Matched by vibe, not by neighborhood: the places across Greater Orlando closest in spirit to Mochiry.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/noodle-shawty.html">Noodle Shawty</a></h3>
-          <p class="meta">Noodles &amp; Southeast Asian &middot; Downtown Orlando &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/noodle-shawty.html">Noodle Shawty</a></h3>
+          <p class="meta">Noodles &amp; Southeast Asian &middot; Downtown Orlando &middot; $$</p><p class="vsub">A playful, fast-casual noodle counter on South Orange Avenue serving bold Chinese street flavors in a small room.</p>
           <p class="addr">28 S Orange Ave, Orlando, FL 32801</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/bento-asian-kitchen-downtown.html">BENTO Asian Kitchen + Sushi</a></h3>
-          <p class="meta">Japanese &amp; sushi &middot; Downtown Orlando &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-bento-asian-kitchen-downtown.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/bento-asian-kitchen-downtown.html">BENTO Asian Kitchen + Sushi</a></h3>
+          <p class="meta">Japanese &amp; sushi &middot; Downtown Orlando &middot; $$</p><p class="vsub">Fast-casual Pan-Asian on South Orange Avenue, built for the group that cannot agree on one cuisine.</p>
           <p class="addr">151 S Orange Ave, Orlando, FL 32801</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/mooyah-burgers-fries-shakes.html">MOOYAH Burgers, Fries &amp; Shakes</a></h3>
-          <p class="meta">Burgers &amp; sandwiches &middot; SoDo &middot; $</p>
+          <img class="vthumb" src="/assets/venue-mooyah-burgers-fries-shakes.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/mooyah-burgers-fries-shakes.html">MOOYAH Burgers, Fries &amp; Shakes</a></h3>
+          <p class="meta">Burgers &amp; sandwiches &middot; SoDo &middot; $</p><p class="vsub">On South Orange Avenue in SoDo, a simple promise: burgers built to order, hand-cut fries and hand-spun shakes made with real ice cream.</p>
           <p class="addr">3155 S Orange Ave, Orlando, FL 32806</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/kai-asian-street-fare.html">Kai Asian Street Fare</a></h3>
-          <p class="meta">Noodles &amp; Southeast Asian &middot; Winter Park &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/kai-asian-street-fare.html">Kai Asian Street Fare</a></h3>
+          <p class="meta">Noodles &amp; Southeast Asian &middot; Winter Park &middot; $$</p><p class="vsub">Casual, unpretentious spot on State Road 436 serving craveable Asian street food under one roof.</p>
           <p class="addr">1555 State Rd 436 Ste 1171, Winter Park, FL 32792</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/bakery-1908.html">Bakery 1908</a></h3>
-          <p class="meta">Bakeries &middot; Orlando &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/bakery-1908.html">Bakery 1908</a></h3>
+          <p class="meta">Bakeries &middot; Orlando &middot; $$</p><p class="vsub">Second location of the Asian bakery whose original sits on East Colonial, this one on South Apopka Vineland Road in Orlando.</p>
           <p class="addr">Bakery 1908, 12399 S Apopka Vineland Rd, Orlando, FL 32836, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/the-porch-south-orange.html">The Porch South Orange</a></h3>
-          <p class="meta">American &middot; SoDo &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/the-porch-south-orange.html">The Porch South Orange</a></h3>
+          <p class="meta">American &middot; SoDo &middot; $$</p><p class="vsub">Front porch energy on South Orange Avenue, in a welcoming neighborhood room guests choose over touristy spots.</p>
           <p class="addr">The Porch South Orange, 4757 S Orange Ave, Orlando, FL 32806</p>
-        </article>
+        </div></article>
         </div>
       </section>
 
@@ -284,35 +291,35 @@
         <p class="lede">Other places in Downtown Orlando, Local Picks first, then the closest to Mochiry.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/fixtion.html">Fixtion Restaurant &amp; Bar</a> <span class="badge">Local Pick</span></h3>
-          <p class="meta">American · American Restaurant &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/fixtion.html">Fixtion Restaurant &amp; Bar</a> <span class="badge">Local Pick</span></h3>
+          <p class="meta">American · American Restaurant &middot; $$</p><p class="vsub">On Orange Avenue, comfort food and huge comfy booths early, club energy after dark, shape-shifting through the day.</p>
           <p class="addr">15 N Orange Ave, Orlando, FL 32801</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/wall-street-plaza.html">Wall Street Plaza</a> <span class="badge">Local Pick</span></h3>
-          <p class="meta">Nightlife &amp; music · Entertainment District &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/wall-street-plaza.html">Wall Street Plaza</a> <span class="badge">Local Pick</span></h3>
+          <p class="meta">Nightlife &amp; music · Entertainment District &middot; $$</p><p class="vsub">One downtown block holds the whole crawl: eight bars and patios that, on a big night, turn into a single street party.</p>
           <p class="addr">25 Wall St, Orlando, FL 32801</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/elixir-kitchen-bar.html">Elixir Kitchen and Bar</a> <span class="badge">Local Pick</span></h3>
-          <p class="meta">Bars &amp; lounges · Bar &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-elixir-kitchen-bar.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/elixir-kitchen-bar.html">Elixir Kitchen and Bar</a> <span class="badge">Local Pick</span></h3>
+          <p class="meta">Bars &amp; lounges · Bar &middot; $$</p><p class="vsub">A rustic-hip gastropub in one of downtown&#x27;s original buildings, and very much the neighborhood&#x27;s spot.</p>
           <p class="addr">9 W Washington St, Orlando, FL 32801</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/noodle-shawty.html">Noodle Shawty</a></h3>
-          <p class="meta">Noodles &amp; Southeast Asian · Noodle Shop &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/noodle-shawty.html">Noodle Shawty</a></h3>
+          <p class="meta">Noodles &amp; Southeast Asian · Noodle Shop &middot; $$</p><p class="vsub">A playful, fast-casual noodle counter on South Orange Avenue serving bold Chinese street flavors in a small room.</p>
           <p class="addr">28 S Orange Ave, Orlando, FL 32801</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/the-beacham.html">The Beacham &amp; The Social</a></h3>
-          <p class="meta">Nightlife &amp; music · Music Venue &middot; $$$</p>
+          <img class="vthumb" src="/assets/venue-the-beacham.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/the-beacham.html">The Beacham &amp; The Social</a></h3>
+          <p class="meta">Nightlife &amp; music · Music Venue &middot; $$$</p><p class="vsub">On Orange Avenue, this century-old vaudeville theater still runs on live music, balcony sightlines and LED walls, historic and electric.</p>
           <p class="addr">46 N Orange Ave, Orlando, FL 32801</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/the-social.html">The Social</a></h3>
-          <p class="meta">Nightlife &amp; music · Music Venue &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/the-social.html">The Social</a></h3>
+          <p class="meta">Nightlife &amp; music · Music Venue &middot; $$</p><p class="vsub">A small brick-walled room on North Orange Avenue where indie bands play close enough to lock eyes with.</p>
           <p class="addr">54 N Orange Ave, Orlando, FL 32801</p>
-        </article>
+        </div></article>
         </div>
         <div class="handoff">
           <a class="btn-ghost" href="/downtown-orlando-finder.html">See the full Downtown Orlando list</a>

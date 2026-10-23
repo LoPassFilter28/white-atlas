@@ -211,7 +211,14 @@
       .vcard .addr { margin: 0; color: var(--muted); font-size: .9rem; }
       @media (max-width: 640px) { .facts { grid-template-columns: 1fr; } }
     </style>
-  </head>
+  <style data-cardsys>
+/* cardsys: similar rail cards (2026-10-23 overhaul) */
+.vcard{display:flex;gap:12px;align-items:flex-start}
+.vcard .vthumb{flex:0 0 86px;width:86px;height:86px;border-radius:10px;object-fit:cover;display:block}
+.vcard .vmain{flex:1;min-width:0}
+.vcard .vsub{margin:4px 0 0;font-size:.86rem;line-height:1.45;color:var(--muted,#c6bba2)}
+@media (min-width:1000px){.vlist{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start}}
+</style></head>
   <body>
     <header class="hero">
       <div class="hero-in">
@@ -236,48 +243,48 @@
         <div class="actions">
           <a class="action" href="https://www.google.com/maps/search/?api=1&amp;query=Orlando+Science+Center+777+E+Princeton+St%2C+Orlando%2C+FL+32803" target="_blank" rel="noopener">Directions &rarr;</a>
           <a class="action" href="/archive.html?venue=orlando-science-center">Open in the full finder</a>
-          <a class="action" href="/ivanhoe-village-district-guide.html">Read the Ivanhoe Village story</a>
+          <a class="action" href="/history/ivanhoe-village.html">Read the Ivanhoe Village story</a>
           <a class="action action-ig" href="https://www.instagram.com/orlandosciencecenter" target="_blank" rel="noopener"><svg class="ig-glyph" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="vertical-align:-2px;margin-right:6px"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg> Instagram</a>
           <a class="action action-aff" href="https://www.viator.com/tours/Orlando/Orlando-Science-Center-General-Admission-Ticket/d663-5637256P1?pid=P00325046&amp;mcid=42383&amp;utm_source=407fyi&amp;utm_medium=affiliate" target="_blank" rel="noopener sponsored">Book tickets &#8599;</a>
         <p class="aff-note">Affiliate link, we may earn a commission at no extra cost to you.</p>
         </div>
       </section>
 
-      <section class="sec" id="similar">
+      <section class="sec" id="district-story"><p class="kicker">District Story</p><h2>The story of Loch Haven</h2><p class="lede">A lake named for a novel, a shore of cotton, pineapples and amusement rides, and a main street that kept reinventing itself around the water.</p><p><a class="btn-ghost" href="/history/ivanhoe-village.html">Read the Loch Haven story &rarr;</a></p></section><section class="sec" id="similar">
         <p class="kicker">Similar Feel</p>
         <h2>More places with this feel</h2>
         <p class="lede">Matched by vibe, not by neighborhood: the places across Greater Orlando closest in spirit to Orlando Science Center.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/legoland-florida.html">Legoland Florida</a></h3>
-          <p class="meta">Attractions &middot; Winter Haven &middot; $$$</p>
+          <img class="vthumb" src="/assets/venue-legoland-florida.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/legoland-florida.html">Legoland Florida</a></h3>
+          <p class="meta">Attractions &middot; Winter Haven &middot; $$$</p><p class="vsub">On the old Cypress Gardens grounds in Winter Haven, this is the hands-on park for kids who build, relaxed next to the mega parks.</p>
           <p class="addr">1 Legoland Way, Winter Haven, FL 33884</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/wonderworks-orlando.html">WonderWorks Orlando</a></h3>
-          <p class="meta">Attractions &middot; International Drive &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-wonderworks-orlando.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/wonderworks-orlando.html">WonderWorks Orlando</a></h3>
+          <p class="meta">Attractions &middot; International Drive &middot; $$</p><p class="vsub">The upside-down house on I-Drive, a landmark since 1998, is all hands-on inside, from a hurricane shack to laser tag and a ropes course.</p>
           <p class="addr">9067 International Dr, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/kia-center.html">Kia Center (formerly Amway Center)</a></h3>
-          <p class="meta">Attractions &middot; Downtown &middot; $$$$</p>
+          <div class="vmain"><h3><a href="/venue/kia-center.html">Kia Center (formerly Amway Center)</a></h3>
+          <p class="meta">Attractions &middot; Downtown &middot; $$$$</p><p class="vsub">Orlando&#x27;s big room on Church Street downtown, home of the Magic and the Solar Bears, is where the city gathers loudest.</p>
           <p class="addr">400 W Church St, Orlando, FL 32801</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/crayola-experience-orlando.html">Crayola Experience</a></h3>
-          <p class="meta">Attractions &middot; Orlando &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-crayola-experience-orlando.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/crayola-experience-orlando.html">Crayola Experience</a></h3>
+          <p class="meta">Attractions &middot; Orlando &middot; $$</p><p class="vsub">Hands-on color playground inside The Florida Mall, built for younger kids.</p>
           <p class="addr">8001 S Orange Blossom Trl, Orlando, FL 32809</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/museum-of-illusions-orlando.html">Museum of Illusions Orlando</a></h3>
-          <p class="meta">Museums &amp; landmarks &middot; ICON Park &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/museum-of-illusions-orlando.html">Museum of Illusions Orlando</a></h3>
+          <p class="meta">Museums &amp; landmarks &middot; ICON Park &middot; $$</p><p class="vsub">At ICON Park, bring your camera: the Ames room shrinks your friends and the vortex tunnel scrambles your balance.</p>
           <p class="addr">8375 International Dr, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/orlando-watersports-complex.html">Orlando Watersports Complex</a></h3>
-          <p class="meta">Attractions &middot; Orlando &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-orlando-watersports-complex.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/orlando-watersports-complex.html">Orlando Watersports Complex</a></h3>
+          <p class="meta">Attractions &middot; Orlando &middot; $$</p><p class="vsub">Laid-back cable park where beginners and pros share the water, with an inflatable Aqua Park for bouncing between runs.</p>
           <p class="addr">8615 Florida Rock Rd, Orlando, FL 32824</p>
-        </article>
+        </div></article>
         </div>
       </section>
 
@@ -287,35 +294,35 @@
         <p class="lede">Other places in Ivanhoe Village, closest to Orlando Science Center first.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/white-wolf.html">White Wolf Cafe</a></h3>
-          <p class="meta">American · Cafe &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-white-wolf.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/white-wolf.html">White Wolf Cafe</a></h3>
+          <p class="meta">American · Cafe &middot; $$</p><p class="vsub">Quaint and vintage in Ivanhoe Village, with a kitschy, eclectic jumble of light fixtures and a whimsical feel from the first plate.</p>
           <p class="addr">White Wolf Cafe, 1829 N Orange Ave, Orlando, FL 32804</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/the-caboose-bar.html">The Caboose Bar</a></h3>
-          <p class="meta">Bars &amp; lounges · Dive Bar &middot; $</p>
+          <img class="vthumb" src="/assets/venue-the-caboose-bar.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/the-caboose-bar.html">The Caboose Bar</a></h3>
+          <p class="meta">Bars &amp; lounges · Dive Bar &middot; $</p><p class="vsub">A dive on N Orange Ave in Ivanhoe Village where guests say the bartenders make you feel like a regular.</p>
           <p class="addr">The Caboose Bar, 1827 N Orange Ave, Orlando, FL 32804</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/brews-and-bites-tour.html">Brews and Bites Walking Tour</a></h3>
-          <p class="meta">Attractions &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/brews-and-bites-tour.html">Brews and Bites Walking Tour</a></h3>
+          <p class="meta">Attractions &middot; $$</p><p class="vsub">Through Ivanhoe Village breweries and bars, guides guests call knowledgeable and upbeat share plenty of local history along the way.</p>
           <p class="addr">Ten10 Brewing Company, 1010 Virginia Dr, Orlando, FL 32803</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/the-lucky-lure.html">The Lucky Lure</a></h3>
-          <p class="meta">Bars &amp; lounges · Dive Bar &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/the-lucky-lure.html">The Lucky Lure</a></h3>
+          <p class="meta">Bars &amp; lounges · Dive Bar &middot; $</p><p class="vsub">On the Lake Ivanhoe shore, an open-air dive guests call their best local watering hole.</p>
           <p class="addr">The Lucky Lure, 1427 N Orange Ave, Orlando, FL 32804</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/the-pinery.html">The Pinery</a></h3>
-          <p class="meta">American &middot; $$$</p>
+          <img class="vthumb" src="/assets/venue-the-pinery.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/the-pinery.html">The Pinery</a></h3>
+          <p class="meta">American &middot; $$$</p><p class="vsub">Warm and lakeside on Lake Ivanhoe, Florida cooking in a rustic, elegant room guests call fabulous.</p>
           <p class="addr">The Pinery, 295 NE Ivanhoe Blvd, Orlando, FL 32804-6434</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/ziggies-pizza.html">Ziggie&#x27;s Pizza</a></h3>
-          <p class="meta">Pizza &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/ziggies-pizza.html">Ziggie&#x27;s Pizza</a></h3>
+          <p class="meta">Pizza &middot; $$</p><p class="vsub">Playful little counter on Virginia Drive in Ivanhoe Village, attached to the Thirsty Topher craft beer bar, with very thin personal pies.</p>
           <p class="addr">Ziggie&#x27;s Pizza, 603 Virginia Dr, Orlando, FL 32803-1844, United States</p>
-        </article>
+        </div></article>
         </div>
         <div class="handoff">
           <a class="btn-ghost" href="/ivanhoe-village-finder.html">See the full Ivanhoe Village list</a>

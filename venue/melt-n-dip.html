@@ -211,7 +211,14 @@
       .vcard .addr { margin: 0; color: var(--muted); font-size: .9rem; }
       @media (max-width: 640px) { .facts { grid-template-columns: 1fr; } }
     </style>
-  </head>
+  <style data-cardsys>
+/* cardsys: similar rail cards (2026-10-23 overhaul) */
+.vcard{display:flex;gap:12px;align-items:flex-start}
+.vcard .vthumb{flex:0 0 86px;width:86px;height:86px;border-radius:10px;object-fit:cover;display:block}
+.vcard .vmain{flex:1;min-width:0}
+.vcard .vsub{margin:4px 0 0;font-size:.86rem;line-height:1.45;color:var(--muted,#c6bba2)}
+@media (min-width:1000px){.vlist{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start}}
+</style></head>
   <body>
     <header class="hero">
       <div class="hero-in">
@@ -236,83 +243,83 @@
         <div class="actions">
           <a class="action" href="https://www.google.com/maps/search/?api=1&amp;query=Melt+N+Dip+7341+W+Sand+Lake+Rd+Ste+1081%2C+Orlando%2C+FL+32819" target="_blank" rel="noopener">Directions &rarr;</a>
           <a class="action" href="/archive.html?venue=melt-n-dip">Open in the full finder</a>
-          <a class="action" href="/international-drive-district-guide.html">Read the International Drive story</a>
+          <a class="action" href="/history/i-drive.html">Read the International Drive story</a>
         </div>
       </section>
 
-      <section class="sec" id="similar">
+      <section class="sec" id="district-story"><p class="kicker">District Stories</p><h2>Orlando&#x27;s long memory</h2><p class="lede">The guide keeps the long memory of Orlando&#x27;s districts in one place: the names, the plats and the stories behind the streets.</p><p><a class="btn-ghost" href="/history.html">Browse the district stories &rarr;</a></p></section><section class="sec" id="similar">
         <p class="kicker">Similar Feel</p>
         <h2>More places with this feel</h2>
         <p class="lede">Matched by vibe, not by neighborhood: the places across Greater Orlando closest in spirit to Melt N Dip.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/aj-chocolate-house.html">AJ Chocolate House</a></h3>
-          <p class="meta">Sweets &middot; Winter Park &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-aj-chocolate-house.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/aj-chocolate-house.html">AJ Chocolate House</a></h3>
+          <p class="meta">Sweets &middot; Winter Park &middot; $$</p><p class="vsub">Old-world Europe lands on Park Avenue here, with low lighting, cozy elegance, and chocolate treated as an occasion.</p>
           <p class="addr">AJ Chocolate House, 552 S Park Ave, Winter Park, FL 32789-4322, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/ice-bites-cafe.html">Ice &amp; Bites Cafe</a></h3>
-          <p class="meta">Coffee &amp; cafes &middot; University &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/ice-bites-cafe.html">Ice &amp; Bites Cafe</a></h3>
+          <p class="meta">Coffee &amp; cafes &middot; University &middot; $$</p><p class="vsub">A whimsical, anime-tinged dessert cafe near UCF built around taiyaki, warm fish-shaped waffle cones filled with ice cream like taro and lavender.</p>
           <p class="addr">3402 Technological Ave Ste 220, Orlando, FL 32817</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/cold-stone-creamery.html">Cold Stone Creamery</a></h3>
-          <p class="meta">Sweets &middot; CityWalk &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/cold-stone-creamery.html">Cold Stone Creamery</a></h3>
+          <p class="meta">Sweets &middot; CityWalk &middot; $</p><p class="vsub">At Universal CityWalk, mix-ins fold into ice cream on a frozen granite slab, built to order at the counter.</p>
           <p class="addr">6000 Universal Blvd, Orlando, FL</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/crepe-delicious.html">Crepe Delicious</a></h3>
-          <p class="meta">Sweets &middot; Orlando &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-crepe-delicious.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/crepe-delicious.html">Crepe Delicious</a></h3>
+          <p class="meta">Sweets &middot; Orlando &middot; $$</p><p class="vsub">A cosy little crêperie on Church Street downtown, where thin, golden crepes arrive stuffed with fresh, flavorful fillings.</p>
           <p class="addr">55 W Church St, Orlando, FL</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/se7en-bites.html">Se7en Bites</a></h3>
-          <p class="meta">Bakeries &middot; Milk District &middot; $</p>
+          <img class="vthumb" src="/assets/venue-se7en-bites.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/se7en-bites.html">Se7en Bites</a></h3>
+          <p class="meta">Bakeries &middot; Milk District &middot; $</p><p class="vsub">Bustling, homey Southern bakery cafe on Primrose Drive, owner on the floor, running like a well-oiled machine.</p>
           <p class="addr">617 N Primrose Dr, Orlando, FL 32803</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/kilwins-ice-cream-chocolate-fudge.html">Kilwins Ice Cream - Chocolate - Fudge</a></h3>
-          <p class="meta">Sweets &middot; Park Ave &middot; $</p>
+          <img class="vthumb" src="/assets/venue-kilwins-ice-cream-chocolate-fudge.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/kilwins-ice-cream-chocolate-fudge.html">Kilwins Ice Cream - Chocolate - Fudge</a></h3>
+          <p class="meta">Sweets &middot; Park Ave &middot; $</p><p class="vsub">Fresh waffle cone smell finds you first on Park Avenue, where fudge is paddled on marble and caramel apples are dipped in the open.</p>
           <p class="addr">122 N Park Ave, Winter Park, FL 32789</p>
-        </article>
+        </div></article>
         </div>
       </section>
 
       <section class="sec" id="nearby">
         <p class="kicker">Keep Going</p>
         <h2>More in International Drive</h2>
-        <p class="lede">Other hand-verified places in International Drive, Local Picks first, then the closest to Melt N Dip.</p>
+        <p class="lede">Other places in International Drive, Local Picks first, then the closest to Melt N Dip.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/toms-watch-bar-orlando.html">Tom&#x27;s Watch Bar</a> <span class="badge">Local Pick</span></h3>
-          <p class="meta">Bars &amp; lounges · Bar &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-toms-watch-bar-orlando.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/toms-watch-bar-orlando.html">Tom&#x27;s Watch Bar</a> <span class="badge">Local Pick</span></h3>
+          <p class="meta">Bars &amp; lounges · Bar &middot; $$</p><p class="vsub">On International Drive, a sports bar built like a stadium, with an oversized screen and screens wrapping the room so every seat faces the action.</p>
           <p class="addr">8050 International Dr, Suite 1000, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/baires-grill-orlando.html">Baires Grill</a> <span class="badge">Local Pick</span></h3>
-          <p class="meta">Latin &amp; Caribbean · Argentinian Steakhouse &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-baires-grill-orlando.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/baires-grill-orlando.html">Baires Grill</a> <span class="badge">Local Pick</span></h3>
+          <p class="meta">Latin &amp; Caribbean · Argentinian Steakhouse &middot; $$</p><p class="vsub">The parrilla decides everything at this Argentine steakhouse just off International Drive.</p>
           <p class="addr">8050 International Dr, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/ocean-prime-orlando.html">Ocean Prime</a></h3>
-          <p class="meta">Seafood · Seafood &amp; Steak &middot; $$$$</p>
+          <div class="vmain"><h3><a href="/venue/ocean-prime-orlando.html">Ocean Prime</a></h3>
+          <p class="meta">Seafood · Seafood &amp; Steak &middot; $$$$</p><p class="vsub">White-tablecloth polish at the I-4 end of Restaurant Row, with seafood, prime steaks, a raw bar, and a dressy bar scene.</p>
           <p class="addr">7339 W Sand Lake Rd, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/eddie-v-s-prime-seafood.html">Eddie V&#x27;s Prime Seafood</a></h3>
-          <p class="meta">Seafood · Seafood &amp; Steak &middot; $$$$</p>
+          <div class="vmain"><h3><a href="/venue/eddie-v-s-prime-seafood.html">Eddie V&#x27;s Prime Seafood</a></h3>
+          <p class="meta">Seafood · Seafood &amp; Steak &middot; $$$$</p><p class="vsub">Prime seafood and steak up front, then live trios in the V Lounge keep the night going after dinner.</p>
           <p class="addr">7488 W Sand Lake Rd, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/ruth-s-chris-steak-house-sand-lake.html">Ruth&#x27;s Chris Steak House</a></h3>
-          <p class="meta">Fine dining &amp; steak · Steakhouse &middot; $$$$</p>
+          <div class="vmain"><h3><a href="/venue/ruth-s-chris-steak-house-sand-lake.html">Ruth&#x27;s Chris Steak House</a></h3>
+          <p class="meta">Fine dining &amp; steak · Steakhouse &middot; $$$$</p><p class="vsub">The familiar name on Restaurant Row, recently remodeled and still doing the sizzling-platter ritual exactly to spec.</p>
           <p class="addr">7501 W Sand Lake Rd, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/rocco-s-tacos-tequila-bar.html">Rocco&#x27;s Tacos &amp; Tequila Bar</a></h3>
-          <p class="meta">Mexican · Tacos &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/rocco-s-tacos-tequila-bar.html">Rocco&#x27;s Tacos &amp; Tequila Bar</a></h3>
+          <p class="meta">Mexican · Tacos &middot; $$</p><p class="vsub">Sand Lake Road&#x27;s lakeside patio party, upbeat and colorful, where tableside guacamole steals the show before the tacos even land.</p>
           <p class="addr">7468 W Sand Lake Rd, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         </div>
         <div class="handoff">
           <a class="btn-ghost" href="/international-drive-finder.html">See the full International Drive list</a>
@@ -324,8 +331,8 @@
       <div class="foot-in">
         <a class="back-link" href="/">&larr; Back to the full guide</a>
         <p class="brand-line">407 FYI, an independent Orlando guide. Details can change; confirm before you go.</p>
-        <p>Hand-verified Orlando places · Checked October 2026 · Local Picks are never sponsored · Corrections: <a href="mailto:mail@407.fyi">mail@407.fyi</a></p>
-        <p>Some links on 407 FYI are affiliate or referral links. We may earn a commission or credit at no extra cost to you. They never affect which places we list, rank, or recommend.</p>
+        <p>Orlando places · Checked October 2026 · Corrections: <a href="mailto:mail@407.fyi">mail@407.fyi</a></p>
+        <p>Some links on 407 FYI are affiliate or referral links. We may earn a commission or credit at no extra cost to you.</p>
         <p><a href="/privacy.html">Privacy</a></p>
       </div>
     </footer>

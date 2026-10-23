@@ -211,7 +211,14 @@
       .vcard .addr { margin: 0; color: var(--muted); font-size: .9rem; }
       @media (max-width: 640px) { .facts { grid-template-columns: 1fr; } }
     </style>
-  </head>
+  <style data-cardsys>
+/* cardsys: similar rail cards (2026-10-23 overhaul) */
+.vcard{display:flex;gap:12px;align-items:flex-start}
+.vcard .vthumb{flex:0 0 86px;width:86px;height:86px;border-radius:10px;object-fit:cover;display:block}
+.vcard .vmain{flex:1;min-width:0}
+.vcard .vsub{margin:4px 0 0;font-size:.86rem;line-height:1.45;color:var(--muted,#c6bba2)}
+@media (min-width:1000px){.vlist{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start}}
+</style></head>
   <body>
     <header class="hero">
       <div class="hero-in">
@@ -236,46 +243,46 @@
         <div class="actions">
           <a class="action" href="https://www.google.com/maps/search/?api=1&amp;query=Ollie%27s+Public+House+Ollie%27s+Public+House%2C+3400+Edgewater+Dr%2C+Orlando%2C+FL+32804-3602%2C+United+States" target="_blank" rel="noopener">Directions &rarr;</a>
           <a class="action" href="/archive.html?venue=ollies-public-house">Open in the full finder</a>
-          <a class="action" href="/college-park-district-guide.html">Read the College Park story</a>
+          <a class="action" href="/history/college-park.html">Read the College Park story</a>
           <a class="action action-ig" href="https://www.instagram.com/olliespublichouse" target="_blank" rel="noopener"><svg class="ig-glyph" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="vertical-align:-2px;margin-right:6px"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg> Instagram</a>
         </div>
       </section>
 
-      <section class="sec" id="similar">
+      <section class="sec" id="district-story"><p class="kicker">District Story</p><h2>The story of College Park</h2><p class="lede">A neighborhood named for colleges it never had, branded on citrus land in 1921, and still legible in every street sign you pass today.</p><p><a class="btn-ghost" href="/history/college-park.html">Read the College Park story &rarr;</a></p></section><section class="sec" id="similar">
         <p class="kicker">Similar Feel</p>
         <h2>More places with this feel</h2>
         <p class="lede">Matched by vibe, not by neighborhood: the places across Greater Orlando closest in spirit to Ollie&#x27;s Public House.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/marlow-s-tavern.html">Marlow&#x27;s Tavern</a></h3>
-          <p class="meta">American &middot; Lee Vista &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-marlow-s-tavern.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/marlow-s-tavern.html">Marlow&#x27;s Tavern</a></h3>
+          <p class="meta">American &middot; Lee Vista &middot; $$</p><p class="vsub">Neighborhood tavern in Lee Vista treating first timers like regulars, starting with pub chips loaded with blue cheese and bacon on the house.</p>
           <p class="addr">6889 Eagle Watch Dr, Orlando, FL 32822</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/cups-pups.html">Cups and Pups</a></h3>
-          <p class="meta">Coffee &amp; cafes &middot; College Park &middot; $</p>
+          <img class="vthumb" src="/assets/venue-cups-pups.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/cups-pups.html">Cups and Pups</a></h3>
+          <p class="meta">Coffee &amp; cafes &middot; College Park &middot; $</p><p class="vsub">On Edgewater Drive in College Park, this cute, cheerful coffee stop has become a neighborhood ritual.</p>
           <p class="addr">2413 Edgewater Dr, Orlando, FL 32804</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/sullivans-public-house.html">The Sullivan Public House</a></h3>
-          <p class="meta">Bars &amp; lounges &middot; Sanford &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/sullivans-public-house.html">The Sullivan Public House</a></h3>
+          <p class="meta">Bars &amp; lounges &middot; Sanford &middot; $$</p><p class="vsub">Historic Imperial building on East 1st Street in Sanford, filled with hand-carved wood, a copper ceiling, and dim, welcoming light.</p>
           <p class="addr">Sullivans Public House, 116 E 1st St, Sanford, FL 32771-1325, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/raglan-road.html">Raglan Road</a></h3>
-          <p class="meta">Bars &amp; lounges &middot; Disney Springs &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-raglan-road.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/raglan-road.html">Raglan Road</a></h3>
+          <p class="meta">Bars &amp; lounges &middot; Disney Springs &middot; $$</p><p class="vsub">A lively Irish pub at Disney Springs where live music and Irish dancers keep the room energetic.</p>
           <p class="addr">1640 E Buena Vista Dr, Lake Buena Vista, FL 32830</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/the-guesthouse.html">The Guesthouse</a></h3>
-          <p class="meta">Bars &amp; lounges &middot; Mills 50 &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/the-guesthouse.html">The Guesthouse</a></h3>
+          <p class="meta">Bars &amp; lounges &middot; Mills 50 &middot; $$</p><p class="vsub">Mills 50&#x27;s plant-filled living room, greenery trailing over white walls around a square bar.</p>
           <p class="addr">1321 N Mills Ave, Orlando, FL 32803</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/burntwood-tavern.html">Burntwood Tavern</a></h3>
-          <p class="meta">American &middot; Dr Phillips &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-burntwood-tavern.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/burntwood-tavern.html">Burntwood Tavern</a></h3>
+          <p class="meta">American &middot; Dr Phillips &middot; $$</p><p class="vsub">The Dr Phillips neighborhood clubhouse: a warm, rustic room with comfy booths, a big patio behind roll-up doors, and friendly, efficient staff.</p>
           <p class="addr">5078 Dr Phillips Blvd, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         </div>
       </section>
 
@@ -285,35 +292,35 @@
         <p class="lede">Other places in College Park, Local Picks first, then the closest to Ollie&#x27;s Public House.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/quesa-loco.html">QuesaLoco</a> <span class="badge">Local Pick</span></h3>
-          <p class="meta">Mexican · Birria Tacos &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-quesa-loco.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/quesa-loco.html">QuesaLoco</a> <span class="badge">Local Pick</span></h3>
+          <p class="meta">Mexican · Birria Tacos &middot; $$</p><p class="vsub">Birria country on Fairbanks Ave, in a colorful room with Dia de los Muertos murals and the joyful chaos of its food truck days.</p>
           <p class="addr">971 W Fairbanks Ave, Orlando, FL 32804</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/the-current-seafood-counter.html">The Current Seafood Counter</a></h3>
-          <p class="meta">Seafood &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/the-current-seafood-counter.html">The Current Seafood Counter</a></h3>
+          <p class="meta">Seafood &middot; $$</p><p class="vsub">New England fish shack spirit comes to College Park, with counter-service ease and a clean, casual room.</p>
           <p class="addr">The Current Seafood Counter, 2425 Edgewater Dr, Orlando, FL 32804-5303, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/cups-pups.html">Cups and Pups</a></h3>
-          <p class="meta">Coffee &amp; cafes · Coffee Shop &middot; $</p>
+          <img class="vthumb" src="/assets/venue-cups-pups.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/cups-pups.html">Cups and Pups</a></h3>
+          <p class="meta">Coffee &amp; cafes · Coffee Shop &middot; $</p><p class="vsub">On Edgewater Drive in College Park, this cute, cheerful coffee stop has become a neighborhood ritual.</p>
           <p class="addr">2413 Edgewater Dr, Orlando, FL 32804</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/turci-pasta.html">Turci Pasta</a></h3>
-          <p class="meta">Italian &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-turci-pasta.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/turci-pasta.html">Turci Pasta</a></h3>
+          <p class="meta">Italian &middot; $$</p><p class="vsub">On Edgewater Drive in College Park, a cozy, romantic hole in the wall where you can watch fresh pasta made in house.</p>
           <p class="addr">Turci Pasta, 2120 Edgewater Dr, Orlando, FL 32804</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/blue-coast-burrito.html">Blue Coast Burrito</a></h3>
-          <p class="meta">Mexican · Burrito Shop &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/blue-coast-burrito.html">Blue Coast Burrito</a></h3>
+          <p class="meta">Mexican · Burrito Shop &middot; $</p><p class="vsub">On North Orange Blossom Trail, fast casual done honestly: fresh, build-your-own burritos and bowls.</p>
           <p class="addr">2311 N Orange Blossom Trl, Orlando, FL 32804</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/walters-tavern.html">Walter&#x27;s Tavern</a></h3>
-          <p class="meta">Bars &amp; lounges · Tavern &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-walters-tavern.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/walters-tavern.html">Walter&#x27;s Tavern</a></h3>
+          <p class="meta">Bars &amp; lounges · Tavern &middot; $$</p><p class="vsub">Inside the Great Southern Box Company food hall in the Packing District, a spacious, lively game day room built for lingering.</p>
           <p class="addr">2105 N Orange Blossom Trl, Orlando, FL 32804</p>
-        </article>
+        </div></article>
         </div>
         <div class="handoff">
           <a class="btn-ghost" href="/college-park-finder.html">See the full College Park list</a>

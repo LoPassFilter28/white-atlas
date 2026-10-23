@@ -211,7 +211,14 @@
       .vcard .addr { margin: 0; color: var(--muted); font-size: .9rem; }
       @media (max-width: 640px) { .facts { grid-template-columns: 1fr; } }
     </style>
-  </head>
+  <style data-cardsys>
+/* cardsys: similar rail cards (2026-10-23 overhaul) */
+.vcard{display:flex;gap:12px;align-items:flex-start}
+.vcard .vthumb{flex:0 0 86px;width:86px;height:86px;border-radius:10px;object-fit:cover;display:block}
+.vcard .vmain{flex:1;min-width:0}
+.vcard .vsub{margin:4px 0 0;font-size:.86rem;line-height:1.45;color:var(--muted,#c6bba2)}
+@media (min-width:1000px){.vlist{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start}}
+</style></head>
   <body>
     <header class="hero">
       <div class="hero-in">
@@ -242,41 +249,41 @@
         </div>
       </section>
 
-      <section class="sec" id="similar">
+      <section class="sec" id="district-story"><p class="kicker">District Stories</p><h2>Orlando&#x27;s long memory</h2><p class="lede">The guide keeps the long memory of Orlando&#x27;s districts in one place: the names, the plats and the stories behind the streets.</p><p><a class="btn-ghost" href="/history.html">Browse the district stories &rarr;</a></p></section><section class="sec" id="similar">
         <p class="kicker">Similar Feel</p>
         <h2>More places with this feel</h2>
         <p class="lede">Matched by vibe, not by neighborhood: the places across Greater Orlando closest in spirit to Merritt Island Bioluminescence Kayak Tours.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/blue-spring-manatee-kayak.html">Blue Spring Manatee Kayak Tours</a></h3>
-          <p class="meta">Attractions &middot; Orange City &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-blue-spring-manatee-kayak.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/blue-spring-manatee-kayak.html">Blue Spring Manatee Kayak Tours</a></h3>
+          <p class="meta">Attractions &middot; Orange City &middot; $$</p><p class="vsub">At Blue Spring State Park, guided kayaks slip into clear, 72-degree spring water where manatees roll and graze beneath the boat.</p>
           <p class="addr">Blue Spring State Park, 2100 W French Ave, Orange City, FL 32763</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/aquatica-orlando.html">Aquatica Orlando</a></h3>
-          <p class="meta">Attractions &middot; International Drive &middot; $$$</p>
+          <img class="vthumb" src="/assets/venue-aquatica-orlando.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/aquatica-orlando.html">Aquatica Orlando</a></h3>
+          <p class="meta">Attractions &middot; International Drive &middot; $$$</p><p class="vsub">At SeaWorld&#x27;s water park, the Dolphin Plunge clear tube passes Commerson&#x27;s dolphins, and Roa&#x27;s Rapids runs faster than a lazy river should.</p>
           <p class="addr">5800 Water Play Way, Orlando, FL 32821</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/discovery-cove.html">Discovery Cove</a></h3>
-          <p class="meta">Attractions &middot; International Drive &middot; $$$$</p>
+          <img class="vthumb" src="/assets/venue-discovery-cove.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/discovery-cove.html">Discovery Cove</a></h3>
+          <p class="meta">Attractions &middot; International Drive &middot; $$$$</p><p class="vsub">The calm splurge on I-Drive: a reservation-only day resort where attendance is capped and the water stays clear.</p>
           <p class="addr">6000 Discovery Cove Way, Orlando, FL 32821</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/sea-life-florida-legoland.html">SEA LIFE Florida</a></h3>
-          <p class="meta">Attractions &middot; Winter Haven &middot; $$$</p>
+          <div class="vmain"><h3><a href="/venue/sea-life-florida-legoland.html">SEA LIFE Florida</a></h3>
+          <p class="meta">Attractions &middot; Winter Haven &middot; $$$</p><p class="vsub">Inside LEGOLAND Florida, tanks are built like theme park sets, a theme park under the sea where habitats riff on rides and coasters.</p>
           <p class="addr">LEGOLAND Florida Resort, 1 Legoland Way, Winter Haven, FL 33884</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/boggy-creek-airboat-adventures.html">Boggy Creek Airboat Adventures</a></h3>
-          <p class="meta">Attractions &middot; Kissimmee &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/boggy-creek-airboat-adventures.html">Boggy Creek Airboat Adventures</a></h3>
+          <p class="meta">Attractions &middot; Kissimmee &middot; $$</p><p class="vsub">From Southport Road, airboats skim East Lake Tohopekaliga into marsh grass where captains spot gators, turtles and wading birds.</p>
           <p class="addr">2001 E Southport Rd, Kissimmee, FL 34746</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/sea-life-orlando-aquarium.html">SEA LIFE Orlando Aquarium</a></h3>
-          <p class="meta">Attractions &middot; ICON Park &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-sea-life-orlando-aquarium.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/sea-life-orlando-aquarium.html">SEA LIFE Orlando Aquarium</a></h3>
+          <p class="meta">Attractions &middot; ICON Park &middot; $$</p><p class="vsub">Sharks and rays pass overhead in the 360-degree ocean tunnel while you stay dry, unhurried and air conditioned.</p>
           <p class="addr">8449 International Dr, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         </div>
       </section>
 
@@ -286,35 +293,35 @@
         <p class="lede">Other places in Day Trips, closest to Merritt Island Bioluminescence Kayak Tours first.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/kennedy-space-center-visitor-complex.html">Kennedy Space Center Visitor Complex</a></h3>
-          <p class="meta">Attractions · Attraction &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-kennedy-space-center-visitor-complex.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/kennedy-space-center-visitor-complex.html">Kennedy Space Center Visitor Complex</a></h3>
+          <p class="meta">Attractions · Attraction &middot; $$</p><p class="vsub">Stand beneath the Space Shuttle Atlantis on Merritt Island and guests say you can&#x27;t help but be impressed by the real hardware.</p>
           <p class="addr">Kennedy Space Center Visitor Complex, Space Commerce Way, Merritt Island, FL 32953</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/wild-florida.html">Wild Florida</a></h3>
-          <p class="meta">Attractions · Attraction &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/wild-florida.html">Wild Florida</a></h3>
+          <p class="meta">Attractions · Attraction &middot; $$</p><p class="vsub">At the Headwaters of the Everglades, airboats skim protected marsh and captains know exactly where the gators bask.</p>
           <p class="addr">3301 Lake Cypress Rd, Kenansville, FL 34739</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/wekiwa-springs.html">Wekiwa Springs State Park</a></h3>
-          <p class="meta">Parks &amp; outdoors · Park &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/wekiwa-springs.html">Wekiwa Springs State Park</a></h3>
+          <p class="meta">Parks &amp; outdoors · Park &middot; $</p><p class="vsub">The old-Florida counterpoint to the theme parks, an emerald Apopka spring feeding the Wekiva River with clear, cold water guests call magical.</p>
           <p class="addr">1800 Wekiwa Cir, Apopka, FL 32712</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/kelly-park.html">Kelly Park / Rock Springs Run</a></h3>
-          <p class="meta">Parks &amp; outdoors · Park &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/kelly-park.html">Kelly Park / Rock Springs Run</a></h3>
+          <p class="meta">Parks &amp; outdoors · Park &middot; $</p><p class="vsub">The spring run is the draw here: clear, cold water from Rock Springs into a lazy channel made for tubing.</p>
           <p class="addr">400 E Kelly Park Rd, Apopka, FL 32712</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/blue-spring-manatee-kayak.html">Blue Spring Manatee Kayak Tours</a></h3>
-          <p class="meta">Attractions &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-blue-spring-manatee-kayak.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/blue-spring-manatee-kayak.html">Blue Spring Manatee Kayak Tours</a></h3>
+          <p class="meta">Attractions &middot; $$</p><p class="vsub">At Blue Spring State Park, guided kayaks slip into clear, 72-degree spring water where manatees roll and graze beneath the boat.</p>
           <p class="addr">Blue Spring State Park, 2100 W French Ave, Orange City, FL 32763</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/the-twisted-chopstick.html">The Twisted Chopstick</a></h3>
-          <p class="meta">Japanese &amp; sushi · Sushi &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-the-twisted-chopstick.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/the-twisted-chopstick.html">The Twisted Chopstick</a></h3>
+          <p class="meta">Japanese &amp; sushi · Sushi &middot; $$</p><p class="vsub">DeLand&#x27;s cozy, Godzilla-themed sushi stop on Woodland Boulevard, family-run and relaxed as a second home.</p>
           <p class="addr">412 S Woodland Blvd, DeLand, FL 32720</p>
-        </article>
+        </div></article>
         </div>
         <div class="handoff">
           <a class="btn-ghost" href="/day-trips-finder.html">See the full Day Trips list</a>

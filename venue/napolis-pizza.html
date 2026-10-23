@@ -211,7 +211,14 @@
       .vcard .addr { margin: 0; color: var(--muted); font-size: .9rem; }
       @media (max-width: 640px) { .facts { grid-template-columns: 1fr; } }
     </style>
-  </head>
+  <style data-cardsys>
+/* cardsys: similar rail cards (2026-10-23 overhaul) */
+.vcard{display:flex;gap:12px;align-items:flex-start}
+.vcard .vthumb{flex:0 0 86px;width:86px;height:86px;border-radius:10px;object-fit:cover;display:block}
+.vcard .vmain{flex:1;min-width:0}
+.vcard .vsub{margin:4px 0 0;font-size:.86rem;line-height:1.45;color:var(--muted,#c6bba2)}
+@media (min-width:1000px){.vlist{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start}}
+</style></head>
   <body>
     <header class="hero">
       <div class="hero-in">
@@ -239,31 +246,31 @@
         </div>
       </section>
 
-      <section class="sec" id="similar">
+      <section class="sec" id="district-story"><p class="kicker">District Stories</p><h2>Orlando&#x27;s long memory</h2><p class="lede">The guide keeps the long memory of Orlando&#x27;s districts in one place: the names, the plats and the stories behind the streets.</p><p><a class="btn-ghost" href="/history.html">Browse the district stories &rarr;</a></p></section><section class="sec" id="similar">
         <p class="kicker">Similar Feel</p>
         <h2>More places with this feel</h2>
         <p class="lede">Matched by vibe, not by neighborhood: the places across Greater Orlando closest in spirit to Napoli's Pizza &amp; Italian Restaurant.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/victorios-ii.html">Victorio's II Italian Restaurant &amp; Pizzeria</a></h3>
-          <p class="meta">Italian &middot; Winter Springs &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/victorios-ii.html">Victorio's II Italian Restaurant &amp; Pizzeria</a></h3>
+          <p class="meta">Italian &middot; Winter Springs &middot; $$</p><p class="vsub">Serving Winter Springs since 1989, this spot is known for Detroit style deep dish baked in Detroit pans, sauce ladled on after.</p>
           <p class="addr">Victorio's II Italian Restaurant &amp; Pizzeria, 200 E State Rd 434, Winter Springs, FL 32708</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/original-anthonys-ny-pizza.html">Original Anthony's NY Pizza</a></h3>
-          <p class="meta">Pizza &middot; Casselberry &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/original-anthonys-ny-pizza.html">Original Anthony's NY Pizza</a></h3>
+          <p class="meta">Pizza &middot; Casselberry &middot; $</p><p class="vsub">The self-declared original Anthony&#x27;s, slinging New York style pies since 1987 for Casselberry, Winter Park, and Maitland.</p>
           <p class="addr">Original Anthony's NY Pizza, 1455 FL-436, Suite 105, Casselberry, FL 32707</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/main-street-pizza.html">Main Street Pizza</a></h3>
-          <p class="meta">Pizza &middot; Kissimmee &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/main-street-pizza.html">Main Street Pizza</a></h3>
+          <p class="meta">Pizza &middot; Kissimmee &middot; $$</p><p class="vsub">Downtown Kissimmee&#x27;s old-school New York style joint, family oriented, with slices guests swear are bigger than their face.</p>
           <p class="addr">16 Broadway, Kissimmee, FL 34741</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/marios-pizza.html">Mario's Pizza</a></h3>
-          <p class="meta">Pizza &middot; Orlando &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/marios-pizza.html">Mario's Pizza</a></h3>
+          <p class="meta">Pizza &middot; Orlando &middot; $$</p><p class="vsub">Family-run on Curry Ford Road, where guests say the pies taste like real pizza from New York.</p>
           <p class="addr">Mario's Pizza, 7213 Curry Ford Rd, Orlando, FL 32822-5805, United States</p>
-        </article>
+        </div></article>
         </div>
       </section>
 
@@ -273,35 +280,35 @@
         <p class="lede">Other places in Winter Springs, closest to Napoli&#x27;s Pizza &amp; Italian Restaurant first.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/cuban-sandwich-cafe.html">The Cuban Sandwich Cafe</a></h3>
-          <p class="meta">Latin &amp; Caribbean · Cuban Cafe &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/cuban-sandwich-cafe.html">The Cuban Sandwich Cafe</a></h3>
+          <p class="meta">Latin &amp; Caribbean · Cuban Cafe &middot; $</p><p class="vsub">A small breakfast and lunch cafe on west 434, opened in 2025 by a veteran local Cuban restaurateur and scaled down on purpose.</p>
           <p class="addr">The Cuban Sandwich Cafe, 140 W State Rd 434, Winter Springs, FL 32708</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/taiwan-cafe.html">Taiwan Cafe</a></h3>
-          <p class="meta">Chinese · Chinese &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/taiwan-cafe.html">Taiwan Cafe</a></h3>
+          <p class="meta">Chinese · Chinese &middot; $$</p><p class="vsub">A family Chinese kitchen on west 434 doing classic stir fries, noodles, and rice plates with fresh ingredients.</p>
           <p class="addr">Taiwan Cafe, 158 W State Rd 434, Winter Springs, FL 32708</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/taqueria-las-cazuelas-winter-springs.html">Taqueria Las Cazuelas Winter Springs</a></h3>
-          <p class="meta">Mexican &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/taqueria-las-cazuelas-winter-springs.html">Taqueria Las Cazuelas Winter Springs</a></h3>
+          <p class="meta">Mexican &middot; $</p><p class="vsub">Tacos, milanesa de res and pollo, chips and guacamole, and queso dip at counter prices, a second room for the East Colonial taqueria.</p>
           <p class="addr">Taqueria Las Cazuelas Winter Springs, 162 W State Rd 434, Winter Springs, FL 32708</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/khaos-sports-bar.html">Khaos Sports Bar and Grill</a></h3>
-          <p class="meta">Bars &amp; lounges · Sports Bar &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/khaos-sports-bar.html">Khaos Sports Bar and Grill</a></h3>
+          <p class="meta">Bars &amp; lounges · Sports Bar &middot; $</p><p class="vsub">A lively dive sports hub on west 434 that expanded in 2026 with a new kitchen, more pool tables, and a smoke-free interior.</p>
           <p class="addr">Khaos Sports Bar and Grill, 178 W State Rd 434, Winter Springs, FL 32708</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/victorios-ii.html">Victorio&#x27;s II Italian Restaurant &amp; Pizzeria</a></h3>
-          <p class="meta">Italian · Pizzeria &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/victorios-ii.html">Victorio&#x27;s II Italian Restaurant &amp; Pizzeria</a></h3>
+          <p class="meta">Italian · Pizzeria &middot; $$</p><p class="vsub">Serving Winter Springs since 1989, this spot is known for Detroit style deep dish baked in Detroit pans, sauce ladled on after.</p>
           <p class="addr">Victorio&#x27;s II Italian Restaurant &amp; Pizzeria, 200 E State Rd 434, Winter Springs, FL 32708</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/senor-tequila.html">Senor Tequila Mexican Grill</a></h3>
-          <p class="meta">Mexican · Mexican &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/senor-tequila.html">Senor Tequila Mexican Grill</a></h3>
+          <p class="meta">Mexican · Mexican &middot; $$</p><p class="vsub">A spacious, family friendly Mexican grill in the Villaggio plaza on 434, with a big local following in Winter Springs.</p>
           <p class="addr">Senor Tequila Mexican Grill, 855 E State Rd 434, Winter Springs, FL 32708</p>
-        </article>
+        </div></article>
         </div>
         <div class="handoff">
           <a class="btn-ghost" href="/winter-springs-finder.html">See the full Winter Springs list</a>

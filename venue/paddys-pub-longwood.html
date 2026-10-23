@@ -211,7 +211,14 @@
       .vcard .addr { margin: 0; color: var(--muted); font-size: .9rem; }
       @media (max-width: 640px) { .facts { grid-template-columns: 1fr; } }
     </style>
-  </head>
+  <style data-cardsys>
+/* cardsys: similar rail cards (2026-10-23 overhaul) */
+.vcard{display:flex;gap:12px;align-items:flex-start}
+.vcard .vthumb{flex:0 0 86px;width:86px;height:86px;border-radius:10px;object-fit:cover;display:block}
+.vcard .vmain{flex:1;min-width:0}
+.vcard .vsub{margin:4px 0 0;font-size:.86rem;line-height:1.45;color:var(--muted,#c6bba2)}
+@media (min-width:1000px){.vlist{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start}}
+</style></head>
   <body>
     <header class="hero">
       <div class="hero-in">
@@ -239,41 +246,41 @@
         </div>
       </section>
 
-      <section class="sec" id="similar">
+      <section class="sec" id="district-story"><p class="kicker">District Stories</p><h2>Orlando&#x27;s long memory</h2><p class="lede">The guide keeps the long memory of Orlando&#x27;s districts in one place: the names, the plats and the stories behind the streets.</p><p><a class="btn-ghost" href="/history.html">Browse the district stories &rarr;</a></p></section><section class="sec" id="similar">
         <p class="kicker">Similar Feel</p>
         <h2>More places with this feel</h2>
         <p class="lede">Matched by vibe, not by neighborhood: the places across Greater Orlando closest in spirit to Paddy&#x27;s Pub Longwood.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/duffy-s-sports-grill.html">Duffy&#x27;s Sports Grill</a></h3>
-          <p class="meta">American &middot; Lake Mary &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/duffy-s-sports-grill.html">Duffy&#x27;s Sports Grill</a></h3>
+          <p class="meta">American &middot; Lake Mary &middot; $</p><p class="vsub">TVs everywhere in Lake Mary, so every seat feels close to the game.</p>
           <p class="addr">Duffy&#x27;s Sports Grill, 951 Market Promenade Ave, Lake Mary, FL 32746</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/murphys-pub-orlando.html">Murphy&#x27;s Pub Orlando</a></h3>
-          <p class="meta">Bars &amp; lounges &middot; International Drive &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/murphys-pub-orlando.html">Murphy&#x27;s Pub Orlando</a></h3>
+          <p class="meta">Bars &amp; lounges &middot; International Drive &middot; $</p><p class="vsub">I-Drive&#x27;s friendly British-style soccer pub, where any shirt is welcome and expats treat it as home.</p>
           <p class="addr">Murphy&#x27;s Pub Orlando, 6582 International Dr, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/aint-miss-behavin.html">Ain&#x27;t Miss Behavin&#x27; Sports and Tiki Bar</a></h3>
-          <p class="meta">Bars &amp; lounges &middot; Winter Park &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/aint-miss-behavin.html">Ain&#x27;t Miss Behavin&#x27; Sports and Tiki Bar</a></h3>
+          <p class="meta">Bars &amp; lounges &middot; Winter Park &middot; $</p><p class="vsub">Cozy and hole-in-the-wall on FL-436, this sports and tiki bar keeps a local crowd where everybody is welcome.</p>
           <p class="addr">Ain&#x27;t Miss Behavin&#x27; Sports and Tiki Bar, 1550 FL-436, Winter Park, FL 32792</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/ollies-public-house.html">Ollie&#x27;s Public House</a></h3>
-          <p class="meta">Bars &amp; lounges &middot; College Park &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/ollies-public-house.html">Ollie&#x27;s Public House</a></h3>
+          <p class="meta">Bars &amp; lounges &middot; College Park &middot; $$</p><p class="vsub">Easy neighborhood-pub rhythm on Edgewater Drive, with a lively dog-friendly patio and rotating craft taps.</p>
           <p class="addr">Ollie&#x27;s Public House, 3400 Edgewater Dr, Orlando, FL 32804-3602, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/toms-watch-bar-orlando.html">Tom&#x27;s Watch Bar</a></h3>
-          <p class="meta">Bars &amp; lounges &middot; I-Drive &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-toms-watch-bar-orlando.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/toms-watch-bar-orlando.html">Tom&#x27;s Watch Bar</a></h3>
+          <p class="meta">Bars &amp; lounges &middot; I-Drive &middot; $$</p><p class="vsub">On International Drive, a sports bar built like a stadium, with an oversized screen and screens wrapping the room so every seat faces the action.</p>
           <p class="addr">8050 International Dr, Suite 1000, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/the-porch-winter-park.html">The Porch Winter Park</a></h3>
-          <p class="meta">American &middot; Winter Park &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-the-porch-winter-park.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/the-porch-winter-park.html">The Porch Winter Park</a></h3>
+          <p class="meta">American &middot; Winter Park &middot; $$</p><p class="vsub">A converted garage on Orange Avenue turned lively, open sports bar for game day, with big screens, games and a menu for any crew.</p>
           <p class="addr">643 N Orange Ave, Winter Park, FL 32789</p>
-        </article>
+        </div></article>
         </div>
       </section>
 
@@ -283,35 +290,35 @@
         <p class="lede">Other places in Longwood, closest to Paddy&#x27;s Pub Longwood first.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/dough-boyz-pizza.html">Dough Boyz Pizza</a></h3>
-          <p class="meta">Pizza &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/dough-boyz-pizza.html">Dough Boyz Pizza</a></h3>
+          <p class="meta">Pizza &middot; $</p><p class="vsub">Longwood&#x27;s old-school New York slice shop, family owned and confident: their line is it is not the water, it is the recipe.</p>
           <p class="addr">201 W State Rd 434, Longwood, FL 32750</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/aj-s-press.html">AJ&#x27;s Press</a></h3>
-          <p class="meta">Burgers &amp; sandwiches · Sandwiches &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/aj-s-press.html">AJ&#x27;s Press</a></h3>
+          <p class="meta">Burgers &amp; sandwiches · Sandwiches &middot; $</p><p class="vsub">Family-run Longwood counter built around the press, where sandwiches come off bolillo or telera soft yet crispy at the edges.</p>
           <p class="addr">182 W State Rd 434 #1008, Longwood, FL 32750</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/nan-and-pops-ice-cream-shop.html">Nan and Pop&#x27;s Ice Cream Shop</a></h3>
-          <p class="meta">Sweets · Ice Cream &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-nan-and-pops-ice-cream-shop.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/nan-and-pops-ice-cream-shop.html">Nan and Pop&#x27;s Ice Cream Shop</a></h3>
+          <p class="meta">Sweets · Ice Cream &middot; $$</p><p class="vsub">Old-fashioned Longwood parlor where the sweet smell of waffle cones hits you at the door.</p>
           <p class="addr">Nan and Pop&#x27;s Ice Cream Shop, 351 N Ronald Reagan Blvd, Longwood, FL 32750-4159, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/mohawk-bbq.html">Mohawk Smokehouse</a></h3>
-          <p class="meta">BBQ &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/mohawk-bbq.html">Mohawk Smokehouse</a></h3>
+          <p class="meta">BBQ &middot; $$</p><p class="vsub">Small-batch Longwood barbecue from Tyler Evans and his wife Sarah, built on Texas-style brisket with Southern roots.</p>
           <p class="addr">480 S Ronald Reagan Blvd, Longwood, FL 32750</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/shiraz-market.html">Shiraz Market</a></h3>
-          <p class="meta">Mediterranean · Persian &middot; $</p>
+          <img class="vthumb" src="/assets/venue-shiraz-market.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/shiraz-market.html">Shiraz Market</a></h3>
+          <p class="meta">Mediterranean · Persian &middot; $</p><p class="vsub">Half Persian grocery, half grill counter on 17-92 in Longwood, this spot turns a spice run into lunch.</p>
           <p class="addr">188 S US Hwy 17-92, Longwood, FL 32750</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/enzos-lake.html">Enzo&#x27;s On the Lake</a></h3>
-          <p class="meta">Italian &middot; $$$$</p>
+          <div class="vmain"><h3><a href="/venue/enzos-lake.html">Enzo&#x27;s On the Lake</a></h3>
+          <p class="meta">Italian &middot; $$$$</p><p class="vsub">On Lake Kathryn in Longwood since 1980, this old-world Italian spot feels like eating in a villa, with a deck at the water for sunset.</p>
           <p class="addr">Enzo&#x27;s on the Lake, 1130 S US Highway 17 92, Longwood, FL 32750-5718</p>
-        </article>
+        </div></article>
         </div>
         <div class="handoff">
           <a class="btn-ghost" href="/longwood-finder.html">See the full Longwood list</a>
