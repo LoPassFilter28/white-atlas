@@ -608,7 +608,6 @@ html[data-theme="dark"] .export-trigger:hover,html[data-theme="dark"] .export-tr
     .near-full{display:block;margin-top:14px;text-align:center;color:var(--accent-ink);font-weight:800;font-size:.85rem;text-underline-offset:3px}
     @media (prefers-reduced-motion: reduce){.near-window,.near-modal-backdrop,.near-row,.near-window .location-btn{animation:none}}
   </style>
-<style>.district-index-note{margin:14px 0 0;color:var(--muted);font-size:.9rem}.district-index-note a{color:var(--accent-ink);font-weight:700}</style>
 
 <style>
 /* imagery wave 1: photo band */
@@ -675,6 +674,28 @@ html[data-tier="full"] .home-nav a.nearest-prized:hover{transform:translateY(-1p
 .card-num{display:block;font-family:Urbanist,Manrope,sans-serif;font-size:.82rem;font-weight:700;letter-spacing:.34em;color:var(--dg3,#c19a5b)}
 #sectionCovers .district-name{display:block;width:100%;font-size:clamp(1.35rem,2.1vw,1.68rem);font-weight:700;letter-spacing:.01em;border-top:1px solid var(--dg3,#c19a5b);padding-top:12px}
 </style>
+<style id="home2-20261022">
+/* ===== Home ship 2 (2026-10-22): masthead 4A frame, Cards beveled plate ===== */
+/* Masthead: The Book Cover, rounded (4A). Double-rule bronze frame on the real
+   mast: outer rule on the mast border, keyline as an inset pseudo-element.
+   Outer radius 20px (matches the photo band and the cards), keyline 14px. */
+.mast{border:1px solid rgba(193,154,91,.55);border-radius:20px}
+.mast::before{content:"";position:absolute;inset:5px;z-index:3;border:1px solid rgba(193,154,91,.32);border-radius:14px;pointer-events:none}
+/* Cards: Beveled Plate (variant B). Bronze keyline inset 5px at 15px radius,
+   domed sheen over the unchanged card gradient, inner shadow pooled at the
+   bottom edge, whisper of outer shadow. Fully static at every tier. */
+#sectionCovers .district-card{background:radial-gradient(120% 95% at 50% -12%,rgba(247,240,219,.11) 0%,rgba(247,240,219,0) 54%),linear-gradient(160deg,var(--dg1) 0%,var(--dg2) 58%,var(--dg3) 135%);box-shadow:0 4px 12px rgba(1,6,3,.26),inset 0 -16px 24px -14px rgba(0,0,0,.50),inset 0 12px 20px -16px rgba(0,0,0,.26),inset 0 1px 0 rgba(246,237,214,.14)}
+#sectionCovers .district-card::before{content:"";position:absolute;inset:5px;z-index:1;pointer-events:none;border-radius:15px;border:1px solid color-mix(in srgb,var(--dg3) 30%,transparent)}
+/* Cards composition (PiK0, 2026-10-22): hairline + title + hook sentence,
+   bottom-anchored as one block. No kicker, no index numbers. */
+#sectionCovers .district-filter.cover-link{justify-content:flex-end;gap:2px}
+/* Consistency fix for a pre-existing defect (present in the shipped page,
+   found in this pass): the Browse All pill takes var(--surface), which flips
+   near-white in the light theme, while its label keeps the on-accent white
+   from the home-nav-cta rule - white on white, invisible. Pin the label to
+   the guide's ink in the light theme only; the dark theme is untouched. */
+html[data-theme="light"] .home-nav a.browse-quiet{color:#1d2a20}
+</style>
 </head>
 <body>
 
@@ -721,12 +742,12 @@ html[data-tier="full"] .home-nav a.nearest-prized:hover{transform:translateY(-1p
       <h2 id="sectionsTitle" class="sec-sr">Cards</h2>
       <div class="covers-grid" id="sectionCovers">
         
-        <article class="district-card cover-card" style="--dg1:#12240f;--dg2:#3d5231;--dg3:#bd9049"><a class="district-filter cover-link" href="/local-picks.html"><span class="card-num" aria-hidden="true">01</span><span class="district-name">Local Picks</span></a></article>
-        <article class="district-card cover-card" style="--dg1:#1d1220;--dg2:#4a2c44;--dg3:#a87f5e"><a class="district-filter cover-link" href="/edm.html"><span class="card-num" aria-hidden="true">02</span><span class="district-name">EDM &amp; Nightlife</span></a></article>
-        <article class="district-card cover-card" style="--dg1:#0c1f26;--dg2:#27506b;--dg3:#ab8448"><a class="district-filter cover-link" href="/sports.html"><span class="card-num" aria-hidden="true">03</span><span class="district-name">Sports</span></a></article>
-        <article class="district-card cover-card" style="--dg1:#0e2412;--dg2:#2f5d33;--dg3:#a8a04e"><a class="district-filter cover-link" href="/parks.html"><span class="card-num" aria-hidden="true">04</span><span class="district-name">Parks &amp; Gardens</span></a></article>
-        <article class="district-card cover-card" style="--dg1:#0a201c;--dg2:#1f5246;--dg3:#7fa35a"><a class="district-filter cover-link" href="/nature.html"><span class="card-num" aria-hidden="true">05</span><span class="district-name">Nature &amp; Springs</span></a></article>
-        <article class="district-card cover-card" style="--dg1:#221709;--dg2:#6b4a24;--dg3:#bd9049"><a class="district-filter cover-link" href="/history.html"><span class="card-num" aria-hidden="true">06</span><span class="district-name">History</span></a></article>
+        <article class="district-card cover-card" style="--dg1:#12240f;--dg2:#3d5231;--dg3:#bd9049"><a class="district-filter cover-link" href="/local-picks.html"><span class="district-name">Local Picks</span><span class="cover-quote section-hook">The places a local sends you to first.</span></a></article>
+        <article class="district-card cover-card" style="--dg1:#1d1220;--dg2:#4a2c44;--dg3:#a87f5e"><a class="district-filter cover-link" href="/edm.html"><span class="district-name">EDM &amp; Nightlife</span><span class="cover-quote section-hook">The rooms, the crews and the festival weeks behind the Orlando sound.</span></a></article>
+        <article class="district-card cover-card" style="--dg1:#0c1f26;--dg2:#27506b;--dg3:#ab8448"><a class="district-filter cover-link" href="/sports.html"><span class="district-name">Sports</span><span class="cover-quote section-hook">Magic, City, Pride, UCF and the long baseball spring, plus where to watch.</span></a></article>
+        <article class="district-card cover-card" style="--dg1:#0e2412;--dg2:#2f5d33;--dg3:#a8a04e"><a class="district-filter cover-link" href="/parks.html"><span class="district-name">Parks &amp; Gardens</span><span class="cover-quote section-hook">The city's green rooms: lake loops, dog parks, gardens and sunset spots.</span></a></article>
+        <article class="district-card cover-card" style="--dg1:#0a201c;--dg2:#1f5246;--dg3:#7fa35a"><a class="district-filter cover-link" href="/nature.html"><span class="district-name">Nature &amp; Springs</span><span class="cover-quote section-hook">Springs, trails and the wild Florida underneath Orlando.</span></a></article>
+        <article class="district-card cover-card" style="--dg1:#221709;--dg2:#6b4a24;--dg3:#bd9049"><a class="district-filter cover-link" href="/history.html"><span class="district-name">History</span><span class="cover-quote section-hook">Flashbacks, district histories and the long stories behind the street names.</span></a></article>
       </div>
     </section>
 
@@ -734,7 +755,7 @@ html[data-tier="full"] .home-nav a.nearest-prized:hover{transform:translateY(-1p
       <div class="layer-head">
         <div><h2 id="districtsTitle">Sections</h2><p>Every area in the guide. Where a district has a story, its link opens the story; the rest open their guide page, every place on it.</p></div>
       </div>
-      <div class="district-index"><div class="di-group"><h3>Downtown and its neighborhoods</h3><ul><li><a href="/history/downtown.html">Downtown Orlando</a></li><li><a href="/history/thornton-park.html">Thornton Park</a></li><li><a href="/history/mills-50.html">Mills 50</a></li><li><a href="/history/milk-district.html">Milk District</a></li><li><a href="/history/ivanhoe-village.html">Ivanhoe Village</a></li><li><a href="/history/college-park.html">College Park</a></li><li><a href="/history/audubon-park.html">Audubon Park</a></li><li><a href="/hourglass-finder.html">Hourglass</a></li><li><a href="/sodo-finder.html">SoDo</a></li></ul></div><div class="di-group"><h3>Winter Park and the north side</h3><ul><li><a href="/history/winter-park.html">Winter Park</a></li><li><a href="/baldwin-park-finder.html">Baldwin Park</a></li><li><a href="/maitland-finder.html">Maitland</a></li><li><a href="/oviedo-finder.html">Oviedo</a></li><li><a href="/sanford-finder.html">Sanford</a></li></ul></div><div class="di-group"><h3>The visitor corridors</h3><ul><li><a href="/history/i-drive.html">International Drive</a></li><li><a href="/history/universal.html">Universal</a></li><li><a href="/history/disney-springs.html">Disney Springs</a></li><li><a href="/disney-area-finder.html">Disney Area</a></li><li><a href="/kissimmee-finder.html">Kissimmee</a></li><li><a href="/history/lake-nona.html">Lake Nona</a></li></ul></div><div class="di-group"><h3>East, west, and beyond</h3><ul><li><a href="/ucf-finder.html">University</a></li><li><a href="/winter-garden-finder.html">Winter Garden</a></li></ul></div></div><p class="district-index-note">Plus the rest of the metro, grouped by their own names: <a href="/more-orlando-finder.html">Other Orlando Areas</a>.</p>
+      <div class="district-index"><div class="di-group"><h3>Downtown and its neighborhoods</h3><ul><li><a href="/history/downtown.html">Downtown Orlando</a></li><li><a href="/history/thornton-park.html">Thornton Park</a></li><li><a href="/history/mills-50.html">Mills 50</a></li><li><a href="/history/milk-district.html">Milk District</a></li><li><a href="/history/ivanhoe-village.html">Ivanhoe Village</a></li><li><a href="/history/college-park.html">College Park</a></li><li><a href="/history/audubon-park.html">Audubon Park</a></li><li><a href="/hourglass-finder.html">Hourglass</a></li><li><a href="/sodo-finder.html">SoDo</a></li></ul></div><div class="di-group"><h3>Winter Park and the north side</h3><ul><li><a href="/history/winter-park.html">Winter Park</a></li><li><a href="/baldwin-park-finder.html">Baldwin Park</a></li><li><a href="/maitland-finder.html">Maitland</a></li><li><a href="/oviedo-finder.html">Oviedo</a></li><li><a href="/sanford-finder.html">Sanford</a></li></ul></div><div class="di-group"><h3>The visitor corridors</h3><ul><li><a href="/history/i-drive.html">International Drive</a></li><li><a href="/history/universal.html">Universal</a></li><li><a href="/history/disney-springs.html">Disney Springs</a></li><li><a href="/disney-area-finder.html">Disney Area</a></li><li><a href="/kissimmee-finder.html">Kissimmee</a></li><li><a href="/history/lake-nona.html">Lake Nona</a></li></ul></div><div class="di-group"><h3>East, west, and beyond</h3><ul><li><a href="/ucf-finder.html">University</a></li><li><a href="/winter-garden-finder.html">Winter Garden</a></li></ul></div></div>
     </section>
     
 
@@ -879,13 +900,13 @@ fetch('places.json?v=20261021p2').then(r=>{if(!r.ok)throw new Error('places.json
 <!-- 407 FYI guide chat widget. Self-contained: style + markup + script.
      Talks to the Supabase chat edge function; answers come only from guide data. -->
 <style id="fyi-chat-css">
-.fyi-chat-btn{position:fixed;right:16px;bottom:16px;z-index:1200;display:flex;align-items:center;gap:9px;
-  padding:16px 24px;border-radius:999px;border:1px solid #e6cd8f;cursor:pointer;overflow:hidden;
+.fyi-chat-btn{position:fixed;right:16px;bottom:16px;z-index:1200;display:flex;align-items:center;gap:9px;box-sizing:border-box;
+  min-height:48px;padding:11px 22px;border-radius:999px;border:1px solid #e6cd8f;cursor:pointer;overflow:hidden;
   background:linear-gradient(155deg,#85652c 0%,#6e5222 58%,#5f471d 100%);color:#fffaf0;
-  font-family:"Manrope",ui-sans-serif,sans-serif;font-size:17px;font-weight:800;letter-spacing:.015em;
+  font-family:"Manrope",ui-sans-serif,sans-serif;font-size:.86rem;font-weight:800;letter-spacing:.015em;
   box-shadow:0 14px 34px rgba(0,0,0,.5),0 0 0 4px rgba(193,154,91,.30),0 0 22px rgba(193,154,91,.38),inset 0 1px 0 rgba(246,237,214,.5)}
 .fyi-chat-btn:hover{filter:brightness(1.08)}
-.fyi-chat-btn svg{width:20px;height:20px;flex:none}
+.fyi-chat-btn svg{width:18px;height:18px;flex:none}
 html[data-tier="full"] .fyi-chat-btn::after{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;
   background:linear-gradient(115deg,transparent 30%,rgba(255,250,240,.34) 48%,transparent 66%);
   transform:translateX(-130%);animation:fyiSheen 1.15s cubic-bezier(.2,.72,.25,1) .9s 1 both}
