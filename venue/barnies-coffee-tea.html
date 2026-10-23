@@ -211,7 +211,14 @@
       .vcard .addr { margin: 0; color: var(--muted); font-size: .9rem; }
       @media (max-width: 640px) { .facts { grid-template-columns: 1fr; } }
     </style>
-  </head>
+  <style data-cardsys>
+/* cardsys: similar rail cards (2026-10-23 overhaul) */
+.vcard{display:flex;gap:12px;align-items:flex-start}
+.vcard .vthumb{flex:0 0 86px;width:86px;height:86px;border-radius:10px;object-fit:cover;display:block}
+.vcard .vmain{flex:1;min-width:0}
+.vcard .vsub{margin:4px 0 0;font-size:.86rem;line-height:1.45;color:var(--muted,#c6bba2)}
+@media (min-width:1000px){.vlist{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start}}
+</style></head>
   <body>
     <header class="hero">
       <div class="hero-in">
@@ -236,45 +243,45 @@
         <div class="actions">
           <a class="action" href="https://www.google.com/maps/search/?api=1&amp;query=Barnie%27s+Coffee+%26+Tea+Co.+118+S+Park+Ave%2C+Winter+Park%2C+FL+32789" target="_blank" rel="noopener">Directions &rarr;</a>
           <a class="action" href="/archive.html?venue=barnies-coffee-tea">Open in the full finder</a>
-          <a class="action" href="/winter-park-district-guide.html">Read the Winter Park story</a>
+          <a class="action" href="/history/winter-park.html">Read the Winter Park story</a>
         </div>
       </section>
 
-      <section class="sec" id="similar">
+      <section class="sec" id="district-story"><p class="kicker">District Story</p><h2>The story of Winter Park</h2><p class="lede">A park built for the winter, drawn on paper in 1881, and still legible in every street you walk today.</p><p><a class="btn-ghost" href="/history/winter-park.html">Read the Winter Park story &rarr;</a></p></section><section class="sec" id="similar">
         <p class="kicker">Similar Feel</p>
         <h2>More places with this feel</h2>
         <p class="lede">Matched by vibe, not by neighborhood: the places across Greater Orlando closest in spirit to Barnie&#x27;s Coffee &amp; Tea Co..</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/austins-coffee.html">Austin&#x27;s Coffee</a></h3>
-          <p class="meta">Coffee &amp; cafes &middot; Winter Park &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/austins-coffee.html">Austin&#x27;s Coffee</a></h3>
+          <p class="meta">Coffee &amp; cafes &middot; Winter Park &middot; $</p><p class="vsub">Winter Park&#x27;s bohemian living room, an artsy, community-driven cafe now in a bigger room on West Fairbanks Avenue.</p>
           <p class="addr">2240 W Fairbanks Ave, Winter Park, FL</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/cfs-coffee.html">CFS Coffee</a></h3>
-          <p class="meta">Coffee &amp; cafes &middot; Winter Park &middot; $</p>
+          <img class="vthumb" src="/assets/venue-cfs-coffee.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/cfs-coffee.html">CFS Coffee</a></h3>
+          <p class="meta">Coffee &amp; cafes &middot; Winter Park &middot; $</p><p class="vsub">Short for Coffee for the Soul, a Colombian-hearted cafe on New England Avenue with a cozy room and a comfy sofa corner.</p>
           <p class="addr">CFS Coffee, 430 W New England Ave, Winter Park, FL 32789-4230</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/glass-knife.html">The Glass Knife</a></h3>
-          <p class="meta">Bakeries &middot; Winter Park &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-glass-knife.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/glass-knife.html">The Glass Knife</a></h3>
+          <p class="meta">Bakeries &middot; Winter Park &middot; $$</p><p class="vsub">A pretty, polished Winter Park cafe named for the antique glass cake knives on its walls, all chic light and careful detail.</p>
           <p class="addr">The Glass Knife, 276 S Orlando Ave, Winter Park, FL 32789</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/power-house-cafe.html">Power House Cafe</a></h3>
-          <p class="meta">Mediterranean &middot; Winter Park &middot; $</p>
+          <img class="vthumb" src="/assets/venue-power-house-cafe.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/power-house-cafe.html">Power House Cafe</a></h3>
+          <p class="meta">Mediterranean &middot; Winter Park &middot; $</p><p class="vsub">A small, bright Mediterranean spot just off Park Avenue in Winter Park where everything tastes fresh.</p>
           <p class="addr">111 E Lyman Ave, Winter Park, FL 32789</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/new-general.html">New General</a></h3>
-          <p class="meta">Coffee &amp; cafes &middot; Winter Park &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/new-general.html">New General</a></h3>
+          <p class="meta">Coffee &amp; cafes &middot; Winter Park &middot; $$</p><p class="vsub">Part cafe, part modern general store just off Park Avenue, in a bright, plant-filled room with sleek polished wood.</p>
           <p class="addr">New General, 155 E New England Ave, Winter Park, FL 32789-4330</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/cups-pups.html">Cups and Pups</a></h3>
-          <p class="meta">Coffee &amp; cafes &middot; College Park &middot; $</p>
+          <img class="vthumb" src="/assets/venue-cups-pups.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/cups-pups.html">Cups and Pups</a></h3>
+          <p class="meta">Coffee &amp; cafes &middot; College Park &middot; $</p><p class="vsub">On Edgewater Drive in College Park, this cute, cheerful coffee stop has become a neighborhood ritual.</p>
           <p class="addr">2413 Edgewater Dr, Orlando, FL 32804</p>
-        </article>
+        </div></article>
         </div>
       </section>
 
@@ -284,35 +291,35 @@
         <p class="lede">Other places in Winter Park, Local Picks first, then the closest to Barnie&#x27;s Coffee &amp; Tea Co..</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/ava.html">AVA Mediterranean</a> <span class="badge">Local Pick</span></h3>
-          <p class="meta">Mediterranean &middot; $$$</p>
+          <img class="vthumb" src="/assets/venue-ava.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/ava.html">AVA Mediterranean</a> <span class="badge">Local Pick</span></h3>
+          <p class="meta">Mediterranean &middot; $$$</p><p class="vsub">A glamorous Greek agora on Park Avenue, sophisticated and high-energy from the moment you sit down.</p>
           <p class="addr">290 S Park Ave, Winter Park, FL 32789</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/imperial-on-park.html">The Imperial on Park</a> <span class="badge">Local Pick</span></h3>
-          <p class="meta">Bars &amp; lounges · Wine Bar &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-imperial-on-park.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/imperial-on-park.html">The Imperial on Park</a> <span class="badge">Local Pick</span></h3>
+          <p class="meta">Bars &amp; lounges · Wine Bar &middot; $$</p><p class="vsub">Park Avenue&#x27;s neighborhood bar, warm and laid back, with boutique wines, craft beers and cocktails built on Winter Park Distillery spirits.</p>
           <p class="addr">136 S Park Ave, Winter Park, FL 32789</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/prato.html">Prato</a> <span class="badge">Local Pick</span></h3>
-          <p class="meta">Italian &middot; $$$</p>
+          <div class="vmain"><h3><a href="/venue/prato.html">Prato</a> <span class="badge">Local Pick</span></h3>
+          <p class="meta">Italian &middot; $$$</p><p class="vsub">Italian the Park Avenue way: rustic yet upscale, exposed brick and warm light, house-made pastas and wood-fired pizzas.</p>
           <p class="addr">Prato, 124 N Park Ave, Winter Park, FL 32789</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/bosphorous-turkish.html">Bosphorous Turkish Cuisine</a></h3>
-          <p class="meta">Mediterranean · Turkish &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-bosphorous-turkish.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/bosphorous-turkish.html">Bosphorous Turkish Cuisine</a></h3>
+          <p class="meta">Mediterranean · Turkish &middot; $$</p><p class="vsub">A family-owned Turkish table on Park Avenue, warm and celebratory, where hollow lavas bread arrives puffed and blistered for the dips.</p>
           <p class="addr">108 S Park Ave, Winter Park, FL 32789</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/croissant-gourmet.html">Croissant Gourmet</a></h3>
-          <p class="meta">Bakeries · Bakery &middot; $</p>
+          <img class="vthumb" src="/assets/venue-croissant-gourmet.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/croissant-gourmet.html">Croissant Gourmet</a></h3>
+          <p class="meta">Bakeries · Bakery &middot; $</p><p class="vsub">Cozy, spotless little bakery on Morse Boulevard that guests describe as a piece of France in Winter Park.</p>
           <p class="addr">120 E Morse Blvd, Winter Park, FL 32789</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/rome-s-flavours.html">Rome&#x27;s Flavours</a></h3>
-          <p class="meta">Italian · Trattoria &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/rome-s-flavours.html">Rome&#x27;s Flavours</a></h3>
+          <p class="meta">Italian · Trattoria &middot; $$</p><p class="vsub">Cozy, family-owned trattoria on Morse Boulevard near Park Avenue, quiet and intimate, where guests say the food tastes like Italy.</p>
           <p class="addr">Rome&#x27;s Flavours, 124 E Morse Blvd, Winter Park, FL 32789-3819</p>
-        </article>
+        </div></article>
         </div>
         <div class="handoff">
           <a class="btn-ghost" href="/winter-park-finder.html">See the full Winter Park list</a>

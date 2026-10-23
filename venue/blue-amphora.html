@@ -239,6 +239,13 @@ html[data-theme="light"] .hero.has-photo{--ink:#f4efe1;--headline:#f6edd6;--mute
 .hero-plate figcaption .hero-credit{display:block;color:#5c6a58;font-size:.72rem;margin-top:2px}
 .hero-plate figcaption a{color:#7c520c}
 .has-photo .hero-in{padding-bottom:18px}
+</style><style data-cardsys>
+/* cardsys: similar rail cards (2026-10-23 overhaul) */
+.vcard{display:flex;gap:12px;align-items:flex-start}
+.vcard .vthumb{flex:0 0 86px;width:86px;height:86px;border-radius:10px;object-fit:cover;display:block}
+.vcard .vmain{flex:1;min-width:0}
+.vcard .vsub{margin:4px 0 0;font-size:.86rem;line-height:1.45;color:var(--muted,#c6bba2)}
+@media (min-width:1000px){.vlist{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start}}
 </style></head>
   <body>
     <header class="hero has-photo">
@@ -269,41 +276,41 @@ html[data-theme="light"] .hero.has-photo{--ink:#f4efe1;--headline:#f6edd6;--mute
         </div>
       </section>
 
-      <section class="sec" id="similar">
+      <section class="sec" id="district-story"><p class="kicker">District Stories</p><h2>Orlando&#x27;s long memory</h2><p class="lede">The guide keeps the long memory of Orlando&#x27;s districts in one place: the names, the plats and the stories behind the streets.</p><p><a class="btn-ghost" href="/history.html">Browse the district stories &rarr;</a></p></section><section class="sec" id="similar">
         <p class="kicker">Similar Feel</p>
         <h2>More places with this feel</h2>
         <p class="lede">Matched by vibe, not by neighborhood: the places across Greater Orlando closest in spirit to Blue Amphora.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/nona-blue-modern-tavern.html">Nona Blue Modern Tavern</a></h3>
-          <p class="meta">American &middot; Lake Nona &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/nona-blue-modern-tavern.html">Nona Blue Modern Tavern</a></h3>
+          <p class="meta">American &middot; Lake Nona &middot; $$</p><p class="vsub">Lake Nona&#x27;s dressed-up tavern feels upscale but comfortable, with a big center bar and a kitchen cooking from scratch.</p>
           <p class="addr">9685 Lake Nona Village Pl, Orlando, FL 32827</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/bakery-1908.html">Bakery 1908</a></h3>
-          <p class="meta">Bakeries &middot; Orlando &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/bakery-1908.html">Bakery 1908</a></h3>
+          <p class="meta">Bakeries &middot; Orlando &middot; $$</p><p class="vsub">Second location of the Asian bakery whose original sits on East Colonial, this one on South Apopka Vineland Road in Orlando.</p>
           <p class="addr">Bakery 1908, 12399 S Apopka Vineland Rd, Orlando, FL 32836, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/charlies-bakery.html">Charlie&#x27;s Bakery</a></h3>
-          <p class="meta">Bakeries &middot; Orlando &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-charlies-bakery.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/charlies-bakery.html">Charlie&#x27;s Bakery</a></h3>
+          <p class="meta">Bakeries &middot; Orlando &middot; $$</p><p class="vsub">A Curry Ford go-to for generations, baking in the same shop since 1971.</p>
           <p class="addr">Charlie&#x27;s Bakery, 3213 Curry Ford Rd, Orlando, FL 32806, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/valhalla-bakery.html">Valhalla Bakery</a></h3>
-          <p class="meta">Bakeries &middot; Orlando &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/valhalla-bakery.html">Valhalla Bakery</a></h3>
+          <p class="meta">Bakeries &middot; Orlando &middot; $</p><p class="vsub">On Old Cheney Highway, a fully vegan bakery, with doughnuts, cupcakes and cakes made without dairy or egg and a case that keeps changing.</p>
           <p class="addr">5565 Old Cheney Hwy, Orlando, FL 32807</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/cafe-34-istanbul.html">Cafe 34 Istanbul</a></h3>
-          <p class="meta">Mediterranean &middot; International Drive &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-cafe-34-istanbul.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/cafe-34-istanbul.html">Cafe 34 Istanbul</a></h3>
+          <p class="meta">Mediterranean &middot; International Drive &middot; $$</p><p class="vsub">Cafe 34 Istanbul brings a lively, linger-worthy taste of Turkey to International Drive, all grill smoke and warm welcome.</p>
           <p class="addr">Cafe 34 Istanbul, 8255 International Dr, Orlando, FL 32819-9326, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/parva.html">Parva</a></h3>
-          <p class="meta">Latin &amp; Caribbean &middot; Sanford &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/parva.html">Parva</a></h3>
+          <p class="meta">Latin &amp; Caribbean &middot; Sanford &middot; $$</p><p class="vsub">Warm, homey Colombian bakery and cafe on West Lake Mary Boulevard in Sanford, where the pastry case leads the visit.</p>
           <p class="addr">Parva, 220 W Lake Mary Blvd, Sanford, FL 32773-5925, United States</p>
-        </article>
+        </div></article>
         </div>
       </section>
 
@@ -313,35 +320,35 @@ html[data-theme="light"] .hero.has-photo{--ink:#f4efe1;--headline:#f6edd6;--mute
         <p class="lede">Other places in Baldwin Park, closest to Blue Amphora first.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/la-revancha-cuban-cafe.html">La Revancha Cuban Cafe</a></h3>
-          <p class="meta">Latin &amp; Caribbean · Cuban &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/la-revancha-cuban-cafe.html">La Revancha Cuban Cafe</a></h3>
+          <p class="meta">Latin &amp; Caribbean · Cuban &middot; $$</p><p class="vsub">Pressing Cubans on East Colonial Drive since 1998, with salsa on the speakers and an unpretentious, relaxed room.</p>
           <p class="addr">7339 E Colonial Dr, Orlando, FL 32807</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/valhalla-bakery.html">Valhalla Bakery</a></h3>
-          <p class="meta">Bakeries · Bakery &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/valhalla-bakery.html">Valhalla Bakery</a></h3>
+          <p class="meta">Bakeries · Bakery &middot; $</p><p class="vsub">On Old Cheney Highway, a fully vegan bakery, with doughnuts, cupcakes and cakes made without dairy or egg and a case that keeps changing.</p>
           <p class="addr">5565 Old Cheney Hwy, Orlando, FL 32807</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/golden-hour.html">Golden Hour Wine</a></h3>
-          <p class="meta">Bars &amp; lounges · Wine Bar &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-golden-hour.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/golden-hour.html">Golden Hour Wine</a></h3>
+          <p class="meta">Bars &amp; lounges · Wine Bar &middot; $$</p><p class="vsub">A small, intimate natural wine shop and bar in Baldwin Park pouring responsibly farmed, small-production wines by the taste.</p>
           <p class="addr">Golden Hour Wine, 1560 Lake Baldwin Ln, Orlando, FL 32814-6661</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/camille.html">Camille</a></h3>
-          <p class="meta">Noodles &amp; Southeast Asian · Vietnamese &middot; $$$$</p>
+          <img class="vthumb" src="/assets/venue-camille.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/camille.html">Camille</a></h3>
+          <p class="meta">Noodles &amp; Southeast Asian · Vietnamese &middot; $$$$</p><p class="vsub">Chef Tung Phan named this Baldwin Park counter for his daughter, pairing Vietnamese flavors with French forms in an intimate room.</p>
           <p class="addr">Camille, 4962 New Broad St, Orlando, FL 32814-6415</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/tactical-brewing-company.html">Tactical Brewing Company</a></h3>
-          <p class="meta">Breweries · Brewery &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-tactical-brewing-company.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/tactical-brewing-company.html">Tactical Brewing Company</a></h3>
+          <p class="meta">Breweries · Brewery &middot; $$</p><p class="vsub">Veteran-founded brewery on New Broad Street in Baldwin Park, pouring with a playful streak, especially in its sours.</p>
           <p class="addr">Tactical Brewing Company, 4882 New Broad St, Orlando, FL 32814-6628, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/osprey.html">The Osprey</a></h3>
-          <p class="meta">Seafood &middot; $$$</p>
+          <img class="vthumb" src="/assets/venue-osprey.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/osprey.html">The Osprey</a></h3>
+          <p class="meta">Seafood &middot; $$$</p><p class="vsub">On New Broad Street in Baldwin Park, an open kitchen and buzzing central bar anchor coastal cooking led by the oyster bar.</p>
           <p class="addr">The Osprey, 4899 New Broad St, Orlando, FL 32814-6629</p>
-        </article>
+        </div></article>
         </div>
         <div class="handoff">
           <a class="btn-ghost" href="/baldwin-park-finder.html">See the full Baldwin Park list</a>

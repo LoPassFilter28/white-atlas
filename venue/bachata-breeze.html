@@ -216,7 +216,14 @@
 .quote figcaption{margin-top:10px;font-size:.82rem;color:var(--muted)}
 .quote figcaption a{color:var(--accent-ink);font-weight:700}
     </style>
-  </head>
+  <style data-cardsys>
+/* cardsys: similar rail cards (2026-10-23 overhaul) */
+.vcard{display:flex;gap:12px;align-items:flex-start}
+.vcard .vthumb{flex:0 0 86px;width:86px;height:86px;border-radius:10px;object-fit:cover;display:block}
+.vcard .vmain{flex:1;min-width:0}
+.vcard .vsub{margin:4px 0 0;font-size:.86rem;line-height:1.45;color:var(--muted,#c6bba2)}
+@media (min-width:1000px){.vlist{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start}}
+</style></head>
   <body>
     <header class="hero">
       <div class="hero-in">
@@ -260,41 +267,41 @@
         </div>
       </section>
 
-      <section class="sec" id="similar">
+      <section class="sec" id="district-story"><p class="kicker">District Stories</p><h2>Orlando&#x27;s long memory</h2><p class="lede">The guide keeps the long memory of Orlando&#x27;s districts in one place: the names, the plats and the stories behind the streets.</p><p><a class="btn-ghost" href="/history.html">Browse the district stories &rarr;</a></p></section><section class="sec" id="similar">
         <p class="kicker">Similar Feel</p>
         <h2>More places with this feel</h2>
         <p class="lede">Matched by vibe, not by neighborhood: the places across Greater Orlando closest in spirit to Bachata Breeze Restaurant.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/sazoncito-latin-food.html">Sazoncito Latin Food</a></h3>
-          <p class="meta">Latin & Caribbean &middot; Conway &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/sazoncito-latin-food.html">Sazoncito Latin Food</a></h3>
+          <p class="meta">Latin & Caribbean &middot; Conway &middot; $</p><p class="vsub">A humble Conway counter serving Dominican comfort food that guests describe as tasting like home.</p>
           <p class="addr">4542 S Semoran Blvd, Orlando, FL 32822</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/el-bloque-407.html">El Bloque 407</a></h3>
-          <p class="meta">Latin & Caribbean &middot; Sand Lake &middot; $</p>
+          <img class="vthumb" src="/assets/venue-el-bloque-407.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/el-bloque-407.html">El Bloque 407</a></h3>
+          <p class="meta">Latin & Caribbean &middot; Sand Lake &middot; $</p><p class="vsub">A corner of Sherman Avenue transplanted to Sand Lake Road, with the same griddle, recipes, and people from Upper Manhattan.</p>
           <p class="addr">730 W Sand Lake Rd, Unit 30, Orlando, FL 32809</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/el-colmadon.html">El Colmadon</a></h3>
-          <p class="meta">Latin & Caribbean &middot; Downtown North &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/el-colmadon.html">El Colmadon</a></h3>
+          <p class="meta">Latin & Caribbean &middot; Downtown North &middot; $$</p><p class="vsub">A Dominican counter on North Magnolia named for the colmadón, the corner store back home that feeds the whole block.</p>
           <p class="addr">743 N Magnolia Ave, Orlando, FL 32803</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/pio-pio-latin-cuisine.html">Pio Pio Latin Cuisine</a></h3>
-          <p class="meta">Latin & Caribbean &middot; Orlando &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-pio-pio-latin-cuisine.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/pio-pio-latin-cuisine.html">Pio Pio Latin Cuisine</a></h3>
+          <p class="meta">Latin & Caribbean &middot; Orlando &middot; $$</p><p class="vsub">On South Semoran, the Colombian staple locals lean on, a warm, family-style room where plates land generous and homestyle.</p>
           <p class="addr">2259 S Semoran Blvd, Orlando, FL 32822</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/el-coqui-ninja-restaurant.html">El Coqui Ninja Restaurant</a></h3>
-          <p class="meta">Latin & Caribbean &middot; Orlando &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-el-coqui-ninja-restaurant.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/el-coqui-ninja-restaurant.html">El Coqui Ninja Restaurant</a></h3>
+          <p class="meta">Latin & Caribbean &middot; Orlando &middot; $$</p><p class="vsub">Puerto Rican soul meets Asian comfort on Curry Ford, and the mashup is the whole point.</p>
           <p class="addr">El Coqui Ninja Restaurant, 3097 Curry Ford Rd, Orlando, FL 32806-3301, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/tropico-mofongo.html">Tropico Mofongo</a></h3>
-          <p class="meta">Latin & Caribbean &middot; Kissimmee &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/tropico-mofongo.html">Tropico Mofongo</a></h3>
+          <p class="meta">Latin & Caribbean &middot; Kissimmee &middot; $$</p><p class="vsub">Bright and cheerful in Kissimmee, built around Puerto Rican mofongo of plantain, chicharron, and garlic, like a grandmother&#x27;s cooking.</p>
           <p class="addr">Tropico Mofongo, 3160 Vineland Rd, Kissimmee, FL 34746-4657, United States</p>
-        </article>
+        </div></article>
         </div>
       </section>
 
@@ -304,35 +311,35 @@
         <p class="lede">Other places in Hourglass, closest to Bachata Breeze Restaurant first.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/pio-pio-latin-cuisine.html">Pio Pio Latin Cuisine</a></h3>
-          <p class="meta">Latin &amp; Caribbean &middot; Latin &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-pio-pio-latin-cuisine.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/pio-pio-latin-cuisine.html">Pio Pio Latin Cuisine</a></h3>
+          <p class="meta">Latin &amp; Caribbean &middot; Latin &middot; $$</p><p class="vsub">On South Semoran, the Colombian staple locals lean on, a warm, family-style room where plates land generous and homestyle.</p>
           <p class="addr">2259 S Semoran Blvd, Orlando, FL 32822</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/marios-pizza.html">Mario&#x27;s Pizza</a></h3>
-          <p class="meta">Pizza &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/marios-pizza.html">Mario&#x27;s Pizza</a></h3>
+          <p class="meta">Pizza &middot; $$</p><p class="vsub">Family-run on Curry Ford Road, where guests say the pies taste like real pizza from New York.</p>
           <p class="addr">Mario&#x27;s Pizza, 7213 Curry Ford Rd, Orlando, FL 32822-5805, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/twistee-treat.html">Twistee Treat</a></h3>
-          <p class="meta">Sweets &middot; Ice Cream &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/twistee-treat.html">Twistee Treat</a></h3>
+          <p class="meta">Sweets &middot; Ice Cream &middot; $</p><p class="vsub">A towering ice-cream cone building marks this Curry Ford Road spot, an old-school soft-serve landmark pouring since 1983.</p>
           <p class="addr">Twistee Treat, 4500 Curry Ford Rd, Orlando, FL 32812</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/grocery-hermanos.html">Grocery Los Hermanos</a></h3>
-          <p class="meta">Mexican &middot; Taqueria &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/grocery-hermanos.html">Grocery Los Hermanos</a></h3>
+          <p class="meta">Mexican &middot; Taqueria &middot; $</p><p class="vsub">A family-run market and taqueria on Curry Ford where guests say the food tastes homemade and very fresh.</p>
           <p class="addr">4130 Curry Ford Rd, Orlando, FL 32806</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/pizza-bruno.html">Pizza Bruno</a></h3>
-          <p class="meta">Pizza &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-pizza-bruno.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/pizza-bruno.html">Pizza Bruno</a></h3>
+          <p class="meta">Pizza &middot; $$</p><p class="vsub">On Curry Ford, Bruno Zacchini&#x27;s wood-fired neighborhood room does blistered, naturally leavened crust and bold flavors.</p>
           <p class="addr">Pizza Bruno, 3990 Curry Ford Rd, Orlando, FL 32806-2702</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/zorbas-kitchen.html">Zorba&#x27;s Kitchen</a></h3>
-          <p class="meta">Mediterranean &middot; Greek &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/zorbas-kitchen.html">Zorba&#x27;s Kitchen</a></h3>
+          <p class="meta">Mediterranean &middot; Greek &middot; $$</p><p class="vsub">Small, family-run Greek kitchen on Lake Underhill Road where, as one guest put it, the chef cooks like someone&#x27;s Greek grandma.</p>
           <p class="addr">Zorba&#x27;s Kitchen, 7325 Lake Underhill Rd, Orlando, FL 32822-6061, United States</p>
-        </article>
+        </div></article>
         </div>
         <div class="handoff">
           <a class="btn-ghost" href="/hourglass-finder.html">See the full Hourglass list</a>

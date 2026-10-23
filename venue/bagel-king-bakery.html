@@ -211,7 +211,14 @@
       .vcard .addr { margin: 0; color: var(--muted); font-size: .9rem; }
       @media (max-width: 640px) { .facts { grid-template-columns: 1fr; } }
     </style>
-  </head>
+  <style data-cardsys>
+/* cardsys: similar rail cards (2026-10-23 overhaul) */
+.vcard{display:flex;gap:12px;align-items:flex-start}
+.vcard .vthumb{flex:0 0 86px;width:86px;height:86px;border-radius:10px;object-fit:cover;display:block}
+.vcard .vmain{flex:1;min-width:0}
+.vcard .vsub{margin:4px 0 0;font-size:.86rem;line-height:1.45;color:var(--muted,#c6bba2)}
+@media (min-width:1000px){.vlist{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start}}
+</style></head>
   <body>
     <header class="hero">
       <div class="hero-in">
@@ -239,41 +246,41 @@
         </div>
       </section>
 
-      <section class="sec" id="similar">
+      <section class="sec" id="district-story"><p class="kicker">District Stories</p><h2>Orlando&#x27;s long memory</h2><p class="lede">The guide keeps the long memory of Orlando&#x27;s districts in one place: the names, the plats and the stories behind the streets.</p><p><a class="btn-ghost" href="/history.html">Browse the district stories &rarr;</a></p></section><section class="sec" id="similar">
         <p class="kicker">Similar Feel</p>
         <h2>More places with this feel</h2>
         <p class="lede">Matched by vibe, not by neighborhood: the places across Greater Orlando closest in spirit to Bagel King Bakery.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/lukes-new-york-bagels.html">Luke&#x27;s New York Bagels</a></h3>
-          <p class="meta">Bakeries &middot; Ivanhoe Village &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/lukes-new-york-bagels.html">Luke&#x27;s New York Bagels</a></h3>
+          <p class="meta">Bakeries &middot; Ivanhoe Village &middot; $$</p><p class="vsub">Gainesville-born, New York style bagels, now at a stall inside City Food Hall in Ivanhoe Village.</p>
           <p class="addr">1412 Alden Rd, Orlando, FL 32803</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/bakery-1908.html">Bakery 1908</a></h3>
-          <p class="meta">Bakeries &middot; Orlando &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/bakery-1908.html">Bakery 1908</a></h3>
+          <p class="meta">Bakeries &middot; Orlando &middot; $$</p><p class="vsub">Second location of the Asian bakery whose original sits on East Colonial, this one on South Apopka Vineland Road in Orlando.</p>
           <p class="addr">Bakery 1908, 12399 S Apopka Vineland Rd, Orlando, FL 32836, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/buttermilk.html">Buttermilk Bakery</a></h3>
-          <p class="meta">Bakeries &middot; Winter Park &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-buttermilk.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/buttermilk.html">Buttermilk Bakery</a></h3>
+          <p class="meta">Bakeries &middot; Winter Park &middot; $$</p><p class="vsub">A cozy Winter Park bakery where the case fills fresh every morning and choosing just a few treats is the hard part.</p>
           <p class="addr">Buttermilk Bakery, 1198 N Orange Ave, Winter Park, FL 32789-4908</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/charlies-bakery.html">Charlie&#x27;s Bakery</a></h3>
-          <p class="meta">Bakeries &middot; Orlando &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-charlies-bakery.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/charlies-bakery.html">Charlie&#x27;s Bakery</a></h3>
+          <p class="meta">Bakeries &middot; Orlando &middot; $$</p><p class="vsub">A Curry Ford go-to for generations, baking in the same shop since 1971.</p>
           <p class="addr">Charlie&#x27;s Bakery, 3213 Curry Ford Rd, Orlando, FL 32806, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/beefy-king.html">Beefy King</a></h3>
-          <p class="meta">Burgers &amp; sandwiches &middot; Milk District &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/beefy-king.html">Beefy King</a></h3>
+          <p class="meta">Burgers &amp; sandwiches &middot; Milk District &middot; $</p><p class="vsub">Orlando&#x27;s old-school roast beef counter, steaming since 1968 and proudly no-frills about it.</p>
           <p class="addr">Beefy King, 424 N Bumby Ave, Orlando, FL 32803-6028</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/brooklyn-water-bagel.html">Brooklyn Water Bagel</a></h3>
-          <p class="meta">Bakeries &middot; Lake Nona &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/brooklyn-water-bagel.html">Brooklyn Water Bagel</a></h3>
+          <p class="meta">Bakeries &middot; Lake Nona &middot; $$</p><p class="vsub">On Narcoossee Road in Lake Nona, bagels are boiled and baked New York style, with the water treated to mimic back home.</p>
           <p class="addr">Brooklyn Water Bagel, 9368 Narcoossee Rd, Orlando, FL 32827-5701, United States</p>
-        </article>
+        </div></article>
         </div>
       </section>
 
@@ -283,35 +290,35 @@
         <p class="lede">Other places in Maitland, closest to Bagel King Bakery first.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/jazz-tastings.html">Jazz Tastings</a></h3>
-          <p class="meta">Nightlife &amp; music · Jazz Supper Club &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-jazz-tastings.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/jazz-tastings.html">Jazz Tastings</a></h3>
+          <p class="meta">Nightlife &amp; music · Jazz Supper Club &middot; $$</p><p class="vsub">Maitland&#x27;s intimate supper club on Lake Ave, a low-lit room where dinner and the show share the same table.</p>
           <p class="addr">164 Lake Ave, Maitland, FL 32751</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/permanent-vacation.html">Permanent Vacation</a></h3>
-          <p class="meta">Bars &amp; lounges · Bar &middot; $$$</p>
+          <div class="vmain"><h3><a href="/venue/permanent-vacation.html">Permanent Vacation</a></h3>
+          <p class="meta">Bars &amp; lounges · Bar &middot; $$$</p><p class="vsub">Behind an Employees Only door inside the Copper Rocket, this spot trades the sports bar for dark, theatrical tiki.</p>
           <p class="addr">Permanent Vacation, 106 Lake Ave, Maitland, FL 32751-6424</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/lim-ros-thai-restaurant.html">Lim Ros Thai Restaurant</a></h3>
-          <p class="meta">Noodles &amp; Southeast Asian · Thai &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/lim-ros-thai-restaurant.html">Lim Ros Thai Restaurant</a></h3>
+          <p class="meta">Noodles &amp; Southeast Asian · Thai &middot; $$</p><p class="vsub">Lim Ros, meaning to taste in Thai, serves modern, northern-leaning Thai cooking in an elegant, warm Maitland dining room.</p>
           <p class="addr">Lim Ros Thai Restaurant, 933 Orlando Ave S, Maitland, FL 32751</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/antonios-maitland.html">Antonio&#x27;s</a></h3>
-          <p class="meta">Italian · Italian Restaurant &middot; $$$</p>
+          <img class="vthumb" src="/assets/venue-antonios-maitland.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/antonios-maitland.html">Antonio&#x27;s</a></h3>
+          <p class="meta">Italian · Italian Restaurant &middot; $$$</p><p class="vsub">Upstairs at Antonio&#x27;s, Maitland&#x27;s old-school special-occasion room has white tablecloths overlooking Lake Lily.</p>
           <p class="addr">611 S Orlando Ave, Maitland, FL 32751</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/antonios-market-cafe.html">Antonio&#x27;s Market &amp; Cafe</a></h3>
-          <p class="meta">Italian · Italian Market &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/antonios-market-cafe.html">Antonio&#x27;s Market &amp; Cafe</a></h3>
+          <p class="meta">Italian · Italian Market &middot; $$</p><p class="vsub">Downstairs, the casual half: a cafe and boutique Italian market under the same roof as the upstairs dining room.</p>
           <p class="addr">611 S Orlando Ave, Maitland, FL 32751</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/lukes-kitchen.html">Lukes Kitchen and Bar</a></h3>
-          <p class="meta">American &middot; $$$</p>
+          <div class="vmain"><h3><a href="/venue/lukes-kitchen.html">Lukes Kitchen and Bar</a></h3>
+          <p class="meta">American &middot; $$$</p><p class="vsub">From the team behind Luma on Park and Prato, this Maitland spot does playful American cooking with an open kitchen and praised patio.</p>
           <p class="addr">Luke&#x27;s Kitchen and Bar, 640 Orlando Ave S, Maitland, FL 32751-5612</p>
-        </article>
+        </div></article>
         </div>
         <div class="handoff">
           <a class="btn-ghost" href="/maitland-finder.html">See the full Maitland list</a>

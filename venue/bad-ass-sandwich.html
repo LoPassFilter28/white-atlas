@@ -211,7 +211,14 @@
       .vcard .addr { margin: 0; color: var(--muted); font-size: .9rem; }
       @media (max-width: 640px) { .facts { grid-template-columns: 1fr; } }
     </style>
-  </head>
+  <style data-cardsys>
+/* cardsys: similar rail cards (2026-10-23 overhaul) */
+.vcard{display:flex;gap:12px;align-items:flex-start}
+.vcard .vthumb{flex:0 0 86px;width:86px;height:86px;border-radius:10px;object-fit:cover;display:block}
+.vcard .vmain{flex:1;min-width:0}
+.vcard .vsub{margin:4px 0 0;font-size:.86rem;line-height:1.45;color:var(--muted,#c6bba2)}
+@media (min-width:1000px){.vlist{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start}}
+</style></head>
   <body>
     <header class="hero">
       <div class="hero-in">
@@ -236,46 +243,46 @@
         <div class="actions">
           <a class="action" href="https://www.google.com/maps/search/?api=1&amp;query=Bad+AS%27s+Sandwich+Bad+AS%27s+Sandwich%2C+207+N+Primrose+Dr%2C+Orlando%2C+FL+32803-5819%2C+United+States" target="_blank" rel="noopener">Directions &rarr;</a>
           <a class="action" href="/archive.html?venue=bad-ass-sandwich">Open in the full finder</a>
-          <a class="action" href="/milk-district-guide.html">Read the Milk District story</a>
+          <a class="action" href="/history/milk-district.html">Read the Milk District story</a>
           <a class="action action-ig" href="https://www.instagram.com/badass_sandwich" target="_blank" rel="noopener"><svg class="ig-glyph" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="vertical-align:-2px;margin-right:6px"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg> Instagram</a>
         </div>
       </section>
 
-      <section class="sec" id="similar">
+      <section class="sec" id="district-story"><p class="kicker">District Story</p><h2>The story of Milk District</h2><p class="lede">One cow, twenty acres and a dairy on the edge of town: the neighborhood that grew up around the T.G. Lee plant and took its name from the milk.</p><p><a class="btn-ghost" href="/history/milk-district.html">Read the Milk District story &rarr;</a></p></section><section class="sec" id="similar">
         <p class="kicker">Similar Feel</p>
         <h2>More places with this feel</h2>
         <p class="lede">Matched by vibe, not by neighborhood: the places across Greater Orlando closest in spirit to Bad AS&#x27;s Sandwich.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/milk-district-eats-tour.html">Milk District Eats Food Tour</a></h3>
-          <p class="meta">Attractions &middot; Milk District &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/milk-district-eats-tour.html">Milk District Eats Food Tour</a></h3>
+          <p class="meta">Attractions &middot; Milk District &middot; $$</p><p class="vsub">A small-group walking food tour through the dairy-named district east of downtown, personal, easygoing and rich with local history.</p>
           <p class="addr">201 N Bumby Ave, Orlando, FL 32803 (meets in front of the Milkhouse)</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/swine-sons.html">Swine &amp; Sons</a></h3>
-          <p class="meta">Burgers &amp; sandwiches &middot; Milk District &middot; $</p>
+          <img class="vthumb" src="/assets/venue-swine-sons.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/swine-sons.html">Swine &amp; Sons</a></h3>
+          <p class="meta">Burgers &amp; sandwiches &middot; Milk District &middot; $</p><p class="vsub">Inside the Milkhouse on Bumby Avenue, Swine &amp; Sons runs a casual sandwich counter with food hall energy and a pop punk playlist.</p>
           <p class="addr">201 N Bumby Ave, Orlando, FL 32803</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/beefy-king.html">Beefy King</a></h3>
-          <p class="meta">Burgers &amp; sandwiches &middot; Milk District &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/beefy-king.html">Beefy King</a></h3>
+          <p class="meta">Burgers &amp; sandwiches &middot; Milk District &middot; $</p><p class="vsub">Orlando&#x27;s old-school roast beef counter, steaming since 1968 and proudly no-frills about it.</p>
           <p class="addr">Beefy King, 424 N Bumby Ave, Orlando, FL 32803-6028</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/aj-s-press.html">AJ&#x27;s Press</a></h3>
-          <p class="meta">Burgers &amp; sandwiches &middot; Longwood &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/aj-s-press.html">AJ&#x27;s Press</a></h3>
+          <p class="meta">Burgers &amp; sandwiches &middot; Longwood &middot; $</p><p class="vsub">Family-run Longwood counter built around the press, where sandwiches come off bolillo or telera soft yet crispy at the edges.</p>
           <p class="addr">182 W State Rd 434 #1008, Longwood, FL 32750</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/black-magic-pizza.html">Black Magic Pizza</a></h3>
-          <p class="meta">Pizza &middot; Milk District &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/black-magic-pizza.html">Black Magic Pizza</a></h3>
+          <p class="meta">Pizza &middot; Milk District &middot; $$</p><p class="vsub">Punk rock pizza window on Bumby Avenue, playful in name, serious about dough, with basically no seating and parking that fills fast.</p>
           <p class="addr">Black Magic Pizza, 121 N Bumby Ave, Orlando, FL 32803</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/tasty-takeover.html">Tasty Takeover</a></h3>
-          <p class="meta">Restaurants &middot; Milk District &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-tasty-takeover.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/tasty-takeover.html">Tasty Takeover</a></h3>
+          <p class="meta">Restaurants &middot; Milk District &middot; $$</p><p class="vsub">Every Tuesday night, food trucks take over the lots behind the Milk District bars for an easygoing block party.</p>
           <p class="addr">2424 E Robinson St, Orlando, FL 32803</p>
-        </article>
+        </div></article>
         </div>
       </section>
 
@@ -285,35 +292,35 @@
         <p class="lede">Other places in Milk District, Local Picks first, then the closest to Bad AS&#x27;s Sandwich.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/iron-cow.html">Iron Cow</a> <span class="badge">Local Pick</span></h3>
-          <p class="meta">Japanese &amp; sushi · Sushi &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/iron-cow.html">Iron Cow</a> <span class="badge">Local Pick</span></h3>
+          <p class="meta">Japanese &amp; sushi · Sushi &middot; $$</p><p class="vsub">Part hi-fi sushi lounge, part underground club, the Milk District&#x27;s good contradiction.</p>
           <p class="addr">2438 E Robinson St, Suite A, Orlando, FL 32803</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/ottos.html">Otto&#x27;s High Dive</a></h3>
-          <p class="meta">Latin &amp; Caribbean · Cuban &middot; $$$</p>
+          <img class="vthumb" src="/assets/venue-ottos.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/ottos.html">Otto&#x27;s High Dive</a></h3>
+          <p class="meta">Latin &amp; Caribbean · Cuban &middot; $$$</p><p class="vsub">A vintage-inspired Milk District rum bar with Bib Gourmand recognition, dim and greenery-lined and built for date night.</p>
           <p class="addr">2304 E Robinson St, Orlando, FL 32803</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/tasty-takeover.html">Tasty Takeover</a></h3>
-          <p class="meta">Restaurants · Food Truck Event &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-tasty-takeover.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/tasty-takeover.html">Tasty Takeover</a></h3>
+          <p class="meta">Restaurants · Food Truck Event &middot; $$</p><p class="vsub">Every Tuesday night, food trucks take over the lots behind the Milk District bars for an easygoing block party.</p>
           <p class="addr">2424 E Robinson St, Orlando, FL 32803</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/swine-sons.html">Swine &amp; Sons</a></h3>
-          <p class="meta">Burgers &amp; sandwiches · Sandwiches &middot; $</p>
+          <img class="vthumb" src="/assets/venue-swine-sons.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/swine-sons.html">Swine &amp; Sons</a></h3>
+          <p class="meta">Burgers &amp; sandwiches · Sandwiches &middot; $</p><p class="vsub">Inside the Milkhouse on Bumby Avenue, Swine &amp; Sons runs a casual sandwich counter with food hall energy and a pop punk playlist.</p>
           <p class="addr">201 N Bumby Ave, Orlando, FL 32803</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/black-magic-pizza.html">Black Magic Pizza</a></h3>
-          <p class="meta">Pizza &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/black-magic-pizza.html">Black Magic Pizza</a></h3>
+          <p class="meta">Pizza &middot; $$</p><p class="vsub">Punk rock pizza window on Bumby Avenue, playful in name, serious about dough, with basically no seating and parking that fills fast.</p>
           <p class="addr">Black Magic Pizza, 121 N Bumby Ave, Orlando, FL 32803</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/beefy-king.html">Beefy King</a></h3>
-          <p class="meta">Burgers &amp; sandwiches · Sandwiches &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/beefy-king.html">Beefy King</a></h3>
+          <p class="meta">Burgers &amp; sandwiches · Sandwiches &middot; $</p><p class="vsub">Orlando&#x27;s old-school roast beef counter, steaming since 1968 and proudly no-frills about it.</p>
           <p class="addr">Beefy King, 424 N Bumby Ave, Orlando, FL 32803-6028</p>
-        </article>
+        </div></article>
         </div>
         <div class="handoff">
           <a class="btn-ghost" href="/milk-district-finder.html">See the full Milk District list</a>

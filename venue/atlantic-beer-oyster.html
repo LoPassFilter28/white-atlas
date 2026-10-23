@@ -211,7 +211,14 @@
       .vcard .addr { margin: 0; color: var(--muted); font-size: .9rem; }
       @media (max-width: 640px) { .facts { grid-template-columns: 1fr; } }
     </style>
-  </head>
+  <style data-cardsys>
+/* cardsys: similar rail cards (2026-10-23 overhaul) */
+.vcard{display:flex;gap:12px;align-items:flex-start}
+.vcard .vthumb{flex:0 0 86px;width:86px;height:86px;border-radius:10px;object-fit:cover;display:block}
+.vcard .vmain{flex:1;min-width:0}
+.vcard .vsub{margin:4px 0 0;font-size:.86rem;line-height:1.45;color:var(--muted,#c6bba2)}
+@media (min-width:1000px){.vlist{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start}}
+</style></head>
   <body>
     <header class="hero">
       <div class="hero-in">
@@ -236,46 +243,46 @@
         <div class="actions">
           <a class="action" href="https://www.google.com/maps/search/?api=1&amp;query=Atlantic+Beer+%26+Oyster+358+N+Park+Ave+Ste+B%2C+Winter+Park%2C+FL+32789" target="_blank" rel="noopener">Directions &rarr;</a>
           <a class="action" href="/archive.html?venue=atlantic-beer-oyster">Open in the full finder</a>
-          <a class="action" href="/winter-park-district-guide.html">Read the Winter Park story</a>
+          <a class="action" href="/history/winter-park.html">Read the Winter Park story</a>
           <a class="action action-ig" href="https://www.instagram.com/atlanticbeerandoyster" target="_blank" rel="noopener"><svg class="ig-glyph" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="vertical-align:-2px;margin-right:6px"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg> Instagram</a>
         </div>
       </section>
 
-      <section class="sec" id="similar">
+      <section class="sec" id="district-story"><p class="kicker">District Story</p><h2>The story of Winter Park</h2><p class="lede">A park built for the winter, drawn on paper in 1881, and still legible in every street you walk today.</p><p><a class="btn-ghost" href="/history/winter-park.html">Read the Winter Park story &rarr;</a></p></section><section class="sec" id="similar">
         <p class="kicker">Similar Feel</p>
         <h2>More places with this feel</h2>
         <p class="lede">Matched by vibe, not by neighborhood: the places across Greater Orlando closest in spirit to Atlantic Beer &amp; Oyster.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/brunos-oysters.html">Bruno&#x27;s Oysters</a></h3>
-          <p class="meta">Seafood &middot; Winter Garden &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/brunos-oysters.html">Bruno&#x27;s Oysters</a></h3>
+          <p class="meta">Seafood &middot; Winter Garden &middot; $$</p><p class="vsub">Inside Plant Street Market&#x27;s Barrel Room in Winter Garden, moody, rustic, and intimate around a small counter.</p>
           <p class="addr">Bruno&#x27;s Oysters, 426 W Plant St, Winter Garden, FL 34787, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/wine-room-park-avenue.html">The Wine Room on Park Avenue</a></h3>
-          <p class="meta">Bars &amp; lounges &middot; Winter Park &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-wine-room-park-avenue.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/wine-room-park-avenue.html">The Wine Room on Park Avenue</a></h3>
+          <p class="meta">Bars &amp; lounges &middot; Winter Park &middot; $$</p><p class="vsub">Wine tasting without the intimidation: load a Tasting Card and pour your own tastes, from a sip to a full glass, off a wall of wines.</p>
           <p class="addr">270 S Park Ave, Winter Park, FL 32789</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/imperial-on-park.html">The Imperial on Park</a></h3>
-          <p class="meta">Bars &amp; lounges &middot; Winter Park &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-imperial-on-park.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/imperial-on-park.html">The Imperial on Park</a></h3>
+          <p class="meta">Bars &amp; lounges &middot; Winter Park &middot; $$</p><p class="vsub">Park Avenue&#x27;s neighborhood bar, warm and laid back, with boutique wines, craft beers and cocktails built on Winter Park Distillery spirits.</p>
           <p class="addr">136 S Park Ave, Winter Park, FL 32789</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/lombardi-s-seafood.html">Lombardi&#x27;s Seafood</a></h3>
-          <p class="meta">Seafood &middot; Winter Park &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-lombardi-s-seafood.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/lombardi-s-seafood.html">Lombardi&#x27;s Seafood</a></h3>
+          <p class="meta">Seafood &middot; Winter Park &middot; $$</p><p class="vsub">Old-school, family-run fish market on Fairbanks Avenue in Winter Park, the counter guests call the freshest fish in town.</p>
           <p class="addr">1888 W Fairbanks Ave, Winter Park, FL 32789</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/osprey.html">The Osprey</a></h3>
-          <p class="meta">Seafood &middot; Baldwin Park &middot; $$$</p>
+          <img class="vthumb" src="/assets/venue-osprey.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/osprey.html">The Osprey</a></h3>
+          <p class="meta">Seafood &middot; Baldwin Park &middot; $$$</p><p class="vsub">On New Broad Street in Baldwin Park, an open kitchen and buzzing central bar anchor coastal cooking led by the oyster bar.</p>
           <p class="addr">The Osprey, 4899 New Broad St, Orlando, FL 32814-6629</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/boca-kitchen-bar-market.html">Boca Kitchen Bar Market</a></h3>
-          <p class="meta">American &middot; Winter Park &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-boca-kitchen-bar-market.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/boca-kitchen-bar-market.html">Boca Kitchen Bar Market</a></h3>
+          <p class="meta">American &middot; Winter Park &middot; $$</p><p class="vsub">Park Avenue cooking built around what Florida farms deliver, a farm-to-table menu of handcrafted plates that shifts with the market.</p>
           <p class="addr">358 N Park Ave, Winter Park, FL 32789</p>
-        </article>
+        </div></article>
         </div>
       </section>
 
@@ -285,35 +292,35 @@
         <p class="lede">Other places in Winter Park, Local Picks first, then the closest to Atlantic Beer &amp; Oyster.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/ava.html">AVA Mediterranean</a> <span class="badge">Local Pick</span></h3>
-          <p class="meta">Mediterranean &middot; $$$</p>
+          <img class="vthumb" src="/assets/venue-ava.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/ava.html">AVA Mediterranean</a> <span class="badge">Local Pick</span></h3>
+          <p class="meta">Mediterranean &middot; $$$</p><p class="vsub">A glamorous Greek agora on Park Avenue, sophisticated and high-energy from the moment you sit down.</p>
           <p class="addr">290 S Park Ave, Winter Park, FL 32789</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/imperial-on-park.html">The Imperial on Park</a> <span class="badge">Local Pick</span></h3>
-          <p class="meta">Bars &amp; lounges · Wine Bar &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-imperial-on-park.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/imperial-on-park.html">The Imperial on Park</a> <span class="badge">Local Pick</span></h3>
+          <p class="meta">Bars &amp; lounges · Wine Bar &middot; $$</p><p class="vsub">Park Avenue&#x27;s neighborhood bar, warm and laid back, with boutique wines, craft beers and cocktails built on Winter Park Distillery spirits.</p>
           <p class="addr">136 S Park Ave, Winter Park, FL 32789</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/prato.html">Prato</a> <span class="badge">Local Pick</span></h3>
-          <p class="meta">Italian &middot; $$$</p>
+          <div class="vmain"><h3><a href="/venue/prato.html">Prato</a> <span class="badge">Local Pick</span></h3>
+          <p class="meta">Italian &middot; $$$</p><p class="vsub">Italian the Park Avenue way: rustic yet upscale, exposed brick and warm light, house-made pastas and wood-fired pizzas.</p>
           <p class="addr">Prato, 124 N Park Ave, Winter Park, FL 32789</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/boca-kitchen-bar-market.html">Boca Kitchen Bar Market</a></h3>
-          <p class="meta">American &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-boca-kitchen-bar-market.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/boca-kitchen-bar-market.html">Boca Kitchen Bar Market</a></h3>
+          <p class="meta">American &middot; $$</p><p class="vsub">Park Avenue cooking built around what Florida farms deliver, a farm-to-table menu of handcrafted plates that shifts with the market.</p>
           <p class="addr">358 N Park Ave, Winter Park, FL 32789</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/garp-and-fuss.html">Garp &amp; Fuss</a></h3>
-          <p class="meta">American · Gastropub &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/garp-and-fuss.html">Garp &amp; Fuss</a></h3>
+          <p class="meta">American · Gastropub &middot; $$</p><p class="vsub">You enter through a blue door in Winter Park&#x27;s Hidden Garden, and the glass atrium does the rest, secret-feeling even when packed.</p>
           <p class="addr">348 N Park Ave #5, Winter Park, FL 32789</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/morse-museum.html">Charles Hosmer Morse Museum of American Art</a></h3>
-          <p class="meta">Museums &amp; landmarks · Museum &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/morse-museum.html">Charles Hosmer Morse Museum of American Art</a></h3>
+          <p class="meta">Museums &amp; landmarks · Museum &middot; $</p><p class="vsub">Guests call this small Park Avenue museum a jewel box of Louis Comfort Tiffany, with a big impact for its size.</p>
           <p class="addr">445 N Park Ave, Winter Park, FL 32789</p>
-        </article>
+        </div></article>
         </div>
         <div class="handoff">
           <a class="btn-ghost" href="/winter-park-finder.html">See the full Winter Park list</a>

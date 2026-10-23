@@ -211,7 +211,14 @@
       .vcard .addr { margin: 0; color: var(--muted); font-size: .9rem; }
       @media (max-width: 640px) { .facts { grid-template-columns: 1fr; } }
     </style>
-  </head>
+  <style data-cardsys>
+/* cardsys: similar rail cards (2026-10-23 overhaul) */
+.vcard{display:flex;gap:12px;align-items:flex-start}
+.vcard .vthumb{flex:0 0 86px;width:86px;height:86px;border-radius:10px;object-fit:cover;display:block}
+.vcard .vmain{flex:1;min-width:0}
+.vcard .vsub{margin:4px 0 0;font-size:.86rem;line-height:1.45;color:var(--muted,#c6bba2)}
+@media (min-width:1000px){.vlist{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start}}
+</style></head>
   <body>
     <header class="hero">
       <div class="hero-in">
@@ -239,31 +246,31 @@
         </div>
       </section>
 
-      <section class="sec" id="similar">
+      <section class="sec" id="district-story"><p class="kicker">District Stories</p><h2>Orlando&#x27;s long memory</h2><p class="lede">The guide keeps the long memory of Orlando&#x27;s districts in one place: the names, the plats and the stories behind the streets.</p><p><a class="btn-ghost" href="/history.html">Browse the district stories &rarr;</a></p></section><section class="sec" id="similar">
         <p class="kicker">Similar Feel</p>
         <h2>More places with this feel</h2>
         <p class="lede">Matched by vibe, not by neighborhood: the places across Greater Orlando closest in spirit to Bagel King Casselberry.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/bagel-king-bakery.html">Bagel King Bakery</a></h3>
-          <p class="meta">Bakeries &middot; Orlando &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/bagel-king-bakery.html">Bagel King Bakery</a></h3>
+          <p class="meta">Bakeries &middot; Orlando &middot; $$</p><p class="vsub">A working wholesale plant, not a retail shop, whose kettle-boiled bagels fill deli and cafe cases across Central Florida.</p>
           <p class="addr">Bagel King Bakery, 668 Kennedy Blvd W, Orlando, FL 32810-6255, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/sourdough-bread-house.html">Sourdough Bread House</a></h3>
-          <p class="meta">Bakeries &middot; Casselberry &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/sourdough-bread-house.html">Sourdough Bread House</a></h3>
+          <p class="meta">Bakeries &middot; Casselberry &middot; $$</p><p class="vsub">Cozy, family-owned Turkish bakery cafe in Casselberry built around slow-fermented sourdough guests say melts in your mouth.</p>
           <p class="addr">Sourdough Bread House, 5761 US-17-92, Casselberry, FL 32707-3819, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/brooklyn-water-bagel.html">Brooklyn Water Bagel</a></h3>
-          <p class="meta">Bakeries &middot; Lake Nona &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/brooklyn-water-bagel.html">Brooklyn Water Bagel</a></h3>
+          <p class="meta">Bakeries &middot; Lake Nona &middot; $$</p><p class="vsub">On Narcoossee Road in Lake Nona, bagels are boiled and baked New York style, with the water treated to mimic back home.</p>
           <p class="addr">Brooklyn Water Bagel, 9368 Narcoossee Rd, Orlando, FL 32827-5701, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/se7en-bites.html">Se7en Bites</a></h3>
-          <p class="meta">Bakeries &middot; Milk District &middot; $</p>
+          <img class="vthumb" src="/assets/venue-se7en-bites.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/se7en-bites.html">Se7en Bites</a></h3>
+          <p class="meta">Bakeries &middot; Milk District &middot; $</p><p class="vsub">Bustling, homey Southern bakery cafe on Primrose Drive, owner on the floor, running like a well-oiled machine.</p>
           <p class="addr">617 N Primrose Dr, Orlando, FL 32803</p>
-        </article>
+        </div></article>
         </div>
       </section>
 
@@ -273,35 +280,35 @@
         <p class="lede">Other places in Casselberry, closest to Bagel King Casselberry first.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/original-anthonys-ny-pizza.html">Original Anthony&#x27;s NY Pizza</a></h3>
-          <p class="meta">Pizza · New York Style Pizza &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/original-anthonys-ny-pizza.html">Original Anthony&#x27;s NY Pizza</a></h3>
+          <p class="meta">Pizza · New York Style Pizza &middot; $</p><p class="vsub">The self-declared original Anthony&#x27;s, slinging New York style pies since 1987 for Casselberry, Winter Park, and Maitland.</p>
           <p class="addr">Original Anthony&#x27;s NY Pizza, 1455 FL-436, Suite 105, Casselberry, FL 32707</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/aji-ceviche-bar-casselberry.html">Aji Ceviche Bar Casselberry</a></h3>
-          <p class="meta">Latin &amp; Caribbean · Peruvian &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/aji-ceviche-bar-casselberry.html">Aji Ceviche Bar Casselberry</a></h3>
+          <p class="meta">Latin &amp; Caribbean · Peruvian &middot; $$</p><p class="vsub">Bright and unpretentious on State Road 436 in Casselberry, a Peruvian ceviche bar built on lime, heat, and fresh fish.</p>
           <p class="addr">Aji Ceviche Bar Casselberry, 1436 State Road 436, Casselberry, FL 32707-6506, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/debbies-bar.html">Debbies Bar</a></h3>
-          <p class="meta">Bars &amp; lounges · Dive Bar &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/debbies-bar.html">Debbies Bar</a></h3>
+          <p class="meta">Bars &amp; lounges · Dive Bar &middot; $</p><p class="vsub">Debbies is a classic Casselberry dive on Semoran Boulevard, a small, old-school full liquor bar where the atmosphere stays fun and relaxing.</p>
           <p class="addr">Debbies Bar, 1490 FL-436, Casselberry, FL 32707</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/semoran-skateway.html">Semoran Skateway</a></h3>
-          <p class="meta">Attractions · Roller Skating Rink &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/semoran-skateway.html">Semoran Skateway</a></h3>
+          <p class="meta">Attractions · Roller Skating Rink &middot; $</p><p class="vsub">Family owned since 1978, the roller rink generations of Casselberry kids grew up in, now with lessons and adult rhythm nights.</p>
           <p class="addr">Semoran Skateway, 2670 Cassel Creek Blvd, Casselberry, FL 32707</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/aladdin-cafe.html">Aladdin Cafe</a></h3>
-          <p class="meta">Mediterranean · Lebanese &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-aladdin-cafe.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/aladdin-cafe.html">Aladdin Cafe</a></h3>
+          <p class="meta">Mediterranean · Lebanese &middot; $$</p><p class="vsub">A family owned Lebanese kitchen on Semoran Blvd, 100 percent halal, dough hand-stretched daily and eggplants charred over flame.</p>
           <p class="addr">Aladdin Cafe, 1015 FL-436, Casselberry, FL 32707</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/an-vi-vietnamese-kitchen.html">An Vi Vietnamese Kitchen &amp; Sandwich</a></h3>
-          <p class="meta">Noodles &amp; Southeast Asian · Vietnamese &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/an-vi-vietnamese-kitchen.html">An Vi Vietnamese Kitchen &amp; Sandwich</a></h3>
+          <p class="meta">Noodles &amp; Southeast Asian · Vietnamese &middot; $</p><p class="vsub">House-made bone broth pho, fresh rolls, banh mi, vermicelli bowls, and Cajun fried rice with catfish at this bright Semoran Blvd kitchen.</p>
           <p class="addr">An Vi Vietnamese Kitchen &amp; Sandwich, 1052 FL-436, Casselberry, FL 32707</p>
-        </article>
+        </div></article>
         </div>
         <div class="handoff">
           <a class="btn-ghost" href="/casselberry-finder.html">See the full Casselberry list</a>

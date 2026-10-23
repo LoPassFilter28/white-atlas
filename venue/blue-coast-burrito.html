@@ -211,7 +211,14 @@
       .vcard .addr { margin: 0; color: var(--muted); font-size: .9rem; }
       @media (max-width: 640px) { .facts { grid-template-columns: 1fr; } }
     </style>
-  </head>
+  <style data-cardsys>
+/* cardsys: similar rail cards (2026-10-23 overhaul) */
+.vcard{display:flex;gap:12px;align-items:flex-start}
+.vcard .vthumb{flex:0 0 86px;width:86px;height:86px;border-radius:10px;object-fit:cover;display:block}
+.vcard .vmain{flex:1;min-width:0}
+.vcard .vsub{margin:4px 0 0;font-size:.86rem;line-height:1.45;color:var(--muted,#c6bba2)}
+@media (min-width:1000px){.vlist{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start}}
+</style></head>
   <body>
     <header class="hero">
       <div class="hero-in">
@@ -236,45 +243,45 @@
         <div class="actions">
           <a class="action" href="https://www.google.com/maps/search/?api=1&amp;query=Blue+Coast+Burrito+2311+N+Orange+Blossom+Trl%2C+Orlando%2C+FL+32804" target="_blank" rel="noopener">Directions &rarr;</a>
           <a class="action" href="/archive.html?venue=blue-coast-burrito">Open in the full finder</a>
-          <a class="action" href="/college-park-district-guide.html">Read the College Park story</a>
+          <a class="action" href="/history/college-park.html">Read the College Park story</a>
         </div>
       </section>
 
-      <section class="sec" id="similar">
+      <section class="sec" id="district-story"><p class="kicker">District Story</p><h2>The story of Packing District</h2><p class="lede">A neighborhood named for colleges it never had, branded on citrus land in 1921, and still legible in every street sign you pass today.</p><p><a class="btn-ghost" href="/history/college-park.html">Read the Packing District story &rarr;</a></p></section><section class="sec" id="similar">
         <p class="kicker">Similar Feel</p>
         <h2>More places with this feel</h2>
         <p class="lede">Matched by vibe, not by neighborhood: the places across Greater Orlando closest in spirit to Blue Coast Burrito.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/great-southern-box-co.html">Great Southern Box Co. Food Hall &amp; Bar</a></h3>
-          <p class="meta">Markets &amp; shops &middot; Packing District &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/great-southern-box-co.html">Great Southern Box Co. Food Hall &amp; Bar</a></h3>
+          <p class="meta">Markets &amp; shops &middot; Packing District &middot; $$</p><p class="vsub">On North Orange Blossom Trail, a historic citrus crate warehouse in the Packing District turned lively, group-friendly hall of counters.</p>
           <p class="addr">The Great Southern Box Company, 2105 N Orange Blossom Trl, Orlando, FL 32804</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/el-burro-loco.html">El Burro Loco</a></h3>
-          <p class="meta">Mexican &middot; Universal &middot; $</p>
+          <img class="vthumb" src="/assets/venue-el-burro-loco.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/el-burro-loco.html">El Burro Loco</a></h3>
+          <p class="meta">Mexican &middot; Universal &middot; $</p><p class="vsub">On Carrier Drive, bold, loud street-food energy, with guests praising its good authentic flavor.</p>
           <p class="addr">6524 Carrier Dr, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/grocery-hermanos.html">Grocery Los Hermanos</a></h3>
-          <p class="meta">Mexican &middot; East Orlando &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/grocery-hermanos.html">Grocery Los Hermanos</a></h3>
+          <p class="meta">Mexican &middot; East Orlando &middot; $</p><p class="vsub">A family-run market and taqueria on Curry Ford where guests say the food tastes homemade and very fresh.</p>
           <p class="addr">4130 Curry Ford Rd, Orlando, FL 32806</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/taqueria-las-cazuelas.html">Taqueria las Cazuelas</a></h3>
-          <p class="meta">Mexican &middot; Orlando &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/taqueria-las-cazuelas.html">Taqueria las Cazuelas</a></h3>
+          <p class="meta">Mexican &middot; Orlando &middot; $$</p><p class="vsub">No-frills and home-style on East Colonial, the taco outpost of the Las Cazuelas family, with portions that are famously not shy.</p>
           <p class="addr">Taqueria las Cazuelas, 10360 E Colonial Dr, Orlando, FL 32817-4364, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/btw-burgers-tacos-waffles.html">BTW Burgers Tacos Waffles</a></h3>
-          <p class="meta">Burgers &amp; sandwiches &middot; Tavares &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/btw-burgers-tacos-waffles.html">BTW Burgers Tacos Waffles</a></h3>
+          <p class="meta">Burgers &amp; sandwiches &middot; Tavares &middot; $$</p><p class="vsub">On Main Street in Tavares, playful and unpretentious, doing exactly what its name promises with real imagination in each lane.</p>
           <p class="addr">115 E Main St, Tavares, FL 32778</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/pokeworks.html">PokeWorks (Oviedo)</a></h3>
-          <p class="meta">Restaurants &middot; Oviedo &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/pokeworks.html">PokeWorks (Oviedo)</a></h3>
+          <p class="meta">Restaurants &middot; Oviedo &middot; $</p><p class="vsub">Build-your-own poke in Oviedo, with sushi-grade ahi, salmon, albacore, shrimp and scallops over rice or greens.</p>
           <p class="addr">45 W Mitchell Hammock Rd, Oviedo, FL 32765</p>
-        </article>
+        </div></article>
         </div>
       </section>
 
@@ -284,35 +291,35 @@
         <p class="lede">Other places in College Park, Local Picks first, then the closest to Blue Coast Burrito.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/quesa-loco.html">QuesaLoco</a> <span class="badge">Local Pick</span></h3>
-          <p class="meta">Mexican · Birria Tacos &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-quesa-loco.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/quesa-loco.html">QuesaLoco</a> <span class="badge">Local Pick</span></h3>
+          <p class="meta">Mexican · Birria Tacos &middot; $$</p><p class="vsub">Birria country on Fairbanks Ave, in a colorful room with Dia de los Muertos murals and the joyful chaos of its food truck days.</p>
           <p class="addr">971 W Fairbanks Ave, Orlando, FL 32804</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/walters-tavern.html">Walter&#x27;s Tavern</a></h3>
-          <p class="meta">Bars &amp; lounges · Tavern &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-walters-tavern.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/walters-tavern.html">Walter&#x27;s Tavern</a></h3>
+          <p class="meta">Bars &amp; lounges · Tavern &middot; $$</p><p class="vsub">Inside the Great Southern Box Company food hall in the Packing District, a spacious, lively game day room built for lingering.</p>
           <p class="addr">2105 N Orange Blossom Trl, Orlando, FL 32804</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/great-southern-box-co.html">Great Southern Box Co. Food Hall &amp; Bar</a></h3>
-          <p class="meta">Markets &amp; shops · Food Hall &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/great-southern-box-co.html">Great Southern Box Co. Food Hall &amp; Bar</a></h3>
+          <p class="meta">Markets &amp; shops · Food Hall &middot; $$</p><p class="vsub">On North Orange Blossom Trail, a historic citrus crate warehouse in the Packing District turned lively, group-friendly hall of counters.</p>
           <p class="addr">The Great Southern Box Company, 2105 N Orange Blossom Trl, Orlando, FL 32804</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/turci-pasta.html">Turci Pasta</a></h3>
-          <p class="meta">Italian &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-turci-pasta.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/turci-pasta.html">Turci Pasta</a></h3>
+          <p class="meta">Italian &middot; $$</p><p class="vsub">On Edgewater Drive in College Park, a cozy, romantic hole in the wall where you can watch fresh pasta made in house.</p>
           <p class="addr">Turci Pasta, 2120 Edgewater Dr, Orlando, FL 32804</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/the-current-seafood-counter.html">The Current Seafood Counter</a></h3>
-          <p class="meta">Seafood &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/the-current-seafood-counter.html">The Current Seafood Counter</a></h3>
+          <p class="meta">Seafood &middot; $$</p><p class="vsub">New England fish shack spirit comes to College Park, with counter-service ease and a clean, casual room.</p>
           <p class="addr">The Current Seafood Counter, 2425 Edgewater Dr, Orlando, FL 32804-5303, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/cups-pups.html">Cups and Pups</a></h3>
-          <p class="meta">Coffee &amp; cafes · Coffee Shop &middot; $</p>
+          <img class="vthumb" src="/assets/venue-cups-pups.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/cups-pups.html">Cups and Pups</a></h3>
+          <p class="meta">Coffee &amp; cafes · Coffee Shop &middot; $</p><p class="vsub">On Edgewater Drive in College Park, this cute, cheerful coffee stop has become a neighborhood ritual.</p>
           <p class="addr">2413 Edgewater Dr, Orlando, FL 32804</p>
-        </article>
+        </div></article>
         </div>
         <div class="handoff">
           <a class="btn-ghost" href="/college-park-finder.html">See the full College Park list</a>

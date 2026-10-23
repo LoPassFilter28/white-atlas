@@ -211,7 +211,14 @@
       .vcard .addr { margin: 0; color: var(--muted); font-size: .9rem; }
       @media (max-width: 640px) { .facts { grid-template-columns: 1fr; } }
     </style>
-  </head>
+  <style data-cardsys>
+/* cardsys: similar rail cards (2026-10-23 overhaul) */
+.vcard{display:flex;gap:12px;align-items:flex-start}
+.vcard .vthumb{flex:0 0 86px;width:86px;height:86px;border-radius:10px;object-fit:cover;display:block}
+.vcard .vmain{flex:1;min-width:0}
+.vcard .vsub{margin:4px 0 0;font-size:.86rem;line-height:1.45;color:var(--muted,#c6bba2)}
+@media (min-width:1000px){.vlist{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start}}
+</style></head>
   <body>
     <header class="hero">
       <div class="hero-in">
@@ -239,41 +246,41 @@
         </div>
       </section>
 
-      <section class="sec" id="similar">
+      <section class="sec" id="district-story"><p class="kicker">District Stories</p><h2>Orlando&#x27;s long memory</h2><p class="lede">The guide keeps the long memory of Orlando&#x27;s districts in one place: the names, the plats and the stories behind the streets.</p><p><a class="btn-ghost" href="/history.html">Browse the district stories &rarr;</a></p></section><section class="sec" id="similar">
         <p class="kicker">Similar Feel</p>
         <h2>More places with this feel</h2>
         <p class="lede">Matched by vibe, not by neighborhood: the places across Greater Orlando closest in spirit to Beef Bae.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/hot-asian-buns.html">Hot Asian Buns</a></h3>
-          <p class="meta">Restaurants &middot; Sanford &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/hot-asian-buns.html">Hot Asian Buns</a></h3>
+          <p class="meta">Restaurants &middot; Sanford &middot; $$</p><p class="vsub">Started as a Sanford food truck, now a brick-and-mortar on South Sanford Avenue where every bao is handmade from scratch.</p>
           <p class="addr">204 S Sanford Ave, Sanford, FL</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/jesse-s-rib-shack.html">Jesse&#x27;s Rib Shack</a></h3>
-          <p class="meta">BBQ &middot; Orlando &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/jesse-s-rib-shack.html">Jesse&#x27;s Rib Shack</a></h3>
+          <p class="meta">BBQ &middot; Orlando &middot; $$</p><p class="vsub">Jesse&#x27;s Rib Shack is an old-school smokehouse on West Pine Street where you can see the smoke rolling off the back before you reach the door.</p>
           <p class="addr">2202 W Pine St, Orlando, FL 32805</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/beirut-grill-and-deli.html">Beirut Grill and Deli</a></h3>
-          <p class="meta">Mediterranean &middot; Oviedo &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-beirut-grill-and-deli.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/beirut-grill-and-deli.html">Beirut Grill and Deli</a></h3>
+          <p class="meta">Mediterranean &middot; Oviedo &middot; $$</p><p class="vsub">Family-owned halal Lebanese kitchen on Alafaya Trail, where everything tastes homemade and the room feels like family.</p>
           <p class="addr">Beirut Grill and Deli, 3100 Alafaya Trl, Oviedo, FL 32765-9466, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/uncle-tonys-backyard-bbq-orlando.html">Uncle Tony&#x27;s Backyard BBQ Orlando</a></h3>
-          <p class="meta">BBQ &middot; Orlando &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-uncle-tonys-backyard-bbq-orlando.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/uncle-tonys-backyard-bbq-orlando.html">Uncle Tony&#x27;s Backyard BBQ Orlando</a></h3>
+          <p class="meta">BBQ &middot; Orlando &middot; $$</p><p class="vsub">Hole-in-the-wall on South Orange Avenue with a small-town feel that makes you forget you are in a big city.</p>
           <p class="addr">Uncle Tony&#x27;s Backyard BBQ Orlando, 6807 S Orange Ave, Orlando, FL 32809-6025, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/smokey-jays-bbq.html">Smokey Jay&#x27;s BBQ</a></h3>
-          <p class="meta">BBQ &middot; Orlando &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-smokey-jays-bbq.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/smokey-jays-bbq.html">Smokey Jay&#x27;s BBQ</a></h3>
+          <p class="meta">BBQ &middot; Orlando &middot; $$</p><p class="vsub">Mom-and-pop smokehouse on East Colonial where guests say you can taste the family-run care in every plate.</p>
           <p class="addr">Smokey Jay&#x27;s BBQ, 9318 E Colonial Dr, Orlando, FL 32817-4100</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/shin-jung.html">Shin Jung</a></h3>
-          <p class="meta">Restaurants &middot; Mills 50 &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/shin-jung.html">Shin Jung</a></h3>
+          <p class="meta">Restaurants &middot; Mills 50 &middot; $$</p><p class="vsub">A cozy, lively Korean barbecue room on East Colonial where tabletop grills hiss and K-pop plays over the spread.</p>
           <p class="addr">1638 E Colonial Dr, Orlando, FL 32803</p>
-        </article>
+        </div></article>
         </div>
       </section>
 
@@ -283,35 +290,35 @@
         <p class="lede">Other places in South Orlando, closest to Beef Bae first.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/el-para-so-del-marisco.html">El Paraíso Del Marisco</a></h3>
-          <p class="meta">Seafood &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/el-para-so-del-marisco.html">El Paraíso Del Marisco</a></h3>
+          <p class="meta">Seafood &middot; $$</p><p class="vsub">Ecuadorian and Peruvian seafood that Orlando&#x27;s Latin families describe as tasting like home.</p>
           <p class="addr">8421 S Orange Blossom Trl Ste 156, Orlando, FL 32809</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/amar-orlando.html">Amar Orlando</a></h3>
-          <p class="meta">Mediterranean &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/amar-orlando.html">Amar Orlando</a></h3>
+          <p class="meta">Mediterranean &middot; $$</p><p class="vsub">Lebanese cooking in a calm, intimate room just outside the Florida Mall food court, a step up from its surroundings.</p>
           <p class="addr">8001 S Orange Blossom Trl, Ste #1510, Orlando, FL 32809</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/amazonica-florida-mall.html">Amazonica</a></h3>
-          <p class="meta">Coffee &amp; cafes · Coffee Shop &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/amazonica-florida-mall.html">Amazonica</a></h3>
+          <p class="meta">Coffee &amp; cafes · Coffee Shop &middot; $$</p><p class="vsub">A bright Colombian kiosk inside The Florida Mall, turning out obleas with arequipe, acai bowls with Nutella and fruit, and a proper cortadito.</p>
           <p class="addr">8001 S Orange Blossom Trl Kiosk TT124, Orlando, FL 32809</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/crayola-experience-orlando.html">Crayola Experience</a></h3>
-          <p class="meta">Attractions · Attraction &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-crayola-experience-orlando.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/crayola-experience-orlando.html">Crayola Experience</a></h3>
+          <p class="meta">Attractions · Attraction &middot; $$</p><p class="vsub">Hands-on color playground inside The Florida Mall, built for younger kids.</p>
           <p class="addr">8001 S Orange Blossom Trl, Orlando, FL 32809</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/el-cilantrillo.html">El Cilantrillo</a></h3>
-          <p class="meta">Latin &amp; Caribbean · Latin &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/el-cilantrillo.html">El Cilantrillo</a></h3>
+          <p class="meta">Latin &amp; Caribbean · Latin &middot; $$</p><p class="vsub">South Orlando&#x27;s big Puerto Rican table near the Florida Mall is lively and salsa-filled, with generous portions.</p>
           <p class="addr">El Cilantrillo Restaurant, 1301 Florida Mall Ave, Orlando, FL 32809-7731</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/orlando-watersports-complex.html">Orlando Watersports Complex</a></h3>
-          <p class="meta">Attractions · Attraction &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-orlando-watersports-complex.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/orlando-watersports-complex.html">Orlando Watersports Complex</a></h3>
+          <p class="meta">Attractions · Attraction &middot; $$</p><p class="vsub">Laid-back cable park where beginners and pros share the water, with an inflatable Aqua Park for bouncing between runs.</p>
           <p class="addr">8615 Florida Rock Rd, Orlando, FL 32824</p>
-        </article>
+        </div></article>
         </div>
         <div class="handoff">
           <a class="btn-ghost" href="/south-orlando-finder.html">See the full South Orlando list</a>

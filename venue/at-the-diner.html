@@ -211,7 +211,14 @@
       .vcard .addr { margin: 0; color: var(--muted); font-size: .9rem; }
       @media (max-width: 640px) { .facts { grid-template-columns: 1fr; } }
     </style>
-  </head>
+  <style data-cardsys>
+/* cardsys: similar rail cards (2026-10-23 overhaul) */
+.vcard{display:flex;gap:12px;align-items:flex-start}
+.vcard .vthumb{flex:0 0 86px;width:86px;height:86px;border-radius:10px;object-fit:cover;display:block}
+.vcard .vmain{flex:1;min-width:0}
+.vcard .vsub{margin:4px 0 0;font-size:.86rem;line-height:1.45;color:var(--muted,#c6bba2)}
+@media (min-width:1000px){.vlist{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start}}
+</style></head>
   <body>
     <header class="hero">
       <div class="hero-in">
@@ -236,45 +243,45 @@
         <div class="actions">
           <a class="action" href="https://www.google.com/maps/search/?api=1&amp;query=At+The+Diner+5072+Dr+Phillips+Blvd%2C+Orlando%2C+FL+32819" target="_blank" rel="noopener">Directions &rarr;</a>
           <a class="action" href="/archive.html?venue=at-the-diner">Open in the full finder</a>
-          <a class="action" href="/international-drive-district-guide.html">Read the International Drive story</a>
+          <a class="action" href="/history/i-drive.html">Read the International Drive story</a>
         </div>
       </section>
 
-      <section class="sec" id="similar">
+      <section class="sec" id="district-story"><p class="kicker">District Story</p><h2>The story of Dr Phillips</h2><p class="lede">A hotel in the boondocks, a road paved after it and named to sound big and important, and the corridor that taught Orlando how to be a vacation.</p><p><a class="btn-ghost" href="/history/i-drive.html">Read the Dr Phillips story &rarr;</a></p></section><section class="sec" id="similar">
         <p class="kicker">Similar Feel</p>
         <h2>More places with this feel</h2>
         <p class="lede">Matched by vibe, not by neighborhood: the places across Greater Orlando closest in spirit to At The Diner.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/burntwood-tavern.html">Burntwood Tavern</a></h3>
-          <p class="meta">American &middot; Dr Phillips &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-burntwood-tavern.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/burntwood-tavern.html">Burntwood Tavern</a></h3>
+          <p class="meta">American &middot; Dr Phillips &middot; $$</p><p class="vsub">The Dr Phillips neighborhood clubhouse: a warm, rustic room with comfy booths, a big patio behind roll-up doors, and friendly, efficient staff.</p>
           <p class="addr">5078 Dr Phillips Blvd, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/le-cafe-de-paris.html">Le Café de Paris</a></h3>
-          <p class="meta">Coffee &amp; cafes &middot; Dr. Phillips &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/le-cafe-de-paris.html">Le Café de Paris</a></h3>
+          <p class="meta">Coffee &amp; cafes &middot; Dr. Phillips &middot; $$</p><p class="vsub">A family-run French cafe holding down the quiet end of Dr Phillips, cozy and unhurried.</p>
           <p class="addr">5170 Dr Phillips Blvd, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/metro-diner.html">Metro Diner (Kissimmee)</a></h3>
-          <p class="meta">Breakfast &amp; brunch &middot; Kissimmee &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/metro-diner.html">Metro Diner (Kissimmee)</a></h3>
+          <p class="meta">Breakfast &amp; brunch &middot; Kissimmee &middot; $</p><p class="vsub">Metro Diner&#x27;s Kissimmee room is a classic Florida diner, cozy and old school, doing comfort food without irony.</p>
           <p class="addr">2714 Osceola Pkwy, Kissimmee, FL 34741</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/keke-s-breakfast-cafe.html">Keke&#x27;s Breakfast Cafe</a></h3>
-          <p class="meta">Breakfast &amp; brunch &middot; Millenia &middot; $</p>
+          <img class="vthumb" src="/assets/venue-keke-s-breakfast-cafe.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/keke-s-breakfast-cafe.html">Keke&#x27;s Breakfast Cafe</a></h3>
+          <p class="meta">Breakfast &amp; brunch &middot; Millenia &middot; $</p><p class="vsub">Breakfast done by hand near Millenia: coffee ground in house, eggs cracked to order, real butter and no microwave.</p>
           <p class="addr">4192 Conroy Rd, Orlando, FL</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/fuwa-fuwa.html">Fluffy Fluffy Dessert Cafe</a></h3>
-          <p class="meta">Sweets &middot; Milk District &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-fuwa-fuwa.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/fuwa-fuwa.html">Fluffy Fluffy Dessert Cafe</a></h3>
+          <p class="meta">Sweets &middot; Milk District &middot; $$</p><p class="vsub">Japanese souffle pancakes are made the slow way here, whipped and cooked to order until each one wobbles like a cloud.</p>
           <p class="addr">2008 E Colonial Dr, Orlando, FL</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/first-watch.html">First Watch</a></h3>
-          <p class="meta">Breakfast &amp; brunch &middot; International Drive &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/first-watch.html">First Watch</a></h3>
+          <p class="meta">Breakfast &amp; brunch &middot; International Drive &middot; $</p><p class="vsub">Bright, sunrise-lit room on South International Drive where breakfast is cooked to order and nothing sits under a heat lamp.</p>
           <p class="addr">11951 International Drive South Ste A, Orlando, FL 32821</p>
-        </article>
+        </div></article>
         </div>
       </section>
 
@@ -284,35 +291,35 @@
         <p class="lede">Other places in International Drive, Local Picks first, then the closest to At The Diner.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/toms-watch-bar-orlando.html">Tom&#x27;s Watch Bar</a> <span class="badge">Local Pick</span></h3>
-          <p class="meta">Bars &amp; lounges · Bar &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-toms-watch-bar-orlando.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/toms-watch-bar-orlando.html">Tom&#x27;s Watch Bar</a> <span class="badge">Local Pick</span></h3>
+          <p class="meta">Bars &amp; lounges · Bar &middot; $$</p><p class="vsub">On International Drive, a sports bar built like a stadium, with an oversized screen and screens wrapping the room so every seat faces the action.</p>
           <p class="addr">8050 International Dr, Suite 1000, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/baires-grill-orlando.html">Baires Grill</a> <span class="badge">Local Pick</span></h3>
-          <p class="meta">Latin &amp; Caribbean · Argentinian Steakhouse &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-baires-grill-orlando.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/baires-grill-orlando.html">Baires Grill</a> <span class="badge">Local Pick</span></h3>
+          <p class="meta">Latin &amp; Caribbean · Argentinian Steakhouse &middot; $$</p><p class="vsub">The parrilla decides everything at this Argentine steakhouse just off International Drive.</p>
           <p class="addr">8050 International Dr, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/burntwood-tavern.html">Burntwood Tavern</a></h3>
-          <p class="meta">American · Tavern &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-burntwood-tavern.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/burntwood-tavern.html">Burntwood Tavern</a></h3>
+          <p class="meta">American · Tavern &middot; $$</p><p class="vsub">The Dr Phillips neighborhood clubhouse: a warm, rustic room with comfy booths, a big patio behind roll-up doors, and friendly, efficient staff.</p>
           <p class="addr">5078 Dr Phillips Blvd, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/le-cafe-de-paris.html">Le Café de Paris</a></h3>
-          <p class="meta">Coffee &amp; cafes · French Cafe &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/le-cafe-de-paris.html">Le Café de Paris</a></h3>
+          <p class="meta">Coffee &amp; cafes · French Cafe &middot; $$</p><p class="vsub">A family-run French cafe holding down the quiet end of Dr Phillips, cozy and unhurried.</p>
           <p class="addr">5170 Dr Phillips Blvd, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/murphys-pub-orlando.html">Murphy&#x27;s Pub Orlando</a></h3>
-          <p class="meta">Bars &amp; lounges · Irish Pub &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/murphys-pub-orlando.html">Murphy&#x27;s Pub Orlando</a></h3>
+          <p class="meta">Bars &amp; lounges · Irish Pub &middot; $</p><p class="vsub">I-Drive&#x27;s friendly British-style soccer pub, where any shirt is welcome and expats treat it as home.</p>
           <p class="addr">Murphy&#x27;s Pub Orlando, 6582 International Dr, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/orlando-international-premium-outlets.html">Orlando International Premium Outlets</a></h3>
-          <p class="meta">Markets &amp; shops · Outlet Mall &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/orlando-international-premium-outlets.html">Orlando International Premium Outlets</a></h3>
+          <p class="meta">Markets &amp; shops · Outlet Mall &middot; $$</p><p class="vsub">An open-air outlet village at the north end of International Drive, and a full afternoon by design.</p>
           <p class="addr">4951 International Dr, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         </div>
         <div class="handoff">
           <a class="btn-ghost" href="/international-drive-finder.html">See the full International Drive list</a>

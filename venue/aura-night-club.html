@@ -211,7 +211,14 @@
       .vcard .addr { margin: 0; color: var(--muted); font-size: .9rem; }
       @media (max-width: 640px) { .facts { grid-template-columns: 1fr; } }
     </style>
-  </head>
+  <style data-cardsys>
+/* cardsys: similar rail cards (2026-10-23 overhaul) */
+.vcard{display:flex;gap:12px;align-items:flex-start}
+.vcard .vthumb{flex:0 0 86px;width:86px;height:86px;border-radius:10px;object-fit:cover;display:block}
+.vcard .vmain{flex:1;min-width:0}
+.vcard .vsub{margin:4px 0 0;font-size:.86rem;line-height:1.45;color:var(--muted,#c6bba2)}
+@media (min-width:1000px){.vlist{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start}}
+</style></head>
   <body>
     <header class="hero">
       <div class="hero-in">
@@ -236,45 +243,45 @@
         <div class="actions">
           <a class="action" href="https://www.google.com/maps/search/?api=1&amp;query=Aura+Night+Club+49+N+Orange+Ave%2C+Orlando%2C+FL+32801" target="_blank" rel="noopener">Directions &rarr;</a>
           <a class="action" href="/archive.html?venue=aura-night-club">Open in the full finder</a>
-          <a class="action" href="/downtown-orlando-district-guide.html">Read the Downtown Orlando story</a>
+          <a class="action" href="/history/downtown.html">Read the Downtown Orlando story</a>
         </div>
       </section>
 
-      <section class="sec" id="similar">
+      <section class="sec" id="district-story"><p class="kicker">District Story</p><h2>The story of Downtown</h2><p class="lede">A fort, a courthouse plat and a citrus boom built it. A name nobody can prove still runs it.</p><p><a class="btn-ghost" href="/history/downtown.html">Read the Downtown story &rarr;</a></p></section><section class="sec" id="similar">
         <p class="kicker">Similar Feel</p>
         <h2>More places with this feel</h2>
         <p class="lede">Matched by vibe, not by neighborhood: the places across Greater Orlando closest in spirit to Aura Night Club.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/tier-nightclub.html">Ohm Nightclub</a></h3>
-          <p class="meta">Nightlife &amp; music &middot; Downtown &middot; $$$</p>
+          <div class="vmain"><h3><a href="/venue/tier-nightclub.html">Ohm Nightclub</a></h3>
+          <p class="meta">Nightlife &amp; music &middot; Downtown &middot; $$$</p><p class="vsub">Downtown&#x27;s big-room club, formerly Tier, packs two floors, with skyboxes over the floor and bottle service for groups.</p>
           <p class="addr">20 E Central Blvd, Orlando, FL 32801</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/the-beacham.html">The Beacham &amp; The Social</a></h3>
-          <p class="meta">Nightlife &amp; music &middot; Downtown &middot; $$$</p>
+          <img class="vthumb" src="/assets/venue-the-beacham.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/the-beacham.html">The Beacham &amp; The Social</a></h3>
+          <p class="meta">Nightlife &amp; music &middot; Downtown &middot; $$$</p><p class="vsub">On Orange Avenue, this century-old vaudeville theater still runs on live music, balcony sightlines and LED walls, historic and electric.</p>
           <p class="addr">46 N Orange Ave, Orlando, FL 32801</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/the-social.html">The Social</a></h3>
-          <p class="meta">Nightlife &amp; music &middot; Downtown &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/the-social.html">The Social</a></h3>
+          <p class="meta">Nightlife &amp; music &middot; Downtown &middot; $$</p><p class="vsub">A small brick-walled room on North Orange Avenue where indie bands play close enough to lock eyes with.</p>
           <p class="addr">54 N Orange Ave, Orlando, FL 32801</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/yaz-orlando.html">Yaz Orlando</a></h3>
-          <p class="meta">Nightlife &amp; music &middot; Downtown &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/yaz-orlando.html">Yaz Orlando</a></h3>
+          <p class="meta">Nightlife &amp; music &middot; Downtown &middot; $$</p><p class="vsub">On North Orange Avenue, dinner and lounge come first, then the room deepens into a club as the night goes on, low-lit and moody.</p>
           <p class="addr">114 N Orange Ave, Orlando, FL 32801</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/aero-rooftop-bar-lounge.html">Aero Rooftop Bar &amp; Lounge</a></h3>
-          <p class="meta">Nightlife &amp; music &middot; Downtown &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-aero-rooftop-bar-lounge.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/aero-rooftop-bar-lounge.html">Aero Rooftop Bar &amp; Lounge</a></h3>
+          <p class="meta">Nightlife &amp; music &middot; Downtown &middot; $$</p><p class="vsub">A small rooftop with big energy: open-air dancing above North Orange Avenue, skyline behind the DJ, lasers over the crowd.</p>
           <p class="addr">60 N Orange Ave, Orlando, FL 32801</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/vanguard.html">The Vanguard</a></h3>
-          <p class="meta">Nightlife &amp; music &middot; Downtown &middot; $$$</p>
+          <div class="vmain"><h3><a href="/venue/vanguard.html">The Vanguard</a></h3>
+          <p class="meta">Nightlife &amp; music &middot; Downtown &middot; $$$</p><p class="vsub">Inside the historic Firestone Tire Building on Orange Avenue, chest-felt sound, ceiling lasers and a dance floor that packs tight on popular nights.</p>
           <p class="addr">The Vanguard, 578 N Orange Ave, Orlando, FL 32801-1341</p>
-        </article>
+        </div></article>
         </div>
       </section>
 
@@ -284,35 +291,35 @@
         <p class="lede">Other places in Downtown Orlando, Local Picks first, then the closest to Aura Night Club.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/fixtion.html">Fixtion Restaurant &amp; Bar</a> <span class="badge">Local Pick</span></h3>
-          <p class="meta">American · American Restaurant &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/fixtion.html">Fixtion Restaurant &amp; Bar</a> <span class="badge">Local Pick</span></h3>
+          <p class="meta">American · American Restaurant &middot; $$</p><p class="vsub">On Orange Avenue, comfort food and huge comfy booths early, club energy after dark, shape-shifting through the day.</p>
           <p class="addr">15 N Orange Ave, Orlando, FL 32801</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/wall-street-plaza.html">Wall Street Plaza</a> <span class="badge">Local Pick</span></h3>
-          <p class="meta">Nightlife &amp; music · Entertainment District &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/wall-street-plaza.html">Wall Street Plaza</a> <span class="badge">Local Pick</span></h3>
+          <p class="meta">Nightlife &amp; music · Entertainment District &middot; $$</p><p class="vsub">One downtown block holds the whole crawl: eight bars and patios that, on a big night, turn into a single street party.</p>
           <p class="addr">25 Wall St, Orlando, FL 32801</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/elixir-kitchen-bar.html">Elixir Kitchen and Bar</a> <span class="badge">Local Pick</span></h3>
-          <p class="meta">Bars &amp; lounges · Bar &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-elixir-kitchen-bar.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/elixir-kitchen-bar.html">Elixir Kitchen and Bar</a> <span class="badge">Local Pick</span></h3>
+          <p class="meta">Bars &amp; lounges · Bar &middot; $$</p><p class="vsub">A rustic-hip gastropub in one of downtown&#x27;s original buildings, and very much the neighborhood&#x27;s spot.</p>
           <p class="addr">9 W Washington St, Orlando, FL 32801</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/aero-rooftop-bar-lounge.html">Aero Rooftop Bar &amp; Lounge</a></h3>
-          <p class="meta">Nightlife &amp; music · Club &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-aero-rooftop-bar-lounge.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/aero-rooftop-bar-lounge.html">Aero Rooftop Bar &amp; Lounge</a></h3>
+          <p class="meta">Nightlife &amp; music · Club &middot; $$</p><p class="vsub">A small rooftop with big energy: open-air dancing above North Orange Avenue, skyline behind the DJ, lasers over the crowd.</p>
           <p class="addr">60 N Orange Ave, Orlando, FL 32801</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/sly-fox.html">Sly Fox</a></h3>
-          <p class="meta">Bars &amp; lounges · Dive Bar &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/sly-fox.html">Sly Fox</a></h3>
+          <p class="meta">Bars &amp; lounges · Dive Bar &middot; $$</p><p class="vsub">Gritty, punk-rock dive on North Orange Avenue where the regulars call themselves a built-in family.</p>
           <p class="addr">Sly Fox, 63 N Orange Ave, Orlando, FL 32801-2425</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/yaz-orlando.html">Yaz Orlando</a></h3>
-          <p class="meta">Nightlife &amp; music · Club &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/yaz-orlando.html">Yaz Orlando</a></h3>
+          <p class="meta">Nightlife &amp; music · Club &middot; $$</p><p class="vsub">On North Orange Avenue, dinner and lounge come first, then the room deepens into a club as the night goes on, low-lit and moody.</p>
           <p class="addr">114 N Orange Ave, Orlando, FL 32801</p>
-        </article>
+        </div></article>
         </div>
         <div class="handoff">
           <a class="btn-ghost" href="/downtown-orlando-finder.html">See the full Downtown Orlando list</a>

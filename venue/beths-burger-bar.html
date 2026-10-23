@@ -211,7 +211,14 @@
       .vcard .addr { margin: 0; color: var(--muted); font-size: .9rem; }
       @media (max-width: 640px) { .facts { grid-template-columns: 1fr; } }
     </style>
-  </head>
+  <style data-cardsys>
+/* cardsys: similar rail cards (2026-10-23 overhaul) */
+.vcard{display:flex;gap:12px;align-items:flex-start}
+.vcard .vthumb{flex:0 0 86px;width:86px;height:86px;border-radius:10px;object-fit:cover;display:block}
+.vcard .vmain{flex:1;min-width:0}
+.vcard .vsub{margin:4px 0 0;font-size:.86rem;line-height:1.45;color:var(--muted,#c6bba2)}
+@media (min-width:1000px){.vlist{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start}}
+</style></head>
   <body>
     <header class="hero">
       <div class="hero-in">
@@ -236,46 +243,46 @@
         <div class="actions">
           <a class="action" href="https://www.google.com/maps/search/?api=1&amp;query=Beth%27s+Burger+Bar+Beth%27s+Burger+Bar%2C+9938+Universal+Blvd%2C+Orlando%2C+FL+32819-8702%2C+United+States" target="_blank" rel="noopener">Directions &rarr;</a>
           <a class="action" href="/archive.html?venue=beths-burger-bar">Open in the full finder</a>
-          <a class="action" href="/universal-district-guide.html">Read the Universal story</a>
+          <a class="action" href="/history/universal.html">Read the Universal story</a>
           <a class="action action-ig" href="https://www.instagram.com/bethsburgerbar" target="_blank" rel="noopener"><svg class="ig-glyph" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="vertical-align:-2px;margin-right:6px"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg> Instagram</a>
         </div>
       </section>
 
-      <section class="sec" id="similar">
+      <section class="sec" id="district-story"><p class="kicker">District Story</p><h2>The story of Orlando</h2><p class="lede">A district with the shortest paper trail in Orlando: land bought quietly, built fast, and later bought back.</p><p><a class="btn-ghost" href="/history/universal.html">Read the Orlando story &rarr;</a></p></section><section class="sec" id="similar">
         <p class="kicker">Similar Feel</p>
         <h2>More places with this feel</h2>
         <p class="lede">Matched by vibe, not by neighborhood: the places across Greater Orlando closest in spirit to Beth&#x27;s Burger Bar.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/the-capital-grille-pointe-orlando.html">The Capital Grille</a></h3>
-          <p class="meta">Fine dining &amp; steak &middot; Pointe Orlando &middot; $$$$</p>
+          <div class="vmain"><h3><a href="/venue/the-capital-grille-pointe-orlando.html">The Capital Grille</a></h3>
+          <p class="meta">Fine dining &amp; steak &middot; Pointe Orlando &middot; $$$$</p><p class="vsub">The default client steakhouse at Pointe Orlando, a short walk from the Rosen hotels, running the full expense-account ritual.</p>
           <p class="addr">9101 International Dr, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/burger-vault.html">Burger Vault</a></h3>
-          <p class="meta">Burgers &amp; sandwiches &middot; Altamonte Springs &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-burger-vault.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/burger-vault.html">Burger Vault</a></h3>
+          <p class="meta">Burgers &amp; sandwiches &middot; Altamonte Springs &middot; $$</p><p class="vsub">Small mom-and-pop counter on State Road 436 in Altamonte Springs, building halal burgers guests call juicy and wonderfully messy.</p>
           <p class="addr">Burger Vault, 520 W State Road 436, Altamonte Springs, FL 32714-4000, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/shake-shack-i-drive.html">Shake Shack I-Drive</a></h3>
-          <p class="meta">Burgers &amp; sandwiches &middot; Orlando &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/shake-shack-i-drive.html">Shake Shack I-Drive</a></h3>
+          <p class="meta">Burgers &amp; sandwiches &middot; Orlando &middot; $</p><p class="vsub">The I-Drive Shake Shack sits in ICON Park under the Orlando Eye, a busy fast-casual patio stop with rustic chic polish.</p>
           <p class="addr">8359 International Dr, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/half-barrel-beer-project.html">Half Barrel Beer Project</a></h3>
-          <p class="meta">Breweries &middot; Orlando &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/half-barrel-beer-project.html">Half Barrel Beer Project</a></h3>
+          <p class="meta">Breweries &middot; Orlando &middot; $$</p><p class="vsub">Small, family-owned brewery on Universal Boulevard with a chill, welcoming feel guests keep mentioning.</p>
           <p class="addr">Half Barrel Beer Project, 9650 Universal Blvd, Orlando, FL 32819-8766, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/five-guys.html">Five Guys (CityWalk)</a></h3>
-          <p class="meta">Burgers &amp; sandwiches &middot; Universal CityWalk &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/five-guys.html">Five Guys (CityWalk)</a></h3>
+          <p class="meta">Burgers &amp; sandwiches &middot; Universal CityWalk &middot; $</p><p class="vsub">On the upper level of Universal CityWalk, burgers stacked to order with hand-cut fries piled high in the cup.</p>
           <p class="addr">6000 Universal Blvd, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/topgolf-orlando.html">Topgolf Orlando</a></h3>
-          <p class="meta">Attractions &middot; Universal &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/topgolf-orlando.html">Topgolf Orlando</a></h3>
+          <p class="meta">Attractions &middot; Universal &middot; $$</p><p class="vsub">Part driving range, part restaurant, part rooftop hangout on Universal Boulevard, with climate-controlled bays and a terrace with fire pits.</p>
           <p class="addr">9295 Universal Blvd, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         </div>
       </section>
 
@@ -285,35 +292,35 @@
         <p class="lede">Other places in Universal, closest to Beth&#x27;s Burger Bar first.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/half-barrel-beer-project.html">Half Barrel Beer Project</a></h3>
-          <p class="meta">Breweries · Brewery &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/half-barrel-beer-project.html">Half Barrel Beer Project</a></h3>
+          <p class="meta">Breweries · Brewery &middot; $$</p><p class="vsub">Small, family-owned brewery on Universal Boulevard with a chill, welcoming feel guests keep mentioning.</p>
           <p class="addr">Half Barrel Beer Project, 9650 Universal Blvd, Orlando, FL 32819-8766, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/epic-universe.html">Universal Epic Universe</a></h3>
-          <p class="meta">Parks &amp; outdoors · Park &middot; $$$$</p>
+          <img class="vthumb" src="/assets/venue-epic-universe.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/epic-universe.html">Universal Epic Universe</a></h3>
+          <p class="meta">Parks &amp; outdoors · Park &middot; $$$$</p><p class="vsub">Universal&#x27;s newest park still makes guests reach for the word epic, and the scale backs them up.</p>
           <p class="addr">1001 Epic Blvd, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/helios-grand.html">Universal Helios Grand Hotel</a></h3>
-          <p class="meta">Hotels · Resort Hotel &middot; $$$$</p>
+          <div class="vmain"><h3><a href="/venue/helios-grand.html">Universal Helios Grand Hotel</a></h3>
+          <p class="meta">Hotels · Resort Hotel &middot; $$$$</p><p class="vsub">Universal Helios Grand Hotel rises over Epic Universe with a celestial, Mediterranean feel and a grown-up, park-view calm.</p>
           <p class="addr">8505 S Kirkman Rd, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/topgolf-orlando.html">Topgolf Orlando</a></h3>
-          <p class="meta">Attractions · Golf Entertainment &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/topgolf-orlando.html">Topgolf Orlando</a></h3>
+          <p class="meta">Attractions · Golf Entertainment &middot; $$</p><p class="vsub">Part driving range, part restaurant, part rooftop hangout on Universal Boulevard, with climate-controlled bays and a terrace with fire pits.</p>
           <p class="addr">9295 Universal Blvd, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/universal-stella-nova-resort.html">Universal Stella Nova Resort</a></h3>
-          <p class="meta">Hotels &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/universal-stella-nova-resort.html">Universal Stella Nova Resort</a></h3>
+          <p class="meta">Hotels &middot; $$</p><p class="vsub">The value-tier basecamp for Epic Universe, space-themed, a 10-15 minute stroll away, with modern, clean, good-sized rooms.</p>
           <p class="addr">4500 Epic Blvd, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/universal-terra-luna-resort.html">Universal Terra Luna Resort</a></h3>
-          <p class="meta">Hotels &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/universal-terra-luna-resort.html">Universal Terra Luna Resort</a></h3>
+          <p class="meta">Hotels &middot; $$</p><p class="vsub">Stella Nova&#x27;s sister resort on Epic Boulevard, clean and modern, with an exploration theme and a big resort pool.</p>
           <p class="addr">5500 Epic Blvd, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         </div>
         <div class="handoff">
           <a class="btn-ghost" href="/universal-finder.html">See the full Universal list</a>

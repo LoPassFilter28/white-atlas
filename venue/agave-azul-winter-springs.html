@@ -211,7 +211,14 @@
       .vcard .addr { margin: 0; color: var(--muted); font-size: .9rem; }
       @media (max-width: 640px) { .facts { grid-template-columns: 1fr; } }
     </style>
-  </head>
+  <style data-cardsys>
+/* cardsys: similar rail cards (2026-10-23 overhaul) */
+.vcard{display:flex;gap:12px;align-items:flex-start}
+.vcard .vthumb{flex:0 0 86px;width:86px;height:86px;border-radius:10px;object-fit:cover;display:block}
+.vcard .vmain{flex:1;min-width:0}
+.vcard .vsub{margin:4px 0 0;font-size:.86rem;line-height:1.45;color:var(--muted,#c6bba2)}
+@media (min-width:1000px){.vlist{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start}}
+</style></head>
   <body>
     <header class="hero">
       <div class="hero-in">
@@ -240,41 +247,41 @@
         </div>
       </section>
 
-      <section class="sec" id="similar">
+      <section class="sec" id="district-story"><p class="kicker">District Stories</p><h2>Orlando&#x27;s long memory</h2><p class="lede">The guide keeps the long memory of Orlando&#x27;s districts in one place: the names, the plats and the stories behind the streets.</p><p><a class="btn-ghost" href="/history.html">Browse the district stories &rarr;</a></p></section><section class="sec" id="similar">
         <p class="kicker">Similar Feel</p>
         <h2>More places with this feel</h2>
         <p class="lede">Matched by vibe, not by neighborhood: the places across Greater Orlando closest in spirit to Agave Azul Winter Springs.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/agave-azul-cocina-mexicana.html">Agave Azul Cocina Mexicana</a></h3>
-          <p class="meta">Mexican &middot; Airport Corridor &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/agave-azul-cocina-mexicana.html">Agave Azul Cocina Mexicana</a></h3>
+          <p class="meta">Mexican &middot; Airport Corridor &middot; $$</p><p class="vsub">The Mexican dining room at Gateway Village near the airport is loud, festive and high-energy, immaculate with a lot going on.</p>
           <p class="addr">Agave Azul Cocina Mexicana, 5475 Gateway Village Cir, Orlando, FL 32812-4002, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/cocina-maya-mexican-grill-mezcaleria.html">Cocina Maya Mexican Grill &amp; Mezcaleria</a></h3>
-          <p class="meta">Mexican &middot; Lake Mary &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/cocina-maya-mexican-grill-mezcaleria.html">Cocina Maya Mexican Grill &amp; Mezcaleria</a></h3>
+          <p class="meta">Mexican &middot; Lake Mary &middot; $$</p><p class="vsub">Cozy, festive Lake Mary room where Mexican cooking goes well past taco-shop basics, with a little tableside flair.</p>
           <p class="addr">3590 US-17 Ste 1026, Lake Mary, FL 32746</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/pepes-cantina.html">Pepe&#x27;s Cantina</a></h3>
-          <p class="meta">Mexican &middot; Winter Park &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-pepes-cantina.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/pepes-cantina.html">Pepe&#x27;s Cantina</a></h3>
+          <p class="meta">Mexican &middot; Winter Park &middot; $$</p><p class="vsub">A festive cantina feel in Winter Park, with a beautiful bar and a dining room partly open to the air.</p>
           <p class="addr">433 W New England Ave, Winter Park, FL 32789</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/tibbys-new-orleans-kitchen.html">Tibby&#x27;s New Orleans Kitchen</a></h3>
-          <p class="meta">Restaurants &middot; University &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/tibbys-new-orleans-kitchen.html">Tibby&#x27;s New Orleans Kitchen</a></h3>
+          <p class="meta">Restaurants &middot; University &middot; $$</p><p class="vsub">A Mardi Gras room on Aloma Avenue in Winter Park, lively and colorful, with an atmosphere guests say feels like being back in Louisiana.</p>
           <p class="addr">2203 Aloma Ave, Winter Park, FL 32792</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/don-julio-lake-nona.html">Don Julio Mexican Kitchen &amp; Tequila Bar</a></h3>
-          <p class="meta">Mexican &middot; Lake Nona &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/don-julio-lake-nona.html">Don Julio Mexican Kitchen &amp; Tequila Bar</a></h3>
+          <p class="meta">Mexican &middot; Lake Nona &middot; $$</p><p class="vsub">Festive and airy in Eagle Creek, this Mexican kitchen and tequila bar leads with the birria tacos.</p>
           <p class="addr">9776 Eagle Creek Center Blvd, Orlando, FL 32827</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/jaleo.html">Jaleo</a></h3>
-          <p class="meta">Mediterranean &middot; Disney Springs &middot; $$$</p>
+          <div class="vmain"><h3><a href="/venue/jaleo.html">Jaleo</a></h3>
+          <p class="meta">Mediterranean &middot; Disney Springs &middot; $$$</p><p class="vsub">A festive Spanish tapas room at Disney Springs that guests describe as a non-stop party of flavors.</p>
           <p class="addr">Jaleo, 1482 E Buena Vista Dr, Lake Buena Vista, FL 32830-8518</p>
-        </article>
+        </div></article>
         </div>
       </section>
 
@@ -284,35 +291,35 @@
         <p class="lede">Other places in Winter Springs, closest to Agave Azul Winter Springs first.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/kiko-japanese-cuisine.html">Kiko Japanese Cuisine</a></h3>
-          <p class="meta">Japanese &amp; sushi · Sushi &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-kiko-japanese-cuisine.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/kiko-japanese-cuisine.html">Kiko Japanese Cuisine</a></h3>
+          <p class="meta">Japanese &amp; sushi · Sushi &middot; $$</p><p class="vsub">On Red Bug Lake Rd since 2023, this neighborhood sushi spot won fans fast with fresh sashimi, inventive rolls, and vegan options.</p>
           <p class="addr">Kiko Japanese Cuisine, 5661 Red Bug Lake Rd, Winter Springs, FL 32708</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/stefanos-trattoria.html">Stefano&#x27;s Trattoria</a></h3>
-          <p class="meta">Italian &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/stefanos-trattoria.html">Stefano&#x27;s Trattoria</a></h3>
+          <p class="meta">Italian &middot; $$</p><p class="vsub">Cozy, old-school Italian dining room tucked into a Tuskawilla Road shopping center, easy to miss and worth finding.</p>
           <p class="addr">Stefano&#x27;s Trattoria, 1425 Tuskawilla Rd, Winter Springs, FL 32708-4703</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/greek-eatery.html">Greek Eatery</a></h3>
-          <p class="meta">Mediterranean · Greek &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-greek-eatery.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/greek-eatery.html">Greek Eatery</a></h3>
+          <p class="meta">Mediterranean · Greek &middot; $$</p><p class="vsub">A family owned Greek kitchen in the Town Center for more than 15 years, turning out gyros, souvlaki, pastitsio, and moussaka.</p>
           <p class="addr">Greek Eatery, 1188 E State Rd 434, Winter Springs, FL 32708</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/boba-garden.html">Boba Garden</a></h3>
-          <p class="meta">Coffee &amp; cafes · Bubble Tea &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/boba-garden.html">Boba Garden</a></h3>
+          <p class="meta">Coffee &amp; cafes · Bubble Tea &middot; $</p><p class="vsub">A family owned bubble tea cafe in Town Center, pouring made-to-order milk and fruit teas, with board games in a nature-inspired room.</p>
           <p class="addr">Boba Garden, 1184 E State Rd 434, Winter Springs, FL 32708</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/spill-wine-bar.html">Spill Wine Bar</a></h3>
-          <p class="meta">Bars &amp; lounges · Wine bar &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-spill-wine-bar.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/spill-wine-bar.html">Spill Wine Bar</a></h3>
+          <p class="meta">Bars &amp; lounges · Wine bar &middot; $$</p><p class="vsub">A locals-first wine bar in the Town Center, started by a local for the locals, pouring 100-plus wines and a deep craft beer list.</p>
           <p class="addr">Spill Wine Bar, 1196 Tree Swallow Dr, Suite 1314, Winter Springs, FL 32708</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/sushi-delight-and-bowl.html">Sushi Delight &amp; Bowl</a></h3>
-          <p class="meta">Japanese &amp; sushi · Pan-Asian &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/sushi-delight-and-bowl.html">Sushi Delight &amp; Bowl</a></h3>
+          <p class="meta">Japanese &amp; sushi · Pan-Asian &middot; $$</p><p class="vsub">A pan-Asian counter on the Tree Swallow Dr restaurant row, rolling sushi and building rice bowls to order.</p>
           <p class="addr">Sushi Delight &amp; Bowl, 1172 Tree Swallow Dr, Winter Springs, FL 32708</p>
-        </article>
+        </div></article>
         </div>
         <div class="handoff">
           <a class="btn-ghost" href="/winter-springs-finder.html">See the full Winter Springs list</a>

@@ -211,7 +211,14 @@
       .vcard .addr { margin: 0; color: var(--muted); font-size: .9rem; }
       @media (max-width: 640px) { .facts { grid-template-columns: 1fr; } }
     </style>
-  </head>
+  <style data-cardsys>
+/* cardsys: similar rail cards (2026-10-23 overhaul) */
+.vcard{display:flex;gap:12px;align-items:flex-start}
+.vcard .vthumb{flex:0 0 86px;width:86px;height:86px;border-radius:10px;object-fit:cover;display:block}
+.vcard .vmain{flex:1;min-width:0}
+.vcard .vsub{margin:4px 0 0;font-size:.86rem;line-height:1.45;color:var(--muted,#c6bba2)}
+@media (min-width:1000px){.vlist{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start}}
+</style></head>
   <body>
     <header class="hero">
       <div class="hero-in">
@@ -239,41 +246,41 @@
         </div>
       </section>
 
-      <section class="sec" id="similar">
+      <section class="sec" id="district-story"><p class="kicker">District Stories</p><h2>Orlando&#x27;s long memory</h2><p class="lede">The guide keeps the long memory of Orlando&#x27;s districts in one place: the names, the plats and the stories behind the streets.</p><p><a class="btn-ghost" href="/history.html">Browse the district stories &rarr;</a></p></section><section class="sec" id="similar">
         <p class="kicker">Similar Feel</p>
         <h2>More places with this feel</h2>
         <p class="lede">Matched by vibe, not by neighborhood: the places across Greater Orlando closest in spirit to Amar Orlando.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/beirut-grill-and-deli.html">Beirut Grill and Deli</a></h3>
-          <p class="meta">Mediterranean &middot; Oviedo &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-beirut-grill-and-deli.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/beirut-grill-and-deli.html">Beirut Grill and Deli</a></h3>
+          <p class="meta">Mediterranean &middot; Oviedo &middot; $$</p><p class="vsub">Family-owned halal Lebanese kitchen on Alafaya Trail, where everything tastes homemade and the room feels like family.</p>
           <p class="addr">Beirut Grill and Deli, 3100 Alafaya Trl, Oviedo, FL 32765-9466, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/chickpeas-fresh-mediterranean-kitchen.html">Chickpeas Fresh Mediterranean Kitchen</a></h3>
-          <p class="meta">Mediterranean &middot; Millenia &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/chickpeas-fresh-mediterranean-kitchen.html">Chickpeas Fresh Mediterranean Kitchen</a></h3>
+          <p class="meta">Mediterranean &middot; Millenia &middot; $$</p><p class="vsub">A Mall at Millenia food court counter with a loyal following for falafel one guest called the best they have had in Florida.</p>
           <p class="addr">4200 Conroy Rd, Orlando, FL 32839</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/caravan-uzbek-turkish-cuisine.html">Caravan Uzbek &amp; Turkish Cuisine</a></h3>
-          <p class="meta">Mediterranean &middot; South Orlando &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-caravan-uzbek-turkish-cuisine.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/caravan-uzbek-turkish-cuisine.html">Caravan Uzbek &amp; Turkish Cuisine</a></h3>
+          <p class="meta">Mediterranean &middot; South Orlando &middot; $$</p><p class="vsub">A small, cozy room on South Orange Ave where Uzbek and Turkish cooking share one table, fully halal and family run.</p>
           <p class="addr">8015 S Orange Ave, Orlando, FL 32809</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/amare.html">Amare</a></h3>
-          <p class="meta">Mediterranean &middot; Disney Area &middot; $$$</p>
+          <img class="vthumb" src="/assets/venue-amare.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/amare.html">Amare</a></h3>
+          <p class="meta">Mediterranean &middot; Disney Area &middot; $$$</p><p class="vsub">A calm Mediterranean room at the Walt Disney World Swan Reserve that feels a world away from the parks.</p>
           <p class="addr">Amare, 1255 Epcot Resorts Blvd, Lake Buena Vista, FL 32830</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/beef-bae.html">Beef Bae</a></h3>
-          <p class="meta">BBQ &middot; South Orlando &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/beef-bae.html">Beef Bae</a></h3>
+          <p class="meta">BBQ &middot; South Orlando &middot; $$</p><p class="vsub">Formerly Charcoal Zyka, this South Orlando spot runs American barbecue through a Zabiha halal kitchen, and regulars say it works.</p>
           <p class="addr">10249 S John Young Pkwy Ste 109, Orlando, FL 32837</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/lale-mediterranean.html">Lale Mediterranean Cuisine</a></h3>
-          <p class="meta">Mediterranean &middot; Winter Park &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/lale-mediterranean.html">Lale Mediterranean Cuisine</a></h3>
+          <p class="meta">Mediterranean &middot; Winter Park &middot; $$</p><p class="vsub">A cozy, family-run Turkish room on Park Avenue in Winter Park, warm and intimate.</p>
           <p class="addr">521 S Park Ave, Winter Park, FL 32789</p>
-        </article>
+        </div></article>
         </div>
       </section>
 
@@ -283,35 +290,35 @@
         <p class="lede">Other places in South Orlando, closest to Amar Orlando first.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/amazonica-florida-mall.html">Amazonica</a></h3>
-          <p class="meta">Coffee &amp; cafes · Coffee Shop &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/amazonica-florida-mall.html">Amazonica</a></h3>
+          <p class="meta">Coffee &amp; cafes · Coffee Shop &middot; $$</p><p class="vsub">A bright Colombian kiosk inside The Florida Mall, turning out obleas with arequipe, acai bowls with Nutella and fruit, and a proper cortadito.</p>
           <p class="addr">8001 S Orange Blossom Trl Kiosk TT124, Orlando, FL 32809</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/crayola-experience-orlando.html">Crayola Experience</a></h3>
-          <p class="meta">Attractions · Attraction &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-crayola-experience-orlando.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/crayola-experience-orlando.html">Crayola Experience</a></h3>
+          <p class="meta">Attractions · Attraction &middot; $$</p><p class="vsub">Hands-on color playground inside The Florida Mall, built for younger kids.</p>
           <p class="addr">8001 S Orange Blossom Trl, Orlando, FL 32809</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/el-cilantrillo.html">El Cilantrillo</a></h3>
-          <p class="meta">Latin &amp; Caribbean · Latin &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/el-cilantrillo.html">El Cilantrillo</a></h3>
+          <p class="meta">Latin &amp; Caribbean · Latin &middot; $$</p><p class="vsub">South Orlando&#x27;s big Puerto Rican table near the Florida Mall is lively and salsa-filled, with generous portions.</p>
           <p class="addr">El Cilantrillo Restaurant, 1301 Florida Mall Ave, Orlando, FL 32809-7731</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/el-para-so-del-marisco.html">El Paraíso Del Marisco</a></h3>
-          <p class="meta">Seafood &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/el-para-so-del-marisco.html">El Paraíso Del Marisco</a></h3>
+          <p class="meta">Seafood &middot; $$</p><p class="vsub">Ecuadorian and Peruvian seafood that Orlando&#x27;s Latin families describe as tasting like home.</p>
           <p class="addr">8421 S Orange Blossom Trl Ste 156, Orlando, FL 32809</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/bombay-street.html">Bombay Street Kitchen</a></h3>
-          <p class="meta">Indian &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/bombay-street.html">Bombay Street Kitchen</a></h3>
+          <p class="meta">Indian &middot; $$</p><p class="vsub">Street food from Mumbai, Delhi, Chennai and Bangalore is the draw at this bright, buzzy Orange Blossom Trail room with a Michelin Bib Gourmand.</p>
           <p class="addr">6215 S Orange Blossom Trl, Orlando</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/orlando-watersports-complex.html">Orlando Watersports Complex</a></h3>
-          <p class="meta">Attractions · Attraction &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-orlando-watersports-complex.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/orlando-watersports-complex.html">Orlando Watersports Complex</a></h3>
+          <p class="meta">Attractions · Attraction &middot; $$</p><p class="vsub">Laid-back cable park where beginners and pros share the water, with an inflatable Aqua Park for bouncing between runs.</p>
           <p class="addr">8615 Florida Rock Rd, Orlando, FL 32824</p>
-        </article>
+        </div></article>
         </div>
         <div class="handoff">
           <a class="btn-ghost" href="/south-orlando-finder.html">See the full South Orlando list</a>

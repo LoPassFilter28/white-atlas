@@ -211,7 +211,14 @@
       .vcard .addr { margin: 0; color: var(--muted); font-size: .9rem; }
       @media (max-width: 640px) { .facts { grid-template-columns: 1fr; } }
     </style>
-  </head>
+  <style data-cardsys>
+/* cardsys: similar rail cards (2026-10-23 overhaul) */
+.vcard{display:flex;gap:12px;align-items:flex-start}
+.vcard .vthumb{flex:0 0 86px;width:86px;height:86px;border-radius:10px;object-fit:cover;display:block}
+.vcard .vmain{flex:1;min-width:0}
+.vcard .vsub{margin:4px 0 0;font-size:.86rem;line-height:1.45;color:var(--muted,#c6bba2)}
+@media (min-width:1000px){.vlist{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start}}
+</style></head>
   <body>
     <header class="hero">
       <div class="hero-in">
@@ -236,46 +243,46 @@
         <div class="actions">
           <a class="action" href="https://www.google.com/maps/search/?api=1&amp;query=Bakery+1908+Bakery+1908%2C+12399+S+Apopka+Vineland+Rd%2C+Orlando%2C+FL+32836%2C+United+States" target="_blank" rel="noopener">Directions &rarr;</a>
           <a class="action" href="/archive.html?venue=bakery-1908">Open in the full finder</a>
-          <a class="action" href="/disney-springs-district-guide.html">Read the Disney Springs story</a>
+          <a class="action" href="/history/disney-springs.html">Read the Disney Springs story</a>
           <a class="action action-ig" href="https://www.instagram.com/bakery1908usa" target="_blank" rel="noopener"><svg class="ig-glyph" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="vertical-align:-2px;margin-right:6px"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg> Instagram</a>
         </div>
       </section>
 
-      <section class="sec" id="similar">
+      <section class="sec" id="district-story"><p class="kicker">District Story</p><h2>The story of Orlando</h2><p class="lede">A shopping village opened in 1975, a town history written for a 2015 rebrand, and springs built to match the story. This is the documented version, told straight.</p><p><a class="btn-ghost" href="/history/disney-springs.html">Read the Orlando story &rarr;</a></p></section><section class="sec" id="similar">
         <p class="kicker">Similar Feel</p>
         <h2>More places with this feel</h2>
         <p class="lede">Matched by vibe, not by neighborhood: the places across Greater Orlando closest in spirit to Bakery 1908.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/charlies-bakery.html">Charlie&#x27;s Bakery</a></h3>
-          <p class="meta">Bakeries &middot; Orlando &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-charlies-bakery.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/charlies-bakery.html">Charlie&#x27;s Bakery</a></h3>
+          <p class="meta">Bakeries &middot; Orlando &middot; $$</p><p class="vsub">A Curry Ford go-to for generations, baking in the same shop since 1971.</p>
           <p class="addr">Charlie&#x27;s Bakery, 3213 Curry Ford Rd, Orlando, FL 32806, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/buttermilk.html">Buttermilk Bakery</a></h3>
-          <p class="meta">Bakeries &middot; Winter Park &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-buttermilk.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/buttermilk.html">Buttermilk Bakery</a></h3>
+          <p class="meta">Bakeries &middot; Winter Park &middot; $$</p><p class="vsub">A cozy Winter Park bakery where the case fills fresh every morning and choosing just a few treats is the hard part.</p>
           <p class="addr">Buttermilk Bakery, 1198 N Orange Ave, Winter Park, FL 32789-4908</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/bagel-king-bakery.html">Bagel King Bakery</a></h3>
-          <p class="meta">Bakeries &middot; Orlando &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/bagel-king-bakery.html">Bagel King Bakery</a></h3>
+          <p class="meta">Bakeries &middot; Orlando &middot; $$</p><p class="vsub">A working wholesale plant, not a retail shop, whose kettle-boiled bagels fill deli and cafe cases across Central Florida.</p>
           <p class="addr">Bagel King Bakery, 668 Kennedy Blvd W, Orlando, FL 32810-6255, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/mochiry.html">Mochiry</a></h3>
-          <p class="meta">Sweets &middot; Downtown &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/mochiry.html">Mochiry</a></h3>
+          <p class="meta">Sweets &middot; Downtown &middot; $</p><p class="vsub">On South Orange Avenue downtown, Mochiry serves Korean-style mochi doughnuts with the springy, stretchy chew that sets them apart.</p>
           <p class="addr">20 S Orange Ave, Orlando, FL 32801</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/shaka-donuts.html">Shaka Donuts</a></h3>
-          <p class="meta">Sweets &middot; Hourglass District &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-shaka-donuts.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/shaka-donuts.html">Shaka Donuts</a></h3>
+          <p class="meta">Sweets &middot; Hourglass District &middot; $$</p><p class="vsub">Aloha spirit in a cozy Curry Ford shop where every donut is made to order and served warm, and regulars call them Orlando&#x27;s best.</p>
           <p class="addr">2641 Curry Ford Rd, Orlando, FL 32806</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/bento-asian-kitchen-downtown.html">BENTO Asian Kitchen + Sushi</a></h3>
-          <p class="meta">Japanese &amp; sushi &middot; Downtown Orlando &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-bento-asian-kitchen-downtown.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/bento-asian-kitchen-downtown.html">BENTO Asian Kitchen + Sushi</a></h3>
+          <p class="meta">Japanese &amp; sushi &middot; Downtown Orlando &middot; $$</p><p class="vsub">Fast-casual Pan-Asian on South Orange Avenue, built for the group that cannot agree on one cuisine.</p>
           <p class="addr">151 S Orange Ave, Orlando, FL 32801</p>
-        </article>
+        </div></article>
         </div>
       </section>
 
@@ -285,35 +292,35 @@
         <p class="lede">Other places in Disney Springs, Local Picks first, then the closest to Bakery 1908.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/disney-springs-district.html">Disney Springs</a> <span class="badge">Local Pick</span></h3>
-          <p class="meta">Markets &amp; shops · Shopping District &middot; $$$</p>
+          <div class="vmain"><h3><a href="/venue/disney-springs-district.html">Disney Springs</a> <span class="badge">Local Pick</span></h3>
+          <p class="meta">Markets &amp; shops · Shopping District &middot; $$$</p><p class="vsub">Disney&#x27;s open-air waterfront promenade, no park ticket and no turnstile, just an evening on the water.</p>
           <p class="addr">1486 E Buena Vista Dr, Lake Buena Vista, FL 32830</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/u-me-revolving-hot-pot.html">U &amp; Me Revolving Hot Pot</a></h3>
-          <p class="meta">Chinese · Hot Pot &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-u-me-revolving-hot-pot.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/u-me-revolving-hot-pot.html">U &amp; Me Revolving Hot Pot</a></h3>
+          <p class="meta">Chinese · Hot Pot &middot; $$</p><p class="vsub">Hot pot becomes an interactive game here, with plates circling past on a revolving conveyor for your broth.</p>
           <p class="addr">12384 S Apopka Vineland Rd, Orlando, FL 32836</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/raglan-road.html">Raglan Road</a></h3>
-          <p class="meta">Bars &amp; lounges · Pub &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-raglan-road.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/raglan-road.html">Raglan Road</a></h3>
+          <p class="meta">Bars &amp; lounges · Pub &middot; $$</p><p class="vsub">A lively Irish pub at Disney Springs where live music and Irish dancers keep the room energetic.</p>
           <p class="addr">1640 E Buena Vista Dr, Lake Buena Vista, FL 32830</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/house-of-blues.html">House of Blues</a></h3>
-          <p class="meta">Nightlife &amp; music · Music Venue &middot; $$$</p>
+          <div class="vmain"><h3><a href="/venue/house-of-blues.html">House of Blues</a></h3>
+          <p class="meta">Nightlife &amp; music · Music Venue &middot; $$$</p><p class="vsub">At Disney Springs, a Southern-leaning restaurant pairs with a music hall wrapped in folk art.</p>
           <p class="addr">1490 E Buena Vista Dr, Lake Buena Vista, FL 32830</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/six-ravens.html">Six Ravens</a></h3>
-          <p class="meta">Burgers &amp; sandwiches · Hand Pies &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-six-ravens.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/six-ravens.html">Six Ravens</a></h3>
+          <p class="meta">Burgers &amp; sandwiches · Hand Pies &middot; $$</p><p class="vsub">At The Landing in Disney Springs, the savory companion to Gideon&#x27;s serves Coffyns, hand pies in house-baked yeast rolls with storybook names.</p>
           <p class="addr">1600 E Buena Vista Dr, Lake Buena Vista, FL 32830</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/the-ganachery.html">The Ganachery</a></h3>
-          <p class="meta">Sweets · Chocolate Shop &middot; $$$</p>
+          <div class="vmain"><h3><a href="/venue/the-ganachery.html">The Ganachery</a></h3>
+          <p class="meta">Sweets · Chocolate Shop &middot; $$$</p><p class="vsub">Jewel-box chocolate shop at Disney Springs, with an open show kitchen where you can watch ganache squares and chocolate piñatas being made.</p>
           <p class="addr">The Ganachery, 1486 E Buena Vista Dr, Lake Buena Vista, FL 32830</p>
-        </article>
+        </div></article>
         </div>
         <div class="handoff">
           <a class="btn-ghost" href="/disney-springs-finder.html">See the full Disney Springs list</a>

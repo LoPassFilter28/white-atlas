@@ -211,7 +211,14 @@
       .vcard .addr { margin: 0; color: var(--muted); font-size: .9rem; }
       @media (max-width: 640px) { .facts { grid-template-columns: 1fr; } }
     </style>
-  </head>
+  <style data-cardsys>
+/* cardsys: similar rail cards (2026-10-23 overhaul) */
+.vcard{display:flex;gap:12px;align-items:flex-start}
+.vcard .vthumb{flex:0 0 86px;width:86px;height:86px;border-radius:10px;object-fit:cover;display:block}
+.vcard .vmain{flex:1;min-width:0}
+.vcard .vsub{margin:4px 0 0;font-size:.86rem;line-height:1.45;color:var(--muted,#c6bba2)}
+@media (min-width:1000px){.vlist{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start}}
+</style></head>
   <body>
     <header class="hero">
       <div class="hero-in">
@@ -239,41 +246,41 @@
         </div>
       </section>
 
-      <section class="sec" id="similar">
+      <section class="sec" id="district-story"><p class="kicker">District Stories</p><h2>Orlando&#x27;s long memory</h2><p class="lede">The guide keeps the long memory of Orlando&#x27;s districts in one place: the names, the plats and the stories behind the streets.</p><p><a class="btn-ghost" href="/history.html">Browse the district stories &rarr;</a></p></section><section class="sec" id="similar">
         <p class="kicker">Similar Feel</p>
         <h2>More places with this feel</h2>
         <p class="lede">Matched by vibe, not by neighborhood: the places across Greater Orlando closest in spirit to Amazonica.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/wunderbar.html">Wunderbar</a></h3>
-          <p class="meta">Coffee &amp; cafes &middot; Orlando &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/wunderbar.html">Wunderbar</a></h3>
+          <p class="meta">Coffee &amp; cafes &middot; Orlando &middot; $$</p><p class="vsub">Not a cocktail bar, but a family-owned superfood cafe in the Mall at Millenia food court, fresh fruit on display, made in front of you.</p>
           <p class="addr">Wunderbar, 4200 Conroy Rd, Orlando, FL 32839-2400, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/mecatos.html">Mecatos</a></h3>
-          <p class="meta">Latin &amp; Caribbean &middot; Winter Park &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/mecatos.html">Mecatos</a></h3>
+          <p class="meta">Latin &amp; Caribbean &middot; Winter Park &middot; $</p><p class="vsub">A bright Colombian bakery cafe on Morse Boulevard in Winter Park, built around coffee from beans sourced in Colombia.</p>
           <p class="addr">610 W Morse Blvd, Winter Park, FL 32789</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/black-bean-deli.html">Black Bean Deli</a></h3>
-          <p class="meta">Latin &amp; Caribbean &middot; Mills 50 &middot; $</p>
+          <img class="vthumb" src="/assets/venue-black-bean-deli.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/black-bean-deli.html">Black Bean Deli</a></h3>
+          <p class="meta">Latin &amp; Caribbean &middot; Mills 50 &middot; $</p><p class="vsub">An airy, plant-filled Mills 50 cafe where Cuban family recipes anchor the menu and regulars say it reminds them of home.</p>
           <p class="addr">1835 E Colonial Dr, Orlando, FL 32803</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/parva.html">Parva</a></h3>
-          <p class="meta">Latin &amp; Caribbean &middot; Sanford &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/parva.html">Parva</a></h3>
+          <p class="meta">Latin &amp; Caribbean &middot; Sanford &middot; $$</p><p class="vsub">Warm, homey Colombian bakery and cafe on West Lake Mary Boulevard in Sanford, where the pastry case leads the visit.</p>
           <p class="addr">Parva, 220 W Lake Mary Blvd, Sanford, FL 32773-5925, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/qreate-coffee.html">Qreate Coffee</a></h3>
-          <p class="meta">Coffee &amp; cafes &middot; Orlando &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-qreate-coffee.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/qreate-coffee.html">Qreate Coffee</a></h3>
+          <p class="meta">Coffee &amp; cafes &middot; Orlando &middot; $$</p><p class="vsub">Just off Mills on Woodward Street, part coffee lab and part creative studio, with a small-town feel guests do not expect.</p>
           <p class="addr">1212 Woodward St #1, Orlando, FL 32803</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/chickpeas-fresh-mediterranean-kitchen.html">Chickpeas Fresh Mediterranean Kitchen</a></h3>
-          <p class="meta">Mediterranean &middot; Millenia &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/chickpeas-fresh-mediterranean-kitchen.html">Chickpeas Fresh Mediterranean Kitchen</a></h3>
+          <p class="meta">Mediterranean &middot; Millenia &middot; $$</p><p class="vsub">A Mall at Millenia food court counter with a loyal following for falafel one guest called the best they have had in Florida.</p>
           <p class="addr">4200 Conroy Rd, Orlando, FL 32839</p>
-        </article>
+        </div></article>
         </div>
       </section>
 
@@ -283,35 +290,35 @@
         <p class="lede">Other places in South Orlando, closest to Amazonica first.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/amar-orlando.html">Amar Orlando</a></h3>
-          <p class="meta">Mediterranean &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/amar-orlando.html">Amar Orlando</a></h3>
+          <p class="meta">Mediterranean &middot; $$</p><p class="vsub">Lebanese cooking in a calm, intimate room just outside the Florida Mall food court, a step up from its surroundings.</p>
           <p class="addr">8001 S Orange Blossom Trl, Ste #1510, Orlando, FL 32809</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/crayola-experience-orlando.html">Crayola Experience</a></h3>
-          <p class="meta">Attractions · Attraction &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-crayola-experience-orlando.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/crayola-experience-orlando.html">Crayola Experience</a></h3>
+          <p class="meta">Attractions · Attraction &middot; $$</p><p class="vsub">Hands-on color playground inside The Florida Mall, built for younger kids.</p>
           <p class="addr">8001 S Orange Blossom Trl, Orlando, FL 32809</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/el-cilantrillo.html">El Cilantrillo</a></h3>
-          <p class="meta">Latin &amp; Caribbean · Latin &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/el-cilantrillo.html">El Cilantrillo</a></h3>
+          <p class="meta">Latin &amp; Caribbean · Latin &middot; $$</p><p class="vsub">South Orlando&#x27;s big Puerto Rican table near the Florida Mall is lively and salsa-filled, with generous portions.</p>
           <p class="addr">El Cilantrillo Restaurant, 1301 Florida Mall Ave, Orlando, FL 32809-7731</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/el-para-so-del-marisco.html">El Paraíso Del Marisco</a></h3>
-          <p class="meta">Seafood &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/el-para-so-del-marisco.html">El Paraíso Del Marisco</a></h3>
+          <p class="meta">Seafood &middot; $$</p><p class="vsub">Ecuadorian and Peruvian seafood that Orlando&#x27;s Latin families describe as tasting like home.</p>
           <p class="addr">8421 S Orange Blossom Trl Ste 156, Orlando, FL 32809</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/bombay-street.html">Bombay Street Kitchen</a></h3>
-          <p class="meta">Indian &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/bombay-street.html">Bombay Street Kitchen</a></h3>
+          <p class="meta">Indian &middot; $$</p><p class="vsub">Street food from Mumbai, Delhi, Chennai and Bangalore is the draw at this bright, buzzy Orange Blossom Trail room with a Michelin Bib Gourmand.</p>
           <p class="addr">6215 S Orange Blossom Trl, Orlando</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/orlando-watersports-complex.html">Orlando Watersports Complex</a></h3>
-          <p class="meta">Attractions · Attraction &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-orlando-watersports-complex.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/orlando-watersports-complex.html">Orlando Watersports Complex</a></h3>
+          <p class="meta">Attractions · Attraction &middot; $$</p><p class="vsub">Laid-back cable park where beginners and pros share the water, with an inflatable Aqua Park for bouncing between runs.</p>
           <p class="addr">8615 Florida Rock Rd, Orlando, FL 32824</p>
-        </article>
+        </div></article>
         </div>
         <div class="handoff">
           <a class="btn-ghost" href="/south-orlando-finder.html">See the full South Orlando list</a>

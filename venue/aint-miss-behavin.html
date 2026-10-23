@@ -211,7 +211,14 @@
       .vcard .addr { margin: 0; color: var(--muted); font-size: .9rem; }
       @media (max-width: 640px) { .facts { grid-template-columns: 1fr; } }
     </style>
-  </head>
+  <style data-cardsys>
+/* cardsys: similar rail cards (2026-10-23 overhaul) */
+.vcard{display:flex;gap:12px;align-items:flex-start}
+.vcard .vthumb{flex:0 0 86px;width:86px;height:86px;border-radius:10px;object-fit:cover;display:block}
+.vcard .vmain{flex:1;min-width:0}
+.vcard .vsub{margin:4px 0 0;font-size:.86rem;line-height:1.45;color:var(--muted,#c6bba2)}
+@media (min-width:1000px){.vlist{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start}}
+</style></head>
   <body>
     <header class="hero">
       <div class="hero-in">
@@ -236,45 +243,45 @@
         <div class="actions">
           <a class="action" href="https://www.google.com/maps/search/?api=1&amp;query=Ain%27t+Miss+Behavin%27+Sports+and+Tiki+Bar+Ain%27t+Miss+Behavin%27+Sports+and+Tiki+Bar%2C+1550+FL-436%2C+Winter+Park%2C+FL+32792" target="_blank" rel="noopener">Directions &rarr;</a>
           <a class="action" href="/archive.html?venue=aint-miss-behavin">Open in the full finder</a>
-          <a class="action" href="/winter-park-district-guide.html">Read the Winter Park story</a>
+          <a class="action" href="/history/winter-park.html">Read the Winter Park story</a>
         </div>
       </section>
 
-      <section class="sec" id="similar">
+      <section class="sec" id="district-story"><p class="kicker">District Story</p><h2>The story of Winter Park</h2><p class="lede">A park built for the winter, drawn on paper in 1881, and still legible in every street you walk today.</p><p><a class="btn-ghost" href="/history/winter-park.html">Read the Winter Park story &rarr;</a></p></section><section class="sec" id="similar">
         <p class="kicker">Similar Feel</p>
         <h2>More places with this feel</h2>
         <p class="lede">Matched by vibe, not by neighborhood: the places across Greater Orlando closest in spirit to Ain&#x27;t Miss Behavin&#x27; Sports and Tiki Bar.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/paddys-pub-longwood.html">Paddy&#x27;s Pub Longwood</a></h3>
-          <p class="meta">Bars &amp; lounges &middot; Longwood &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/paddys-pub-longwood.html">Paddy&#x27;s Pub Longwood</a></h3>
+          <p class="meta">Bars &amp; lounges &middot; Longwood &middot; $</p><p class="vsub">Longwood&#x27;s no-frills neighborhood sports pub, with Diamond pool tables, dart boards, and TVs on the games.</p>
           <p class="addr">Paddy&#x27;s Pub Longwood, 995 W State Rd 434, Longwood, FL 32750</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/oshucks-karaoke-bar.html">O&#x27;Shucks Karaoke Bar</a></h3>
-          <p class="meta">Bars &amp; lounges &middot; International Drive &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/oshucks-karaoke-bar.html">O&#x27;Shucks Karaoke Bar</a></h3>
+          <p class="meta">Bars &amp; lounges &middot; International Drive &middot; $$</p><p class="vsub">Karaoke is not a theme night here, it is the whole calendar, in an unfancy Irish pub on International Drive with a proper sound setup.</p>
           <p class="addr">7467 International Dr, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/tibbys-new-orleans-kitchen.html">Tibby&#x27;s New Orleans Kitchen</a></h3>
-          <p class="meta">Restaurants &middot; University &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/tibbys-new-orleans-kitchen.html">Tibby&#x27;s New Orleans Kitchen</a></h3>
+          <p class="meta">Restaurants &middot; University &middot; $$</p><p class="vsub">A Mardi Gras room on Aloma Avenue in Winter Park, lively and colorful, with an atmosphere guests say feels like being back in Louisiana.</p>
           <p class="addr">2203 Aloma Ave, Winter Park, FL 32792</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/the-porch-winter-park.html">The Porch Winter Park</a></h3>
-          <p class="meta">American &middot; Winter Park &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-the-porch-winter-park.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/the-porch-winter-park.html">The Porch Winter Park</a></h3>
+          <p class="meta">American &middot; Winter Park &middot; $$</p><p class="vsub">A converted garage on Orange Avenue turned lively, open sports bar for game day, with big screens, games and a menu for any crew.</p>
           <p class="addr">643 N Orange Ave, Winter Park, FL 32789</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/outpost-neighborhood-tavern.html">Outpost Neighborhood Tavern</a></h3>
-          <p class="meta">American &middot; Thornton Park &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-outpost-neighborhood-tavern.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/outpost-neighborhood-tavern.html">Outpost Neighborhood Tavern</a></h3>
+          <p class="meta">American &middot; Thornton Park &middot; $$</p><p class="vsub">Two blocks off Lake Eola, a welcoming room guests call a cross between a sports bar and a boutique restaurant, with a lively patio and trivia leagues.</p>
           <p class="addr">227 N Eola Dr, Orlando, FL 32801</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/ollies-public-house.html">Ollie&#x27;s Public House</a></h3>
-          <p class="meta">Bars &amp; lounges &middot; College Park &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/ollies-public-house.html">Ollie&#x27;s Public House</a></h3>
+          <p class="meta">Bars &amp; lounges &middot; College Park &middot; $$</p><p class="vsub">Easy neighborhood-pub rhythm on Edgewater Drive, with a lively dog-friendly patio and rotating craft taps.</p>
           <p class="addr">Ollie&#x27;s Public House, 3400 Edgewater Dr, Orlando, FL 32804-3602, United States</p>
-        </article>
+        </div></article>
         </div>
       </section>
 
@@ -284,35 +291,35 @@
         <p class="lede">Other places in Winter Park, Local Picks first, then the closest to Ain&#x27;t Miss Behavin&#x27; Sports and Tiki Bar.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/ava.html">AVA Mediterranean</a> <span class="badge">Local Pick</span></h3>
-          <p class="meta">Mediterranean &middot; $$$</p>
+          <img class="vthumb" src="/assets/venue-ava.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/ava.html">AVA Mediterranean</a> <span class="badge">Local Pick</span></h3>
+          <p class="meta">Mediterranean &middot; $$$</p><p class="vsub">A glamorous Greek agora on Park Avenue, sophisticated and high-energy from the moment you sit down.</p>
           <p class="addr">290 S Park Ave, Winter Park, FL 32789</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/imperial-on-park.html">The Imperial on Park</a> <span class="badge">Local Pick</span></h3>
-          <p class="meta">Bars &amp; lounges · Wine Bar &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-imperial-on-park.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/imperial-on-park.html">The Imperial on Park</a> <span class="badge">Local Pick</span></h3>
+          <p class="meta">Bars &amp; lounges · Wine Bar &middot; $$</p><p class="vsub">Park Avenue&#x27;s neighborhood bar, warm and laid back, with boutique wines, craft beers and cocktails built on Winter Park Distillery spirits.</p>
           <p class="addr">136 S Park Ave, Winter Park, FL 32789</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/prato.html">Prato</a> <span class="badge">Local Pick</span></h3>
-          <p class="meta">Italian &middot; $$$</p>
+          <div class="vmain"><h3><a href="/venue/prato.html">Prato</a> <span class="badge">Local Pick</span></h3>
+          <p class="meta">Italian &middot; $$$</p><p class="vsub">Italian the Park Avenue way: rustic yet upscale, exposed brick and warm light, house-made pastas and wood-fired pizzas.</p>
           <p class="addr">Prato, 124 N Park Ave, Winter Park, FL 32789</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/kai-asian-street-fare.html">Kai Asian Street Fare</a></h3>
-          <p class="meta">Noodles &amp; Southeast Asian · Asian Fusion &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/kai-asian-street-fare.html">Kai Asian Street Fare</a></h3>
+          <p class="meta">Noodles &amp; Southeast Asian · Asian Fusion &middot; $$</p><p class="vsub">Casual, unpretentious spot on State Road 436 serving craveable Asian street food under one roof.</p>
           <p class="addr">1555 State Rd 436 Ste 1171, Winter Park, FL 32792</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/boardwalk-pizza.html">Boardwalk Pizza</a></h3>
-          <p class="meta">Pizza · Pizza &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-boardwalk-pizza.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/boardwalk-pizza.html">Boardwalk Pizza</a></h3>
+          <p class="meta">Pizza · Pizza &middot; $$</p><p class="vsub">Jersey shore, old-school pizzeria feel comes to Lake Howell Road, with an open kitchen and a small-town welcome.</p>
           <p class="addr">Boardwalk Pizza, 5419 Lake Howell Rd, Winter Park, FL 32792</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/asia-kitchen.html">Asia Kitchen</a></h3>
-          <p class="meta">Noodles &amp; Southeast Asian · Boba &amp; Asian Fusion &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/asia-kitchen.html">Asia Kitchen</a></h3>
+          <p class="meta">Noodles &amp; Southeast Asian · Boba &amp; Asian Fusion &middot; $</p><p class="vsub">Bright and spotless on Lake Howell Road, a neighborhood staple where you might get fresh wontons while you wait.</p>
           <p class="addr">Asia Kitchen, 5405 Lake Howell Rd, Winter Park, FL 32792</p>
-        </article>
+        </div></article>
         </div>
         <div class="handoff">
           <a class="btn-ghost" href="/winter-park-finder.html">See the full Winter Park list</a>

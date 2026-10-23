@@ -221,7 +221,14 @@
 .take .take-label{font-size:.72rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--accent-ink);margin:0 0 8px}
 
 </style>
-  </head>
+  <style data-cardsys>
+/* cardsys: similar rail cards (2026-10-23 overhaul) */
+.vcard{display:flex;gap:12px;align-items:flex-start}
+.vcard .vthumb{flex:0 0 86px;width:86px;height:86px;border-radius:10px;object-fit:cover;display:block}
+.vcard .vmain{flex:1;min-width:0}
+.vcard .vsub{margin:4px 0 0;font-size:.86rem;line-height:1.45;color:var(--muted,#c6bba2)}
+@media (min-width:1000px){.vlist{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start}}
+</style></head>
   <body>
     <header class="hero">
       <div class="hero-in">
@@ -246,7 +253,7 @@
         <div class="actions">
           <a class="action" href="https://www.google.com/maps/search/?api=1&amp;query=bartaco+7600+Dr+Phillips+Blvd+Ste+28%2C+Orlando%2C+FL+32819" target="_blank" rel="noopener">Directions &rarr;</a>
           <a class="action" href="/archive.html?venue=bartaco-dr-phillips">Open in the full finder</a>
-          <a class="action" href="/international-drive-district-guide.html">Read the International Drive story</a>
+          <a class="action" href="/history/i-drive.html">Read the International Drive story</a>
         </div>
       </section>
 
@@ -274,41 +281,41 @@
         </div>
       </section>
 
-<section class="sec" id="similar">
+<section class="sec" id="district-story"><p class="kicker">District Story</p><h2>The story of Dr Phillips</h2><p class="lede">A hotel in the boondocks, a road paved after it and named to sound big and important, and the corridor that taught Orlando how to be a vacation.</p><p><a class="btn-ghost" href="/history/i-drive.html">Read the Dr Phillips story &rarr;</a></p></section><section class="sec" id="similar">
         <p class="kicker">Similar Feel</p>
         <h2>More places with this feel</h2>
         <p class="lede">Matched by vibe, not by neighborhood: the places across Greater Orlando closest in spirit to bartaco.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/solita-tacos-margaritas.html">Solita Tacos &amp; Margaritas</a></h3>
-          <p class="meta">Mexican &middot; Downtown Orlando &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/solita-tacos-margaritas.html">Solita Tacos &amp; Margaritas</a></h3>
+          <p class="meta">Mexican &middot; Downtown Orlando &middot; $$</p><p class="vsub">A lively downtown cantina built around wood-grilled Baja-style tacos and margaritas.</p>
           <p class="addr">222 S Orange Ave, Orlando, FL 32801</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/taqueria-las-cazuelas.html">Taqueria las Cazuelas</a></h3>
-          <p class="meta">Mexican &middot; Orlando &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/taqueria-las-cazuelas.html">Taqueria las Cazuelas</a></h3>
+          <p class="meta">Mexican &middot; Orlando &middot; $$</p><p class="vsub">No-frills and home-style on East Colonial, the taco outpost of the Las Cazuelas family, with portions that are famously not shy.</p>
           <p class="addr">Taqueria las Cazuelas, 10360 E Colonial Dr, Orlando, FL 32817-4364, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/quesa-loco.html">QuesaLoco</a></h3>
-          <p class="meta">Mexican &middot; College Park &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-quesa-loco.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/quesa-loco.html">QuesaLoco</a></h3>
+          <p class="meta">Mexican &middot; College Park &middot; $$</p><p class="vsub">Birria country on Fairbanks Ave, in a colorful room with Dia de los Muertos murals and the joyful chaos of its food truck days.</p>
           <p class="addr">971 W Fairbanks Ave, Orlando, FL 32804</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/rocco-s-tacos-tequila-bar.html">Rocco&#x27;s Tacos &amp; Tequila Bar</a></h3>
-          <p class="meta">Mexican &middot; Orlando &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/rocco-s-tacos-tequila-bar.html">Rocco&#x27;s Tacos &amp; Tequila Bar</a></h3>
+          <p class="meta">Mexican &middot; Orlando &middot; $$</p><p class="vsub">Sand Lake Road&#x27;s lakeside patio party, upbeat and colorful, where tableside guacamole steals the show before the tacos even land.</p>
           <p class="addr">7468 W Sand Lake Rd, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/grocery-hermanos.html">Grocery Los Hermanos</a></h3>
-          <p class="meta">Mexican &middot; East Orlando &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/grocery-hermanos.html">Grocery Los Hermanos</a></h3>
+          <p class="meta">Mexican &middot; East Orlando &middot; $</p><p class="vsub">A family-run market and taqueria on Curry Ford where guests say the food tastes homemade and very fresh.</p>
           <p class="addr">4130 Curry Ford Rd, Orlando, FL 32806</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/the-tavern-bar-tacos.html">The Tavern Bar &amp; Tacos</a></h3>
-          <p class="meta">Mexican &middot; Downtown &middot; $</p>
+          <img class="vthumb" src="/assets/venue-the-tavern-bar-tacos.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/the-tavern-bar-tacos.html">The Tavern Bar &amp; Tacos</a></h3>
+          <p class="meta">Mexican &middot; Downtown &middot; $</p><p class="vsub">It calls itself a vibe bar and guests back it up, starting with birria tacos one regular said should be criminal.</p>
           <p class="addr">The Tavern Bar &amp; Tacos, 75 E Colonial Dr, Orlando, FL 32801</p>
-        </article>
+        </div></article>
         </div>
       </section>
 
@@ -318,35 +325,35 @@
         <p class="lede">Other places in International Drive, Local Picks first, then the closest to bartaco.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/toms-watch-bar-orlando.html">Tom&#x27;s Watch Bar</a> <span class="badge">Local Pick</span></h3>
-          <p class="meta">Bars &amp; lounges · Bar &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-toms-watch-bar-orlando.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/toms-watch-bar-orlando.html">Tom&#x27;s Watch Bar</a> <span class="badge">Local Pick</span></h3>
+          <p class="meta">Bars &amp; lounges · Bar &middot; $$</p><p class="vsub">On International Drive, a sports bar built like a stadium, with an oversized screen and screens wrapping the room so every seat faces the action.</p>
           <p class="addr">8050 International Dr, Suite 1000, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/baires-grill-orlando.html">Baires Grill</a> <span class="badge">Local Pick</span></h3>
-          <p class="meta">Latin &amp; Caribbean · Argentinian Steakhouse &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-baires-grill-orlando.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/baires-grill-orlando.html">Baires Grill</a> <span class="badge">Local Pick</span></h3>
+          <p class="meta">Latin &amp; Caribbean · Argentinian Steakhouse &middot; $$</p><p class="vsub">The parrilla decides everything at this Argentine steakhouse just off International Drive.</p>
           <p class="addr">8050 International Dr, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/christini-s-ristorante-italiano.html">Christini&#x27;s Ristorante Italiano</a></h3>
-          <p class="meta">Italian &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/christini-s-ristorante-italiano.html">Christini&#x27;s Ristorante Italiano</a></h3>
+          <p class="meta">Italian &middot; $$</p><p class="vsub">On Restaurant Row since 1984, dinner staged as an old-world occasion: tuxedoed service, candlelight, and live accordion in the room.</p>
           <p class="addr">7600 Dr Phillips Blvd, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/gelato-lacarraia.html">Gelato LaCarraia</a></h3>
-          <p class="meta">Sweets · Gelato &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/gelato-lacarraia.html">Gelato LaCarraia</a></h3>
+          <p class="meta">Sweets · Gelato &middot; $$</p><p class="vsub">A cozy, quaint Dr.</p>
           <p class="addr">7600 Dr Phillips Blvd Ste 38, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/norman-s-orlando.html">Norman&#x27;s Orlando</a></h3>
-          <p class="meta">Fine dining &amp; steak · New World Cuisine &middot; $$$$</p>
+          <img class="vthumb" src="/assets/venue-norman-s-orlando.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/norman-s-orlando.html">Norman&#x27;s Orlando</a></h3>
+          <p class="meta">Fine dining &amp; steak · New World Cuisine &middot; $$$$</p><p class="vsub">Norman Van Aken&#x27;s flagship at Dellagio, where New World cooking fuses Florida, the Caribbean, and Latin America.</p>
           <p class="addr">7924 Via Dellagio Way, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/peperoncino.html">Peperoncino</a></h3>
-          <p class="meta">Italian · Italian &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/peperoncino.html">Peperoncino</a></h3>
+          <p class="meta">Italian · Italian &middot; $$</p><p class="vsub">Tiny and homey by the Dellagio fountain, this Italian spot has guests saying it feels like Italy.</p>
           <p class="addr">7988 Via Dellagio Way Ste 108, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         </div>
         <div class="handoff">
           <a class="btn-ghost" href="/international-drive-finder.html">See the full International Drive list</a>
