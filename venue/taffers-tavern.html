@@ -239,6 +239,13 @@ html[data-theme="light"] .hero.has-photo{--ink:#f4efe1;--headline:#f6edd6;--mute
 .hero-plate figcaption .hero-credit{display:block;color:#5c6a58;font-size:.72rem;margin-top:2px}
 .hero-plate figcaption a{color:#7c520c}
 .has-photo .hero-in{padding-bottom:18px}
+</style><style data-cardsys>
+/* cardsys: similar rail cards (2026-10-23 overhaul) */
+.vcard{display:flex;gap:12px;align-items:flex-start}
+.vcard .vthumb{flex:0 0 86px;width:86px;height:86px;border-radius:10px;object-fit:cover;display:block}
+.vcard .vmain{flex:1;min-width:0}
+.vcard .vsub{margin:4px 0 0;font-size:.86rem;line-height:1.45;color:var(--muted,#c6bba2)}
+@media (min-width:1000px){.vlist{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start}}
 </style></head>
   <body>
     <header class="hero has-photo">
@@ -266,45 +273,45 @@ html[data-theme="light"] .hero.has-photo{--ink:#f4efe1;--headline:#f6edd6;--mute
         <div class="actions">
           <a class="action" href="https://www.google.com/maps/search/?api=1&amp;query=Taffer%27s+Tavern+Pointe+Orlando%2C+9101+International+Dr%2C+Orlando%2C+FL+32819" target="_blank" rel="noopener">Directions &rarr;</a>
           <a class="action" href="/archive.html?venue=taffers-tavern">Open in the full finder</a>
-          <a class="action" href="/international-drive-district-guide.html">Read the International Drive story</a>
+          <a class="action" href="/history/i-drive.html">Read the International Drive story</a>
         </div>
       </section>
 
-      <section class="sec" id="similar">
+      <section class="sec" id="district-story"><p class="kicker">District Story</p><h2>The story of Pointe Orlando</h2><p class="lede">A hotel in the boondocks, a road paved after it and named to sound big and important, and the corridor that taught Orlando how to be a vacation.</p><p><a class="btn-ghost" href="/history/i-drive.html">Read the Pointe Orlando story &rarr;</a></p></section><section class="sec" id="similar">
         <p class="kicker">Similar Feel</p>
         <h2>More places with this feel</h2>
         <p class="lede">Matched by vibe, not by neighborhood: the places across Greater Orlando closest in spirit to Taffer&#x27;s Tavern.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/taverna-opa.html">Taverna Opa</a></h3>
-          <p class="meta">Mediterranean &middot; International Drive &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/taverna-opa.html">Taverna Opa</a></h3>
+          <p class="meta">Mediterranean &middot; International Drive &middot; $$</p><p class="vsub">A festive, high-energy Greek taverna at Pointe Orlando where dinner turns into a celebration, napkins flying as confetti.</p>
           <p class="addr">9101 International Dr, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/the-capital-grille-pointe-orlando.html">The Capital Grille</a></h3>
-          <p class="meta">Fine dining &amp; steak &middot; Pointe Orlando &middot; $$$$</p>
+          <div class="vmain"><h3><a href="/venue/the-capital-grille-pointe-orlando.html">The Capital Grille</a></h3>
+          <p class="meta">Fine dining &amp; steak &middot; Pointe Orlando &middot; $$$$</p><p class="vsub">The default client steakhouse at Pointe Orlando, a short walk from the Rosen hotels, running the full expense-account ritual.</p>
           <p class="addr">9101 International Dr, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/the-whiskey.html">The Whiskey</a></h3>
-          <p class="meta">Bars &amp; lounges &middot; Sand Lake &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/the-whiskey.html">The Whiskey</a></h3>
+          <p class="meta">Bars &amp; lounges &middot; Sand Lake &middot; $$</p><p class="vsub">Rock and roll energy on Sand Lake, with chef-driven burgers and a bar that runs deep on whiskey.</p>
           <p class="addr">7563 W Sand Lake Rd, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/kavas-tacos-tequila.html">Kavas Tacos &amp; Tequila</a></h3>
-          <p class="meta">Mexican &middot; International Drive &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/kavas-tacos-tequila.html">Kavas Tacos &amp; Tequila</a></h3>
+          <p class="meta">Mexican &middot; International Drive &middot; $$</p><p class="vsub">Pointe Orlando&#x27;s loud, colorful taco party, celebratory from the first chips and salsa.</p>
           <p class="addr">9101 International Dr Ste 1198, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/jojo-s-shake-bar-pointe-orlando.html">JoJo&#x27;s Shake Bar</a></h3>
-          <p class="meta">Sweets &middot; Pointe Orlando &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-jojo-s-shake-bar-pointe-orlando.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/jojo-s-shake-bar-pointe-orlando.html">JoJo&#x27;s Shake Bar</a></h3>
+          <p class="meta">Sweets &middot; Pointe Orlando &middot; $$</p><p class="vsub">A retro diner at Pointe Orlando where the shakes arrive wearing their own desserts.</p>
           <p class="addr">9101 International Dr Ste 1208, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/american-social.html">American Social</a></h3>
-          <p class="meta">American &middot; Dr. Phillips &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-american-social.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/american-social.html">American Social</a></h3>
+          <p class="meta">American &middot; Dr. Phillips &middot; $$</p><p class="vsub">Restaurant Row&#x27;s high-energy sports lounge has screens in every sightline and a room built for game day.</p>
           <p class="addr">7335 W Sand Lake Rd Ste 101, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         </div>
       </section>
 
@@ -314,35 +321,35 @@ html[data-theme="light"] .hero.has-photo{--ink:#f4efe1;--headline:#f6edd6;--mute
         <p class="lede">Other places in International Drive, Local Picks first, then the closest to Taffer&#x27;s Tavern.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/toms-watch-bar-orlando.html">Tom&#x27;s Watch Bar</a> <span class="badge">Local Pick</span></h3>
-          <p class="meta">Bars &amp; lounges · Bar &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-toms-watch-bar-orlando.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/toms-watch-bar-orlando.html">Tom&#x27;s Watch Bar</a> <span class="badge">Local Pick</span></h3>
+          <p class="meta">Bars &amp; lounges · Bar &middot; $$</p><p class="vsub">On International Drive, a sports bar built like a stadium, with an oversized screen and screens wrapping the room so every seat faces the action.</p>
           <p class="addr">8050 International Dr, Suite 1000, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/baires-grill-orlando.html">Baires Grill</a> <span class="badge">Local Pick</span></h3>
-          <p class="meta">Latin &amp; Caribbean · Argentinian Steakhouse &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-baires-grill-orlando.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/baires-grill-orlando.html">Baires Grill</a> <span class="badge">Local Pick</span></h3>
+          <p class="meta">Latin &amp; Caribbean · Argentinian Steakhouse &middot; $$</p><p class="vsub">The parrilla decides everything at this Argentine steakhouse just off International Drive.</p>
           <p class="addr">8050 International Dr, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/cuba-libre-pointe-orlando.html">Cuba Libre</a></h3>
-          <p class="meta">Latin &amp; Caribbean · Cuban &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/cuba-libre-pointe-orlando.html">Cuba Libre</a></h3>
+          <p class="meta">Latin &amp; Caribbean · Cuban &middot; $$</p><p class="vsub">A two-story Old Havana courtyard rebuilt inside Pointe Orlando, all palm shadows, live Latin music, and rum.</p>
           <p class="addr">9101 International Dr #1004, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/jojo-s-shake-bar-pointe-orlando.html">JoJo&#x27;s Shake Bar</a></h3>
-          <p class="meta">Sweets · Shake Bar &amp; Diner &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-jojo-s-shake-bar-pointe-orlando.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/jojo-s-shake-bar-pointe-orlando.html">JoJo&#x27;s Shake Bar</a></h3>
+          <p class="meta">Sweets · Shake Bar &amp; Diner &middot; $$</p><p class="vsub">A retro diner at Pointe Orlando where the shakes arrive wearing their own desserts.</p>
           <p class="addr">9101 International Dr Ste 1208, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/kavas-tacos-tequila.html">Kavas Tacos &amp; Tequila</a></h3>
-          <p class="meta">Mexican · Tacos &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/kavas-tacos-tequila.html">Kavas Tacos &amp; Tequila</a></h3>
+          <p class="meta">Mexican · Tacos &middot; $$</p><p class="vsub">Pointe Orlando&#x27;s loud, colorful taco party, celebratory from the first chips and salsa.</p>
           <p class="addr">9101 International Dr Ste 1198, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/maggiano-s-pointe-orlando.html">Maggiano&#x27;s Little Italy</a></h3>
-          <p class="meta">Italian · Family-Style Italian &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/maggiano-s-pointe-orlando.html">Maggiano&#x27;s Little Italy</a></h3>
+          <p class="meta">Italian · Family-Style Italian &middot; $$</p><p class="vsub">Family-style Italian at Pointe Orlando, built for the table that cannot agree on one dish.</p>
           <p class="addr">9101 International Dr, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         </div>
         <div class="handoff">
           <a class="btn-ghost" href="/international-drive-finder.html">See the full International Drive list</a>

@@ -211,7 +211,14 @@
       .vcard .addr { margin: 0; color: var(--muted); font-size: .9rem; }
       @media (max-width: 640px) { .facts { grid-template-columns: 1fr; } }
     </style>
-  </head>
+  <style data-cardsys>
+/* cardsys: similar rail cards (2026-10-23 overhaul) */
+.vcard{display:flex;gap:12px;align-items:flex-start}
+.vcard .vthumb{flex:0 0 86px;width:86px;height:86px;border-radius:10px;object-fit:cover;display:block}
+.vcard .vmain{flex:1;min-width:0}
+.vcard .vsub{margin:4px 0 0;font-size:.86rem;line-height:1.45;color:var(--muted,#c6bba2)}
+@media (min-width:1000px){.vlist{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start}}
+</style></head>
   <body>
     <header class="hero">
       <div class="hero-in">
@@ -240,41 +247,41 @@
         </div>
       </section>
 
-      <section class="sec" id="similar">
+      <section class="sec" id="district-story"><p class="kicker">District Stories</p><h2>Orlando&#x27;s long memory</h2><p class="lede">The guide keeps the long memory of Orlando&#x27;s districts in one place: the names, the plats and the stories behind the streets.</p><p><a class="btn-ghost" href="/history.html">Browse the district stories &rarr;</a></p></section><section class="sec" id="similar">
         <p class="kicker">Similar Feel</p>
         <h2>More places with this feel</h2>
         <p class="lede">Matched by vibe, not by neighborhood: the places across Greater Orlando closest in spirit to Soulicious Vegan Kitchen.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/the-licking.html">The Licking</a></h3>
-          <p class="meta">Restaurants &middot; Millenia &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-the-licking.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/the-licking.html">The Licking</a></h3>
+          <p class="meta">Restaurants &middot; Millenia &middot; $$</p><p class="vsub">DJ Khaled&#x27;s soul food spot across from the Mall at Millenia: loud, lively and generous.</p>
           <p class="addr">4706 Millenia Plaza Way, Orlando, FL 32839</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/sunshine-soulfood-cafe.html">Sunshine Soulfood Cafe</a></h3>
-          <p class="meta">Restaurants &middot; Orlando &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/sunshine-soulfood-cafe.html">Sunshine Soulfood Cafe</a></h3>
+          <p class="meta">Restaurants &middot; Orlando &middot; $$</p><p class="vsub">Soul food with a Caribbean lean on West Colonial, cooked like home: oxtails off the bone, fried chicken, mac and cheese, cornbread.</p>
           <p class="addr">Sunshine Soulfood Cafe, 2528 W Colonial Dr, Orlando, FL 32804-8009, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/market-on-south.html">Market On South</a></h3>
-          <p class="meta">Markets &amp; shops &middot; Milk District &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/market-on-south.html">Market On South</a></h3>
+          <p class="meta">Markets &amp; shops &middot; Milk District &middot; $$</p><p class="vsub">Fully plant-based food hall on East South Street, bohemian and laid-back, as much community space as place to eat.</p>
           <p class="addr">2603 E South St, Orlando, FL 32803</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/winter-park-biscuit-company.html">Winter Park Biscuit Company</a></h3>
-          <p class="meta">Breakfast &amp; brunch &middot; Audubon Park &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/winter-park-biscuit-company.html">Winter Park Biscuit Company</a></h3>
+          <p class="meta">Breakfast &amp; brunch &middot; Audubon Park &middot; $$</p><p class="vsub">All-vegan counter inside East End Market built around flaky, golden oat buttermilk biscuits, stacked or smothered in gravy.</p>
           <p class="addr">3201 Corrine Dr, Orlando, FL 32803-2224, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/4-hens-creole-kitchen.html">4 Hens Creole Kitchen</a></h3>
-          <p class="meta">Restaurants &middot; Ivanhoe Village &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/4-hens-creole-kitchen.html">4 Hens Creole Kitchen</a></h3>
+          <p class="meta">Restaurants &middot; Ivanhoe Village &middot; $$</p><p class="vsub">Inside City Food Hall, chill and soulful cooking with a NOLA spirit, music in the air, and seasoning guests call out of this world.</p>
           <p class="addr">1412 Alden Rd, Orlando, FL 32803</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/brunos-oysters.html">Bruno&#x27;s Oysters</a></h3>
-          <p class="meta">Seafood &middot; Winter Garden &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/brunos-oysters.html">Bruno&#x27;s Oysters</a></h3>
+          <p class="meta">Seafood &middot; Winter Garden &middot; $$</p><p class="vsub">Inside Plant Street Market&#x27;s Barrel Room in Winter Garden, moody, rustic, and intimate around a small counter.</p>
           <p class="addr">Bruno&#x27;s Oysters, 426 W Plant St, Winter Garden, FL 34787, United States</p>
-        </article>
+        </div></article>
         </div>
       </section>
 
@@ -284,20 +291,20 @@
         <p class="lede">Other places in Altamonte Springs, closest to Soulicious Vegan Kitchen first.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/jadore-the-french-bakery.html">J&#x27;Adore the French Bakery</a></h3>
-          <p class="meta">Bakeries &middot; Bakery &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/jadore-the-french-bakery.html">J&#x27;Adore the French Bakery</a></h3>
+          <p class="meta">Bakeries &middot; Bakery &middot; $$</p><p class="vsub">Unassuming little French bakery in Altamonte Springs that regulars describe as a sleeper.</p>
           <p class="addr">J&#x27;Adore the French Bakery, 910 Sand Lake Rd, Altamonte Springs, FL 32714-7053, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/burger-vault.html">Burger Vault</a></h3>
-          <p class="meta">Burgers &amp; sandwiches &middot; Burgers &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-burger-vault.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/burger-vault.html">Burger Vault</a></h3>
+          <p class="meta">Burgers &amp; sandwiches &middot; Burgers &middot; $$</p><p class="vsub">Small mom-and-pop counter on State Road 436 in Altamonte Springs, building halal burgers guests call juicy and wonderfully messy.</p>
           <p class="addr">Burger Vault, 520 W State Road 436, Altamonte Springs, FL 32714-4000, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/yummy-house.html">Yummy House</a></h3>
-          <p class="meta">Chinese &middot; Cantonese Dim Sum &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/yummy-house.html">Yummy House</a></h3>
+          <p class="meta">Chinese &middot; Cantonese Dim Sum &middot; $$</p><p class="vsub">An old-school Cantonese dining room in Altamonte Springs that transplanted New Englanders call the real thing.</p>
           <p class="addr">478 E Altamonte Dr #102, Altamonte Springs, FL 32701</p>
-        </article>
+        </div></article>
         </div>
         <div class="handoff">
           <a class="btn-ghost" href="/altamonte-springs-finder.html">See the full Altamonte Springs list</a>

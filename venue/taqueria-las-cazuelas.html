@@ -211,7 +211,14 @@
       .vcard .addr { margin: 0; color: var(--muted); font-size: .9rem; }
       @media (max-width: 640px) { .facts { grid-template-columns: 1fr; } }
     </style>
-  </head>
+  <style data-cardsys>
+/* cardsys: similar rail cards (2026-10-23 overhaul) */
+.vcard{display:flex;gap:12px;align-items:flex-start}
+.vcard .vthumb{flex:0 0 86px;width:86px;height:86px;border-radius:10px;object-fit:cover;display:block}
+.vcard .vmain{flex:1;min-width:0}
+.vcard .vsub{margin:4px 0 0;font-size:.86rem;line-height:1.45;color:var(--muted,#c6bba2)}
+@media (min-width:1000px){.vlist{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start}}
+</style></head>
   <body>
     <header class="hero">
       <div class="hero-in">
@@ -240,41 +247,41 @@
         </div>
       </section>
 
-      <section class="sec" id="similar">
+      <section class="sec" id="district-story"><p class="kicker">District Stories</p><h2>Orlando&#x27;s long memory</h2><p class="lede">The guide keeps the long memory of Orlando&#x27;s districts in one place: the names, the plats and the stories behind the streets.</p><p><a class="btn-ghost" href="/history.html">Browse the district stories &rarr;</a></p></section><section class="sec" id="similar">
         <p class="kicker">Similar Feel</p>
         <h2>More places with this feel</h2>
         <p class="lede">Matched by vibe, not by neighborhood: the places across Greater Orlando closest in spirit to Taqueria las Cazuelas.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/grocery-hermanos.html">Grocery Los Hermanos</a></h3>
-          <p class="meta">Mexican &middot; East Orlando &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/grocery-hermanos.html">Grocery Los Hermanos</a></h3>
+          <p class="meta">Mexican &middot; East Orlando &middot; $</p><p class="vsub">A family-run market and taqueria on Curry Ford where guests say the food tastes homemade and very fresh.</p>
           <p class="addr">4130 Curry Ford Rd, Orlando, FL 32806</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/black-rooster-taqueria.html">Black Rooster Taqueria</a></h3>
-          <p class="meta">Mexican &middot; Mills 50 &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/black-rooster-taqueria.html">Black Rooster Taqueria</a></h3>
+          <p class="meta">Mexican &middot; Mills 50 &middot; $$</p><p class="vsub">A small, lively Mills 50 room with a dive-bar soul and a chef&#x27;s hand on the tacos.</p>
           <p class="addr">1323 N Mills Ave, Orlando, FL 32803</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/solita-tacos-margaritas.html">Solita Tacos &amp; Margaritas</a></h3>
-          <p class="meta">Mexican &middot; Downtown Orlando &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/solita-tacos-margaritas.html">Solita Tacos &amp; Margaritas</a></h3>
+          <p class="meta">Mexican &middot; Downtown Orlando &middot; $$</p><p class="vsub">A lively downtown cantina built around wood-grilled Baja-style tacos and margaritas.</p>
           <p class="addr">222 S Orange Ave, Orlando, FL 32801</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/kavas-tacos-tequila.html">Kavas Tacos &amp; Tequila</a></h3>
-          <p class="meta">Mexican &middot; International Drive &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/kavas-tacos-tequila.html">Kavas Tacos &amp; Tequila</a></h3>
+          <p class="meta">Mexican &middot; International Drive &middot; $$</p><p class="vsub">Pointe Orlando&#x27;s loud, colorful taco party, celebratory from the first chips and salsa.</p>
           <p class="addr">9101 International Dr Ste 1198, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/bartaco-dr-phillips.html">bartaco</a></h3>
-          <p class="meta">Mexican &middot; Dr Phillips &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/bartaco-dr-phillips.html">bartaco</a></h3>
+          <p class="meta">Mexican &middot; Dr Phillips &middot; $$</p><p class="vsub">A beachy patio spot in the Marketplace at Dr Phillips, where street-style tacos land on trays and the table grazes at its own pace.</p>
           <p class="addr">7600 Dr Phillips Blvd Ste 28, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/the-tavern-bar-tacos.html">The Tavern Bar &amp; Tacos</a></h3>
-          <p class="meta">Mexican &middot; Downtown &middot; $</p>
+          <img class="vthumb" src="/assets/venue-the-tavern-bar-tacos.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/the-tavern-bar-tacos.html">The Tavern Bar &amp; Tacos</a></h3>
+          <p class="meta">Mexican &middot; Downtown &middot; $</p><p class="vsub">It calls itself a vibe bar and guests back it up, starting with birria tacos one regular said should be criminal.</p>
           <p class="addr">The Tavern Bar &amp; Tacos, 75 E Colonial Dr, Orlando, FL 32801</p>
-        </article>
+        </div></article>
         </div>
       </section>
 
@@ -284,35 +291,35 @@
         <p class="lede">Other places in University, closest to Taqueria las Cazuelas first.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/tt-crepes.html">TT Crepes</a></h3>
-          <p class="meta">Chinese · Jianbing Crepes &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/tt-crepes.html">TT Crepes</a></h3>
+          <p class="meta">Chinese · Jianbing Crepes &middot; $$</p><p class="vsub">Inside Mei Supermarket on East Colonial, a small counter built around jianbing, the crisp, egg-laced Chinese street crepe.</p>
           <p class="addr">TT Crepes, 10681 E Colonial Dr, Orlando, FL 32817-4470</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/smokey-jays-bbq.html">Smokey Jay&#x27;s BBQ</a></h3>
-          <p class="meta">BBQ &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-smokey-jays-bbq.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/smokey-jays-bbq.html">Smokey Jay&#x27;s BBQ</a></h3>
+          <p class="meta">BBQ &middot; $$</p><p class="vsub">Mom-and-pop smokehouse on East Colonial where guests say you can taste the family-run care in every plate.</p>
           <p class="addr">Smokey Jay&#x27;s BBQ, 9318 E Colonial Dr, Orlando, FL 32817-4100</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/dang-boba-musubi-house.html">Dang Boba &amp; Musubi House</a></h3>
-          <p class="meta">Coffee &amp; cafes · Bubble Tea &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/dang-boba-musubi-house.html">Dang Boba &amp; Musubi House</a></h3>
+          <p class="meta">Coffee &amp; cafes · Bubble Tea &middot; $$</p><p class="vsub">Cheerful, cozy little spot near UCF pairing boba teas with Hawaiian musubi.</p>
           <p class="addr">Dang Boba &amp; Musubi House, 11772 E Colonial Dr, Orlando, FL 32817-4625</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/viet-nomz.html">Viet-Nomz</a></h3>
-          <p class="meta">Noodles &amp; Southeast Asian · Vietnamese &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-viet-nomz.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/viet-nomz.html">Viet-Nomz</a></h3>
+          <p class="meta">Noodles &amp; Southeast Asian · Vietnamese &middot; $$</p><p class="vsub">Cute, cozy fast-casual Vietnamese spot on East Colonial Drive with a friendly, welcoming feel.</p>
           <p class="addr">11798 E Colonial Dr, Orlando, FL 32817</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/junior-colombian-burger.html">Junior Colombian Burger</a></h3>
-          <p class="meta">Burgers &amp; sandwiches · Burgers &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/junior-colombian-burger.html">Junior Colombian Burger</a></h3>
+          <p class="meta">Burgers &amp; sandwiches · Burgers &middot; $</p><p class="vsub">On East Colonial Drive, Colombian street food meets the American burger, and nothing about it is quiet.</p>
           <p class="addr">11875 E Colonial Dr, Orlando, FL</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/goodfella-s-pizzeria.html">Goodfella&#x27;s Pizzeria</a></h3>
-          <p class="meta">Pizza &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/goodfella-s-pizzeria.html">Goodfella&#x27;s Pizzeria</a></h3>
+          <p class="meta">Pizza &middot; $$</p><p class="vsub">An old-school, no-frills slice shop on East Colonial Drive serving New York-style pies guests say taste like the kind they grew up eating.</p>
           <p class="addr">11873 E Colonial Dr, Orlando, FL 32826</p>
-        </article>
+        </div></article>
         </div>
         <div class="handoff">
           <a class="btn-ghost" href="/ucf-finder.html">See the full University list</a>

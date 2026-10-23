@@ -211,7 +211,14 @@
       .vcard .addr { margin: 0; color: var(--muted); font-size: .9rem; }
       @media (max-width: 640px) { .facts { grid-template-columns: 1fr; } }
     </style>
-  </head>
+  <style data-cardsys>
+/* cardsys: similar rail cards (2026-10-23 overhaul) */
+.vcard{display:flex;gap:12px;align-items:flex-start}
+.vcard .vthumb{flex:0 0 86px;width:86px;height:86px;border-radius:10px;object-fit:cover;display:block}
+.vcard .vmain{flex:1;min-width:0}
+.vcard .vsub{margin:4px 0 0;font-size:.86rem;line-height:1.45;color:var(--muted,#c6bba2)}
+@media (min-width:1000px){.vlist{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start}}
+</style></head>
   <body>
     <header class="hero">
       <div class="hero-in">
@@ -242,41 +249,41 @@
         </div>
       </section>
 
-      <section class="sec" id="similar">
+      <section class="sec" id="district-story"><p class="kicker">District Stories</p><h2>Orlando&#x27;s long memory</h2><p class="lede">The guide keeps the long memory of Orlando&#x27;s districts in one place: the names, the plats and the stories behind the streets.</p><p><a class="btn-ghost" href="/history.html">Browse the district stories &rarr;</a></p></section><section class="sec" id="similar">
         <p class="kicker">Similar Feel</p>
         <h2>More places with this feel</h2>
         <p class="lede">Matched by vibe, not by neighborhood: the places across Greater Orlando closest in spirit to St. Augustine Day Trip.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/discovery-cove.html">Discovery Cove</a></h3>
-          <p class="meta">Attractions &middot; International Drive &middot; $$$$</p>
+          <img class="vthumb" src="/assets/venue-discovery-cove.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/discovery-cove.html">Discovery Cove</a></h3>
+          <p class="meta">Attractions &middot; International Drive &middot; $$$$</p><p class="vsub">The calm splurge on I-Drive: a reservation-only day resort where attendance is capped and the water stays clear.</p>
           <p class="addr">6000 Discovery Cove Way, Orlando, FL 32821</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/dinosaur-world.html">Dinosaur World</a></h3>
-          <p class="meta">Attractions &middot; Plant City &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/dinosaur-world.html">Dinosaur World</a></h3>
+          <p class="meta">Attractions &middot; Plant City &middot; $$</p><p class="vsub">An old-Florida roadside classic in Plant City, where crossing into thick, shaded trees feels like walking into Jurassic Park.</p>
           <p class="addr">5145 Harvey Tew Rd, Plant City, FL 33565</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/disney-springs-district.html">Disney Springs</a></h3>
-          <p class="meta">Markets &amp; shops &middot; Disney Springs &middot; $$$</p>
+          <div class="vmain"><h3><a href="/venue/disney-springs-district.html">Disney Springs</a></h3>
+          <p class="meta">Markets &amp; shops &middot; Disney Springs &middot; $$$</p><p class="vsub">Disney&#x27;s open-air waterfront promenade, no park ticket and no turnstile, just an evening on the water.</p>
           <p class="addr">1486 E Buena Vista Dr, Lake Buena Vista, FL 32830</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/cuba-libre-pointe-orlando.html">Cuba Libre</a></h3>
-          <p class="meta">Latin &amp; Caribbean &middot; Pointe Orlando &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/cuba-libre-pointe-orlando.html">Cuba Libre</a></h3>
+          <p class="meta">Latin &amp; Caribbean &middot; Pointe Orlando &middot; $$</p><p class="vsub">A two-story Old Havana courtyard rebuilt inside Pointe Orlando, all palm shadows, live Latin music, and rum.</p>
           <p class="addr">9101 International Dr #1004, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/wekiwa-springs.html">Wekiwa Springs State Park</a></h3>
-          <p class="meta">Parks &amp; outdoors &middot; Apopka &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/wekiwa-springs.html">Wekiwa Springs State Park</a></h3>
+          <p class="meta">Parks &amp; outdoors &middot; Apopka &middot; $</p><p class="vsub">The old-Florida counterpoint to the theme parks, an emerald Apopka spring feeding the Wekiva River with clear, cold water guests call magical.</p>
           <p class="addr">1800 Wekiwa Cir, Apopka, FL 32712</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/casa-feliz.html">Casa Feliz Historic Home Museum</a></h3>
-          <p class="meta">Museums &amp; landmarks &middot; Winter Park &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/casa-feliz.html">Casa Feliz Historic Home Museum</a></h3>
+          <p class="meta">Museums &amp; landmarks &middot; Winter Park &middot; $</p><p class="vsub">A storybook Spanish revival farmhouse on Park Avenue, romantic and intimate, the kind of historic home guests say they could happily live in.</p>
           <p class="addr">656 N Park Ave, Winter Park, FL 32789</p>
-        </article>
+        </div></article>
         </div>
       </section>
 
@@ -286,35 +293,35 @@
         <p class="lede">Other places in Day Trips, closest to St. Augustine Day Trip first.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/cress-restaurant.html">Cress Restaurant</a></h3>
-          <p class="meta">Fine dining &amp; steak · New American &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/cress-restaurant.html">Cress Restaurant</a></h3>
+          <p class="meta">Fine dining &amp; steak · New American &middot; $$</p><p class="vsub">Warm, intimate room in historic downtown DeLand, farm-to-table in spirit, with a global menu following Florida&#x27;s seasons.</p>
           <p class="addr">Cress Restaurant, 103 W Indiana Ave, DeLand, FL 32720-4209, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/bakechop.html">BakeChop</a></h3>
-          <p class="meta">Restaurants · Restaurant &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-bakechop.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/bakechop.html">BakeChop</a></h3>
+          <p class="meta">Restaurants · Restaurant &middot; $$</p><p class="vsub">Cozy, quirky scratch kitchen on Artisan Alley in DeLand, where staff stay sweet and welcoming even when the line is out the door.</p>
           <p class="addr">110 Artisan Aly, DeLand, FL 32720</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/the-twisted-chopstick.html">The Twisted Chopstick</a></h3>
-          <p class="meta">Japanese &amp; sushi · Sushi &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-the-twisted-chopstick.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/the-twisted-chopstick.html">The Twisted Chopstick</a></h3>
+          <p class="meta">Japanese &amp; sushi · Sushi &middot; $$</p><p class="vsub">DeLand&#x27;s cozy, Godzilla-themed sushi stop on Woodland Boulevard, family-run and relaxed as a second home.</p>
           <p class="addr">412 S Woodland Blvd, DeLand, FL 32720</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/blue-spring-manatee-kayak.html">Blue Spring Manatee Kayak Tours</a></h3>
-          <p class="meta">Attractions &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-blue-spring-manatee-kayak.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/blue-spring-manatee-kayak.html">Blue Spring Manatee Kayak Tours</a></h3>
+          <p class="meta">Attractions &middot; $$</p><p class="vsub">At Blue Spring State Park, guided kayaks slip into clear, 72-degree spring water where manatees roll and graze beneath the boat.</p>
           <p class="addr">Blue Spring State Park, 2100 W French Ave, Orange City, FL 32763</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/1921-mount-dora.html">1921 Mount Dora</a></h3>
-          <p class="meta">Restaurants · Restaurant &middot; $$$</p>
+          <div class="vmain"><h3><a href="/venue/1921-mount-dora.html">1921 Mount Dora</a></h3>
+          <p class="meta">Restaurants · Restaurant &middot; $$$</p><p class="vsub">Modern Florida cooking in a historic 1921 house, and the meal feels personal rather than formal.</p>
           <p class="addr">1921 Mount Dora, 142 E 4th Ave, Mt Dora, FL 32757-5584</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/funkos-poke-bowls-and-asian-snacks.html">Fun-Ko&#x27;s Poke Bowls and Asian Snacks</a></h3>
-          <p class="meta">Japanese &amp; sushi · Poke &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/funkos-poke-bowls-and-asian-snacks.html">Fun-Ko&#x27;s Poke Bowls and Asian Snacks</a></h3>
+          <p class="meta">Japanese &amp; sushi · Poke &middot; $$</p><p class="vsub">Tucked inside Mount Dora Marketplace on Donnelly Street, a cheerful, low-key poke counter regulars call their go-to.</p>
           <p class="addr">Fun-Ko&#x27;s Poke Bowls and Asian Snacks, 334 N Donnelly St, Mt Dora, FL 32757-5525, United States</p>
-        </article>
+        </div></article>
         </div>
         <div class="handoff">
           <a class="btn-ghost" href="/day-trips-finder.html">See the full Day Trips list</a>

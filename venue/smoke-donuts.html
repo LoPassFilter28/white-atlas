@@ -211,7 +211,14 @@
       .vcard .addr { margin: 0; color: var(--muted); font-size: .9rem; }
       @media (max-width: 640px) { .facts { grid-template-columns: 1fr; } }
     </style>
-  </head>
+  <style data-cardsys>
+/* cardsys: similar rail cards (2026-10-23 overhaul) */
+.vcard{display:flex;gap:12px;align-items:flex-start}
+.vcard .vthumb{flex:0 0 86px;width:86px;height:86px;border-radius:10px;object-fit:cover;display:block}
+.vcard .vmain{flex:1;min-width:0}
+.vcard .vsub{margin:4px 0 0;font-size:.86rem;line-height:1.45;color:var(--muted,#c6bba2)}
+@media (min-width:1000px){.vlist{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start}}
+</style></head>
   <body>
     <header class="hero">
       <div class="hero-in">
@@ -236,46 +243,46 @@
         <div class="actions">
           <a class="action" href="https://www.google.com/maps/search/?api=1&amp;query=Smoke+%26+Donuts+BBQ+601+N+Primrose+Dr%2C+Orlando%2C+FL+32803" target="_blank" rel="noopener">Directions &rarr;</a>
           <a class="action" href="/archive.html?venue=smoke-donuts">Open in the full finder</a>
-          <a class="action" href="/milk-district-guide.html">Read the Milk District story</a>
+          <a class="action" href="/history/milk-district.html">Read the Milk District story</a>
           <a class="action action-ig" href="https://www.instagram.com/smokeanddonuts" target="_blank" rel="noopener"><svg class="ig-glyph" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="vertical-align:-2px;margin-right:6px"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg> Instagram</a>
         </div>
       </section>
 
-      <section class="sec" id="similar">
+      <section class="sec" id="district-story"><p class="kicker">District Story</p><h2>The story of Milk District</h2><p class="lede">One cow, twenty acres and a dairy on the edge of town: the neighborhood that grew up around the T.G. Lee plant and took its name from the milk.</p><p><a class="btn-ghost" href="/history/milk-district.html">Read the Milk District story &rarr;</a></p></section><section class="sec" id="similar">
         <p class="kicker">Similar Feel</p>
         <h2>More places with this feel</h2>
         <p class="lede">Matched by vibe, not by neighborhood: the places across Greater Orlando closest in spirit to Smoke &amp; Donuts BBQ.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/mohawk-bbq.html">Mohawk Smokehouse</a></h3>
-          <p class="meta">BBQ &middot; Longwood &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/mohawk-bbq.html">Mohawk Smokehouse</a></h3>
+          <p class="meta">BBQ &middot; Longwood &middot; $$</p><p class="vsub">Small-batch Longwood barbecue from Tyler Evans and his wife Sarah, built on Texas-style brisket with Southern roots.</p>
           <p class="addr">480 S Ronald Reagan Blvd, Longwood, FL 32750</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/smokey-jays-bbq.html">Smokey Jay&#x27;s BBQ</a></h3>
-          <p class="meta">BBQ &middot; Orlando &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-smokey-jays-bbq.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/smokey-jays-bbq.html">Smokey Jay&#x27;s BBQ</a></h3>
+          <p class="meta">BBQ &middot; Orlando &middot; $$</p><p class="vsub">Mom-and-pop smokehouse on East Colonial where guests say you can taste the family-run care in every plate.</p>
           <p class="addr">Smokey Jay&#x27;s BBQ, 9318 E Colonial Dr, Orlando, FL 32817-4100</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/smokemade.html">Smokemade Meats + Eats</a></h3>
-          <p class="meta">BBQ &middot; Curry Ford West &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/smokemade.html">Smokemade Meats + Eats</a></h3>
+          <p class="meta">BBQ &middot; Curry Ford West &middot; $$</p><p class="vsub">Brisket is the headline at this Central Texas counter on Curry Ford West, where the menu runs on butcher paper and meats run small batch.</p>
           <p class="addr">1400 S Crystal Lake Dr, Orlando, FL 32806</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/pig-floyds-x-pigzza.html">Pig Floyd&#x27;s x Pigzza</a></h3>
-          <p class="meta">BBQ &middot; Mills 50 &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/pig-floyds-x-pigzza.html">Pig Floyd&#x27;s x Pigzza</a></h3>
+          <p class="meta">BBQ &middot; Mills 50 &middot; $$</p><p class="vsub">On North Mills, two Mills 50 names share one roof: Pigzza&#x27;s sourdough pies and pastas alongside Pig Floyd&#x27;s brisket.</p>
           <p class="addr">1050 N Mills Ave, Orlando, FL 32803</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/4-rivers-smokehouse-sodo.html">4 Rivers Smokehouse</a></h3>
-          <p class="meta">BBQ &middot; SoDo &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-4-rivers-smokehouse-sodo.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/4-rivers-smokehouse-sodo.html">4 Rivers Smokehouse</a></h3>
+          <p class="meta">BBQ &middot; SoDo &middot; $$</p><p class="vsub">On South Orange Avenue, Signature Angus brisket guests call A+, alongside burnt ends, the Messy Pig, and the Texas Destroyer.</p>
           <p class="addr">4 Rivers Smokehouse, 3200 S Orange Ave, Orlando, FL 32806</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/the-polite-pig.html">The Polite Pig</a></h3>
-          <p class="meta">BBQ &middot; Disney Springs &middot; $$$</p>
+          <div class="vmain"><h3><a href="/venue/the-polite-pig.html">The Polite Pig</a></h3>
+          <p class="meta">BBQ &middot; Disney Springs &middot; $$$</p><p class="vsub">Modern barbecue done fast-casual at Disney Springs, lively and chill with counter service that keeps things moving.</p>
           <p class="addr">1536 E Buena Vista Dr, Lake Buena Vista, FL 32830</p>
-        </article>
+        </div></article>
         </div>
       </section>
 
@@ -285,35 +292,35 @@
         <p class="lede">Other places in Milk District, Local Picks first, then the closest to Smoke &amp; Donuts BBQ.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/iron-cow.html">Iron Cow</a> <span class="badge">Local Pick</span></h3>
-          <p class="meta">Japanese &amp; sushi · Sushi &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/iron-cow.html">Iron Cow</a> <span class="badge">Local Pick</span></h3>
+          <p class="meta">Japanese &amp; sushi · Sushi &middot; $$</p><p class="vsub">Part hi-fi sushi lounge, part underground club, the Milk District&#x27;s good contradiction.</p>
           <p class="addr">2438 E Robinson St, Suite A, Orlando, FL 32803</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/se7en-bites.html">Se7en Bites</a></h3>
-          <p class="meta">Bakeries · Bakery &middot; $</p>
+          <img class="vthumb" src="/assets/venue-se7en-bites.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/se7en-bites.html">Se7en Bites</a></h3>
+          <p class="meta">Bakeries · Bakery &middot; $</p><p class="vsub">Bustling, homey Southern bakery cafe on Primrose Drive, owner on the floor, running like a well-oiled machine.</p>
           <p class="addr">617 N Primrose Dr, Orlando, FL 32803</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/lams-garden.html">Lam&#x27;s Garden Chinese Restaurant</a></h3>
-          <p class="meta">Chinese · Cantonese Dim Sum &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-lams-garden.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/lams-garden.html">Lam&#x27;s Garden Chinese Restaurant</a></h3>
+          <p class="meta">Chinese · Cantonese Dim Sum &middot; $$</p><p class="vsub">An old-school, family-owned Cantonese room on East Colonial Drive that has served the corridor since 1975.</p>
           <p class="addr">2505 E Colonial Dr, Orlando, FL 32803</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/chicken-fire.html">Chicken Fire</a></h3>
-          <p class="meta">American &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/chicken-fire.html">Chicken Fire</a></h3>
+          <p class="meta">American &middot; $$</p><p class="vsub">No-frills, welcoming hot chicken joint on East Colonial Drive, Nashville style with soul.</p>
           <p class="addr">Chicken Fire, 2425 E Colonial Dr, Orlando, FL 32803-5018</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/milk-district-eats-tour.html">Milk District Eats Food Tour</a></h3>
-          <p class="meta">Attractions &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/milk-district-eats-tour.html">Milk District Eats Food Tour</a></h3>
+          <p class="meta">Attractions &middot; $$</p><p class="vsub">A small-group walking food tour through the dairy-named district east of downtown, personal, easygoing and rich with local history.</p>
           <p class="addr">201 N Bumby Ave, Orlando, FL 32803 (meets in front of the Milkhouse)</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/moa-kai-hawaiian-diner.html">Moa Kai Hawaiian Diner</a></h3>
-          <p class="meta">Restaurants · Hawaiian Diner &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/moa-kai-hawaiian-diner.html">Moa Kai Hawaiian Diner</a></h3>
+          <p class="meta">Restaurants · Hawaiian Diner &middot; $$</p><p class="vsub">Retro diner comfort meets Hawaiian cooking on East Colonial Drive, all tropical color and aloha warmth.</p>
           <p class="addr">Moa Kai Hawaiian Diner, 2217 E Colonial Dr, Orlando, FL 32803-4911, United States</p>
-        </article>
+        </div></article>
         </div>
         <div class="handoff">
           <a class="btn-ghost" href="/milk-district-finder.html">See the full Milk District list</a>

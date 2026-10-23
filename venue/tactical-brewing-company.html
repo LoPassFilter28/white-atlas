@@ -239,6 +239,13 @@ html[data-theme="light"] .hero.has-photo{--ink:#f4efe1;--headline:#f6edd6;--mute
 .hero-plate figcaption .hero-credit{display:block;color:#5c6a58;font-size:.72rem;margin-top:2px}
 .hero-plate figcaption a{color:#7c520c}
 .has-photo .hero-in{padding-bottom:18px}
+</style><style data-cardsys>
+/* cardsys: similar rail cards (2026-10-23 overhaul) */
+.vcard{display:flex;gap:12px;align-items:flex-start}
+.vcard .vthumb{flex:0 0 86px;width:86px;height:86px;border-radius:10px;object-fit:cover;display:block}
+.vcard .vmain{flex:1;min-width:0}
+.vcard .vsub{margin:4px 0 0;font-size:.86rem;line-height:1.45;color:var(--muted,#c6bba2)}
+@media (min-width:1000px){.vlist{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start}}
 </style></head>
   <body>
     <header class="hero has-photo">
@@ -270,41 +277,41 @@ html[data-theme="light"] .hero.has-photo{--ink:#f4efe1;--headline:#f6edd6;--mute
         </div>
       </section>
 
-      <section class="sec" id="similar">
+      <section class="sec" id="district-story"><p class="kicker">District Stories</p><h2>Orlando&#x27;s long memory</h2><p class="lede">The guide keeps the long memory of Orlando&#x27;s districts in one place: the names, the plats and the stories behind the streets.</p><p><a class="btn-ghost" href="/history.html">Browse the district stories &rarr;</a></p></section><section class="sec" id="similar">
         <p class="kicker">Similar Feel</p>
         <h2>More places with this feel</h2>
         <p class="lede">Matched by vibe, not by neighborhood: the places across Greater Orlando closest in spirit to Tactical Brewing Company.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/rockpit-brewing.html">Rockpit Brewing</a></h3>
-          <p class="meta">Breweries &middot; SoDo &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/rockpit-brewing.html">Rockpit Brewing</a></h3>
+          <p class="meta">Breweries &middot; SoDo &middot; $$</p><p class="vsub">Regulars treat this SoDo taproom on West Illiana Street as Orlando&#x27;s neighborhood brewery, cozy and welcoming to newcomers.</p>
           <p class="addr">Rockpit Brewing, 10 W Illiana St, Orlando, FL 32806-4408, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/sideward-brewing-co.html">Sideward Brewing Co.</a></h3>
-          <p class="meta">Breweries &middot; Milk District &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/sideward-brewing-co.html">Sideward Brewing Co.</a></h3>
+          <p class="meta">Breweries &middot; Milk District &middot; $$</p><p class="vsub">A laid-back, unpretentious taproom on Bumby Avenue where beer is brewed clean and the kitchen is, in guests&#x27; words, severely underrated.</p>
           <p class="addr">210 N Bumby Ave, Orlando, FL 32803</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/half-barrel-beer-project.html">Half Barrel Beer Project</a></h3>
-          <p class="meta">Breweries &middot; Orlando &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/half-barrel-beer-project.html">Half Barrel Beer Project</a></h3>
+          <p class="meta">Breweries &middot; Orlando &middot; $$</p><p class="vsub">Small, family-owned brewery on Universal Boulevard with a chill, welcoming feel guests keep mentioning.</p>
           <p class="addr">Half Barrel Beer Project, 9650 Universal Blvd, Orlando, FL 32819-8766, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/camille.html">Camille</a></h3>
-          <p class="meta">Noodles &amp; Southeast Asian &middot; Baldwin Park &middot; $$$$</p>
+          <img class="vthumb" src="/assets/venue-camille.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/camille.html">Camille</a></h3>
+          <p class="meta">Noodles &amp; Southeast Asian &middot; Baldwin Park &middot; $$$$</p><p class="vsub">Chef Tung Phan named this Baldwin Park counter for his daughter, pairing Vietnamese flavors with French forms in an intimate room.</p>
           <p class="addr">Camille, 4962 New Broad St, Orlando, FL 32814-6415</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/lineage-coffee-roasting.html">Lineage Coffee Roasting</a></h3>
-          <p class="meta">Coffee &amp; cafes &middot; Audubon Park &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-lineage-coffee-roasting.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/lineage-coffee-roasting.html">Lineage Coffee Roasting</a></h3>
+          <p class="meta">Coffee &amp; cafes &middot; Audubon Park &middot; $$</p><p class="vsub">Tucked in the back of East End Market, a working roastery where the cup shows the craft, from flat whites to cold brew.</p>
           <p class="addr">3201 Corrine Dr, Orlando, FL 32803-2224, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/golden-hour.html">Golden Hour Wine</a></h3>
-          <p class="meta">Bars &amp; lounges &middot; Baldwin Park &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-golden-hour.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/golden-hour.html">Golden Hour Wine</a></h3>
+          <p class="meta">Bars &amp; lounges &middot; Baldwin Park &middot; $$</p><p class="vsub">A small, intimate natural wine shop and bar in Baldwin Park pouring responsibly farmed, small-production wines by the taste.</p>
           <p class="addr">Golden Hour Wine, 1560 Lake Baldwin Ln, Orlando, FL 32814-6661</p>
-        </article>
+        </div></article>
         </div>
       </section>
 
@@ -314,35 +321,35 @@ html[data-theme="light"] .hero.has-photo{--ink:#f4efe1;--headline:#f6edd6;--mute
         <p class="lede">Other places in Baldwin Park, closest to Tactical Brewing Company first.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/osprey.html">The Osprey</a></h3>
-          <p class="meta">Seafood &middot; $$$</p>
+          <img class="vthumb" src="/assets/venue-osprey.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/osprey.html">The Osprey</a></h3>
+          <p class="meta">Seafood &middot; $$$</p><p class="vsub">On New Broad Street in Baldwin Park, an open kitchen and buzzing central bar anchor coastal cooking led by the oyster bar.</p>
           <p class="addr">The Osprey, 4899 New Broad St, Orlando, FL 32814-6629</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/camille.html">Camille</a></h3>
-          <p class="meta">Noodles &amp; Southeast Asian · Vietnamese &middot; $$$$</p>
+          <img class="vthumb" src="/assets/venue-camille.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/camille.html">Camille</a></h3>
+          <p class="meta">Noodles &amp; Southeast Asian · Vietnamese &middot; $$$$</p><p class="vsub">Chef Tung Phan named this Baldwin Park counter for his daughter, pairing Vietnamese flavors with French forms in an intimate room.</p>
           <p class="addr">Camille, 4962 New Broad St, Orlando, FL 32814-6415</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/seito.html">Seito Sushi</a></h3>
-          <p class="meta">Japanese &amp; sushi · Sushi &middot; $$$</p>
+          <div class="vmain"><h3><a href="/venue/seito.html">Seito Sushi</a></h3>
+          <p class="meta">Japanese &amp; sushi · Sushi &middot; $$$</p><p class="vsub">On New Broad Street in Baldwin Park by Lake Baldwin, this sushi spot is dim and elegant inside, with a lakefront patio.</p>
           <p class="addr">Seito Sushi, 4898 New Broad St, Orlando, FL 32814</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/sorekara.html">Sorekara</a></h3>
-          <p class="meta">Japanese &amp; sushi · Japanese &middot; $$$$</p>
+          <img class="vthumb" src="/assets/venue-sorekara.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/sorekara.html">Sorekara</a></h3>
+          <p class="meta">Japanese &amp; sushi · Japanese &middot; $$$$</p><p class="vsub">On New Broad Street in Baldwin Park, Chef William Shen builds a tasting menu around Japan&#x27;s micro seasons, moving guests through rooms.</p>
           <p class="addr">Sorekara, 4979 New Broad St, Orlando, FL 32814-6414</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/golden-hour.html">Golden Hour Wine</a></h3>
-          <p class="meta">Bars &amp; lounges · Wine Bar &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-golden-hour.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/golden-hour.html">Golden Hour Wine</a></h3>
+          <p class="meta">Bars &amp; lounges · Wine Bar &middot; $$</p><p class="vsub">A small, intimate natural wine shop and bar in Baldwin Park pouring responsibly farmed, small-production wines by the taste.</p>
           <p class="addr">Golden Hour Wine, 1560 Lake Baldwin Ln, Orlando, FL 32814-6661</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/valhalla-bakery.html">Valhalla Bakery</a></h3>
-          <p class="meta">Bakeries · Bakery &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/valhalla-bakery.html">Valhalla Bakery</a></h3>
+          <p class="meta">Bakeries · Bakery &middot; $</p><p class="vsub">On Old Cheney Highway, a fully vegan bakery, with doughnuts, cupcakes and cakes made without dairy or egg and a case that keeps changing.</p>
           <p class="addr">5565 Old Cheney Hwy, Orlando, FL 32807</p>
-        </article>
+        </div></article>
         </div>
         <div class="handoff">
           <a class="btn-ghost" href="/baldwin-park-finder.html">See the full Baldwin Park list</a>

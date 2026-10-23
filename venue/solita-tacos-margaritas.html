@@ -221,7 +221,14 @@
 .take .take-label{font-size:.72rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--accent-ink);margin:0 0 8px}
 
 </style>
-  </head>
+  <style data-cardsys>
+/* cardsys: similar rail cards (2026-10-23 overhaul) */
+.vcard{display:flex;gap:12px;align-items:flex-start}
+.vcard .vthumb{flex:0 0 86px;width:86px;height:86px;border-radius:10px;object-fit:cover;display:block}
+.vcard .vmain{flex:1;min-width:0}
+.vcard .vsub{margin:4px 0 0;font-size:.86rem;line-height:1.45;color:var(--muted,#c6bba2)}
+@media (min-width:1000px){.vlist{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start}}
+</style></head>
   <body>
     <header class="hero">
       <div class="hero-in">
@@ -246,7 +253,7 @@
         <div class="actions">
           <a class="action" href="https://www.google.com/maps/search/?api=1&amp;query=Solita+Tacos+%26+Margaritas+222+S+Orange+Ave%2C+Orlando%2C+FL+32801" target="_blank" rel="noopener">Directions &rarr;</a>
           <a class="action" href="/archive.html?venue=solita-tacos-margaritas">Open in the full finder</a>
-          <a class="action" href="/downtown-orlando-district-guide.html">Read the Downtown Orlando story</a>
+          <a class="action" href="/history/downtown.html">Read the Downtown Orlando story</a>
         </div>
       </section>
 
@@ -274,41 +281,41 @@
         </div>
       </section>
 
-<section class="sec" id="similar">
+<section class="sec" id="district-story"><p class="kicker">District Story</p><h2>The story of Downtown Orlando</h2><p class="lede">A fort, a courthouse plat and a citrus boom built it. A name nobody can prove still runs it.</p><p><a class="btn-ghost" href="/history/downtown.html">Read the Downtown Orlando story &rarr;</a></p></section><section class="sec" id="similar">
         <p class="kicker">Similar Feel</p>
         <h2>More places with this feel</h2>
         <p class="lede">Matched by vibe, not by neighborhood: the places across Greater Orlando closest in spirit to Solita Tacos &amp; Margaritas.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/kavas-tacos-tequila.html">Kavas Tacos &amp; Tequila</a></h3>
-          <p class="meta">Mexican &middot; International Drive &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/kavas-tacos-tequila.html">Kavas Tacos &amp; Tequila</a></h3>
+          <p class="meta">Mexican &middot; International Drive &middot; $$</p><p class="vsub">Pointe Orlando&#x27;s loud, colorful taco party, celebratory from the first chips and salsa.</p>
           <p class="addr">9101 International Dr Ste 1198, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/taqueria-las-cazuelas.html">Taqueria las Cazuelas</a></h3>
-          <p class="meta">Mexican &middot; Orlando &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/taqueria-las-cazuelas.html">Taqueria las Cazuelas</a></h3>
+          <p class="meta">Mexican &middot; Orlando &middot; $$</p><p class="vsub">No-frills and home-style on East Colonial, the taco outpost of the Las Cazuelas family, with portions that are famously not shy.</p>
           <p class="addr">Taqueria las Cazuelas, 10360 E Colonial Dr, Orlando, FL 32817-4364, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/grocery-hermanos.html">Grocery Los Hermanos</a></h3>
-          <p class="meta">Mexican &middot; East Orlando &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/grocery-hermanos.html">Grocery Los Hermanos</a></h3>
+          <p class="meta">Mexican &middot; East Orlando &middot; $</p><p class="vsub">A family-run market and taqueria on Curry Ford where guests say the food tastes homemade and very fresh.</p>
           <p class="addr">4130 Curry Ford Rd, Orlando, FL 32806</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/f-d-cantina.html">F&amp;D Cantina</a></h3>
-          <p class="meta">Mexican &middot; Thornton Park &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-f-d-cantina.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/f-d-cantina.html">F&amp;D Cantina</a></h3>
+          <p class="meta">Mexican &middot; Thornton Park &middot; $$</p><p class="vsub">On East Central, Thornton Park&#x27;s festive cantina, a dog-friendly patio room where regulars dream about birria tacos and the watermelon margarita.</p>
           <p class="addr">617 E Central Blvd, Orlando, FL 32801</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/bartaco-dr-phillips.html">bartaco</a></h3>
-          <p class="meta">Mexican &middot; Dr Phillips &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/bartaco-dr-phillips.html">bartaco</a></h3>
+          <p class="meta">Mexican &middot; Dr Phillips &middot; $$</p><p class="vsub">A beachy patio spot in the Marketplace at Dr Phillips, where street-style tacos land on trays and the table grazes at its own pace.</p>
           <p class="addr">7600 Dr Phillips Blvd Ste 28, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/reyes.html">Reyes Mezcaleria</a></h3>
-          <p class="meta">Mexican &middot; Downtown North &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/reyes.html">Reyes Mezcaleria</a></h3>
+          <p class="meta">Mexican &middot; Downtown North &middot; $$</p><p class="vsub">Michoacán-born chef Wendy Lopez cooks on North Orange Avenue in a room guests describe as beautiful and alive.</p>
           <p class="addr">Reyes Mezcaleria, 821 N Orange Ave, Orlando, FL 32801-1014</p>
-        </article>
+        </div></article>
         </div>
       </section>
 
@@ -318,35 +325,35 @@
         <p class="lede">Other places in Downtown Orlando, Local Picks first, then the closest to Solita Tacos &amp; Margaritas.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/fixtion.html">Fixtion Restaurant &amp; Bar</a> <span class="badge">Local Pick</span></h3>
-          <p class="meta">American · American Restaurant &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/fixtion.html">Fixtion Restaurant &amp; Bar</a> <span class="badge">Local Pick</span></h3>
+          <p class="meta">American · American Restaurant &middot; $$</p><p class="vsub">On Orange Avenue, comfort food and huge comfy booths early, club energy after dark, shape-shifting through the day.</p>
           <p class="addr">15 N Orange Ave, Orlando, FL 32801</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/wall-street-plaza.html">Wall Street Plaza</a> <span class="badge">Local Pick</span></h3>
-          <p class="meta">Nightlife &amp; music · Entertainment District &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/wall-street-plaza.html">Wall Street Plaza</a> <span class="badge">Local Pick</span></h3>
+          <p class="meta">Nightlife &amp; music · Entertainment District &middot; $$</p><p class="vsub">One downtown block holds the whole crawl: eight bars and patios that, on a big night, turn into a single street party.</p>
           <p class="addr">25 Wall St, Orlando, FL 32801</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/elixir-kitchen-bar.html">Elixir Kitchen and Bar</a> <span class="badge">Local Pick</span></h3>
-          <p class="meta">Bars &amp; lounges · Bar &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-elixir-kitchen-bar.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/elixir-kitchen-bar.html">Elixir Kitchen and Bar</a> <span class="badge">Local Pick</span></h3>
+          <p class="meta">Bars &amp; lounges · Bar &middot; $$</p><p class="vsub">A rustic-hip gastropub in one of downtown&#x27;s original buildings, and very much the neighborhood&#x27;s spot.</p>
           <p class="addr">9 W Washington St, Orlando, FL 32801</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/kres.html">Kres Chophouse</a></h3>
-          <p class="meta">Fine dining &amp; steak · Steakhouse &middot; $$$$</p>
+          <img class="vthumb" src="/assets/venue-kres.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/kres.html">Kres Chophouse</a></h3>
+          <p class="meta">Fine dining &amp; steak · Steakhouse &middot; $$$$</p><p class="vsub">Out of a 1930s Church Street landmark downtown, this steakhouse stays elegant and polished with its original architecture intact.</p>
           <p class="addr">Kres Chophouse, 17 Church St W, Orlando, FL 32801-3301</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/proper-orlando.html">Proper Orlando</a></h3>
-          <p class="meta">Bars &amp; lounges · Cocktail Bar &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-proper-orlando.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/proper-orlando.html">Proper Orlando</a></h3>
+          <p class="meta">Bars &amp; lounges · Cocktail Bar &middot; $$</p><p class="vsub">A mid-century cocktail lounge on South Orange Avenue where vinyl is the whole point, DJs spinning records only on an analog sound system.</p>
           <p class="addr">112 S Orange Ave, Orlando, FL 32801</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/euphoria-downtown.html">Euphoria Downtown</a></h3>
-          <p class="meta">Bars &amp; lounges · Bar &middot; $$$</p>
+          <div class="vmain"><h3><a href="/venue/euphoria-downtown.html">Euphoria Downtown</a></h3>
+          <p class="meta">Bars &amp; lounges · Bar &middot; $$$</p><p class="vsub">On South Orange Avenue, brunch with bottomless mimosas and lamb chops gives way to Techno Euphoria nights on a big sound system.</p>
           <p class="addr">110 S Orange Ave, Orlando, FL 32801</p>
-        </article>
+        </div></article>
         </div>
         <div class="handoff">
           <a class="btn-ghost" href="/downtown-orlando-finder.html">See the full Downtown Orlando list</a>

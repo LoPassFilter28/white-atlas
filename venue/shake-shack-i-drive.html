@@ -211,7 +211,14 @@
       .vcard .addr { margin: 0; color: var(--muted); font-size: .9rem; }
       @media (max-width: 640px) { .facts { grid-template-columns: 1fr; } }
     </style>
-  </head>
+  <style data-cardsys>
+/* cardsys: similar rail cards (2026-10-23 overhaul) */
+.vcard{display:flex;gap:12px;align-items:flex-start}
+.vcard .vthumb{flex:0 0 86px;width:86px;height:86px;border-radius:10px;object-fit:cover;display:block}
+.vcard .vmain{flex:1;min-width:0}
+.vcard .vsub{margin:4px 0 0;font-size:.86rem;line-height:1.45;color:var(--muted,#c6bba2)}
+@media (min-width:1000px){.vlist{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start}}
+</style></head>
   <body>
     <header class="hero">
       <div class="hero-in">
@@ -236,45 +243,45 @@
         <div class="actions">
           <a class="action" href="https://www.google.com/maps/search/?api=1&amp;query=Shake+Shack+I-Drive+8359+International+Dr%2C+Orlando%2C+FL+32819" target="_blank" rel="noopener">Directions &rarr;</a>
           <a class="action" href="/archive.html?venue=shake-shack-i-drive">Open in the full finder</a>
-          <a class="action" href="/international-drive-district-guide.html">Read the International Drive story</a>
+          <a class="action" href="/history/i-drive.html">Read the International Drive story</a>
         </div>
       </section>
 
-      <section class="sec" id="similar">
+      <section class="sec" id="district-story"><p class="kicker">District Story</p><h2>The story of Orlando</h2><p class="lede">A hotel in the boondocks, a road paved after it and named to sound big and important, and the corridor that taught Orlando how to be a vacation.</p><p><a class="btn-ghost" href="/history/i-drive.html">Read the Orlando story &rarr;</a></p></section><section class="sec" id="similar">
         <p class="kicker">Similar Feel</p>
         <h2>More places with this feel</h2>
         <p class="lede">Matched by vibe, not by neighborhood: the places across Greater Orlando closest in spirit to Shake Shack I-Drive.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/shakers-american-cafe.html">Shakers American Cafe</a></h3>
-          <p class="meta">American &middot; College Park &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-shakers-american-cafe.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/shakers-american-cafe.html">Shakers American Cafe</a></h3>
+          <p class="meta">American &middot; College Park &middot; $$</p><p class="vsub">Cozy College Park cottage lined with donated salt and pepper shakers, where the breakfast crowd treats it like a clubhouse.</p>
           <p class="addr">Shakers American Cafe, 1308 Edgewater Dr, Orlando, FL 32804-6351, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/shake-shack-winter-park.html">Shake Shack Winter Park</a></h3>
-          <p class="meta">Burgers &amp; sandwiches &middot; Lake Killarney lakefront &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/shake-shack-winter-park.html">Shake Shack Winter Park</a></h3>
+          <p class="meta">Burgers &amp; sandwiches &middot; Lake Killarney lakefront &middot; $$</p><p class="vsub">On Lake Killarney, guests call it the best view for a burger joint: the familiar Shack standard with the lake as backdrop.</p>
           <p class="addr">119 N Orlando Ave, Winter Park, FL 32789</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/the-capital-grille-pointe-orlando.html">The Capital Grille</a></h3>
-          <p class="meta">Fine dining &amp; steak &middot; Pointe Orlando &middot; $$$$</p>
+          <div class="vmain"><h3><a href="/venue/the-capital-grille-pointe-orlando.html">The Capital Grille</a></h3>
+          <p class="meta">Fine dining &amp; steak &middot; Pointe Orlando &middot; $$$$</p><p class="vsub">The default client steakhouse at Pointe Orlando, a short walk from the Rosen hotels, running the full expense-account ritual.</p>
           <p class="addr">9101 International Dr, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/icon-park.html">ICON Park &amp; The Orlando Eye</a></h3>
-          <p class="meta">Attractions &middot; I-Drive &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-icon-park.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/icon-park.html">ICON Park &amp; The Orlando Eye</a></h3>
+          <p class="meta">Attractions &middot; I-Drive &middot; $$</p><p class="vsub">An open-air stretch of I-Drive with no gate to wander in, anchored by the 400-foot Orlando Eye above the night lights.</p>
           <p class="addr">8375 International Dr, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/ford-s-garage-international-outlets.html">Ford&#x27;s Garage</a></h3>
-          <p class="meta">Burgers &amp; sandwiches &middot; I-Drive &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-ford-s-garage-international-outlets.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/ford-s-garage-international-outlets.html">Ford&#x27;s Garage</a></h3>
+          <p class="meta">Burgers &amp; sandwiches &middot; I-Drive &middot; $$</p><p class="vsub">A burger bar dressed as a 1920s service station at the outlets, with vintage Fords overhead and shop rags for napkins.</p>
           <p class="addr">4971 International Dr Ste 3D.09, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/cafe-tu-tu-tango.html">Café Tu Tu Tango</a></h3>
-          <p class="meta">Restaurants &middot; I-Drive &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-cafe-tu-tu-tango.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/cafe-tu-tu-tango.html">Café Tu Tu Tango</a></h3>
+          <p class="meta">Restaurants &middot; I-Drive &middot; $$</p><p class="vsub">An I-Drive original since the 1990s that treats dinner like an art opening, with resident artists painting at easels, walls doubling as the gallery.</p>
           <p class="addr">8625 International Dr, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         </div>
       </section>
 
@@ -284,35 +291,35 @@
         <p class="lede">Other places in International Drive, Local Picks first, then the closest to Shake Shack I-Drive.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/toms-watch-bar-orlando.html">Tom&#x27;s Watch Bar</a> <span class="badge">Local Pick</span></h3>
-          <p class="meta">Bars &amp; lounges · Bar &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-toms-watch-bar-orlando.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/toms-watch-bar-orlando.html">Tom&#x27;s Watch Bar</a> <span class="badge">Local Pick</span></h3>
+          <p class="meta">Bars &amp; lounges · Bar &middot; $$</p><p class="vsub">On International Drive, a sports bar built like a stadium, with an oversized screen and screens wrapping the room so every seat faces the action.</p>
           <p class="addr">8050 International Dr, Suite 1000, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/baires-grill-orlando.html">Baires Grill</a> <span class="badge">Local Pick</span></h3>
-          <p class="meta">Latin &amp; Caribbean · Argentinian Steakhouse &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-baires-grill-orlando.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/baires-grill-orlando.html">Baires Grill</a> <span class="badge">Local Pick</span></h3>
+          <p class="meta">Latin &amp; Caribbean · Argentinian Steakhouse &middot; $$</p><p class="vsub">The parrilla decides everything at this Argentine steakhouse just off International Drive.</p>
           <p class="addr">8050 International Dr, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/yard-house.html">Yard House</a></h3>
-          <p class="meta">American · Sports Bar &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/yard-house.html">Yard House</a></h3>
+          <p class="meta">American · Sports Bar &middot; $</p><p class="vsub">ICON Park&#x27;s big-room guarantee: a wall of taps, a glass-enclosed keg room as centerpiece, and classic rock under everything.</p>
           <p class="addr">8367 International Dr, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/pirates-dinner-adventure.html">Pirates Dinner Adventure</a></h3>
-          <p class="meta">Attractions &middot; $$$</p>
+          <img class="vthumb" src="/assets/venue-pirates-dinner-adventure.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/pirates-dinner-adventure.html">Pirates Dinner Adventure</a></h3>
+          <p class="meta">Attractions &middot; $$$</p><p class="vsub">A full-size Spanish galleon sits in an indoor lagoon on Carrier Drive while acrobats swing, swords clash and cannons flash around tables.</p>
           <p class="addr">6400 Carrier Dr, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/speakeasy-murder-mystery.html">Speakeasy Murder Mystery Dinner Show</a></h3>
-          <p class="meta">Attractions &middot; $$$</p>
+          <div class="vmain"><h3><a href="/venue/speakeasy-murder-mystery.html">Speakeasy Murder Mystery Dinner Show</a></h3>
+          <p class="meta">Attractions &middot; $$$</p><p class="vsub">Behind the doorbell at Teatro Martini on Carrier Drive, a 1920s speakeasy murder mystery folds the audience into the case over dinner.</p>
           <p class="addr">6400 Carrier Dr, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/gordon-ramsay-fish-and-chips.html">Gordon Ramsay Fish &amp; Chips</a></h3>
-          <p class="meta">Seafood · Fish &amp; Chips &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/gordon-ramsay-fish-and-chips.html">Gordon Ramsay Fish &amp; Chips</a></h3>
+          <p class="meta">Seafood · Fish &amp; Chips &middot; $</p><p class="vsub">Gordon Ramsay&#x27;s British chippy at ICON Park, done up like a Union Jack beach shack, with counter service and a short menu.</p>
           <p class="addr">8391 International Dr Ste C-1, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         </div>
         <div class="handoff">
           <a class="btn-ghost" href="/international-drive-finder.html">See the full International Drive list</a>

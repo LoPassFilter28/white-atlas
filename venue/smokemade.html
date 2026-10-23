@@ -211,7 +211,14 @@
       .vcard .addr { margin: 0; color: var(--muted); font-size: .9rem; }
       @media (max-width: 640px) { .facts { grid-template-columns: 1fr; } }
     </style>
-  </head>
+  <style data-cardsys>
+/* cardsys: similar rail cards (2026-10-23 overhaul) */
+.vcard{display:flex;gap:12px;align-items:flex-start}
+.vcard .vthumb{flex:0 0 86px;width:86px;height:86px;border-radius:10px;object-fit:cover;display:block}
+.vcard .vmain{flex:1;min-width:0}
+.vcard .vsub{margin:4px 0 0;font-size:.86rem;line-height:1.45;color:var(--muted,#c6bba2)}
+@media (min-width:1000px){.vlist{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start}}
+</style></head>
   <body>
     <header class="hero">
       <div class="hero-in">
@@ -240,41 +247,41 @@
         </div>
       </section>
 
-      <section class="sec" id="similar">
+      <section class="sec" id="district-story"><p class="kicker">District Stories</p><h2>Orlando&#x27;s long memory</h2><p class="lede">The guide keeps the long memory of Orlando&#x27;s districts in one place: the names, the plats and the stories behind the streets.</p><p><a class="btn-ghost" href="/history.html">Browse the district stories &rarr;</a></p></section><section class="sec" id="similar">
         <p class="kicker">Similar Feel</p>
         <h2>More places with this feel</h2>
         <p class="lede">Matched by vibe, not by neighborhood: the places across Greater Orlando closest in spirit to Smokemade Meats + Eats.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/mohawk-bbq.html">Mohawk Smokehouse</a></h3>
-          <p class="meta">BBQ &middot; Longwood &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/mohawk-bbq.html">Mohawk Smokehouse</a></h3>
+          <p class="meta">BBQ &middot; Longwood &middot; $$</p><p class="vsub">Small-batch Longwood barbecue from Tyler Evans and his wife Sarah, built on Texas-style brisket with Southern roots.</p>
           <p class="addr">480 S Ronald Reagan Blvd, Longwood, FL 32750</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/4-rivers-smokehouse-sodo.html">4 Rivers Smokehouse</a></h3>
-          <p class="meta">BBQ &middot; SoDo &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-4-rivers-smokehouse-sodo.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/4-rivers-smokehouse-sodo.html">4 Rivers Smokehouse</a></h3>
+          <p class="meta">BBQ &middot; SoDo &middot; $$</p><p class="vsub">On South Orange Avenue, Signature Angus brisket guests call A+, alongside burnt ends, the Messy Pig, and the Texas Destroyer.</p>
           <p class="addr">4 Rivers Smokehouse, 3200 S Orange Ave, Orlando, FL 32806</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/smoke-donuts.html">Smoke &amp; Donuts BBQ</a></h3>
-          <p class="meta">BBQ &middot; Milk District &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/smoke-donuts.html">Smoke &amp; Donuts BBQ</a></h3>
+          <p class="meta">BBQ &middot; Milk District &middot; $$</p><p class="vsub">Low and slow barbecue pairs with made-to-order cake donuts in this casual, family-run Milk District room.</p>
           <p class="addr">601 N Primrose Dr, Orlando, FL 32803</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/cowboy-curry.html">Cowboy Curry</a></h3>
-          <p class="meta">Japanese &amp; sushi &middot; Mills 50 &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/cowboy-curry.html">Cowboy Curry</a></h3>
+          <p class="meta">Japanese &amp; sushi &middot; Mills 50 &middot; $$</p><p class="vsub">Inside Mills Market, the Japanese curry is built the slow way, a 40-hour beef curry guests call comfort food with soul.</p>
           <p class="addr">1110 E Colonial Dr, Orlando, FL 32803</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/smokey-jays-bbq.html">Smokey Jay&#x27;s BBQ</a></h3>
-          <p class="meta">BBQ &middot; Orlando &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-smokey-jays-bbq.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/smokey-jays-bbq.html">Smokey Jay&#x27;s BBQ</a></h3>
+          <p class="meta">BBQ &middot; Orlando &middot; $$</p><p class="vsub">Mom-and-pop smokehouse on East Colonial where guests say you can taste the family-run care in every plate.</p>
           <p class="addr">Smokey Jay&#x27;s BBQ, 9318 E Colonial Dr, Orlando, FL 32817-4100</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/cecils-texas-style-bar-b-q.html">Cecil&#x27;s Texas Style Bar-B-Q</a></h3>
-          <p class="meta">BBQ &middot; SoDo &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/cecils-texas-style-bar-b-q.html">Cecil&#x27;s Texas Style Bar-B-Q</a></h3>
+          <p class="meta">BBQ &middot; SoDo &middot; $$</p><p class="vsub">Cafeteria style since 1992 on South Orange Avenue, an old-school roadhouse where trays move down a fast, friendly line.</p>
           <p class="addr">Cecil&#x27;s Texas Style Bar-B-Q, 2800 S Orange Ave, Orlando, FL 32806</p>
-        </article>
+        </div></article>
         </div>
       </section>
 
@@ -284,35 +291,35 @@
         <p class="lede">Other places in Hourglass, closest to Smokemade Meats + Eats first.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/charlies-bakery.html">Charlie&#x27;s Bakery</a></h3>
-          <p class="meta">Bakeries · Bakery &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-charlies-bakery.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/charlies-bakery.html">Charlie&#x27;s Bakery</a></h3>
+          <p class="meta">Bakeries · Bakery &middot; $$</p><p class="vsub">A Curry Ford go-to for generations, baking in the same shop since 1971.</p>
           <p class="addr">Charlie&#x27;s Bakery, 3213 Curry Ford Rd, Orlando, FL 32806, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/el-coqui-ninja-restaurant.html">El Coqui Ninja Restaurant</a></h3>
-          <p class="meta">Latin &amp; Caribbean · Puerto Rican Fusion &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-el-coqui-ninja-restaurant.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/el-coqui-ninja-restaurant.html">El Coqui Ninja Restaurant</a></h3>
+          <p class="meta">Latin &amp; Caribbean · Puerto Rican Fusion &middot; $$</p><p class="vsub">Puerto Rican soul meets Asian comfort on Curry Ford, and the mashup is the whole point.</p>
           <p class="addr">El Coqui Ninja Restaurant, 3097 Curry Ford Rd, Orlando, FL 32806-3301, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/theos-kitchen.html">Theo&#x27;s Kitchen</a></h3>
-          <p class="meta">Mediterranean · Mediterranean &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/theos-kitchen.html">Theo&#x27;s Kitchen</a></h3>
+          <p class="meta">Mediterranean · Mediterranean &middot; $$</p><p class="vsub">Family-owned on Curry Ford, a staple that plays a rare double act locals keep coming back for.</p>
           <p class="addr">Theo&#x27;s Kitchen, 2952 Curry Ford Rd, Orlando, FL 32806, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/shaka-donuts.html">Shaka Donuts</a></h3>
-          <p class="meta">Sweets · Donuts &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-shaka-donuts.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/shaka-donuts.html">Shaka Donuts</a></h3>
+          <p class="meta">Sweets · Donuts &middot; $$</p><p class="vsub">Aloha spirit in a cozy Curry Ford shop where every donut is made to order and served warm, and regulars call them Orlando&#x27;s best.</p>
           <p class="addr">2641 Curry Ford Rd, Orlando, FL 32806</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/hourglass-brewing.html">Hourglass Brewing</a></h3>
-          <p class="meta">Breweries · Brewery &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-hourglass-brewing.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/hourglass-brewing.html">Hourglass Brewing</a></h3>
+          <p class="meta">Breweries · Brewery &middot; $$</p><p class="vsub">Pouring inside a former church on Curry Ford, this Hourglass District taproom keeps a rotating cast of house beers flowing.</p>
           <p class="addr">Hourglass Brewing, 2500 Curry Ford Rd, Orlando, FL 32806-2506, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/foxtail-coffee.html">Foxtail Coffee</a></h3>
-          <p class="meta">Coffee &amp; cafes · Coffee Shop &middot; $</p>
+          <img class="vthumb" src="/assets/venue-foxtail-coffee.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/foxtail-coffee.html">Foxtail Coffee</a></h3>
+          <p class="meta">Coffee &amp; cafes · Coffee Shop &middot; $</p><p class="vsub">Orlando-born chain that still pours like a neighborhood shop, with a peaceful, low-key room in the Hourglass District.</p>
           <p class="addr">2401 Curry Ford Rd, Orlando, FL 32806</p>
-        </article>
+        </div></article>
         </div>
         <div class="handoff">
           <a class="btn-ghost" href="/hourglass-finder.html">See the full Hourglass list</a>

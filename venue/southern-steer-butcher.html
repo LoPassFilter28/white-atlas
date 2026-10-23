@@ -211,7 +211,14 @@
       .vcard .addr { margin: 0; color: var(--muted); font-size: .9rem; }
       @media (max-width: 640px) { .facts { grid-template-columns: 1fr; } }
     </style>
-  </head>
+  <style data-cardsys>
+/* cardsys: similar rail cards (2026-10-23 overhaul) */
+.vcard{display:flex;gap:12px;align-items:flex-start}
+.vcard .vthumb{flex:0 0 86px;width:86px;height:86px;border-radius:10px;object-fit:cover;display:block}
+.vcard .vmain{flex:1;min-width:0}
+.vcard .vsub{margin:4px 0 0;font-size:.86rem;line-height:1.45;color:var(--muted,#c6bba2)}
+@media (min-width:1000px){.vlist{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start}}
+</style></head>
   <body>
     <header class="hero">
       <div class="hero-in">
@@ -240,41 +247,41 @@
         </div>
       </section>
 
-      <section class="sec" id="similar">
+      <section class="sec" id="district-story"><p class="kicker">District Stories</p><h2>Orlando&#x27;s long memory</h2><p class="lede">The guide keeps the long memory of Orlando&#x27;s districts in one place: the names, the plats and the stories behind the streets.</p><p><a class="btn-ghost" href="/history.html">Browse the district stories &rarr;</a></p></section><section class="sec" id="similar">
         <p class="kicker">Similar Feel</p>
         <h2>More places with this feel</h2>
         <p class="lede">Matched by vibe, not by neighborhood: the places across Greater Orlando closest in spirit to Southern Steer Butcher (Orlando).</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/beef-bae.html">Beef Bae</a></h3>
-          <p class="meta">BBQ &middot; South Orlando &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/beef-bae.html">Beef Bae</a></h3>
+          <p class="meta">BBQ &middot; South Orlando &middot; $$</p><p class="vsub">Formerly Charcoal Zyka, this South Orlando spot runs American barbecue through a Zabiha halal kitchen, and regulars say it works.</p>
           <p class="addr">10249 S John Young Pkwy Ste 109, Orlando, FL 32837</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/everoak.html">Everoak Farm</a></h3>
-          <p class="meta">Markets &amp; shops &middot; University &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/everoak.html">Everoak Farm</a></h3>
+          <p class="meta">Markets &amp; shops &middot; University &middot; $</p><p class="vsub">A family-run regenerative farm on Carrington Drive growing Certified Naturally Grown produce with no sprays in living soil.</p>
           <p class="addr">Everoak Farm, 2335 Carrington Dr, Orlando, FL 32807</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/market-on-south.html">Market On South</a></h3>
-          <p class="meta">Markets &amp; shops &middot; Milk District &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/market-on-south.html">Market On South</a></h3>
+          <p class="meta">Markets &amp; shops &middot; Milk District &middot; $$</p><p class="vsub">Fully plant-based food hall on East South Street, bohemian and laid-back, as much community space as place to eat.</p>
           <p class="addr">2603 E South St, Orlando, FL 32803</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/hinckleys-fancy-meats.html">Hinckley&#x27;s Fancy Meats</a></h3>
-          <p class="meta">Markets &amp; shops &middot; Audubon Park &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/hinckleys-fancy-meats.html">Hinckley&#x27;s Fancy Meats</a></h3>
+          <p class="meta">Markets &amp; shops &middot; Audubon Park &middot; $$</p><p class="vsub">A craft butcher stall inside East End Market, old-school in the best way, with house-cured meats in the case and a deli counter.</p>
           <p class="addr">3201 Corrine Dr #104, Orlando, FL 32803</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/great-southern-box-co.html">Great Southern Box Co. Food Hall &amp; Bar</a></h3>
-          <p class="meta">Markets &amp; shops &middot; Packing District &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/great-southern-box-co.html">Great Southern Box Co. Food Hall &amp; Bar</a></h3>
+          <p class="meta">Markets &amp; shops &middot; Packing District &middot; $$</p><p class="vsub">On North Orange Blossom Trail, a historic citrus crate warehouse in the Packing District turned lively, group-friendly hall of counters.</p>
           <p class="addr">The Great Southern Box Company, 2105 N Orange Blossom Trl, Orlando, FL 32804</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/lindas-la-cantina.html">Linda&#x27;s La Cantina Steakhouse</a></h3>
-          <p class="meta">Fine dining &amp; steak &middot; Orlando &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-lindas-la-cantina.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/lindas-la-cantina.html">Linda&#x27;s La Cantina Steakhouse</a></h3>
+          <p class="meta">Fine dining &amp; steak &middot; Orlando &middot; $$</p><p class="vsub">Serving steaks on East Colonial since 1947, a family-run old-school room with checkered tablecloths, a step back in time.</p>
           <p class="addr">Linda&#x27;s la Cantina, 4721 E Colonial Dr, Orlando, FL 32803-4305, United States</p>
-        </article>
+        </div></article>
         </div>
       </section>
 
@@ -284,35 +291,35 @@
         <p class="lede">Other places in Winter Garden, closest to Southern Steer Butcher (Orlando) first.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/ispirazione.html">Ispirazione</a></h3>
-          <p class="meta">Burgers &amp; sandwiches · Sandwiches &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/ispirazione.html">Ispirazione</a></h3>
+          <p class="meta">Burgers &amp; sandwiches · Sandwiches &middot; $$</p><p class="vsub">In Ocoee, the focus is tigelle, small round Italian breads baked fresh to order, crunchy outside and soft in the center.</p>
           <p class="addr">Ispirazione, 1711 Amazing Way, Ocoee, FL 34761-3279, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/toll-road-brewing-company.html">Toll Road Brewing Company</a></h3>
-          <p class="meta">Breweries · Brewery &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/toll-road-brewing-company.html">Toll Road Brewing Company</a></h3>
+          <p class="meta">Breweries · Brewery &middot; $$</p><p class="vsub">Small Ocoee taproom with a cozy, laid-back microbrewery feel, staffed by people who treat everyone like a regular.</p>
           <p class="addr">Toll Road Brewing Company, 101 W McKey St, Ocoee, FL 34761-2616, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/play-street-museum.html">Play Street Museum</a></h3>
-          <p class="meta">Museums &amp; landmarks · Museum &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/play-street-museum.html">Play Street Museum</a></h3>
+          <p class="meta">Museums &amp; landmarks · Museum &middot; $$</p><p class="vsub">A tiny town built for young children in Winter Garden, with a doctor&#x27;s office, fire station, pet rescue and make-believe ice cream.</p>
           <p class="addr">12107 Stoneybrook West Pkwy, STE 104, Winter Garden, FL 34787</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/seo-basilico-pizzeria.html">SEO Basilico Pizzeria</a></h3>
-          <p class="meta">Pizza &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/seo-basilico-pizzeria.html">SEO Basilico Pizzeria</a></h3>
+          <p class="meta">Pizza &middot; $</p><p class="vsub">In Winter Garden&#x27;s Stoneybrook area, artigianale pizza rooted in Sao Paulo Italian tradition, with founders from Mooca shaping the menu.</p>
           <p class="addr">12107 Stoneybrook W Pkwy Suite 105, Winter Garden, FL 34787</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/yellow-dog-eats.html">Yellow Dog Eats</a></h3>
-          <p class="meta">BBQ &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/yellow-dog-eats.html">Yellow Dog Eats</a></h3>
+          <p class="meta">BBQ &middot; $</p><p class="vsub">Working out of a century-old general store in Gotha, funky and laid-back, with sandwich names that make you grin.</p>
           <p class="addr">1236 Hempel Ave, Gotha, FL 34786</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/harlow-grove.html">Harlow Grove</a></h3>
-          <p class="meta">American · American Restaurant &middot; $$$</p>
+          <div class="vmain"><h3><a href="/venue/harlow-grove.html">Harlow Grove</a></h3>
+          <p class="meta">American · American Restaurant &middot; $$$</p><p class="vsub">Beneath a century-old oak in Winter Garden, an elegant room and open-air terrace overlook town.</p>
           <p class="addr">186 S Main St, Winter Garden, FL 34787</p>
-        </article>
+        </div></article>
         </div>
         <div class="handoff">
           <a class="btn-ghost" href="/winter-garden-finder.html">See the full Winter Garden list</a>

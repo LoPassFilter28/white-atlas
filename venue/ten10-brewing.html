@@ -211,7 +211,14 @@
       .vcard .addr { margin: 0; color: var(--muted); font-size: .9rem; }
       @media (max-width: 640px) { .facts { grid-template-columns: 1fr; } }
     </style>
-  </head>
+  <style data-cardsys>
+/* cardsys: similar rail cards (2026-10-23 overhaul) */
+.vcard{display:flex;gap:12px;align-items:flex-start}
+.vcard .vthumb{flex:0 0 86px;width:86px;height:86px;border-radius:10px;object-fit:cover;display:block}
+.vcard .vmain{flex:1;min-width:0}
+.vcard .vsub{margin:4px 0 0;font-size:.86rem;line-height:1.45;color:var(--muted,#c6bba2)}
+@media (min-width:1000px){.vlist{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start}}
+</style></head>
   <body>
     <header class="hero">
       <div class="hero-in">
@@ -236,46 +243,46 @@
         <div class="actions">
           <a class="action" href="https://www.google.com/maps/search/?api=1&amp;query=Ten10+Brewing+Ten10+Brewing%2C+1010+Virginia+Dr%2C+Orlando%2C+FL+32803-2532" target="_blank" rel="noopener">Directions &rarr;</a>
           <a class="action" href="/archive.html?venue=ten10-brewing">Open in the full finder</a>
-          <a class="action" href="/mills-50-district-guide.html">Read the Mills 50 story</a>
+          <a class="action" href="/history/mills-50.html">Read the Mills 50 story</a>
           <a class="action action-ig" href="https://www.instagram.com/ten10_brewing" target="_blank" rel="noopener"><svg class="ig-glyph" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="vertical-align:-2px;margin-right:6px"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg> Instagram</a>
         </div>
       </section>
 
-      <section class="sec" id="similar">
+      <section class="sec" id="district-story"><p class="kicker">District Story</p><h2>The story of Mills 50</h2><p class="lede">A district named for its own crossroads, platted as front porches in 1883 and remade twice by the people who moved in.</p><p><a class="btn-ghost" href="/history/mills-50.html">Read the Mills 50 story &rarr;</a></p></section><section class="sec" id="similar">
         <p class="kicker">Similar Feel</p>
         <h2>More places with this feel</h2>
         <p class="lede">Matched by vibe, not by neighborhood: the places across Greater Orlando closest in spirit to Ten10 Brewing.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/toll-road-brewing-company.html">Toll Road Brewing Company</a></h3>
-          <p class="meta">Breweries &middot; Ocoee &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/toll-road-brewing-company.html">Toll Road Brewing Company</a></h3>
+          <p class="meta">Breweries &middot; Ocoee &middot; $$</p><p class="vsub">Small Ocoee taproom with a cozy, laid-back microbrewery feel, staffed by people who treat everyone like a regular.</p>
           <p class="addr">Toll Road Brewing Company, 101 W McKey St, Ocoee, FL 34761-2616, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/the-guesthouse.html">The Guesthouse</a></h3>
-          <p class="meta">Bars &amp; lounges &middot; Mills 50 &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/the-guesthouse.html">The Guesthouse</a></h3>
+          <p class="meta">Bars &amp; lounges &middot; Mills 50 &middot; $$</p><p class="vsub">Mills 50&#x27;s plant-filled living room, greenery trailing over white walls around a square bar.</p>
           <p class="addr">1321 N Mills Ave, Orlando, FL 32803</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/brews-and-bites-tour.html">Brews and Bites Walking Tour</a></h3>
-          <p class="meta">Attractions &middot; Ivanhoe Village &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/brews-and-bites-tour.html">Brews and Bites Walking Tour</a></h3>
+          <p class="meta">Attractions &middot; Ivanhoe Village &middot; $$</p><p class="vsub">Through Ivanhoe Village breweries and bars, guides guests call knowledgeable and upbeat share plenty of local history along the way.</p>
           <p class="addr">Ten10 Brewing Company, 1010 Virginia Dr, Orlando, FL 32803</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/grape-the-grain.html">Grape &amp; the Grain</a></h3>
-          <p class="meta">Bars &amp; lounges &middot; 1110 Virginia Dr &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-grape-the-grain.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/grape-the-grain.html">Grape &amp; the Grain</a></h3>
+          <p class="meta">Bars &amp; lounges &middot; 1110 Virginia Dr &middot; $$</p><p class="vsub">Unpretentious Mills 50 wine bar where the real draw is the covered back patio guests call the best in Orlando.</p>
           <p class="addr">Grape &amp; the Grain, 1110 Virginia Dr, Orlando, FL 32803</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/qreate-coffee.html">Qreate Coffee</a></h3>
-          <p class="meta">Coffee &amp; cafes &middot; Orlando &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-qreate-coffee.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/qreate-coffee.html">Qreate Coffee</a></h3>
+          <p class="meta">Coffee &amp; cafes &middot; Orlando &middot; $$</p><p class="vsub">Just off Mills on Woodward Street, part coffee lab and part creative studio, with a small-town feel guests do not expect.</p>
           <p class="addr">1212 Woodward St #1, Orlando, FL 32803</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/rockpit-brewing.html">Rockpit Brewing</a></h3>
-          <p class="meta">Breweries &middot; SoDo &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/rockpit-brewing.html">Rockpit Brewing</a></h3>
+          <p class="meta">Breweries &middot; SoDo &middot; $$</p><p class="vsub">Regulars treat this SoDo taproom on West Illiana Street as Orlando&#x27;s neighborhood brewery, cozy and welcoming to newcomers.</p>
           <p class="addr">Rockpit Brewing, 10 W Illiana St, Orlando, FL 32806-4408, United States</p>
-        </article>
+        </div></article>
         </div>
       </section>
 
@@ -285,35 +292,35 @@
         <p class="lede">Other places in Mills 50, Local Picks first, then the closest to Ten10 Brewing.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/the-guesthouse.html">The Guesthouse</a> <span class="badge">Local Pick</span></h3>
-          <p class="meta">Bars &amp; lounges · Cocktail Bar &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/the-guesthouse.html">The Guesthouse</a> <span class="badge">Local Pick</span></h3>
+          <p class="meta">Bars &amp; lounges · Cocktail Bar &middot; $$</p><p class="vsub">Mills 50&#x27;s plant-filled living room, greenery trailing over white walls around a square bar.</p>
           <p class="addr">1321 N Mills Ave, Orlando, FL 32803</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/grape-the-grain.html">Grape &amp; the Grain</a></h3>
-          <p class="meta">Bars &amp; lounges · Bar &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-grape-the-grain.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/grape-the-grain.html">Grape &amp; the Grain</a></h3>
+          <p class="meta">Bars &amp; lounges · Bar &middot; $$</p><p class="vsub">Unpretentious Mills 50 wine bar where the real draw is the covered back patio guests call the best in Orlando.</p>
           <p class="addr">Grape &amp; the Grain, 1110 Virginia Dr, Orlando, FL 32803</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/black-rooster-taqueria.html">Black Rooster Taqueria</a></h3>
-          <p class="meta">Mexican &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/black-rooster-taqueria.html">Black Rooster Taqueria</a></h3>
+          <p class="meta">Mexican &middot; $$</p><p class="vsub">A small, lively Mills 50 room with a dive-bar soul and a chef&#x27;s hand on the tacos.</p>
           <p class="addr">1323 N Mills Ave, Orlando, FL 32803</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/wills-pub.html">Will&#x27;s Pub &amp; Lil Indie&#x27;s</a></h3>
-          <p class="meta">Nightlife &amp; music · Live Music Venue &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/wills-pub.html">Will&#x27;s Pub &amp; Lil Indie&#x27;s</a></h3>
+          <p class="meta">Nightlife &amp; music · Live Music Venue &middot; $</p><p class="vsub">On North Mills Avenue, the divey, unpretentious heart of Orlando&#x27;s independent music scene.</p>
           <p class="addr">1042 N Mills Ave, Orlando, FL 32803</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/framework-craft-coffee-house.html">Framework Craft Coffee House</a></h3>
-          <p class="meta">Coffee &amp; cafes · Cafe &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/framework-craft-coffee-house.html">Framework Craft Coffee House</a></h3>
+          <p class="meta">Coffee &amp; cafes · Cafe &middot; $</p><p class="vsub">What grew from the Vita Luna coffee cart is now a cozy, artsy Mills 50 hub built on a pay-what-you-can welcome.</p>
           <p class="addr">1201 N Mills Ave, Orlando, FL 32803</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/bites-and-bubbles.html">Bites &amp; Bubbles</a></h3>
-          <p class="meta">American · New American &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/bites-and-bubbles.html">Bites &amp; Bubbles</a></h3>
+          <p class="meta">American · New American &middot; $$</p><p class="vsub">Date-night polish meets neighborhood warmth on North Mills, topped by a romantic rooftop lounge made for sunset.</p>
           <p class="addr">1618 N Mills Ave, Orlando, FL 32803</p>
-        </article>
+        </div></article>
         </div>
         <div class="handoff">
           <a class="btn-ghost" href="/mills-50-finder.html">See the full Mills 50 list</a>

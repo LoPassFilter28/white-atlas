@@ -211,7 +211,14 @@
       .vcard .addr { margin: 0; color: var(--muted); font-size: .9rem; }
       @media (max-width: 640px) { .facts { grid-template-columns: 1fr; } }
     </style>
-  </head>
+  <style data-cardsys>
+/* cardsys: similar rail cards (2026-10-23 overhaul) */
+.vcard{display:flex;gap:12px;align-items:flex-start}
+.vcard .vthumb{flex:0 0 86px;width:86px;height:86px;border-radius:10px;object-fit:cover;display:block}
+.vcard .vmain{flex:1;min-width:0}
+.vcard .vsub{margin:4px 0 0;font-size:.86rem;line-height:1.45;color:var(--muted,#c6bba2)}
+@media (min-width:1000px){.vlist{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start}}
+</style></head>
   <body>
     <header class="hero">
       <div class="hero-in">
@@ -236,45 +243,45 @@
         <div class="actions">
           <a class="action" href="https://www.google.com/maps/search/?api=1&amp;query=Sus+Hi+Eatstation+Sus+Hi+Eatstation%2C+9680+Narcoossee+Rd%2C+Orlando%2C+FL+32827-7311%2C+United+States" target="_blank" rel="noopener">Directions &rarr;</a>
           <a class="action" href="/archive.html?venue=sus-hi-eatstation">Open in the full finder</a>
-          <a class="action" href="/lake-nona-district-guide.html">Read the Lake Nona story</a>
+          <a class="action" href="/history/lake-nona.html">Read the Lake Nona story</a>
         </div>
       </section>
 
-      <section class="sec" id="similar">
+      <section class="sec" id="district-story"><p class="kicker">District Story</p><h2>The story of Lake Nona</h2><p class="lede">A lake named on the federal survey maps long before any road led to it, and a district that arrived, all at once, in a single generation.</p><p><a class="btn-ghost" href="/history/lake-nona.html">Read the Lake Nona story &rarr;</a></p></section><section class="sec" id="similar">
         <p class="kicker">Similar Feel</p>
         <h2>More places with this feel</h2>
         <p class="lede">Matched by vibe, not by neighborhood: the places across Greater Orlando closest in spirit to Sus Hi Eatstation.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/maki-hibachi-lake-nona.html">Maki Hibachi</a></h3>
-          <p class="meta">Japanese &amp; sushi &middot; Lake Nona &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/maki-hibachi-lake-nona.html">Maki Hibachi</a></h3>
+          <p class="meta">Japanese &amp; sushi &middot; Lake Nona &middot; $$</p><p class="vsub">Tiny and intimate at Lake Nona Landing, this spot treats sushi like a craft, with fish guests call the freshest around.</p>
           <p class="addr">11954 Narcoossee Rd, Suite 1, Orlando, FL 32827</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/bento-asian-kitchen-lake-nona.html">BENTO Asian Kitchen + Sushi</a></h3>
-          <p class="meta">Restaurants &middot; Lake Nona &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-bento-asian-kitchen-lake-nona.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/bento-asian-kitchen-lake-nona.html">BENTO Asian Kitchen + Sushi</a></h3>
+          <p class="meta">Restaurants &middot; Lake Nona &middot; $$</p><p class="vsub">Lake Nona&#x27;s fast-casual pan-Asian workhorse: counter ordering, food out fast, and a menu wide enough for split cravings.</p>
           <p class="addr">12851 Narcoossee Rd, Suite 100, Orlando, FL 32832</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/nami.html">Nami</a></h3>
-          <p class="meta">Japanese &amp; sushi &middot; Lake Nona &middot; $$$$</p>
+          <div class="vmain"><h3><a href="/venue/nami.html">Nami</a></h3>
+          <p class="meta">Japanese &amp; sushi &middot; Lake Nona &middot; $$$$</p><p class="vsub">Inside Lake Nona&#x27;s Wave Hotel, this serene, low-lit Japanese room is a safe haven for its regulars.</p>
           <p class="addr">Nami, 6004 Artist Ave, Orlando, FL 32827</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/take-a-sushi.html">Take A Sushi</a></h3>
-          <p class="meta">Japanese &amp; sushi &middot; Disney Area &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-take-a-sushi.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/take-a-sushi.html">Take A Sushi</a></h3>
+          <p class="meta">Japanese &amp; sushi &middot; Disney Area &middot; $$</p><p class="vsub">Japanese cooking gets a Latin twist on Sand Lake Road, sunny, breezy, and unpretentious.</p>
           <p class="addr">4725 W Sand Lake Rd #101, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/hinode-sushi.html">Hinode Sushi</a></h3>
-          <p class="meta">Japanese &amp; sushi &middot; Oviedo &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/hinode-sushi.html">Hinode Sushi</a></h3>
+          <p class="meta">Japanese &amp; sushi &middot; Oviedo &middot; $$</p><p class="vsub">Locals call this Oviedo room their own: a warm, family-run counter on Lockwood Blvd where Chef George Tan plates sushi with artistry.</p>
           <p class="addr">Hinode Sushi, 1016 Lockwood Blvd, Oviedo, FL 32765-6027, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/bento-sushi.html">Bento Sushi</a></h3>
-          <p class="meta">Japanese &amp; sushi &middot; 12715 Pegasus Dr &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/bento-sushi.html">Bento Sushi</a></h3>
+          <p class="meta">Japanese &amp; sushi &middot; 12715 Pegasus Dr &middot; $$</p><p class="vsub">Quick, cafeteria-casual counter inside the UCF Student Union built for grabbing something fresh between classes.</p>
           <p class="addr">Bento Sushi, 12715 Pegasus Dr, Orlando, FL 32816-8030</p>
-        </article>
+        </div></article>
         </div>
       </section>
 
@@ -284,35 +291,35 @@
         <p class="lede">Other places in Lake Nona, Local Picks first, then the closest to Sus Hi Eatstation.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/boxi-park.html">Boxi Park Lake Nona</a> <span class="badge">Local Pick</span></h3>
-          <p class="meta">Restaurants · Food Hall &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/boxi-park.html">Boxi Park Lake Nona</a> <span class="badge">Local Pick</span></h3>
+          <p class="meta">Restaurants · Food Hall &middot; $$</p><p class="vsub">Shipping containers stacked into an open-air food park in Lake Nona, with a stage, a dog park, and stalls to wander.</p>
           <p class="addr">6877 Tavistock Lakes Blvd, Orlando, FL 32827</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/hot-taco-street-taqueria.html">Hot Taco Street Taqueria</a></h3>
-          <p class="meta">Mexican · Taqueria &middot; $</p>
+          <img class="vthumb" src="/assets/venue-hot-taco-street-taqueria.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/hot-taco-street-taqueria.html">Hot Taco Street Taqueria</a></h3>
+          <p class="meta">Mexican · Taqueria &middot; $</p><p class="vsub">Street-style energy in Lake Nona Village: neon pink, agave murals, and patterned tile in a room guests call festive and spotless.</p>
           <p class="addr">9680 Narcoossee Rd, Suite 103, Orlando, FL 32827</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/nona-blue-modern-tavern.html">Nona Blue Modern Tavern</a></h3>
-          <p class="meta">American · Tavern &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/nona-blue-modern-tavern.html">Nona Blue Modern Tavern</a></h3>
+          <p class="meta">American · Tavern &middot; $$</p><p class="vsub">Lake Nona&#x27;s dressed-up tavern feels upscale but comfortable, with a big center bar and a kitchen cooking from scratch.</p>
           <p class="addr">9685 Lake Nona Village Pl, Orlando, FL 32827</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/brooklyn-water-bagel.html">Brooklyn Water Bagel</a></h3>
-          <p class="meta">Bakeries · Bakery &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/brooklyn-water-bagel.html">Brooklyn Water Bagel</a></h3>
+          <p class="meta">Bakeries · Bakery &middot; $$</p><p class="vsub">On Narcoossee Road in Lake Nona, bagels are boiled and baked New York style, with the water treated to mimic back home.</p>
           <p class="addr">Brooklyn Water Bagel, 9368 Narcoossee Rd, Orlando, FL 32827-5701, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/babbi-babbi-lake-nona.html">BaBbi BaBbi Korean Kitchen</a></h3>
-          <p class="meta">Restaurants · Korean BBQ &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/babbi-babbi-lake-nona.html">BaBbi BaBbi Korean Kitchen</a></h3>
+          <p class="meta">Restaurants · Korean BBQ &middot; $$</p><p class="vsub">Bright and fast casual at the Shoppes at East Park Village, where K-pop energy meets sizzling stone pots.</p>
           <p class="addr">10799 Moss Park Rd, Suite 102, Orlando, FL 32832</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/lake-nona-deli-and-market.html">Lake Nona Deli and Market</a></h3>
-          <p class="meta">Burgers &amp; sandwiches · Deli &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/lake-nona-deli-and-market.html">Lake Nona Deli and Market</a></h3>
+          <p class="meta">Burgers &amp; sandwiches · Deli &middot; $</p><p class="vsub">Village Walk&#x27;s neighborhood counter, part deli, part pizzeria, part market, built on Boar&#x27;s Head meats and Olde Hearth bread.</p>
           <p class="addr">8510 Insular Ln, Orlando, FL 32827</p>
-        </article>
+        </div></article>
         </div>
         <div class="handoff">
           <a class="btn-ghost" href="/lake-nona-finder.html">See the full Lake Nona list</a>

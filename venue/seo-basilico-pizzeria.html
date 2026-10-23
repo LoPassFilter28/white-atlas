@@ -211,7 +211,14 @@
       .vcard .addr { margin: 0; color: var(--muted); font-size: .9rem; }
       @media (max-width: 640px) { .facts { grid-template-columns: 1fr; } }
     </style>
-  </head>
+  <style data-cardsys>
+/* cardsys: similar rail cards (2026-10-23 overhaul) */
+.vcard{display:flex;gap:12px;align-items:flex-start}
+.vcard .vthumb{flex:0 0 86px;width:86px;height:86px;border-radius:10px;object-fit:cover;display:block}
+.vcard .vmain{flex:1;min-width:0}
+.vcard .vsub{margin:4px 0 0;font-size:.86rem;line-height:1.45;color:var(--muted,#c6bba2)}
+@media (min-width:1000px){.vlist{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start}}
+</style></head>
   <body>
     <header class="hero">
       <div class="hero-in">
@@ -240,41 +247,41 @@
         </div>
       </section>
 
-      <section class="sec" id="similar">
+      <section class="sec" id="district-story"><p class="kicker">District Stories</p><h2>Orlando&#x27;s long memory</h2><p class="lede">The guide keeps the long memory of Orlando&#x27;s districts in one place: the names, the plats and the stories behind the streets.</p><p><a class="btn-ghost" href="/history.html">Browse the district stories &rarr;</a></p></section><section class="sec" id="similar">
         <p class="kicker">Similar Feel</p>
         <h2>More places with this feel</h2>
         <p class="lede">Matched by vibe, not by neighborhood: the places across Greater Orlando closest in spirit to SEO Basilico Pizzeria.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/prato.html">Prato</a></h3>
-          <p class="meta">Italian &middot; Winter Park &middot; $$$</p>
+          <div class="vmain"><h3><a href="/venue/prato.html">Prato</a></h3>
+          <p class="meta">Italian &middot; Winter Park &middot; $$$</p><p class="vsub">Italian the Park Avenue way: rustic yet upscale, exposed brick and warm light, house-made pastas and wood-fired pizzas.</p>
           <p class="addr">Prato, 124 N Park Ave, Winter Park, FL 32789</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/boardwalk-pizza.html">Boardwalk Pizza</a></h3>
-          <p class="meta">Pizza &middot; Winter Park &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-boardwalk-pizza.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/boardwalk-pizza.html">Boardwalk Pizza</a></h3>
+          <p class="meta">Pizza &middot; Winter Park &middot; $$</p><p class="vsub">Jersey shore, old-school pizzeria feel comes to Lake Howell Road, with an open kitchen and a small-town welcome.</p>
           <p class="addr">Boardwalk Pizza, 5419 Lake Howell Rd, Winter Park, FL 32792</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/pannullos-italian.html">Pannullo&#x27;s Italian Restaurant</a></h3>
-          <p class="meta">Italian &middot; Winter Park &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/pannullos-italian.html">Pannullo&#x27;s Italian Restaurant</a></h3>
+          <p class="meta">Italian &middot; Winter Park &middot; $$</p><p class="vsub">The old-school Park Avenue Italian room regulars call a longtime fave, cozy and unpretentious, with a view across Central Park.</p>
           <p class="addr">216 S Park Ave, Winter Park, FL 32789</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/perlas-pizza.html">Perla&#x27;s Pizza, Vinyl Records &amp; Cocktail Bar</a></h3>
-          <p class="meta">Pizza &middot; Winter Park &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/perlas-pizza.html">Perla&#x27;s Pizza, Vinyl Records &amp; Cocktail Bar</a></h3>
+          <p class="meta">Pizza &middot; Winter Park &middot; $$</p><p class="vsub">Thin, crackling pizza pairs with vinyl on the turntables and a cocktail bar in this Winter Park room guests keep calling a vibe.</p>
           <p class="addr">959 W Fairbanks Ave, Winter Park, FL 32789</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/park-avenue-pizza.html">Park Avenue Pizza</a></h3>
-          <p class="meta">Pizza &middot; Winter Park &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/park-avenue-pizza.html">Park Avenue Pizza</a></h3>
+          <p class="meta">Pizza &middot; Winter Park &middot; $$</p><p class="vsub">A no-frills, old-school counter on Lyman Avenue, where guests go for a quick slice done right.</p>
           <p class="addr">119 E Lyman Ave, Winter Park, FL 32789</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/pepes-cantina.html">Pepe&#x27;s Cantina</a></h3>
-          <p class="meta">Mexican &middot; Winter Park &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-pepes-cantina.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/pepes-cantina.html">Pepe&#x27;s Cantina</a></h3>
+          <p class="meta">Mexican &middot; Winter Park &middot; $$</p><p class="vsub">A festive cantina feel in Winter Park, with a beautiful bar and a dining room partly open to the air.</p>
           <p class="addr">433 W New England Ave, Winter Park, FL 32789</p>
-        </article>
+        </div></article>
         </div>
       </section>
 
@@ -284,35 +291,35 @@
         <p class="lede">Other places in Winter Garden, closest to SEO Basilico Pizzeria first.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/play-street-museum.html">Play Street Museum</a></h3>
-          <p class="meta">Museums &amp; landmarks · Museum &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/play-street-museum.html">Play Street Museum</a></h3>
+          <p class="meta">Museums &amp; landmarks · Museum &middot; $$</p><p class="vsub">A tiny town built for young children in Winter Garden, with a doctor&#x27;s office, fire station, pet rescue and make-believe ice cream.</p>
           <p class="addr">12107 Stoneybrook West Pkwy, STE 104, Winter Garden, FL 34787</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/ispirazione.html">Ispirazione</a></h3>
-          <p class="meta">Burgers &amp; sandwiches · Sandwiches &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/ispirazione.html">Ispirazione</a></h3>
+          <p class="meta">Burgers &amp; sandwiches · Sandwiches &middot; $$</p><p class="vsub">In Ocoee, the focus is tigelle, small round Italian breads baked fresh to order, crunchy outside and soft in the center.</p>
           <p class="addr">Ispirazione, 1711 Amazing Way, Ocoee, FL 34761-3279, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/volcano-hot-pot-bbq.html">Volcano Hot Pot &amp; BBQ</a></h3>
-          <p class="meta">Chinese · Hot Pot &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/volcano-hot-pot-bbq.html">Volcano Hot Pot &amp; BBQ</a></h3>
+          <p class="meta">Chinese · Hot Pot &middot; $$</p><p class="vsub">On Daniels Road in Winter Garden, a bubbling hot pot and a Korean BBQ grill share the same table, so you cook each bite your way.</p>
           <p class="addr">Volcano Hot Pot &amp; BBQ, 3279 Daniels Rd Suite 102, Winter Garden, FL 34787, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/southern-steer-butcher.html">Southern Steer Butcher (Orlando)</a></h3>
-          <p class="meta">Markets &amp; shops · Butcher Shop &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/southern-steer-butcher.html">Southern Steer Butcher (Orlando)</a></h3>
+          <p class="meta">Markets &amp; shops · Butcher Shop &middot; $</p><p class="vsub">Family-run butcher on West Colonial Drive in Ocoee, where staff guide you through the case and how to cook it.</p>
           <p class="addr">11024 W Colonial Dr, Ocoee, FL 34761</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/yellow-dog-eats.html">Yellow Dog Eats</a></h3>
-          <p class="meta">BBQ &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/yellow-dog-eats.html">Yellow Dog Eats</a></h3>
+          <p class="meta">BBQ &middot; $</p><p class="vsub">Working out of a century-old general store in Gotha, funky and laid-back, with sandwich names that make you grin.</p>
           <p class="addr">1236 Hempel Ave, Gotha, FL 34786</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/indian-pavilion.html">Indian Pavilion</a></h3>
-          <p class="meta">Indian &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/indian-pavilion.html">Indian Pavilion</a></h3>
+          <p class="meta">Indian &middot; $$</p><p class="vsub">Modern Indian cooking in Winter Garden built on bold spice and careful texture, with portions that often leave leftovers.</p>
           <p class="addr">Indian Pavilion, 13770 W Colonial Dr, Winter Garden, FL 34787-4202, United States</p>
-        </article>
+        </div></article>
         </div>
         <div class="handoff">
           <a class="btn-ghost" href="/winter-garden-finder.html">See the full Winter Garden list</a>

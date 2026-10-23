@@ -211,7 +211,14 @@
       .vcard .addr { margin: 0; color: var(--muted); font-size: .9rem; }
       @media (max-width: 640px) { .facts { grid-template-columns: 1fr; } }
     </style>
-  </head>
+  <style data-cardsys>
+/* cardsys: similar rail cards (2026-10-23 overhaul) */
+.vcard{display:flex;gap:12px;align-items:flex-start}
+.vcard .vthumb{flex:0 0 86px;width:86px;height:86px;border-radius:10px;object-fit:cover;display:block}
+.vcard .vmain{flex:1;min-width:0}
+.vcard .vsub{margin:4px 0 0;font-size:.86rem;line-height:1.45;color:var(--muted,#c6bba2)}
+@media (min-width:1000px){.vlist{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start}}
+</style></head>
   <body>
     <header class="hero">
       <div class="hero-in">
@@ -239,41 +246,41 @@
         </div>
       </section>
 
-      <section class="sec" id="similar">
+      <section class="sec" id="district-story"><p class="kicker">District Stories</p><h2>Orlando&#x27;s long memory</h2><p class="lede">The guide keeps the long memory of Orlando&#x27;s districts in one place: the names, the plats and the stories behind the streets.</p><p><a class="btn-ghost" href="/history.html">Browse the district stories &rarr;</a></p></section><section class="sec" id="similar">
         <p class="kicker">Similar Feel</p>
         <h2>More places with this feel</h2>
         <p class="lede">Matched by vibe, not by neighborhood: the places across Greater Orlando closest in spirit to The Sullivan Public House.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/busters-bistro.html">Buster&#x27;s Bistro</a></h3>
-          <p class="meta">Bars &amp; lounges &middot; Sanford &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/busters-bistro.html">Buster&#x27;s Bistro</a></h3>
+          <p class="meta">Bars &amp; lounges &middot; Sanford &middot; $$</p><p class="vsub">On Sanford Avenue, Belgian Trappist ales and lambics pour in proper glassware, in a cozy room regulars compare to a living room.</p>
           <p class="addr">300 S Sanford Ave, Sanford, FL 32771</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/ollies-public-house.html">Ollie&#x27;s Public House</a></h3>
-          <p class="meta">Bars &amp; lounges &middot; College Park &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/ollies-public-house.html">Ollie&#x27;s Public House</a></h3>
+          <p class="meta">Bars &amp; lounges &middot; College Park &middot; $$</p><p class="vsub">Easy neighborhood-pub rhythm on Edgewater Drive, with a lively dog-friendly patio and rotating craft taps.</p>
           <p class="addr">Ollie&#x27;s Public House, 3400 Edgewater Dr, Orlando, FL 32804-3602, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/imperial-on-park.html">The Imperial on Park</a></h3>
-          <p class="meta">Bars &amp; lounges &middot; Winter Park &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-imperial-on-park.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/imperial-on-park.html">The Imperial on Park</a></h3>
+          <p class="meta">Bars &amp; lounges &middot; Winter Park &middot; $$</p><p class="vsub">Park Avenue&#x27;s neighborhood bar, warm and laid back, with boutique wines, craft beers and cocktails built on Winter Park Distillery spirits.</p>
           <p class="addr">136 S Park Ave, Winter Park, FL 32789</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/imperial.html">Imperial Wine Bar</a></h3>
-          <p class="meta">Bars &amp; lounges &middot; Orlando &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/imperial.html">Imperial Wine Bar</a></h3>
+          <p class="meta">Bars &amp; lounges &middot; Orlando &middot; $$</p><p class="vsub">Inside a vintage furniture store on North Orange Avenue sits Ivanhoe Village&#x27;s wine bar, Imperial.</p>
           <p class="addr">Imperial, 1800 N Orange Ave, Orlando, FL 32804-6415, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/vanbarrys-public-house.html">Vanbarry&#x27;s Public House</a></h3>
-          <p class="meta">Bars &amp; lounges &middot; SoDo &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/vanbarrys-public-house.html">Vanbarry&#x27;s Public House</a></h3>
+          <p class="meta">Bars &amp; lounges &middot; SoDo &middot; $$</p><p class="vsub">On South Orange Avenue in SoDo, it starts with house pickles on the table and a covered patio facing Lake Jennie Jewel.</p>
           <p class="addr">Vanbarry&#x27;s Public House, 4120 S Orange Ave, Orlando, FL 32806</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/henrys-depot.html">Henry&#x27;s Depot</a></h3>
-          <p class="meta">Markets &amp; shops &middot; Sanford &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/henrys-depot.html">Henry&#x27;s Depot</a></h3>
+          <p class="meta">Markets &amp; shops &middot; Sanford &middot; $$</p><p class="vsub">Sanford&#x27;s historic Plant depot on West 1st Street is now an open-air food hall with something for everyone.</p>
           <p class="addr">Henry&#x27;s Depot, 212 W 1st St, Sanford, FL 32771-1204, United States</p>
-        </article>
+        </div></article>
         </div>
       </section>
 
@@ -283,35 +290,35 @@
         <p class="lede">Other places in Sanford, closest to The Sullivan Public House first.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/the-current-seafood-countersanford.html">The Current Seafood Counter-Sanford</a></h3>
-          <p class="meta">Seafood &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/the-current-seafood-countersanford.html">The Current Seafood Counter-Sanford</a></h3>
+          <p class="meta">Seafood &middot; $$</p><p class="vsub">Started inside Henry&#x27;s Depot, now serving a casual slice of New England on East 1st Street in Sanford.</p>
           <p class="addr">116 E 1st St, Sanford, FL 32771</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/hollerbachs-german-market.html">Hollerbach&#x27;s German Market</a></h3>
-          <p class="meta">Markets &amp; shops · Market &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/hollerbachs-german-market.html">Hollerbach&#x27;s German Market</a></h3>
+          <p class="meta">Markets &amp; shops · Market &middot; $$</p><p class="vsub">On Magnolia Avenue in Sanford, stocked with imported German pantry goods, Milka chocolate, Haribo, plus a full deli and bakery.</p>
           <p class="addr">117 Magnolia Ave, Sanford, FL 32771</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/hollerbachs-willow-tree-cafe.html">Hollerbach&#x27;s Willow Tree Cafe</a></h3>
-          <p class="meta">Restaurants · German &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-hollerbachs-willow-tree-cafe.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/hollerbachs-willow-tree-cafe.html">Hollerbach&#x27;s Willow Tree Cafe</a></h3>
+          <p class="meta">Restaurants · German &middot; $$</p><p class="vsub">On East 1st Street in Sanford since 2001, this festive German room is communal, lively, and has a roof terrace.</p>
           <p class="addr">205 E 1st St, Sanford, FL 32771</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/hot-asian-buns.html">Hot Asian Buns</a></h3>
-          <p class="meta">Restaurants · Asian Fusion &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/hot-asian-buns.html">Hot Asian Buns</a></h3>
+          <p class="meta">Restaurants · Asian Fusion &middot; $$</p><p class="vsub">Started as a Sanford food truck, now a brick-and-mortar on South Sanford Avenue where every bao is handmade from scratch.</p>
           <p class="addr">204 S Sanford Ave, Sanford, FL</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/henrys-depot.html">Henry&#x27;s Depot</a></h3>
-          <p class="meta">Markets &amp; shops · Food Hall &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/henrys-depot.html">Henry&#x27;s Depot</a></h3>
+          <p class="meta">Markets &amp; shops · Food Hall &middot; $$</p><p class="vsub">Sanford&#x27;s historic Plant depot on West 1st Street is now an open-air food hall with something for everyone.</p>
           <p class="addr">Henry&#x27;s Depot, 212 W 1st St, Sanford, FL 32771-1204, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/busters-bistro.html">Buster&#x27;s Bistro</a></h3>
-          <p class="meta">Bars &amp; lounges · Pub &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/busters-bistro.html">Buster&#x27;s Bistro</a></h3>
+          <p class="meta">Bars &amp; lounges · Pub &middot; $$</p><p class="vsub">On Sanford Avenue, Belgian Trappist ales and lambics pour in proper glassware, in a cozy room regulars compare to a living room.</p>
           <p class="addr">300 S Sanford Ave, Sanford, FL 32771</p>
-        </article>
+        </div></article>
         </div>
         <div class="handoff">
           <a class="btn-ghost" href="/sanford-finder.html">See the full Sanford list</a>

@@ -211,7 +211,14 @@
       .vcard .addr { margin: 0; color: var(--muted); font-size: .9rem; }
       @media (max-width: 640px) { .facts { grid-template-columns: 1fr; } }
     </style>
-  </head>
+  <style data-cardsys>
+/* cardsys: similar rail cards (2026-10-23 overhaul) */
+.vcard{display:flex;gap:12px;align-items:flex-start}
+.vcard .vthumb{flex:0 0 86px;width:86px;height:86px;border-radius:10px;object-fit:cover;display:block}
+.vcard .vmain{flex:1;min-width:0}
+.vcard .vsub{margin:4px 0 0;font-size:.86rem;line-height:1.45;color:var(--muted,#c6bba2)}
+@media (min-width:1000px){.vlist{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start}}
+</style></head>
   <body>
     <header class="hero">
       <div class="hero-in">
@@ -240,41 +247,41 @@
         </div>
       </section>
 
-      <section class="sec" id="similar">
+      <section class="sec" id="district-story"><p class="kicker">District Stories</p><h2>Orlando&#x27;s long memory</h2><p class="lede">The guide keeps the long memory of Orlando&#x27;s districts in one place: the names, the plats and the stories behind the streets.</p><p><a class="btn-ghost" href="/history.html">Browse the district stories &rarr;</a></p></section><section class="sec" id="similar">
         <p class="kicker">Similar Feel</p>
         <h2>More places with this feel</h2>
         <p class="lede">Matched by vibe, not by neighborhood: the places across Greater Orlando closest in spirit to Stadium Club.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/toms-watch-bar-orlando.html">Tom&#x27;s Watch Bar</a></h3>
-          <p class="meta">Bars &amp; lounges &middot; I-Drive &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-toms-watch-bar-orlando.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/toms-watch-bar-orlando.html">Tom&#x27;s Watch Bar</a></h3>
+          <p class="meta">Bars &amp; lounges &middot; I-Drive &middot; $$</p><p class="vsub">On International Drive, a sports bar built like a stadium, with an oversized screen and screens wrapping the room so every seat faces the action.</p>
           <p class="addr">8050 International Dr, Suite 1000, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/american-social.html">American Social</a></h3>
-          <p class="meta">American &middot; Dr. Phillips &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-american-social.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/american-social.html">American Social</a></h3>
+          <p class="meta">American &middot; Dr. Phillips &middot; $$</p><p class="vsub">Restaurant Row&#x27;s high-energy sports lounge has screens in every sightline and a room built for game day.</p>
           <p class="addr">7335 W Sand Lake Rd Ste 101, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/main-event-pointe-orlando.html">Main Event</a></h3>
-          <p class="meta">Attractions &middot; Pointe Orlando &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/main-event-pointe-orlando.html">Main Event</a></h3>
+          <p class="meta">Attractions &middot; Pointe Orlando &middot; $$</p><p class="vsub">Bowling, laser tag, billiards, a ropes course and a big arcade fill one roof at Pointe Orlando, food lane-side and a full bar for groups.</p>
           <p class="addr">9101 International Dr Ste 1032, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/the-porch-winter-park.html">The Porch Winter Park</a></h3>
-          <p class="meta">American &middot; Winter Park &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-the-porch-winter-park.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/the-porch-winter-park.html">The Porch Winter Park</a></h3>
+          <p class="meta">American &middot; Winter Park &middot; $$</p><p class="vsub">A converted garage on Orange Avenue turned lively, open sports bar for game day, with big screens, games and a menu for any crew.</p>
           <p class="addr">643 N Orange Ave, Winter Park, FL 32789</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/living-room-bar.html">The Living Room Bar</a></h3>
-          <p class="meta">Bars &amp; lounges &middot; Lake Nona &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-living-room-bar.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/living-room-bar.html">The Living Room Bar</a></h3>
+          <p class="meta">Bars &amp; lounges &middot; Lake Nona &middot; $$</p><p class="vsub">The Wave Hotel&#x27;s Lake Nona lounge is eclectic and art-filled, arranged around a pink dogwood tree with low chairs.</p>
           <p class="addr">6100 Wave Hotel Dr, Orlando, FL 32827</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/cfh-orlando.html">CFH Orlando</a></h3>
-          <p class="meta">Markets &amp; shops &middot; Ivanhoe Village &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/cfh-orlando.html">CFH Orlando</a></h3>
+          <p class="meta">Markets &amp; shops &middot; Ivanhoe Village &middot; $$</p><p class="vsub">The central bar inside City Food Hall gives Ivanhoe Village a social, unhurried pause between food runs, with specials guests found tasty.</p>
           <p class="addr">1412 Alden Rd, Orlando, FL 32803</p>
-        </article>
+        </div></article>
         </div>
       </section>
 
@@ -284,35 +291,35 @@
         <p class="lede">Other places in Disney Area, Local Picks first, then the closest to Stadium Club.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/fogo-orlando-vineland.html">Fogo de Chão, Vineland Pointe</a> <span class="badge">Local Pick</span></h3>
-          <p class="meta">Fine dining &amp; steak · Brazilian Steakhouse &middot; $$$</p>
+          <div class="vmain"><h3><a href="/venue/fogo-orlando-vineland.html">Fogo de Chão, Vineland Pointe</a> <span class="badge">Local Pick</span></h3>
+          <p class="meta">Fine dining &amp; steak · Brazilian Steakhouse &middot; $$$</p><p class="vsub">Brazilian churrasco staged tableside at Vineland Pointe, where gaucho chefs carve fire-roasted cuts one slice at a time.</p>
           <p class="addr">11543 Regency Village Dr, Orlando, FL 32821</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/evermore-orlando-resort.html">Evermore Orlando Resort</a> <span class="badge">Local Pick</span></h3>
-          <p class="meta">Hotels · Hotel &middot; $$$</p>
+          <img class="vthumb" src="/assets/venue-evermore-orlando-resort.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/evermore-orlando-resort.html">Evermore Orlando Resort</a> <span class="badge">Local Pick</span></h3>
+          <p class="meta">Hotels · Hotel &middot; $$$</p><p class="vsub">The centerpiece is Evermore Bay, a crystal lagoon with its own beach that leaves guests saying the resort feels like it is out of the country.</p>
           <p class="addr">1590 Evermore Way, Orlando, FL 32836</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/orlando-vineland-premium-outlets.html">Orlando Vineland Premium Outlets</a> <span class="badge">Local Pick</span></h3>
-          <p class="meta">Markets &amp; shops · Outlet Mall &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/orlando-vineland-premium-outlets.html">Orlando Vineland Premium Outlets</a> <span class="badge">Local Pick</span></h3>
+          <p class="meta">Markets &amp; shops · Outlet Mall &middot; $$</p><p class="vsub">Minutes from Disney, a Mediterranean-inspired outdoor outlet village anchored by Prada, Bottega Veneta, Burberry, Gucci and Tory Burch.</p>
           <p class="addr">8200 Vineland Ave, Orlando, FL 32821</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/take-a-sushi.html">Take A Sushi</a></h3>
-          <p class="meta">Japanese &amp; sushi · Sushi &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-take-a-sushi.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/take-a-sushi.html">Take A Sushi</a></h3>
+          <p class="meta">Japanese &amp; sushi · Sushi &middot; $$</p><p class="vsub">Japanese cooking gets a Latin twist on Sand Lake Road, sunny, breezy, and unpretentious.</p>
           <p class="addr">4725 W Sand Lake Rd #101, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/lake-buena-vista-factory-stores.html">Lake Buena Vista Factory Stores</a></h3>
-          <p class="meta">Markets &amp; shops · Outlet Mall &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/lake-buena-vista-factory-stores.html">Lake Buena Vista Factory Stores</a></h3>
+          <p class="meta">Markets &amp; shops · Outlet Mall &middot; $$</p><p class="vsub">Near Disney on SR 535, this compact open-air outlet center keeps things low-stress with Nike, Gap, and Tommy Hilfiger.</p>
           <p class="addr">15657 S Apopka Vineland Rd, Orlando, FL 32821</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/vivoli-il-gelato.html">Vivoli Il Gelato</a></h3>
-          <p class="meta">Sweets · Ice Cream &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/vivoli-il-gelato.html">Vivoli Il Gelato</a></h3>
+          <p class="meta">Sweets · Ice Cream &middot; $$</p><p class="vsub">A Florentine gelateria at Disney Springs, old-world and creamy in a way guests call authentic.</p>
           <p class="addr">Vivoli Il Gelato, 1638 E Buena Vista Dr, Lake Buena Vista, FL 32830, United States</p>
-        </article>
+        </div></article>
         </div>
         <div class="handoff">
           <a class="btn-ghost" href="/disney-area-finder.html">See the full Disney Area list</a>

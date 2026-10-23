@@ -211,7 +211,14 @@
       .vcard .addr { margin: 0; color: var(--muted); font-size: .9rem; }
       @media (max-width: 640px) { .facts { grid-template-columns: 1fr; } }
     </style>
-  </head>
+  <style data-cardsys>
+/* cardsys: similar rail cards (2026-10-23 overhaul) */
+.vcard{display:flex;gap:12px;align-items:flex-start}
+.vcard .vthumb{flex:0 0 86px;width:86px;height:86px;border-radius:10px;object-fit:cover;display:block}
+.vcard .vmain{flex:1;min-width:0}
+.vcard .vsub{margin:4px 0 0;font-size:.86rem;line-height:1.45;color:var(--muted,#c6bba2)}
+@media (min-width:1000px){.vlist{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start}}
+</style></head>
   <body>
     <header class="hero">
       <div class="hero-in">
@@ -240,41 +247,41 @@
         </div>
       </section>
 
-      <section class="sec" id="similar">
+      <section class="sec" id="district-story"><p class="kicker">District Stories</p><h2>Orlando&#x27;s long memory</h2><p class="lede">The guide keeps the long memory of Orlando&#x27;s districts in one place: the names, the plats and the stories behind the streets.</p><p><a class="btn-ghost" href="/history.html">Browse the district stories &rarr;</a></p></section><section class="sec" id="similar">
         <p class="kicker">Similar Feel</p>
         <h2>More places with this feel</h2>
         <p class="lede">Matched by vibe, not by neighborhood: the places across Greater Orlando closest in spirit to Teak Neighborhood Grill.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/mikado.html">Mikado</a></h3>
-          <p class="meta">Japanese &amp; sushi &middot; Metrowest &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/mikado.html">Mikado</a></h3>
+          <p class="meta">Japanese &amp; sushi &middot; Metrowest &middot; $$</p><p class="vsub">Unassuming room on Raleigh Street in Metrowest, and the sashimi is why guests keep coming back.</p>
           <p class="addr">Mikado, 6417 Raleigh St, Orlando, FL 32835-5739, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/moon-wok.html">Moon Wok Kitchen &amp; Lounge</a></h3>
-          <p class="meta">Chinese &middot; I-Drive &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-moon-wok.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/moon-wok.html">Moon Wok Kitchen &amp; Lounge</a></h3>
+          <p class="meta">Chinese &middot; I-Drive &middot; $$</p><p class="vsub">International Drive has plenty of Chinese takeout, but this one has a moonlit lounge attached, all glow and dressed-up energy.</p>
           <p class="addr">11701 International Dr Ste 300, Orlando, FL 32821</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/stk-steakhouse.html">STK Steakhouse</a></h3>
-          <p class="meta">Fine dining &amp; steak &middot; Disney Springs &middot; $$$</p>
+          <img class="vthumb" src="/assets/venue-stk-steakhouse.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/stk-steakhouse.html">STK Steakhouse</a></h3>
+          <p class="meta">Fine dining &amp; steak &middot; Disney Springs &middot; $$$</p><p class="vsub">At Disney Springs, a chic steakhouse paired with club-like lounge energy, summed up by guests as vibe dining.</p>
           <p class="addr">1580 E Buena Vista Dr, Lake Buena Vista, FL 32830</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/outpost-neighborhood-tavern.html">Outpost Neighborhood Tavern</a></h3>
-          <p class="meta">American &middot; Thornton Park &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-outpost-neighborhood-tavern.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/outpost-neighborhood-tavern.html">Outpost Neighborhood Tavern</a></h3>
+          <p class="meta">American &middot; Thornton Park &middot; $$</p><p class="vsub">Two blocks off Lake Eola, a welcoming room guests call a cross between a sports bar and a boutique restaurant, with a lively patio and trivia leagues.</p>
           <p class="addr">227 N Eola Dr, Orlando, FL 32801</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/btw-burgers-tacos-waffles.html">BTW Burgers Tacos Waffles</a></h3>
-          <p class="meta">Burgers &amp; sandwiches &middot; Tavares &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/btw-burgers-tacos-waffles.html">BTW Burgers Tacos Waffles</a></h3>
+          <p class="meta">Burgers &amp; sandwiches &middot; Tavares &middot; $$</p><p class="vsub">On Main Street in Tavares, playful and unpretentious, doing exactly what its name promises with real imagination in each lane.</p>
           <p class="addr">115 E Main St, Tavares, FL 32778</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/rusteak-thornton-park.html">Rusteak</a></h3>
-          <p class="meta">American &middot; Downtown &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-rusteak-thornton-park.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/rusteak-thornton-park.html">Rusteak</a></h3>
+          <p class="meta">American &middot; Downtown &middot; $$</p><p class="vsub">On the Lake Eola corner in Thornton Park, a neighborhood spot cooking like it has something to prove, polished, relaxed but never stiff.</p>
           <p class="addr">101 S Eola Dr, Suite 103, Orlando, FL 32801</p>
-        </article>
+        </div></article>
         </div>
       </section>
 
@@ -284,35 +291,35 @@
         <p class="lede">Other places in Windermere, closest to Teak Neighborhood Grill first.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/mikado.html">Mikado</a></h3>
-          <p class="meta">Japanese &amp; sushi &middot; Sushi &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/mikado.html">Mikado</a></h3>
+          <p class="meta">Japanese &amp; sushi &middot; Sushi &middot; $$</p><p class="vsub">Unassuming room on Raleigh Street in Metrowest, and the sashimi is why guests keep coming back.</p>
           <p class="addr">Mikado, 6417 Raleigh St, Orlando, FL 32835-5739, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/fresco-pizzeria.html">Fresco Pizzeria</a></h3>
-          <p class="meta">Pizza &middot; Wood-Fired Pizza &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/fresco-pizzeria.html">Fresco Pizzeria</a></h3>
+          <p class="meta">Pizza &middot; Wood-Fired Pizza &middot; $$</p><p class="vsub">A wood-fired pizzeria from the Scialoia family, whose Dr.</p>
           <p class="addr">527 Main St, Windermere, FL 34786</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/paloma-coffee-co.html">Paloma Parlor</a></h3>
-          <p class="meta">Coffee &amp; cafes &middot; Coffee Shop &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/paloma-coffee-co.html">Paloma Parlor</a></h3>
+          <p class="meta">Coffee &amp; cafes &middot; Coffee Shop &middot; $</p><p class="vsub">Windermere regulars treat this as their own; now trading as Paloma Parlor, it is small, plant-filled and contemporary.</p>
           <p class="addr">625 Main St, Windermere, FL 34786</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/windermere-farmers-market.html">Windermere Farmers Market</a></h3>
-          <p class="meta">Markets &amp; shops &middot; Farmers Market &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/windermere-farmers-market.html">Windermere Farmers Market</a></h3>
+          <p class="meta">Markets &amp; shops &middot; Farmers Market &middot; $</p><p class="vsub">Every Friday, Town Square Park fills with a small hometown market: fresh produce, seafood, breads, local honey, and plants.</p>
           <p class="addr">520 Main St, Windermere, FL 34786</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/tims-wine-market.html">Tim&#x27;s Wine Market</a></h3>
-          <p class="meta">Markets &amp; shops &middot; Wine Shop &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/tims-wine-market.html">Tim&#x27;s Wine Market</a></h3>
+          <p class="meta">Markets &amp; shops &middot; Wine Shop &middot; $$</p><p class="vsub">The Windermere storefront of Orlando&#x27;s long-running independent wine shop, with siblings on Orange Avenue and in Sanford.</p>
           <p class="addr">428 Main St, Windermere, FL 34786</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/dixie-cream-cafe.html">Dixie Cream Cafe</a></h3>
-          <p class="meta">Coffee &amp; cafes &middot; Breakfast Cafe &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/dixie-cream-cafe.html">Dixie Cream Cafe</a></h3>
+          <p class="meta">Coffee &amp; cafes &middot; Breakfast Cafe &middot; $$</p><p class="vsub">An independently owned Main Street room with 1950s diner warmth and a from-scratch Southern kitchen.</p>
           <p class="addr">434 Main St, Windermere, FL 34786</p>
-        </article>
+        </div></article>
         </div>
         <div class="handoff">
           <a class="btn-ghost" href="/windermere-finder.html">See the full Windermere list</a>

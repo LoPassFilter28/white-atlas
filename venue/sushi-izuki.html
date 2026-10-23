@@ -211,7 +211,14 @@
       .vcard .addr { margin: 0; color: var(--muted); font-size: .9rem; }
       @media (max-width: 640px) { .facts { grid-template-columns: 1fr; } }
     </style>
-  </head>
+  <style data-cardsys>
+/* cardsys: similar rail cards (2026-10-23 overhaul) */
+.vcard{display:flex;gap:12px;align-items:flex-start}
+.vcard .vthumb{flex:0 0 86px;width:86px;height:86px;border-radius:10px;object-fit:cover;display:block}
+.vcard .vmain{flex:1;min-width:0}
+.vcard .vsub{margin:4px 0 0;font-size:.86rem;line-height:1.45;color:var(--muted,#c6bba2)}
+@media (min-width:1000px){.vlist{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start}}
+</style></head>
   <body>
     <header class="hero">
       <div class="hero-in">
@@ -240,41 +247,41 @@
         </div>
       </section>
 
-      <section class="sec" id="similar">
+      <section class="sec" id="district-story"><p class="kicker">District Stories</p><h2>Orlando&#x27;s long memory</h2><p class="lede">The guide keeps the long memory of Orlando&#x27;s districts in one place: the names, the plats and the stories behind the streets.</p><p><a class="btn-ghost" href="/history.html">Browse the district stories &rarr;</a></p></section><section class="sec" id="similar">
         <p class="kicker">Similar Feel</p>
         <h2>More places with this feel</h2>
         <p class="lede">Matched by vibe, not by neighborhood: the places across Greater Orlando closest in spirit to Sushi Izuki.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/mikado.html">Mikado</a></h3>
-          <p class="meta">Japanese &amp; sushi &middot; Metrowest &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/mikado.html">Mikado</a></h3>
+          <p class="meta">Japanese &amp; sushi &middot; Metrowest &middot; $$</p><p class="vsub">Unassuming room on Raleigh Street in Metrowest, and the sashimi is why guests keep coming back.</p>
           <p class="addr">Mikado, 6417 Raleigh St, Orlando, FL 32835-5739, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/soseki.html">Soseki Modern Omakase</a></h3>
-          <p class="meta">Japanese &amp; sushi &middot; Winter Park &middot; $$$$</p>
+          <img class="vthumb" src="/assets/venue-soseki.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/soseki.html">Soseki Modern Omakase</a></h3>
+          <p class="meta">Japanese &amp; sushi &middot; Winter Park &middot; $$$$</p><p class="vsub">Chef Michael Collantes&#x27; Michelin-starred omakase counter on Fairbanks Avenue is intimate, each nigiri precise, inventive and balanced.</p>
           <p class="addr">955 W Fairbanks Ave, Winter Park, FL 32789</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/kappo-tsan.html">Kappo Sushi</a></h3>
-          <p class="meta">Japanese &amp; sushi &middot; Disney Area &middot; $$$</p>
+          <div class="vmain"><h3><a href="/venue/kappo-tsan.html">Kappo Sushi</a></h3>
+          <p class="meta">Japanese &amp; sushi &middot; Disney Area &middot; $$$</p><p class="vsub">A serene, chef-led counter in O-Town West where the omakase unfolds course by course, refined and tranquil.</p>
           <p class="addr">11815 Glass House Lane, Orlando, FL 32836</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/sushi-saint.html">Sushi Saint</a></h3>
-          <p class="meta">Japanese &amp; sushi &middot; Downtown Orlando &middot; $$$</p>
+          <img class="vthumb" src="/assets/venue-sushi-saint.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/sushi-saint.html">Sushi Saint</a></h3>
+          <p class="meta">Japanese &amp; sushi &middot; Downtown Orlando &middot; $$$</p><p class="vsub">Chef Michael Collantes&#x27; playful handroll bar in Creative Village has temaki built in front of you and handed over one by one.</p>
           <p class="addr">400 Pittman St Ste A, Orlando, FL 32801</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/oza-izakaya.html">Oza Izakaya</a></h3>
-          <p class="meta">Japanese &amp; sushi &middot; South Orlando &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-oza-izakaya.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/oza-izakaya.html">Oza Izakaya</a></h3>
+          <p class="meta">Japanese &amp; sushi &middot; South Orlando &middot; $$</p><p class="vsub">Sleek, garden-like Japanese room on Central Florida Parkway, beautiful and unhurried in a way that suits a date night.</p>
           <p class="addr">Oza Izakaya, 5310 Central Florida Pkwy, Orlando, FL 32821-8772</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/bento-asian-kitchen-downtown.html">BENTO Asian Kitchen + Sushi</a></h3>
-          <p class="meta">Japanese &amp; sushi &middot; Downtown Orlando &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-bento-asian-kitchen-downtown.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/bento-asian-kitchen-downtown.html">BENTO Asian Kitchen + Sushi</a></h3>
+          <p class="meta">Japanese &amp; sushi &middot; Downtown Orlando &middot; $$</p><p class="vsub">Fast-casual Pan-Asian on South Orange Avenue, built for the group that cannot agree on one cuisine.</p>
           <p class="addr">151 S Orange Ave, Orlando, FL 32801</p>
-        </article>
+        </div></article>
         </div>
       </section>
 
@@ -284,35 +291,35 @@
         <p class="lede">Other places in Disney Area, Local Picks first, then the closest to Sushi Izuki.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/fogo-orlando-vineland.html">Fogo de Chão, Vineland Pointe</a> <span class="badge">Local Pick</span></h3>
-          <p class="meta">Fine dining &amp; steak · Brazilian Steakhouse &middot; $$$</p>
+          <div class="vmain"><h3><a href="/venue/fogo-orlando-vineland.html">Fogo de Chão, Vineland Pointe</a> <span class="badge">Local Pick</span></h3>
+          <p class="meta">Fine dining &amp; steak · Brazilian Steakhouse &middot; $$$</p><p class="vsub">Brazilian churrasco staged tableside at Vineland Pointe, where gaucho chefs carve fire-roasted cuts one slice at a time.</p>
           <p class="addr">11543 Regency Village Dr, Orlando, FL 32821</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/evermore-orlando-resort.html">Evermore Orlando Resort</a> <span class="badge">Local Pick</span></h3>
-          <p class="meta">Hotels · Hotel &middot; $$$</p>
+          <img class="vthumb" src="/assets/venue-evermore-orlando-resort.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/evermore-orlando-resort.html">Evermore Orlando Resort</a> <span class="badge">Local Pick</span></h3>
+          <p class="meta">Hotels · Hotel &middot; $$$</p><p class="vsub">The centerpiece is Evermore Bay, a crystal lagoon with its own beach that leaves guests saying the resort feels like it is out of the country.</p>
           <p class="addr">1590 Evermore Way, Orlando, FL 32836</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/orlando-vineland-premium-outlets.html">Orlando Vineland Premium Outlets</a> <span class="badge">Local Pick</span></h3>
-          <p class="meta">Markets &amp; shops · Outlet Mall &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/orlando-vineland-premium-outlets.html">Orlando Vineland Premium Outlets</a> <span class="badge">Local Pick</span></h3>
+          <p class="meta">Markets &amp; shops · Outlet Mall &middot; $$</p><p class="vsub">Minutes from Disney, a Mediterranean-inspired outdoor outlet village anchored by Prada, Bottega Veneta, Burberry, Gucci and Tory Burch.</p>
           <p class="addr">8200 Vineland Ave, Orlando, FL 32821</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/maple-street-biscuit-company.html">Maple Street Biscuit Company</a></h3>
-          <p class="meta">Breakfast &amp; brunch · Breakfast &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-maple-street-biscuit-company.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/maple-street-biscuit-company.html">Maple Street Biscuit Company</a></h3>
+          <p class="meta">Breakfast &amp; brunch · Breakfast &middot; $$</p><p class="vsub">Scratch-baked biscuits carry the Southern comfort at this Glass House Lane counter, and guests describe a warm, family vibe.</p>
           <p class="addr">Maple Street Biscuit Company, 11810 Glass House Ln, Orlando, FL 32836-3794</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/kappo-tsan.html">Kappo Sushi</a></h3>
-          <p class="meta">Japanese &amp; sushi · Sushi &middot; $$$</p>
+          <div class="vmain"><h3><a href="/venue/kappo-tsan.html">Kappo Sushi</a></h3>
+          <p class="meta">Japanese &amp; sushi · Sushi &middot; $$$</p><p class="vsub">A serene, chef-led counter in O-Town West where the omakase unfolds course by course, refined and tranquil.</p>
           <p class="addr">11815 Glass House Lane, Orlando, FL 32836</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/portillo-s.html">Portillo&#x27;s</a></h3>
-          <p class="meta">Burgers &amp; sandwiches · Hot Dogs &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/portillo-s.html">Portillo&#x27;s</a></h3>
+          <p class="meta">Burgers &amp; sandwiches · Hot Dogs &middot; $</p><p class="vsub">Chicago street food lands on Palm Parkway in a loud, retro room dressed like a 50s diner, all red chrome and nostalgia.</p>
           <p class="addr">7715 Palm Pkwy, Orlando, FL 32836</p>
-        </article>
+        </div></article>
         </div>
         <div class="handoff">
           <a class="btn-ghost" href="/disney-area-finder.html">See the full Disney Area list</a>

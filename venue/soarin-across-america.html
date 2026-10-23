@@ -211,7 +211,14 @@
       .vcard .addr { margin: 0; color: var(--muted); font-size: .9rem; }
       @media (max-width: 640px) { .facts { grid-template-columns: 1fr; } }
     </style>
-  </head>
+  <style data-cardsys>
+/* cardsys: similar rail cards (2026-10-23 overhaul) */
+.vcard{display:flex;gap:12px;align-items:flex-start}
+.vcard .vthumb{flex:0 0 86px;width:86px;height:86px;border-radius:10px;object-fit:cover;display:block}
+.vcard .vmain{flex:1;min-width:0}
+.vcard .vsub{margin:4px 0 0;font-size:.86rem;line-height:1.45;color:var(--muted,#c6bba2)}
+@media (min-width:1000px){.vlist{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start}}
+</style></head>
   <body>
     <header class="hero">
       <div class="hero-in">
@@ -241,41 +248,41 @@
         </div>
       </section>
 
-      <section class="sec" id="similar">
+      <section class="sec" id="district-story"><p class="kicker">District Stories</p><h2>Orlando&#x27;s long memory</h2><p class="lede">The guide keeps the long memory of Orlando&#x27;s districts in one place: the names, the plats and the stories behind the streets.</p><p><a class="btn-ghost" href="/history.html">Browse the district stories &rarr;</a></p></section><section class="sec" id="similar">
         <p class="kicker">Similar Feel</p>
         <h2>More places with this feel</h2>
         <p class="lede">Matched by vibe, not by neighborhood: the places across Greater Orlando closest in spirit to Soarin&#x27; Across America.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/expedition-odyssey-seaworld.html">Expedition Odyssey: Fire &amp; Ice</a></h3>
-          <p class="meta">Attractions &middot; SeaWorld Orlando &middot; $$$$</p>
+          <img class="vthumb" src="/assets/venue-expedition-odyssey-seaworld.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/expedition-odyssey-seaworld.html">Expedition Odyssey: Fire &amp; Ice</a></h3>
+          <p class="meta">Attractions &middot; SeaWorld Orlando &middot; $$$$</p><p class="vsub">SeaWorld&#x27;s Arctic flying theater lifts riders over polar landscapes filmed in Iceland, with real animals rather than rendered ones.</p>
           <p class="addr">SeaWorld Orlando, 7007 SeaWorld Dr, Orlando, FL 32821</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/epcot.html">EPCOT</a></h3>
-          <p class="meta">Parks &amp; outdoors &middot; Disney Area &middot; $$$$</p>
+          <img class="vthumb" src="/assets/venue-epcot.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/epcot.html">EPCOT</a></h3>
+          <p class="meta">Parks &amp; outdoors &middot; Disney Area &middot; $$$$</p><p class="vsub">Open since 1982, Disney&#x27;s curiosity-driven park moves from futuristic pavilions to the World Showcase lagoon and its country pavilions.</p>
           <p class="addr">200 Epcot Center Dr, Lake Buena Vista, FL 32830</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/test-track-3-0.html">Test Track 3.0</a></h3>
-          <p class="meta">Attractions &middot; EPCOT &middot; $$$$</p>
+          <div class="vmain"><h3><a href="/venue/test-track-3-0.html">Test Track 3.0</a></h3>
+          <p class="meta">Attractions &middot; EPCOT &middot; $$$$</p><p class="vsub">EPCOT&#x27;s fastest ride, wrapped in a sleek, retro-futuristic story about car design, and guests say the facelift suits it.</p>
           <p class="addr">EPCOT, 200 Epcot Center Dr, Lake Buena Vista, FL 32830</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/all-inclusive-pass-kennedy.html">All-Inclusive Pass with Kennedy Space Center</a></h3>
-          <p class="meta">Attractions &middot; International Drive &middot; $$$$</p>
+          <div class="vmain"><h3><a href="/venue/all-inclusive-pass-kennedy.html">All-Inclusive Pass with Kennedy Space Center</a></h3>
+          <p class="meta">Attractions &middot; International Drive &middot; $$$$</p><p class="vsub">One all-inclusive pass bundles Kennedy Space Center with LEGOLAND Florida, the Orlando Eye, SEA LIFE, Madame Tussauds and WonderWorks.</p>
           <p class="addr">Multiple attractions across Orlando + Kennedy Space Center</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/orlando-helicopter-tours.html">Orlando Helicopter Tours</a></h3>
-          <p class="meta">Attractions &middot; International Drive &middot; $$$$</p>
+          <div class="vmain"><h3><a href="/venue/orlando-helicopter-tours.html">Orlando Helicopter Tours</a></h3>
+          <p class="meta">Attractions &middot; International Drive &middot; $$$$</p><p class="vsub">From the pad on International Drive, helicopters lift you over Disney, Universal, SeaWorld and the Orlando Eye, laid out below.</p>
           <p class="addr">8990 International Dr, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/icon-park.html">ICON Park &amp; The Orlando Eye</a></h3>
-          <p class="meta">Attractions &middot; I-Drive &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-icon-park.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/icon-park.html">ICON Park &amp; The Orlando Eye</a></h3>
+          <p class="meta">Attractions &middot; I-Drive &middot; $$</p><p class="vsub">An open-air stretch of I-Drive with no gate to wander in, anchored by the 400-foot Orlando Eye above the night lights.</p>
           <p class="addr">8375 International Dr, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         </div>
       </section>
 
@@ -285,35 +292,35 @@
         <p class="lede">Other places in Disney Area, Local Picks first, then the closest to Soarin&#x27; Across America.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/fogo-orlando-vineland.html">Fogo de Chão, Vineland Pointe</a> <span class="badge">Local Pick</span></h3>
-          <p class="meta">Fine dining &amp; steak · Brazilian Steakhouse &middot; $$$</p>
+          <div class="vmain"><h3><a href="/venue/fogo-orlando-vineland.html">Fogo de Chão, Vineland Pointe</a> <span class="badge">Local Pick</span></h3>
+          <p class="meta">Fine dining &amp; steak · Brazilian Steakhouse &middot; $$$</p><p class="vsub">Brazilian churrasco staged tableside at Vineland Pointe, where gaucho chefs carve fire-roasted cuts one slice at a time.</p>
           <p class="addr">11543 Regency Village Dr, Orlando, FL 32821</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/evermore-orlando-resort.html">Evermore Orlando Resort</a> <span class="badge">Local Pick</span></h3>
-          <p class="meta">Hotels · Hotel &middot; $$$</p>
+          <img class="vthumb" src="/assets/venue-evermore-orlando-resort.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/evermore-orlando-resort.html">Evermore Orlando Resort</a> <span class="badge">Local Pick</span></h3>
+          <p class="meta">Hotels · Hotel &middot; $$$</p><p class="vsub">The centerpiece is Evermore Bay, a crystal lagoon with its own beach that leaves guests saying the resort feels like it is out of the country.</p>
           <p class="addr">1590 Evermore Way, Orlando, FL 32836</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/orlando-vineland-premium-outlets.html">Orlando Vineland Premium Outlets</a> <span class="badge">Local Pick</span></h3>
-          <p class="meta">Markets &amp; shops · Outlet Mall &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/orlando-vineland-premium-outlets.html">Orlando Vineland Premium Outlets</a> <span class="badge">Local Pick</span></h3>
+          <p class="meta">Markets &amp; shops · Outlet Mall &middot; $$</p><p class="vsub">Minutes from Disney, a Mediterranean-inspired outdoor outlet village anchored by Prada, Bottega Veneta, Burberry, Gucci and Tory Burch.</p>
           <p class="addr">8200 Vineland Ave, Orlando, FL 32821</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/geo-82-epcot.html">GEO-82</a></h3>
-          <p class="meta">Bars &amp; lounges &middot; $$$</p>
+          <div class="vmain"><h3><a href="/venue/geo-82-epcot.html">GEO-82</a></h3>
+          <p class="meta">Bars &amp; lounges &middot; $$$</p><p class="vsub">Inside Spaceship Earth, EPCOT&#x27;s adults-only lounge stays calm, mid-century and quietly chic, right down to the coasters.</p>
           <p class="addr">EPCOT, 200 Epcot Center Dr, Lake Buena Vista, FL 32830</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/test-track-3-0.html">Test Track 3.0</a></h3>
-          <p class="meta">Attractions &middot; $$$$</p>
+          <div class="vmain"><h3><a href="/venue/test-track-3-0.html">Test Track 3.0</a></h3>
+          <p class="meta">Attractions &middot; $$$$</p><p class="vsub">EPCOT&#x27;s fastest ride, wrapped in a sleek, retro-futuristic story about car design, and guests say the facelift suits it.</p>
           <p class="addr">EPCOT, 200 Epcot Center Dr, Lake Buena Vista, FL 32830</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/epcot.html">EPCOT</a></h3>
-          <p class="meta">Parks &amp; outdoors · Park &middot; $$$$</p>
+          <img class="vthumb" src="/assets/venue-epcot.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/epcot.html">EPCOT</a></h3>
+          <p class="meta">Parks &amp; outdoors · Park &middot; $$$$</p><p class="vsub">Open since 1982, Disney&#x27;s curiosity-driven park moves from futuristic pavilions to the World Showcase lagoon and its country pavilions.</p>
           <p class="addr">200 Epcot Center Dr, Lake Buena Vista, FL 32830</p>
-        </article>
+        </div></article>
         </div>
         <div class="handoff">
           <a class="btn-ghost" href="/disney-area-finder.html">See the full Disney Area list</a>

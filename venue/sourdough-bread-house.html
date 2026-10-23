@@ -211,7 +211,14 @@
       .vcard .addr { margin: 0; color: var(--muted); font-size: .9rem; }
       @media (max-width: 640px) { .facts { grid-template-columns: 1fr; } }
     </style>
-  </head>
+  <style data-cardsys>
+/* cardsys: similar rail cards (2026-10-23 overhaul) */
+.vcard{display:flex;gap:12px;align-items:flex-start}
+.vcard .vthumb{flex:0 0 86px;width:86px;height:86px;border-radius:10px;object-fit:cover;display:block}
+.vcard .vmain{flex:1;min-width:0}
+.vcard .vsub{margin:4px 0 0;font-size:.86rem;line-height:1.45;color:var(--muted,#c6bba2)}
+@media (min-width:1000px){.vlist{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start}}
+</style></head>
   <body>
     <header class="hero">
       <div class="hero-in">
@@ -240,41 +247,41 @@
         </div>
       </section>
 
-      <section class="sec" id="similar">
+      <section class="sec" id="district-story"><p class="kicker">District Stories</p><h2>Orlando&#x27;s long memory</h2><p class="lede">The guide keeps the long memory of Orlando&#x27;s districts in one place: the names, the plats and the stories behind the streets.</p><p><a class="btn-ghost" href="/history.html">Browse the district stories &rarr;</a></p></section><section class="sec" id="similar">
         <p class="kicker">Similar Feel</p>
         <h2>More places with this feel</h2>
         <p class="lede">Matched by vibe, not by neighborhood: the places across Greater Orlando closest in spirit to Sourdough Bread House.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/colorado-fondue-company.html">Colorado Fondue Company</a></h3>
-          <p class="meta">American &middot; Casselberry &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/colorado-fondue-company.html">Colorado Fondue Company</a></h3>
+          <p class="meta">American &middot; Casselberry &middot; $$</p><p class="vsub">Dressed like a Colorado ski lodge, this Casselberry room has timber, stone, and cozy booths built for lingering over a pot.</p>
           <p class="addr">Colorado Fondue Company, 1016 Semoran Blvd, Casselberry, FL 32707</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/zeytin.html">Zeytin Turkish Cuisine</a></h3>
-          <p class="meta">Mediterranean &middot; College Park &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/zeytin.html">Zeytin Turkish Cuisine</a></h3>
+          <p class="meta">Mediterranean &middot; College Park &middot; $$</p><p class="vsub">A cozy, family-run, lantern-lit Turkish room on Edgewater Drive in College Park.</p>
           <p class="addr">Zeytin Turkish Cuisine, 4439 Edgewater Dr, Orlando, FL 32804-1229</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/cafe-34-istanbul.html">Cafe 34 Istanbul</a></h3>
-          <p class="meta">Mediterranean &middot; International Drive &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-cafe-34-istanbul.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/cafe-34-istanbul.html">Cafe 34 Istanbul</a></h3>
+          <p class="meta">Mediterranean &middot; International Drive &middot; $$</p><p class="vsub">Cafe 34 Istanbul brings a lively, linger-worthy taste of Turkey to International Drive, all grill smoke and warm welcome.</p>
           <p class="addr">Cafe 34 Istanbul, 8255 International Dr, Orlando, FL 32819-9326, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/bosphorous-turkish.html">Bosphorous Turkish Cuisine</a></h3>
-          <p class="meta">Mediterranean &middot; Winter Park &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-bosphorous-turkish.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/bosphorous-turkish.html">Bosphorous Turkish Cuisine</a></h3>
+          <p class="meta">Mediterranean &middot; Winter Park &middot; $$</p><p class="vsub">A family-owned Turkish table on Park Avenue, warm and celebratory, where hollow lavas bread arrives puffed and blistered for the dips.</p>
           <p class="addr">108 S Park Ave, Winter Park, FL 32789</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/keke-s-breakfast-cafe.html">Keke&#x27;s Breakfast Cafe</a></h3>
-          <p class="meta">Breakfast &amp; brunch &middot; Millenia &middot; $</p>
+          <img class="vthumb" src="/assets/venue-keke-s-breakfast-cafe.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/keke-s-breakfast-cafe.html">Keke&#x27;s Breakfast Cafe</a></h3>
+          <p class="meta">Breakfast &amp; brunch &middot; Millenia &middot; $</p><p class="vsub">Breakfast done by hand near Millenia: coffee ground in house, eggs cracked to order, real butter and no microwave.</p>
           <p class="addr">4192 Conroy Rd, Orlando, FL</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/beirut-grill-and-deli.html">Beirut Grill and Deli</a></h3>
-          <p class="meta">Mediterranean &middot; Oviedo &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-beirut-grill-and-deli.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/beirut-grill-and-deli.html">Beirut Grill and Deli</a></h3>
+          <p class="meta">Mediterranean &middot; Oviedo &middot; $$</p><p class="vsub">Family-owned halal Lebanese kitchen on Alafaya Trail, where everything tastes homemade and the room feels like family.</p>
           <p class="addr">Beirut Grill and Deli, 3100 Alafaya Trl, Oviedo, FL 32765-9466, United States</p>
-        </article>
+        </div></article>
         </div>
       </section>
 
@@ -284,35 +291,35 @@
         <p class="lede">Other places in Casselberry, closest to Sourdough Bread House first.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/brightlight-books.html">Brightlight Books</a></h3>
-          <p class="meta">Markets &amp; shops · Used Bookstore &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/brightlight-books.html">Brightlight Books</a></h3>
+          <p class="meta">Markets &amp; shops · Used Bookstore &middot; $</p><p class="vsub">A family run used bookstore in Fern Park, buying, selling, and trading since 1995, with about 200,000 books across 7,000 square feet.</p>
           <p class="addr">Brightlight Books, 161 E SR 436, Fern Park, FL 32730</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/zocalo-436-mexican-grill.html">Zocalo 436 Mexican Grill</a></h3>
-          <p class="meta">Mexican · Mexican and Colombian &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-zocalo-436-mexican-grill.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/zocalo-436-mexican-grill.html">Zocalo 436 Mexican Grill</a></h3>
+          <p class="meta">Mexican · Mexican and Colombian &middot; $$</p><p class="vsub">A Mexicolombian grill and bar on 436, where birria tacos share the menu with a Burrito Paisa and a parrillada for the table.</p>
           <p class="addr">Zocalo 436 Mexican Grill, 505 FL-436, Casselberry, FL 32707</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/lake-concord-park.html">Lake Concord Park</a></h3>
-          <p class="meta">Parks &amp; outdoors · Park &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/lake-concord-park.html">Lake Concord Park</a></h3>
+          <p class="meta">Parks &amp; outdoors · Park &middot; $</p><p class="vsub">Casselberry&#x27;s event front yard since 2010: a lakefront park with old oaks, an amphitheater, a sculpture garden, and a playground.</p>
           <p class="addr">Lake Concord Park, 95 Triplet Lake Drive, Casselberry, FL 32707</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/casselberry-art-house.html">Casselberry Art House</a></h3>
-          <p class="meta">Attractions · Art Gallery &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/casselberry-art-house.html">Casselberry Art House</a></h3>
+          <p class="meta">Attractions · Art Gallery &middot; $</p><p class="vsub">The city&#x27;s art house since 2002, a former lake house on Lake Concord turned gallery and classroom with rotating exhibitions.</p>
           <p class="addr">Casselberry Art House, 127 Quail Pond Circle, Casselberry, FL 32707</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/velvet-brew-cafe.html">Velvet Brew Cafe</a></h3>
-          <p class="meta">Coffee &amp; cafes · Bakery Cafe &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/velvet-brew-cafe.html">Velvet Brew Cafe</a></h3>
+          <p class="meta">Coffee &amp; cafes · Bakery Cafe &middot; $$</p><p class="vsub">A Latin-leaning bakery cafe on 17-92 pairing smooth coffee with pan de bono, alfajores, and a pistachio croissant regulars chase.</p>
           <p class="addr">Velvet Brew Cafe, 3950 S US 17-92, Suite 1024, Casselberry, FL 32707</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/secret-lake-park.html">Secret Lake Park</a></h3>
-          <p class="meta">Parks &amp; outdoors · Park &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/secret-lake-park.html">Secret Lake Park</a></h3>
+          <p class="meta">Parks &amp; outdoors · Park &middot; $</p><p class="vsub">A quiet park of about 40 acres around three connected lakes, with a boardwalk loop, kayak access, and pavilions.</p>
           <p class="addr">Secret Lake Park, 200 N Triplet Lake Drive, Casselberry, FL 32707</p>
-        </article>
+        </div></article>
         </div>
         <div class="handoff">
           <a class="btn-ghost" href="/casselberry-finder.html">See the full Casselberry list</a>

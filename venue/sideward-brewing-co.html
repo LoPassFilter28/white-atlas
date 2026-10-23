@@ -211,7 +211,14 @@
       .vcard .addr { margin: 0; color: var(--muted); font-size: .9rem; }
       @media (max-width: 640px) { .facts { grid-template-columns: 1fr; } }
     </style>
-  </head>
+  <style data-cardsys>
+/* cardsys: similar rail cards (2026-10-23 overhaul) */
+.vcard{display:flex;gap:12px;align-items:flex-start}
+.vcard .vthumb{flex:0 0 86px;width:86px;height:86px;border-radius:10px;object-fit:cover;display:block}
+.vcard .vmain{flex:1;min-width:0}
+.vcard .vsub{margin:4px 0 0;font-size:.86rem;line-height:1.45;color:var(--muted,#c6bba2)}
+@media (min-width:1000px){.vlist{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start}}
+</style></head>
   <body>
     <header class="hero">
       <div class="hero-in">
@@ -236,46 +243,46 @@
         <div class="actions">
           <a class="action" href="https://www.google.com/maps/search/?api=1&amp;query=Sideward+Brewing+Co.+210+N+Bumby+Ave%2C+Orlando%2C+FL+32803" target="_blank" rel="noopener">Directions &rarr;</a>
           <a class="action" href="/archive.html?venue=sideward-brewing-co">Open in the full finder</a>
-          <a class="action" href="/milk-district-guide.html">Read the Milk District story</a>
+          <a class="action" href="/history/milk-district.html">Read the Milk District story</a>
           <a class="action action-ig" href="https://www.instagram.com/sidewardbrewing" target="_blank" rel="noopener"><svg class="ig-glyph" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="vertical-align:-2px;margin-right:6px"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg> Instagram</a>
         </div>
       </section>
 
-      <section class="sec" id="similar">
+      <section class="sec" id="district-story"><p class="kicker">District Story</p><h2>The story of Milk District</h2><p class="lede">One cow, twenty acres and a dairy on the edge of town: the neighborhood that grew up around the T.G. Lee plant and took its name from the milk.</p><p><a class="btn-ghost" href="/history/milk-district.html">Read the Milk District story &rarr;</a></p></section><section class="sec" id="similar">
         <p class="kicker">Similar Feel</p>
         <h2>More places with this feel</h2>
         <p class="lede">Matched by vibe, not by neighborhood: the places across Greater Orlando closest in spirit to Sideward Brewing Co..</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/rockpit-brewing.html">Rockpit Brewing</a></h3>
-          <p class="meta">Breweries &middot; SoDo &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/rockpit-brewing.html">Rockpit Brewing</a></h3>
+          <p class="meta">Breweries &middot; SoDo &middot; $$</p><p class="vsub">Regulars treat this SoDo taproom on West Illiana Street as Orlando&#x27;s neighborhood brewery, cozy and welcoming to newcomers.</p>
           <p class="addr">Rockpit Brewing, 10 W Illiana St, Orlando, FL 32806-4408, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/half-barrel-beer-project.html">Half Barrel Beer Project</a></h3>
-          <p class="meta">Breweries &middot; Orlando &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/half-barrel-beer-project.html">Half Barrel Beer Project</a></h3>
+          <p class="meta">Breweries &middot; Orlando &middot; $$</p><p class="vsub">Small, family-owned brewery on Universal Boulevard with a chill, welcoming feel guests keep mentioning.</p>
           <p class="addr">Half Barrel Beer Project, 9650 Universal Blvd, Orlando, FL 32819-8766, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/hourglass-brewing.html">Hourglass Brewing</a></h3>
-          <p class="meta">Breweries &middot; Orlando &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-hourglass-brewing.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/hourglass-brewing.html">Hourglass Brewing</a></h3>
+          <p class="meta">Breweries &middot; Orlando &middot; $$</p><p class="vsub">Pouring inside a former church on Curry Ford, this Hourglass District taproom keeps a rotating cast of house beers flowing.</p>
           <p class="addr">Hourglass Brewing, 2500 Curry Ford Rd, Orlando, FL 32806-2506, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/gravity-taproom.html">Gravity Taproom</a></h3>
-          <p class="meta">Breweries &middot; Downtown &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/gravity-taproom.html">Gravity Taproom</a></h3>
+          <p class="meta">Breweries &middot; Downtown &middot; $$</p><p class="vsub">A welcoming North Quarter hangout where rotating craft taps pour beside brick-fired Neapolitan pies.</p>
           <p class="addr">Gravity Taproom, 777 N Orange Ave, Suite D, Orlando, FL 32801</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/crooked-can-minneola.html">Crooked Can Minneola</a></h3>
-          <p class="meta">Breweries &middot; Minneola &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-crooked-can-minneola.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/crooked-can-minneola.html">Crooked Can Minneola</a></h3>
+          <p class="meta">Breweries &middot; Minneola &middot; $$</p><p class="vsub">A sprawling take on the Winter Garden brewery: production brewery and taproom fronting a food hall in Minneola.</p>
           <p class="addr">1600 Crooked Can Loop, Minneola, FL 34715</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/ten10-brewing.html">Ten10 Brewing</a></h3>
-          <p class="meta">Breweries &middot; 1010 Virginia Dr &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/ten10-brewing.html">Ten10 Brewing</a></h3>
+          <p class="meta">Breweries &middot; 1010 Virginia Dr &middot; $$</p><p class="vsub">Laid-back neighborhood taproom on Virginia Drive in Mills 50, all about good beer, good tunes and good people.</p>
           <p class="addr">Ten10 Brewing, 1010 Virginia Dr, Orlando, FL 32803-2532</p>
-        </article>
+        </div></article>
         </div>
       </section>
 
@@ -285,35 +292,35 @@
         <p class="lede">Other places in Milk District, Local Picks first, then the closest to Sideward Brewing Co..</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/iron-cow.html">Iron Cow</a> <span class="badge">Local Pick</span></h3>
-          <p class="meta">Japanese &amp; sushi · Sushi &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/iron-cow.html">Iron Cow</a> <span class="badge">Local Pick</span></h3>
+          <p class="meta">Japanese &amp; sushi · Sushi &middot; $$</p><p class="vsub">Part hi-fi sushi lounge, part underground club, the Milk District&#x27;s good contradiction.</p>
           <p class="addr">2438 E Robinson St, Suite A, Orlando, FL 32803</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/swine-sons.html">Swine &amp; Sons</a></h3>
-          <p class="meta">Burgers &amp; sandwiches · Sandwiches &middot; $</p>
+          <img class="vthumb" src="/assets/venue-swine-sons.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/swine-sons.html">Swine &amp; Sons</a></h3>
+          <p class="meta">Burgers &amp; sandwiches · Sandwiches &middot; $</p><p class="vsub">Inside the Milkhouse on Bumby Avenue, Swine &amp; Sons runs a casual sandwich counter with food hall energy and a pop punk playlist.</p>
           <p class="addr">201 N Bumby Ave, Orlando, FL 32803</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/black-magic-pizza.html">Black Magic Pizza</a></h3>
-          <p class="meta">Pizza &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/black-magic-pizza.html">Black Magic Pizza</a></h3>
+          <p class="meta">Pizza &middot; $$</p><p class="vsub">Punk rock pizza window on Bumby Avenue, playful in name, serious about dough, with basically no seating and parking that fills fast.</p>
           <p class="addr">Black Magic Pizza, 121 N Bumby Ave, Orlando, FL 32803</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/tasty-takeover.html">Tasty Takeover</a></h3>
-          <p class="meta">Restaurants · Food Truck Event &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-tasty-takeover.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/tasty-takeover.html">Tasty Takeover</a></h3>
+          <p class="meta">Restaurants · Food Truck Event &middot; $$</p><p class="vsub">Every Tuesday night, food trucks take over the lots behind the Milk District bars for an easygoing block party.</p>
           <p class="addr">2424 E Robinson St, Orlando, FL 32803</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/beefy-king.html">Beefy King</a></h3>
-          <p class="meta">Burgers &amp; sandwiches · Sandwiches &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/beefy-king.html">Beefy King</a></h3>
+          <p class="meta">Burgers &amp; sandwiches · Sandwiches &middot; $</p><p class="vsub">Orlando&#x27;s old-school roast beef counter, steaming since 1968 and proudly no-frills about it.</p>
           <p class="addr">Beefy King, 424 N Bumby Ave, Orlando, FL 32803-6028</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/stasios.html">Stasio&#x27;s Italian Deli</a></h3>
-          <p class="meta">Italian &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/stasios.html">Stasio&#x27;s Italian Deli</a></h3>
+          <p class="meta">Italian &middot; $</p><p class="vsub">An old-school Italian deli on Robinson Street where the warm bustle and market shelves make every visit feel like a small celebration.</p>
           <p class="addr">2320 E Robinson St, Orlando, FL 32803</p>
-        </article>
+        </div></article>
         </div>
         <div class="handoff">
           <a class="btn-ghost" href="/milk-district-finder.html">See the full Milk District list</a>
