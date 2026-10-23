@@ -211,7 +211,14 @@
       .vcard .addr { margin: 0; color: var(--muted); font-size: .9rem; }
       @media (max-width: 640px) { .facts { grid-template-columns: 1fr; } }
     </style>
-  </head>
+  <style data-cardsys>
+/* cardsys: similar rail cards (2026-10-23 overhaul) */
+.vcard{display:flex;gap:12px;align-items:flex-start}
+.vcard .vthumb{flex:0 0 86px;width:86px;height:86px;border-radius:10px;object-fit:cover;display:block}
+.vcard .vmain{flex:1;min-width:0}
+.vcard .vsub{margin:4px 0 0;font-size:.86rem;line-height:1.45;color:var(--muted,#c6bba2)}
+@media (min-width:1000px){.vlist{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start}}
+</style></head>
   <body>
     <header class="hero">
       <div class="hero-in">
@@ -240,41 +247,41 @@
         </div>
       </section>
 
-      <section class="sec" id="similar">
+      <section class="sec" id="district-story"><p class="kicker">District Stories</p><h2>Orlando&#x27;s long memory</h2><p class="lede">The guide keeps the long memory of Orlando&#x27;s districts in one place: the names, the plats and the stories behind the streets.</p><p><a class="btn-ghost" href="/history.html">Browse the district stories &rarr;</a></p></section><section class="sec" id="similar">
         <p class="kicker">Similar Feel</p>
         <h2>More places with this feel</h2>
         <p class="lede">Matched by vibe, not by neighborhood: the places across Greater Orlando closest in spirit to Luminescent.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/living-room-bar.html">The Living Room Bar</a></h3>
-          <p class="meta">Bars &amp; lounges &middot; Lake Nona &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-living-room-bar.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/living-room-bar.html">The Living Room Bar</a></h3>
+          <p class="meta">Bars &amp; lounges &middot; Lake Nona &middot; $$</p><p class="vsub">The Wave Hotel&#x27;s Lake Nona lounge is eclectic and art-filled, arranged around a pink dogwood tree with low chairs.</p>
           <p class="addr">6100 Wave Hotel Dr, Orlando, FL 32827</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/noir-bar.html">Noir Bar</a></h3>
-          <p class="meta">Bars &amp; lounges &middot; Downtown &middot; $$$</p>
+          <img class="vthumb" src="/assets/venue-noir-bar.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/noir-bar.html">Noir Bar</a></h3>
+          <p class="meta">Bars &amp; lounges &middot; Downtown &middot; $$$</p><p class="vsub">Tucked behind a hidden door inside Talay Thai on North Orange Avenue, this speakeasy stays dark, moody and blissfully uncrowded.</p>
           <p class="addr">861 N Orange Ave, Orlando, FL 32801 (inside Talay Thai)</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/euphoria-downtown.html">Euphoria Downtown</a></h3>
-          <p class="meta">Bars &amp; lounges &middot; Downtown &middot; $$$</p>
+          <div class="vmain"><h3><a href="/venue/euphoria-downtown.html">Euphoria Downtown</a></h3>
+          <p class="meta">Bars &amp; lounges &middot; Downtown &middot; $$$</p><p class="vsub">On South Orange Avenue, brunch with bottomless mimosas and lamb chops gives way to Techno Euphoria nights on a big sound system.</p>
           <p class="addr">110 S Orange Ave, Orlando, FL 32801</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/bar-one-orlando.html">Bar One Orlando</a></h3>
-          <p class="meta">Bars &amp; lounges &middot; Orlando &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/bar-one-orlando.html">Bar One Orlando</a></h3>
+          <p class="meta">Bars &amp; lounges &middot; Orlando &middot; $</p><p class="vsub">Tiny from the street, but inside a cozy, very clean neighborhood bar on McCoy Road with pool and darts.</p>
           <p class="addr">Bar One Orlando, 1516 McCoy Rd, Orlando, FL 32809</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/proper-orlando.html">Proper Orlando</a></h3>
-          <p class="meta">Bars &amp; lounges &middot; Downtown Orlando &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-proper-orlando.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/proper-orlando.html">Proper Orlando</a></h3>
+          <p class="meta">Bars &amp; lounges &middot; Downtown Orlando &middot; $$</p><p class="vsub">A mid-century cocktail lounge on South Orange Avenue where vinyl is the whole point, DJs spinning records only on an analog sound system.</p>
           <p class="addr">112 S Orange Ave, Orlando, FL 32801</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/independent-bar.html">Barbarella Orlando</a></h3>
-          <p class="meta">Nightlife &amp; music &middot; Winter Park &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/independent-bar.html">Barbarella Orlando</a></h3>
+          <p class="meta">Nightlife &amp; music &middot; Winter Park &middot; $</p><p class="vsub">A new wave dance club on Lee Road in Winter Park where the crowd from its downtown years still packs the floor.</p>
           <p class="addr">2600 Lee Rd, Winter Park, FL 32789</p>
-        </article>
+        </div></article>
         </div>
       </section>
 
@@ -284,35 +291,35 @@
         <p class="lede">Other places in University, closest to Luminescent first.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/goodfella-s-pizzeria.html">Goodfella&#x27;s Pizzeria</a></h3>
-          <p class="meta">Pizza &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/goodfella-s-pizzeria.html">Goodfella&#x27;s Pizzeria</a></h3>
+          <p class="meta">Pizza &middot; $$</p><p class="vsub">An old-school, no-frills slice shop on East Colonial Drive serving New York-style pies guests say taste like the kind they grew up eating.</p>
           <p class="addr">11873 E Colonial Dr, Orlando, FL 32826</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/junior-colombian-burger.html">Junior Colombian Burger</a></h3>
-          <p class="meta">Burgers &amp; sandwiches · Burgers &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/junior-colombian-burger.html">Junior Colombian Burger</a></h3>
+          <p class="meta">Burgers &amp; sandwiches · Burgers &middot; $</p><p class="vsub">On East Colonial Drive, Colombian street food meets the American burger, and nothing about it is quiet.</p>
           <p class="addr">11875 E Colonial Dr, Orlando, FL</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/viet-nomz.html">Viet-Nomz</a></h3>
-          <p class="meta">Noodles &amp; Southeast Asian · Vietnamese &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-viet-nomz.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/viet-nomz.html">Viet-Nomz</a></h3>
+          <p class="meta">Noodles &amp; Southeast Asian · Vietnamese &middot; $$</p><p class="vsub">Cute, cozy fast-casual Vietnamese spot on East Colonial Drive with a friendly, welcoming feel.</p>
           <p class="addr">11798 E Colonial Dr, Orlando, FL 32817</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/dang-boba-musubi-house.html">Dang Boba &amp; Musubi House</a></h3>
-          <p class="meta">Coffee &amp; cafes · Bubble Tea &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/dang-boba-musubi-house.html">Dang Boba &amp; Musubi House</a></h3>
+          <p class="meta">Coffee &amp; cafes · Bubble Tea &middot; $$</p><p class="vsub">Cheerful, cozy little spot near UCF pairing boba teas with Hawaiian musubi.</p>
           <p class="addr">Dang Boba &amp; Musubi House, 11772 E Colonial Dr, Orlando, FL 32817-4625</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/jeremiah-s-italian-ice.html">Jeremiah&#x27;s Italian Ice</a></h3>
-          <p class="meta">Sweets · Italian Ice &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/jeremiah-s-italian-ice.html">Jeremiah&#x27;s Italian Ice</a></h3>
+          <p class="meta">Sweets · Italian Ice &middot; $</p><p class="vsub">Bright, Orlando-born walk-up stand in Waterford Lakes where the Gelati layers Italian ice with creamy soft serve.</p>
           <p class="addr">877 N Alafaya Trl, Orlando, FL</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/white-rabbit-dessert-experience.html">White Rabbit Dessert Experience</a></h3>
-          <p class="meta">Sweets · Dessert &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-white-rabbit-dessert-experience.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/white-rabbit-dessert-experience.html">White Rabbit Dessert Experience</a></h3>
+          <p class="meta">Sweets · Dessert &middot; $$</p><p class="vsub">Whimsical, Alice in Wonderland themed dessert room in Waterford Lakes where guests say the theme is pure magic.</p>
           <p class="addr">White Rabbit Dessert Experience, 875 N Alafaya Trl, Orlando, FL 32828-7049</p>
-        </article>
+        </div></article>
         </div>
         <div class="handoff">
           <a class="btn-ghost" href="/ucf-finder.html">See the full University list</a>

@@ -211,7 +211,14 @@
       .vcard .addr { margin: 0; color: var(--muted); font-size: .9rem; }
       @media (max-width: 640px) { .facts { grid-template-columns: 1fr; } }
     </style>
-  </head>
+  <style data-cardsys>
+/* cardsys: similar rail cards (2026-10-23 overhaul) */
+.vcard{display:flex;gap:12px;align-items:flex-start}
+.vcard .vthumb{flex:0 0 86px;width:86px;height:86px;border-radius:10px;object-fit:cover;display:block}
+.vcard .vmain{flex:1;min-width:0}
+.vcard .vsub{margin:4px 0 0;font-size:.86rem;line-height:1.45;color:var(--muted,#c6bba2)}
+@media (min-width:1000px){.vlist{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start}}
+</style></head>
   <body>
     <header class="hero">
       <div class="hero-in">
@@ -240,41 +247,41 @@
         </div>
       </section>
 
-      <section class="sec" id="similar">
+      <section class="sec" id="district-story"><p class="kicker">District Stories</p><h2>Orlando&#x27;s long memory</h2><p class="lede">The guide keeps the long memory of Orlando&#x27;s districts in one place: the names, the plats and the stories behind the streets.</p><p><a class="btn-ghost" href="/history.html">Browse the district stories &rarr;</a></p></section><section class="sec" id="similar">
         <p class="kicker">Similar Feel</p>
         <h2>More places with this feel</h2>
         <p class="lede">Matched by vibe, not by neighborhood: the places across Greater Orlando closest in spirit to Lake Meadow Naturals.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/orlando-farmers-market.html">Orlando Farmers Market</a></h3>
-          <p class="meta">Markets &amp; shops &middot; Lake Eola &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/orlando-farmers-market.html">Orlando Farmers Market</a></h3>
+          <p class="meta">Markets &amp; shops &middot; Lake Eola &middot; $</p><p class="vsub">Every Sunday, the Lake Eola lakefront becomes a shaded, dog-friendly stretch of vendors with live music and a wine and beer garden.</p>
           <p class="addr">20 N Eola Dr, Orlando, FL 32801</p>
-        </article>
+        </div></article>
                 <article class="vcard">
-          <h3><a href="/venue/at-the-diner.html">At The Diner</a></h3>
-          <p class="meta">Breakfast &amp; brunch &middot; Dr Phillips &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/at-the-diner.html">At The Diner</a></h3>
+          <p class="meta">Breakfast &amp; brunch &middot; Dr Phillips &middot; $</p><p class="vsub">Bright, playful Dr.</p>
           <p class="addr">5072 Dr Phillips Blvd, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/winter-park-farmers-market.html">Winter Park Farmers Market</a></h3>
-          <p class="meta">Markets &amp; shops &middot; Winter Park &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/winter-park-farmers-market.html">Winter Park Farmers Market</a></h3>
+          <p class="meta">Markets &amp; shops &middot; Winter Park &middot; $$</p><p class="vsub">Every Saturday morning, Central Park West Meadow fills with a laid-back, strollable market locals treat as a tradition.</p>
           <p class="addr">150 N New York Ave, Winter Park, FL 32789</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/everoak.html">Everoak Farm</a></h3>
-          <p class="meta">Markets &amp; shops &middot; University &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/everoak.html">Everoak Farm</a></h3>
+          <p class="meta">Markets &amp; shops &middot; University &middot; $</p><p class="vsub">A family-run regenerative farm on Carrington Drive growing Certified Naturally Grown produce with no sprays in living soil.</p>
           <p class="addr">Everoak Farm, 2335 Carrington Dr, Orlando, FL 32807</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/lake-nona-deli-and-market.html">Lake Nona Deli and Market</a></h3>
-          <p class="meta">Burgers &amp; sandwiches &middot; Lake Nona Village Walk &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/lake-nona-deli-and-market.html">Lake Nona Deli and Market</a></h3>
+          <p class="meta">Burgers &amp; sandwiches &middot; Lake Nona Village Walk &middot; $</p><p class="vsub">Village Walk&#x27;s neighborhood counter, part deli, part pizzeria, part market, built on Boar&#x27;s Head meats and Olde Hearth bread.</p>
           <p class="addr">8510 Insular Ln, Orlando, FL 32827</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/green-meadows-petting-farm.html">Green Meadows Petting Farm</a></h3>
-          <p class="meta">Attractions &middot; Kissimmee &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/green-meadows-petting-farm.html">Green Meadows Petting Farm</a></h3>
+          <p class="meta">Attractions &middot; Kissimmee &middot; $$</p><p class="vsub">Under the live oaks at Lancaster Ranch Park in Kissimmee, this petting farm is all open air and hands-on.</p>
           <p class="addr">1881 Jack Calhoun Dr, Kissimmee, FL 34741</p>
-        </article>
+        </div></article>
         </div>
       </section>
 
@@ -284,35 +291,35 @@
         <p class="lede">Other places in Winter Garden, closest to Lake Meadow Naturals first.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/toll-road-brewing-company.html">Toll Road Brewing Company</a></h3>
-          <p class="meta">Breweries · Brewery &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/toll-road-brewing-company.html">Toll Road Brewing Company</a></h3>
+          <p class="meta">Breweries · Brewery &middot; $$</p><p class="vsub">Small Ocoee taproom with a cozy, laid-back microbrewery feel, staffed by people who treat everyone like a regular.</p>
           <p class="addr">Toll Road Brewing Company, 101 W McKey St, Ocoee, FL 34761-2616, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/southern-steer-butcher.html">Southern Steer Butcher (Orlando)</a></h3>
-          <p class="meta">Markets &amp; shops · Butcher Shop &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/southern-steer-butcher.html">Southern Steer Butcher (Orlando)</a></h3>
+          <p class="meta">Markets &amp; shops · Butcher Shop &middot; $</p><p class="vsub">Family-run butcher on West Colonial Drive in Ocoee, where staff guide you through the case and how to cook it.</p>
           <p class="addr">11024 W Colonial Dr, Ocoee, FL 34761</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/ispirazione.html">Ispirazione</a></h3>
-          <p class="meta">Burgers &amp; sandwiches · Sandwiches &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/ispirazione.html">Ispirazione</a></h3>
+          <p class="meta">Burgers &amp; sandwiches · Sandwiches &middot; $$</p><p class="vsub">In Ocoee, the focus is tigelle, small round Italian breads baked fresh to order, crunchy outside and soft in the center.</p>
           <p class="addr">Ispirazione, 1711 Amazing Way, Ocoee, FL 34761-3279, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/schweinis-delicatessen.html">Schweini&#x27;s Delicatessen</a></h3>
-          <p class="meta">Burgers &amp; sandwiches · Deli &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/schweinis-delicatessen.html">Schweini&#x27;s Delicatessen</a></h3>
+          <p class="meta">Burgers &amp; sandwiches · Deli &middot; $$</p><p class="vsub">A German deli on Main Street in Winter Garden, built straight from the owner&#x27;s heart.</p>
           <p class="addr">Schweini&#x27;s Delicatessen, 108 S Main St, Winter Garden, FL 34787-3556, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/harrell-s-hot-dogs-and-cold-cones.html">Harrell&#x27;s Hot Dogs and Cold Cones</a></h3>
-          <p class="meta">Burgers &amp; sandwiches · Hot Dogs &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/harrell-s-hot-dogs-and-cold-cones.html">Harrell&#x27;s Hot Dogs and Cold Cones</a></h3>
+          <p class="meta">Burgers &amp; sandwiches · Hot Dogs &middot; $</p><p class="vsub">Narrow little Plant Street hideaway for grilled all-beef dogs that guests say make a simple hot dog better.</p>
           <p class="addr">54 W Plant St, Winter Garden, FL 34787</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/harlow-grove.html">Harlow Grove</a></h3>
-          <p class="meta">American · American Restaurant &middot; $$$</p>
+          <div class="vmain"><h3><a href="/venue/harlow-grove.html">Harlow Grove</a></h3>
+          <p class="meta">American · American Restaurant &middot; $$$</p><p class="vsub">Beneath a century-old oak in Winter Garden, an elegant room and open-air terrace overlook town.</p>
           <p class="addr">186 S Main St, Winter Garden, FL 34787</p>
-        </article>
+        </div></article>
         </div>
         <div class="handoff">
           <a class="btn-ghost" href="/winter-garden-finder.html">See the full Winter Garden list</a>

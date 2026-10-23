@@ -211,7 +211,14 @@
       .vcard .addr { margin: 0; color: var(--muted); font-size: .9rem; }
       @media (max-width: 640px) { .facts { grid-template-columns: 1fr; } }
     </style>
-  </head>
+  <style data-cardsys>
+/* cardsys: similar rail cards (2026-10-23 overhaul) */
+.vcard{display:flex;gap:12px;align-items:flex-start}
+.vcard .vthumb{flex:0 0 86px;width:86px;height:86px;border-radius:10px;object-fit:cover;display:block}
+.vcard .vmain{flex:1;min-width:0}
+.vcard .vsub{margin:4px 0 0;font-size:.86rem;line-height:1.45;color:var(--muted,#c6bba2)}
+@media (min-width:1000px){.vlist{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start}}
+</style></head>
   <body>
     <header class="hero">
       <div class="hero-in">
@@ -240,41 +247,41 @@
         </div>
       </section>
 
-      <section class="sec" id="similar">
+      <section class="sec" id="district-story"><p class="kicker">District Stories</p><h2>Orlando&#x27;s long memory</h2><p class="lede">The guide keeps the long memory of Orlando&#x27;s districts in one place: the names, the plats and the stories behind the streets.</p><p><a class="btn-ghost" href="/history.html">Browse the district stories &rarr;</a></p></section><section class="sec" id="similar">
         <p class="kicker">Similar Feel</p>
         <h2>More places with this feel</h2>
         <p class="lede">Matched by vibe, not by neighborhood: the places across Greater Orlando closest in spirit to Kung Fu Kitchen.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/jiangs-kitchen.html">Jiang&#x27;s Kitchen</a></h3>
-          <p class="meta">Chinese &middot; Downtown &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/jiangs-kitchen.html">Jiang&#x27;s Kitchen</a></h3>
+          <p class="meta">Chinese &middot; Downtown &middot; $$</p><p class="vsub">A new downtown spot on East Robinson Street where soup dumplings are folded by hand in view of the dining room.</p>
           <p class="addr">27 E Robinson St, Orlando, FL 32801</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/lucky-china.html">Lucky China</a></h3>
-          <p class="meta">Chinese &middot; University &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/lucky-china.html">Lucky China</a></h3>
+          <p class="meta">Chinese &middot; University &middot; $</p><p class="vsub">A no-frills takeout staple in Aloma Square that regulars prize for one thing above all: consistency.</p>
           <p class="addr">Lucky China, 6756 Aloma Ave, Winter Park, FL 32792</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/lams-garden.html">Lam&#x27;s Garden Chinese Restaurant</a></h3>
-          <p class="meta">Chinese &middot; Milk District &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-lams-garden.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/lams-garden.html">Lam&#x27;s Garden Chinese Restaurant</a></h3>
+          <p class="meta">Chinese &middot; Milk District &middot; $$</p><p class="vsub">An old-school, family-owned Cantonese room on East Colonial Drive that has served the corridor since 1975.</p>
           <p class="addr">2505 E Colonial Dr, Orlando, FL 32803</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/king-bao.html">King Bao</a></h3>
-          <p class="meta">Restaurants &middot; Mills 50 &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/king-bao.html">King Bao</a></h3>
+          <p class="meta">Restaurants &middot; Mills 50 &middot; $</p><p class="vsub">A loud, playful hole-in-the-wall on North Mills Avenue where steamed buns come loaded and the energy stays up.</p>
           <p class="addr">710 N Mills Ave, Orlando, FL 32803</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/morimoto.html">Morimoto Asia</a></h3>
-          <p class="meta">Restaurants &middot; Disney Springs &middot; $$$</p>
+          <img class="vthumb" src="/assets/venue-morimoto.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/morimoto.html">Morimoto Asia</a></h3>
+          <p class="meta">Restaurants &middot; Disney Springs &middot; $$$</p><p class="vsub">At Disney Springs, this sleek, theatrical dining room is one guests call a diamond.</p>
           <p class="addr">Morimoto Asia, 1600 E Buena Vista Dr, Lake Buena Vista, FL 32830</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/asia-kitchen.html">Asia Kitchen</a></h3>
-          <p class="meta">Noodles &amp; Southeast Asian &middot; Winter Park &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/asia-kitchen.html">Asia Kitchen</a></h3>
+          <p class="meta">Noodles &amp; Southeast Asian &middot; Winter Park &middot; $</p><p class="vsub">Bright and spotless on Lake Howell Road, a neighborhood staple where you might get fresh wontons while you wait.</p>
           <p class="addr">Asia Kitchen, 5405 Lake Howell Rd, Winter Park, FL 32792</p>
-        </article>
+        </div></article>
         </div>
       </section>
 
@@ -284,35 +291,35 @@
         <p class="lede">Other places in Disney Area, Local Picks first, then the closest to Kung Fu Kitchen.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/fogo-orlando-vineland.html">Fogo de Chão, Vineland Pointe</a> <span class="badge">Local Pick</span></h3>
-          <p class="meta">Fine dining &amp; steak · Brazilian Steakhouse &middot; $$$</p>
+          <div class="vmain"><h3><a href="/venue/fogo-orlando-vineland.html">Fogo de Chão, Vineland Pointe</a> <span class="badge">Local Pick</span></h3>
+          <p class="meta">Fine dining &amp; steak · Brazilian Steakhouse &middot; $$$</p><p class="vsub">Brazilian churrasco staged tableside at Vineland Pointe, where gaucho chefs carve fire-roasted cuts one slice at a time.</p>
           <p class="addr">11543 Regency Village Dr, Orlando, FL 32821</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/evermore-orlando-resort.html">Evermore Orlando Resort</a> <span class="badge">Local Pick</span></h3>
-          <p class="meta">Hotels · Hotel &middot; $$$</p>
+          <img class="vthumb" src="/assets/venue-evermore-orlando-resort.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/evermore-orlando-resort.html">Evermore Orlando Resort</a> <span class="badge">Local Pick</span></h3>
+          <p class="meta">Hotels · Hotel &middot; $$$</p><p class="vsub">The centerpiece is Evermore Bay, a crystal lagoon with its own beach that leaves guests saying the resort feels like it is out of the country.</p>
           <p class="addr">1590 Evermore Way, Orlando, FL 32836</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/orlando-vineland-premium-outlets.html">Orlando Vineland Premium Outlets</a> <span class="badge">Local Pick</span></h3>
-          <p class="meta">Markets &amp; shops · Outlet Mall &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/orlando-vineland-premium-outlets.html">Orlando Vineland Premium Outlets</a> <span class="badge">Local Pick</span></h3>
+          <p class="meta">Markets &amp; shops · Outlet Mall &middot; $$</p><p class="vsub">Minutes from Disney, a Mediterranean-inspired outdoor outlet village anchored by Prada, Bottega Veneta, Burberry, Gucci and Tory Burch.</p>
           <p class="addr">8200 Vineland Ave, Orlando, FL 32821</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/ford-s-garage-vineland-outlets.html">Ford&#x27;s Garage</a></h3>
-          <p class="meta">Burgers &amp; sandwiches · Burger Bar &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/ford-s-garage-vineland-outlets.html">Ford&#x27;s Garage</a></h3>
+          <p class="meta">Burgers &amp; sandwiches · Burger Bar &middot; $$</p><p class="vsub">Inside Vineland Premium Outlets, this vintage garage room has classic cars, shop-rag napkins in hose-clamp rings, and tire sinks.</p>
           <p class="addr">8201 Vineland Ave Ste 1801, Orlando, FL 32821</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/four-flamingos.html">Four Flamingos</a></h3>
-          <p class="meta">Fine dining &amp; steak · Steakhouse &middot; $$$</p>
+          <img class="vthumb" src="/assets/venue-four-flamingos.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/four-flamingos.html">Four Flamingos</a></h3>
+          <p class="meta">Fine dining &amp; steak · Steakhouse &middot; $$$</p><p class="vsub">Richard Blais&#x27;s tropical kitchen at the Hyatt Regency Grand Cypress centers on an open kitchen, a raw bar, and a lobster tank.</p>
           <p class="addr">Four Flamingos, 1 Grand Cypress Blvd, Orlando, FL 32836</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/maple-street-biscuit-company.html">Maple Street Biscuit Company</a></h3>
-          <p class="meta">Breakfast &amp; brunch · Breakfast &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-maple-street-biscuit-company.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/maple-street-biscuit-company.html">Maple Street Biscuit Company</a></h3>
+          <p class="meta">Breakfast &amp; brunch · Breakfast &middot; $$</p><p class="vsub">Scratch-baked biscuits carry the Southern comfort at this Glass House Lane counter, and guests describe a warm, family vibe.</p>
           <p class="addr">Maple Street Biscuit Company, 11810 Glass House Ln, Orlando, FL 32836-3794</p>
-        </article>
+        </div></article>
         </div>
         <div class="handoff">
           <a class="btn-ghost" href="/disney-area-finder.html">See the full Disney Area list</a>

@@ -211,7 +211,14 @@
       .vcard .addr { margin: 0; color: var(--muted); font-size: .9rem; }
       @media (max-width: 640px) { .facts { grid-template-columns: 1fr; } }
     </style>
-  </head>
+  <style data-cardsys>
+/* cardsys: similar rail cards (2026-10-23 overhaul) */
+.vcard{display:flex;gap:12px;align-items:flex-start}
+.vcard .vthumb{flex:0 0 86px;width:86px;height:86px;border-radius:10px;object-fit:cover;display:block}
+.vcard .vmain{flex:1;min-width:0}
+.vcard .vsub{margin:4px 0 0;font-size:.86rem;line-height:1.45;color:var(--muted,#c6bba2)}
+@media (min-width:1000px){.vlist{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start}}
+</style></head>
   <body>
     <header class="hero">
       <div class="hero-in">
@@ -236,45 +243,45 @@
         <div class="actions">
           <a class="action" href="https://www.google.com/maps/search/?api=1&amp;query=Maki+Hibachi+11954+Narcoossee+Rd%2C+Suite+1%2C+Orlando%2C+FL+32827" target="_blank" rel="noopener">Directions &rarr;</a>
           <a class="action" href="/archive.html?venue=maki-hibachi-lake-nona">Open in the full finder</a>
-          <a class="action" href="/lake-nona-district-guide.html">Read the Lake Nona story</a>
+          <a class="action" href="/history/lake-nona.html">Read the Lake Nona story</a>
         </div>
       </section>
 
-      <section class="sec" id="similar">
+      <section class="sec" id="district-story"><p class="kicker">District Story</p><h2>The story of Lake Nona</h2><p class="lede">A lake named on the federal survey maps long before any road led to it, and a district that arrived, all at once, in a single generation.</p><p><a class="btn-ghost" href="/history/lake-nona.html">Read the Lake Nona story &rarr;</a></p></section><section class="sec" id="similar">
         <p class="kicker">Similar Feel</p>
         <h2>More places with this feel</h2>
         <p class="lede">Matched by vibe, not by neighborhood: the places across Greater Orlando closest in spirit to Maki Hibachi.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/nami.html">Nami</a></h3>
-          <p class="meta">Japanese &amp; sushi &middot; Lake Nona &middot; $$$$</p>
+          <div class="vmain"><h3><a href="/venue/nami.html">Nami</a></h3>
+          <p class="meta">Japanese &amp; sushi &middot; Lake Nona &middot; $$$$</p><p class="vsub">Inside Lake Nona&#x27;s Wave Hotel, this serene, low-lit Japanese room is a safe haven for its regulars.</p>
           <p class="addr">Nami, 6004 Artist Ave, Orlando, FL 32827</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/sus-hi-eatstation.html">Sus Hi Eatstation</a></h3>
-          <p class="meta">Japanese &amp; sushi &middot; Lake Nona &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/sus-hi-eatstation.html">Sus Hi Eatstation</a></h3>
+          <p class="meta">Japanese &amp; sushi &middot; Lake Nona &middot; $$</p><p class="vsub">Playful, ninja-themed counter in Lake Nona where you build your own sushi bowl, roll, or burrito exactly how you like it.</p>
           <p class="addr">Sus Hi Eatstation, 9680 Narcoossee Rd, Orlando, FL 32827-7311, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/kobe-japanese-steakhouse.html">Kobe Japanese Steakhouse</a></h3>
-          <p class="meta">Japanese &amp; sushi &middot; International Drive &middot; $</p>
+          <img class="vthumb" src="/assets/venue-kobe-japanese-steakhouse.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/kobe-japanese-steakhouse.html">Kobe Japanese Steakhouse</a></h3>
+          <p class="meta">Japanese &amp; sushi &middot; International Drive &middot; $</p><p class="vsub">Dinner becomes theater on International Drive, with teppanyaki chefs, onion volcanoes, flying shrimp and tricks guests had not seen before.</p>
           <p class="addr">8148 International Dr, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/bento-asian-kitchen-lake-nona.html">BENTO Asian Kitchen + Sushi</a></h3>
-          <p class="meta">Restaurants &middot; Lake Nona &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-bento-asian-kitchen-lake-nona.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/bento-asian-kitchen-lake-nona.html">BENTO Asian Kitchen + Sushi</a></h3>
+          <p class="meta">Restaurants &middot; Lake Nona &middot; $$</p><p class="vsub">Lake Nona&#x27;s fast-casual pan-Asian workhorse: counter ordering, food out fast, and a menu wide enough for split cravings.</p>
           <p class="addr">12851 Narcoossee Rd, Suite 100, Orlando, FL 32832</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/sushi-pop.html">Sushi Pop</a></h3>
-          <p class="meta">Japanese &amp; sushi &middot; Oviedo &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/sushi-pop.html">Sushi Pop</a></h3>
+          <p class="meta">Japanese &amp; sushi &middot; Oviedo &middot; $$</p><p class="vsub">Bold, loud sushi room with anime pop-culture decor, run like an artist&#x27;s studio.</p>
           <p class="addr">Sushi Pop, 310 W Mitchell Hammock Rd, Oviedo, FL 32765-4921</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/boku-sushi.html">Boku Sushi</a></h3>
-          <p class="meta">Japanese &amp; sushi &middot; Maitland &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-boku-sushi.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/boku-sushi.html">Boku Sushi</a></h3>
+          <p class="meta">Japanese &amp; sushi &middot; Maitland &middot; $$</p><p class="vsub">Calm and inviting behind warm wood and stone, this is the Maitland sushi room neighbors fold into their routine.</p>
           <p class="addr">Boku Sushi, 140 Independence Ln, Maitland, FL 32751-5603, United States</p>
-        </article>
+        </div></article>
         </div>
       </section>
 
@@ -284,35 +291,35 @@
         <p class="lede">Other places in Lake Nona, Local Picks first, then the closest to Maki Hibachi.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/boxi-park.html">Boxi Park Lake Nona</a> <span class="badge">Local Pick</span></h3>
-          <p class="meta">Restaurants · Food Hall &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/boxi-park.html">Boxi Park Lake Nona</a> <span class="badge">Local Pick</span></h3>
+          <p class="meta">Restaurants · Food Hall &middot; $$</p><p class="vsub">Shipping containers stacked into an open-air food park in Lake Nona, with a stage, a dog park, and stalls to wander.</p>
           <p class="addr">6877 Tavistock Lakes Blvd, Orlando, FL 32827</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/bento-asian-kitchen-lake-nona.html">BENTO Asian Kitchen + Sushi</a></h3>
-          <p class="meta">Restaurants · Pan-Asian / Asian fusion &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-bento-asian-kitchen-lake-nona.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/bento-asian-kitchen-lake-nona.html">BENTO Asian Kitchen + Sushi</a></h3>
+          <p class="meta">Restaurants · Pan-Asian / Asian fusion &middot; $$</p><p class="vsub">Lake Nona&#x27;s fast-casual pan-Asian workhorse: counter ordering, food out fast, and a menu wide enough for split cravings.</p>
           <p class="addr">12851 Narcoossee Rd, Suite 100, Orlando, FL 32832</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/lake-nona-deli-and-market.html">Lake Nona Deli and Market</a></h3>
-          <p class="meta">Burgers &amp; sandwiches · Deli &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/lake-nona-deli-and-market.html">Lake Nona Deli and Market</a></h3>
+          <p class="meta">Burgers &amp; sandwiches · Deli &middot; $</p><p class="vsub">Village Walk&#x27;s neighborhood counter, part deli, part pizzeria, part market, built on Boar&#x27;s Head meats and Olde Hearth bread.</p>
           <p class="addr">8510 Insular Ln, Orlando, FL 32827</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/canvas-restaurant-market.html">Canvas Restaurant &amp; Market</a></h3>
-          <p class="meta">American · New American &middot; $$$</p>
+          <img class="vthumb" src="/assets/venue-canvas-restaurant-market.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/canvas-restaurant-market.html">Canvas Restaurant &amp; Market</a></h3>
+          <p class="meta">American · New American &middot; $$$</p><p class="vsub">Laureate Park&#x27;s lakeside table in Lake Nona is relaxed and upscale, with water views and a breezy patio.</p>
           <p class="addr">13615 Sachs Ave, Orlando, FL 32827</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/babbi-babbi-lake-nona.html">BaBbi BaBbi Korean Kitchen</a></h3>
-          <p class="meta">Restaurants · Korean BBQ &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/babbi-babbi-lake-nona.html">BaBbi BaBbi Korean Kitchen</a></h3>
+          <p class="meta">Restaurants · Korean BBQ &middot; $$</p><p class="vsub">Bright and fast casual at the Shoppes at East Park Village, where K-pop energy meets sizzling stone pots.</p>
           <p class="addr">10799 Moss Park Rd, Suite 102, Orlando, FL 32832</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/pisco-express-lake-nona.html">Pisco Express</a></h3>
-          <p class="meta">Latin &amp; Caribbean · Peruvian &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/pisco-express-lake-nona.html">Pisco Express</a></h3>
+          <p class="meta">Latin &amp; Caribbean · Peruvian &middot; $</p><p class="vsub">Peruvian cooking at counter speed inside Eagle Creek Center, and guests keep adding it to the rotation.</p>
           <p class="addr">9717 Eagle Creek Center Blvd, Suite 100, Orlando, FL 32832</p>
-        </article>
+        </div></article>
         </div>
         <div class="handoff">
           <a class="btn-ghost" href="/lake-nona-finder.html">See the full Lake Nona list</a>

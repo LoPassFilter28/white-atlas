@@ -211,7 +211,14 @@
       .vcard .addr { margin: 0; color: var(--muted); font-size: .9rem; }
       @media (max-width: 640px) { .facts { grid-template-columns: 1fr; } }
     </style>
-  </head>
+  <style data-cardsys>
+/* cardsys: similar rail cards (2026-10-23 overhaul) */
+.vcard{display:flex;gap:12px;align-items:flex-start}
+.vcard .vthumb{flex:0 0 86px;width:86px;height:86px;border-radius:10px;object-fit:cover;display:block}
+.vcard .vmain{flex:1;min-width:0}
+.vcard .vsub{margin:4px 0 0;font-size:.86rem;line-height:1.45;color:var(--muted,#c6bba2)}
+@media (min-width:1000px){.vlist{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start}}
+</style></head>
   <body>
     <header class="hero">
       <div class="hero-in">
@@ -236,46 +243,46 @@
         <div class="actions">
           <a class="action" href="https://www.google.com/maps/search/?api=1&amp;query=Kai+Asian+Street+Fare+1555+State+Rd+436+Ste+1171%2C+Winter+Park%2C+FL+32792" target="_blank" rel="noopener">Directions &rarr;</a>
           <a class="action" href="/archive.html?venue=kai-asian-street-fare">Open in the full finder</a>
-          <a class="action" href="/winter-park-district-guide.html">Read the Winter Park story</a>
+          <a class="action" href="/history/winter-park.html">Read the Winter Park story</a>
           <a class="action action-ig" href="https://www.instagram.com/kaiasianstreetfare" target="_blank" rel="noopener"><svg class="ig-glyph" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="vertical-align:-2px;margin-right:6px"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg> Instagram</a>
         </div>
       </section>
 
-      <section class="sec" id="similar">
+      <section class="sec" id="district-story"><p class="kicker">District Story</p><h2>The story of Winter Park</h2><p class="lede">A park built for the winter, drawn on paper in 1881, and still legible in every street you walk today.</p><p><a class="btn-ghost" href="/history/winter-park.html">Read the Winter Park story &rarr;</a></p></section><section class="sec" id="similar">
         <p class="kicker">Similar Feel</p>
         <h2>More places with this feel</h2>
         <p class="lede">Matched by vibe, not by neighborhood: the places across Greater Orlando closest in spirit to Kai Asian Street Fare.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/kai-kai-bbq-dumplings.html">Kai Kai BBQ &amp; Dumplings</a></h3>
-          <p class="meta">Chinese &middot; Mills 50 &middot; $</p>
+          <img class="vthumb" src="/assets/venue-kai-kai-bbq-dumplings.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/kai-kai-bbq-dumplings.html">Kai Kai BBQ &amp; Dumplings</a></h3>
+          <p class="meta">Chinese &middot; Mills 50 &middot; $</p><p class="vsub">A no-frills Cantonese barbecue counter inside Mills Market, Chinatown-style and fast-moving.</p>
           <p class="addr">Mills Market, 1110 E Colonial Dr, Orlando, FL 32803</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/asia-kitchen.html">Asia Kitchen</a></h3>
-          <p class="meta">Noodles &amp; Southeast Asian &middot; Winter Park &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/asia-kitchen.html">Asia Kitchen</a></h3>
+          <p class="meta">Noodles &amp; Southeast Asian &middot; Winter Park &middot; $</p><p class="vsub">Bright and spotless on Lake Howell Road, a neighborhood staple where you might get fresh wontons while you wait.</p>
           <p class="addr">Asia Kitchen, 5405 Lake Howell Rd, Winter Park, FL 32792</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/moa-kai-hawaiian-diner.html">Moa Kai Hawaiian Diner</a></h3>
-          <p class="meta">Restaurants &middot; Orlando &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/moa-kai-hawaiian-diner.html">Moa Kai Hawaiian Diner</a></h3>
+          <p class="meta">Restaurants &middot; Orlando &middot; $$</p><p class="vsub">Retro diner comfort meets Hawaiian cooking on East Colonial Drive, all tropical color and aloha warmth.</p>
           <p class="addr">Moa Kai Hawaiian Diner, 2217 E Colonial Dr, Orlando, FL 32803-4911, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/morimoto.html">Morimoto Asia</a></h3>
-          <p class="meta">Restaurants &middot; Disney Springs &middot; $$$</p>
+          <img class="vthumb" src="/assets/venue-morimoto.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/morimoto.html">Morimoto Asia</a></h3>
+          <p class="meta">Restaurants &middot; Disney Springs &middot; $$$</p><p class="vsub">At Disney Springs, this sleek, theatrical dining room is one guests call a diamond.</p>
           <p class="addr">Morimoto Asia, 1600 E Buena Vista Dr, Lake Buena Vista, FL 32830</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/poke-hana.html">Poke Hana</a></h3>
-          <p class="meta">Restaurants &middot; Mills 50 &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/poke-hana.html">Poke Hana</a></h3>
+          <p class="meta">Restaurants &middot; Mills 50 &middot; $$</p><p class="vsub">A bright, laid-back Hawaiian counter on East Colonial Drive in Mills 50, where the poke bowls taste as fresh as the room feels.</p>
           <p class="addr">1225A E Colonial Dr, Orlando, FL 32803</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/thai-place.html">Thai Place</a></h3>
-          <p class="meta">Noodles &amp; Southeast Asian &middot; Winter Park &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/thai-place.html">Thai Place</a></h3>
+          <p class="meta">Noodles &amp; Southeast Asian &middot; Winter Park &middot; $$</p><p class="vsub">Family-run since 1999, this calm, cozy Winter Park Village room is where longtime regulars bring everyone they love.</p>
           <p class="addr">Thai Place, 501 N Orlando Ave Ste 319, Winter Park, FL 32789</p>
-        </article>
+        </div></article>
         </div>
       </section>
 
@@ -285,35 +292,35 @@
         <p class="lede">Other places in Winter Park, Local Picks first, then the closest to Kai Asian Street Fare.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/ava.html">AVA Mediterranean</a> <span class="badge">Local Pick</span></h3>
-          <p class="meta">Mediterranean &middot; $$$</p>
+          <img class="vthumb" src="/assets/venue-ava.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/ava.html">AVA Mediterranean</a> <span class="badge">Local Pick</span></h3>
+          <p class="meta">Mediterranean &middot; $$$</p><p class="vsub">A glamorous Greek agora on Park Avenue, sophisticated and high-energy from the moment you sit down.</p>
           <p class="addr">290 S Park Ave, Winter Park, FL 32789</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/imperial-on-park.html">The Imperial on Park</a> <span class="badge">Local Pick</span></h3>
-          <p class="meta">Bars &amp; lounges · Wine Bar &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-imperial-on-park.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/imperial-on-park.html">The Imperial on Park</a> <span class="badge">Local Pick</span></h3>
+          <p class="meta">Bars &amp; lounges · Wine Bar &middot; $$</p><p class="vsub">Park Avenue&#x27;s neighborhood bar, warm and laid back, with boutique wines, craft beers and cocktails built on Winter Park Distillery spirits.</p>
           <p class="addr">136 S Park Ave, Winter Park, FL 32789</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/prato.html">Prato</a> <span class="badge">Local Pick</span></h3>
-          <p class="meta">Italian &middot; $$$</p>
+          <div class="vmain"><h3><a href="/venue/prato.html">Prato</a> <span class="badge">Local Pick</span></h3>
+          <p class="meta">Italian &middot; $$$</p><p class="vsub">Italian the Park Avenue way: rustic yet upscale, exposed brick and warm light, house-made pastas and wood-fired pizzas.</p>
           <p class="addr">Prato, 124 N Park Ave, Winter Park, FL 32789</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/aint-miss-behavin.html">Ain&#x27;t Miss Behavin&#x27; Sports and Tiki Bar</a></h3>
-          <p class="meta">Bars &amp; lounges · Tiki Bar &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/aint-miss-behavin.html">Ain&#x27;t Miss Behavin&#x27; Sports and Tiki Bar</a></h3>
+          <p class="meta">Bars &amp; lounges · Tiki Bar &middot; $</p><p class="vsub">Cozy and hole-in-the-wall on FL-436, this sports and tiki bar keeps a local crowd where everybody is welcome.</p>
           <p class="addr">Ain&#x27;t Miss Behavin&#x27; Sports and Tiki Bar, 1550 FL-436, Winter Park, FL 32792</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/asia-kitchen.html">Asia Kitchen</a></h3>
-          <p class="meta">Noodles &amp; Southeast Asian · Boba &amp; Asian Fusion &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/asia-kitchen.html">Asia Kitchen</a></h3>
+          <p class="meta">Noodles &amp; Southeast Asian · Boba &amp; Asian Fusion &middot; $</p><p class="vsub">Bright and spotless on Lake Howell Road, a neighborhood staple where you might get fresh wontons while you wait.</p>
           <p class="addr">Asia Kitchen, 5405 Lake Howell Rd, Winter Park, FL 32792</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/boardwalk-pizza.html">Boardwalk Pizza</a></h3>
-          <p class="meta">Pizza · Pizza &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-boardwalk-pizza.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/boardwalk-pizza.html">Boardwalk Pizza</a></h3>
+          <p class="meta">Pizza · Pizza &middot; $$</p><p class="vsub">Jersey shore, old-school pizzeria feel comes to Lake Howell Road, with an open kitchen and a small-town welcome.</p>
           <p class="addr">Boardwalk Pizza, 5419 Lake Howell Rd, Winter Park, FL 32792</p>
-        </article>
+        </div></article>
         </div>
         <div class="handoff">
           <a class="btn-ghost" href="/winter-park-finder.html">See the full Winter Park list</a>

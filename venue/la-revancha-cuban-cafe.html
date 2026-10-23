@@ -211,7 +211,14 @@
       .vcard .addr { margin: 0; color: var(--muted); font-size: .9rem; }
       @media (max-width: 640px) { .facts { grid-template-columns: 1fr; } }
     </style>
-  </head>
+  <style data-cardsys>
+/* cardsys: similar rail cards (2026-10-23 overhaul) */
+.vcard{display:flex;gap:12px;align-items:flex-start}
+.vcard .vthumb{flex:0 0 86px;width:86px;height:86px;border-radius:10px;object-fit:cover;display:block}
+.vcard .vmain{flex:1;min-width:0}
+.vcard .vsub{margin:4px 0 0;font-size:.86rem;line-height:1.45;color:var(--muted,#c6bba2)}
+@media (min-width:1000px){.vlist{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start}}
+</style></head>
   <body>
     <header class="hero">
       <div class="hero-in">
@@ -239,41 +246,41 @@
         </div>
       </section>
 
-      <section class="sec" id="similar">
+      <section class="sec" id="district-story"><p class="kicker">District Stories</p><h2>Orlando&#x27;s long memory</h2><p class="lede">The guide keeps the long memory of Orlando&#x27;s districts in one place: the names, the plats and the stories behind the streets.</p><p><a class="btn-ghost" href="/history.html">Browse the district stories &rarr;</a></p></section><section class="sec" id="similar">
         <p class="kicker">Similar Feel</p>
         <h2>More places with this feel</h2>
         <p class="lede">Matched by vibe, not by neighborhood: the places across Greater Orlando closest in spirit to La Revancha Cuban Cafe.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/cuban-american-cafe.html">Cuban American Cafe</a></h3>
-          <p class="meta">Latin &amp; Caribbean &middot; Downtown &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/cuban-american-cafe.html">Cuban American Cafe</a></h3>
+          <p class="meta">Latin &amp; Caribbean &middot; Downtown &middot; $</p><p class="vsub">Tucked inside a downtown credit union on Central Boulevard, a no-frills, family-run spot regulars call the real deal.</p>
           <p class="addr">135 W Central Blvd Ste 160, Orlando, FL 32801</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/cuba-libre-pointe-orlando.html">Cuba Libre</a></h3>
-          <p class="meta">Latin &amp; Caribbean &middot; Pointe Orlando &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/cuba-libre-pointe-orlando.html">Cuba Libre</a></h3>
+          <p class="meta">Latin &amp; Caribbean &middot; Pointe Orlando &middot; $$</p><p class="vsub">A two-story Old Havana courtyard rebuilt inside Pointe Orlando, all palm shadows, live Latin music, and rum.</p>
           <p class="addr">9101 International Dr #1004, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/black-bean-deli.html">Black Bean Deli</a></h3>
-          <p class="meta">Latin &amp; Caribbean &middot; Mills 50 &middot; $</p>
+          <img class="vthumb" src="/assets/venue-black-bean-deli.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/black-bean-deli.html">Black Bean Deli</a></h3>
+          <p class="meta">Latin &amp; Caribbean &middot; Mills 50 &middot; $</p><p class="vsub">An airy, plant-filled Mills 50 cafe where Cuban family recipes anchor the menu and regulars say it reminds them of home.</p>
           <p class="addr">1835 E Colonial Dr, Orlando, FL 32803</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/junior-colombian-burger.html">Junior Colombian Burger</a></h3>
-          <p class="meta">Burgers &amp; sandwiches &middot; University &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/junior-colombian-burger.html">Junior Colombian Burger</a></h3>
+          <p class="meta">Burgers &amp; sandwiches &middot; University &middot; $</p><p class="vsub">On East Colonial Drive, Colombian street food meets the American burger, and nothing about it is quiet.</p>
           <p class="addr">11875 E Colonial Dr, Orlando, FL</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/zaza-cuban-comfort-food.html">Zaza Cuban Comfort Food</a></h3>
-          <p class="meta">Latin &amp; Caribbean &middot; SoDo &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/zaza-cuban-comfort-food.html">Zaza Cuban Comfort Food</a></h3>
+          <p class="meta">Latin &amp; Caribbean &middot; SoDo &middot; $</p><p class="vsub">A family-run neighborhood diner in SoDo, on South Orange Avenue, built around cafecito culture and pressed sandwiches.</p>
           <p class="addr">1621 S Orange Ave, Orlando, FL 32806</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/crocante-restaurant.html">Crocante Restaurant</a></h3>
-          <p class="meta">Latin &amp; Caribbean &middot; Baldwin Park &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-crocante-restaurant.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/crocante-restaurant.html">Crocante Restaurant</a></h3>
+          <p class="meta">Latin &amp; Caribbean &middot; Baldwin Park &middot; $$</p><p class="vsub">Puerto Rican cooking on East Colonial Drive with a full cocktail bar and a festive take on homestyle flavors.</p>
           <p class="addr">Crocante Restaurant, 4311 E Colonial Dr, Orlando, FL 32803-5217</p>
-        </article>
+        </div></article>
         </div>
       </section>
 
@@ -283,35 +290,35 @@
         <p class="lede">Other places in Baldwin Park, closest to La Revancha Cuban Cafe first.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/blue-amphora.html">Blue Amphora</a></h3>
-          <p class="meta">Bakeries · Turkish Bakery &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-blue-amphora.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/blue-amphora.html">Blue Amphora</a></h3>
+          <p class="meta">Bakeries · Turkish Bakery &middot; $$</p><p class="vsub">Welcoming and sparkling clean on North Goldenrod Road, a Turkish bakery where the case centers on baklava.</p>
           <p class="addr">Blue Amphora, 1461 N Goldenrod Rd, Orlando, FL 32807-8301, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/valhalla-bakery.html">Valhalla Bakery</a></h3>
-          <p class="meta">Bakeries · Bakery &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/valhalla-bakery.html">Valhalla Bakery</a></h3>
+          <p class="meta">Bakeries · Bakery &middot; $</p><p class="vsub">On Old Cheney Highway, a fully vegan bakery, with doughnuts, cupcakes and cakes made without dairy or egg and a case that keeps changing.</p>
           <p class="addr">5565 Old Cheney Hwy, Orlando, FL 32807</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/golden-hour.html">Golden Hour Wine</a></h3>
-          <p class="meta">Bars &amp; lounges · Wine Bar &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-golden-hour.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/golden-hour.html">Golden Hour Wine</a></h3>
+          <p class="meta">Bars &amp; lounges · Wine Bar &middot; $$</p><p class="vsub">A small, intimate natural wine shop and bar in Baldwin Park pouring responsibly farmed, small-production wines by the taste.</p>
           <p class="addr">Golden Hour Wine, 1560 Lake Baldwin Ln, Orlando, FL 32814-6661</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/camille.html">Camille</a></h3>
-          <p class="meta">Noodles &amp; Southeast Asian · Vietnamese &middot; $$$$</p>
+          <img class="vthumb" src="/assets/venue-camille.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/camille.html">Camille</a></h3>
+          <p class="meta">Noodles &amp; Southeast Asian · Vietnamese &middot; $$$$</p><p class="vsub">Chef Tung Phan named this Baldwin Park counter for his daughter, pairing Vietnamese flavors with French forms in an intimate room.</p>
           <p class="addr">Camille, 4962 New Broad St, Orlando, FL 32814-6415</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/osprey.html">The Osprey</a></h3>
-          <p class="meta">Seafood &middot; $$$</p>
+          <img class="vthumb" src="/assets/venue-osprey.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/osprey.html">The Osprey</a></h3>
+          <p class="meta">Seafood &middot; $$$</p><p class="vsub">On New Broad Street in Baldwin Park, an open kitchen and buzzing central bar anchor coastal cooking led by the oyster bar.</p>
           <p class="addr">The Osprey, 4899 New Broad St, Orlando, FL 32814-6629</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/tactical-brewing-company.html">Tactical Brewing Company</a></h3>
-          <p class="meta">Breweries · Brewery &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-tactical-brewing-company.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/tactical-brewing-company.html">Tactical Brewing Company</a></h3>
+          <p class="meta">Breweries · Brewery &middot; $$</p><p class="vsub">Veteran-founded brewery on New Broad Street in Baldwin Park, pouring with a playful streak, especially in its sours.</p>
           <p class="addr">Tactical Brewing Company, 4882 New Broad St, Orlando, FL 32814-6628, United States</p>
-        </article>
+        </div></article>
         </div>
         <div class="handoff">
           <a class="btn-ghost" href="/baldwin-park-finder.html">See the full Baldwin Park list</a>

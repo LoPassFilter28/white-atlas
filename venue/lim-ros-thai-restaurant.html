@@ -211,7 +211,14 @@
       .vcard .addr { margin: 0; color: var(--muted); font-size: .9rem; }
       @media (max-width: 640px) { .facts { grid-template-columns: 1fr; } }
     </style>
-  </head>
+  <style data-cardsys>
+/* cardsys: similar rail cards (2026-10-23 overhaul) */
+.vcard{display:flex;gap:12px;align-items:flex-start}
+.vcard .vthumb{flex:0 0 86px;width:86px;height:86px;border-radius:10px;object-fit:cover;display:block}
+.vcard .vmain{flex:1;min-width:0}
+.vcard .vsub{margin:4px 0 0;font-size:.86rem;line-height:1.45;color:var(--muted,#c6bba2)}
+@media (min-width:1000px){.vlist{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start}}
+</style></head>
   <body>
     <header class="hero">
       <div class="hero-in">
@@ -240,41 +247,41 @@
         </div>
       </section>
 
-      <section class="sec" id="similar">
+      <section class="sec" id="district-story"><p class="kicker">District Stories</p><h2>Orlando&#x27;s long memory</h2><p class="lede">The guide keeps the long memory of Orlando&#x27;s districts in one place: the names, the plats and the stories behind the streets.</p><p><a class="btn-ghost" href="/history.html">Browse the district stories &rarr;</a></p></section><section class="sec" id="similar">
         <p class="kicker">Similar Feel</p>
         <h2>More places with this feel</h2>
         <p class="lede">Matched by vibe, not by neighborhood: the places across Greater Orlando closest in spirit to Lim Ros Thai Restaurant.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/mengs.html">Mengs Kitchen</a></h3>
-          <p class="meta">Noodles &amp; Southeast Asian &middot; Colonial &middot; $</p>
+          <img class="vthumb" src="/assets/venue-mengs.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/mengs.html">Mengs Kitchen</a></h3>
+          <p class="meta">Noodles &amp; Southeast Asian &middot; Colonial &middot; $</p><p class="vsub">Tucked into the back of iFresh Market on East Colonial, this tiny, no-frills stall cooks Southeast Asian comfort food that tastes like home.</p>
           <p class="addr">Meng&#x27;s Kitchen, 2415 E Colonial Dr, Orlando, FL 32803-5018</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/sea-thai-restaurant.html">Sea Thai Restaurant</a></h3>
-          <p class="meta">Noodles &amp; Southeast Asian &middot; Orlando &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/sea-thai-restaurant.html">Sea Thai Restaurant</a></h3>
+          <p class="meta">Noodles &amp; Southeast Asian &middot; Orlando &middot; $$</p><p class="vsub">Tucked into a strip mall on East Colonial, cozy and unhurried, with jazz and bossa nova and summer rolls with peanut sauce.</p>
           <p class="addr">Sea Thai Restaurant, 3812 E Colonial Dr, Orlando, FL 32803-5208, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/thai-house.html">Thai House</a></h3>
-          <p class="meta">Noodles &amp; Southeast Asian &middot; Mills 50 &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-thai-house.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/thai-house.html">Thai House</a></h3>
+          <p class="meta">Noodles &amp; Southeast Asian &middot; Mills 50 &middot; $$</p><p class="vsub">A small, cozy, old-school room on East Colonial, family owned and proudly unpretentious.</p>
           <p class="addr">Thai House, 2117 E Colonial Dr, Orlando, FL 32803-4834</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/kung-fu.html">Kung Fu Kitchen</a></h3>
-          <p class="meta">Chinese &middot; Disney Area &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/kung-fu.html">Kung Fu Kitchen</a></h3>
+          <p class="meta">Chinese &middot; Disney Area &middot; $$</p><p class="vsub">A bustling, welcoming Chinese spot on Palm Parkway where hand-pulled and knife-cut noodles land springy and fresh.</p>
           <p class="addr">Kungfu Kitchen, 8466 Palm Pkwy, Orlando, FL 32836-6431</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/kaya.html">Kaya</a></h3>
-          <p class="meta">Fine dining &amp; steak &middot; Mills 50 &middot; $$$$</p>
+          <img class="vthumb" src="/assets/venue-kaya.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/kaya.html">Kaya</a></h3>
+          <p class="meta">Fine dining &amp; steak &middot; Mills 50 &middot; $$$$</p><p class="vsub">Filipino cooking in a cozy house on Thornton Avenue that feels like grandma&#x27;s house, if grandma cooked at a very high level.</p>
           <p class="addr">618 N Thornton Ave, Orlando, FL 32803</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/shin-jung.html">Shin Jung</a></h3>
-          <p class="meta">Restaurants &middot; Mills 50 &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/shin-jung.html">Shin Jung</a></h3>
+          <p class="meta">Restaurants &middot; Mills 50 &middot; $$</p><p class="vsub">A cozy, lively Korean barbecue room on East Colonial where tabletop grills hiss and K-pop plays over the spread.</p>
           <p class="addr">1638 E Colonial Dr, Orlando, FL 32803</p>
-        </article>
+        </div></article>
         </div>
       </section>
 
@@ -284,35 +291,35 @@
         <p class="lede">Other places in Maitland, closest to Lim Ros Thai Restaurant first.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/permanent-vacation.html">Permanent Vacation</a></h3>
-          <p class="meta">Bars &amp; lounges · Bar &middot; $$$</p>
+          <div class="vmain"><h3><a href="/venue/permanent-vacation.html">Permanent Vacation</a></h3>
+          <p class="meta">Bars &amp; lounges · Bar &middot; $$$</p><p class="vsub">Behind an Employees Only door inside the Copper Rocket, this spot trades the sports bar for dark, theatrical tiki.</p>
           <p class="addr">Permanent Vacation, 106 Lake Ave, Maitland, FL 32751-6424</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/jazz-tastings.html">Jazz Tastings</a></h3>
-          <p class="meta">Nightlife &amp; music · Jazz Supper Club &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-jazz-tastings.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/jazz-tastings.html">Jazz Tastings</a></h3>
+          <p class="meta">Nightlife &amp; music · Jazz Supper Club &middot; $$</p><p class="vsub">Maitland&#x27;s intimate supper club on Lake Ave, a low-lit room where dinner and the show share the same table.</p>
           <p class="addr">164 Lake Ave, Maitland, FL 32751</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/antonios-maitland.html">Antonio&#x27;s</a></h3>
-          <p class="meta">Italian · Italian Restaurant &middot; $$$</p>
+          <img class="vthumb" src="/assets/venue-antonios-maitland.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/antonios-maitland.html">Antonio&#x27;s</a></h3>
+          <p class="meta">Italian · Italian Restaurant &middot; $$$</p><p class="vsub">Upstairs at Antonio&#x27;s, Maitland&#x27;s old-school special-occasion room has white tablecloths overlooking Lake Lily.</p>
           <p class="addr">611 S Orlando Ave, Maitland, FL 32751</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/antonios-market-cafe.html">Antonio&#x27;s Market &amp; Cafe</a></h3>
-          <p class="meta">Italian · Italian Market &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/antonios-market-cafe.html">Antonio&#x27;s Market &amp; Cafe</a></h3>
+          <p class="meta">Italian · Italian Market &middot; $$</p><p class="vsub">Downstairs, the casual half: a cafe and boutique Italian market under the same roof as the upstairs dining room.</p>
           <p class="addr">611 S Orlando Ave, Maitland, FL 32751</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/lukes-kitchen.html">Lukes Kitchen and Bar</a></h3>
-          <p class="meta">American &middot; $$$</p>
+          <div class="vmain"><h3><a href="/venue/lukes-kitchen.html">Lukes Kitchen and Bar</a></h3>
+          <p class="meta">American &middot; $$$</p><p class="vsub">From the team behind Luma on Park and Prato, this Maitland spot does playful American cooking with an open kitchen and praised patio.</p>
           <p class="addr">Luke&#x27;s Kitchen and Bar, 640 Orlando Ave S, Maitland, FL 32751-5612</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/francescos.html">Francesco&#x27;s Ristorante</a></h3>
-          <p class="meta">Italian &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-francescos.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/francescos.html">Francesco&#x27;s Ristorante</a></h3>
+          <p class="meta">Italian &middot; $$</p><p class="vsub">In Maitland, Sicilian-rooted Italian cooking comes out of a warm open kitchen where guests feel like family.</p>
           <p class="addr">Francesco&#x27;s Ristorante, 400 S Orlando Ave, Maitland, FL 32751</p>
-        </article>
+        </div></article>
         </div>
         <div class="handoff">
           <a class="btn-ghost" href="/maitland-finder.html">See the full Maitland list</a>

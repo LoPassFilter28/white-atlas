@@ -211,7 +211,14 @@
       .vcard .addr { margin: 0; color: var(--muted); font-size: .9rem; }
       @media (max-width: 640px) { .facts { grid-template-columns: 1fr; } }
     </style>
-  </head>
+  <style data-cardsys>
+/* cardsys: similar rail cards (2026-10-23 overhaul) */
+.vcard{display:flex;gap:12px;align-items:flex-start}
+.vcard .vthumb{flex:0 0 86px;width:86px;height:86px;border-radius:10px;object-fit:cover;display:block}
+.vcard .vmain{flex:1;min-width:0}
+.vcard .vsub{margin:4px 0 0;font-size:.86rem;line-height:1.45;color:var(--muted,#c6bba2)}
+@media (min-width:1000px){.vlist{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start}}
+</style></head>
   <body>
     <header class="hero">
       <div class="hero-in">
@@ -236,46 +243,46 @@
         <div class="actions">
           <a class="action" href="https://www.google.com/maps/search/?api=1&amp;query=June+700+E+Washington+St%2C+Orlando%2C+FL+32801" target="_blank" rel="noopener">Directions &rarr;</a>
           <a class="action" href="/archive.html?venue=june-orlando">Open in the full finder</a>
-          <a class="action" href="/downtown-orlando-district-guide.html">Read the Downtown Orlando story</a>
+          <a class="action" href="/history/downtown.html">Read the Downtown Orlando story</a>
           <a class="action action-ig" href="https://www.instagram.com/juneinorlando" target="_blank" rel="noopener"><svg class="ig-glyph" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="vertical-align:-2px;margin-right:6px"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg> Instagram</a>
         </div>
       </section>
 
-      <section class="sec" id="similar">
+      <section class="sec" id="district-story"><p class="kicker">District Story</p><h2>The story of Downtown</h2><p class="lede">A fort, a courthouse plat and a citrus boom built it. A name nobody can prove still runs it.</p><p><a class="btn-ghost" href="/history/downtown.html">Read the Downtown story &rarr;</a></p></section><section class="sec" id="similar">
         <p class="kicker">Similar Feel</p>
         <h2>More places with this feel</h2>
         <p class="lede">Matched by vibe, not by neighborhood: the places across Greater Orlando closest in spirit to June.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/f-d-cantina.html">F&amp;D Cantina</a></h3>
-          <p class="meta">Mexican &middot; Thornton Park &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-f-d-cantina.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/f-d-cantina.html">F&amp;D Cantina</a></h3>
+          <p class="meta">Mexican &middot; Thornton Park &middot; $$</p><p class="vsub">On East Central, Thornton Park&#x27;s festive cantina, a dog-friendly patio room where regulars dream about birria tacos and the watermelon margarita.</p>
           <p class="addr">617 E Central Blvd, Orlando, FL 32801</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/osteria-ester.html">Osteria Ester</a></h3>
-          <p class="meta">Italian &middot; Thornton Park &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/osteria-ester.html">Osteria Ester</a></h3>
+          <p class="meta">Italian &middot; Thornton Park &middot; $$</p><p class="vsub">The Good Salt group brings its touch to Italian American cooking on East Central, a warm room that reads as a neighborhood red sauce joint.</p>
           <p class="addr">629 E Central Blvd, Orlando, FL</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/seasons-52.html">Seasons 52</a></h3>
-          <p class="meta">American &middot; Sand Lake &middot; $$$</p>
+          <div class="vmain"><h3><a href="/venue/seasons-52.html">Seasons 52</a></h3>
+          <p class="meta">American &middot; Sand Lake &middot; $$$</p><p class="vsub">Oak fire and a brick oven drive the menu here, turning with the seasons and portions sized for humans.</p>
           <p class="addr">7700 W Sand Lake Rd, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/outpost-neighborhood-tavern.html">Outpost Neighborhood Tavern</a></h3>
-          <p class="meta">American &middot; Thornton Park &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-outpost-neighborhood-tavern.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/outpost-neighborhood-tavern.html">Outpost Neighborhood Tavern</a></h3>
+          <p class="meta">American &middot; Thornton Park &middot; $$</p><p class="vsub">Two blocks off Lake Eola, a welcoming room guests call a cross between a sports bar and a boutique restaurant, with a lively patio and trivia leagues.</p>
           <p class="addr">227 N Eola Dr, Orlando, FL 32801</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/foreigner.html">Foreigner Restaurant</a></h3>
-          <p class="meta">Fine dining &amp; steak &middot; Audubon Park &middot; $$$$</p>
+          <div class="vmain"><h3><a href="/venue/foreigner.html">Foreigner Restaurant</a></h3>
+          <p class="meta">Fine dining &amp; steak &middot; Audubon Park &middot; $$$$</p><p class="vsub">Chef Bruno Fonseca&#x27;s counter on Corrine Drive is an intimate tasting room with a menu that changes month to month.</p>
           <p class="addr">Foreigner Restaurant, 2816 Corrine Dr, Orlando, FL 32803-2226</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/cocina-maya-mexican-grill-mezcaleria.html">Cocina Maya Mexican Grill &amp; Mezcaleria</a></h3>
-          <p class="meta">Mexican &middot; Lake Mary &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/cocina-maya-mexican-grill-mezcaleria.html">Cocina Maya Mexican Grill &amp; Mezcaleria</a></h3>
+          <p class="meta">Mexican &middot; Lake Mary &middot; $$</p><p class="vsub">Cozy, festive Lake Mary room where Mexican cooking goes well past taco-shop basics, with a little tableside flair.</p>
           <p class="addr">3590 US-17 Ste 1026, Lake Mary, FL 32746</p>
-        </article>
+        </div></article>
         </div>
       </section>
 
@@ -285,35 +292,35 @@
         <p class="lede">Other places in Downtown Orlando, Local Picks first, then the closest to June.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/fixtion.html">Fixtion Restaurant &amp; Bar</a> <span class="badge">Local Pick</span></h3>
-          <p class="meta">American · American Restaurant &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/fixtion.html">Fixtion Restaurant &amp; Bar</a> <span class="badge">Local Pick</span></h3>
+          <p class="meta">American · American Restaurant &middot; $$</p><p class="vsub">On Orange Avenue, comfort food and huge comfy booths early, club energy after dark, shape-shifting through the day.</p>
           <p class="addr">15 N Orange Ave, Orlando, FL 32801</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/wall-street-plaza.html">Wall Street Plaza</a> <span class="badge">Local Pick</span></h3>
-          <p class="meta">Nightlife &amp; music · Entertainment District &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/wall-street-plaza.html">Wall Street Plaza</a> <span class="badge">Local Pick</span></h3>
+          <p class="meta">Nightlife &amp; music · Entertainment District &middot; $$</p><p class="vsub">One downtown block holds the whole crawl: eight bars and patios that, on a big night, turn into a single street party.</p>
           <p class="addr">25 Wall St, Orlando, FL 32801</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/elixir-kitchen-bar.html">Elixir Kitchen and Bar</a> <span class="badge">Local Pick</span></h3>
-          <p class="meta">Bars &amp; lounges · Bar &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-elixir-kitchen-bar.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/elixir-kitchen-bar.html">Elixir Kitchen and Bar</a> <span class="badge">Local Pick</span></h3>
+          <p class="meta">Bars &amp; lounges · Bar &middot; $$</p><p class="vsub">A rustic-hip gastropub in one of downtown&#x27;s original buildings, and very much the neighborhood&#x27;s spot.</p>
           <p class="addr">9 W Washington St, Orlando, FL 32801</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/lake-eola.html">Lake Eola Park &amp; Linton E. Allen Memorial Fountain</a></h3>
-          <p class="meta">Parks &amp; outdoors · Park &middot; $</p>
+          <img class="vthumb" src="/assets/venue-lake-eola.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/lake-eola.html">Lake Eola Park &amp; Linton E. Allen Memorial Fountain</a></h3>
+          <p class="meta">Parks &amp; outdoors · Park &middot; $</p><p class="vsub">Downtown&#x27;s lake is the city&#x27;s front porch, with swans, pedal boats, a lit fountain, and a shaded loop around the shore.</p>
           <p class="addr">Lake Eola Park, 512 E Washington St, Orlando, FL 32801-1941</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/nic-luc.html">Nic &amp; Luc</a></h3>
-          <p class="meta">Breakfast &amp; brunch · Brunch &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/nic-luc.html">Nic &amp; Luc</a></h3>
+          <p class="meta">Breakfast &amp; brunch · Brunch &middot; $$</p><p class="vsub">A small, family-run cafe inside the PNC building on Pine Street, scratch-made and no-frills.</p>
           <p class="addr">201 E Pine St #101, Orlando, FL 32801</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/celine.html">Celine Orlando</a></h3>
-          <p class="meta">Nightlife &amp; music · Club &middot; $$$</p>
+          <div class="vmain"><h3><a href="/venue/celine.html">Celine Orlando</a></h3>
+          <p class="meta">Nightlife &amp; music · Club &middot; $$$</p><p class="vsub">Downtown on Magnolia Avenue, it stacks a Prohibition-era speakeasy, a grand main room, and a rooftop guests call their favorite in Orlando.</p>
           <p class="addr">22 S Magnolia Ave, Orlando, FL 32801</p>
-        </article>
+        </div></article>
         </div>
         <div class="handoff">
           <a class="btn-ghost" href="/downtown-orlando-finder.html">See the full Downtown Orlando list</a>

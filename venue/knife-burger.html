@@ -211,7 +211,14 @@
       .vcard .addr { margin: 0; color: var(--muted); font-size: .9rem; }
       @media (max-width: 640px) { .facts { grid-template-columns: 1fr; } }
     </style>
-  </head>
+  <style data-cardsys>
+/* cardsys: similar rail cards (2026-10-23 overhaul) */
+.vcard{display:flex;gap:12px;align-items:flex-start}
+.vcard .vthumb{flex:0 0 86px;width:86px;height:86px;border-radius:10px;object-fit:cover;display:block}
+.vcard .vmain{flex:1;min-width:0}
+.vcard .vsub{margin:4px 0 0;font-size:.86rem;line-height:1.45;color:var(--muted,#c6bba2)}
+@media (min-width:1000px){.vlist{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start}}
+</style></head>
   <body>
     <header class="hero">
       <div class="hero-in">
@@ -239,41 +246,41 @@
         </div>
       </section>
 
-      <section class="sec" id="similar">
+      <section class="sec" id="district-story"><p class="kicker">District Story</p><h2>The story of Grande Lakes</h2><p class="lede">A hotel in the boondocks, a road paved after it and named to sound big and important, and the corridor that taught Orlando how to be a vacation.</p><p><a class="btn-ghost" href="/history/i-drive.html">Read the Grande Lakes story &rarr;</a></p></section><section class="sec" id="similar">
         <p class="kicker">Similar Feel</p>
         <h2>More places with this feel</h2>
         <p class="lede">Matched by vibe, not by neighborhood: the places across Greater Orlando closest in spirit to Knife Burger.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/knife-spoon.html">Knife &amp; Spoon</a></h3>
-          <p class="meta">Fine dining &amp; steak &middot; Grande Lakes &middot; $$$$</p>
+          <div class="vmain"><h3><a href="/venue/knife-spoon.html">Knife &amp; Spoon</a></h3>
+          <p class="meta">Fine dining &amp; steak &middot; Grande Lakes &middot; $$$$</p><p class="vsub">The Ritz-Carlton Grande Lakes steakhouse is built on a simple split, knife for beef and spoon for seafood, in a polished room.</p>
           <p class="addr">Knife &amp; Spoon, 4012 Central Florida Pkwy, Orlando, FL 32837-7662</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/the-whiskey.html">The Whiskey</a></h3>
-          <p class="meta">Bars &amp; lounges &middot; Sand Lake &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/the-whiskey.html">The Whiskey</a></h3>
+          <p class="meta">Bars &amp; lounges &middot; Sand Lake &middot; $$</p><p class="vsub">Rock and roll energy on Sand Lake, with chef-driven burgers and a bar that runs deep on whiskey.</p>
           <p class="addr">7563 W Sand Lake Rd, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/the-capital-grille-pointe-orlando.html">The Capital Grille</a></h3>
-          <p class="meta">Fine dining &amp; steak &middot; Pointe Orlando &middot; $$$$</p>
+          <div class="vmain"><h3><a href="/venue/the-capital-grille-pointe-orlando.html">The Capital Grille</a></h3>
+          <p class="meta">Fine dining &amp; steak &middot; Pointe Orlando &middot; $$$$</p><p class="vsub">The default client steakhouse at Pointe Orlando, a short walk from the Rosen hotels, running the full expense-account ritual.</p>
           <p class="addr">9101 International Dr, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/black-hammock-restaurant.html">Black Hammock Restaurant</a></h3>
-          <p class="meta">Restaurants &middot; Oviedo &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/black-hammock-restaurant.html">Black Hammock Restaurant</a></h3>
+          <p class="meta">Restaurants &middot; Oviedo &middot; $$</p><p class="vsub">An Old Florida fish camp on Lake Jesup, where the menu leans into the setting: gator bites, fried gator tail, catfish nuggets, a gator burger.</p>
           <p class="addr">2316 Black Hammock Fish Camp Rd, Oviedo, FL 32765</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/kobe-japanese-steakhouse.html">Kobe Japanese Steakhouse</a></h3>
-          <p class="meta">Japanese &amp; sushi &middot; International Drive &middot; $</p>
+          <img class="vthumb" src="/assets/venue-kobe-japanese-steakhouse.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/kobe-japanese-steakhouse.html">Kobe Japanese Steakhouse</a></h3>
+          <p class="meta">Japanese &amp; sushi &middot; International Drive &middot; $</p><p class="vsub">Dinner becomes theater on International Drive, with teppanyaki chefs, onion volcanoes, flying shrimp and tricks guests had not seen before.</p>
           <p class="addr">8148 International Dr, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/ford-s-garage-international-outlets.html">Ford&#x27;s Garage</a></h3>
-          <p class="meta">Burgers &amp; sandwiches &middot; I-Drive &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-ford-s-garage-international-outlets.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/ford-s-garage-international-outlets.html">Ford&#x27;s Garage</a></h3>
+          <p class="meta">Burgers &amp; sandwiches &middot; I-Drive &middot; $$</p><p class="vsub">A burger bar dressed as a 1920s service station at the outlets, with vintage Fords overhead and shop rags for napkins.</p>
           <p class="addr">4971 International Dr Ste 3D.09, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         </div>
       </section>
 
@@ -283,35 +290,35 @@
         <p class="lede">Other places in International Drive, closest to Knife Burger first.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/knife-spoon.html">Knife &amp; Spoon</a></h3>
-          <p class="meta">Fine dining &amp; steak &middot; Steakhouse &middot; $$$$</p>
+          <div class="vmain"><h3><a href="/venue/knife-spoon.html">Knife &amp; Spoon</a></h3>
+          <p class="meta">Fine dining &amp; steak &middot; Steakhouse &middot; $$$$</p><p class="vsub">The Ritz-Carlton Grande Lakes steakhouse is built on a simple split, knife for beef and spoon for seafood, in a polished room.</p>
           <p class="addr">Knife &amp; Spoon, 4012 Central Florida Pkwy, Orlando, FL 32837-7662</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/oza-izakaya.html">Oza Izakaya</a></h3>
-          <p class="meta">Japanese &amp; sushi &middot; Japanese &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-oza-izakaya.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/oza-izakaya.html">Oza Izakaya</a></h3>
+          <p class="meta">Japanese &amp; sushi &middot; Japanese &middot; $$</p><p class="vsub">Sleek, garden-like Japanese room on Central Florida Parkway, beautiful and unhurried in a way that suits a date night.</p>
           <p class="addr">Oza Izakaya, 5310 Central Florida Pkwy, Orlando, FL 32821-8772</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/selam.html">Selam Ethiopian</a></h3>
-          <p class="meta">Restaurants &middot; Ethiopian &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-selam.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/selam.html">Selam Ethiopian</a></h3>
+          <p class="meta">Restaurants &middot; Ethiopian &middot; $$</p><p class="vsub">A warm, calm, family-run room on Central Florida Parkway serving Ethiopian and Eritrean cooking built for sharing.</p>
           <p class="addr">Selam, 5494 Central Florida Pkwy, Orlando, FL 32821-8774</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/discovery-cove.html">Discovery Cove</a></h3>
-          <p class="meta">Attractions &middot; Theme Park &middot; $$$$</p>
+          <img class="vthumb" src="/assets/venue-discovery-cove.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/discovery-cove.html">Discovery Cove</a></h3>
+          <p class="meta">Attractions &middot; Theme Park &middot; $$$$</p><p class="vsub">The calm splurge on I-Drive: a reservation-only day resort where attendance is capped and the water stays clear.</p>
           <p class="addr">6000 Discovery Cove Way, Orlando, FL 32821</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/aquatica-orlando.html">Aquatica Orlando</a></h3>
-          <p class="meta">Attractions &middot; Water Park &middot; $$$</p>
+          <img class="vthumb" src="/assets/venue-aquatica-orlando.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/aquatica-orlando.html">Aquatica Orlando</a></h3>
+          <p class="meta">Attractions &middot; Water Park &middot; $$$</p><p class="vsub">At SeaWorld&#x27;s water park, the Dolphin Plunge clear tube passes Commerson&#x27;s dolphins, and Roa&#x27;s Rapids runs faster than a lazy river should.</p>
           <p class="addr">5800 Water Play Way, Orlando, FL 32821</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/seaworld-orlando.html">SeaWorld Orlando</a></h3>
-          <p class="meta">Attractions &middot; Theme Park &middot; $$$$</p>
+          <img class="vthumb" src="/assets/venue-seaworld-orlando.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/seaworld-orlando.html">SeaWorld Orlando</a></h3>
+          <p class="meta">Attractions &middot; Theme Park &middot; $$$$</p><p class="vsub">A working marine park with serious coasters, from Mako and Pipeline to Penguin Trek, plus orca presentations and a shark tunnel.</p>
           <p class="addr">7007 SeaWorld Dr, Orlando, FL 32821</p>
-        </article>
+        </div></article>
         </div>
         <div class="handoff">
           <a class="btn-ghost" href="/international-drive-finder.html">See the full International Drive list</a>

@@ -239,6 +239,13 @@ html[data-theme="light"] .hero.has-photo{--ink:#f4efe1;--headline:#f6edd6;--mute
 .hero-plate figcaption .hero-credit{display:block;color:#5c6a58;font-size:.72rem;margin-top:2px}
 .hero-plate figcaption a{color:#7c520c}
 .has-photo .hero-in{padding-bottom:18px}
+</style><style data-cardsys>
+/* cardsys: similar rail cards (2026-10-23 overhaul) */
+.vcard{display:flex;gap:12px;align-items:flex-start}
+.vcard .vthumb{flex:0 0 86px;width:86px;height:86px;border-radius:10px;object-fit:cover;display:block}
+.vcard .vmain{flex:1;min-width:0}
+.vcard .vsub{margin:4px 0 0;font-size:.86rem;line-height:1.45;color:var(--muted,#c6bba2)}
+@media (min-width:1000px){.vlist{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start}}
 </style></head>
   <body>
     <header class="hero has-photo">
@@ -266,45 +273,45 @@ html[data-theme="light"] .hero.has-photo{--ink:#f4efe1;--headline:#f6edd6;--mute
         <div class="actions">
           <a class="action" href="https://www.google.com/maps/search/?api=1&amp;query=Kelly%27s+Homemade+Ice+Cream+3114+Corrine+Dr%2C+Orlando%2C+FL" target="_blank" rel="noopener">Directions &rarr;</a>
           <a class="action" href="/archive.html?venue=kelly-s-homemade-ice-cream">Open in the full finder</a>
-          <a class="action" href="/audubon-park-district-guide.html">Read the Audubon Park story</a>
+          <a class="action" href="/history/audubon-park.html">Read the Audubon Park story</a>
         </div>
       </section>
 
-      <section class="sec" id="similar">
+      <section class="sec" id="district-story"><p class="kicker">District Story</p><h2>The story of Audubon Park</h2><p class="lede">Platted as Lakewood Estates in 1937, built out for the bases, and renamed, by tradition, for its birds.</p><p><a class="btn-ghost" href="/history/audubon-park.html">Read the Audubon Park story &rarr;</a></p></section><section class="sec" id="similar">
         <p class="kicker">Similar Feel</p>
         <h2>More places with this feel</h2>
         <p class="lede">Matched by vibe, not by neighborhood: the places across Greater Orlando closest in spirit to Kelly&#x27;s Homemade Ice Cream.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/cold-stone-creamery.html">Cold Stone Creamery</a></h3>
-          <p class="meta">Sweets &middot; CityWalk &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/cold-stone-creamery.html">Cold Stone Creamery</a></h3>
+          <p class="meta">Sweets &middot; CityWalk &middot; $</p><p class="vsub">At Universal CityWalk, mix-ins fold into ice cream on a frozen granite slab, built to order at the counter.</p>
           <p class="addr">6000 Universal Blvd, Orlando, FL</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/jenis-splendid-ice-creams.html">Jeni&#x27;s Splendid Ice Creams</a></h3>
-          <p class="meta">Sweets &middot; Winter Park &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/jenis-splendid-ice-creams.html">Jeni&#x27;s Splendid Ice Creams</a></h3>
+          <p class="meta">Sweets &middot; Winter Park &middot; $$</p><p class="vsub">Inventive, scratch-made scoops on Orlando Avenue, and guests insist you can really taste the difference.</p>
           <p class="addr">510 N Orlando Ave #102, Winter Park, FL 32789</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/kilwins-ice-cream-chocolate-fudge.html">Kilwins Ice Cream - Chocolate - Fudge</a></h3>
-          <p class="meta">Sweets &middot; Park Ave &middot; $</p>
+          <img class="vthumb" src="/assets/venue-kilwins-ice-cream-chocolate-fudge.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/kilwins-ice-cream-chocolate-fudge.html">Kilwins Ice Cream - Chocolate - Fudge</a></h3>
+          <p class="meta">Sweets &middot; Park Ave &middot; $</p><p class="vsub">Fresh waffle cone smell finds you first on Park Avenue, where fudge is paddled on marble and caramel apples are dipped in the open.</p>
           <p class="addr">122 N Park Ave, Winter Park, FL 32789</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/buttermilk.html">Buttermilk Bakery</a></h3>
-          <p class="meta">Bakeries &middot; Winter Park &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-buttermilk.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/buttermilk.html">Buttermilk Bakery</a></h3>
+          <p class="meta">Bakeries &middot; Winter Park &middot; $$</p><p class="vsub">A cozy Winter Park bakery where the case fills fresh every morning and choosing just a few treats is the hard part.</p>
           <p class="addr">Buttermilk Bakery, 1198 N Orange Ave, Winter Park, FL 32789-4908</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/milk-district-eats-tour.html">Milk District Eats Food Tour</a></h3>
-          <p class="meta">Attractions &middot; Milk District &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/milk-district-eats-tour.html">Milk District Eats Food Tour</a></h3>
+          <p class="meta">Attractions &middot; Milk District &middot; $$</p><p class="vsub">A small-group walking food tour through the dairy-named district east of downtown, personal, easygoing and rich with local history.</p>
           <p class="addr">201 N Bumby Ave, Orlando, FL 32803 (meets in front of the Milkhouse)</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/nan-and-pops-ice-cream-shop.html">Nan and Pop&#x27;s Ice Cream Shop</a></h3>
-          <p class="meta">Sweets &middot; Longwood &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-nan-and-pops-ice-cream-shop.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/nan-and-pops-ice-cream-shop.html">Nan and Pop&#x27;s Ice Cream Shop</a></h3>
+          <p class="meta">Sweets &middot; Longwood &middot; $$</p><p class="vsub">Old-fashioned Longwood parlor where the sweet smell of waffle cones hits you at the door.</p>
           <p class="addr">Nan and Pop&#x27;s Ice Cream Shop, 351 N Ronald Reagan Blvd, Longwood, FL 32750-4159, United States</p>
-        </article>
+        </div></article>
         </div>
       </section>
 
@@ -314,35 +321,35 @@ html[data-theme="light"] .hero.has-photo{--ink:#f4efe1;--headline:#f6edd6;--mute
         <p class="lede">Other places in Audubon Park, closest to Kelly&#x27;s Homemade Ice Cream first.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/coro.html">Coro</a></h3>
-          <p class="meta">American &middot; $$$</p>
+          <img class="vthumb" src="/assets/venue-coro.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/coro.html">Coro</a></h3>
+          <p class="meta">American &middot; $$$</p><p class="vsub">An intimate Corrine Drive room where Chef Tim Lovero changes the menu with the seasons and his mood.</p>
           <p class="addr">Coro, 3022 Corrine Dr, Orlando, FL 32803-2204</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/domu.html">Domu</a></h3>
-          <p class="meta">Noodles &amp; Southeast Asian · Noodles &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/domu.html">Domu</a></h3>
+          <p class="meta">Noodles &amp; Southeast Asian · Noodles &middot; $$</p><p class="vsub">The East End Market original is a compact, buzzing ramen room Orlando keeps talking about.</p>
           <p class="addr">3201 Corrine Dr, Orlando, FL 32803</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/east-end-market.html">East End Market</a></h3>
-          <p class="meta">Markets &amp; shops · Food Hall &middot; $</p>
+          <img class="vthumb" src="/assets/venue-east-end-market.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/east-end-market.html">East End Market</a></h3>
+          <p class="meta">Markets &amp; shops · Food Hall &middot; $</p><p class="vsub">Local makers under one Audubon Park roof: Gideon&#x27;s Bakehouse, Olde Hearth Bread, Lineage Coffee, Domu, La Femme du Fromage, Dochi and Hinckley&#x27;s.</p>
           <p class="addr">3201 Corrine Dr, Orlando, FL 32803</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/lineage-coffee-roasting.html">Lineage Coffee Roasting</a></h3>
-          <p class="meta">Coffee &amp; cafes · Coffee Shop &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-lineage-coffee-roasting.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/lineage-coffee-roasting.html">Lineage Coffee Roasting</a></h3>
+          <p class="meta">Coffee &amp; cafes · Coffee Shop &middot; $$</p><p class="vsub">Tucked in the back of East End Market, a working roastery where the cup shows the craft, from flat whites to cold brew.</p>
           <p class="addr">3201 Corrine Dr, Orlando, FL 32803-2224, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/winter-park-biscuit-company.html">Winter Park Biscuit Company</a></h3>
-          <p class="meta">Breakfast &amp; brunch · Breakfast &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/winter-park-biscuit-company.html">Winter Park Biscuit Company</a></h3>
+          <p class="meta">Breakfast &amp; brunch · Breakfast &middot; $$</p><p class="vsub">All-vegan counter inside East End Market built around flaky, golden oat buttermilk biscuits, stacked or smothered in gravy.</p>
           <p class="addr">3201 Corrine Dr, Orlando, FL 32803-2224, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/hinckleys-fancy-meats.html">Hinckley&#x27;s Fancy Meats</a></h3>
-          <p class="meta">Markets &amp; shops · Butcher Shop &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/hinckleys-fancy-meats.html">Hinckley&#x27;s Fancy Meats</a></h3>
+          <p class="meta">Markets &amp; shops · Butcher Shop &middot; $$</p><p class="vsub">A craft butcher stall inside East End Market, old-school in the best way, with house-cured meats in the case and a deli counter.</p>
           <p class="addr">3201 Corrine Dr #104, Orlando, FL 32803</p>
-        </article>
+        </div></article>
         </div>
         <div class="handoff">
           <a class="btn-ghost" href="/audubon-park-finder.html">See the full Audubon Park list</a>

@@ -211,7 +211,14 @@
       .vcard .addr { margin: 0; color: var(--muted); font-size: .9rem; }
       @media (max-width: 640px) { .facts { grid-template-columns: 1fr; } }
     </style>
-  </head>
+  <style data-cardsys>
+/* cardsys: similar rail cards (2026-10-23 overhaul) */
+.vcard{display:flex;gap:12px;align-items:flex-start}
+.vcard .vthumb{flex:0 0 86px;width:86px;height:86px;border-radius:10px;object-fit:cover;display:block}
+.vcard .vmain{flex:1;min-width:0}
+.vcard .vsub{margin:4px 0 0;font-size:.86rem;line-height:1.45;color:var(--muted,#c6bba2)}
+@media (min-width:1000px){.vlist{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start}}
+</style></head>
   <body>
     <header class="hero">
       <div class="hero-in">
@@ -240,41 +247,41 @@
         </div>
       </section>
 
-      <section class="sec" id="similar">
+      <section class="sec" id="district-story"><p class="kicker">District Stories</p><h2>Orlando&#x27;s long memory</h2><p class="lede">The guide keeps the long memory of Orlando&#x27;s districts in one place: the names, the plats and the stories behind the streets.</p><p><a class="btn-ghost" href="/history.html">Browse the district stories &rarr;</a></p></section><section class="sec" id="similar">
         <p class="kicker">Similar Feel</p>
         <h2>More places with this feel</h2>
         <p class="lede">Matched by vibe, not by neighborhood: the places across Greater Orlando closest in spirit to Mario&#x27;s Pizza.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/boardwalk-pizza.html">Boardwalk Pizza</a></h3>
-          <p class="meta">Pizza &middot; Winter Park &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-boardwalk-pizza.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/boardwalk-pizza.html">Boardwalk Pizza</a></h3>
+          <p class="meta">Pizza &middot; Winter Park &middot; $$</p><p class="vsub">Jersey shore, old-school pizzeria feel comes to Lake Howell Road, with an open kitchen and a small-town welcome.</p>
           <p class="addr">Boardwalk Pizza, 5419 Lake Howell Rd, Winter Park, FL 32792</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/nuris.html">Nuri&#x27;s</a></h3>
-          <p class="meta">Pizza &middot; Orlando &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/nuris.html">Nuri&#x27;s</a></h3>
+          <p class="meta">Pizza &middot; Orlando &middot; $$</p><p class="vsub">Downtown&#x27;s tavern-style pizza joint on East Pine, all cracker-crisp, paper-thin crust party-cut into squares you keep grabbing.</p>
           <p class="addr">Nuri&#x27;s, 63 E Pine St, Orlando, FL 32801-2617, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/sals-pizza-bar.html">Sal&#x27;s Pizza Bar</a></h3>
-          <p class="meta">Pizza &middot; Universal &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/sals-pizza-bar.html">Sal&#x27;s Pizza Bar</a></h3>
+          <p class="meta">Pizza &middot; Universal &middot; $$</p><p class="vsub">Family-owned on Daryl Carter Parkway, turning out Brooklyn-style pies that transplanted New Yorkers say taste just like home.</p>
           <p class="addr">Sal&#x27;s Pizza Bar, 11020 Daryl Carter Pkwy, Orlando, FL 32836, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/the-jersey-spot-pizza-and-pasta.html">The Jersey Spot Pizza and Pasta</a></h3>
-          <p class="meta">Pizza &middot; Kissimmee &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/the-jersey-spot-pizza-and-pasta.html">The Jersey Spot Pizza and Pasta</a></h3>
+          <p class="meta">Pizza &middot; Kissimmee &middot; $$</p><p class="vsub">Small, family-run Kissimmee joint on Columbia Avenue serving thin-crust, New Jersey-style pies transplants say taste like home.</p>
           <p class="addr">The Jersey Spot Pizza and Pasta, 1137 W Columbia Ave, Kissimmee, FL 34741-3202, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/goodfella-s-pizzeria.html">Goodfella&#x27;s Pizzeria</a></h3>
-          <p class="meta">Pizza &middot; Alafaya &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/goodfella-s-pizzeria.html">Goodfella&#x27;s Pizzeria</a></h3>
+          <p class="meta">Pizza &middot; Alafaya &middot; $$</p><p class="vsub">An old-school, no-frills slice shop on East Colonial Drive serving New York-style pies guests say taste like the kind they grew up eating.</p>
           <p class="addr">11873 E Colonial Dr, Orlando, FL 32826</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/pizza-bruno.html">Pizza Bruno</a></h3>
-          <p class="meta">Pizza &middot; Curry Ford &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-pizza-bruno.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/pizza-bruno.html">Pizza Bruno</a></h3>
+          <p class="meta">Pizza &middot; Curry Ford &middot; $$</p><p class="vsub">On Curry Ford, Bruno Zacchini&#x27;s wood-fired neighborhood room does blistered, naturally leavened crust and bold flavors.</p>
           <p class="addr">Pizza Bruno, 3990 Curry Ford Rd, Orlando, FL 32806-2702</p>
-        </article>
+        </div></article>
         </div>
       </section>
 
@@ -284,35 +291,35 @@
         <p class="lede">Other places in Hourglass, closest to Mario&#x27;s Pizza first.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/bachata-breeze.html">Bachata Breeze Restaurant</a></h3>
-          <p class="meta">Latin &amp; Caribbean &middot; Dominican &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/bachata-breeze.html">Bachata Breeze Restaurant</a></h3>
+          <p class="meta">Latin &amp; Caribbean &middot; Dominican &middot; $$</p><p class="vsub">On Curry Ford Road, a Dominican buffet and full menu by day, then live Latin music and dancing after dark.</p>
           <p class="addr">5773 Curry Ford Rd, Orlando, FL 32822</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/pio-pio-latin-cuisine.html">Pio Pio Latin Cuisine</a></h3>
-          <p class="meta">Latin &amp; Caribbean &middot; Latin &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-pio-pio-latin-cuisine.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/pio-pio-latin-cuisine.html">Pio Pio Latin Cuisine</a></h3>
+          <p class="meta">Latin &amp; Caribbean &middot; Latin &middot; $$</p><p class="vsub">On South Semoran, the Colombian staple locals lean on, a warm, family-style room where plates land generous and homestyle.</p>
           <p class="addr">2259 S Semoran Blvd, Orlando, FL 32822</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/zorbas-kitchen.html">Zorba&#x27;s Kitchen</a></h3>
-          <p class="meta">Mediterranean &middot; Greek &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/zorbas-kitchen.html">Zorba&#x27;s Kitchen</a></h3>
+          <p class="meta">Mediterranean &middot; Greek &middot; $$</p><p class="vsub">Small, family-run Greek kitchen on Lake Underhill Road where, as one guest put it, the chef cooks like someone&#x27;s Greek grandma.</p>
           <p class="addr">Zorba&#x27;s Kitchen, 7325 Lake Underhill Rd, Orlando, FL 32822-6061, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/pine-and-oak-tavern.html">Pine &amp; Oak Tavern</a></h3>
-          <p class="meta">American &middot; Tavern &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-pine-and-oak-tavern.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/pine-and-oak-tavern.html">Pine &amp; Oak Tavern</a></h3>
+          <p class="meta">American &middot; Tavern &middot; $$</p><p class="vsub">A clubby tavern inside the revived Rio Pinar golf course, fairways beyond the patio and a relaxing, neighborhood feel.</p>
           <p class="addr">8600 El Prado Ave, Orlando, FL 32825</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/twistee-treat.html">Twistee Treat</a></h3>
-          <p class="meta">Sweets &middot; Ice Cream &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/twistee-treat.html">Twistee Treat</a></h3>
+          <p class="meta">Sweets &middot; Ice Cream &middot; $</p><p class="vsub">A towering ice-cream cone building marks this Curry Ford Road spot, an old-school soft-serve landmark pouring since 1983.</p>
           <p class="addr">Twistee Treat, 4500 Curry Ford Rd, Orlando, FL 32812</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/grocery-hermanos.html">Grocery Los Hermanos</a></h3>
-          <p class="meta">Mexican &middot; Taqueria &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/grocery-hermanos.html">Grocery Los Hermanos</a></h3>
+          <p class="meta">Mexican &middot; Taqueria &middot; $</p><p class="vsub">A family-run market and taqueria on Curry Ford where guests say the food tastes homemade and very fresh.</p>
           <p class="addr">4130 Curry Ford Rd, Orlando, FL 32806</p>
-        </article>
+        </div></article>
         </div>
         <div class="handoff">
           <a class="btn-ghost" href="/hourglass-finder.html">See the full Hourglass list</a>

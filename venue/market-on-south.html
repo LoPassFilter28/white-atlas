@@ -211,7 +211,14 @@
       .vcard .addr { margin: 0; color: var(--muted); font-size: .9rem; }
       @media (max-width: 640px) { .facts { grid-template-columns: 1fr; } }
     </style>
-  </head>
+  <style data-cardsys>
+/* cardsys: similar rail cards (2026-10-23 overhaul) */
+.vcard{display:flex;gap:12px;align-items:flex-start}
+.vcard .vthumb{flex:0 0 86px;width:86px;height:86px;border-radius:10px;object-fit:cover;display:block}
+.vcard .vmain{flex:1;min-width:0}
+.vcard .vsub{margin:4px 0 0;font-size:.86rem;line-height:1.45;color:var(--muted,#c6bba2)}
+@media (min-width:1000px){.vlist{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start}}
+</style></head>
   <body>
     <header class="hero">
       <div class="hero-in">
@@ -236,46 +243,46 @@
         <div class="actions">
           <a class="action" href="https://www.google.com/maps/search/?api=1&amp;query=Market+On+South+2603+E+South+St%2C+Orlando%2C+FL+32803" target="_blank" rel="noopener">Directions &rarr;</a>
           <a class="action" href="/archive.html?venue=market-on-south">Open in the full finder</a>
-          <a class="action" href="/milk-district-guide.html">Read the Milk District story</a>
+          <a class="action" href="/history/milk-district.html">Read the Milk District story</a>
           <a class="action action-ig" href="https://www.instagram.com/marketonsouth" target="_blank" rel="noopener"><svg class="ig-glyph" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="vertical-align:-2px;margin-right:6px"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg> Instagram</a>
         </div>
       </section>
 
-      <section class="sec" id="similar">
+      <section class="sec" id="district-story"><p class="kicker">District Story</p><h2>The story of Milk District</h2><p class="lede">One cow, twenty acres and a dairy on the edge of town: the neighborhood that grew up around the T.G. Lee plant and took its name from the milk.</p><p><a class="btn-ghost" href="/history/milk-district.html">Read the Milk District story &rarr;</a></p></section><section class="sec" id="similar">
         <p class="kicker">Similar Feel</p>
         <h2>More places with this feel</h2>
         <p class="lede">Matched by vibe, not by neighborhood: the places across Greater Orlando closest in spirit to Market On South.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/east-end-market.html">East End Market</a></h3>
-          <p class="meta">Markets &amp; shops &middot; Audubon Park &middot; $</p>
+          <img class="vthumb" src="/assets/venue-east-end-market.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/east-end-market.html">East End Market</a></h3>
+          <p class="meta">Markets &amp; shops &middot; Audubon Park &middot; $</p><p class="vsub">Local makers under one Audubon Park roof: Gideon&#x27;s Bakehouse, Olde Hearth Bread, Lineage Coffee, Domu, La Femme du Fromage, Dochi and Hinckley&#x27;s.</p>
           <p class="addr">3201 Corrine Dr, Orlando, FL 32803</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/mills-market.html">Mills Market</a></h3>
-          <p class="meta">Markets &amp; shops &middot; Mills 50 &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/mills-market.html">Mills Market</a></h3>
+          <p class="meta">Markets &amp; shops &middot; Mills 50 &middot; $$</p><p class="vsub">The food hall on East Colonial that anchors Mills 50, all shared tables, patio seating and chef-driven stalls under one roof.</p>
           <p class="addr">1110 E Colonial Dr, Orlando, FL 32803</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/city-food-hall.html">City Food Hall</a></h3>
-          <p class="meta">Markets &amp; shops &middot; Ivanhoe Village &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-city-food-hall.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/city-food-hall.html">City Food Hall</a></h3>
+          <p class="meta">Markets &amp; shops &middot; Ivanhoe Village &middot; $$</p><p class="vsub">Modern and bustling on Alden Road, chef-driven stalls under one roof so a group can split across smash burgers, sushi, pasta and tacos.</p>
           <p class="addr">City Food Hall, 1412 Alden Rd, Orlando, FL 32803-1862</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/winter-park-biscuit-company.html">Winter Park Biscuit Company</a></h3>
-          <p class="meta">Breakfast &amp; brunch &middot; Audubon Park &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/winter-park-biscuit-company.html">Winter Park Biscuit Company</a></h3>
+          <p class="meta">Breakfast &amp; brunch &middot; Audubon Park &middot; $$</p><p class="vsub">All-vegan counter inside East End Market built around flaky, golden oat buttermilk biscuits, stacked or smothered in gravy.</p>
           <p class="addr">3201 Corrine Dr, Orlando, FL 32803-2224, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/juice-bar.html">Juice Bar</a></h3>
-          <p class="meta">Coffee &amp; cafes &middot; Milk District &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/juice-bar.html">Juice Bar</a></h3>
+          <p class="meta">Coffee &amp; cafes &middot; Milk District &middot; $$</p><p class="vsub">Cute, unpretentious counter on East South Street where everything is pressed and blended in front of you, even the fresh almond mylk.</p>
           <p class="addr">Juice Bar, 2413 E South St, Orlando, FL 32803-6324</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/henrys-depot.html">Henry&#x27;s Depot</a></h3>
-          <p class="meta">Markets &amp; shops &middot; Sanford &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/henrys-depot.html">Henry&#x27;s Depot</a></h3>
+          <p class="meta">Markets &amp; shops &middot; Sanford &middot; $$</p><p class="vsub">Sanford&#x27;s historic Plant depot on West 1st Street is now an open-air food hall with something for everyone.</p>
           <p class="addr">Henry&#x27;s Depot, 212 W 1st St, Sanford, FL 32771-1204, United States</p>
-        </article>
+        </div></article>
         </div>
       </section>
 
@@ -285,35 +292,35 @@
         <p class="lede">Other places in Milk District, Local Picks first, then the closest to Market On South.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/iron-cow.html">Iron Cow</a> <span class="badge">Local Pick</span></h3>
-          <p class="meta">Japanese &amp; sushi · Sushi &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/iron-cow.html">Iron Cow</a> <span class="badge">Local Pick</span></h3>
+          <p class="meta">Japanese &amp; sushi · Sushi &middot; $$</p><p class="vsub">Part hi-fi sushi lounge, part underground club, the Milk District&#x27;s good contradiction.</p>
           <p class="addr">2438 E Robinson St, Suite A, Orlando, FL 32803</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/juice-bar.html">Juice Bar</a></h3>
-          <p class="meta">Coffee &amp; cafes · Juice Bar &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/juice-bar.html">Juice Bar</a></h3>
+          <p class="meta">Coffee &amp; cafes · Juice Bar &middot; $$</p><p class="vsub">Cute, unpretentious counter on East South Street where everything is pressed and blended in front of you, even the fresh almond mylk.</p>
           <p class="addr">Juice Bar, 2413 E South St, Orlando, FL 32803-6324</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/ottos.html">Otto&#x27;s High Dive</a></h3>
-          <p class="meta">Latin &amp; Caribbean · Cuban &middot; $$$</p>
+          <img class="vthumb" src="/assets/venue-ottos.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/ottos.html">Otto&#x27;s High Dive</a></h3>
+          <p class="meta">Latin &amp; Caribbean · Cuban &middot; $$$</p><p class="vsub">A vintage-inspired Milk District rum bar with Bib Gourmand recognition, dim and greenery-lined and built for date night.</p>
           <p class="addr">2304 E Robinson St, Orlando, FL 32803</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/beefy-king.html">Beefy King</a></h3>
-          <p class="meta">Burgers &amp; sandwiches · Sandwiches &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/beefy-king.html">Beefy King</a></h3>
+          <p class="meta">Burgers &amp; sandwiches · Sandwiches &middot; $</p><p class="vsub">Orlando&#x27;s old-school roast beef counter, steaming since 1968 and proudly no-frills about it.</p>
           <p class="addr">Beefy King, 424 N Bumby Ave, Orlando, FL 32803-6028</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/stasios.html">Stasio&#x27;s Italian Deli</a></h3>
-          <p class="meta">Italian &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/stasios.html">Stasio&#x27;s Italian Deli</a></h3>
+          <p class="meta">Italian &middot; $</p><p class="vsub">An old-school Italian deli on Robinson Street where the warm bustle and market shelves make every visit feel like a small celebration.</p>
           <p class="addr">2320 E Robinson St, Orlando, FL 32803</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/black-magic-pizza.html">Black Magic Pizza</a></h3>
-          <p class="meta">Pizza &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/black-magic-pizza.html">Black Magic Pizza</a></h3>
+          <p class="meta">Pizza &middot; $$</p><p class="vsub">Punk rock pizza window on Bumby Avenue, playful in name, serious about dough, with basically no seating and parking that fills fast.</p>
           <p class="addr">Black Magic Pizza, 121 N Bumby Ave, Orlando, FL 32803</p>
-        </article>
+        </div></article>
         </div>
         <div class="handoff">
           <a class="btn-ghost" href="/milk-district-finder.html">See the full Milk District list</a>

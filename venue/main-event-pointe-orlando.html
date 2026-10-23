@@ -221,7 +221,14 @@
 .take .take-label{font-size:.72rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--accent-ink);margin:0 0 8px}
 
 </style>
-  </head>
+  <style data-cardsys>
+/* cardsys: similar rail cards (2026-10-23 overhaul) */
+.vcard{display:flex;gap:12px;align-items:flex-start}
+.vcard .vthumb{flex:0 0 86px;width:86px;height:86px;border-radius:10px;object-fit:cover;display:block}
+.vcard .vmain{flex:1;min-width:0}
+.vcard .vsub{margin:4px 0 0;font-size:.86rem;line-height:1.45;color:var(--muted,#c6bba2)}
+@media (min-width:1000px){.vlist{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start}}
+</style></head>
   <body>
     <header class="hero">
       <div class="hero-in">
@@ -246,7 +253,7 @@
         <div class="actions">
           <a class="action" href="https://www.google.com/maps/search/?api=1&amp;query=Main+Event+9101+International+Dr+Ste+1032%2C+Orlando%2C+FL+32819" target="_blank" rel="noopener">Directions &rarr;</a>
           <a class="action" href="/archive.html?venue=main-event-pointe-orlando">Open in the full finder</a>
-          <a class="action" href="/international-drive-district-guide.html">Read the International Drive story</a>
+          <a class="action" href="/history/i-drive.html">Read the International Drive story</a>
           <a class="action action-aff" href="https://www.viator.com/searchResults/all?text=Main+Event+Orlando&amp;pid=P00325046&amp;mcid=42383&amp;utm_source=407fyi&amp;utm_medium=affiliate" target="_blank" rel="noopener sponsored">Find tickets on Viator &#8599;</a>
         <p class="aff-note">Affiliate link, we may earn a commission at no extra cost to you.</p>
         </div>
@@ -276,41 +283,41 @@
         </div>
       </section>
 
-<section class="sec" id="similar">
+<section class="sec" id="district-story"><p class="kicker">District Story</p><h2>The story of Pointe Orlando</h2><p class="lede">A hotel in the boondocks, a road paved after it and named to sound big and important, and the corridor that taught Orlando how to be a vacation.</p><p><a class="btn-ghost" href="/history/i-drive.html">Read the Pointe Orlando story &rarr;</a></p></section><section class="sec" id="similar">
         <p class="kicker">Similar Feel</p>
         <h2>More places with this feel</h2>
         <p class="lede">Matched by vibe, not by neighborhood: the places across Greater Orlando closest in spirit to Main Event.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/topgolf-orlando.html">Topgolf Orlando</a></h3>
-          <p class="meta">Attractions &middot; Universal &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/topgolf-orlando.html">Topgolf Orlando</a></h3>
+          <p class="meta">Attractions &middot; Universal &middot; $$</p><p class="vsub">Part driving range, part restaurant, part rooftop hangout on Universal Boulevard, with climate-controlled bays and a terrace with fire pits.</p>
           <p class="addr">9295 Universal Blvd, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/the-capital-grille-pointe-orlando.html">The Capital Grille</a></h3>
-          <p class="meta">Fine dining &amp; steak &middot; Pointe Orlando &middot; $$$$</p>
+          <div class="vmain"><h3><a href="/venue/the-capital-grille-pointe-orlando.html">The Capital Grille</a></h3>
+          <p class="meta">Fine dining &amp; steak &middot; Pointe Orlando &middot; $$$$</p><p class="vsub">The default client steakhouse at Pointe Orlando, a short walk from the Rosen hotels, running the full expense-account ritual.</p>
           <p class="addr">9101 International Dr, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/maggiano-s-pointe-orlando.html">Maggiano&#x27;s Little Italy</a></h3>
-          <p class="meta">Italian &middot; Pointe Orlando &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/maggiano-s-pointe-orlando.html">Maggiano&#x27;s Little Italy</a></h3>
+          <p class="meta">Italian &middot; Pointe Orlando &middot; $$</p><p class="vsub">Family-style Italian at Pointe Orlando, built for the table that cannot agree on one dish.</p>
           <p class="addr">9101 International Dr, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/jojo-s-shake-bar-pointe-orlando.html">JoJo&#x27;s Shake Bar</a></h3>
-          <p class="meta">Sweets &middot; Pointe Orlando &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-jojo-s-shake-bar-pointe-orlando.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/jojo-s-shake-bar-pointe-orlando.html">JoJo&#x27;s Shake Bar</a></h3>
+          <p class="meta">Sweets &middot; Pointe Orlando &middot; $$</p><p class="vsub">A retro diner at Pointe Orlando where the shakes arrive wearing their own desserts.</p>
           <p class="addr">9101 International Dr Ste 1208, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/andretti-indoor-karting-orlando.html">Andretti Indoor Karting and Games</a></h3>
-          <p class="meta">Attractions &middot; International Drive &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-andretti-indoor-karting-orlando.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/andretti-indoor-karting-orlando.html">Andretti Indoor Karting and Games</a></h3>
+          <p class="meta">Attractions &middot; International Drive &middot; $$</p><p class="vsub">Competition drives it all: electric SuperKarts on a multi-level indoor track, laser tag, bowling, simulators, and VR bays.</p>
           <p class="addr">9299 Universal Blvd, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/the-hampton-social-pointe-orlando.html">The Hampton Social</a></h3>
-          <p class="meta">American &middot; Pointe Orlando &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/the-hampton-social-pointe-orlando.html">The Hampton Social</a></h3>
+          <p class="meta">American &middot; Pointe Orlando &middot; $$</p><p class="vsub">A coastal escape inside Pointe Orlando, whitewashed wood and rose on the tables, with seafood towers, a lobster roll and blackened sea bass.</p>
           <p class="addr">9101 International Dr, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         </div>
       </section>
 
@@ -320,35 +327,35 @@
         <p class="lede">Other places in International Drive, Local Picks first, then the closest to Main Event.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/toms-watch-bar-orlando.html">Tom&#x27;s Watch Bar</a> <span class="badge">Local Pick</span></h3>
-          <p class="meta">Bars &amp; lounges · Bar &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-toms-watch-bar-orlando.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/toms-watch-bar-orlando.html">Tom&#x27;s Watch Bar</a> <span class="badge">Local Pick</span></h3>
+          <p class="meta">Bars &amp; lounges · Bar &middot; $$</p><p class="vsub">On International Drive, a sports bar built like a stadium, with an oversized screen and screens wrapping the room so every seat faces the action.</p>
           <p class="addr">8050 International Dr, Suite 1000, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/baires-grill-orlando.html">Baires Grill</a> <span class="badge">Local Pick</span></h3>
-          <p class="meta">Latin &amp; Caribbean · Argentinian Steakhouse &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-baires-grill-orlando.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/baires-grill-orlando.html">Baires Grill</a> <span class="badge">Local Pick</span></h3>
+          <p class="meta">Latin &amp; Caribbean · Argentinian Steakhouse &middot; $$</p><p class="vsub">The parrilla decides everything at this Argentine steakhouse just off International Drive.</p>
           <p class="addr">8050 International Dr, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/cuba-libre-pointe-orlando.html">Cuba Libre</a></h3>
-          <p class="meta">Latin &amp; Caribbean · Cuban &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/cuba-libre-pointe-orlando.html">Cuba Libre</a></h3>
+          <p class="meta">Latin &amp; Caribbean · Cuban &middot; $$</p><p class="vsub">A two-story Old Havana courtyard rebuilt inside Pointe Orlando, all palm shadows, live Latin music, and rum.</p>
           <p class="addr">9101 International Dr #1004, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/jojo-s-shake-bar-pointe-orlando.html">JoJo&#x27;s Shake Bar</a></h3>
-          <p class="meta">Sweets · Shake Bar &amp; Diner &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-jojo-s-shake-bar-pointe-orlando.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/jojo-s-shake-bar-pointe-orlando.html">JoJo&#x27;s Shake Bar</a></h3>
+          <p class="meta">Sweets · Shake Bar &amp; Diner &middot; $$</p><p class="vsub">A retro diner at Pointe Orlando where the shakes arrive wearing their own desserts.</p>
           <p class="addr">9101 International Dr Ste 1208, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/kavas-tacos-tequila.html">Kavas Tacos &amp; Tequila</a></h3>
-          <p class="meta">Mexican · Tacos &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/kavas-tacos-tequila.html">Kavas Tacos &amp; Tequila</a></h3>
+          <p class="meta">Mexican · Tacos &middot; $$</p><p class="vsub">Pointe Orlando&#x27;s loud, colorful taco party, celebratory from the first chips and salsa.</p>
           <p class="addr">9101 International Dr Ste 1198, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/maggiano-s-pointe-orlando.html">Maggiano&#x27;s Little Italy</a></h3>
-          <p class="meta">Italian · Family-Style Italian &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/maggiano-s-pointe-orlando.html">Maggiano&#x27;s Little Italy</a></h3>
+          <p class="meta">Italian · Family-Style Italian &middot; $$</p><p class="vsub">Family-style Italian at Pointe Orlando, built for the table that cannot agree on one dish.</p>
           <p class="addr">9101 International Dr, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         </div>
         <div class="handoff">
           <a class="btn-ghost" href="/international-drive-finder.html">See the full International Drive list</a>

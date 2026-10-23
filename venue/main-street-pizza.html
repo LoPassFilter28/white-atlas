@@ -211,7 +211,14 @@
       .vcard .addr { margin: 0; color: var(--muted); font-size: .9rem; }
       @media (max-width: 640px) { .facts { grid-template-columns: 1fr; } }
     </style>
-  </head>
+  <style data-cardsys>
+/* cardsys: similar rail cards (2026-10-23 overhaul) */
+.vcard{display:flex;gap:12px;align-items:flex-start}
+.vcard .vthumb{flex:0 0 86px;width:86px;height:86px;border-radius:10px;object-fit:cover;display:block}
+.vcard .vmain{flex:1;min-width:0}
+.vcard .vsub{margin:4px 0 0;font-size:.86rem;line-height:1.45;color:var(--muted,#c6bba2)}
+@media (min-width:1000px){.vlist{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start}}
+</style></head>
   <body>
     <header class="hero">
       <div class="hero-in">
@@ -240,41 +247,41 @@
         </div>
       </section>
 
-      <section class="sec" id="similar">
+      <section class="sec" id="district-story"><p class="kicker">District Stories</p><h2>Orlando&#x27;s long memory</h2><p class="lede">The guide keeps the long memory of Orlando&#x27;s districts in one place: the names, the plats and the stories behind the streets.</p><p><a class="btn-ghost" href="/history.html">Browse the district stories &rarr;</a></p></section><section class="sec" id="similar">
         <p class="kicker">Similar Feel</p>
         <h2>More places with this feel</h2>
         <p class="lede">Matched by vibe, not by neighborhood: the places across Greater Orlando closest in spirit to Main Street Pizza.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/pienezza-pizza.html">Pienezza Pizza</a></h3>
-          <p class="meta">Pizza &middot; Kissimmee &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/pienezza-pizza.html">Pienezza Pizza</a></h3>
+          <p class="meta">Pizza &middot; Kissimmee &middot; $$</p><p class="vsub">Family-run and no-frills on John Young Parkway in Kissimmee, where regulars say the Grandma pie brings it home.</p>
           <p class="addr">Pienezza Pizza, 3236 N John Young Pkwy, Kissimmee, FL 34741-7549, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/the-jersey-spot-pizza-and-pasta.html">The Jersey Spot Pizza and Pasta</a></h3>
-          <p class="meta">Pizza &middot; Kissimmee &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/the-jersey-spot-pizza-and-pasta.html">The Jersey Spot Pizza and Pasta</a></h3>
+          <p class="meta">Pizza &middot; Kissimmee &middot; $$</p><p class="vsub">Small, family-run Kissimmee joint on Columbia Avenue serving thin-crust, New Jersey-style pies transplants say taste like home.</p>
           <p class="addr">The Jersey Spot Pizza and Pasta, 1137 W Columbia Ave, Kissimmee, FL 34741-3202, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/park-avenue-pizza.html">Park Avenue Pizza</a></h3>
-          <p class="meta">Pizza &middot; Winter Park &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/park-avenue-pizza.html">Park Avenue Pizza</a></h3>
+          <p class="meta">Pizza &middot; Winter Park &middot; $$</p><p class="vsub">A no-frills, old-school counter on Lyman Avenue, where guests go for a quick slice done right.</p>
           <p class="addr">119 E Lyman Ave, Winter Park, FL 32789</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/metro-diner.html">Metro Diner (Kissimmee)</a></h3>
-          <p class="meta">Breakfast &amp; brunch &middot; Kissimmee &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/metro-diner.html">Metro Diner (Kissimmee)</a></h3>
+          <p class="meta">Breakfast &amp; brunch &middot; Kissimmee &middot; $</p><p class="vsub">Metro Diner&#x27;s Kissimmee room is a classic Florida diner, cozy and old school, doing comfort food without irony.</p>
           <p class="addr">2714 Osceola Pkwy, Kissimmee, FL 34741</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/world-food-trucks.html">World Food Trucks</a></h3>
-          <p class="meta">Markets &amp; shops &middot; Kissimmee &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-world-food-trucks.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/world-food-trucks.html">World Food Trucks</a></h3>
+          <p class="meta">Markets &amp; shops &middot; Kissimmee &middot; $$</p><p class="vsub">A Kissimmee parking lot becomes a passport you can eat through, truck after truck serving arepas, tacos, elotes and more.</p>
           <p class="addr">5811 W Irlo Bronson Memorial Hwy, Kissimmee, FL 34746</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/goodfella-s-pizzeria.html">Goodfella&#x27;s Pizzeria</a></h3>
-          <p class="meta">Pizza &middot; Alafaya &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/goodfella-s-pizzeria.html">Goodfella&#x27;s Pizzeria</a></h3>
+          <p class="meta">Pizza &middot; Alafaya &middot; $$</p><p class="vsub">An old-school, no-frills slice shop on East Colonial Drive serving New York-style pies guests say taste like the kind they grew up eating.</p>
           <p class="addr">11873 E Colonial Dr, Orlando, FL 32826</p>
-        </article>
+        </div></article>
         </div>
       </section>
 
@@ -284,35 +291,35 @@
         <p class="lede">Other places in Kissimmee, closest to Main Street Pizza first.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/1881-restaurant.html">1881 Restaurant &amp; Bar</a></h3>
-          <p class="meta">Mediterranean · Middle Eastern &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-1881-restaurant.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/1881-restaurant.html">1881 Restaurant &amp; Bar</a></h3>
+          <p class="meta">Mediterranean · Middle Eastern &middot; $$</p><p class="vsub">In downtown Kissimmee&#x27;s historic Makinson Hardware building, old-Florida bones and lively bar energy, and guests say the walls tell the story.</p>
           <p class="addr">1881 Restaurant, 308 Broadway, Kissimmee, FL 34741-5718</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/the-jersey-spot-pizza-and-pasta.html">The Jersey Spot Pizza and Pasta</a></h3>
-          <p class="meta">Pizza &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/the-jersey-spot-pizza-and-pasta.html">The Jersey Spot Pizza and Pasta</a></h3>
+          <p class="meta">Pizza &middot; $$</p><p class="vsub">Small, family-run Kissimmee joint on Columbia Avenue serving thin-crust, New Jersey-style pies transplants say taste like home.</p>
           <p class="addr">The Jersey Spot Pizza and Pasta, 1137 W Columbia Ave, Kissimmee, FL 34741-3202, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/puro-dulzor-by-karolene.html">Puro Dulzor by Karolene</a></h3>
-          <p class="meta">Breakfast &amp; brunch · Breakfast &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/puro-dulzor-by-karolene.html">Puro Dulzor by Karolene</a></h3>
+          <p class="meta">Breakfast &amp; brunch · Breakfast &middot; $</p><p class="vsub">Cozy, family-run hole in the wall on East Vine Street where guests call the coffee the best in Kissimmee.</p>
           <p class="addr">1354 E Vine St, Kissimmee, FL 34744</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/medieval-times-orlando.html">Medieval Times Dinner &amp; Tournament</a></h3>
-          <p class="meta">Attractions &middot; $$$</p>
+          <img class="vthumb" src="/assets/venue-medieval-times-orlando.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/medieval-times-orlando.html">Medieval Times Dinner &amp; Tournament</a></h3>
+          <p class="meta">Attractions &middot; $$$</p><p class="vsub">In a castle arena on Vine Street in Kissimmee, knights joust, falconry flies, and the cheering crowd eats with its hands, no utensils.</p>
           <p class="addr">4510 W Vine St, Kissimmee, FL 34746</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/green-meadows-petting-farm.html">Green Meadows Petting Farm</a></h3>
-          <p class="meta">Attractions · Petting Farm &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/green-meadows-petting-farm.html">Green Meadows Petting Farm</a></h3>
+          <p class="meta">Attractions · Petting Farm &middot; $$</p><p class="vsub">Under the live oaks at Lancaster Ranch Park in Kissimmee, this petting farm is all open air and hands-on.</p>
           <p class="addr">1881 Jack Calhoun Dr, Kissimmee, FL 34741</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/metro-diner.html">Metro Diner (Kissimmee)</a></h3>
-          <p class="meta">Breakfast &amp; brunch · Breakfast &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/metro-diner.html">Metro Diner (Kissimmee)</a></h3>
+          <p class="meta">Breakfast &amp; brunch · Breakfast &middot; $</p><p class="vsub">Metro Diner&#x27;s Kissimmee room is a classic Florida diner, cozy and old school, doing comfort food without irony.</p>
           <p class="addr">2714 Osceola Pkwy, Kissimmee, FL 34741</p>
-        </article>
+        </div></article>
         </div>
         <div class="handoff">
           <a class="btn-ghost" href="/kissimmee-finder.html">See the full Kissimmee list</a>

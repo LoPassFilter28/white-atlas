@@ -221,7 +221,14 @@
 .take .take-label{font-size:.72rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--accent-ink);margin:0 0 8px}
 
 </style>
-  </head>
+  <style data-cardsys>
+/* cardsys: similar rail cards (2026-10-23 overhaul) */
+.vcard{display:flex;gap:12px;align-items:flex-start}
+.vcard .vthumb{flex:0 0 86px;width:86px;height:86px;border-radius:10px;object-fit:cover;display:block}
+.vcard .vmain{flex:1;min-width:0}
+.vcard .vsub{margin:4px 0 0;font-size:.86rem;line-height:1.45;color:var(--muted,#c6bba2)}
+@media (min-width:1000px){.vlist{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start}}
+</style></head>
   <body>
     <header class="hero">
       <div class="hero-in">
@@ -265,41 +272,41 @@
         </div>
       </section>
 
-<section class="sec" id="similar">
+<section class="sec" id="district-story"><p class="kicker">District Stories</p><h2>Orlando&#x27;s long memory</h2><p class="lede">The guide keeps the long memory of Orlando&#x27;s districts in one place: the names, the plats and the stories behind the streets.</p><p><a class="btn-ghost" href="/history.html">Browse the district stories &rarr;</a></p></section><section class="sec" id="similar">
         <p class="kicker">Similar Feel</p>
         <h2>More places with this feel</h2>
         <p class="lede">Matched by vibe, not by neighborhood: the places across Greater Orlando closest in spirit to Lake Buena Vista Factory Stores.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/orlando-outlet-marketplace.html">Orlando Outlet Marketplace</a></h3>
-          <p class="meta">Markets &amp; shops &middot; I-Drive &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/orlando-outlet-marketplace.html">Orlando Outlet Marketplace</a></h3>
+          <p class="meta">Markets &amp; shops &middot; I-Drive &middot; $$</p><p class="vsub">The quieter outlet run on north I-Drive is a smaller open-air center anchored by Nike Clearance, with Levi&#x27;s and Adidas behind it.</p>
           <p class="addr">5269 International Dr, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/orlando-vineland-premium-outlets.html">Orlando Vineland Premium Outlets</a></h3>
-          <p class="meta">Markets &amp; shops &middot; Vineland &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/orlando-vineland-premium-outlets.html">Orlando Vineland Premium Outlets</a></h3>
+          <p class="meta">Markets &amp; shops &middot; Vineland &middot; $$</p><p class="vsub">Minutes from Disney, a Mediterranean-inspired outdoor outlet village anchored by Prada, Bottega Veneta, Burberry, Gucci and Tory Burch.</p>
           <p class="addr">8200 Vineland Ave, Orlando, FL 32821</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/orlando-international-premium-outlets.html">Orlando International Premium Outlets</a></h3>
-          <p class="meta">Markets &amp; shops &middot; I-Drive &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/orlando-international-premium-outlets.html">Orlando International Premium Outlets</a></h3>
+          <p class="meta">Markets &amp; shops &middot; I-Drive &middot; $$</p><p class="vsub">An open-air outlet village at the north end of International Drive, and a full afternoon by design.</p>
           <p class="addr">4951 International Dr, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/disney-character-warehouse.html">Disney Character Warehouse</a></h3>
-          <p class="meta">Markets &amp; shops &middot; I-Drive &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/disney-character-warehouse.html">Disney Character Warehouse</a></h3>
+          <p class="meta">Markets &amp; shops &middot; I-Drive &middot; $</p><p class="vsub">Disney&#x27;s own closeout store inside the International Premium Outlets, where cleared park merchandise lands at outlet prices.</p>
           <p class="addr">4969 International Dr, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/disney-springs-district.html">Disney Springs</a></h3>
-          <p class="meta">Markets &amp; shops &middot; Disney Springs &middot; $$$</p>
+          <div class="vmain"><h3><a href="/venue/disney-springs-district.html">Disney Springs</a></h3>
+          <p class="meta">Markets &amp; shops &middot; Disney Springs &middot; $$$</p><p class="vsub">Disney&#x27;s open-air waterfront promenade, no park ticket and no turnstile, just an evening on the water.</p>
           <p class="addr">1486 E Buena Vista Dr, Lake Buena Vista, FL 32830</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/ford-s-garage-international-outlets.html">Ford&#x27;s Garage</a></h3>
-          <p class="meta">Burgers &amp; sandwiches &middot; I-Drive &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-ford-s-garage-international-outlets.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/ford-s-garage-international-outlets.html">Ford&#x27;s Garage</a></h3>
+          <p class="meta">Burgers &amp; sandwiches &middot; I-Drive &middot; $$</p><p class="vsub">A burger bar dressed as a 1920s service station at the outlets, with vintage Fords overhead and shop rags for napkins.</p>
           <p class="addr">4971 International Dr Ste 3D.09, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         </div>
       </section>
 
@@ -309,35 +316,35 @@
         <p class="lede">Other places in Disney Area, Local Picks first, then the closest to Lake Buena Vista Factory Stores.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/fogo-orlando-vineland.html">Fogo de Chão, Vineland Pointe</a> <span class="badge">Local Pick</span></h3>
-          <p class="meta">Fine dining &amp; steak · Brazilian Steakhouse &middot; $$$</p>
+          <div class="vmain"><h3><a href="/venue/fogo-orlando-vineland.html">Fogo de Chão, Vineland Pointe</a> <span class="badge">Local Pick</span></h3>
+          <p class="meta">Fine dining &amp; steak · Brazilian Steakhouse &middot; $$$</p><p class="vsub">Brazilian churrasco staged tableside at Vineland Pointe, where gaucho chefs carve fire-roasted cuts one slice at a time.</p>
           <p class="addr">11543 Regency Village Dr, Orlando, FL 32821</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/evermore-orlando-resort.html">Evermore Orlando Resort</a> <span class="badge">Local Pick</span></h3>
-          <p class="meta">Hotels · Hotel &middot; $$$</p>
+          <img class="vthumb" src="/assets/venue-evermore-orlando-resort.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/evermore-orlando-resort.html">Evermore Orlando Resort</a> <span class="badge">Local Pick</span></h3>
+          <p class="meta">Hotels · Hotel &middot; $$$</p><p class="vsub">The centerpiece is Evermore Bay, a crystal lagoon with its own beach that leaves guests saying the resort feels like it is out of the country.</p>
           <p class="addr">1590 Evermore Way, Orlando, FL 32836</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/orlando-vineland-premium-outlets.html">Orlando Vineland Premium Outlets</a> <span class="badge">Local Pick</span></h3>
-          <p class="meta">Markets &amp; shops · Outlet Mall &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/orlando-vineland-premium-outlets.html">Orlando Vineland Premium Outlets</a> <span class="badge">Local Pick</span></h3>
+          <p class="meta">Markets &amp; shops · Outlet Mall &middot; $$</p><p class="vsub">Minutes from Disney, a Mediterranean-inspired outdoor outlet village anchored by Prada, Bottega Veneta, Burberry, Gucci and Tory Burch.</p>
           <p class="addr">8200 Vineland Ave, Orlando, FL 32821</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/take-a-sushi.html">Take A Sushi</a></h3>
-          <p class="meta">Japanese &amp; sushi · Sushi &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-take-a-sushi.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/take-a-sushi.html">Take A Sushi</a></h3>
+          <p class="meta">Japanese &amp; sushi · Sushi &middot; $$</p><p class="vsub">Japanese cooking gets a Latin twist on Sand Lake Road, sunny, breezy, and unpretentious.</p>
           <p class="addr">4725 W Sand Lake Rd #101, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/stadium-club.html">Stadium Club</a></h3>
-          <p class="meta">Bars &amp; lounges · Sports Bar &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/stadium-club.html">Stadium Club</a></h3>
+          <p class="meta">Bars &amp; lounges · Sports Bar &middot; $$</p><p class="vsub">Game day gets the full stadium treatment inside Caribe Royale, with a wraparound ribbon screen keeping every matchup in view.</p>
           <p class="addr">8101 World Center Dr, Orlando, FL 32821</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/vivoli-il-gelato.html">Vivoli Il Gelato</a></h3>
-          <p class="meta">Sweets · Ice Cream &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/vivoli-il-gelato.html">Vivoli Il Gelato</a></h3>
+          <p class="meta">Sweets · Ice Cream &middot; $$</p><p class="vsub">A Florentine gelateria at Disney Springs, old-world and creamy in a way guests call authentic.</p>
           <p class="addr">Vivoli Il Gelato, 1638 E Buena Vista Dr, Lake Buena Vista, FL 32830, United States</p>
-        </article>
+        </div></article>
         </div>
         <div class="handoff">
           <a class="btn-ghost" href="/disney-area-finder.html">See the full Disney Area list</a>

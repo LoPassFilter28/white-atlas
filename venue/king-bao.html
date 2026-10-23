@@ -211,7 +211,14 @@
       .vcard .addr { margin: 0; color: var(--muted); font-size: .9rem; }
       @media (max-width: 640px) { .facts { grid-template-columns: 1fr; } }
     </style>
-  </head>
+  <style data-cardsys>
+/* cardsys: similar rail cards (2026-10-23 overhaul) */
+.vcard{display:flex;gap:12px;align-items:flex-start}
+.vcard .vthumb{flex:0 0 86px;width:86px;height:86px;border-radius:10px;object-fit:cover;display:block}
+.vcard .vmain{flex:1;min-width:0}
+.vcard .vsub{margin:4px 0 0;font-size:.86rem;line-height:1.45;color:var(--muted,#c6bba2)}
+@media (min-width:1000px){.vlist{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start}}
+</style></head>
   <body>
     <header class="hero">
       <div class="hero-in">
@@ -236,46 +243,46 @@
         <div class="actions">
           <a class="action" href="https://www.google.com/maps/search/?api=1&amp;query=King+Bao+710+N+Mills+Ave%2C+Orlando%2C+FL+32803" target="_blank" rel="noopener">Directions &rarr;</a>
           <a class="action" href="/archive.html?venue=king-bao">Open in the full finder</a>
-          <a class="action" href="/mills-50-district-guide.html">Read the Mills 50 story</a>
+          <a class="action" href="/history/mills-50.html">Read the Mills 50 story</a>
           <a class="action action-ig" href="https://www.instagram.com/king_bao_orlando" target="_blank" rel="noopener"><svg class="ig-glyph" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="vertical-align:-2px;margin-right:6px"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg> Instagram</a>
         </div>
       </section>
 
-      <section class="sec" id="similar">
+      <section class="sec" id="district-story"><p class="kicker">District Story</p><h2>The story of Mills 50</h2><p class="lede">A district named for its own crossroads, platted as front porches in 1883 and remade twice by the people who moved in.</p><p><a class="btn-ghost" href="/history/mills-50.html">Read the Mills 50 story &rarr;</a></p></section><section class="sec" id="similar">
         <p class="kicker">Similar Feel</p>
         <h2>More places with this feel</h2>
         <p class="lede">Matched by vibe, not by neighborhood: the places across Greater Orlando closest in spirit to King Bao.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/kai-kai-bbq-dumplings.html">Kai Kai BBQ &amp; Dumplings</a></h3>
-          <p class="meta">Chinese &middot; Mills 50 &middot; $</p>
+          <img class="vthumb" src="/assets/venue-kai-kai-bbq-dumplings.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/kai-kai-bbq-dumplings.html">Kai Kai BBQ &amp; Dumplings</a></h3>
+          <p class="meta">Chinese &middot; Mills 50 &middot; $</p><p class="vsub">A no-frills Cantonese barbecue counter inside Mills Market, Chinatown-style and fast-moving.</p>
           <p class="addr">Mills Market, 1110 E Colonial Dr, Orlando, FL 32803</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/hot-asian-buns.html">Hot Asian Buns</a></h3>
-          <p class="meta">Restaurants &middot; Sanford &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/hot-asian-buns.html">Hot Asian Buns</a></h3>
+          <p class="meta">Restaurants &middot; Sanford &middot; $$</p><p class="vsub">Started as a Sanford food truck, now a brick-and-mortar on South Sanford Avenue where every bao is handmade from scratch.</p>
           <p class="addr">204 S Sanford Ave, Sanford, FL</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/mills-market.html">Mills Market</a></h3>
-          <p class="meta">Markets &amp; shops &middot; Mills 50 &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/mills-market.html">Mills Market</a></h3>
+          <p class="meta">Markets &amp; shops &middot; Mills 50 &middot; $$</p><p class="vsub">The food hall on East Colonial that anchors Mills 50, all shared tables, patio seating and chef-driven stalls under one roof.</p>
           <p class="addr">1110 E Colonial Dr, Orlando, FL 32803</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/banh-mi-boy.html">Banh Mi Boy</a></h3>
-          <p class="meta">Noodles &amp; Southeast Asian &middot; Mills 50 &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/banh-mi-boy.html">Banh Mi Boy</a></h3>
+          <p class="meta">Noodles &amp; Southeast Asian &middot; Mills 50 &middot; $</p><p class="vsub">Tucked into Mills Market, this Bib Gourmand stall is no-frills, with a crisp baguette loaded with pate, cold cuts and pickled vegetables.</p>
           <p class="addr">1110 E Colonial Dr, Orlando, FL 32803</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/shin-jung.html">Shin Jung</a></h3>
-          <p class="meta">Restaurants &middot; Mills 50 &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/shin-jung.html">Shin Jung</a></h3>
+          <p class="meta">Restaurants &middot; Mills 50 &middot; $$</p><p class="vsub">A cozy, lively Korean barbecue room on East Colonial where tabletop grills hiss and K-pop plays over the spread.</p>
           <p class="addr">1638 E Colonial Dr, Orlando, FL 32803</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/kung-fu.html">Kung Fu Kitchen</a></h3>
-          <p class="meta">Chinese &middot; Disney Area &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/kung-fu.html">Kung Fu Kitchen</a></h3>
+          <p class="meta">Chinese &middot; Disney Area &middot; $$</p><p class="vsub">A bustling, welcoming Chinese spot on Palm Parkway where hand-pulled and knife-cut noodles land springy and fresh.</p>
           <p class="addr">Kungfu Kitchen, 8466 Palm Pkwy, Orlando, FL 32836-6431</p>
-        </article>
+        </div></article>
         </div>
       </section>
 
@@ -285,35 +292,35 @@
         <p class="lede">Other places in Mills 50, Local Picks first, then the closest to King Bao.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/the-guesthouse.html">The Guesthouse</a> <span class="badge">Local Pick</span></h3>
-          <p class="meta">Bars &amp; lounges · Cocktail Bar &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/the-guesthouse.html">The Guesthouse</a> <span class="badge">Local Pick</span></h3>
+          <p class="meta">Bars &amp; lounges · Cocktail Bar &middot; $$</p><p class="vsub">Mills 50&#x27;s plant-filled living room, greenery trailing over white walls around a square bar.</p>
           <p class="addr">1321 N Mills Ave, Orlando, FL 32803</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/chi-kin.html">Chi-Kin</a></h3>
-          <p class="meta">Restaurants · Korean Fried Chicken &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/chi-kin.html">Chi-Kin</a></h3>
+          <p class="meta">Restaurants · Korean Fried Chicken &middot; $$</p><p class="vsub">The low-key Korean fried chicken counter on North Mills, where wings stay crunchy under scratch-made sweet gochujang and soy garlic sauces.</p>
           <p class="addr">813 N Mills Ave, Orlando, FL 32803</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/qreate-coffee.html">Qreate Coffee</a></h3>
-          <p class="meta">Coffee &amp; cafes · Coffee Shop &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-qreate-coffee.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/qreate-coffee.html">Qreate Coffee</a></h3>
+          <p class="meta">Coffee &amp; cafes · Coffee Shop &middot; $$</p><p class="vsub">Just off Mills on Woodward Street, part coffee lab and part creative studio, with a small-town feel guests do not expect.</p>
           <p class="addr">1212 Woodward St #1, Orlando, FL 32803</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/poke-hana.html">Poke Hana</a></h3>
-          <p class="meta">Restaurants · Poke &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/poke-hana.html">Poke Hana</a></h3>
+          <p class="meta">Restaurants · Poke &middot; $$</p><p class="vsub">A bright, laid-back Hawaiian counter on East Colonial Drive in Mills 50, where the poke bowls taste as fresh as the room feels.</p>
           <p class="addr">1225A E Colonial Dr, Orlando, FL 32803</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/tori-tori.html">Tori Tori</a></h3>
-          <p class="meta">Japanese &amp; sushi · Japanese &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-tori-tori.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/tori-tori.html">Tori Tori</a></h3>
+          <p class="meta">Japanese &amp; sushi · Japanese &middot; $$</p><p class="vsub">A dark, low-lit izakaya on North Mills where the drinks are stiff and the grill stays busy.</p>
           <p class="addr">720 N Mills Ave, Orlando, FL 32803</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/black-bean-deli.html">Black Bean Deli</a></h3>
-          <p class="meta">Latin &amp; Caribbean · Cuban &middot; $</p>
+          <img class="vthumb" src="/assets/venue-black-bean-deli.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/black-bean-deli.html">Black Bean Deli</a></h3>
+          <p class="meta">Latin &amp; Caribbean · Cuban &middot; $</p><p class="vsub">An airy, plant-filled Mills 50 cafe where Cuban family recipes anchor the menu and regulars say it reminds them of home.</p>
           <p class="addr">1835 E Colonial Dr, Orlando, FL 32803</p>
-        </article>
+        </div></article>
         </div>
         <div class="handoff">
           <a class="btn-ghost" href="/mills-50-finder.html">See the full Mills 50 list</a>

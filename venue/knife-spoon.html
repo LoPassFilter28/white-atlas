@@ -211,7 +211,14 @@
       .vcard .addr { margin: 0; color: var(--muted); font-size: .9rem; }
       @media (max-width: 640px) { .facts { grid-template-columns: 1fr; } }
     </style>
-  </head>
+  <style data-cardsys>
+/* cardsys: similar rail cards (2026-10-23 overhaul) */
+.vcard{display:flex;gap:12px;align-items:flex-start}
+.vcard .vthumb{flex:0 0 86px;width:86px;height:86px;border-radius:10px;object-fit:cover;display:block}
+.vcard .vmain{flex:1;min-width:0}
+.vcard .vsub{margin:4px 0 0;font-size:.86rem;line-height:1.45;color:var(--muted,#c6bba2)}
+@media (min-width:1000px){.vlist{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start}}
+</style></head>
   <body>
     <header class="hero">
       <div class="hero-in">
@@ -240,41 +247,41 @@
         </div>
       </section>
 
-      <section class="sec" id="similar">
+      <section class="sec" id="district-story"><p class="kicker">District Story</p><h2>The story of Grande Lakes</h2><p class="lede">A hotel in the boondocks, a road paved after it and named to sound big and important, and the corridor that taught Orlando how to be a vacation.</p><p><a class="btn-ghost" href="/history/i-drive.html">Read the Grande Lakes story &rarr;</a></p></section><section class="sec" id="similar">
         <p class="kicker">Similar Feel</p>
         <h2>More places with this feel</h2>
         <p class="lede">Matched by vibe, not by neighborhood: the places across Greater Orlando closest in spirit to Knife &amp; Spoon.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/knife-burger.html">Knife Burger</a></h3>
-          <p class="meta">Burgers &amp; sandwiches &middot; Orlando &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/knife-burger.html">Knife Burger</a></h3>
+          <p class="meta">Burgers &amp; sandwiches &middot; Orlando &middot; $$</p><p class="vsub">Chef John Tesar&#x27;s poolside stand at the JW Marriott Grande Lakes, where swimsuits pass and beef gets steakhouse respect.</p>
           <p class="addr">Knife Burger, 4040 Central Florida Pkwy, Orlando, FL 32837-7662, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/the-crooked-spoon.html">The Crooked Spoon</a></h3>
-          <p class="meta">Restaurants &middot; Clermont &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/the-crooked-spoon.html">The Crooked Spoon</a></h3>
+          <p class="meta">Restaurants &middot; Clermont &middot; $$</p><p class="vsub">Low-key Clermont gastropub on Citrus Tower Boulevard, chef-driven but laid-back, where guests say they never leave disappointed.</p>
           <p class="addr">200 Citrus Tower Blvd, Clermont, FL 34711</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/yh-seafood-clubhouse.html">YH Seafood Clubhouse</a></h3>
-          <p class="meta">Chinese &middot; Orlando &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/yh-seafood-clubhouse.html">YH Seafood Clubhouse</a></h3>
+          <p class="meta">Chinese &middot; Orlando &middot; $$</p><p class="vsub">Turkey Lake Road&#x27;s Cantonese room, refined and warm, where round tables fill with family-style plates.</p>
           <p class="addr">YH Seafood Clubhouse, 8081 Turkey Lake Rd, Orlando, FL 32819-7321, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/ruth-s-chris-steak-house-sand-lake.html">Ruth&#x27;s Chris Steak House</a></h3>
-          <p class="meta">Fine dining &amp; steak &middot; Sand Lake &middot; $$$$</p>
+          <div class="vmain"><h3><a href="/venue/ruth-s-chris-steak-house-sand-lake.html">Ruth&#x27;s Chris Steak House</a></h3>
+          <p class="meta">Fine dining &amp; steak &middot; Sand Lake &middot; $$$$</p><p class="vsub">The familiar name on Restaurant Row, recently remodeled and still doing the sizzling-platter ritual exactly to spec.</p>
           <p class="addr">7501 W Sand Lake Rd, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/gordon-ramsay-fish-and-chips.html">Gordon Ramsay Fish &amp; Chips</a></h3>
-          <p class="meta">Seafood &middot; ICON Park &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/gordon-ramsay-fish-and-chips.html">Gordon Ramsay Fish &amp; Chips</a></h3>
+          <p class="meta">Seafood &middot; ICON Park &middot; $</p><p class="vsub">Gordon Ramsay&#x27;s British chippy at ICON Park, done up like a Union Jack beach shack, with counter service and a short menu.</p>
           <p class="addr">8391 International Dr Ste C-1, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/glass-knife.html">The Glass Knife</a></h3>
-          <p class="meta">Bakeries &middot; Winter Park &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-glass-knife.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/glass-knife.html">The Glass Knife</a></h3>
+          <p class="meta">Bakeries &middot; Winter Park &middot; $$</p><p class="vsub">A pretty, polished Winter Park cafe named for the antique glass cake knives on its walls, all chic light and careful detail.</p>
           <p class="addr">The Glass Knife, 276 S Orlando Ave, Winter Park, FL 32789</p>
-        </article>
+        </div></article>
         </div>
       </section>
 
@@ -284,35 +291,35 @@
         <p class="lede">Other places in International Drive, closest to Knife &amp; Spoon first.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/knife-burger.html">Knife Burger</a></h3>
-          <p class="meta">Burgers &amp; sandwiches &middot; Burgers &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/knife-burger.html">Knife Burger</a></h3>
+          <p class="meta">Burgers &amp; sandwiches &middot; Burgers &middot; $$</p><p class="vsub">Chef John Tesar&#x27;s poolside stand at the JW Marriott Grande Lakes, where swimsuits pass and beef gets steakhouse respect.</p>
           <p class="addr">Knife Burger, 4040 Central Florida Pkwy, Orlando, FL 32837-7662, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/oza-izakaya.html">Oza Izakaya</a></h3>
-          <p class="meta">Japanese &amp; sushi &middot; Japanese &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-oza-izakaya.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/oza-izakaya.html">Oza Izakaya</a></h3>
+          <p class="meta">Japanese &amp; sushi &middot; Japanese &middot; $$</p><p class="vsub">Sleek, garden-like Japanese room on Central Florida Parkway, beautiful and unhurried in a way that suits a date night.</p>
           <p class="addr">Oza Izakaya, 5310 Central Florida Pkwy, Orlando, FL 32821-8772</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/selam.html">Selam Ethiopian</a></h3>
-          <p class="meta">Restaurants &middot; Ethiopian &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-selam.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/selam.html">Selam Ethiopian</a></h3>
+          <p class="meta">Restaurants &middot; Ethiopian &middot; $$</p><p class="vsub">A warm, calm, family-run room on Central Florida Parkway serving Ethiopian and Eritrean cooking built for sharing.</p>
           <p class="addr">Selam, 5494 Central Florida Pkwy, Orlando, FL 32821-8774</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/aquatica-orlando.html">Aquatica Orlando</a></h3>
-          <p class="meta">Attractions &middot; Water Park &middot; $$$</p>
+          <img class="vthumb" src="/assets/venue-aquatica-orlando.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/aquatica-orlando.html">Aquatica Orlando</a></h3>
+          <p class="meta">Attractions &middot; Water Park &middot; $$$</p><p class="vsub">At SeaWorld&#x27;s water park, the Dolphin Plunge clear tube passes Commerson&#x27;s dolphins, and Roa&#x27;s Rapids runs faster than a lazy river should.</p>
           <p class="addr">5800 Water Play Way, Orlando, FL 32821</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/discovery-cove.html">Discovery Cove</a></h3>
-          <p class="meta">Attractions &middot; Theme Park &middot; $$$$</p>
+          <img class="vthumb" src="/assets/venue-discovery-cove.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/discovery-cove.html">Discovery Cove</a></h3>
+          <p class="meta">Attractions &middot; Theme Park &middot; $$$$</p><p class="vsub">The calm splurge on I-Drive: a reservation-only day resort where attendance is capped and the water stays clear.</p>
           <p class="addr">6000 Discovery Cove Way, Orlando, FL 32821</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/seaworld-orlando.html">SeaWorld Orlando</a></h3>
-          <p class="meta">Attractions &middot; Theme Park &middot; $$$$</p>
+          <img class="vthumb" src="/assets/venue-seaworld-orlando.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/seaworld-orlando.html">SeaWorld Orlando</a></h3>
+          <p class="meta">Attractions &middot; Theme Park &middot; $$$$</p><p class="vsub">A working marine park with serious coasters, from Mako and Pipeline to Penguin Trek, plus orca presentations and a shark tunnel.</p>
           <p class="addr">7007 SeaWorld Dr, Orlando, FL 32821</p>
-        </article>
+        </div></article>
         </div>
         <div class="handoff">
           <a class="btn-ghost" href="/international-drive-finder.html">See the full International Drive list</a>

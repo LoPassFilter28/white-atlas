@@ -211,7 +211,14 @@
       .vcard .addr { margin: 0; color: var(--muted); font-size: .9rem; }
       @media (max-width: 640px) { .facts { grid-template-columns: 1fr; } }
     </style>
-  </head>
+  <style data-cardsys>
+/* cardsys: similar rail cards (2026-10-23 overhaul) */
+.vcard{display:flex;gap:12px;align-items:flex-start}
+.vcard .vthumb{flex:0 0 86px;width:86px;height:86px;border-radius:10px;object-fit:cover;display:block}
+.vcard .vmain{flex:1;min-width:0}
+.vcard .vsub{margin:4px 0 0;font-size:.86rem;line-height:1.45;color:var(--muted,#c6bba2)}
+@media (min-width:1000px){.vlist{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start}}
+</style></head>
   <body>
     <header class="hero">
       <div class="hero-in">
@@ -239,41 +246,41 @@
         </div>
       </section>
 
-      <section class="sec" id="similar">
+      <section class="sec" id="district-story"><p class="kicker">District Stories</p><h2>Orlando&#x27;s long memory</h2><p class="lede">The guide keeps the long memory of Orlando&#x27;s districts in one place: the names, the plats and the stories behind the streets.</p><p><a class="btn-ghost" href="/history.html">Browse the district stories &rarr;</a></p></section><section class="sec" id="similar">
         <p class="kicker">Similar Feel</p>
         <h2>More places with this feel</h2>
         <p class="lede">Matched by vibe, not by neighborhood: the places across Greater Orlando closest in spirit to Lucky China.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/yummy-house.html">Yummy House</a></h3>
-          <p class="meta">Chinese &middot; Altamonte Springs &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/yummy-house.html">Yummy House</a></h3>
+          <p class="meta">Chinese &middot; Altamonte Springs &middot; $$</p><p class="vsub">An old-school Cantonese dining room in Altamonte Springs that transplanted New Englanders call the real thing.</p>
           <p class="addr">478 E Altamonte Dr #102, Altamonte Springs, FL 32701</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/asia-kitchen.html">Asia Kitchen</a></h3>
-          <p class="meta">Noodles &amp; Southeast Asian &middot; Winter Park &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/asia-kitchen.html">Asia Kitchen</a></h3>
+          <p class="meta">Noodles &amp; Southeast Asian &middot; Winter Park &middot; $</p><p class="vsub">Bright and spotless on Lake Howell Road, a neighborhood staple where you might get fresh wontons while you wait.</p>
           <p class="addr">Asia Kitchen, 5405 Lake Howell Rd, Winter Park, FL 32792</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/kung-fu.html">Kung Fu Kitchen</a></h3>
-          <p class="meta">Chinese &middot; Disney Area &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/kung-fu.html">Kung Fu Kitchen</a></h3>
+          <p class="meta">Chinese &middot; Disney Area &middot; $$</p><p class="vsub">A bustling, welcoming Chinese spot on Palm Parkway where hand-pulled and knife-cut noodles land springy and fresh.</p>
           <p class="addr">Kungfu Kitchen, 8466 Palm Pkwy, Orlando, FL 32836-6431</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/thai-place.html">Thai Place</a></h3>
-          <p class="meta">Noodles &amp; Southeast Asian &middot; Winter Park &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/thai-place.html">Thai Place</a></h3>
+          <p class="meta">Noodles &amp; Southeast Asian &middot; Winter Park &middot; $$</p><p class="vsub">Family-run since 1999, this calm, cozy Winter Park Village room is where longtime regulars bring everyone they love.</p>
           <p class="addr">Thai Place, 501 N Orlando Ave Ste 319, Winter Park, FL 32789</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/lams-garden.html">Lam&#x27;s Garden Chinese Restaurant</a></h3>
-          <p class="meta">Chinese &middot; Milk District &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-lams-garden.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/lams-garden.html">Lam&#x27;s Garden Chinese Restaurant</a></h3>
+          <p class="meta">Chinese &middot; Milk District &middot; $$</p><p class="vsub">An old-school, family-owned Cantonese room on East Colonial Drive that has served the corridor since 1975.</p>
           <p class="addr">2505 E Colonial Dr, Orlando, FL 32803</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/inchin-s-bamboo-garden.html">Inchin&#x27;s Bamboo Garden</a></h3>
-          <p class="meta">Chinese &middot; Hunter&#x27;s Creek &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-inchin-s-bamboo-garden.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/inchin-s-bamboo-garden.html">Inchin&#x27;s Bamboo Garden</a></h3>
+          <p class="meta">Chinese &middot; Hunter&#x27;s Creek &middot; $$</p><p class="vsub">In Hunter&#x27;s Creek, Indo-Chinese fusion built for strong flavors and real heat, wok fire meeting Indian spice in nearly every plate.</p>
           <p class="addr">3900 Town Center Blvd, Orlando, FL 32837</p>
-        </article>
+        </div></article>
         </div>
       </section>
 
@@ -283,35 +290,35 @@
         <p class="lede">Other places in University, closest to Lucky China first.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/zackleys.html">Zackleys</a></h3>
-          <p class="meta">Pizza &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/zackleys.html">Zackleys</a></h3>
+          <p class="meta">Pizza &middot; $</p><p class="vsub">Family owned since 2000 and tucked inside the Full Sail campus, with wood oven pizzas, paninis, and Jamaican beef empanadas.</p>
           <p class="addr">3260 University Blvd, Winter Park, FL 32792</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/dutch-bros-coffee-winter-park.html">Dutch Bros Coffee</a></h3>
-          <p class="meta">Coffee &amp; cafes · Coffee Shop &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/dutch-bros-coffee-winter-park.html">Dutch Bros Coffee</a></h3>
+          <p class="meta">Coffee &amp; cafes · Coffee Shop &middot; $</p><p class="vsub">On Semoran Boulevard, a high-energy, genuinely friendly drive-thru where the crew remembers regulars and sings to birthday windows.</p>
           <p class="addr">116 S Semoran Blvd, Winter Park, FL 32792</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/vivahealthy-pink-house.html">Vivahealthy Pink House</a></h3>
-          <p class="meta">Coffee &amp; cafes · Healthy Cafe &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/vivahealthy-pink-house.html">Vivahealthy Pink House</a></h3>
+          <p class="meta">Coffee &amp; cafes · Healthy Cafe &middot; $$</p><p class="vsub">A bright healthy cafe on University Blvd built around smoothies, juices, salads, and weekly meal prep for students.</p>
           <p class="addr">7612 University Blvd Unit 21, Winter Park, FL 32792</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/aloma-bowl.html">Aloma Bowl</a></h3>
-          <p class="meta">Attractions · Bowling &amp; Arcade &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-aloma-bowl.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/aloma-bowl.html">Aloma Bowl</a></h3>
+          <p class="meta">Attractions · Bowling &amp; Arcade &middot; $$</p><p class="vsub">A 32-lane bowling house on Aloma Ave run by a local family group that has operated Central Florida lanes for decades.</p>
           <p class="addr">2530 Aloma Ave, Winter Park, FL 32792</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/pereira-latin-products.html">Pereira Latin Products</a></h3>
-          <p class="meta">Markets &amp; shops · Latin Grocery &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/pereira-latin-products.html">Pereira Latin Products</a></h3>
+          <p class="meta">Markets &amp; shops · Latin Grocery &middot; $</p><p class="vsub">A Latin grocery on Forsyth Rd carrying the pantry staples, snacks, and drinks the big supermarkets skim past.</p>
           <p class="addr">2914 Forsyth Rd, Winter Park, FL 32792</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/tibbys-new-orleans-kitchen.html">Tibby&#x27;s New Orleans Kitchen</a></h3>
-          <p class="meta">Restaurants · Cajun &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/tibbys-new-orleans-kitchen.html">Tibby&#x27;s New Orleans Kitchen</a></h3>
+          <p class="meta">Restaurants · Cajun &middot; $$</p><p class="vsub">A Mardi Gras room on Aloma Avenue in Winter Park, lively and colorful, with an atmosphere guests say feels like being back in Louisiana.</p>
           <p class="addr">2203 Aloma Ave, Winter Park, FL 32792</p>
-        </article>
+        </div></article>
         </div>
         <div class="handoff">
           <a class="btn-ghost" href="/ucf-finder.html">See the full University list</a>

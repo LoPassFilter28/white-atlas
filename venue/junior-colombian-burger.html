@@ -211,7 +211,14 @@
       .vcard .addr { margin: 0; color: var(--muted); font-size: .9rem; }
       @media (max-width: 640px) { .facts { grid-template-columns: 1fr; } }
     </style>
-  </head>
+  <style data-cardsys>
+/* cardsys: similar rail cards (2026-10-23 overhaul) */
+.vcard{display:flex;gap:12px;align-items:flex-start}
+.vcard .vthumb{flex:0 0 86px;width:86px;height:86px;border-radius:10px;object-fit:cover;display:block}
+.vcard .vmain{flex:1;min-width:0}
+.vcard .vsub{margin:4px 0 0;font-size:.86rem;line-height:1.45;color:var(--muted,#c6bba2)}
+@media (min-width:1000px){.vlist{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start}}
+</style></head>
   <body>
     <header class="hero">
       <div class="hero-in">
@@ -239,41 +246,41 @@
         </div>
       </section>
 
-      <section class="sec" id="similar">
+      <section class="sec" id="district-story"><p class="kicker">District Stories</p><h2>Orlando&#x27;s long memory</h2><p class="lede">The guide keeps the long memory of Orlando&#x27;s districts in one place: the names, the plats and the stories behind the streets.</p><p><a class="btn-ghost" href="/history.html">Browse the district stories &rarr;</a></p></section><section class="sec" id="similar">
         <p class="kicker">Similar Feel</p>
         <h2>More places with this feel</h2>
         <p class="lede">Matched by vibe, not by neighborhood: the places across Greater Orlando closest in spirit to Junior Colombian Burger.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/papi-smashd-burger.html">Papi Smash&#x27;d Burger</a></h3>
-          <p class="meta">Burgers &amp; sandwiches &middot; Orlando &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-papi-smashd-burger.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/papi-smashd-burger.html">Papi Smash&#x27;d Burger</a></h3>
+          <p class="meta">Burgers &amp; sandwiches &middot; Orlando &middot; $$</p><p class="vsub">Small, quaint counter on East Pine where smash burgers come with a Latin soul, pressed hard until edges go lacy and crisp.</p>
           <p class="addr">Papi Smash&#x27;d Burger, 66 E Pine St, Orlando, FL 32801-2616, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/burger-vault.html">Burger Vault</a></h3>
-          <p class="meta">Burgers &amp; sandwiches &middot; Altamonte Springs &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-burger-vault.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/burger-vault.html">Burger Vault</a></h3>
+          <p class="meta">Burgers &amp; sandwiches &middot; Altamonte Springs &middot; $$</p><p class="vsub">Small mom-and-pop counter on State Road 436 in Altamonte Springs, building halal burgers guests call juicy and wonderfully messy.</p>
           <p class="addr">Burger Vault, 520 W State Road 436, Altamonte Springs, FL 32714-4000, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/crocante-restaurant.html">Crocante Restaurant</a></h3>
-          <p class="meta">Latin &amp; Caribbean &middot; Baldwin Park &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-crocante-restaurant.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/crocante-restaurant.html">Crocante Restaurant</a></h3>
+          <p class="meta">Latin &amp; Caribbean &middot; Baldwin Park &middot; $$</p><p class="vsub">Puerto Rican cooking on East Colonial Drive with a full cocktail bar and a festive take on homestyle flavors.</p>
           <p class="addr">Crocante Restaurant, 4311 E Colonial Dr, Orlando, FL 32803-5217</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/taqueria-las-cazuelas.html">Taqueria las Cazuelas</a></h3>
-          <p class="meta">Mexican &middot; Orlando &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/taqueria-las-cazuelas.html">Taqueria las Cazuelas</a></h3>
+          <p class="meta">Mexican &middot; Orlando &middot; $$</p><p class="vsub">No-frills and home-style on East Colonial, the taco outpost of the Las Cazuelas family, with portions that are famously not shy.</p>
           <p class="addr">Taqueria las Cazuelas, 10360 E Colonial Dr, Orlando, FL 32817-4364, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/portillo-s.html">Portillo&#x27;s</a></h3>
-          <p class="meta">Burgers &amp; sandwiches &middot; Orlando &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/portillo-s.html">Portillo&#x27;s</a></h3>
+          <p class="meta">Burgers &amp; sandwiches &middot; Orlando &middot; $</p><p class="vsub">Chicago street food lands on Palm Parkway in a loud, retro room dressed like a 50s diner, all red chrome and nostalgia.</p>
           <p class="addr">7715 Palm Pkwy, Orlando, FL 32836</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/matts-latin-bbq.html">Matt&#x27;s Latin BBQ</a></h3>
-          <p class="meta">BBQ &middot; Airport Corridor &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/matts-latin-bbq.html">Matt&#x27;s Latin BBQ</a></h3>
+          <p class="meta">BBQ &middot; Airport Corridor &middot; $$</p><p class="vsub">Puerto Rican comfort cooking on South Semoran, cafeteria-style and unpretentious, with decor guests say feels like the island.</p>
           <p class="addr">Matt&#x27;s Latin BBQ, 6607 S Semoran Blvd, Orlando, FL 32822</p>
-        </article>
+        </div></article>
         </div>
       </section>
 
@@ -283,35 +290,35 @@
         <p class="lede">Other places in University, closest to Junior Colombian Burger first.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/goodfella-s-pizzeria.html">Goodfella&#x27;s Pizzeria</a></h3>
-          <p class="meta">Pizza &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/goodfella-s-pizzeria.html">Goodfella&#x27;s Pizzeria</a></h3>
+          <p class="meta">Pizza &middot; $$</p><p class="vsub">An old-school, no-frills slice shop on East Colonial Drive serving New York-style pies guests say taste like the kind they grew up eating.</p>
           <p class="addr">11873 E Colonial Dr, Orlando, FL 32826</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/viet-nomz.html">Viet-Nomz</a></h3>
-          <p class="meta">Noodles &amp; Southeast Asian · Vietnamese &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-viet-nomz.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/viet-nomz.html">Viet-Nomz</a></h3>
+          <p class="meta">Noodles &amp; Southeast Asian · Vietnamese &middot; $$</p><p class="vsub">Cute, cozy fast-casual Vietnamese spot on East Colonial Drive with a friendly, welcoming feel.</p>
           <p class="addr">11798 E Colonial Dr, Orlando, FL 32817</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/dang-boba-musubi-house.html">Dang Boba &amp; Musubi House</a></h3>
-          <p class="meta">Coffee &amp; cafes · Bubble Tea &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/dang-boba-musubi-house.html">Dang Boba &amp; Musubi House</a></h3>
+          <p class="meta">Coffee &amp; cafes · Bubble Tea &middot; $$</p><p class="vsub">Cheerful, cozy little spot near UCF pairing boba teas with Hawaiian musubi.</p>
           <p class="addr">Dang Boba &amp; Musubi House, 11772 E Colonial Dr, Orlando, FL 32817-4625</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/luminescent.html">Luminescent</a></h3>
-          <p class="meta">Bars &amp; lounges · Cocktail Bar &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/luminescent.html">Luminescent</a></h3>
+          <p class="meta">Bars &amp; lounges · Cocktail Bar &middot; $$</p><p class="vsub">A deep-green bar on East Colonial Drive, part Indian-influenced coffee bar and part craft cocktail lounge, cozy and impeccable.</p>
           <p class="addr">Luminescent, 12286 E Colonial Dr, Orlando, FL 32826-4709</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/jeremiah-s-italian-ice.html">Jeremiah&#x27;s Italian Ice</a></h3>
-          <p class="meta">Sweets · Italian Ice &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/jeremiah-s-italian-ice.html">Jeremiah&#x27;s Italian Ice</a></h3>
+          <p class="meta">Sweets · Italian Ice &middot; $</p><p class="vsub">Bright, Orlando-born walk-up stand in Waterford Lakes where the Gelati layers Italian ice with creamy soft serve.</p>
           <p class="addr">877 N Alafaya Trl, Orlando, FL</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/white-rabbit-dessert-experience.html">White Rabbit Dessert Experience</a></h3>
-          <p class="meta">Sweets · Dessert &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-white-rabbit-dessert-experience.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/white-rabbit-dessert-experience.html">White Rabbit Dessert Experience</a></h3>
+          <p class="meta">Sweets · Dessert &middot; $$</p><p class="vsub">Whimsical, Alice in Wonderland themed dessert room in Waterford Lakes where guests say the theme is pure magic.</p>
           <p class="addr">White Rabbit Dessert Experience, 875 N Alafaya Trl, Orlando, FL 32828-7049</p>
-        </article>
+        </div></article>
         </div>
         <div class="handoff">
           <a class="btn-ghost" href="/ucf-finder.html">See the full University list</a>

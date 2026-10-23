@@ -211,7 +211,14 @@
       .vcard .addr { margin: 0; color: var(--muted); font-size: .9rem; }
       @media (max-width: 640px) { .facts { grid-template-columns: 1fr; } }
     </style>
-  </head>
+  <style data-cardsys>
+/* cardsys: similar rail cards (2026-10-23 overhaul) */
+.vcard{display:flex;gap:12px;align-items:flex-start}
+.vcard .vthumb{flex:0 0 86px;width:86px;height:86px;border-radius:10px;object-fit:cover;display:block}
+.vcard .vmain{flex:1;min-width:0}
+.vcard .vsub{margin:4px 0 0;font-size:.86rem;line-height:1.45;color:var(--muted,#c6bba2)}
+@media (min-width:1000px){.vlist{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start}}
+</style></head>
   <body>
     <header class="hero">
       <div class="hero-in">
@@ -239,41 +246,41 @@
         </div>
       </section>
 
-      <section class="sec" id="similar">
+      <section class="sec" id="district-story"><p class="kicker">District Stories</p><h2>Orlando&#x27;s long memory</h2><p class="lede">The guide keeps the long memory of Orlando&#x27;s districts in one place: the names, the plats and the stories behind the streets.</p><p><a class="btn-ghost" href="/history.html">Browse the district stories &rarr;</a></p></section><section class="sec" id="similar">
         <p class="kicker">Similar Feel</p>
         <h2>More places with this feel</h2>
         <p class="lede">Matched by vibe, not by neighborhood: the places across Greater Orlando closest in spirit to Lighthouse Seafood.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/yh-seafood-clubhouse.html">YH Seafood Clubhouse</a></h3>
-          <p class="meta">Chinese &middot; Orlando &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/yh-seafood-clubhouse.html">YH Seafood Clubhouse</a></h3>
+          <p class="meta">Chinese &middot; Orlando &middot; $$</p><p class="vsub">Turkey Lake Road&#x27;s Cantonese room, refined and warm, where round tables fill with family-style plates.</p>
           <p class="addr">YH Seafood Clubhouse, 8081 Turkey Lake Rd, Orlando, FL 32819-7321, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/duffy-s-sports-grill.html">Duffy&#x27;s Sports Grill</a></h3>
-          <p class="meta">American &middot; Lake Mary &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/duffy-s-sports-grill.html">Duffy&#x27;s Sports Grill</a></h3>
+          <p class="meta">American &middot; Lake Mary &middot; $</p><p class="vsub">TVs everywhere in Lake Mary, so every seat feels close to the game.</p>
           <p class="addr">Duffy&#x27;s Sports Grill, 951 Market Promenade Ave, Lake Mary, FL 32746</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/hooked-fish-camp.html">Hooked Fish Camp</a></h3>
-          <p class="meta">Seafood &middot; Sanford &middot; $$$$</p>
+          <div class="vmain"><h3><a href="/venue/hooked-fish-camp.html">Hooked Fish Camp</a></h3>
+          <p class="meta">Seafood &middot; Sanford &middot; $$$$</p><p class="vsub">Relaxed, coastal fish camp cooking comes to Towne Center Circle in Sanford.</p>
           <p class="addr">550 Towne Center Cir, Sanford, FL 32771</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/lombardi-s-seafood.html">Lombardi&#x27;s Seafood</a></h3>
-          <p class="meta">Seafood &middot; Winter Park &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-lombardi-s-seafood.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/lombardi-s-seafood.html">Lombardi&#x27;s Seafood</a></h3>
+          <p class="meta">Seafood &middot; Winter Park &middot; $$</p><p class="vsub">Old-school, family-run fish market on Fairbanks Avenue in Winter Park, the counter guests call the freshest fish in town.</p>
           <p class="addr">1888 W Fairbanks Ave, Winter Park, FL 32789</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/eddie-v-s-prime-seafood.html">Eddie V&#x27;s Prime Seafood</a></h3>
-          <p class="meta">Seafood &middot; Sand Lake &middot; $$$$</p>
+          <div class="vmain"><h3><a href="/venue/eddie-v-s-prime-seafood.html">Eddie V&#x27;s Prime Seafood</a></h3>
+          <p class="meta">Seafood &middot; Sand Lake &middot; $$$$</p><p class="vsub">Prime seafood and steak up front, then live trios in the V Lounge keep the night going after dinner.</p>
           <p class="addr">7488 W Sand Lake Rd, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/ocean-prime-orlando.html">Ocean Prime</a></h3>
-          <p class="meta">Seafood &middot; Sand Lake &middot; $$$$</p>
+          <div class="vmain"><h3><a href="/venue/ocean-prime-orlando.html">Ocean Prime</a></h3>
+          <p class="meta">Seafood &middot; Sand Lake &middot; $$$$</p><p class="vsub">White-tablecloth polish at the I-4 end of Restaurant Row, with seafood, prime steaks, a raw bar, and a dressy bar scene.</p>
           <p class="addr">7339 W Sand Lake Rd, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         </div>
       </section>
 
@@ -283,35 +290,35 @@
         <p class="lede">Other places in Sanford, closest to Lighthouse Seafood first.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/cocina-maya-mexican-grill-mezcaleria.html">Cocina Maya Mexican Grill &amp; Mezcaleria</a></h3>
-          <p class="meta">Mexican &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/cocina-maya-mexican-grill-mezcaleria.html">Cocina Maya Mexican Grill &amp; Mezcaleria</a></h3>
+          <p class="meta">Mexican &middot; $$</p><p class="vsub">Cozy, festive Lake Mary room where Mexican cooking goes well past taco-shop basics, with a little tableside flair.</p>
           <p class="addr">3590 US-17 Ste 1026, Lake Mary, FL 32746</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/parva.html">Parva</a></h3>
-          <p class="meta">Latin &amp; Caribbean · Colombian &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/parva.html">Parva</a></h3>
+          <p class="meta">Latin &amp; Caribbean · Colombian &middot; $$</p><p class="vsub">Warm, homey Colombian bakery and cafe on West Lake Mary Boulevard in Sanford, where the pastry case leads the visit.</p>
           <p class="addr">Parva, 220 W Lake Mary Blvd, Sanford, FL 32773-5925, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/donutste-doughnuts.html">Donutste Family Bakery</a></h3>
-          <p class="meta">Sweets · Donuts &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/donutste-doughnuts.html">Donutste Family Bakery</a></h3>
+          <p class="meta">Sweets · Donuts &middot; $$</p><p class="vsub">Fully plant-based donuts with no butter, milk, or eggs, in a bright pink Lake Mary room guests find cheerful and welcoming.</p>
           <p class="addr">605 Crescent Executive Ct Ste 120, Lake Mary, FL 32746</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/dalis-lao-thai-cafe.html">Dali&#x27;s Lao Thai Cafe</a></h3>
-          <p class="meta">Noodles &amp; Southeast Asian · Thai &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/dalis-lao-thai-cafe.html">Dali&#x27;s Lao Thai Cafe</a></h3>
+          <p class="meta">Noodles &amp; Southeast Asian · Thai &middot; $$</p><p class="vsub">Family-run in Sanford, cooking Lao and Thai food on Rinehart Road with care and fresh ingredients.</p>
           <p class="addr">Dali&#x27;s Lao Thai Cafe, 1181 Rinehart Rd, Sanford, FL 32771-7390, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/duffy-s-sports-grill.html">Duffy&#x27;s Sports Grill</a></h3>
-          <p class="meta">American · Sports Bar &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/duffy-s-sports-grill.html">Duffy&#x27;s Sports Grill</a></h3>
+          <p class="meta">American · Sports Bar &middot; $</p><p class="vsub">TVs everywhere in Lake Mary, so every seat feels close to the game.</p>
           <p class="addr">Duffy&#x27;s Sports Grill, 951 Market Promenade Ave, Lake Mary, FL 32746</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/hooked-fish-camp.html">Hooked Fish Camp</a></h3>
-          <p class="meta">Seafood &middot; $$$$</p>
+          <div class="vmain"><h3><a href="/venue/hooked-fish-camp.html">Hooked Fish Camp</a></h3>
+          <p class="meta">Seafood &middot; $$$$</p><p class="vsub">Relaxed, coastal fish camp cooking comes to Towne Center Circle in Sanford.</p>
           <p class="addr">550 Towne Center Cir, Sanford, FL 32771</p>
-        </article>
+        </div></article>
         </div>
         <div class="handoff">
           <a class="btn-ghost" href="/sanford-finder.html">See the full Sanford list</a>
