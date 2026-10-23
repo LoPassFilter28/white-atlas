@@ -698,6 +698,37 @@ html[data-tier="full"] .home-nav a.nearest-prized:hover{transform:translateY(-1p
    every size, including mobile's taller cards and two-line titles, which
    center as a block. No kicker, no index numbers. */
 #sectionCovers .district-filter.cover-link{justify-content:center;gap:2px;padding:18px 16px}
+/* Cards symmetry, second pass (PiK0, 2026-10-22: "Take a look at the lines").
+   Centering each card's group on its own put every hairline at a different
+   height, because the groups differ in height. Now the group has IDENTICAL
+   fixed internal geometry on every card: the title block and the hook block
+   are each fixed at the tallest natural content measured for that
+   breakpoint range, and it is the fixed block that gets centered above.
+   Identical blocks centered in equal-height cards put every hairline,
+   title start and hook start on one shared line across the row. Heights
+   are border-box and measured from the shipped page, not rounded: the
+   title block is the 1px hairline + 12px + its lines; the hook block is
+   its lines at 17.74px. Ranges follow the shelf's own column breaks
+   (1080px, 760px) plus the points where the measured content changes
+   (1350px: titles stop wrapping; 375px: hooks stop needing a 5th line). */
+#sectionCovers .district-name{height:42.02px;flex:none}
+#sectionCovers .section-hook{height:35.47px;flex:none}
+@media (max-width:1349px){
+  #sectionCovers .district-name{height:71.03px}
+  #sectionCovers .section-hook{height:70.94px}
+}
+@media (max-width:1079px){
+  #sectionCovers .district-name{height:36.31px}
+  #sectionCovers .section-hook{height:53.2px}
+}
+@media (max-width:759px){
+  #sectionCovers .district-name{height:59.63px}
+  #sectionCovers .section-hook{height:70.94px}
+}
+@media (max-width:374px){
+  #sectionCovers .district-name{height:59.63px}
+  #sectionCovers .section-hook{height:88.67px}
+}
 /* Consistency fix for a pre-existing defect (present in the shipped page,
    found in this pass): the Browse All pill takes var(--surface), which flips
    near-white in the light theme, while its label keeps the on-accent white
