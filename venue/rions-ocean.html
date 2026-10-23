@@ -211,7 +211,14 @@
       .vcard .addr { margin: 0; color: var(--muted); font-size: .9rem; }
       @media (max-width: 640px) { .facts { grid-template-columns: 1fr; } }
     </style>
-  </head>
+  <style data-cardsys>
+/* cardsys: similar rail cards (2026-10-23 overhaul) */
+.vcard{display:flex;gap:12px;align-items:flex-start}
+.vcard .vthumb{flex:0 0 86px;width:86px;height:86px;border-radius:10px;object-fit:cover;display:block}
+.vcard .vmain{flex:1;min-width:0}
+.vcard .vsub{margin:4px 0 0;font-size:.86rem;line-height:1.45;color:var(--muted,#c6bba2)}
+@media (min-width:1000px){.vlist{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start}}
+</style></head>
   <body>
     <header class="hero">
       <div class="hero-in">
@@ -236,45 +243,45 @@
         <div class="actions">
           <a class="action" href="https://www.google.com/maps/search/?api=1&amp;query=Rion%27s+Ocean+Room+Rion%27s+Ocean+Room%2C+3201+Corrine+Dr%2C+Orlando%2C+FL+32803" target="_blank" rel="noopener">Directions &rarr;</a>
           <a class="action" href="/archive.html?venue=rions-ocean">Open in the full finder</a>
-          <a class="action" href="/winter-park-district-guide.html">Read the Winter Park story</a>
+          <a class="action" href="/history/winter-park.html">Read the Winter Park story</a>
         </div>
       </section>
 
-      <section class="sec" id="similar">
+      <section class="sec" id="district-story"><p class="kicker">District Story</p><h2>The story of Winter Park</h2><p class="lede">A park built for the winter, drawn on paper in 1881, and still legible in every street you walk today.</p><p><a class="btn-ghost" href="/history/winter-park.html">Read the Winter Park story &rarr;</a></p></section><section class="sec" id="similar">
         <p class="kicker">Similar Feel</p>
         <h2>More places with this feel</h2>
         <p class="lede">Matched by vibe, not by neighborhood: the places across Greater Orlando closest in spirit to Rion&#x27;s Ocean Room.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/winter-park-biscuit-company.html">Winter Park Biscuit Company</a></h3>
-          <p class="meta">Breakfast &amp; brunch &middot; Audubon Park &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/winter-park-biscuit-company.html">Winter Park Biscuit Company</a></h3>
+          <p class="meta">Breakfast &amp; brunch &middot; Audubon Park &middot; $$</p><p class="vsub">All-vegan counter inside East End Market built around flaky, golden oat buttermilk biscuits, stacked or smothered in gravy.</p>
           <p class="addr">3201 Corrine Dr, Orlando, FL 32803-2224, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/domu.html">Domu</a></h3>
-          <p class="meta">Noodles &amp; Southeast Asian &middot; Audubon Park &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/domu.html">Domu</a></h3>
+          <p class="meta">Noodles &amp; Southeast Asian &middot; Audubon Park &middot; $$</p><p class="vsub">The East End Market original is a compact, buzzing ramen room Orlando keeps talking about.</p>
           <p class="addr">3201 Corrine Dr, Orlando, FL 32803</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/the-current-seafood-counter.html">The Current Seafood Counter</a></h3>
-          <p class="meta">Seafood &middot; College Park &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/the-current-seafood-counter.html">The Current Seafood Counter</a></h3>
+          <p class="meta">Seafood &middot; College Park &middot; $$</p><p class="vsub">New England fish shack spirit comes to College Park, with counter-service ease and a clean, casual room.</p>
           <p class="addr">The Current Seafood Counter, 2425 Edgewater Dr, Orlando, FL 32804-5303, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/east-end-market.html">East End Market</a></h3>
-          <p class="meta">Markets &amp; shops &middot; Audubon Park &middot; $</p>
+          <img class="vthumb" src="/assets/venue-east-end-market.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/east-end-market.html">East End Market</a></h3>
+          <p class="meta">Markets &amp; shops &middot; Audubon Park &middot; $</p><p class="vsub">Local makers under one Audubon Park roof: Gideon&#x27;s Bakehouse, Olde Hearth Bread, Lineage Coffee, Domu, La Femme du Fromage, Dochi and Hinckley&#x27;s.</p>
           <p class="addr">3201 Corrine Dr, Orlando, FL 32803</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/the-chapman.html">The Chapman</a></h3>
-          <p class="meta">Fine dining &amp; steak &middot; Winter Park &middot; $$$</p>
+          <div class="vmain"><h3><a href="/venue/the-chapman.html">The Chapman</a></h3>
+          <p class="meta">Fine dining &amp; steak &middot; Winter Park &middot; $$$</p><p class="vsub">On Park Avenue, the warm, artful dining room Winter Park kept asking for, built on a scratch kitchen and Florida ingredients.</p>
           <p class="addr">500 S Park Ave, Winter Park, FL 32789</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/lombardi-s-seafood.html">Lombardi&#x27;s Seafood</a></h3>
-          <p class="meta">Seafood &middot; Winter Park &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-lombardi-s-seafood.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/lombardi-s-seafood.html">Lombardi&#x27;s Seafood</a></h3>
+          <p class="meta">Seafood &middot; Winter Park &middot; $$</p><p class="vsub">Old-school, family-run fish market on Fairbanks Avenue in Winter Park, the counter guests call the freshest fish in town.</p>
           <p class="addr">1888 W Fairbanks Ave, Winter Park, FL 32789</p>
-        </article>
+        </div></article>
         </div>
       </section>
 
@@ -284,35 +291,35 @@
         <p class="lede">Other places in Winter Park, Local Picks first, then the closest to Rion&#x27;s Ocean Room.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/ava.html">AVA Mediterranean</a> <span class="badge">Local Pick</span></h3>
-          <p class="meta">Mediterranean &middot; $$$</p>
+          <img class="vthumb" src="/assets/venue-ava.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/ava.html">AVA Mediterranean</a> <span class="badge">Local Pick</span></h3>
+          <p class="meta">Mediterranean &middot; $$$</p><p class="vsub">A glamorous Greek agora on Park Avenue, sophisticated and high-energy from the moment you sit down.</p>
           <p class="addr">290 S Park Ave, Winter Park, FL 32789</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/imperial-on-park.html">The Imperial on Park</a> <span class="badge">Local Pick</span></h3>
-          <p class="meta">Bars &amp; lounges · Wine Bar &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-imperial-on-park.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/imperial-on-park.html">The Imperial on Park</a> <span class="badge">Local Pick</span></h3>
+          <p class="meta">Bars &amp; lounges · Wine Bar &middot; $$</p><p class="vsub">Park Avenue&#x27;s neighborhood bar, warm and laid back, with boutique wines, craft beers and cocktails built on Winter Park Distillery spirits.</p>
           <p class="addr">136 S Park Ave, Winter Park, FL 32789</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/prato.html">Prato</a> <span class="badge">Local Pick</span></h3>
-          <p class="meta">Italian &middot; $$$</p>
+          <div class="vmain"><h3><a href="/venue/prato.html">Prato</a> <span class="badge">Local Pick</span></h3>
+          <p class="meta">Italian &middot; $$$</p><p class="vsub">Italian the Park Avenue way: rustic yet upscale, exposed brick and warm light, house-made pastas and wood-fired pizzas.</p>
           <p class="addr">Prato, 124 N Park Ave, Winter Park, FL 32789</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/kadence.html">Kadence</a></h3>
-          <p class="meta">Japanese &amp; sushi · Sushi &middot; $$$$</p>
+          <div class="vmain"><h3><a href="/venue/kadence.html">Kadence</a></h3>
+          <p class="meta">Japanese &amp; sushi · Sushi &middot; $$$$</p><p class="vsub">A tiny, minimalist counter on Winter Park Road where a Michelin-starred omakase unfolds course by course in front of you.</p>
           <p class="addr">1809 Winter Park Rd, Orlando, FL 32803</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/mead-botanical-garden.html">Mead Botanical Garden</a></h3>
-          <p class="meta">Parks &amp; outdoors · Park &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/mead-botanical-garden.html">Mead Botanical Garden</a></h3>
+          <p class="meta">Parks &amp; outdoors · Park &middot; $</p><p class="vsub">Winter Park&#x27;s wilder, shadier green space, peaceful and a little untamed.</p>
           <p class="addr">1300 S Denning Dr, Winter Park, FL 32789</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/buttermilk.html">Buttermilk Bakery</a></h3>
-          <p class="meta">Bakeries · Bakery &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-buttermilk.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/buttermilk.html">Buttermilk Bakery</a></h3>
+          <p class="meta">Bakeries · Bakery &middot; $$</p><p class="vsub">A cozy Winter Park bakery where the case fills fresh every morning and choosing just a few treats is the hard part.</p>
           <p class="addr">Buttermilk Bakery, 1198 N Orange Ave, Winter Park, FL 32789-4908</p>
-        </article>
+        </div></article>
         </div>
         <div class="handoff">
           <a class="btn-ghost" href="/winter-park-finder.html">See the full Winter Park list</a>

@@ -211,7 +211,14 @@
       .vcard .addr { margin: 0; color: var(--muted); font-size: .9rem; }
       @media (max-width: 640px) { .facts { grid-template-columns: 1fr; } }
     </style>
-  </head>
+  <style data-cardsys>
+/* cardsys: similar rail cards (2026-10-23 overhaul) */
+.vcard{display:flex;gap:12px;align-items:flex-start}
+.vcard .vthumb{flex:0 0 86px;width:86px;height:86px;border-radius:10px;object-fit:cover;display:block}
+.vcard .vmain{flex:1;min-width:0}
+.vcard .vsub{margin:4px 0 0;font-size:.86rem;line-height:1.45;color:var(--muted,#c6bba2)}
+@media (min-width:1000px){.vlist{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start}}
+</style></head>
   <body>
     <header class="hero">
       <div class="hero-in">
@@ -240,41 +247,41 @@
         </div>
       </section>
 
-      <section class="sec" id="similar">
+      <section class="sec" id="district-story"><p class="kicker">District Stories</p><h2>Orlando&#x27;s long memory</h2><p class="lede">The guide keeps the long memory of Orlando&#x27;s districts in one place: the names, the plats and the stories behind the streets.</p><p><a class="btn-ghost" href="/history.html">Browse the district stories &rarr;</a></p></section><section class="sec" id="similar">
         <p class="kicker">Similar Feel</p>
         <h2>More places with this feel</h2>
         <p class="lede">Matched by vibe, not by neighborhood: the places across Greater Orlando closest in spirit to Schweini&#x27;s Delicatessen.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/glass-knife.html">The Glass Knife</a></h3>
-          <p class="meta">Bakeries &middot; Winter Park &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-glass-knife.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/glass-knife.html">The Glass Knife</a></h3>
+          <p class="meta">Bakeries &middot; Winter Park &middot; $$</p><p class="vsub">A pretty, polished Winter Park cafe named for the antique glass cake knives on its walls, all chic light and careful detail.</p>
           <p class="addr">The Glass Knife, 276 S Orlando Ave, Winter Park, FL 32789</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/harrell-s-hot-dogs-and-cold-cones.html">Harrell&#x27;s Hot Dogs and Cold Cones</a></h3>
-          <p class="meta">Burgers &amp; sandwiches &middot; Winter Garden &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/harrell-s-hot-dogs-and-cold-cones.html">Harrell&#x27;s Hot Dogs and Cold Cones</a></h3>
+          <p class="meta">Burgers &amp; sandwiches &middot; Winter Garden &middot; $</p><p class="vsub">Narrow little Plant Street hideaway for grilled all-beef dogs that guests say make a simple hot dog better.</p>
           <p class="addr">54 W Plant St, Winter Garden, FL 34787</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/norigami.html">Norigami</a></h3>
-          <p class="meta">Japanese &amp; sushi &middot; Winter Garden &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-norigami.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/norigami.html">Norigami</a></h3>
+          <p class="meta">Japanese &amp; sushi &middot; Winter Garden &middot; $$</p><p class="vsub">Inside Plant Street Market in Winter Garden, this intimate sushi counter prepares each piece right before your eyes.</p>
           <p class="addr">Norigami, 426 W Plant St, Winter Garden, FL 34787-3014</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/brunos-oysters.html">Bruno&#x27;s Oysters</a></h3>
-          <p class="meta">Seafood &middot; Winter Garden &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/brunos-oysters.html">Bruno&#x27;s Oysters</a></h3>
+          <p class="meta">Seafood &middot; Winter Garden &middot; $$</p><p class="vsub">Inside Plant Street Market&#x27;s Barrel Room in Winter Garden, moody, rustic, and intimate around a small counter.</p>
           <p class="addr">Bruno&#x27;s Oysters, 426 W Plant St, Winter Garden, FL 34787, United States</p>
-        </article>
+        </div></article>
                 <article class="vcard">
-          <h3><a href="/venue/at-the-diner.html">At The Diner</a></h3>
-          <p class="meta">Breakfast &amp; brunch &middot; Dr Phillips &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/at-the-diner.html">At The Diner</a></h3>
+          <p class="meta">Breakfast &amp; brunch &middot; Dr Phillips &middot; $</p><p class="vsub">Bright, playful Dr.</p>
           <p class="addr">5072 Dr Phillips Blvd, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/harlow-grove.html">Harlow Grove</a></h3>
-          <p class="meta">American &middot; Winter Garden &middot; $$$</p>
+          <div class="vmain"><h3><a href="/venue/harlow-grove.html">Harlow Grove</a></h3>
+          <p class="meta">American &middot; Winter Garden &middot; $$$</p><p class="vsub">Beneath a century-old oak in Winter Garden, an elegant room and open-air terrace overlook town.</p>
           <p class="addr">186 S Main St, Winter Garden, FL 34787</p>
-        </article>
+        </div></article>
         </div>
       </section>
 
@@ -284,35 +291,35 @@
         <p class="lede">Other places in Winter Garden, closest to Schweini&#x27;s Delicatessen first.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/harrell-s-hot-dogs-and-cold-cones.html">Harrell&#x27;s Hot Dogs and Cold Cones</a></h3>
-          <p class="meta">Burgers &amp; sandwiches · Hot Dogs &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/harrell-s-hot-dogs-and-cold-cones.html">Harrell&#x27;s Hot Dogs and Cold Cones</a></h3>
+          <p class="meta">Burgers &amp; sandwiches · Hot Dogs &middot; $</p><p class="vsub">Narrow little Plant Street hideaway for grilled all-beef dogs that guests say make a simple hot dog better.</p>
           <p class="addr">54 W Plant St, Winter Garden, FL 34787</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/harlow-grove.html">Harlow Grove</a></h3>
-          <p class="meta">American · American Restaurant &middot; $$$</p>
+          <div class="vmain"><h3><a href="/venue/harlow-grove.html">Harlow Grove</a></h3>
+          <p class="meta">American · American Restaurant &middot; $$$</p><p class="vsub">Beneath a century-old oak in Winter Garden, an elegant room and open-air terrace overlook town.</p>
           <p class="addr">186 S Main St, Winter Garden, FL 34787</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/brunos-oysters.html">Bruno&#x27;s Oysters</a></h3>
-          <p class="meta">Seafood &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/brunos-oysters.html">Bruno&#x27;s Oysters</a></h3>
+          <p class="meta">Seafood &middot; $$</p><p class="vsub">Inside Plant Street Market&#x27;s Barrel Room in Winter Garden, moody, rustic, and intimate around a small counter.</p>
           <p class="addr">Bruno&#x27;s Oysters, 426 W Plant St, Winter Garden, FL 34787, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/norigami.html">Norigami</a></h3>
-          <p class="meta">Japanese &amp; sushi · Sushi &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-norigami.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/norigami.html">Norigami</a></h3>
+          <p class="meta">Japanese &amp; sushi · Sushi &middot; $$</p><p class="vsub">Inside Plant Street Market in Winter Garden, this intimate sushi counter prepares each piece right before your eyes.</p>
           <p class="addr">Norigami, 426 W Plant St, Winter Garden, FL 34787-3014</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/indian-pavilion.html">Indian Pavilion</a></h3>
-          <p class="meta">Indian &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/indian-pavilion.html">Indian Pavilion</a></h3>
+          <p class="meta">Indian &middot; $$</p><p class="vsub">Modern Indian cooking in Winter Garden built on bold spice and careful texture, with portions that often leave leftovers.</p>
           <p class="addr">Indian Pavilion, 13770 W Colonial Dr, Winter Garden, FL 34787-4202, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/toll-road-brewing-company.html">Toll Road Brewing Company</a></h3>
-          <p class="meta">Breweries · Brewery &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/toll-road-brewing-company.html">Toll Road Brewing Company</a></h3>
+          <p class="meta">Breweries · Brewery &middot; $$</p><p class="vsub">Small Ocoee taproom with a cozy, laid-back microbrewery feel, staffed by people who treat everyone like a regular.</p>
           <p class="addr">Toll Road Brewing Company, 101 W McKey St, Ocoee, FL 34761-2616, United States</p>
-        </article>
+        </div></article>
         </div>
         <div class="handoff">
           <a class="btn-ghost" href="/winter-garden-finder.html">See the full Winter Garden list</a>

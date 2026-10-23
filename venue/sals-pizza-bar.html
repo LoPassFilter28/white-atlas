@@ -211,7 +211,14 @@
       .vcard .addr { margin: 0; color: var(--muted); font-size: .9rem; }
       @media (max-width: 640px) { .facts { grid-template-columns: 1fr; } }
     </style>
-  </head>
+  <style data-cardsys>
+/* cardsys: similar rail cards (2026-10-23 overhaul) */
+.vcard{display:flex;gap:12px;align-items:flex-start}
+.vcard .vthumb{flex:0 0 86px;width:86px;height:86px;border-radius:10px;object-fit:cover;display:block}
+.vcard .vmain{flex:1;min-width:0}
+.vcard .vsub{margin:4px 0 0;font-size:.86rem;line-height:1.45;color:var(--muted,#c6bba2)}
+@media (min-width:1000px){.vlist{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start}}
+</style></head>
   <body>
     <header class="hero">
       <div class="hero-in">
@@ -236,46 +243,46 @@
         <div class="actions">
           <a class="action" href="https://www.google.com/maps/search/?api=1&amp;query=Sal%27s+Pizza+Bar+Sal%27s+Pizza+Bar%2C+11020+Daryl+Carter+Pkwy%2C+Orlando%2C+FL+32836%2C+United+States" target="_blank" rel="noopener">Directions &rarr;</a>
           <a class="action" href="/archive.html?venue=sals-pizza-bar">Open in the full finder</a>
-          <a class="action" href="/universal-district-guide.html">Read the Universal story</a>
+          <a class="action" href="/history/universal.html">Read the Universal story</a>
           <a class="action action-ig" href="https://www.instagram.com/sals_pizzabar_orlando" target="_blank" rel="noopener"><svg class="ig-glyph" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="vertical-align:-2px;margin-right:6px"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg> Instagram</a>
         </div>
       </section>
 
-      <section class="sec" id="similar">
+      <section class="sec" id="district-story"><p class="kicker">District Story</p><h2>The story of Universal</h2><p class="lede">A district with the shortest paper trail in Orlando: land bought quietly, built fast, and later bought back.</p><p><a class="btn-ghost" href="/history/universal.html">Read the Universal story &rarr;</a></p></section><section class="sec" id="similar">
         <p class="kicker">Similar Feel</p>
         <h2>More places with this feel</h2>
         <p class="lede">Matched by vibe, not by neighborhood: the places across Greater Orlando closest in spirit to Sal&#x27;s Pizza Bar.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/nuris.html">Nuri&#x27;s</a></h3>
-          <p class="meta">Pizza &middot; Orlando &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/nuris.html">Nuri&#x27;s</a></h3>
+          <p class="meta">Pizza &middot; Orlando &middot; $$</p><p class="vsub">Downtown&#x27;s tavern-style pizza joint on East Pine, all cracker-crisp, paper-thin crust party-cut into squares you keep grabbing.</p>
           <p class="addr">Nuri&#x27;s, 63 E Pine St, Orlando, FL 32801-2617, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/boardwalk-pizza.html">Boardwalk Pizza</a></h3>
-          <p class="meta">Pizza &middot; Winter Park &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-boardwalk-pizza.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/boardwalk-pizza.html">Boardwalk Pizza</a></h3>
+          <p class="meta">Pizza &middot; Winter Park &middot; $$</p><p class="vsub">Jersey shore, old-school pizzeria feel comes to Lake Howell Road, with an open kitchen and a small-town welcome.</p>
           <p class="addr">Boardwalk Pizza, 5419 Lake Howell Rd, Winter Park, FL 32792</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/marios-pizza.html">Mario&#x27;s Pizza</a></h3>
-          <p class="meta">Pizza &middot; Orlando &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/marios-pizza.html">Mario&#x27;s Pizza</a></h3>
+          <p class="meta">Pizza &middot; Orlando &middot; $$</p><p class="vsub">Family-run on Curry Ford Road, where guests say the pies taste like real pizza from New York.</p>
           <p class="addr">Mario&#x27;s Pizza, 7213 Curry Ford Rd, Orlando, FL 32822-5805, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/goodfella-s-pizzeria.html">Goodfella&#x27;s Pizzeria</a></h3>
-          <p class="meta">Pizza &middot; Alafaya &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/goodfella-s-pizzeria.html">Goodfella&#x27;s Pizzeria</a></h3>
+          <p class="meta">Pizza &middot; Alafaya &middot; $$</p><p class="vsub">An old-school, no-frills slice shop on East Colonial Drive serving New York-style pies guests say taste like the kind they grew up eating.</p>
           <p class="addr">11873 E Colonial Dr, Orlando, FL 32826</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/ziggies-pizza.html">Ziggie&#x27;s Pizza</a></h3>
-          <p class="meta">Pizza &middot; Ivanhoe Village &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/ziggies-pizza.html">Ziggie&#x27;s Pizza</a></h3>
+          <p class="meta">Pizza &middot; Ivanhoe Village &middot; $$</p><p class="vsub">Playful little counter on Virginia Drive in Ivanhoe Village, attached to the Thirsty Topher craft beer bar, with very thin personal pies.</p>
           <p class="addr">Ziggie&#x27;s Pizza, 603 Virginia Dr, Orlando, FL 32803-1844, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/the-jersey-spot-pizza-and-pasta.html">The Jersey Spot Pizza and Pasta</a></h3>
-          <p class="meta">Pizza &middot; Kissimmee &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/the-jersey-spot-pizza-and-pasta.html">The Jersey Spot Pizza and Pasta</a></h3>
+          <p class="meta">Pizza &middot; Kissimmee &middot; $$</p><p class="vsub">Small, family-run Kissimmee joint on Columbia Avenue serving thin-crust, New Jersey-style pies transplants say taste like home.</p>
           <p class="addr">The Jersey Spot Pizza and Pasta, 1137 W Columbia Ave, Kissimmee, FL 34741-3202, United States</p>
-        </article>
+        </div></article>
         </div>
       </section>
 
@@ -285,35 +292,35 @@
         <p class="lede">Other places in Universal, closest to Sal&#x27;s Pizza Bar first.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/o-town-west.html">O-Town West</a></h3>
-          <p class="meta">Markets &amp; shops · Mixed-Use Development &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/o-town-west.html">O-Town West</a></h3>
+          <p class="meta">Markets &amp; shops · Mixed-Use Development &middot; $$</p><p class="vsub">On Fenton Street in the Epic Universe corridor, a still-filling mixed-use development of new restaurants and shops.</p>
           <p class="addr">8652 Fenton St, Orlando, FL 32836</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/universal-terra-luna-resort.html">Universal Terra Luna Resort</a></h3>
-          <p class="meta">Hotels &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/universal-terra-luna-resort.html">Universal Terra Luna Resort</a></h3>
+          <p class="meta">Hotels &middot; $$</p><p class="vsub">Stella Nova&#x27;s sister resort on Epic Boulevard, clean and modern, with an exploration theme and a big resort pool.</p>
           <p class="addr">5500 Epic Blvd, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/topgolf-orlando.html">Topgolf Orlando</a></h3>
-          <p class="meta">Attractions · Golf Entertainment &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/topgolf-orlando.html">Topgolf Orlando</a></h3>
+          <p class="meta">Attractions · Golf Entertainment &middot; $$</p><p class="vsub">Part driving range, part restaurant, part rooftop hangout on Universal Boulevard, with climate-controlled bays and a terrace with fire pits.</p>
           <p class="addr">9295 Universal Blvd, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/universal-stella-nova-resort.html">Universal Stella Nova Resort</a></h3>
-          <p class="meta">Hotels &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/universal-stella-nova-resort.html">Universal Stella Nova Resort</a></h3>
+          <p class="meta">Hotels &middot; $$</p><p class="vsub">The value-tier basecamp for Epic Universe, space-themed, a 10-15 minute stroll away, with modern, clean, good-sized rooms.</p>
           <p class="addr">4500 Epic Blvd, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/half-barrel-beer-project.html">Half Barrel Beer Project</a></h3>
-          <p class="meta">Breweries · Brewery &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/half-barrel-beer-project.html">Half Barrel Beer Project</a></h3>
+          <p class="meta">Breweries · Brewery &middot; $$</p><p class="vsub">Small, family-owned brewery on Universal Boulevard with a chill, welcoming feel guests keep mentioning.</p>
           <p class="addr">Half Barrel Beer Project, 9650 Universal Blvd, Orlando, FL 32819-8766, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/beths-burger-bar.html">Beth&#x27;s Burger Bar</a></h3>
-          <p class="meta">Burgers &amp; sandwiches · Burgers &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/beths-burger-bar.html">Beth&#x27;s Burger Bar</a></h3>
+          <p class="meta">Burgers &amp; sandwiches · Burgers &middot; $$</p><p class="vsub">Old-school diner feel on Universal Boulevard, built around build-your-own burgers from patty to last pickle.</p>
           <p class="addr">Beth&#x27;s Burger Bar, 9938 Universal Blvd, Orlando, FL 32819-8702, United States</p>
-        </article>
+        </div></article>
         </div>
         <div class="handoff">
           <a class="btn-ghost" href="/universal-finder.html">See the full Universal list</a>

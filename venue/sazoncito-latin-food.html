@@ -211,7 +211,14 @@
       .vcard .addr { margin: 0; color: var(--muted); font-size: .9rem; }
       @media (max-width: 640px) { .facts { grid-template-columns: 1fr; } }
     </style>
-  </head>
+  <style data-cardsys>
+/* cardsys: similar rail cards (2026-10-23 overhaul) */
+.vcard{display:flex;gap:12px;align-items:flex-start}
+.vcard .vthumb{flex:0 0 86px;width:86px;height:86px;border-radius:10px;object-fit:cover;display:block}
+.vcard .vmain{flex:1;min-width:0}
+.vcard .vsub{margin:4px 0 0;font-size:.86rem;line-height:1.45;color:var(--muted,#c6bba2)}
+@media (min-width:1000px){.vlist{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start}}
+</style></head>
   <body>
     <header class="hero">
       <div class="hero-in">
@@ -239,41 +246,41 @@
         </div>
       </section>
 
-      <section class="sec" id="similar">
+      <section class="sec" id="district-story"><p class="kicker">District Stories</p><h2>Orlando&#x27;s long memory</h2><p class="lede">The guide keeps the long memory of Orlando&#x27;s districts in one place: the names, the plats and the stories behind the streets.</p><p><a class="btn-ghost" href="/history.html">Browse the district stories &rarr;</a></p></section><section class="sec" id="similar">
         <p class="kicker">Similar Feel</p>
         <h2>More places with this feel</h2>
         <p class="lede">Matched by vibe, not by neighborhood: the places across Greater Orlando closest in spirit to Sazoncito Latin Food.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/matts-latin-bbq.html">Matt&#x27;s Latin BBQ</a></h3>
-          <p class="meta">BBQ &middot; Airport Corridor &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/matts-latin-bbq.html">Matt&#x27;s Latin BBQ</a></h3>
+          <p class="meta">BBQ &middot; Airport Corridor &middot; $$</p><p class="vsub">Puerto Rican comfort cooking on South Semoran, cafeteria-style and unpretentious, with decor guests say feels like the island.</p>
           <p class="addr">Matt&#x27;s Latin BBQ, 6607 S Semoran Blvd, Orlando, FL 32822</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/tropico-mofongo.html">Tropico Mofongo</a></h3>
-          <p class="meta">Latin &amp; Caribbean &middot; Kissimmee &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/tropico-mofongo.html">Tropico Mofongo</a></h3>
+          <p class="meta">Latin &amp; Caribbean &middot; Kissimmee &middot; $$</p><p class="vsub">Bright and cheerful in Kissimmee, built around Puerto Rican mofongo of plantain, chicharron, and garlic, like a grandmother&#x27;s cooking.</p>
           <p class="addr">Tropico Mofongo, 3160 Vineland Rd, Kissimmee, FL 34746-4657, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/el-cilantrillo.html">El Cilantrillo</a></h3>
-          <p class="meta">Latin &amp; Caribbean &middot; South Orlando &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/el-cilantrillo.html">El Cilantrillo</a></h3>
+          <p class="meta">Latin &amp; Caribbean &middot; South Orlando &middot; $$</p><p class="vsub">South Orlando&#x27;s big Puerto Rican table near the Florida Mall is lively and salsa-filled, with generous portions.</p>
           <p class="addr">El Cilantrillo Restaurant, 1301 Florida Mall Ave, Orlando, FL 32809-7731</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/pio-pio-latin-cuisine.html">Pio Pio Latin Cuisine</a></h3>
-          <p class="meta">Latin &amp; Caribbean &middot; Orlando &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-pio-pio-latin-cuisine.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/pio-pio-latin-cuisine.html">Pio Pio Latin Cuisine</a></h3>
+          <p class="meta">Latin &amp; Caribbean &middot; Orlando &middot; $$</p><p class="vsub">On South Semoran, the Colombian staple locals lean on, a warm, family-style room where plates land generous and homestyle.</p>
           <p class="addr">2259 S Semoran Blvd, Orlando, FL 32822</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/zaza-cuban-comfort-food.html">Zaza Cuban Comfort Food</a></h3>
-          <p class="meta">Latin &amp; Caribbean &middot; SoDo &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/zaza-cuban-comfort-food.html">Zaza Cuban Comfort Food</a></h3>
+          <p class="meta">Latin &amp; Caribbean &middot; SoDo &middot; $</p><p class="vsub">A family-run neighborhood diner in SoDo, on South Orange Avenue, built around cafecito culture and pressed sandwiches.</p>
           <p class="addr">1621 S Orange Ave, Orlando, FL 32806</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/el-para-so-del-marisco.html">El Paraíso Del Marisco</a></h3>
-          <p class="meta">Seafood &middot; Orlando &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/el-para-so-del-marisco.html">El Paraíso Del Marisco</a></h3>
+          <p class="meta">Seafood &middot; Orlando &middot; $$</p><p class="vsub">Ecuadorian and Peruvian seafood that Orlando&#x27;s Latin families describe as tasting like home.</p>
           <p class="addr">8421 S Orange Blossom Trl Ste 156, Orlando, FL 32809</p>
-        </article>
+        </div></article>
         </div>
       </section>
 
@@ -283,35 +290,35 @@
         <p class="lede">Other places in South Orlando, closest to Sazoncito Latin Food first.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/high-tide-harry-s.html">High Tide Harry&#x27;s</a></h3>
-          <p class="meta">Seafood &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/high-tide-harry-s.html">High Tide Harry&#x27;s</a></h3>
+          <p class="meta">Seafood &middot; $$</p><p class="vsub">Airport corridor&#x27;s classic local seafood joint, no-frills and nautical, family owned and easygoing except about the shellfish.</p>
           <p class="addr">4645 S Semoran Blvd, Orlando, FL 32822</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/aloha-hawaiian-kitchen.html">Aloha Hawaiian Kitchen</a></h3>
-          <p class="meta">Restaurants · Hawaiian &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/aloha-hawaiian-kitchen.html">Aloha Hawaiian Kitchen</a></h3>
+          <p class="meta">Restaurants · Hawaiian &middot; $$</p><p class="vsub">Laid-back island counter near the airport serving the plate lunch guests call the best Hawaiian food on the mainland.</p>
           <p class="addr">Aloha Hawaiian Kitchen, 6125 S Semoran Blvd, Orlando, FL 32822-1500</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/matts-latin-bbq.html">Matt&#x27;s Latin BBQ</a></h3>
-          <p class="meta">BBQ &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/matts-latin-bbq.html">Matt&#x27;s Latin BBQ</a></h3>
+          <p class="meta">BBQ &middot; $$</p><p class="vsub">Puerto Rican comfort cooking on South Semoran, cafeteria-style and unpretentious, with decor guests say feels like the island.</p>
           <p class="addr">Matt&#x27;s Latin BBQ, 6607 S Semoran Blvd, Orlando, FL 32822</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/marlow-s-tavern.html">Marlow&#x27;s Tavern</a></h3>
-          <p class="meta">American · Tavern &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-marlow-s-tavern.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/marlow-s-tavern.html">Marlow&#x27;s Tavern</a></h3>
+          <p class="meta">American · Tavern &middot; $$</p><p class="vsub">Neighborhood tavern in Lee Vista treating first timers like regulars, starting with pub chips loaded with blue cheese and bacon on the house.</p>
           <p class="addr">6889 Eagle Watch Dr, Orlando, FL 32822</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/bonefish-grill.html">Bonefish Grill</a></h3>
-          <p class="meta">Seafood &middot; $</p>
+          <img class="vthumb" src="/assets/venue-bonefish-grill.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/bonefish-grill.html">Bonefish Grill</a></h3>
+          <p class="meta">Seafood &middot; $</p><p class="vsub">At Lee Vista off Gateway Village Circle, polished and reliable, with wood-grilled seafood that suits date night.</p>
           <p class="addr">Bonefish Grill, 5463 Gateway Village Cir, Orlando, FL 32812</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/agave-azul-cocina-mexicana.html">Agave Azul Cocina Mexicana</a></h3>
-          <p class="meta">Mexican &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/agave-azul-cocina-mexicana.html">Agave Azul Cocina Mexicana</a></h3>
+          <p class="meta">Mexican &middot; $$</p><p class="vsub">The Mexican dining room at Gateway Village near the airport is loud, festive and high-energy, immaculate with a lot going on.</p>
           <p class="addr">Agave Azul Cocina Mexicana, 5475 Gateway Village Cir, Orlando, FL 32812-4002, United States</p>
-        </article>
+        </div></article>
         </div>
         <div class="handoff">
           <a class="btn-ghost" href="/south-orlando-finder.html">See the full South Orlando list</a>

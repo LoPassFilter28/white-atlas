@@ -211,7 +211,14 @@
       .vcard .addr { margin: 0; color: var(--muted); font-size: .9rem; }
       @media (max-width: 640px) { .facts { grid-template-columns: 1fr; } }
     </style>
-  </head>
+  <style data-cardsys>
+/* cardsys: similar rail cards (2026-10-23 overhaul) */
+.vcard{display:flex;gap:12px;align-items:flex-start}
+.vcard .vthumb{flex:0 0 86px;width:86px;height:86px;border-radius:10px;object-fit:cover;display:block}
+.vcard .vmain{flex:1;min-width:0}
+.vcard .vsub{margin:4px 0 0;font-size:.86rem;line-height:1.45;color:var(--muted,#c6bba2)}
+@media (min-width:1000px){.vlist{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start}}
+</style></head>
   <body>
     <header class="hero">
       <div class="hero-in">
@@ -236,45 +243,45 @@
         <div class="actions">
           <a class="action" href="https://www.google.com/maps/search/?api=1&amp;query=Poke+Hana+1225A+E+Colonial+Dr%2C+Orlando%2C+FL+32803" target="_blank" rel="noopener">Directions &rarr;</a>
           <a class="action" href="/archive.html?venue=poke-hana">Open in the full finder</a>
-          <a class="action" href="/mills-50-district-guide.html">Read the Mills 50 story</a>
+          <a class="action" href="/history/mills-50.html">Read the Mills 50 story</a>
         </div>
       </section>
 
-      <section class="sec" id="similar">
+      <section class="sec" id="district-story"><p class="kicker">District Story</p><h2>The story of Mills 50</h2><p class="lede">A district named for its own crossroads, platted as front porches in 1883 and remade twice by the people who moved in.</p><p><a class="btn-ghost" href="/history/mills-50.html">Read the Mills 50 story &rarr;</a></p></section><section class="sec" id="similar">
         <p class="kicker">Similar Feel</p>
         <h2>More places with this feel</h2>
         <p class="lede">Matched by vibe, not by neighborhood: the places across Greater Orlando closest in spirit to Poke Hana.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/funkos-poke-bowls-and-asian-snacks.html">Fun-Ko&#x27;s Poke Bowls and Asian Snacks</a></h3>
-          <p class="meta">Japanese &amp; sushi &middot; Mount Dora &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/funkos-poke-bowls-and-asian-snacks.html">Fun-Ko&#x27;s Poke Bowls and Asian Snacks</a></h3>
+          <p class="meta">Japanese &amp; sushi &middot; Mount Dora &middot; $$</p><p class="vsub">Tucked inside Mount Dora Marketplace on Donnelly Street, a cheerful, low-key poke counter regulars call their go-to.</p>
           <p class="addr">Fun-Ko&#x27;s Poke Bowls and Asian Snacks, 334 N Donnelly St, Mt Dora, FL 32757-5525, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/mills-market.html">Mills Market</a></h3>
-          <p class="meta">Markets &amp; shops &middot; Mills 50 &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/mills-market.html">Mills Market</a></h3>
+          <p class="meta">Markets &amp; shops &middot; Mills 50 &middot; $$</p><p class="vsub">The food hall on East Colonial that anchors Mills 50, all shared tables, patio seating and chef-driven stalls under one roof.</p>
           <p class="addr">1110 E Colonial Dr, Orlando, FL 32803</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/pokeworks.html">PokeWorks (Oviedo)</a></h3>
-          <p class="meta">Restaurants &middot; Oviedo &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/pokeworks.html">PokeWorks (Oviedo)</a></h3>
+          <p class="meta">Restaurants &middot; Oviedo &middot; $</p><p class="vsub">Build-your-own poke in Oviedo, with sushi-grade ahi, salmon, albacore, shrimp and scallops over rice or greens.</p>
           <p class="addr">45 W Mitchell Hammock Rd, Oviedo, FL 32765</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/cowboy-curry.html">Cowboy Curry</a></h3>
-          <p class="meta">Japanese &amp; sushi &middot; Mills 50 &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/cowboy-curry.html">Cowboy Curry</a></h3>
+          <p class="meta">Japanese &amp; sushi &middot; Mills 50 &middot; $$</p><p class="vsub">Inside Mills Market, the Japanese curry is built the slow way, a 40-hour beef curry guests call comfort food with soul.</p>
           <p class="addr">1110 E Colonial Dr, Orlando, FL 32803</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/unigirl.html">UniGirl</a></h3>
-          <p class="meta">Japanese &amp; sushi &middot; Mills 50 &middot; $$$</p>
+          <img class="vthumb" src="/assets/venue-unigirl.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/unigirl.html">UniGirl</a></h3>
+          <p class="meta">Japanese &amp; sushi &middot; Mills 50 &middot; $$$</p><p class="vsub">A quick, konbini-cute onigiri stand inside Mills Market, with a Michelin Bib Gourmand to its name.</p>
           <p class="addr">1110 E Colonial Dr, Orlando, FL 32803</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/rions-ocean.html">Rion&#x27;s Ocean Room</a></h3>
-          <p class="meta">Seafood &middot; Winter Park &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/rions-ocean.html">Rion&#x27;s Ocean Room</a></h3>
+          <p class="meta">Seafood &middot; Winter Park &middot; $$</p><p class="vsub">Inside East End Market, this no-frills poke counter is built on freshness, with fish cut to order and piled over rice.</p>
           <p class="addr">Rion&#x27;s Ocean Room, 3201 Corrine Dr, Orlando, FL 32803</p>
-        </article>
+        </div></article>
         </div>
       </section>
 
@@ -284,35 +291,35 @@
         <p class="lede">Other places in Mills 50, Local Picks first, then the closest to Poke Hana.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/the-guesthouse.html">The Guesthouse</a> <span class="badge">Local Pick</span></h3>
-          <p class="meta">Bars &amp; lounges · Cocktail Bar &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/the-guesthouse.html">The Guesthouse</a> <span class="badge">Local Pick</span></h3>
+          <p class="meta">Bars &amp; lounges · Cocktail Bar &middot; $$</p><p class="vsub">Mills 50&#x27;s plant-filled living room, greenery trailing over white walls around a square bar.</p>
           <p class="addr">1321 N Mills Ave, Orlando, FL 32803</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/chewy-boba-company.html">Chewy Boba Company</a></h3>
-          <p class="meta">Coffee &amp; cafes · Bubble Tea &middot; $</p>
+          <img class="vthumb" src="/assets/venue-chewy-boba-company.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/chewy-boba-company.html">Chewy Boba Company</a></h3>
+          <p class="meta">Coffee &amp; cafes · Bubble Tea &middot; $</p><p class="vsub">Old-school Mills 50 staple on Colonial Drive, pouring since 2002 and still keeping cups generous and prices honest.</p>
           <p class="addr">1212 E Colonial Dr, Orlando, FL 32803</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/black-bean-deli.html">Black Bean Deli</a></h3>
-          <p class="meta">Latin &amp; Caribbean · Cuban &middot; $</p>
+          <img class="vthumb" src="/assets/venue-black-bean-deli.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/black-bean-deli.html">Black Bean Deli</a></h3>
+          <p class="meta">Latin &amp; Caribbean · Cuban &middot; $</p><p class="vsub">An airy, plant-filled Mills 50 cafe where Cuban family recipes anchor the menu and regulars say it reminds them of home.</p>
           <p class="addr">1835 E Colonial Dr, Orlando, FL 32803</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/edoboy.html">Edoboy</a></h3>
-          <p class="meta">Japanese &amp; sushi · Sushi &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/edoboy.html">Edoboy</a></h3>
+          <p class="meta">Japanese &amp; sushi · Sushi &middot; $$</p><p class="vsub">A standing sushi counter on Thornton Avenue, intimate and chef-led, where every piece is handed over one at a time.</p>
           <p class="addr">728 N Thornton Ave, Orlando, FL 32803</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/zaru.html">Zaru</a></h3>
-          <p class="meta">Japanese &amp; sushi · Udon &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-zaru.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/zaru.html">Zaru</a></h3>
+          <p class="meta">Japanese &amp; sushi · Udon &middot; $$</p><p class="vsub">A small, minimal udon room on East Colonial built around one obsession: springy Sanuki-style noodles.</p>
           <p class="addr">Zaru, 1114 E Colonial Dr, Orlando, FL 32803-4636</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/qreate-coffee.html">Qreate Coffee</a></h3>
-          <p class="meta">Coffee &amp; cafes · Coffee Shop &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-qreate-coffee.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/qreate-coffee.html">Qreate Coffee</a></h3>
+          <p class="meta">Coffee &amp; cafes · Coffee Shop &middot; $$</p><p class="vsub">Just off Mills on Woodward Street, part coffee lab and part creative studio, with a small-town feel guests do not expect.</p>
           <p class="addr">1212 Woodward St #1, Orlando, FL 32803</p>
-        </article>
+        </div></article>
         </div>
         <div class="handoff">
           <a class="btn-ghost" href="/mills-50-finder.html">See the full Mills 50 list</a>

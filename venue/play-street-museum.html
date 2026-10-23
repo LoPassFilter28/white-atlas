@@ -211,7 +211,14 @@
       .vcard .addr { margin: 0; color: var(--muted); font-size: .9rem; }
       @media (max-width: 640px) { .facts { grid-template-columns: 1fr; } }
     </style>
-  </head>
+  <style data-cardsys>
+/* cardsys: similar rail cards (2026-10-23 overhaul) */
+.vcard{display:flex;gap:12px;align-items:flex-start}
+.vcard .vthumb{flex:0 0 86px;width:86px;height:86px;border-radius:10px;object-fit:cover;display:block}
+.vcard .vmain{flex:1;min-width:0}
+.vcard .vsub{margin:4px 0 0;font-size:.86rem;line-height:1.45;color:var(--muted,#c6bba2)}
+@media (min-width:1000px){.vlist{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start}}
+</style></head>
   <body>
     <header class="hero">
       <div class="hero-in">
@@ -241,41 +248,41 @@
         </div>
       </section>
 
-      <section class="sec" id="similar">
+      <section class="sec" id="district-story"><p class="kicker">District Stories</p><h2>Orlando&#x27;s long memory</h2><p class="lede">The guide keeps the long memory of Orlando&#x27;s districts in one place: the names, the plats and the stories behind the streets.</p><p><a class="btn-ghost" href="/history.html">Browse the district stories &rarr;</a></p></section><section class="sec" id="similar">
         <p class="kicker">Similar Feel</p>
         <h2>More places with this feel</h2>
         <p class="lede">Matched by vibe, not by neighborhood: the places across Greater Orlando closest in spirit to Play Street Museum.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/wp-history-museum.html">Winter Park History Museum</a></h3>
-          <p class="meta">Museums &amp; landmarks &middot; Winter Park &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/wp-history-museum.html">Winter Park History Museum</a></h3>
+          <p class="meta">Museums &amp; landmarks &middot; Winter Park &middot; $</p><p class="vsub">Inside its historic railroad depot, a small, charming museum telling Winter Park&#x27;s story, run with obvious care.</p>
           <p class="addr">200 W New England Ave, Winter Park, FL 32789</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/polasek-museum.html">Albin Polasek Museum &amp; Sculpture Gardens</a></h3>
-          <p class="meta">Museums &amp; landmarks &middot; Winter Park &middot; $</p>
+          <img class="vthumb" src="/assets/venue-polasek-museum.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/polasek-museum.html">Albin Polasek Museum &amp; Sculpture Gardens</a></h3>
+          <p class="meta">Museums &amp; landmarks &middot; Winter Park &middot; $</p><p class="vsub">A sculptor&#x27;s historic home paired with serene, lakeside sculpture gardens in Winter Park.</p>
           <p class="addr">633 Osceola Ave, Winter Park, FL 32789</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/legoland-florida.html">Legoland Florida</a></h3>
-          <p class="meta">Attractions &middot; Winter Haven &middot; $$$</p>
+          <img class="vthumb" src="/assets/venue-legoland-florida.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/legoland-florida.html">Legoland Florida</a></h3>
+          <p class="meta">Attractions &middot; Winter Haven &middot; $$$</p><p class="vsub">On the old Cypress Gardens grounds in Winter Haven, this is the hands-on park for kids who build, relaxed next to the mega parks.</p>
           <p class="addr">1 Legoland Way, Winter Haven, FL 33884</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/mead-botanical-garden.html">Mead Botanical Garden</a></h3>
-          <p class="meta">Parks &amp; outdoors &middot; Winter Park &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/mead-botanical-garden.html">Mead Botanical Garden</a></h3>
+          <p class="meta">Parks &amp; outdoors &middot; Winter Park &middot; $</p><p class="vsub">Winter Park&#x27;s wilder, shadier green space, peaceful and a little untamed.</p>
           <p class="addr">1300 S Denning Dr, Winter Park, FL 32789</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/casa-feliz.html">Casa Feliz Historic Home Museum</a></h3>
-          <p class="meta">Museums &amp; landmarks &middot; Winter Park &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/casa-feliz.html">Casa Feliz Historic Home Museum</a></h3>
+          <p class="meta">Museums &amp; landmarks &middot; Winter Park &middot; $</p><p class="vsub">A storybook Spanish revival farmhouse on Park Avenue, romantic and intimate, the kind of historic home guests say they could happily live in.</p>
           <p class="addr">656 N Park Ave, Winter Park, FL 32789</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/schweinis-delicatessen.html">Schweini&#x27;s Delicatessen</a></h3>
-          <p class="meta">Burgers &amp; sandwiches &middot; Winter Garden &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/schweinis-delicatessen.html">Schweini&#x27;s Delicatessen</a></h3>
+          <p class="meta">Burgers &amp; sandwiches &middot; Winter Garden &middot; $$</p><p class="vsub">A German deli on Main Street in Winter Garden, built straight from the owner&#x27;s heart.</p>
           <p class="addr">Schweini&#x27;s Delicatessen, 108 S Main St, Winter Garden, FL 34787-3556, United States</p>
-        </article>
+        </div></article>
         </div>
       </section>
 
@@ -285,35 +292,35 @@
         <p class="lede">Other places in Winter Garden, closest to Play Street Museum first.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/seo-basilico-pizzeria.html">SEO Basilico Pizzeria</a></h3>
-          <p class="meta">Pizza &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/seo-basilico-pizzeria.html">SEO Basilico Pizzeria</a></h3>
+          <p class="meta">Pizza &middot; $</p><p class="vsub">In Winter Garden&#x27;s Stoneybrook area, artigianale pizza rooted in Sao Paulo Italian tradition, with founders from Mooca shaping the menu.</p>
           <p class="addr">12107 Stoneybrook W Pkwy Suite 105, Winter Garden, FL 34787</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/ispirazione.html">Ispirazione</a></h3>
-          <p class="meta">Burgers &amp; sandwiches · Sandwiches &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/ispirazione.html">Ispirazione</a></h3>
+          <p class="meta">Burgers &amp; sandwiches · Sandwiches &middot; $$</p><p class="vsub">In Ocoee, the focus is tigelle, small round Italian breads baked fresh to order, crunchy outside and soft in the center.</p>
           <p class="addr">Ispirazione, 1711 Amazing Way, Ocoee, FL 34761-3279, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/volcano-hot-pot-bbq.html">Volcano Hot Pot &amp; BBQ</a></h3>
-          <p class="meta">Chinese · Hot Pot &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/volcano-hot-pot-bbq.html">Volcano Hot Pot &amp; BBQ</a></h3>
+          <p class="meta">Chinese · Hot Pot &middot; $$</p><p class="vsub">On Daniels Road in Winter Garden, a bubbling hot pot and a Korean BBQ grill share the same table, so you cook each bite your way.</p>
           <p class="addr">Volcano Hot Pot &amp; BBQ, 3279 Daniels Rd Suite 102, Winter Garden, FL 34787, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/southern-steer-butcher.html">Southern Steer Butcher (Orlando)</a></h3>
-          <p class="meta">Markets &amp; shops · Butcher Shop &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/southern-steer-butcher.html">Southern Steer Butcher (Orlando)</a></h3>
+          <p class="meta">Markets &amp; shops · Butcher Shop &middot; $</p><p class="vsub">Family-run butcher on West Colonial Drive in Ocoee, where staff guide you through the case and how to cook it.</p>
           <p class="addr">11024 W Colonial Dr, Ocoee, FL 34761</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/yellow-dog-eats.html">Yellow Dog Eats</a></h3>
-          <p class="meta">BBQ &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/yellow-dog-eats.html">Yellow Dog Eats</a></h3>
+          <p class="meta">BBQ &middot; $</p><p class="vsub">Working out of a century-old general store in Gotha, funky and laid-back, with sandwich names that make you grin.</p>
           <p class="addr">1236 Hempel Ave, Gotha, FL 34786</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/indian-pavilion.html">Indian Pavilion</a></h3>
-          <p class="meta">Indian &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/indian-pavilion.html">Indian Pavilion</a></h3>
+          <p class="meta">Indian &middot; $$</p><p class="vsub">Modern Indian cooking in Winter Garden built on bold spice and careful texture, with portions that often leave leftovers.</p>
           <p class="addr">Indian Pavilion, 13770 W Colonial Dr, Winter Garden, FL 34787-4202, United States</p>
-        </article>
+        </div></article>
         </div>
         <div class="handoff">
           <a class="btn-ghost" href="/winter-garden-finder.html">See the full Winter Garden list</a>

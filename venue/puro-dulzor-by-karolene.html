@@ -211,7 +211,14 @@
       .vcard .addr { margin: 0; color: var(--muted); font-size: .9rem; }
       @media (max-width: 640px) { .facts { grid-template-columns: 1fr; } }
     </style>
-  </head>
+  <style data-cardsys>
+/* cardsys: similar rail cards (2026-10-23 overhaul) */
+.vcard{display:flex;gap:12px;align-items:flex-start}
+.vcard .vthumb{flex:0 0 86px;width:86px;height:86px;border-radius:10px;object-fit:cover;display:block}
+.vcard .vmain{flex:1;min-width:0}
+.vcard .vsub{margin:4px 0 0;font-size:.86rem;line-height:1.45;color:var(--muted,#c6bba2)}
+@media (min-width:1000px){.vlist{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start}}
+</style></head>
   <body>
     <header class="hero">
       <div class="hero-in">
@@ -239,41 +246,41 @@
         </div>
       </section>
 
-      <section class="sec" id="similar">
+      <section class="sec" id="district-story"><p class="kicker">District Stories</p><h2>Orlando&#x27;s long memory</h2><p class="lede">The guide keeps the long memory of Orlando&#x27;s districts in one place: the names, the plats and the stories behind the streets.</p><p><a class="btn-ghost" href="/history.html">Browse the district stories &rarr;</a></p></section><section class="sec" id="similar">
         <p class="kicker">Similar Feel</p>
         <h2>More places with this feel</h2>
         <p class="lede">Matched by vibe, not by neighborhood: the places across Greater Orlando closest in spirit to Puro Dulzor by Karolene.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/kamayan-grill.html">Kamayan Grill</a></h3>
-          <p class="meta">Restaurants &middot; Kissimmee &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/kamayan-grill.html">Kamayan Grill</a></h3>
+          <p class="meta">Restaurants &middot; Kissimmee &middot; $$</p><p class="vsub">Cozy, family-run Filipino kitchen on 192 in Kissimmee where guests say the food tastes just like home.</p>
           <p class="addr">Kamayan Grill, 7868 W Irlo Bronson Memorial Hwy, Kissimmee, FL 34747-1738, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/tropico-mofongo.html">Tropico Mofongo</a></h3>
-          <p class="meta">Latin &amp; Caribbean &middot; Kissimmee &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/tropico-mofongo.html">Tropico Mofongo</a></h3>
+          <p class="meta">Latin &amp; Caribbean &middot; Kissimmee &middot; $$</p><p class="vsub">Bright and cheerful in Kissimmee, built around Puerto Rican mofongo of plantain, chicharron, and garlic, like a grandmother&#x27;s cooking.</p>
           <p class="addr">Tropico Mofongo, 3160 Vineland Rd, Kissimmee, FL 34746-4657, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/metro-diner.html">Metro Diner (Kissimmee)</a></h3>
-          <p class="meta">Breakfast &amp; brunch &middot; Kissimmee &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/metro-diner.html">Metro Diner (Kissimmee)</a></h3>
+          <p class="meta">Breakfast &amp; brunch &middot; Kissimmee &middot; $</p><p class="vsub">Metro Diner&#x27;s Kissimmee room is a classic Florida diner, cozy and old school, doing comfort food without irony.</p>
           <p class="addr">2714 Osceola Pkwy, Kissimmee, FL 34741</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/king-o-falafel.html">King O Falafel</a></h3>
-          <p class="meta">Mediterranean &middot; Kissimmee &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-king-o-falafel.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/king-o-falafel.html">King O Falafel</a></h3>
+          <p class="meta">Mediterranean &middot; Kissimmee &middot; $$</p><p class="vsub">Family-owned Kissimmee storefront on 192 since 2009, unassuming outside and all flavor inside.</p>
           <p class="addr">King O Falafel, 5045 W Irlo Bronson Memorial Hwy, Kissimmee, FL 34746-5345, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/brazi-burger-kissimmee.html">Brazi Burger</a></h3>
-          <p class="meta">Burgers &amp; sandwiches &middot; Kissimmee &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-brazi-burger-kissimmee.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/brazi-burger-kissimmee.html">Brazi Burger</a></h3>
+          <p class="meta">Burgers &amp; sandwiches &middot; Kissimmee &middot; $$</p><p class="vsub">A food truck at Food Trucks Heaven on 192, casual and unpretentious, serving Brazilian-style burgers guests say taste like back in Brazil.</p>
           <p class="addr">5405 W Irlo Bronson Memorial Hwy, Kissimmee, FL 34746</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/dutch-bros-coffee-winter-park.html">Dutch Bros Coffee</a></h3>
-          <p class="meta">Coffee &amp; cafes &middot; University &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/dutch-bros-coffee-winter-park.html">Dutch Bros Coffee</a></h3>
+          <p class="meta">Coffee &amp; cafes &middot; University &middot; $</p><p class="vsub">On Semoran Boulevard, a high-energy, genuinely friendly drive-thru where the crew remembers regulars and sings to birthday windows.</p>
           <p class="addr">116 S Semoran Blvd, Winter Park, FL 32792</p>
-        </article>
+        </div></article>
         </div>
       </section>
 
@@ -283,35 +290,35 @@
         <p class="lede">Other places in Kissimmee, closest to Puro Dulzor by Karolene first.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/1881-restaurant.html">1881 Restaurant &amp; Bar</a></h3>
-          <p class="meta">Mediterranean · Middle Eastern &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-1881-restaurant.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/1881-restaurant.html">1881 Restaurant &amp; Bar</a></h3>
+          <p class="meta">Mediterranean · Middle Eastern &middot; $$</p><p class="vsub">In downtown Kissimmee&#x27;s historic Makinson Hardware building, old-Florida bones and lively bar energy, and guests say the walls tell the story.</p>
           <p class="addr">1881 Restaurant, 308 Broadway, Kissimmee, FL 34741-5718</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/main-street-pizza.html">Main Street Pizza</a></h3>
-          <p class="meta">Pizza &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/main-street-pizza.html">Main Street Pizza</a></h3>
+          <p class="meta">Pizza &middot; $$</p><p class="vsub">Downtown Kissimmee&#x27;s old-school New York style joint, family oriented, with slices guests swear are bigger than their face.</p>
           <p class="addr">16 Broadway, Kissimmee, FL 34741</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/the-jersey-spot-pizza-and-pasta.html">The Jersey Spot Pizza and Pasta</a></h3>
-          <p class="meta">Pizza &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/the-jersey-spot-pizza-and-pasta.html">The Jersey Spot Pizza and Pasta</a></h3>
+          <p class="meta">Pizza &middot; $$</p><p class="vsub">Small, family-run Kissimmee joint on Columbia Avenue serving thin-crust, New Jersey-style pies transplants say taste like home.</p>
           <p class="addr">The Jersey Spot Pizza and Pasta, 1137 W Columbia Ave, Kissimmee, FL 34741-3202, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/medieval-times-orlando.html">Medieval Times Dinner &amp; Tournament</a></h3>
-          <p class="meta">Attractions &middot; $$$</p>
+          <img class="vthumb" src="/assets/venue-medieval-times-orlando.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/medieval-times-orlando.html">Medieval Times Dinner &amp; Tournament</a></h3>
+          <p class="meta">Attractions &middot; $$$</p><p class="vsub">In a castle arena on Vine Street in Kissimmee, knights joust, falconry flies, and the cheering crowd eats with its hands, no utensils.</p>
           <p class="addr">4510 W Vine St, Kissimmee, FL 34746</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/green-meadows-petting-farm.html">Green Meadows Petting Farm</a></h3>
-          <p class="meta">Attractions · Petting Farm &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/green-meadows-petting-farm.html">Green Meadows Petting Farm</a></h3>
+          <p class="meta">Attractions · Petting Farm &middot; $$</p><p class="vsub">Under the live oaks at Lancaster Ranch Park in Kissimmee, this petting farm is all open air and hands-on.</p>
           <p class="addr">1881 Jack Calhoun Dr, Kissimmee, FL 34741</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/pienezza-pizza.html">Pienezza Pizza</a></h3>
-          <p class="meta">Pizza &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/pienezza-pizza.html">Pienezza Pizza</a></h3>
+          <p class="meta">Pizza &middot; $$</p><p class="vsub">Family-run and no-frills on John Young Parkway in Kissimmee, where regulars say the Grandma pie brings it home.</p>
           <p class="addr">Pienezza Pizza, 3236 N John Young Pkwy, Kissimmee, FL 34741-7549, United States</p>
-        </article>
+        </div></article>
         </div>
         <div class="handoff">
           <a class="btn-ghost" href="/kissimmee-finder.html">See the full Kissimmee list</a>

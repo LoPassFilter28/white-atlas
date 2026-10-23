@@ -211,7 +211,14 @@
       .vcard .addr { margin: 0; color: var(--muted); font-size: .9rem; }
       @media (max-width: 640px) { .facts { grid-template-columns: 1fr; } }
     </style>
-  </head>
+  <style data-cardsys>
+/* cardsys: similar rail cards (2026-10-23 overhaul) */
+.vcard{display:flex;gap:12px;align-items:flex-start}
+.vcard .vthumb{flex:0 0 86px;width:86px;height:86px;border-radius:10px;object-fit:cover;display:block}
+.vcard .vmain{flex:1;min-width:0}
+.vcard .vsub{margin:4px 0 0;font-size:.86rem;line-height:1.45;color:var(--muted,#c6bba2)}
+@media (min-width:1000px){.vlist{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start}}
+</style></head>
   <body>
     <header class="hero">
       <div class="hero-in">
@@ -241,41 +248,41 @@
         </div>
       </section>
 
-      <section class="sec" id="similar">
+      <section class="sec" id="district-story"><p class="kicker">District Stories</p><h2>Orlando&#x27;s long memory</h2><p class="lede">The guide keeps the long memory of Orlando&#x27;s districts in one place: the names, the plats and the stories behind the streets.</p><p><a class="btn-ghost" href="/history.html">Browse the district stories &rarr;</a></p></section><section class="sec" id="similar">
         <p class="kicker">Similar Feel</p>
         <h2>More places with this feel</h2>
         <p class="lede">Matched by vibe, not by neighborhood: the places across Greater Orlando closest in spirit to Rock &#x27;n&#x27; Roller Coaster Starring the Muppets.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/big-thunder-mountain-railroad.html">Big Thunder Mountain Railroad</a></h3>
-          <p class="meta">Attractions &middot; Magic Kingdom &middot; $$$$</p>
+          <div class="vmain"><h3><a href="/venue/big-thunder-mountain-railroad.html">Big Thunder Mountain Railroad</a></h3>
+          <p class="meta">Attractions &middot; Magic Kingdom &middot; $$$$</p><p class="vsub">The runaway mine train through Tumbleweed at Magic Kingdom, wild, rattly and scenic, with no big major drops.</p>
           <p class="addr">Magic Kingdom Park, 1180 Seven Seas Dr, Lake Buena Vista, FL 32830</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/epic-universe.html">Universal Epic Universe</a></h3>
-          <p class="meta">Parks &amp; outdoors &middot; Universal &middot; $$$$</p>
+          <img class="vthumb" src="/assets/venue-epic-universe.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/epic-universe.html">Universal Epic Universe</a></h3>
+          <p class="meta">Parks &amp; outdoors &middot; Universal &middot; $$$$</p><p class="vsub">Universal&#x27;s newest park still makes guests reach for the word epic, and the scale backs them up.</p>
           <p class="addr">1001 Epic Blvd, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/fun-spot-america-orlando.html">Fun Spot America</a></h3>
-          <p class="meta">Attractions &middot; International Drive &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-fun-spot-america-orlando.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/fun-spot-america-orlando.html">Fun Spot America</a></h3>
+          <p class="meta">Attractions &middot; International Drive &middot; $$</p><p class="vsub">Old-school midway the mega-parks left behind, family-owned since 1997, with White Lightning&#x27;s wooden coaster and short lines, guests say.</p>
           <p class="addr">5700 Fun Spot Way, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/little-mermaid-musical-adventure.html">The Little Mermaid: A Musical Adventure</a></h3>
-          <p class="meta">Attractions &middot; Hollywood Studios &middot; $$$$</p>
+          <img class="vthumb" src="/assets/venue-little-mermaid-musical-adventure.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/little-mermaid-musical-adventure.html">The Little Mermaid: A Musical Adventure</a></h3>
+          <p class="meta">Attractions &middot; Hollywood Studios &middot; $$$$</p><p class="vsub">Ariel&#x27;s story gets retold at Hollywood Studios in a colorful, nostalgic burst of puppetry and projection.</p>
           <p class="addr">Disney&#x27;s Hollywood Studios, 351 S Studio Dr, Lake Buena Vista, FL 32830</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/islands-adventure.html">Universal&#x27;s Islands of Adventure</a></h3>
-          <p class="meta">Parks &amp; outdoors &middot; Universal &middot; $$$$</p>
+          <img class="vthumb" src="/assets/venue-islands-adventure.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/islands-adventure.html">Universal&#x27;s Islands of Adventure</a></h3>
+          <p class="meta">Parks &amp; outdoors &middot; Universal &middot; $$$$</p><p class="vsub">Eight themed islands ring the lagoon here, and guests keep calling the coaster lineup the strongest in Orlando.</p>
           <p class="addr">Universal&#x27;s Islands of Adventure, 6000 Universal Blvd, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/test-track-3-0.html">Test Track 3.0</a></h3>
-          <p class="meta">Attractions &middot; EPCOT &middot; $$$$</p>
+          <div class="vmain"><h3><a href="/venue/test-track-3-0.html">Test Track 3.0</a></h3>
+          <p class="meta">Attractions &middot; EPCOT &middot; $$$$</p><p class="vsub">EPCOT&#x27;s fastest ride, wrapped in a sleek, retro-futuristic story about car design, and guests say the facelift suits it.</p>
           <p class="addr">EPCOT, 200 Epcot Center Dr, Lake Buena Vista, FL 32830</p>
-        </article>
+        </div></article>
         </div>
       </section>
 
@@ -285,35 +292,35 @@
         <p class="lede">Other places in Disney Area, Local Picks first, then the closest to Rock &#x27;n&#x27; Roller Coaster Starring the Muppets.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/fogo-orlando-vineland.html">Fogo de Chão, Vineland Pointe</a> <span class="badge">Local Pick</span></h3>
-          <p class="meta">Fine dining &amp; steak · Brazilian Steakhouse &middot; $$$</p>
+          <div class="vmain"><h3><a href="/venue/fogo-orlando-vineland.html">Fogo de Chão, Vineland Pointe</a> <span class="badge">Local Pick</span></h3>
+          <p class="meta">Fine dining &amp; steak · Brazilian Steakhouse &middot; $$$</p><p class="vsub">Brazilian churrasco staged tableside at Vineland Pointe, where gaucho chefs carve fire-roasted cuts one slice at a time.</p>
           <p class="addr">11543 Regency Village Dr, Orlando, FL 32821</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/evermore-orlando-resort.html">Evermore Orlando Resort</a> <span class="badge">Local Pick</span></h3>
-          <p class="meta">Hotels · Hotel &middot; $$$</p>
+          <img class="vthumb" src="/assets/venue-evermore-orlando-resort.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/evermore-orlando-resort.html">Evermore Orlando Resort</a> <span class="badge">Local Pick</span></h3>
+          <p class="meta">Hotels · Hotel &middot; $$$</p><p class="vsub">The centerpiece is Evermore Bay, a crystal lagoon with its own beach that leaves guests saying the resort feels like it is out of the country.</p>
           <p class="addr">1590 Evermore Way, Orlando, FL 32836</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/orlando-vineland-premium-outlets.html">Orlando Vineland Premium Outlets</a> <span class="badge">Local Pick</span></h3>
-          <p class="meta">Markets &amp; shops · Outlet Mall &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/orlando-vineland-premium-outlets.html">Orlando Vineland Premium Outlets</a> <span class="badge">Local Pick</span></h3>
+          <p class="meta">Markets &amp; shops · Outlet Mall &middot; $$</p><p class="vsub">Minutes from Disney, a Mediterranean-inspired outdoor outlet village anchored by Prada, Bottega Veneta, Burberry, Gucci and Tory Burch.</p>
           <p class="addr">8200 Vineland Ave, Orlando, FL 32821</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/disney-villains-unfairly-ever-after.html">Disney Villains: Unfairly Ever After</a></h3>
-          <p class="meta">Attractions &middot; $$$$</p>
+          <div class="vmain"><h3><a href="/venue/disney-villains-unfairly-ever-after.html">Disney Villains: Unfairly Ever After</a></h3>
+          <p class="meta">Attractions &middot; $$$$</p><p class="vsub">At Hollywood Studios, the villains get their own Broadway-style stage show, wicked, campy and high-energy.</p>
           <p class="addr">Disney&#x27;s Hollywood Studios, 351 S Studio Dr, Lake Buena Vista, FL 32830</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/little-mermaid-musical-adventure.html">The Little Mermaid: A Musical Adventure</a></h3>
-          <p class="meta">Attractions &middot; $$$$</p>
+          <img class="vthumb" src="/assets/venue-little-mermaid-musical-adventure.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/little-mermaid-musical-adventure.html">The Little Mermaid: A Musical Adventure</a></h3>
+          <p class="meta">Attractions &middot; $$$$</p><p class="vsub">Ariel&#x27;s story gets retold at Hollywood Studios in a colorful, nostalgic burst of puppetry and projection.</p>
           <p class="addr">Disney&#x27;s Hollywood Studios, 351 S Studio Dr, Lake Buena Vista, FL 32830</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/woodys.html">Woody&#x27;s Lunch Box</a></h3>
-          <p class="meta">American · Quick Service &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/woodys.html">Woody&#x27;s Lunch Box</a></h3>
+          <p class="meta">American · Quick Service &middot; $</p><p class="vsub">Toy Story Land at toy scale, playful and nostalgic in the middle of Andy&#x27;s oversized lunch gear.</p>
           <p class="addr">Woody&#x27;s Lunch Box, 351 S Studio Dr, Lake Buena Vista, FL 32830</p>
-        </article>
+        </div></article>
         </div>
         <div class="handoff">
           <a class="btn-ghost" href="/disney-area-finder.html">See the full Disney Area list</a>

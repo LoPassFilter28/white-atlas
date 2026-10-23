@@ -211,7 +211,14 @@
       .vcard .addr { margin: 0; color: var(--muted); font-size: .9rem; }
       @media (max-width: 640px) { .facts { grid-template-columns: 1fr; } }
     </style>
-  </head>
+  <style data-cardsys>
+/* cardsys: similar rail cards (2026-10-23 overhaul) */
+.vcard{display:flex;gap:12px;align-items:flex-start}
+.vcard .vthumb{flex:0 0 86px;width:86px;height:86px;border-radius:10px;object-fit:cover;display:block}
+.vcard .vmain{flex:1;min-width:0}
+.vcard .vsub{margin:4px 0 0;font-size:.86rem;line-height:1.45;color:var(--muted,#c6bba2)}
+@media (min-width:1000px){.vlist{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start}}
+</style></head>
   <body>
     <header class="hero">
       <div class="hero-in">
@@ -236,46 +243,46 @@
         <div class="actions">
           <a class="action" href="https://www.google.com/maps/search/?api=1&amp;query=Perla%27s+Pizza%2C+Vinyl+Records+%26+Cocktail+Bar+959+W+Fairbanks+Ave%2C+Winter+Park%2C+FL+32789" target="_blank" rel="noopener">Directions &rarr;</a>
           <a class="action" href="/archive.html?venue=perlas-pizza">Open in the full finder</a>
-          <a class="action" href="/winter-park-district-guide.html">Read the Winter Park story</a>
+          <a class="action" href="/history/winter-park.html">Read the Winter Park story</a>
           <a class="action action-ig" href="https://www.instagram.com/perlaspizza" target="_blank" rel="noopener"><svg class="ig-glyph" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="vertical-align:-2px;margin-right:6px"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg> Instagram</a>
         </div>
       </section>
 
-      <section class="sec" id="similar">
+      <section class="sec" id="district-story"><p class="kicker">District Story</p><h2>The story of Winter Park</h2><p class="lede">A park built for the winter, drawn on paper in 1881, and still legible in every street you walk today.</p><p><a class="btn-ghost" href="/history/winter-park.html">Read the Winter Park story &rarr;</a></p></section><section class="sec" id="similar">
         <p class="kicker">Similar Feel</p>
         <h2>More places with this feel</h2>
         <p class="lede">Matched by vibe, not by neighborhood: the places across Greater Orlando closest in spirit to Perla&#x27;s Pizza, Vinyl Records &amp; Cocktail Bar.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/park-avenue-pizza.html">Park Avenue Pizza</a></h3>
-          <p class="meta">Pizza &middot; Winter Park &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/park-avenue-pizza.html">Park Avenue Pizza</a></h3>
+          <p class="meta">Pizza &middot; Winter Park &middot; $$</p><p class="vsub">A no-frills, old-school counter on Lyman Avenue, where guests go for a quick slice done right.</p>
           <p class="addr">119 E Lyman Ave, Winter Park, FL 32789</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/prato.html">Prato</a></h3>
-          <p class="meta">Italian &middot; Winter Park &middot; $$$</p>
+          <div class="vmain"><h3><a href="/venue/prato.html">Prato</a></h3>
+          <p class="meta">Italian &middot; Winter Park &middot; $$$</p><p class="vsub">Italian the Park Avenue way: rustic yet upscale, exposed brick and warm light, house-made pastas and wood-fired pizzas.</p>
           <p class="addr">Prato, 124 N Park Ave, Winter Park, FL 32789</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/sixty-vines.html">Sixty Vines</a></h3>
-          <p class="meta">American &middot; Winter Park &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/sixty-vines.html">Sixty Vines</a></h3>
+          <p class="meta">American &middot; Winter Park &middot; $$</p><p class="vsub">A wine-country room transplanted to Winter Park, with wines on tap by the glass, carafe or bottle and a greenhouse patio that glows after dark.</p>
           <p class="addr">110 S Orlando Ave Ste 12, Winter Park, FL 32789</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/park-pizza-brewing.html">Park Pizza &amp; Brewing Company</a></h3>
-          <p class="meta">Pizza &middot; Lake Nona &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-park-pizza-brewing.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/park-pizza-brewing.html">Park Pizza &amp; Brewing Company</a></h3>
+          <p class="meta">Pizza &middot; Lake Nona &middot; $$</p><p class="vsub">In Lake Nona Town Center, the oak-fired pies and the beer in your glass were both made just a few steps away.</p>
           <p class="addr">6941 Lake Nona Blvd, Orlando, FL 32827</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/the-chapman.html">The Chapman</a></h3>
-          <p class="meta">Fine dining &amp; steak &middot; Winter Park &middot; $$$</p>
+          <div class="vmain"><h3><a href="/venue/the-chapman.html">The Chapman</a></h3>
+          <p class="meta">Fine dining &amp; steak &middot; Winter Park &middot; $$$</p><p class="vsub">On Park Avenue, the warm, artful dining room Winter Park kept asking for, built on a scratch kitchen and Florida ingredients.</p>
           <p class="addr">500 S Park Ave, Winter Park, FL 32789</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/pepes-cantina.html">Pepe&#x27;s Cantina</a></h3>
-          <p class="meta">Mexican &middot; Winter Park &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-pepes-cantina.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/pepes-cantina.html">Pepe&#x27;s Cantina</a></h3>
+          <p class="meta">Mexican &middot; Winter Park &middot; $$</p><p class="vsub">A festive cantina feel in Winter Park, with a beautiful bar and a dining room partly open to the air.</p>
           <p class="addr">433 W New England Ave, Winter Park, FL 32789</p>
-        </article>
+        </div></article>
         </div>
       </section>
 
@@ -285,35 +292,35 @@
         <p class="lede">Other places in Winter Park, Local Picks first, then the closest to Perla&#x27;s Pizza, Vinyl Records &amp; Cocktail Bar.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/ava.html">AVA Mediterranean</a> <span class="badge">Local Pick</span></h3>
-          <p class="meta">Mediterranean &middot; $$$</p>
+          <img class="vthumb" src="/assets/venue-ava.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/ava.html">AVA Mediterranean</a> <span class="badge">Local Pick</span></h3>
+          <p class="meta">Mediterranean &middot; $$$</p><p class="vsub">A glamorous Greek agora on Park Avenue, sophisticated and high-energy from the moment you sit down.</p>
           <p class="addr">290 S Park Ave, Winter Park, FL 32789</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/imperial-on-park.html">The Imperial on Park</a> <span class="badge">Local Pick</span></h3>
-          <p class="meta">Bars &amp; lounges · Wine Bar &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-imperial-on-park.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/imperial-on-park.html">The Imperial on Park</a> <span class="badge">Local Pick</span></h3>
+          <p class="meta">Bars &amp; lounges · Wine Bar &middot; $$</p><p class="vsub">Park Avenue&#x27;s neighborhood bar, warm and laid back, with boutique wines, craft beers and cocktails built on Winter Park Distillery spirits.</p>
           <p class="addr">136 S Park Ave, Winter Park, FL 32789</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/prato.html">Prato</a> <span class="badge">Local Pick</span></h3>
-          <p class="meta">Italian &middot; $$$</p>
+          <div class="vmain"><h3><a href="/venue/prato.html">Prato</a> <span class="badge">Local Pick</span></h3>
+          <p class="meta">Italian &middot; $$$</p><p class="vsub">Italian the Park Avenue way: rustic yet upscale, exposed brick and warm light, house-made pastas and wood-fired pizzas.</p>
           <p class="addr">Prato, 124 N Park Ave, Winter Park, FL 32789</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/krungthep-tea-time.html">Krungthep Tea Time</a></h3>
-          <p class="meta">Coffee &amp; cafes · Tea Room &middot; $</p>
+          <img class="vthumb" src="/assets/venue-krungthep-tea-time.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/krungthep-tea-time.html">Krungthep Tea Time</a></h3>
+          <p class="meta">Coffee &amp; cafes · Tea Room &middot; $</p><p class="vsub">Calm, minimalist black-and-white tea room on Fairbanks Avenue in Winter Park, named for Bangkok and built for long chats.</p>
           <p class="addr">1051 W Fairbanks Ave, Winter Park, FL 32789</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/soseki.html">Soseki Modern Omakase</a></h3>
-          <p class="meta">Japanese &amp; sushi · Sushi &middot; $$$$</p>
+          <img class="vthumb" src="/assets/venue-soseki.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/soseki.html">Soseki Modern Omakase</a></h3>
+          <p class="meta">Japanese &amp; sushi · Sushi &middot; $$$$</p><p class="vsub">Chef Michael Collantes&#x27; Michelin-starred omakase counter on Fairbanks Avenue is intimate, each nigiri precise, inventive and balanced.</p>
           <p class="addr">955 W Fairbanks Ave, Winter Park, FL 32789</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/glass-knife.html">The Glass Knife</a></h3>
-          <p class="meta">Bakeries · Bakery &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-glass-knife.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/glass-knife.html">The Glass Knife</a></h3>
+          <p class="meta">Bakeries · Bakery &middot; $$</p><p class="vsub">A pretty, polished Winter Park cafe named for the antique glass cake knives on its walls, all chic light and careful detail.</p>
           <p class="addr">The Glass Knife, 276 S Orlando Ave, Winter Park, FL 32789</p>
-        </article>
+        </div></article>
         </div>
         <div class="handoff">
           <a class="btn-ghost" href="/winter-park-finder.html">See the full Winter Park list</a>

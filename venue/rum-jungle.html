@@ -211,7 +211,14 @@
       .vcard .addr { margin: 0; color: var(--muted); font-size: .9rem; }
       @media (max-width: 640px) { .facts { grid-template-columns: 1fr; } }
     </style>
-  </head>
+  <style data-cardsys>
+/* cardsys: similar rail cards (2026-10-23 overhaul) */
+.vcard{display:flex;gap:12px;align-items:flex-start}
+.vcard .vthumb{flex:0 0 86px;width:86px;height:86px;border-radius:10px;object-fit:cover;display:block}
+.vcard .vmain{flex:1;min-width:0}
+.vcard .vsub{margin:4px 0 0;font-size:.86rem;line-height:1.45;color:var(--muted,#c6bba2)}
+@media (min-width:1000px){.vlist{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start}}
+</style></head>
   <body>
     <header class="hero">
       <div class="hero-in">
@@ -236,45 +243,45 @@
         <div class="actions">
           <a class="action" href="https://www.google.com/maps/search/?api=1&amp;query=Rum+Jungle+Rum+Jungle%2C+5533+International+Dr%2C+Orlando%2C+FL+32819" target="_blank" rel="noopener">Directions &rarr;</a>
           <a class="action" href="/archive.html?venue=rum-jungle">Open in the full finder</a>
-          <a class="action" href="/international-drive-district-guide.html">Read the International Drive story</a>
+          <a class="action" href="/history/i-drive.html">Read the International Drive story</a>
         </div>
       </section>
 
-      <section class="sec" id="similar">
+      <section class="sec" id="district-story"><p class="kicker">District Story</p><h2>The story of International Drive</h2><p class="lede">A hotel in the boondocks, a road paved after it and named to sound big and important, and the corridor that taught Orlando how to be a vacation.</p><p><a class="btn-ghost" href="/history/i-drive.html">Read the International Drive story &rarr;</a></p></section><section class="sec" id="similar">
         <p class="kicker">Similar Feel</p>
         <h2>More places with this feel</h2>
         <p class="lede">Matched by vibe, not by neighborhood: the places across Greater Orlando closest in spirit to Rum Jungle.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/mangos.html">Mango&#x27;s Tropical Cafe</a></h3>
-          <p class="meta">Latin &amp; Caribbean &middot; International Drive &middot; $$$</p>
+          <div class="vmain"><h3><a href="/venue/mangos.html">Mango&#x27;s Tropical Cafe</a></h3>
+          <p class="meta">Latin &amp; Caribbean &middot; International Drive &middot; $$$</p><p class="vsub">On International Drive, this is a nightclub first, with dinner and a live Latin show folded into the front of the night.</p>
           <p class="addr">Mango&#x27;s Tropical Cafe, 8126 International Dr, Orlando, FL 32819-9323</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/cuba-libre-pointe-orlando.html">Cuba Libre</a></h3>
-          <p class="meta">Latin &amp; Caribbean &middot; Pointe Orlando &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/cuba-libre-pointe-orlando.html">Cuba Libre</a></h3>
+          <p class="meta">Latin &amp; Caribbean &middot; Pointe Orlando &middot; $$</p><p class="vsub">A two-story Old Havana courtyard rebuilt inside Pointe Orlando, all palm shadows, live Latin music, and rum.</p>
           <p class="addr">9101 International Dr #1004, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/still-lounge.html">Still Lounge by Dre and Snoop</a></h3>
-          <p class="meta">Bars &amp; lounges &middot; Pointe Orlando &middot; $$$</p>
+          <img class="vthumb" src="/assets/venue-still-lounge.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/still-lounge.html">Still Lounge by Dre and Snoop</a></h3>
+          <p class="meta">Bars &amp; lounges &middot; Pointe Orlando &middot; $$$</p><p class="vsub">A low-light lounge inside Live!</p>
           <p class="addr">9101 International Dr, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/aphrodisiaco.html">Aphrodisiaco</a></h3>
-          <p class="meta">Seafood &middot; International Drive &middot; $$$</p>
+          <img class="vthumb" src="/assets/venue-aphrodisiaco.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/aphrodisiaco.html">Aphrodisiaco</a></h3>
+          <p class="meta">Seafood &middot; International Drive &middot; $$$</p><p class="vsub">On International Drive, this low-lit speakeasy builds romance into the lighting, the music, and the plate.</p>
           <p class="addr">8267 International Dr, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/the-whiskey.html">The Whiskey</a></h3>
-          <p class="meta">Bars &amp; lounges &middot; Sand Lake &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/the-whiskey.html">The Whiskey</a></h3>
+          <p class="meta">Bars &amp; lounges &middot; Sand Lake &middot; $$</p><p class="vsub">Rock and roll energy on Sand Lake, with chef-driven burgers and a bar that runs deep on whiskey.</p>
           <p class="addr">7563 W Sand Lake Rd, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/cafe-tu-tu-tango.html">Café Tu Tu Tango</a></h3>
-          <p class="meta">Restaurants &middot; I-Drive &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-cafe-tu-tu-tango.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/cafe-tu-tu-tango.html">Café Tu Tu Tango</a></h3>
+          <p class="meta">Restaurants &middot; I-Drive &middot; $$</p><p class="vsub">An I-Drive original since the 1990s that treats dinner like an art opening, with resident artists painting at easels, walls doubling as the gallery.</p>
           <p class="addr">8625 International Dr, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         </div>
       </section>
 
@@ -284,35 +291,35 @@
         <p class="lede">Other places in International Drive, Local Picks first, then the closest to Rum Jungle.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/toms-watch-bar-orlando.html">Tom&#x27;s Watch Bar</a> <span class="badge">Local Pick</span></h3>
-          <p class="meta">Bars &amp; lounges · Bar &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-toms-watch-bar-orlando.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/toms-watch-bar-orlando.html">Tom&#x27;s Watch Bar</a> <span class="badge">Local Pick</span></h3>
+          <p class="meta">Bars &amp; lounges · Bar &middot; $$</p><p class="vsub">On International Drive, a sports bar built like a stadium, with an oversized screen and screens wrapping the room so every seat faces the action.</p>
           <p class="addr">8050 International Dr, Suite 1000, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/baires-grill-orlando.html">Baires Grill</a> <span class="badge">Local Pick</span></h3>
-          <p class="meta">Latin &amp; Caribbean · Argentinian Steakhouse &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-baires-grill-orlando.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/baires-grill-orlando.html">Baires Grill</a> <span class="badge">Local Pick</span></h3>
+          <p class="meta">Latin &amp; Caribbean · Argentinian Steakhouse &middot; $$</p><p class="vsub">The parrilla decides everything at this Argentine steakhouse just off International Drive.</p>
           <p class="addr">8050 International Dr, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/bruster-s-real-ice-cream.html">Bruster&#x27;s Real Ice Cream</a></h3>
-          <p class="meta">Sweets · Ice Cream &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/bruster-s-real-ice-cream.html">Bruster&#x27;s Real Ice Cream</a></h3>
+          <p class="meta">Sweets · Ice Cream &middot; $</p><p class="vsub">Cheerful, old-fashioned scoop stand on International Drive, with ice cream made in-store and fresh waffle cones.</p>
           <p class="addr">5584 International Dr, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/sfihas-international-drive.html">Sfiha&#x27;s International Drive</a></h3>
-          <p class="meta">Latin &amp; Caribbean · Brazilian Fast Food &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/sfihas-international-drive.html">Sfiha&#x27;s International Drive</a></h3>
+          <p class="meta">Latin &amp; Caribbean · Brazilian Fast Food &middot; $</p><p class="vsub">Sfiha&#x27;s bakes palm-sized Brazilian meat pies on International Drive, golden rounds filled with beef, chicken and catupiry cheese, or four cheeses.</p>
           <p class="addr">5640 International Dr, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/fun-spot-america-orlando.html">Fun Spot America</a></h3>
-          <p class="meta">Attractions · Attraction &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-fun-spot-america-orlando.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/fun-spot-america-orlando.html">Fun Spot America</a></h3>
+          <p class="meta">Attractions · Attraction &middot; $$</p><p class="vsub">Old-school midway the mega-parks left behind, family-owned since 1997, with White Lightning&#x27;s wooden coaster and short lines, guests say.</p>
           <p class="addr">5700 Fun Spot Way, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/camila-s-brazilian-restaurant.html">Camila&#x27;s Brazilian Restaurant</a></h3>
-          <p class="meta">Latin &amp; Caribbean · Brazilian Buffet &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-camila-s-brazilian-restaurant.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/camila-s-brazilian-restaurant.html">Camila&#x27;s Brazilian Restaurant</a></h3>
+          <p class="meta">Latin &amp; Caribbean · Brazilian Buffet &middot; $$</p><p class="vsub">On International Drive since 1989, this festive, unpretentious buffet is where local Brazilians treat it as home.</p>
           <p class="addr">5458 International Dr, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         </div>
         <div class="handoff">
           <a class="btn-ghost" href="/international-drive-finder.html">See the full International Drive list</a>

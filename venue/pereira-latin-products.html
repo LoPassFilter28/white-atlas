@@ -211,7 +211,14 @@
       .vcard .addr { margin: 0; color: var(--muted); font-size: .9rem; }
       @media (max-width: 640px) { .facts { grid-template-columns: 1fr; } }
     </style>
-  </head>
+  <style data-cardsys>
+/* cardsys: similar rail cards (2026-10-23 overhaul) */
+.vcard{display:flex;gap:12px;align-items:flex-start}
+.vcard .vthumb{flex:0 0 86px;width:86px;height:86px;border-radius:10px;object-fit:cover;display:block}
+.vcard .vmain{flex:1;min-width:0}
+.vcard .vsub{margin:4px 0 0;font-size:.86rem;line-height:1.45;color:var(--muted,#c6bba2)}
+@media (min-width:1000px){.vlist{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start}}
+</style></head>
   <body>
     <header class="hero">
       <div class="hero-in">
@@ -239,31 +246,31 @@
         </div>
       </section>
 
-      <section class="sec" id="similar">
+      <section class="sec" id="district-story"><p class="kicker">District Stories</p><h2>Orlando&#x27;s long memory</h2><p class="lede">The guide keeps the long memory of Orlando&#x27;s districts in one place: the names, the plats and the stories behind the streets.</p><p><a class="btn-ghost" href="/history.html">Browse the district stories &rarr;</a></p></section><section class="sec" id="similar">
         <p class="kicker">Similar Feel</p>
         <h2>More places with this feel</h2>
         <p class="lede">Matched by vibe, not by neighborhood: the places across Greater Orlando closest in spirit to Pereira Latin Products.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/alexandria-market.html">Alexandria Market</a></h3>
-          <p class="meta">Markets &amp; shops &middot; University &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/alexandria-market.html">Alexandria Market</a></h3>
+          <p class="meta">Markets &amp; shops &middot; University &middot; $</p><p class="vsub">A Middle Eastern grocery on Hanging Moss Rd stocking halal meats, fresh fateer and pita, baklava, and za&#x27;atar.</p>
           <p class="addr">6148 Hanging Moss Rd, Orlando, FL 32814</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/shiraz-market.html">Shiraz Market</a></h3>
-          <p class="meta">Mediterranean &middot; Longwood &middot; $</p>
+          <img class="vthumb" src="/assets/venue-shiraz-market.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/shiraz-market.html">Shiraz Market</a></h3>
+          <p class="meta">Mediterranean &middot; Longwood &middot; $</p><p class="vsub">Half Persian grocery, half grill counter on 17-92 in Longwood, this spot turns a spice run into lunch.</p>
           <p class="addr">188 S US Hwy 17-92, Longwood, FL 32750</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/hollerbachs-german-market.html">Hollerbach's German Market</a></h3>
-          <p class="meta">Markets &amp; shops &middot; Sanford &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/hollerbachs-german-market.html">Hollerbach's German Market</a></h3>
+          <p class="meta">Markets &amp; shops &middot; Sanford &middot; $$</p><p class="vsub">On Magnolia Avenue in Sanford, stocked with imported German pantry goods, Milka chocolate, Haribo, plus a full deli and bakery.</p>
           <p class="addr">117 Magnolia Ave, Sanford, FL 32771</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/el-colmadon.html">El Colmadon</a></h3>
-          <p class="meta">Latin &amp; Caribbean &middot; Downtown North &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/el-colmadon.html">El Colmadon</a></h3>
+          <p class="meta">Latin &amp; Caribbean &middot; Downtown North &middot; $$</p><p class="vsub">A Dominican counter on North Magnolia named for the colmadón, the corner store back home that feeds the whole block.</p>
           <p class="addr">743 N Magnolia Ave, Orlando, FL 32803</p>
-        </article>
+        </div></article>
         </div>
       </section>
 
@@ -273,35 +280,35 @@
         <p class="lede">Other places in University, closest to Pereira Latin Products first.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/zackleys.html">Zackleys</a></h3>
-          <p class="meta">Pizza &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/zackleys.html">Zackleys</a></h3>
+          <p class="meta">Pizza &middot; $</p><p class="vsub">Family owned since 2000 and tucked inside the Full Sail campus, with wood oven pizzas, paninis, and Jamaican beef empanadas.</p>
           <p class="addr">3260 University Blvd, Winter Park, FL 32792</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/alexandria-market.html">Alexandria Market</a></h3>
-          <p class="meta">Markets &amp; shops · Middle Eastern Grocery &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/alexandria-market.html">Alexandria Market</a></h3>
+          <p class="meta">Markets &amp; shops · Middle Eastern Grocery &middot; $</p><p class="vsub">A Middle Eastern grocery on Hanging Moss Rd stocking halal meats, fresh fateer and pita, baklava, and za&#x27;atar.</p>
           <p class="addr">6148 Hanging Moss Rd, Orlando, FL 32814</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/everoak.html">Everoak Farm</a></h3>
-          <p class="meta">Markets &amp; shops · Farmstand &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/everoak.html">Everoak Farm</a></h3>
+          <p class="meta">Markets &amp; shops · Farmstand &middot; $</p><p class="vsub">A family-run regenerative farm on Carrington Drive growing Certified Naturally Grown produce with no sprays in living soil.</p>
           <p class="addr">Everoak Farm, 2335 Carrington Dr, Orlando, FL 32807</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/vivahealthy-pink-house.html">Vivahealthy Pink House</a></h3>
-          <p class="meta">Coffee &amp; cafes · Healthy Cafe &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/vivahealthy-pink-house.html">Vivahealthy Pink House</a></h3>
+          <p class="meta">Coffee &amp; cafes · Healthy Cafe &middot; $$</p><p class="vsub">A bright healthy cafe on University Blvd built around smoothies, juices, salads, and weekly meal prep for students.</p>
           <p class="addr">7612 University Blvd Unit 21, Winter Park, FL 32792</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/dutch-bros-coffee-winter-park.html">Dutch Bros Coffee</a></h3>
-          <p class="meta">Coffee &amp; cafes · Coffee Shop &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/dutch-bros-coffee-winter-park.html">Dutch Bros Coffee</a></h3>
+          <p class="meta">Coffee &amp; cafes · Coffee Shop &middot; $</p><p class="vsub">On Semoran Boulevard, a high-energy, genuinely friendly drive-thru where the crew remembers regulars and sings to birthday windows.</p>
           <p class="addr">116 S Semoran Blvd, Winter Park, FL 32792</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/lucky-china.html">Lucky China</a></h3>
-          <p class="meta">Chinese · Chinese Takeout &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/lucky-china.html">Lucky China</a></h3>
+          <p class="meta">Chinese · Chinese Takeout &middot; $</p><p class="vsub">A no-frills takeout staple in Aloma Square that regulars prize for one thing above all: consistency.</p>
           <p class="addr">Lucky China, 6756 Aloma Ave, Winter Park, FL 32792</p>
-        </article>
+        </div></article>
         </div>
         <div class="handoff">
           <a class="btn-ghost" href="/ucf-finder.html">See the full University list</a>

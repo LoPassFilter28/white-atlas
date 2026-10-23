@@ -211,7 +211,14 @@
       .vcard .addr { margin: 0; color: var(--muted); font-size: .9rem; }
       @media (max-width: 640px) { .facts { grid-template-columns: 1fr; } }
     </style>
-  </head>
+  <style data-cardsys>
+/* cardsys: similar rail cards (2026-10-23 overhaul) */
+.vcard{display:flex;gap:12px;align-items:flex-start}
+.vcard .vthumb{flex:0 0 86px;width:86px;height:86px;border-radius:10px;object-fit:cover;display:block}
+.vcard .vmain{flex:1;min-width:0}
+.vcard .vsub{margin:4px 0 0;font-size:.86rem;line-height:1.45;color:var(--muted,#c6bba2)}
+@media (min-width:1000px){.vlist{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start}}
+</style></head>
   <body>
     <header class="hero">
       <div class="hero-in">
@@ -236,45 +243,45 @@
         <div class="actions">
           <a class="action" href="https://www.google.com/maps/search/?api=1&amp;query=Pho+Hoa+Pho+Hoa%2C+649+N+Primrose+Dr%2C+Orlando%2C+FL+32803-5016" target="_blank" rel="noopener">Directions &rarr;</a>
           <a class="action" href="/archive.html?venue=pho-hoa">Open in the full finder</a>
-          <a class="action" href="/mills-50-district-guide.html">Read the Mills 50 story</a>
+          <a class="action" href="/history/mills-50.html">Read the Mills 50 story</a>
         </div>
       </section>
 
-      <section class="sec" id="similar">
+      <section class="sec" id="district-story"><p class="kicker">District Story</p><h2>The story of Mills 50</h2><p class="lede">A district named for its own crossroads, platted as front porches in 1883 and remade twice by the people who moved in.</p><p><a class="btn-ghost" href="/history/mills-50.html">Read the Mills 50 story &rarr;</a></p></section><section class="sec" id="similar">
         <p class="kicker">Similar Feel</p>
         <h2>More places with this feel</h2>
         <p class="lede">Matched by vibe, not by neighborhood: the places across Greater Orlando closest in spirit to Pho Hoa.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/pho-haven-lake-nona.html">Pho Haven</a></h3>
-          <p class="meta">Noodles &amp; Southeast Asian &middot; Lake Nona &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/pho-haven-lake-nona.html">Pho Haven</a></h3>
+          <p class="meta">Noodles &amp; Southeast Asian &middot; Lake Nona &middot; $</p><p class="vsub">Cozy and spotless on Narcoossee Road, where the broth comes clean and comforting, fragrant with star anise.</p>
           <p class="addr">14019 Narcoossee Rd, Suite 105, Orlando, FL 32832</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/saigon-flavors.html">Saigon Flavors</a></h3>
-          <p class="meta">Noodles &amp; Southeast Asian &middot; Oviedo &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-saigon-flavors.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/saigon-flavors.html">Saigon Flavors</a></h3>
+          <p class="meta">Noodles &amp; Southeast Asian &middot; Oviedo &middot; $$</p><p class="vsub">A pretty, family-owned Vietnamese room in Oviedo, with colorful walls, lit cubbies of bric-a-brac and paintings of old Saigon.</p>
           <p class="addr">3573 Aloma Ave, Oviedo, FL 32765</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/twenty-pho-hour.html">Twenty Pho Hour</a></h3>
-          <p class="meta">Noodles &amp; Southeast Asian &middot; International Drive &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/twenty-pho-hour.html">Twenty Pho Hour</a></h3>
+          <p class="meta">Noodles &amp; Southeast Asian &middot; International Drive &middot; $$</p><p class="vsub">Black-and-white ink lines wrap this International Drive room, a playful comic-book space guests compare to a music video.</p>
           <p class="addr">11951 International Dr Ste B-2, Orlando, FL 32821</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/viet-nomz.html">Viet-Nomz</a></h3>
-          <p class="meta">Noodles &amp; Southeast Asian &middot; Alahoya/East side &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-viet-nomz.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/viet-nomz.html">Viet-Nomz</a></h3>
+          <p class="meta">Noodles &amp; Southeast Asian &middot; Alahoya/East side &middot; $$</p><p class="vsub">Cute, cozy fast-casual Vietnamese spot on East Colonial Drive with a friendly, welcoming feel.</p>
           <p class="addr">11798 E Colonial Dr, Orlando, FL 32817</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/saigon-snow.html">Saigon Snow</a></h3>
-          <p class="meta">Sweets &middot; Mills 50 &middot; $</p>
+          <img class="vthumb" src="/assets/venue-saigon-snow.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/saigon-snow.html">Saigon Snow</a></h3>
+          <p class="meta">Sweets &middot; Mills 50 &middot; $</p><p class="vsub">Inside Mills Market, shaved ice comes soft and feathery, in ube, pandan, mango and lychee, unlike anything you have had before.</p>
           <p class="addr">1110 E Colonial Dr, Orlando, FL 32803</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/banh-mi-cali.html">Banh Mi Cali</a></h3>
-          <p class="meta">Noodles &amp; Southeast Asian &middot; Mills 50 &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/banh-mi-cali.html">Banh Mi Cali</a></h3>
+          <p class="meta">Noodles &amp; Southeast Asian &middot; Mills 50 &middot; $</p><p class="vsub">An old-school, no-frills counter on West Colonial where the baguettes come out soft and crisp with pate and pickled vegetables.</p>
           <p class="addr">Banh Mi Cali, 5210 W Colonial Dr, Orlando, FL 32808-7606</p>
-        </article>
+        </div></article>
         </div>
       </section>
 
@@ -284,35 +291,35 @@
         <p class="lede">Other places in Mills 50, Local Picks first, then the closest to Pho Hoa.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/the-guesthouse.html">The Guesthouse</a> <span class="badge">Local Pick</span></h3>
-          <p class="meta">Bars &amp; lounges · Cocktail Bar &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/the-guesthouse.html">The Guesthouse</a> <span class="badge">Local Pick</span></h3>
+          <p class="meta">Bars &amp; lounges · Cocktail Bar &middot; $$</p><p class="vsub">Mills 50&#x27;s plant-filled living room, greenery trailing over white walls around a square bar.</p>
           <p class="addr">1321 N Mills Ave, Orlando, FL 32803</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/thai-house.html">Thai House</a></h3>
-          <p class="meta">Noodles &amp; Southeast Asian · Thai &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-thai-house.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/thai-house.html">Thai House</a></h3>
+          <p class="meta">Noodles &amp; Southeast Asian · Thai &middot; $$</p><p class="vsub">A small, cozy, old-school room on East Colonial, family owned and proudly unpretentious.</p>
           <p class="addr">Thai House, 2117 E Colonial Dr, Orlando, FL 32803-4834</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/toojays.html">TooJay&#x27;s</a></h3>
-          <p class="meta">Restaurants · Deli &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-toojays.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/toojays.html">TooJay&#x27;s</a></h3>
+          <p class="meta">Restaurants · Deli &middot; $$</p><p class="vsub">New York-style deli on Colonial Drive since 1981, with hot pastrami, a corned beef Reuben, blintzes and matzo ball soup guests call the best in town.</p>
           <p class="addr">2624 E Colonial Dr, Orlando, FL 32803</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/mills-market.html">Mills Market</a></h3>
-          <p class="meta">Markets &amp; shops · Food Hall &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/mills-market.html">Mills Market</a></h3>
+          <p class="meta">Markets &amp; shops · Food Hall &middot; $$</p><p class="vsub">The food hall on East Colonial that anchors Mills 50, all shared tables, patio seating and chef-driven stalls under one roof.</p>
           <p class="addr">1110 E Colonial Dr, Orlando, FL 32803</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/pig-floyds-x-pigzza.html">Pig Floyd&#x27;s x Pigzza</a></h3>
-          <p class="meta">BBQ &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/pig-floyds-x-pigzza.html">Pig Floyd&#x27;s x Pigzza</a></h3>
+          <p class="meta">BBQ &middot; $$</p><p class="vsub">On North Mills, two Mills 50 names share one roof: Pigzza&#x27;s sourdough pies and pastas alongside Pig Floyd&#x27;s brisket.</p>
           <p class="addr">1050 N Mills Ave, Orlando, FL 32803</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/banh-mi-cali.html">Banh Mi Cali</a></h3>
-          <p class="meta">Noodles &amp; Southeast Asian · Vietnamese &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/banh-mi-cali.html">Banh Mi Cali</a></h3>
+          <p class="meta">Noodles &amp; Southeast Asian · Vietnamese &middot; $</p><p class="vsub">An old-school, no-frills counter on West Colonial where the baguettes come out soft and crisp with pate and pickled vegetables.</p>
           <p class="addr">Banh Mi Cali, 5210 W Colonial Dr, Orlando, FL 32808-7606</p>
-        </article>
+        </div></article>
         </div>
         <div class="handoff">
           <a class="btn-ghost" href="/mills-50-finder.html">See the full Mills 50 list</a>

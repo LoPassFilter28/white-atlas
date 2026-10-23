@@ -211,7 +211,14 @@
       .vcard .addr { margin: 0; color: var(--muted); font-size: .9rem; }
       @media (max-width: 640px) { .facts { grid-template-columns: 1fr; } }
     </style>
-  </head>
+  <style data-cardsys>
+/* cardsys: similar rail cards (2026-10-23 overhaul) */
+.vcard{display:flex;gap:12px;align-items:flex-start}
+.vcard .vthumb{flex:0 0 86px;width:86px;height:86px;border-radius:10px;object-fit:cover;display:block}
+.vcard .vmain{flex:1;min-width:0}
+.vcard .vsub{margin:4px 0 0;font-size:.86rem;line-height:1.45;color:var(--muted,#c6bba2)}
+@media (min-width:1000px){.vlist{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start}}
+</style></head>
   <body>
     <header class="hero">
       <div class="hero-in">
@@ -239,41 +246,41 @@
         </div>
       </section>
 
-      <section class="sec" id="similar">
+      <section class="sec" id="district-story"><p class="kicker">District Stories</p><h2>Orlando&#x27;s long memory</h2><p class="lede">The guide keeps the long memory of Orlando&#x27;s districts in one place: the names, the plats and the stories behind the streets.</p><p><a class="btn-ghost" href="/history.html">Browse the district stories &rarr;</a></p></section><section class="sec" id="similar">
         <p class="kicker">Similar Feel</p>
         <h2>More places with this feel</h2>
         <p class="lede">Matched by vibe, not by neighborhood: the places across Greater Orlando closest in spirit to Parva.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/mecatos.html">Mecatos</a></h3>
-          <p class="meta">Latin &amp; Caribbean &middot; Winter Park &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/mecatos.html">Mecatos</a></h3>
+          <p class="meta">Latin &amp; Caribbean &middot; Winter Park &middot; $</p><p class="vsub">A bright Colombian bakery cafe on Morse Boulevard in Winter Park, built around coffee from beans sourced in Colombia.</p>
           <p class="addr">610 W Morse Blvd, Winter Park, FL 32789</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/amazonica-florida-mall.html">Amazonica</a></h3>
-          <p class="meta">Coffee &amp; cafes &middot; Florida Mall &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/amazonica-florida-mall.html">Amazonica</a></h3>
+          <p class="meta">Coffee &amp; cafes &middot; Florida Mall &middot; $$</p><p class="vsub">A bright Colombian kiosk inside The Florida Mall, turning out obleas with arequipe, acai bowls with Nutella and fruit, and a proper cortadito.</p>
           <p class="addr">8001 S Orange Blossom Trl Kiosk TT124, Orlando, FL 32809</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/junior-colombian-burger.html">Junior Colombian Burger</a></h3>
-          <p class="meta">Burgers &amp; sandwiches &middot; University &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/junior-colombian-burger.html">Junior Colombian Burger</a></h3>
+          <p class="meta">Burgers &amp; sandwiches &middot; University &middot; $</p><p class="vsub">On East Colonial Drive, Colombian street food meets the American burger, and nothing about it is quiet.</p>
           <p class="addr">11875 E Colonial Dr, Orlando, FL</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/blue-amphora.html">Blue Amphora</a></h3>
-          <p class="meta">Bakeries &middot; Orlando &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-blue-amphora.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/blue-amphora.html">Blue Amphora</a></h3>
+          <p class="meta">Bakeries &middot; Orlando &middot; $$</p><p class="vsub">Welcoming and sparkling clean on North Goldenrod Road, a Turkish bakery where the case centers on baklava.</p>
           <p class="addr">Blue Amphora, 1461 N Goldenrod Rd, Orlando, FL 32807-8301, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/busters-bistro.html">Buster&#x27;s Bistro</a></h3>
-          <p class="meta">Bars &amp; lounges &middot; Sanford &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/busters-bistro.html">Buster&#x27;s Bistro</a></h3>
+          <p class="meta">Bars &amp; lounges &middot; Sanford &middot; $$</p><p class="vsub">On Sanford Avenue, Belgian Trappist ales and lambics pour in proper glassware, in a cozy room regulars compare to a living room.</p>
           <p class="addr">300 S Sanford Ave, Sanford, FL 32771</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/pio-pio-latin-cuisine.html">Pio Pio Latin Cuisine</a></h3>
-          <p class="meta">Latin &amp; Caribbean &middot; Orlando &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-pio-pio-latin-cuisine.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/pio-pio-latin-cuisine.html">Pio Pio Latin Cuisine</a></h3>
+          <p class="meta">Latin &amp; Caribbean &middot; Orlando &middot; $$</p><p class="vsub">On South Semoran, the Colombian staple locals lean on, a warm, family-style room where plates land generous and homestyle.</p>
           <p class="addr">2259 S Semoran Blvd, Orlando, FL 32822</p>
-        </article>
+        </div></article>
         </div>
       </section>
 
@@ -283,35 +290,35 @@
         <p class="lede">Other places in Sanford, closest to Parva first.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/cocina-maya-mexican-grill-mezcaleria.html">Cocina Maya Mexican Grill &amp; Mezcaleria</a></h3>
-          <p class="meta">Mexican &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/cocina-maya-mexican-grill-mezcaleria.html">Cocina Maya Mexican Grill &amp; Mezcaleria</a></h3>
+          <p class="meta">Mexican &middot; $$</p><p class="vsub">Cozy, festive Lake Mary room where Mexican cooking goes well past taco-shop basics, with a little tableside flair.</p>
           <p class="addr">3590 US-17 Ste 1026, Lake Mary, FL 32746</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/lighthouse-seafood.html">Lighthouse Seafood</a></h3>
-          <p class="meta">Seafood &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/lighthouse-seafood.html">Lighthouse Seafood</a></h3>
+          <p class="meta">Seafood &middot; $$</p><p class="vsub">Half market, half cafe on Country Club Road in Lake Mary, where you can buy fish to take home or have the kitchen cook it fresh.</p>
           <p class="addr">Lighthouse Seafood, 101 N Country Club Rd, Lake Mary, FL 32746, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/donuts-to-go.html">Donuts To Go</a></h3>
-          <p class="meta">Sweets · Donuts &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/donuts-to-go.html">Donuts To Go</a></h3>
+          <p class="meta">Sweets · Donuts &middot; $</p><p class="vsub">Early-morning sweet spot built around a square donut made for sharing.</p>
           <p class="addr">1414 W 1st St, Sanford, FL 32771</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/busters-bistro.html">Buster&#x27;s Bistro</a></h3>
-          <p class="meta">Bars &amp; lounges · Pub &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/busters-bistro.html">Buster&#x27;s Bistro</a></h3>
+          <p class="meta">Bars &amp; lounges · Pub &middot; $$</p><p class="vsub">On Sanford Avenue, Belgian Trappist ales and lambics pour in proper glassware, in a cozy room regulars compare to a living room.</p>
           <p class="addr">300 S Sanford Ave, Sanford, FL 32771</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/hot-asian-buns.html">Hot Asian Buns</a></h3>
-          <p class="meta">Restaurants · Asian Fusion &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/hot-asian-buns.html">Hot Asian Buns</a></h3>
+          <p class="meta">Restaurants · Asian Fusion &middot; $$</p><p class="vsub">Started as a Sanford food truck, now a brick-and-mortar on South Sanford Avenue where every bao is handmade from scratch.</p>
           <p class="addr">204 S Sanford Ave, Sanford, FL</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/henrys-depot.html">Henry&#x27;s Depot</a></h3>
-          <p class="meta">Markets &amp; shops · Food Hall &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/henrys-depot.html">Henry&#x27;s Depot</a></h3>
+          <p class="meta">Markets &amp; shops · Food Hall &middot; $$</p><p class="vsub">Sanford&#x27;s historic Plant depot on West 1st Street is now an open-air food hall with something for everyone.</p>
           <p class="addr">Henry&#x27;s Depot, 212 W 1st St, Sanford, FL 32771-1204, United States</p>
-        </article>
+        </div></article>
         </div>
         <div class="handoff">
           <a class="btn-ghost" href="/sanford-finder.html">See the full Sanford list</a>

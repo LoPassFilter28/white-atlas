@@ -211,7 +211,14 @@
       .vcard .addr { margin: 0; color: var(--muted); font-size: .9rem; }
       @media (max-width: 640px) { .facts { grid-template-columns: 1fr; } }
     </style>
-  </head>
+  <style data-cardsys>
+/* cardsys: similar rail cards (2026-10-23 overhaul) */
+.vcard{display:flex;gap:12px;align-items:flex-start}
+.vcard .vthumb{flex:0 0 86px;width:86px;height:86px;border-radius:10px;object-fit:cover;display:block}
+.vcard .vmain{flex:1;min-width:0}
+.vcard .vsub{margin:4px 0 0;font-size:.86rem;line-height:1.45;color:var(--muted,#c6bba2)}
+@media (min-width:1000px){.vlist{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start}}
+</style></head>
   <body>
     <header class="hero">
       <div class="hero-in">
@@ -236,45 +243,45 @@
         <div class="actions">
           <a class="action" href="https://www.google.com/maps/search/?api=1&amp;query=Rome%27s+Flavours+Rome%27s+Flavours%2C+124+E+Morse+Blvd%2C+Winter+Park%2C+FL+32789-3819" target="_blank" rel="noopener">Directions &rarr;</a>
           <a class="action" href="/archive.html?venue=rome-s-flavours">Open in the full finder</a>
-          <a class="action" href="/winter-park-district-guide.html">Read the Winter Park story</a>
+          <a class="action" href="/history/winter-park.html">Read the Winter Park story</a>
         </div>
       </section>
 
-      <section class="sec" id="similar">
+      <section class="sec" id="district-story"><p class="kicker">District Story</p><h2>The story of Winter Park</h2><p class="lede">A park built for the winter, drawn on paper in 1881, and still legible in every street you walk today.</p><p><a class="btn-ghost" href="/history/winter-park.html">Read the Winter Park story &rarr;</a></p></section><section class="sec" id="similar">
         <p class="kicker">Similar Feel</p>
         <h2>More places with this feel</h2>
         <p class="lede">Matched by vibe, not by neighborhood: the places across Greater Orlando closest in spirit to Rome&#x27;s Flavours.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/stefanos-trattoria.html">Stefano&#x27;s Trattoria</a></h3>
-          <p class="meta">Italian &middot; Winter Springs &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/stefanos-trattoria.html">Stefano&#x27;s Trattoria</a></h3>
+          <p class="meta">Italian &middot; Winter Springs &middot; $$</p><p class="vsub">Cozy, old-school Italian dining room tucked into a Tuskawilla Road shopping center, easy to miss and worth finding.</p>
           <p class="addr">Stefano&#x27;s Trattoria, 1425 Tuskawilla Rd, Winter Springs, FL 32708-4703</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/peperoncino.html">Peperoncino</a></h3>
-          <p class="meta">Italian &middot; Dellagio &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/peperoncino.html">Peperoncino</a></h3>
+          <p class="meta">Italian &middot; Dellagio &middot; $$</p><p class="vsub">Tiny and homey by the Dellagio fountain, this Italian spot has guests saying it feels like Italy.</p>
           <p class="addr">7988 Via Dellagio Way Ste 108, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/prato.html">Prato</a></h3>
-          <p class="meta">Italian &middot; Winter Park &middot; $$$</p>
+          <div class="vmain"><h3><a href="/venue/prato.html">Prato</a></h3>
+          <p class="meta">Italian &middot; Winter Park &middot; $$$</p><p class="vsub">Italian the Park Avenue way: rustic yet upscale, exposed brick and warm light, house-made pastas and wood-fired pizzas.</p>
           <p class="addr">Prato, 124 N Park Ave, Winter Park, FL 32789</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/pizza-bruno.html">Pizza Bruno</a></h3>
-          <p class="meta">Pizza &middot; Curry Ford &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-pizza-bruno.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/pizza-bruno.html">Pizza Bruno</a></h3>
+          <p class="meta">Pizza &middot; Curry Ford &middot; $$</p><p class="vsub">On Curry Ford, Bruno Zacchini&#x27;s wood-fired neighborhood room does blistered, naturally leavened crust and bold flavors.</p>
           <p class="addr">Pizza Bruno, 3990 Curry Ford Rd, Orlando, FL 32806-2702</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/pannullos-italian.html">Pannullo&#x27;s Italian Restaurant</a></h3>
-          <p class="meta">Italian &middot; Winter Park &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/pannullos-italian.html">Pannullo&#x27;s Italian Restaurant</a></h3>
+          <p class="meta">Italian &middot; Winter Park &middot; $$</p><p class="vsub">The old-school Park Avenue Italian room regulars call a longtime fave, cozy and unpretentious, with a view across Central Park.</p>
           <p class="addr">216 S Park Ave, Winter Park, FL 32789</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/formaggio-and-friends.html">Formaggio and Friends</a></h3>
-          <p class="meta">Italian &middot; SoDo &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/formaggio-and-friends.html">Formaggio and Friends</a></h3>
+          <p class="meta">Italian &middot; SoDo &middot; $$</p><p class="vsub">Cozy in SoDo, an Italian grocery and wine bar where cheese cases, pantry shelves, and a communal table share one room.</p>
           <p class="addr">Formaggio and Friends, 4745 S Orange Ave, Orlando, FL 32806</p>
-        </article>
+        </div></article>
         </div>
       </section>
 
@@ -284,35 +291,35 @@
         <p class="lede">Other places in Winter Park, Local Picks first, then the closest to Rome&#x27;s Flavours.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/ava.html">AVA Mediterranean</a> <span class="badge">Local Pick</span></h3>
-          <p class="meta">Mediterranean &middot; $$$</p>
+          <img class="vthumb" src="/assets/venue-ava.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/ava.html">AVA Mediterranean</a> <span class="badge">Local Pick</span></h3>
+          <p class="meta">Mediterranean &middot; $$$</p><p class="vsub">A glamorous Greek agora on Park Avenue, sophisticated and high-energy from the moment you sit down.</p>
           <p class="addr">290 S Park Ave, Winter Park, FL 32789</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/imperial-on-park.html">The Imperial on Park</a> <span class="badge">Local Pick</span></h3>
-          <p class="meta">Bars &amp; lounges · Wine Bar &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-imperial-on-park.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/imperial-on-park.html">The Imperial on Park</a> <span class="badge">Local Pick</span></h3>
+          <p class="meta">Bars &amp; lounges · Wine Bar &middot; $$</p><p class="vsub">Park Avenue&#x27;s neighborhood bar, warm and laid back, with boutique wines, craft beers and cocktails built on Winter Park Distillery spirits.</p>
           <p class="addr">136 S Park Ave, Winter Park, FL 32789</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/prato.html">Prato</a> <span class="badge">Local Pick</span></h3>
-          <p class="meta">Italian &middot; $$$</p>
+          <div class="vmain"><h3><a href="/venue/prato.html">Prato</a> <span class="badge">Local Pick</span></h3>
+          <p class="meta">Italian &middot; $$$</p><p class="vsub">Italian the Park Avenue way: rustic yet upscale, exposed brick and warm light, house-made pastas and wood-fired pizzas.</p>
           <p class="addr">Prato, 124 N Park Ave, Winter Park, FL 32789</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/croissant-gourmet.html">Croissant Gourmet</a></h3>
-          <p class="meta">Bakeries · Bakery &middot; $</p>
+          <img class="vthumb" src="/assets/venue-croissant-gourmet.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/croissant-gourmet.html">Croissant Gourmet</a></h3>
+          <p class="meta">Bakeries · Bakery &middot; $</p><p class="vsub">Cozy, spotless little bakery on Morse Boulevard that guests describe as a piece of France in Winter Park.</p>
           <p class="addr">120 E Morse Blvd, Winter Park, FL 32789</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/bosphorous-turkish.html">Bosphorous Turkish Cuisine</a></h3>
-          <p class="meta">Mediterranean · Turkish &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-bosphorous-turkish.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/bosphorous-turkish.html">Bosphorous Turkish Cuisine</a></h3>
+          <p class="meta">Mediterranean · Turkish &middot; $$</p><p class="vsub">A family-owned Turkish table on Park Avenue, warm and celebratory, where hollow lavas bread arrives puffed and blistered for the dips.</p>
           <p class="addr">108 S Park Ave, Winter Park, FL 32789</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/kilwins-ice-cream-chocolate-fudge.html">Kilwins Ice Cream - Chocolate - Fudge</a></h3>
-          <p class="meta">Sweets · Ice Cream &middot; $</p>
+          <img class="vthumb" src="/assets/venue-kilwins-ice-cream-chocolate-fudge.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/kilwins-ice-cream-chocolate-fudge.html">Kilwins Ice Cream - Chocolate - Fudge</a></h3>
+          <p class="meta">Sweets · Ice Cream &middot; $</p><p class="vsub">Fresh waffle cone smell finds you first on Park Avenue, where fudge is paddled on marble and caramel apples are dipped in the open.</p>
           <p class="addr">122 N Park Ave, Winter Park, FL 32789</p>
-        </article>
+        </div></article>
         </div>
         <div class="handoff">
           <a class="btn-ghost" href="/winter-park-finder.html">See the full Winter Park list</a>
