@@ -323,10 +323,52 @@
 .hero-plate figcaption .hero-credit{display:block;color:#5c6a58;font-size:.72rem;margin-top:2px}
 .hero-plate figcaption a{color:#7c520c}
 .has-photo .hero-in{padding-bottom:18px}
+</style><style data-cardsys>
+/* cardsys: unified venue card (2026-10-23 overhaul) */
+.card-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(400px,1fr));gap:14px;margin:18px 0 8px}
+@media (max-width:560px){.card-grid{grid-template-columns:1fr}}
+.card-grid.wide{width:min(1160px,calc(100vw - 40px));position:relative;left:50%;transform:translateX(-50%)}
+@media (max-width:760px){.card-grid.wide{width:100%;left:0;transform:none}}
+.vcard2{position:relative;display:flex;gap:0;background:var(--surface,#122419);border:1px solid var(--line,#2f4a38);border-radius:14px;overflow:hidden;transition:border-color .18s ease,transform .18s ease}
+.vcard2:hover{border-color:var(--accent-ink,#d4b573);transform:translateY(-2px)}
+.vcard2-photo{flex:0 0 148px;position:relative;display:block;overflow:hidden;background:linear-gradient(150deg,#1e3c41,#0c232b 60%,#06181d)}
+.vcard2-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.vcard2-plate{position:absolute;inset:0;display:flex;align-items:flex-end;padding:10px;font-family:Urbanist,system-ui,sans-serif;font-weight:800;font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(240,232,213,.75)}
+.vcard2-body{flex:1;min-width:0;padding:13px 15px 12px}
+.vcard2-top{display:flex;align-items:baseline;justify-content:space-between;gap:10px}
+.vcard2-top h3{margin:0;font-family:Urbanist,system-ui,sans-serif;font-size:1.06rem;line-height:1.2;color:var(--headline,#f6edd6)}
+.vcard2-top h3 a{color:inherit;text-decoration:none}
+.vcard2-top h3 a::after{content:"";position:absolute;inset:0}
+.vcard2-price{font-weight:800;color:var(--accent-ink,#d4b573);font-size:.85rem;white-space:nowrap}
+.vcard2-meta{margin:3px 0 0;font-size:.78rem;color:var(--muted,#c6bba2);letter-spacing:.02em}
+.vcard2-sub{margin:7px 0 0;font-size:.9rem;line-height:1.45;color:var(--ink,#f0e8d5)}
+.vcard2-chips{margin:9px 0 0;display:flex;flex-wrap:wrap;gap:6px}
+.vcard2-chips .chip{font-size:.66rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;padding:3px 8px;border-radius:999px;background:var(--badge,#223c2b);color:var(--muted,#c6bba2)}
+.vcard2-chips .chip.pick{background:var(--accent,#765b2f);color:#fff}
+@media (max-width:560px){.vcard2-photo{flex-basis:104px}}
+
+/* cardsys glide fixes */
+.glide-photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.34;pointer-events:none}
+.glide-cap{position:absolute;left:14px;bottom:10px;z-index:3;font-size:.66rem;color:rgba(240,232,213,.72);letter-spacing:.03em;margin:0}
+.glide-hook{font-family:Urbanist,system-ui,sans-serif;font-weight:700;font-size:1.12rem;line-height:1.3;color:var(--accent-ink,#d4b573);margin:.1em 0 .45em}
+</style><style data-cardsys>
+/* cardsys: scene banner (2026-10-23 overhaul) */
+header.hero{position:relative;overflow:hidden;display:flex;flex-direction:column;justify-content:flex-end;min-height:min(84vh,780px)}
+header.hero .scene-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
+header.hero::after{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(7,15,11,.42) 0%,rgba(7,15,11,.05) 34%,rgba(7,15,11,.34) 64%,rgba(7,15,11,.82) 100%)}
+header.hero .hero-in{position:relative;z-index:2;padding-bottom:70px;color:#f0e8d5}
+header.hero .hero-in h1{color:#f6edd6;text-shadow:0 2px 22px rgba(0,0,0,.45)}
+header.hero .hero-in .sub,header.hero .hero-in .count,header.hero .hero-in .lede,header.hero .hero-in p{color:rgba(240,232,213,.88)}
+header.hero .hero-in .crumbs,header.hero .hero-in .crumbs a,header.hero .hero-brand{color:#d4b573}
+header.hero .scroll-cue{position:relative;z-index:2;color:rgba(240,232,213,.75)}
+header.hero .scene-cap{position:absolute;right:16px;bottom:12px;z-index:3;max-width:min(540px,74%);margin:0;font-size:.72rem;line-height:1.45;color:rgba(240,232,213,.87);text-align:right;text-shadow:0 1px 8px rgba(0,0,0,.6)}
+header.hero .scene-cap .hero-credit{display:block;color:rgba(240,232,213,.62)}
+header.hero .scene-cap a{color:#d4b573}
+@media (max-width:640px){header.hero{min-height:68vh}header.hero .scene-cap{max-width:88%}}
 </style></head>
   <body>
     <!-- 1 · TITLE SCREEN, type poster on a clean district field -->
-    <header class="hero has-photo" style="background:radial-gradient(ellipse 90% 55% at 50% 108%, rgba(171,116,66,0.28), transparent 60%), linear-gradient(168deg, #301b1d, #241518 52%, #140c0d)">
+    <header class="hero has-photo" style="background:radial-gradient(ellipse 90% 55% at 50% 108%, rgba(171,116,66,0.28), transparent 60%), linear-gradient(168deg, #301b1d, #241518 52%, #140c0d)"><img class="scene-img" src="assets/hero-thornton-park.jpg" alt="Thornton Park&#x27;s brick streets and its fountain at Washington Street and Hyer Avenue, porches and oaks behind" style="object-position:84% 36%;" fetchpriority="high" decoding="async" />
       
       <div class="hero-in">
         <a class="hero-brand" href="/">407 FYI · A DISTRICT STORY</a>
@@ -335,7 +377,7 @@
         <p class="count">11 places · One neighbourhood</p>
       </div>
       <div class="scroll-cue" aria-hidden="true">Scroll</div>
-    <div class="hero-plate"><figure><img src="assets/hero-thornton-park.jpg" alt="Thornton Park&#x27;s brick streets and its fountain at Washington Street and Hyer Avenue, porches and oaks behind" style="object-position:84% 36%;" fetchpriority="high" decoding="async" /><figcaption></figcaption></figure></div></header>
+    </header>
 
     <main>
       <!-- 2 · QUIET INTRO -->
@@ -387,7 +429,7 @@
         <div class="glide-cardwrap">
           <article class="glide-card reveal">
             <p class="kicker">01 · The Finale</p>
-            <h2>Mules Cold Enough To Fog</h2>
+            <h2>The Stubborn Mule</h2><p class="glide-hook">Mules Cold Enough To Fog</p>
             <p>Two Culinary Institute graduates opened this corner room in 2016 and built Thornton Park's measuring-stick bar: handcrafted mules cold enough to fog the copper, sticky pork belly, short rib grilled cheese. The patio fills first, understand why by sip two.</p>
             <p class="venue-meta">The Stubborn Mule · Bar · $$</p>
             <a class="venue-btn" href="/venue/the-stubborn-mule.html">See the venue &rarr;</a>
@@ -418,19 +460,7 @@
           <h2>That&rsquo;s the story. Here&rsquo;s the whole neighborhood.</h2>
           <p class="lede">All 11 Thornton Park places from the guide, A-Z. Tap any name to open its card: directions, details and booking live there, not in the story.</p>
         </div>
-        <ul class="ix">
-          <li><a href="/venue/cavos-bar-kitchen.html"><span class="ix-name">Cavo's Bar &amp; Kitchen</span><span class="ix-meta">Bars &amp; lounges · $$</span></a></li>
-          <li><a href="/venue/f-d-cantina.html"><span class="ix-name">F&amp;D Cantina</span><span class="ix-meta">Mexican · $$</span></a></li>
-          <li><a href="/venue/jinya-ramen-bar.html"><span class="ix-name">Jinya Ramen Bar</span><span class="ix-meta">Noodles &amp; Southeast Asian · $$</span></a></li>
-          <li><a href="/venue/orlando-farmers-market.html"><span class="ix-name">Orlando Farmers Market</span><span class="ix-meta">Markets &amp; shops · $$</span></a></li>
-          <li><a href="/venue/osteria-ester.html"><span class="ix-name">Osteria Ester</span><span class="ix-meta">Italian · $$</span></a></li>
-          <li><a href="/venue/outpost-neighborhood-tavern.html"><span class="ix-name">Outpost Neighborhood Tavern</span><span class="ix-meta">Bars &amp; lounges · $$</span></a></li>
-          <li><a href="/venue/red-panda-noodle.html"><span class="ix-name">Red Panda Noodle</span><span class="ix-meta">Noodles &amp; Southeast Asian · $$</span></a></li>
-          <li><a href="/venue/rusteak-thornton-park.html"><span class="ix-name">Rusteak</span><span class="ix-meta">Fine dining &amp; steak · $$</span></a></li>
-          <li><a href="/venue/the-escobar-kitchen.html"><span class="ix-name">The Escobar Kitchen</span><span class="ix-meta">Japanese &amp; sushi · $$</span></a></li>
-          <li><a href="/venue/the-stubborn-mule.html"><span class="ix-name">The Stubborn Mule</span><span class="ix-meta">Bars &amp; lounges · $$</span></a></li>
-          <li><a href="/venue/wine-corks.html"><span class="ix-name">Wine &amp; Corks</span><span class="ix-meta">Japanese &amp; sushi · $$</span></a></li>
-        </ul>
+        <div class="card-grid wide"><article class="vcard2"><a class="vcard2-photo" href="/venue/cavos-bar-kitchen.html" tabindex="-1" aria-hidden="true"><span class="vcard2-plate">Thornton Park</span></a><div class="vcard2-body"><div class="vcard2-top"><h3><a href="/venue/cavos-bar-kitchen.html">Cavo&#x27;s Bar &amp; Kitchen</a></h3><span class="vcard2-price">$$</span></div><p class="vcard2-meta">Bars &amp; lounges · Thornton Park</p><p class="vcard2-sub">On East Washington, Thornton Park&#x27;s sports bar is Eagles country, where Philly fans gather and the cheesesteak earns loud praise.</p></div></article><article class="vcard2"><a class="vcard2-photo" href="/venue/f-d-cantina.html" tabindex="-1" aria-hidden="true"><img src="/assets/venue-f-d-cantina.webp" alt="" loading="lazy"></a><div class="vcard2-body"><div class="vcard2-top"><h3><a href="/venue/f-d-cantina.html">F&amp;D Cantina</a></h3><span class="vcard2-price">$$</span></div><p class="vcard2-meta">Mexican · Thornton Park</p><p class="vcard2-sub">On East Central, Thornton Park&#x27;s festive cantina, a dog-friendly patio room where regulars dream about birria tacos and the watermelon margarita.</p></div></article><article class="vcard2"><a class="vcard2-photo" href="/venue/jinya-ramen-bar.html" tabindex="-1" aria-hidden="true"><img src="/assets/venue-jinya-ramen-bar.webp" alt="" loading="lazy"></a><div class="vcard2-body"><div class="vcard2-top"><h3><a href="/venue/jinya-ramen-bar.html">Jinya Ramen Bar</a></h3><span class="vcard2-price">$$</span></div><p class="vcard2-meta">Noodles &amp; Southeast Asian · Thornton Park</p><p class="vcard2-sub">Lights stay dim and bowls run deep on North Summerlin, with broth simmered the slow way and a sleek room that fills fast.</p></div></article><article class="vcard2"><a class="vcard2-photo" href="/venue/orlando-farmers-market.html" tabindex="-1" aria-hidden="true"><span class="vcard2-plate">Lake Eola</span></a><div class="vcard2-body"><div class="vcard2-top"><h3><a href="/venue/orlando-farmers-market.html">Orlando Farmers Market</a></h3><span class="vcard2-price">$</span></div><p class="vcard2-meta">Markets &amp; shops · Lake Eola</p><p class="vcard2-sub">Every Sunday, the Lake Eola lakefront becomes a shaded, dog-friendly stretch of vendors with live music and a wine and beer garden.</p><p class="vcard2-chips"><span class="chip">Market</span></p></div></article><article class="vcard2"><a class="vcard2-photo" href="/venue/osteria-ester.html" tabindex="-1" aria-hidden="true"><span class="vcard2-plate">Thornton Park</span></a><div class="vcard2-body"><div class="vcard2-top"><h3><a href="/venue/osteria-ester.html">Osteria Ester</a></h3><span class="vcard2-price">$$</span></div><p class="vcard2-meta">Italian · Thornton Park</p><p class="vcard2-sub">The Good Salt group brings its touch to Italian American cooking on East Central, a warm room that reads as a neighborhood red sauce joint.</p><p class="vcard2-chips"><span class="chip">Date night</span><span class="chip">Local eats</span><span class="chip">Michelin pick</span></p></div></article><article class="vcard2"><a class="vcard2-photo" href="/venue/outpost-neighborhood-tavern.html" tabindex="-1" aria-hidden="true"><img src="/assets/venue-outpost-neighborhood-tavern.webp" alt="" loading="lazy"></a><div class="vcard2-body"><div class="vcard2-top"><h3><a href="/venue/outpost-neighborhood-tavern.html">Outpost Neighborhood Tavern</a></h3><span class="vcard2-price">$$</span></div><p class="vcard2-meta">American · Thornton Park</p><p class="vcard2-sub">Two blocks off Lake Eola, a welcoming room guests call a cross between a sports bar and a boutique restaurant, with a lively patio and trivia leagues.</p><p class="vcard2-chips"><span class="chip">Brunch</span></p></div></article><article class="vcard2"><a class="vcard2-photo" href="/venue/red-panda-noodle.html" tabindex="-1" aria-hidden="true"><span class="vcard2-plate">Orlando</span></a><div class="vcard2-body"><div class="vcard2-top"><h3><a href="/venue/red-panda-noodle.html">Red Panda Noodle</a></h3><span class="vcard2-price">$$</span></div><p class="vcard2-meta">Noodles &amp; Southeast Asian · Orlando</p><p class="vcard2-sub">Chef-driven noodle spot at downtown&#x27;s A La Cart food hall, where hand-pulled biang biang noodles arrive thick with a firm bite.</p></div></article><article class="vcard2"><a class="vcard2-photo" href="/venue/rusteak-thornton-park.html" tabindex="-1" aria-hidden="true"><img src="/assets/venue-rusteak-thornton-park.webp" alt="" loading="lazy"></a><div class="vcard2-body"><div class="vcard2-top"><h3><a href="/venue/rusteak-thornton-park.html">Rusteak</a></h3><span class="vcard2-price">$$</span></div><p class="vcard2-meta">American · Downtown</p><p class="vcard2-sub">On the Lake Eola corner in Thornton Park, a neighborhood spot cooking like it has something to prove, polished, relaxed but never stiff.</p><p class="vcard2-chips"><span class="chip pick">Local Pick</span></p></div></article><article class="vcard2"><a class="vcard2-photo" href="/venue/the-escobar-kitchen.html" tabindex="-1" aria-hidden="true"><img src="/assets/venue-the-escobar-kitchen.webp" alt="" loading="lazy"></a><div class="vcard2-body"><div class="vcard2-top"><h3><a href="/venue/the-escobar-kitchen.html">The Escobar Kitchen</a></h3><span class="vcard2-price">$$</span></div><p class="vcard2-meta">Japanese &amp; sushi · South Eola</p><p class="vcard2-sub">Family-run sushi inside a wine shop on East Church Street, rolling Latin-flavored rolls regulars say they dream about.</p></div></article><article class="vcard2"><a class="vcard2-photo" href="/venue/the-stubborn-mule.html" tabindex="-1" aria-hidden="true"><span class="vcard2-plate">Lake Eola</span></a><div class="vcard2-body"><div class="vcard2-top"><h3><a href="/venue/the-stubborn-mule.html">The Stubborn Mule</a></h3><span class="vcard2-price">$$</span></div><p class="vcard2-meta">American · Lake Eola</p><p class="vcard2-sub">Steps from the swans of Lake Eola, Moscow mules are the calling card in a cozy, lively room regulars call simply a vibe.</p></div></article><article class="vcard2"><a class="vcard2-photo" href="/venue/wine-corks.html" tabindex="-1" aria-hidden="true"><span class="vcard2-plate">Thornton Park</span></a><div class="vcard2-body"><div class="vcard2-top"><h3><a href="/venue/wine-corks.html">Wine &amp; Corks</a></h3><span class="vcard2-price">$$</span></div><p class="vcard2-meta">Bars &amp; lounges · Thornton Park</p><p class="vcard2-sub">Locally owned bottle shop on East Church Street with a real sushi kitchen inside, an odd pairing that actually works.</p></div></article></div>
         <div class="handoff reveal">
           <a class="btn-big" href="/?district=thornton-park">All 11 Thornton Park places &rarr;</a>
           <a class="next-district" href="/thornton-park-finder.html">Thornton Park finder page: every place, full cards &rarr;</a>

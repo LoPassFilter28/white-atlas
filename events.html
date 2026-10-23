@@ -277,9 +277,28 @@ html[data-theme="light"] .hero.has-photo{--ink:#f4efe1;--headline:#f6edd6;--mute
 .hero-plate figcaption .hero-credit{display:block;color:#5c6a58;font-size:.72rem;margin-top:2px}
 .hero-plate figcaption a{color:#7c520c}
 .has-photo .hero-in{padding-bottom:18px}
-</style></head>
+</style><style data-cardsys>
+/* cardsys: section cards (2026-10-23 overhaul) */
+.card{border-radius:14px}
+.sec-photo{display:block;width:100%;aspect-ratio:16/7;object-fit:cover;border-radius:10px;margin:0 0 12px}
+</style><style data-cardsys>
+/* cardsys: scene banner (2026-10-23 overhaul) */
+header.hero{position:relative;overflow:hidden;display:flex;flex-direction:column;justify-content:flex-end;min-height:min(84vh,780px)}
+header.hero .scene-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
+header.hero::after{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(7,15,11,.42) 0%,rgba(7,15,11,.05) 34%,rgba(7,15,11,.34) 64%,rgba(7,15,11,.82) 100%)}
+header.hero .hero-in{position:relative;z-index:2;padding-bottom:70px;color:#f0e8d5}
+header.hero .hero-in h1{color:#f6edd6;text-shadow:0 2px 22px rgba(0,0,0,.45)}
+header.hero .hero-in .sub,header.hero .hero-in .count,header.hero .hero-in .lede,header.hero .hero-in p{color:rgba(240,232,213,.88)}
+header.hero .hero-in .crumbs,header.hero .hero-in .crumbs a,header.hero .hero-brand{color:#d4b573}
+header.hero .scroll-cue{position:relative;z-index:2;color:rgba(240,232,213,.75)}
+header.hero .scene-cap{position:absolute;right:16px;bottom:12px;z-index:3;max-width:min(540px,74%);margin:0;font-size:.72rem;line-height:1.45;color:rgba(240,232,213,.87);text-align:right;text-shadow:0 1px 8px rgba(0,0,0,.6)}
+header.hero .scene-cap .hero-credit{display:block;color:rgba(240,232,213,.62)}
+header.hero .scene-cap a{color:#d4b573}
+@media (max-width:640px){header.hero{min-height:68vh}header.hero .scene-cap{max-width:88%}}
+
+header.hero{min-height:52vh}</style></head>
   <body>
-    <header class="hero has-photo">
+    <header class="hero has-photo"><img class="scene-img" src="assets/hero-events.webp" alt="A performance at the Walt Disney Amphitheater at Lake Eola Park" width="1600" height="1067" fetchpriority="high" decoding="async" />
       
       <div class="hero-in">
         <p class="crumbs"><a href="/">407 FYI</a> · Events Calendar</p>
@@ -295,7 +314,7 @@ html[data-theme="light"] .hero.has-photo{--ink:#f4efe1;--headline:#f6edd6;--mute
         </nav>
       </div>
           <p class="hero-cap">The Walt Disney Amphitheater at Lake Eola Park. <span class="hero-credit">Photo: <a href="https://commons.wikimedia.org/wiki/File:Walt_Disney_Amphitheater_at_Lake_Eola_Park,_March_2025_-_2.jpg" target="_blank" rel="noopener">&ldquo;Walt Disney Amphitheater at Lake Eola Park, March 2025 - 2&rdquo;</a> by Nielsoncaetanosalmeron, <a href="https://creativecommons.org/licenses/by/4.0" target="_blank" rel="noopener">CC BY 4.0</a>, via Wikimedia Commons.</span></p>
-    <div class="hero-plate"><figure><img src="assets/hero-events.webp" alt="A performance at the Walt Disney Amphitheater at Lake Eola Park" width="1600" height="1067" fetchpriority="high" decoding="async" /><figcaption></figcaption></figure></div></header>
+    </header>
 
     <main>
       <section class="sec cal-sec" id="calendar">
@@ -319,16 +338,16 @@ html[data-theme="light"] .hero.has-photo{--ink:#f4efe1;--headline:#f6edd6;--mute
           <summary class="month-summary"><p class="kicker">The Standing Rhythm</p><h2>Every week</h2></summary>
           <p class="lede">The recurring gatherings the rest of the calendar bends around, from Monday evening in Audubon Park to the Sunday market at Lake Eola.</p>
         <div class="cards">
-          <article class="card">
+          <article class="card"><img class="sec-photo" src="/assets/venue-audubon-park-community-market.webp" alt="" loading="lazy">
             <h3><a href="/venue/audubon-park-community-market.html">Audubon Park Community Market</a></h3>
             <p class="addr">Mondays · 5:00 PM</p>
             <p class="where">Stardust Video and Coffee · Audubon Park</p>
             <p>Weekly Monday evening market in the Stardust Video and Coffee lot with local growers, prepared food and artisan vendors, rain or shine.</p>
           </article>
-          <article class="card">
+          <article class="card"><img class="sec-photo" src="/assets/venue-tasty-takeover.webp" alt="" loading="lazy">
             <h3><a href="/venue/tasty-takeover.html">Tasty Takeover</a></h3>
             <p class="addr">Tuesdays · 6:30 PM</p>
-            <p class="where">Tasty Takeover lot, 2424 E Robinson Street · Milk District</p>
+            <p class="where"><a href="/venue/tasty-takeover.html">Tasty Takeover</a> lot, 2424 E Robinson Street · Milk District</p>
             <p>Weekly food truck gathering in the Milk District, the original Tasty Takeover Orlando event, with a rotating lineup of local trucks.</p>
           </article>
           <article class="card">
@@ -347,7 +366,7 @@ html[data-theme="light"] .hero.has-photo{--ink:#f4efe1;--headline:#f6edd6;--mute
             <h3>Orlando Farmers Market</h3>
             <p class="addr">Sundays · 10:00 AM</p>
             <p class="where"><a href="/venue/lake-eola.html">Lake Eola Park</a> · Downtown Orlando</p>
-            <p>Weekly Sunday market at Lake Eola Park run by Orlando Farmers Market, with produce, food, plants and local vendors along Central Boulevard and Eola Drive.</p>
+            <p>Weekly Sunday market at Lake Eola Park run by <a href="/venue/orlando-farmers-market.html">Orlando Farmers Market</a>, with produce, food, plants and local vendors along Central Boulevard and Eola Drive.</p>
           </article>
           <article class="card">
             <h3>Maitland Farmers Market</h3>

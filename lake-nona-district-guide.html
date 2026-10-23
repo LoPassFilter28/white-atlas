@@ -323,10 +323,52 @@
 .hero-plate figcaption .hero-credit{display:block;color:#5c6a58;font-size:.72rem;margin-top:2px}
 .hero-plate figcaption a{color:#7c520c}
 .has-photo .hero-in{padding-bottom:18px}
+</style><style data-cardsys>
+/* cardsys: unified venue card (2026-10-23 overhaul) */
+.card-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(400px,1fr));gap:14px;margin:18px 0 8px}
+@media (max-width:560px){.card-grid{grid-template-columns:1fr}}
+.card-grid.wide{width:min(1160px,calc(100vw - 40px));position:relative;left:50%;transform:translateX(-50%)}
+@media (max-width:760px){.card-grid.wide{width:100%;left:0;transform:none}}
+.vcard2{position:relative;display:flex;gap:0;background:var(--surface,#122419);border:1px solid var(--line,#2f4a38);border-radius:14px;overflow:hidden;transition:border-color .18s ease,transform .18s ease}
+.vcard2:hover{border-color:var(--accent-ink,#d4b573);transform:translateY(-2px)}
+.vcard2-photo{flex:0 0 148px;position:relative;display:block;overflow:hidden;background:linear-gradient(150deg,#1e3c41,#0c232b 60%,#06181d)}
+.vcard2-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.vcard2-plate{position:absolute;inset:0;display:flex;align-items:flex-end;padding:10px;font-family:Urbanist,system-ui,sans-serif;font-weight:800;font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(240,232,213,.75)}
+.vcard2-body{flex:1;min-width:0;padding:13px 15px 12px}
+.vcard2-top{display:flex;align-items:baseline;justify-content:space-between;gap:10px}
+.vcard2-top h3{margin:0;font-family:Urbanist,system-ui,sans-serif;font-size:1.06rem;line-height:1.2;color:var(--headline,#f6edd6)}
+.vcard2-top h3 a{color:inherit;text-decoration:none}
+.vcard2-top h3 a::after{content:"";position:absolute;inset:0}
+.vcard2-price{font-weight:800;color:var(--accent-ink,#d4b573);font-size:.85rem;white-space:nowrap}
+.vcard2-meta{margin:3px 0 0;font-size:.78rem;color:var(--muted,#c6bba2);letter-spacing:.02em}
+.vcard2-sub{margin:7px 0 0;font-size:.9rem;line-height:1.45;color:var(--ink,#f0e8d5)}
+.vcard2-chips{margin:9px 0 0;display:flex;flex-wrap:wrap;gap:6px}
+.vcard2-chips .chip{font-size:.66rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;padding:3px 8px;border-radius:999px;background:var(--badge,#223c2b);color:var(--muted,#c6bba2)}
+.vcard2-chips .chip.pick{background:var(--accent,#765b2f);color:#fff}
+@media (max-width:560px){.vcard2-photo{flex-basis:104px}}
+
+/* cardsys glide fixes */
+.glide-photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.34;pointer-events:none}
+.glide-cap{position:absolute;left:14px;bottom:10px;z-index:3;font-size:.66rem;color:rgba(240,232,213,.72);letter-spacing:.03em;margin:0}
+.glide-hook{font-family:Urbanist,system-ui,sans-serif;font-weight:700;font-size:1.12rem;line-height:1.3;color:var(--accent-ink,#d4b573);margin:.1em 0 .45em}
+</style><style data-cardsys>
+/* cardsys: scene banner (2026-10-23 overhaul) */
+header.hero{position:relative;overflow:hidden;display:flex;flex-direction:column;justify-content:flex-end;min-height:min(84vh,780px)}
+header.hero .scene-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
+header.hero::after{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(7,15,11,.42) 0%,rgba(7,15,11,.05) 34%,rgba(7,15,11,.34) 64%,rgba(7,15,11,.82) 100%)}
+header.hero .hero-in{position:relative;z-index:2;padding-bottom:70px;color:#f0e8d5}
+header.hero .hero-in h1{color:#f6edd6;text-shadow:0 2px 22px rgba(0,0,0,.45)}
+header.hero .hero-in .sub,header.hero .hero-in .count,header.hero .hero-in .lede,header.hero .hero-in p{color:rgba(240,232,213,.88)}
+header.hero .hero-in .crumbs,header.hero .hero-in .crumbs a,header.hero .hero-brand{color:#d4b573}
+header.hero .scroll-cue{position:relative;z-index:2;color:rgba(240,232,213,.75)}
+header.hero .scene-cap{position:absolute;right:16px;bottom:12px;z-index:3;max-width:min(540px,74%);margin:0;font-size:.72rem;line-height:1.45;color:rgba(240,232,213,.87);text-align:right;text-shadow:0 1px 8px rgba(0,0,0,.6)}
+header.hero .scene-cap .hero-credit{display:block;color:rgba(240,232,213,.62)}
+header.hero .scene-cap a{color:#d4b573}
+@media (max-width:640px){header.hero{min-height:68vh}header.hero .scene-cap{max-width:88%}}
 </style></head>
   <body>
     <!-- 1 · TITLE SCREEN, type poster on a clean district field -->
-    <header class="hero has-photo" style="background:radial-gradient(ellipse 90% 55% at 50% 108%, rgba(160,126,66,0.28), transparent 60%), linear-gradient(168deg, #102a25, #091f1d 52%, #051110)">
+    <header class="hero has-photo" style="background:radial-gradient(ellipse 90% 55% at 50% 108%, rgba(160,126,66,0.28), transparent 60%), linear-gradient(168deg, #102a25, #091f1d 52%, #051110)"><img class="scene-img" src="assets/hero-lake-nona.jpg" alt="Lake Nona Town Center: the mirrored Disco Dog sculpture, palms and a quiet modern street" style="object-position:26% 42%;" fetchpriority="high" decoding="async" />
       
       <div class="hero-in">
         <a class="hero-brand" href="/">407 FYI · A DISTRICT STORY</a>
@@ -335,7 +377,7 @@
         <p class="count">23 places · One neighbourhood</p>
       </div>
       <div class="scroll-cue" aria-hidden="true">Scroll</div>
-    <div class="hero-plate"><figure><img src="assets/hero-lake-nona.jpg" alt="Lake Nona Town Center: the mirrored Disco Dog sculpture, palms and a quiet modern street" style="object-position:26% 42%;" fetchpriority="high" decoding="async" /><figcaption></figcaption></figure></div></header>
+    </header>
 
     <main>
       <!-- 2 · QUIET INTRO -->
@@ -347,12 +389,12 @@
       <section class="glide" id="glide-nona-adventure-park" aria-label="Nona Adventure Park">
         <div class="glide-stage" aria-hidden="true">
           <div class="glide-bg" style="background:radial-gradient(ellipse 80% 60% at 18% 110%, rgba(160,126,66,0.35), transparent 62%), linear-gradient(155deg, #1a372e, #091f1d 58%, #04100e)"></div><div class="glide-bg b" style="background:radial-gradient(ellipse 80% 60% at 82% -10%, rgba(160,126,66,0.3), transparent 60%), linear-gradient(205deg, #1e3e34, #091f1d 60%, #040e0d)"></div>
-          <p class="ghost">01</p>
+          <img class="glide-photo" src="/assets/venue-nona-adventure-park.webp" alt="" loading="lazy"><p class="ghost">01</p>
         </div>
         <div class="glide-cardwrap">
           <article class="glide-card reveal">
             <p class="kicker">01 · Attraction</p>
-            <h2>Play Hooky On The Lake</h2>
+            <h2>Nona Adventure Park</h2><p class="glide-hook">Play Hooky On The Lake</p>
             <p>Nona Adventure Park turns a lake into a full-contact playground: an inflatable aqua park to bounce, climb and wipe out across, a cable park for wakeboarders, a sixty-foot tower with rock walls. Few places wear you out this happily.</p>
             <p class="venue-meta">Nona Adventure Park · Attraction · $$</p>
             <a class="venue-btn" href="/venue/nona-adventure-park.html">See the venue &rarr;</a>
@@ -362,12 +404,12 @@
       <section class="glide flip" id="glide-bacan" aria-label="Bacán">
         <div class="glide-stage" aria-hidden="true">
           <div class="glide-bg" style="background:radial-gradient(ellipse 75% 55% at 85% 108%, rgba(160,126,66,0.26), transparent 60%), linear-gradient(200deg, #071917, #061312 60%, #030b0a)"></div><div class="glide-bg b" style="background:radial-gradient(ellipse 75% 55% at 12% -8%, rgba(184,158,113,0.22), transparent 58%), linear-gradient(160deg, #153029, #061413 62%, #030b0a)"></div>
-          <p class="ghost">02</p>
+          <img class="glide-photo" src="/assets/venue-bacan.webp" alt="" loading="lazy"><p class="ghost">02</p>
         </div>
         <div class="glide-cardwrap">
           <article class="glide-card reveal">
             <p class="kicker">02 · Latin</p>
-            <h2>Dinner As Edible Theater</h2>
+            <h2>Bacán</h2><p class="glide-hook">Dinner As Edible Theater</p>
             <p>Say Bacán and Lake Nona sits up straighter: an immersive room around an open theater kitchen, the Americas' bold flavors turned into edible theater. Order the whole Florida snapper, save room for banana tart, watch the chocolate sphere melt open.</p>
             <p class="venue-meta">Bacán · Latin · $$$$</p>
             <a class="venue-btn" href="/venue/bacan.html">See the venue &rarr;</a>
@@ -413,7 +455,7 @@
         <div class="glide-cardwrap">
           <article class="glide-card reveal">
             <p class="kicker">03 · The Finale</p>
-            <h2>Brunch, Laps, Then Graze</h2>
+            <h2>Boxi Park Lake Nona</h2><p class="glide-hook">Brunch, Laps, Then Graze</p>
             <p>Start slow: brunch at Canvas on the water, afternoon on the aqua park and tower, recovery in the Sculpture Garden. Evening: graze Boxi Park or go full theater at Bacán, then watch Town Center's Beacon light up.</p>
             <p class="venue-meta">Boxi Park Lake Nona · Park · $$</p>
             <a class="venue-btn" href="/venue/boxi-park.html">See the venue &rarr;</a>
@@ -430,31 +472,7 @@
           <h2>That&rsquo;s the story. Here&rsquo;s the whole neighborhood.</h2>
           <p class="lede">All 23 Lake Nona places from the guide, A-Z. Tap any name to open its card: directions, details and booking live there, not in the story.</p>
         </div>
-        <ul class="ix">
-          <li><a href="/venue/babbi-babbi-lake-nona.html"><span class="ix-name">BaBbi BaBbi Korean Kitchen</span><span class="ix-meta">Restaurants · $$</span></a></li>
-          <li><a href="/venue/bacan.html"><span class="ix-name">Bacán</span><span class="ix-meta">Latin &amp; Caribbean · $$$$</span></a></li>
-          <li><a href="/venue/bento-asian-kitchen-lake-nona.html"><span class="ix-name">BENTO Asian Kitchen + Sushi</span><span class="ix-meta">Japanese &amp; sushi · $$</span></a></li>
-          <li><a href="/venue/bosphorous-lake-nona.html"><span class="ix-name">Bosphorous Turkish Cuisine</span><span class="ix-meta">Mediterranean · $$</span></a></li>
-          <li><a href="/venue/boxi-park.html"><span class="ix-name">Boxi Park Lake Nona</span><span class="ix-meta">Parks &amp; outdoors · $$</span></a></li>
-          <li><a href="/venue/brooklyn-water-bagel.html"><span class="ix-name">Brooklyn Water Bagel</span><span class="ix-meta">Bakeries · $$</span></a></li>
-          <li><a href="/venue/canonita.html"><span class="ix-name">Cañonita</span><span class="ix-meta">Mexican · $$$</span></a></li>
-          <li><a href="/venue/canvas-restaurant-market.html"><span class="ix-name">Canvas Restaurant &amp; Market</span><span class="ix-meta">American · $$$</span></a></li>
-          <li><a href="/venue/chroma-lake-nona.html"><span class="ix-name">Chroma Modern Bar + Kitchen</span><span class="ix-meta">Restaurants · $$</span></a></li>
-          <li><a href="/venue/don-julio-lake-nona.html"><span class="ix-name">Don Julio Mexican Kitchen &amp; Tequila Bar</span><span class="ix-meta">Mexican · $$</span></a></li>
-          <li><a href="/venue/haven-kitchen.html"><span class="ix-name">Garni Café</span><span class="ix-meta">Restaurants · $$$</span></a></li>
-          <li><a href="/venue/hot-taco-street-taqueria.html"><span class="ix-name">Hot Taco Street Taqueria</span><span class="ix-meta">Mexican · $</span></a></li>
-          <li><a href="/venue/lake-nona-deli-and-market.html"><span class="ix-name">Lake Nona Deli and Market</span><span class="ix-meta">Burgers &amp; sandwiches · $</span></a></li>
-          <li><a href="/venue/maki-hibachi-lake-nona.html"><span class="ix-name">Maki Hibachi</span><span class="ix-meta">Japanese &amp; sushi · $$</span></a></li>
-          <li><a href="/venue/nami.html"><span class="ix-name">Nami</span><span class="ix-meta">Japanese &amp; sushi · $$$$</span></a></li>
-          <li><a href="/venue/nona-adventure-park.html"><span class="ix-name">Nona Adventure Park</span><span class="ix-meta">Attractions · $$</span></a></li>
-          <li><a href="/venue/nona-blue-modern-tavern.html"><span class="ix-name">Nona Blue Modern Tavern</span><span class="ix-meta">American · $$</span></a></li>
-          <li><a href="/venue/park-pizza-brewing.html"><span class="ix-name">Park Pizza &amp; Brewing Company</span><span class="ix-meta">Pizza · $$</span></a></li>
-          <li><a href="/venue/pho-haven-lake-nona.html"><span class="ix-name">Pho Haven</span><span class="ix-meta">Noodles &amp; Southeast Asian · $</span></a></li>
-          <li><a href="/venue/pisco-express-lake-nona.html"><span class="ix-name">Pisco Express</span><span class="ix-meta">Latin &amp; Caribbean · $</span></a></li>
-          <li><a href="/venue/sus-hi-eatstation.html"><span class="ix-name">Sus Hi Eatstation</span><span class="ix-meta">Japanese &amp; sushi · $$</span></a></li>
-          <li><a href="/venue/living-room-bar.html"><span class="ix-name">The Living Room Bar</span><span class="ix-meta">Bars &amp; lounges · $$</span></a></li>
-          <li><a href="/venue/tomasinos-pizza-lake-nona.html"><span class="ix-name">Tomasino&#x27;s Pizza</span><span class="ix-meta">Pizza · $</span></a></li>
-        </ul>
+        <div class="card-grid wide"><article class="vcard2"><a class="vcard2-photo" href="/venue/babbi-babbi-lake-nona.html" tabindex="-1" aria-hidden="true"><span class="vcard2-plate">Lake Nona</span></a><div class="vcard2-body"><div class="vcard2-top"><h3><a href="/venue/babbi-babbi-lake-nona.html">BaBbi BaBbi Korean Kitchen</a></h3><span class="vcard2-price">$$</span></div><p class="vcard2-meta">Restaurants · Lake Nona</p><p class="vcard2-sub">Bright and fast casual at the Shoppes at East Park Village, where K-pop energy meets sizzling stone pots.</p><p class="vcard2-chips"><span class="chip">Local eats</span></p></div></article><article class="vcard2"><a class="vcard2-photo" href="/venue/bacan.html" tabindex="-1" aria-hidden="true"><img src="/assets/venue-bacan.webp" alt="" loading="lazy"></a><div class="vcard2-body"><div class="vcard2-top"><h3><a href="/venue/bacan.html">Bacán</a></h3><span class="vcard2-price">$$$$</span></div><p class="vcard2-meta">Latin &amp; Caribbean · Lake Nona</p><p class="vcard2-sub">Inside Lake Nona&#x27;s Wave Hotel, the open kitchen cooks across the Americas for a special-night-out crowd.</p></div></article><article class="vcard2"><a class="vcard2-photo" href="/venue/bento-asian-kitchen-lake-nona.html" tabindex="-1" aria-hidden="true"><img src="/assets/venue-bento-asian-kitchen-lake-nona.webp" alt="" loading="lazy"></a><div class="vcard2-body"><div class="vcard2-top"><h3><a href="/venue/bento-asian-kitchen-lake-nona.html">BENTO Asian Kitchen + Sushi</a></h3><span class="vcard2-price">$$</span></div><p class="vcard2-meta">Restaurants · Lake Nona</p><p class="vcard2-sub">Lake Nona&#x27;s fast-casual pan-Asian workhorse: counter ordering, food out fast, and a menu wide enough for split cravings.</p></div></article><article class="vcard2"><a class="vcard2-photo" href="/venue/bosphorous-lake-nona.html" tabindex="-1" aria-hidden="true"><img src="/assets/venue-bosphorous-lake-nona.webp" alt="" loading="lazy"></a><div class="vcard2-body"><div class="vcard2-top"><h3><a href="/venue/bosphorous-lake-nona.html">Bosphorous Turkish Cuisine</a></h3><span class="vcard2-price">$$</span></div><p class="vcard2-meta">Mediterranean · Lake Nona</p><p class="vcard2-sub">Warm and laid-back in Lake Nona Town Center, with lavas bread landing puffed from the oven to tear and share.</p></div></article><article class="vcard2"><a class="vcard2-photo" href="/venue/boxi-park.html" tabindex="-1" aria-hidden="true"><span class="vcard2-plate">Lake Nona</span></a><div class="vcard2-body"><div class="vcard2-top"><h3><a href="/venue/boxi-park.html">Boxi Park Lake Nona</a></h3><span class="vcard2-price">$$</span></div><p class="vcard2-meta">Restaurants · Lake Nona</p><p class="vcard2-sub">Shipping containers stacked into an open-air food park in Lake Nona, with a stage, a dog park, and stalls to wander.</p><p class="vcard2-chips"><span class="chip pick">Local Pick</span></p></div></article><article class="vcard2"><a class="vcard2-photo" href="/venue/brooklyn-water-bagel.html" tabindex="-1" aria-hidden="true"><span class="vcard2-plate">Lake Nona</span></a><div class="vcard2-body"><div class="vcard2-top"><h3><a href="/venue/brooklyn-water-bagel.html">Brooklyn Water Bagel</a></h3><span class="vcard2-price">$$</span></div><p class="vcard2-meta">Bakeries · Lake Nona</p><p class="vcard2-sub">On Narcoossee Road in Lake Nona, bagels are boiled and baked New York style, with the water treated to mimic back home.</p></div></article><article class="vcard2"><a class="vcard2-photo" href="/venue/canonita.html" tabindex="-1" aria-hidden="true"><img src="/assets/venue-canonita.webp" alt="" loading="lazy"></a><div class="vcard2-body"><div class="vcard2-top"><h3><a href="/venue/canonita.html">Cañonita</a></h3><span class="vcard2-price">$$$</span></div><p class="vcard2-meta">Mexican · Lake Nona</p><p class="vcard2-sub">At Boxi Park in Lake Nona, this walk-up counter serves Mexico City style street food under the string lights.</p></div></article><article class="vcard2"><a class="vcard2-photo" href="/venue/canvas-restaurant-market.html" tabindex="-1" aria-hidden="true"><img src="/assets/venue-canvas-restaurant-market.webp" alt="" loading="lazy"></a><div class="vcard2-body"><div class="vcard2-top"><h3><a href="/venue/canvas-restaurant-market.html">Canvas Restaurant &amp; Market</a></h3><span class="vcard2-price">$$$</span></div><p class="vcard2-meta">American · Lake Nona</p><p class="vcard2-sub">Laureate Park&#x27;s lakeside table in Lake Nona is relaxed and upscale, with water views and a breezy patio.</p></div></article><article class="vcard2"><a class="vcard2-photo" href="/venue/chroma-lake-nona.html" tabindex="-1" aria-hidden="true"><img src="/assets/venue-chroma-lake-nona.webp" alt="" loading="lazy"></a><div class="vcard2-body"><div class="vcard2-top"><h3><a href="/venue/chroma-lake-nona.html">Chroma Modern Bar + Kitchen</a></h3><span class="vcard2-price">$$</span></div><p class="vcard2-meta">Restaurants · Lake Nona</p><p class="vcard2-sub">Saturated color and a lively buzz fill this Lake Nona Town Center small-plates room, built for passing dishes around.</p></div></article><article class="vcard2"><a class="vcard2-photo" href="/venue/don-julio-lake-nona.html" tabindex="-1" aria-hidden="true"><span class="vcard2-plate">Lake Nona</span></a><div class="vcard2-body"><div class="vcard2-top"><h3><a href="/venue/don-julio-lake-nona.html">Don Julio Mexican Kitchen &amp; Tequila Bar</a></h3><span class="vcard2-price">$$</span></div><p class="vcard2-meta">Mexican · Lake Nona</p><p class="vcard2-sub">Festive and airy in Eagle Creek, this Mexican kitchen and tequila bar leads with the birria tacos.</p></div></article><article class="vcard2"><a class="vcard2-photo" href="/venue/haven-kitchen.html" tabindex="-1" aria-hidden="true"><img src="/assets/venue-haven-kitchen.webp" alt="" loading="lazy"></a><div class="vcard2-body"><div class="vcard2-top"><h3><a href="/venue/haven-kitchen.html">Garni Café</a></h3><span class="vcard2-price">$$$</span></div><p class="vcard2-meta">Restaurants · Lake Nona</p><p class="vcard2-sub">Up on the Wave Hotel&#x27;s second floor, a casual French bistro in a botanical room full of greenery and rattan.</p><p class="vcard2-chips"><span class="chip">Date night</span></p></div></article><article class="vcard2"><a class="vcard2-photo" href="/venue/hot-taco-street-taqueria.html" tabindex="-1" aria-hidden="true"><img src="/assets/venue-hot-taco-street-taqueria.webp" alt="" loading="lazy"></a><div class="vcard2-body"><div class="vcard2-top"><h3><a href="/venue/hot-taco-street-taqueria.html">Hot Taco Street Taqueria</a></h3><span class="vcard2-price">$</span></div><p class="vcard2-meta">Mexican · Lake Nona</p><p class="vcard2-sub">Street-style energy in Lake Nona Village: neon pink, agave murals, and patterned tile in a room guests call festive and spotless.</p></div></article><article class="vcard2"><a class="vcard2-photo" href="/venue/lake-nona-deli-and-market.html" tabindex="-1" aria-hidden="true"><span class="vcard2-plate">Lake Nona Village Walk</span></a><div class="vcard2-body"><div class="vcard2-top"><h3><a href="/venue/lake-nona-deli-and-market.html">Lake Nona Deli and Market</a></h3><span class="vcard2-price">$</span></div><p class="vcard2-meta">Burgers &amp; sandwiches · Lake Nona Village Walk</p><p class="vcard2-sub">Village Walk&#x27;s neighborhood counter, part deli, part pizzeria, part market, built on Boar&#x27;s Head meats and Olde Hearth bread.</p><p class="vcard2-chips"><span class="chip">Market</span></p></div></article><article class="vcard2"><a class="vcard2-photo" href="/venue/maki-hibachi-lake-nona.html" tabindex="-1" aria-hidden="true"><span class="vcard2-plate">Lake Nona</span></a><div class="vcard2-body"><div class="vcard2-top"><h3><a href="/venue/maki-hibachi-lake-nona.html">Maki Hibachi</a></h3><span class="vcard2-price">$$</span></div><p class="vcard2-meta">Japanese &amp; sushi · Lake Nona</p><p class="vcard2-sub">Tiny and intimate at Lake Nona Landing, this spot treats sushi like a craft, with fish guests call the freshest around.</p></div></article><article class="vcard2"><a class="vcard2-photo" href="/venue/nami.html" tabindex="-1" aria-hidden="true"><span class="vcard2-plate">Lake Nona</span></a><div class="vcard2-body"><div class="vcard2-top"><h3><a href="/venue/nami.html">Nami</a></h3><span class="vcard2-price">$$$$</span></div><p class="vcard2-meta">Japanese &amp; sushi · Lake Nona</p><p class="vcard2-sub">Inside Lake Nona&#x27;s Wave Hotel, this serene, low-lit Japanese room is a safe haven for its regulars.</p></div></article><article class="vcard2"><a class="vcard2-photo" href="/venue/nona-adventure-park.html" tabindex="-1" aria-hidden="true"><img src="/assets/venue-nona-adventure-park.webp" alt="" loading="lazy"></a><div class="vcard2-body"><div class="vcard2-top"><h3><a href="/venue/nona-adventure-park.html">Nona Adventure Park</a></h3><span class="vcard2-price">$$</span></div><p class="vcard2-meta">Attractions · Lake Nona</p><p class="vcard2-sub">Lake Nona lake turned playground: inflatable aqua park, cable wakeboarding for every level, and a 60-foot climbing tower.</p></div></article><article class="vcard2"><a class="vcard2-photo" href="/venue/nona-blue-modern-tavern.html" tabindex="-1" aria-hidden="true"><span class="vcard2-plate">Lake Nona</span></a><div class="vcard2-body"><div class="vcard2-top"><h3><a href="/venue/nona-blue-modern-tavern.html">Nona Blue Modern Tavern</a></h3><span class="vcard2-price">$$</span></div><p class="vcard2-meta">American · Lake Nona</p><p class="vcard2-sub">Lake Nona&#x27;s dressed-up tavern feels upscale but comfortable, with a big center bar and a kitchen cooking from scratch.</p></div></article><article class="vcard2"><a class="vcard2-photo" href="/venue/park-pizza-brewing.html" tabindex="-1" aria-hidden="true"><img src="/assets/venue-park-pizza-brewing.webp" alt="" loading="lazy"></a><div class="vcard2-body"><div class="vcard2-top"><h3><a href="/venue/park-pizza-brewing.html">Park Pizza &amp; Brewing Company</a></h3><span class="vcard2-price">$$</span></div><p class="vcard2-meta">Pizza · Lake Nona</p><p class="vcard2-sub">In Lake Nona Town Center, the oak-fired pies and the beer in your glass were both made just a few steps away.</p><p class="vcard2-chips"><span class="chip">Local eats</span></p></div></article><article class="vcard2"><a class="vcard2-photo" href="/venue/pho-haven-lake-nona.html" tabindex="-1" aria-hidden="true"><span class="vcard2-plate">Lake Nona</span></a><div class="vcard2-body"><div class="vcard2-top"><h3><a href="/venue/pho-haven-lake-nona.html">Pho Haven</a></h3><span class="vcard2-price">$</span></div><p class="vcard2-meta">Noodles &amp; Southeast Asian · Lake Nona</p><p class="vcard2-sub">Cozy and spotless on Narcoossee Road, where the broth comes clean and comforting, fragrant with star anise.</p><p class="vcard2-chips"><span class="chip">Local eats</span></p></div></article><article class="vcard2"><a class="vcard2-photo" href="/venue/pisco-express-lake-nona.html" tabindex="-1" aria-hidden="true"><span class="vcard2-plate">Lake Nona</span></a><div class="vcard2-body"><div class="vcard2-top"><h3><a href="/venue/pisco-express-lake-nona.html">Pisco Express</a></h3><span class="vcard2-price">$</span></div><p class="vcard2-meta">Latin &amp; Caribbean · Lake Nona</p><p class="vcard2-sub">Peruvian cooking at counter speed inside Eagle Creek Center, and guests keep adding it to the rotation.</p></div></article><article class="vcard2"><a class="vcard2-photo" href="/venue/sus-hi-eatstation.html" tabindex="-1" aria-hidden="true"><span class="vcard2-plate">Lake Nona</span></a><div class="vcard2-body"><div class="vcard2-top"><h3><a href="/venue/sus-hi-eatstation.html">Sus Hi Eatstation</a></h3><span class="vcard2-price">$$</span></div><p class="vcard2-meta">Japanese &amp; sushi · Lake Nona</p><p class="vcard2-sub">Playful, ninja-themed counter in Lake Nona where you build your own sushi bowl, roll, or burrito exactly how you like it.</p></div></article><article class="vcard2"><a class="vcard2-photo" href="/venue/living-room-bar.html" tabindex="-1" aria-hidden="true"><img src="/assets/venue-living-room-bar.webp" alt="" loading="lazy"></a><div class="vcard2-body"><div class="vcard2-top"><h3><a href="/venue/living-room-bar.html">The Living Room Bar</a></h3><span class="vcard2-price">$$</span></div><p class="vcard2-meta">Bars &amp; lounges · Lake Nona</p><p class="vcard2-sub">The Wave Hotel&#x27;s Lake Nona lounge is eclectic and art-filled, arranged around a pink dogwood tree with low chairs.</p><p class="vcard2-chips"><span class="chip">Date night</span></p></div></article><article class="vcard2"><a class="vcard2-photo" href="/venue/tomasinos-pizza-lake-nona.html" tabindex="-1" aria-hidden="true"><img src="/assets/venue-tomasinos-pizza-lake-nona.webp" alt="" loading="lazy"></a><div class="vcard2-body"><div class="vcard2-top"><h3><a href="/venue/tomasinos-pizza-lake-nona.html">Tomasino&#x27;s Pizza</a></h3><span class="vcard2-price">$</span></div><p class="vcard2-meta">Pizza · Lake Nona</p><p class="vcard2-sub">Lake Nona&#x27;s neighborhood slice shop is old school and family packed, with New York style pies guests call the real thing.</p><p class="vcard2-chips"><span class="chip">Local eats</span></p></div></article></div>
         <div class="handoff reveal">
           <a class="btn-big" href="/?district=lake-nona">All 23 Lake Nona places &rarr;</a>
           <a class="next-district" href="/lake-nona-finder.html">Lake Nona finder page: every place, full cards &rarr;</a>

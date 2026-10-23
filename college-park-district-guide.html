@@ -323,10 +323,52 @@
 .hero-plate figcaption .hero-credit{display:block;color:#5c6a58;font-size:.72rem;margin-top:2px}
 .hero-plate figcaption a{color:#7c520c}
 .has-photo .hero-in{padding-bottom:18px}
+</style><style data-cardsys>
+/* cardsys: unified venue card (2026-10-23 overhaul) */
+.card-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(400px,1fr));gap:14px;margin:18px 0 8px}
+@media (max-width:560px){.card-grid{grid-template-columns:1fr}}
+.card-grid.wide{width:min(1160px,calc(100vw - 40px));position:relative;left:50%;transform:translateX(-50%)}
+@media (max-width:760px){.card-grid.wide{width:100%;left:0;transform:none}}
+.vcard2{position:relative;display:flex;gap:0;background:var(--surface,#122419);border:1px solid var(--line,#2f4a38);border-radius:14px;overflow:hidden;transition:border-color .18s ease,transform .18s ease}
+.vcard2:hover{border-color:var(--accent-ink,#d4b573);transform:translateY(-2px)}
+.vcard2-photo{flex:0 0 148px;position:relative;display:block;overflow:hidden;background:linear-gradient(150deg,#1e3c41,#0c232b 60%,#06181d)}
+.vcard2-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.vcard2-plate{position:absolute;inset:0;display:flex;align-items:flex-end;padding:10px;font-family:Urbanist,system-ui,sans-serif;font-weight:800;font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(240,232,213,.75)}
+.vcard2-body{flex:1;min-width:0;padding:13px 15px 12px}
+.vcard2-top{display:flex;align-items:baseline;justify-content:space-between;gap:10px}
+.vcard2-top h3{margin:0;font-family:Urbanist,system-ui,sans-serif;font-size:1.06rem;line-height:1.2;color:var(--headline,#f6edd6)}
+.vcard2-top h3 a{color:inherit;text-decoration:none}
+.vcard2-top h3 a::after{content:"";position:absolute;inset:0}
+.vcard2-price{font-weight:800;color:var(--accent-ink,#d4b573);font-size:.85rem;white-space:nowrap}
+.vcard2-meta{margin:3px 0 0;font-size:.78rem;color:var(--muted,#c6bba2);letter-spacing:.02em}
+.vcard2-sub{margin:7px 0 0;font-size:.9rem;line-height:1.45;color:var(--ink,#f0e8d5)}
+.vcard2-chips{margin:9px 0 0;display:flex;flex-wrap:wrap;gap:6px}
+.vcard2-chips .chip{font-size:.66rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;padding:3px 8px;border-radius:999px;background:var(--badge,#223c2b);color:var(--muted,#c6bba2)}
+.vcard2-chips .chip.pick{background:var(--accent,#765b2f);color:#fff}
+@media (max-width:560px){.vcard2-photo{flex-basis:104px}}
+
+/* cardsys glide fixes */
+.glide-photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.34;pointer-events:none}
+.glide-cap{position:absolute;left:14px;bottom:10px;z-index:3;font-size:.66rem;color:rgba(240,232,213,.72);letter-spacing:.03em;margin:0}
+.glide-hook{font-family:Urbanist,system-ui,sans-serif;font-weight:700;font-size:1.12rem;line-height:1.3;color:var(--accent-ink,#d4b573);margin:.1em 0 .45em}
+</style><style data-cardsys>
+/* cardsys: scene banner (2026-10-23 overhaul) */
+header.hero{position:relative;overflow:hidden;display:flex;flex-direction:column;justify-content:flex-end;min-height:min(84vh,780px)}
+header.hero .scene-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
+header.hero::after{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(7,15,11,.42) 0%,rgba(7,15,11,.05) 34%,rgba(7,15,11,.34) 64%,rgba(7,15,11,.82) 100%)}
+header.hero .hero-in{position:relative;z-index:2;padding-bottom:70px;color:#f0e8d5}
+header.hero .hero-in h1{color:#f6edd6;text-shadow:0 2px 22px rgba(0,0,0,.45)}
+header.hero .hero-in .sub,header.hero .hero-in .count,header.hero .hero-in .lede,header.hero .hero-in p{color:rgba(240,232,213,.88)}
+header.hero .hero-in .crumbs,header.hero .hero-in .crumbs a,header.hero .hero-brand{color:#d4b573}
+header.hero .scroll-cue{position:relative;z-index:2;color:rgba(240,232,213,.75)}
+header.hero .scene-cap{position:absolute;right:16px;bottom:12px;z-index:3;max-width:min(540px,74%);margin:0;font-size:.72rem;line-height:1.45;color:rgba(240,232,213,.87);text-align:right;text-shadow:0 1px 8px rgba(0,0,0,.6)}
+header.hero .scene-cap .hero-credit{display:block;color:rgba(240,232,213,.62)}
+header.hero .scene-cap a{color:#d4b573}
+@media (max-width:640px){header.hero{min-height:68vh}header.hero .scene-cap{max-width:88%}}
 </style></head>
   <body>
     <!-- 1 · TITLE SCREEN, type poster on a clean district field -->
-    <header class="hero has-photo" style="background:radial-gradient(ellipse 90% 55% at 50% 108%, rgba(168,127,64,0.28), transparent 60%), linear-gradient(168deg, #2c1914, #201110 52%, #120909)">
+    <header class="hero has-photo" style="background:radial-gradient(ellipse 90% 55% at 50% 108%, rgba(168,127,64,0.28), transparent 60%), linear-gradient(168deg, #2c1914, #201110 52%, #120909)"><img class="scene-img" src="assets/hero-college-park.webp" alt="A live oak canopy over the path at Dubsdread Golf Course in College Park" width="1920" height="1280" style="object-position:center 40%;" fetchpriority="high" decoding="async" />
       
       
       <div class="hero-in">
@@ -336,7 +378,7 @@
         <p class="count">11 places · One neighbourhood</p>
       </div>
       <div class="scroll-cue" aria-hidden="true">Scroll</div>
-    <div class="hero-plate"><figure><img src="assets/hero-college-park.webp" alt="A live oak canopy over the path at Dubsdread Golf Course in College Park" width="1920" height="1280" style="object-position:center 40%;" fetchpriority="high" decoding="async" /><figcaption></figcaption></figure></div></header>
+    </header>
 
     <main>
       <!-- 2 · QUIET INTRO -->
@@ -348,12 +390,12 @@
       <section class="glide" id="glide-turci-pasta" aria-label="Turci Pasta">
         <div class="glide-stage" aria-hidden="true">
           <div class="glide-bg" style="background:radial-gradient(ellipse 80% 60% at 18% 110%, rgba(168,127,64,0.35), transparent 62%), linear-gradient(155deg, #3c2419, #201110 58%, #100808)"></div><div class="glide-bg b" style="background:radial-gradient(ellipse 80% 60% at 82% -10%, rgba(168,127,64,0.3), transparent 60%), linear-gradient(205deg, #44291c, #201110 60%, #0e0807)"></div>
-          <p class="ghost">01</p>
+          <img class="glide-photo" src="/assets/venue-turci-pasta.webp" alt="" loading="lazy"><p class="ghost">01</p>
         </div>
         <div class="glide-cardwrap">
           <article class="glide-card reveal">
             <p class="kicker">01 · Italian</p>
-            <h2>Hand-Rolled Through The Window</h2>
+            <h2>Turci Pasta</h2><p class="glide-hook">Hand-Rolled Through The Window</p>
             <p>Watching pasta roll through Turci's window is half the magic. This little Italian jewel hand-makes everything daily: purple sweet potato gnocchi, black truffle ravioli, pear ravioli poached in wine, lasagna like a grandmother runs the kitchen. End with cannoli.</p>
             <p class="venue-meta">Turci Pasta · Italian · $$</p>
             <a class="venue-btn" href="/venue/turci-pasta.html">See the venue &rarr;</a>
@@ -368,7 +410,7 @@
         <div class="glide-cardwrap">
           <article class="glide-card reveal">
             <p class="kicker">02 · Pub</p>
-            <h2>Where The Neighborhood Lands</h2>
+            <h2>Ollie&#x27;s Public House</h2><p class="glide-hook">Where The Neighborhood Lands</p>
             <p>Ask College Park where it goes for everything at once: Ollie's. Rotating craft beer, thirty-plus TVs, live music, a big covered patio where dogs get water and cold cuts by name. The Legend sandwich is the regulars' order.</p>
             <p class="venue-meta">Ollie's Public House · Pub · $$</p>
             <a class="venue-btn" href="/venue/ollies-public-house.html">See the venue &rarr;</a>
@@ -409,12 +451,12 @@
       <section class="glide" id="glide-quesa-loco" aria-label="QuesaLoco">
         <div class="glide-stage" aria-hidden="true">
           <div class="glide-bg" style="background:radial-gradient(ellipse 90% 65% at 50% 115%, rgba(194,165,121,0.42), transparent 64%), linear-gradient(168deg, #583622, #845e32 58%, #654c26)"></div><div class="glide-bg b" style="background:radial-gradient(ellipse 90% 65% at 50% -15%, rgba(194,165,121,0.3), transparent 60%), linear-gradient(200deg, #704c2b, #a87f40 62%, #684f28)"></div>
-          <p class="ghost">03</p>
+          <img class="glide-photo" src="/assets/venue-quesa-loco.webp" alt="" loading="lazy"><p class="ghost">03</p>
         </div>
         <div class="glide-cardwrap">
           <article class="glide-card reveal">
             <p class="kicker">03 · The Finale</p>
-            <h2>Pancakes To Patio Nightcap</h2>
+            <h2>QuesaLoco</h2><p class="glide-hook">Pancakes To Patio Nightcap</p>
             <p>Run it College Park style: Shakers cinnamon roll pancakes, Foxtail coffee to make it official, Edgewater Drive end to end, a Soda Fountain sundae. Evening is QuesaLoco birria or Turci pasta, ending on Ollie's patio.</p>
             <p class="venue-meta">QuesaLoco · Restaurant · $$</p>
             <a class="venue-btn" href="/venue/quesa-loco.html">See the venue &rarr;</a>
@@ -440,20 +482,7 @@
           <h2>That&rsquo;s the story. Here&rsquo;s the whole neighborhood.</h2>
           <p class="lede">All 11 College Park places from the guide, A-Z. Tap any name to open its card: directions, details and booking live there, not in the story.</p>
         </div>
-        <ul class="ix">
-          <li><a href="/venue/blue-coast-burrito.html"><span class="ix-name">Blue Coast Burrito</span><span class="ix-meta">Mexican · $</span></a></li>
-          <li><a href="/venue/cups-pups.html"><span class="ix-name">Cups and Pups</span><span class="ix-meta">Coffee &amp; cafes · $</span></a></li>
-          
-          <li><a href="/venue/great-southern-box-co.html"><span class="ix-name">Great Southern Box Co. Food Hall &amp; Bar</span><span class="ix-meta">American · $$</span></a></li>
-          <li><a href="/venue/laspada-s-original-cheesesteaks-and-hoagies.html"><span class="ix-name">LaSpada&#x27;s Original Cheesesteaks and Hoagies</span><span class="ix-meta">Burgers &amp; sandwiches · $$</span></a></li>
-          <li><a href="/venue/ollies-public-house.html"><span class="ix-name">Ollie's Public House</span><span class="ix-meta">Bars &amp; lounges · $$</span></a></li>
-          <li><a href="/venue/quesa-loco.html"><span class="ix-name">QuesaLoco</span><span class="ix-meta">Restaurants · $$</span></a></li>
-          <li><a href="/venue/shakers-american-cafe.html"><span class="ix-name">Shakers American Cafe</span><span class="ix-meta">American · $$</span></a></li>
-          <li><a href="/venue/the-current-seafood-counter.html"><span class="ix-name">The Current Seafood Counter</span><span class="ix-meta">Seafood · $$</span></a></li>
-          <li><a href="/venue/turci-pasta.html"><span class="ix-name">Turci Pasta</span><span class="ix-meta">Italian · $$</span></a></li>
-          <li><a href="/venue/walters-tavern.html"><span class="ix-name">Walter's Tavern</span><span class="ix-meta">Bars &amp; lounges · $$</span></a></li>
-          <li><a href="/venue/zeytin.html"><span class="ix-name">Zeytin Turkish Cuisine</span><span class="ix-meta">Mediterranean · $$</span></a></li>
-        </ul>
+        <div class="card-grid wide"><article class="vcard2"><a class="vcard2-photo" href="/venue/blue-coast-burrito.html" tabindex="-1" aria-hidden="true"><span class="vcard2-plate">Packing District</span></a><div class="vcard2-body"><div class="vcard2-top"><h3><a href="/venue/blue-coast-burrito.html">Blue Coast Burrito</a></h3><span class="vcard2-price">$</span></div><p class="vcard2-meta">Mexican · Packing District</p><p class="vcard2-sub">On North Orange Blossom Trail, fast casual done honestly: fresh, build-your-own burritos and bowls.</p></div></article><article class="vcard2"><a class="vcard2-photo" href="/venue/cups-pups.html" tabindex="-1" aria-hidden="true"><img src="/assets/venue-cups-pups.webp" alt="" loading="lazy"></a><div class="vcard2-body"><div class="vcard2-top"><h3><a href="/venue/cups-pups.html">Cups and Pups</a></h3><span class="vcard2-price">$</span></div><p class="vcard2-meta">Coffee &amp; cafes · College Park</p><p class="vcard2-sub">On Edgewater Drive in College Park, this cute, cheerful coffee stop has become a neighborhood ritual.</p><p class="vcard2-chips"><span class="chip">Local eats</span></p></div></article><article class="vcard2"><a class="vcard2-photo" href="/venue/great-southern-box-co.html" tabindex="-1" aria-hidden="true"><span class="vcard2-plate">Packing District</span></a><div class="vcard2-body"><div class="vcard2-top"><h3><a href="/venue/great-southern-box-co.html">Great Southern Box Co. Food Hall &amp; Bar</a></h3><span class="vcard2-price">$$</span></div><p class="vcard2-meta">Markets &amp; shops · Packing District</p><p class="vcard2-sub">On North Orange Blossom Trail, a historic citrus crate warehouse in the Packing District turned lively, group-friendly hall of counters.</p></div></article><article class="vcard2"><a class="vcard2-photo" href="/venue/laspada-s-original-cheesesteaks-and-hoagies.html" tabindex="-1" aria-hidden="true"><img src="/assets/venue-laspada-s-original-cheesesteaks-and-hoagies.webp" alt="" loading="lazy"></a><div class="vcard2-body"><div class="vcard2-top"><h3><a href="/venue/laspada-s-original-cheesesteaks-and-hoagies.html">LaSpada&#x27;s Original Cheesesteaks and Hoagies</a></h3><span class="vcard2-price">$$</span></div><p class="vcard2-meta">Burgers &amp; sandwiches · College Park</p><p class="vcard2-sub">On Lee Road, Delco standards come to College Park with an old-school, no-frills, family-run counter.</p></div></article><article class="vcard2"><a class="vcard2-photo" href="/venue/ollies-public-house.html" tabindex="-1" aria-hidden="true"><span class="vcard2-plate">College Park</span></a><div class="vcard2-body"><div class="vcard2-top"><h3><a href="/venue/ollies-public-house.html">Ollie&#x27;s Public House</a></h3><span class="vcard2-price">$$</span></div><p class="vcard2-meta">Bars &amp; lounges · College Park</p><p class="vcard2-sub">Easy neighborhood-pub rhythm on Edgewater Drive, with a lively dog-friendly patio and rotating craft taps.</p></div></article><article class="vcard2"><a class="vcard2-photo" href="/venue/quesa-loco.html" tabindex="-1" aria-hidden="true"><img src="/assets/venue-quesa-loco.webp" alt="" loading="lazy"></a><div class="vcard2-body"><div class="vcard2-top"><h3><a href="/venue/quesa-loco.html">QuesaLoco</a></h3><span class="vcard2-price">$$</span></div><p class="vcard2-meta">Mexican · College Park</p><p class="vcard2-sub">Birria country on Fairbanks Ave, in a colorful room with Dia de los Muertos murals and the joyful chaos of its food truck days.</p><p class="vcard2-chips"><span class="chip pick">Local Pick</span></p></div></article><article class="vcard2"><a class="vcard2-photo" href="/venue/shakers-american-cafe.html" tabindex="-1" aria-hidden="true"><img src="/assets/venue-shakers-american-cafe.webp" alt="" loading="lazy"></a><div class="vcard2-body"><div class="vcard2-top"><h3><a href="/venue/shakers-american-cafe.html">Shakers American Cafe</a></h3><span class="vcard2-price">$$</span></div><p class="vcard2-meta">American · College Park</p><p class="vcard2-sub">Cozy College Park cottage lined with donated salt and pepper shakers, where the breakfast crowd treats it like a clubhouse.</p></div></article><article class="vcard2"><a class="vcard2-photo" href="/venue/the-current-seafood-counter.html" tabindex="-1" aria-hidden="true"><span class="vcard2-plate">College Park</span></a><div class="vcard2-body"><div class="vcard2-top"><h3><a href="/venue/the-current-seafood-counter.html">The Current Seafood Counter</a></h3><span class="vcard2-price">$$</span></div><p class="vcard2-meta">Seafood · College Park</p><p class="vcard2-sub">New England fish shack spirit comes to College Park, with counter-service ease and a clean, casual room.</p></div></article><article class="vcard2"><a class="vcard2-photo" href="/venue/turci-pasta.html" tabindex="-1" aria-hidden="true"><img src="/assets/venue-turci-pasta.webp" alt="" loading="lazy"></a><div class="vcard2-body"><div class="vcard2-top"><h3><a href="/venue/turci-pasta.html">Turci Pasta</a></h3><span class="vcard2-price">$$</span></div><p class="vcard2-meta">Italian · College Park</p><p class="vcard2-sub">On Edgewater Drive in College Park, a cozy, romantic hole in the wall where you can watch fresh pasta made in house.</p><p class="vcard2-chips"><span class="chip">Local eats</span></p></div></article><article class="vcard2"><a class="vcard2-photo" href="/venue/walters-tavern.html" tabindex="-1" aria-hidden="true"><img src="/assets/venue-walters-tavern.webp" alt="" loading="lazy"></a><div class="vcard2-body"><div class="vcard2-top"><h3><a href="/venue/walters-tavern.html">Walter&#x27;s Tavern</a></h3><span class="vcard2-price">$$</span></div><p class="vcard2-meta">Bars &amp; lounges · Packing District</p><p class="vcard2-sub">Inside the Great Southern Box Company food hall in the Packing District, a spacious, lively game day room built for lingering.</p><p class="vcard2-chips"><span class="chip">Local eats</span></p></div></article><article class="vcard2"><a class="vcard2-photo" href="/venue/zeytin.html" tabindex="-1" aria-hidden="true"><span class="vcard2-plate">College Park</span></a><div class="vcard2-body"><div class="vcard2-top"><h3><a href="/venue/zeytin.html">Zeytin Turkish Cuisine</a></h3><span class="vcard2-price">$$</span></div><p class="vcard2-meta">Mediterranean · College Park</p><p class="vcard2-sub">A cozy, family-run, lantern-lit Turkish room on Edgewater Drive in College Park.</p><p class="vcard2-chips"><span class="chip">Local eats</span></p></div></article></div>
         <div class="handoff reveal">
           <a class="btn-big" href="/?district=college-park">All 11 College Park places &rarr;</a>
           <a class="next-district" href="/college-park-finder.html">College Park finder page: every place, full cards &rarr;</a>
