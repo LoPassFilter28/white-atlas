@@ -211,7 +211,14 @@
       .vcard .addr { margin: 0; color: var(--muted); font-size: .9rem; }
       @media (max-width: 640px) { .facts { grid-template-columns: 1fr; } }
     </style>
-  </head>
+  <style data-cardsys>
+/* cardsys: similar rail cards (2026-10-23 overhaul) */
+.vcard{display:flex;gap:12px;align-items:flex-start}
+.vcard .vthumb{flex:0 0 86px;width:86px;height:86px;border-radius:10px;object-fit:cover;display:block}
+.vcard .vmain{flex:1;min-width:0}
+.vcard .vsub{margin:4px 0 0;font-size:.86rem;line-height:1.45;color:var(--muted,#c6bba2)}
+@media (min-width:1000px){.vlist{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start}}
+</style></head>
   <body>
     <header class="hero">
       <div class="hero-in">
@@ -239,41 +246,41 @@
         </div>
       </section>
 
-      <section class="sec" id="similar">
+      <section class="sec" id="district-story"><p class="kicker">District Stories</p><h2>Orlando&#x27;s long memory</h2><p class="lede">The guide keeps the long memory of Orlando&#x27;s districts in one place: the names, the plats and the stories behind the streets.</p><p><a class="btn-ghost" href="/history.html">Browse the district stories &rarr;</a></p></section><section class="sec" id="similar">
         <p class="kicker">Similar Feel</p>
         <h2>More places with this feel</h2>
         <p class="lede">Matched by vibe, not by neighborhood: the places across Greater Orlando closest in spirit to Hinode Sushi.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/sushi-pop.html">Sushi Pop</a></h3>
-          <p class="meta">Japanese &amp; sushi &middot; Oviedo &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/sushi-pop.html">Sushi Pop</a></h3>
+          <p class="meta">Japanese &amp; sushi &middot; Oviedo &middot; $$</p><p class="vsub">Bold, loud sushi room with anime pop-culture decor, run like an artist&#x27;s studio.</p>
           <p class="addr">Sushi Pop, 310 W Mitchell Hammock Rd, Oviedo, FL 32765-4921</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/kappo-tsan.html">Kappo Sushi</a></h3>
-          <p class="meta">Japanese &amp; sushi &middot; Disney Area &middot; $$$</p>
+          <div class="vmain"><h3><a href="/venue/kappo-tsan.html">Kappo Sushi</a></h3>
+          <p class="meta">Japanese &amp; sushi &middot; Disney Area &middot; $$$</p><p class="vsub">A serene, chef-led counter in O-Town West where the omakase unfolds course by course, refined and tranquil.</p>
           <p class="addr">11815 Glass House Lane, Orlando, FL 32836</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/sus-hi-eatstation.html">Sus Hi Eatstation</a></h3>
-          <p class="meta">Japanese &amp; sushi &middot; Lake Nona &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/sus-hi-eatstation.html">Sus Hi Eatstation</a></h3>
+          <p class="meta">Japanese &amp; sushi &middot; Lake Nona &middot; $$</p><p class="vsub">Playful, ninja-themed counter in Lake Nona where you build your own sushi bowl, roll, or burrito exactly how you like it.</p>
           <p class="addr">Sus Hi Eatstation, 9680 Narcoossee Rd, Orlando, FL 32827-7311, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/pokeworks.html">PokeWorks (Oviedo)</a></h3>
-          <p class="meta">Restaurants &middot; Oviedo &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/pokeworks.html">PokeWorks (Oviedo)</a></h3>
+          <p class="meta">Restaurants &middot; Oviedo &middot; $</p><p class="vsub">Build-your-own poke in Oviedo, with sushi-grade ahi, salmon, albacore, shrimp and scallops over rice or greens.</p>
           <p class="addr">45 W Mitchell Hammock Rd, Oviedo, FL 32765</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/oodle-ramen.html">Oodle Ramen &amp; More</a></h3>
-          <p class="meta">Japanese &amp; sushi &middot; Orlando &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/oodle-ramen.html">Oodle Ramen &amp; More</a></h3>
+          <p class="meta">Japanese &amp; sushi &middot; Orlando &middot; $$</p><p class="vsub">Playful and anime-touched on Conroy Road, with a warm, sleek room inside.</p>
           <p class="addr">Oodle Ramen &amp; More, 5812 Conroy Rd, Orlando, FL 32835</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/sushi-izuki.html">Sushi Izuki</a></h3>
-          <p class="meta">Japanese &amp; sushi &middot; Disney Area &middot; $$$</p>
+          <div class="vmain"><h3><a href="/venue/sushi-izuki.html">Sushi Izuki</a></h3>
+          <p class="meta">Japanese &amp; sushi &middot; Disney Area &middot; $$$</p><p class="vsub">A small, calm counter on Fenton Street where Chef Leo&#x27;s omakase has regulars calling it their favorite in Orlando.</p>
           <p class="addr">8685 Fenton St #150, Orlando, FL 32836</p>
-        </article>
+        </div></article>
         </div>
       </section>
 
@@ -283,35 +290,35 @@
         <p class="lede">Other places in Oviedo, Local Picks first, then the closest to Hinode Sushi.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/black-hammock-restaurant.html">Black Hammock Restaurant</a> <span class="badge">Local Pick</span></h3>
-          <p class="meta">Restaurants · Restaurant &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/black-hammock-restaurant.html">Black Hammock Restaurant</a> <span class="badge">Local Pick</span></h3>
+          <p class="meta">Restaurants · Restaurant &middot; $$</p><p class="vsub">An Old Florida fish camp on Lake Jesup, where the menu leans into the setting: gator bites, fried gator tail, catfish nuggets, a gator burger.</p>
           <p class="addr">2316 Black Hammock Fish Camp Rd, Oviedo, FL 32765</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/lemongrass-thai-kitchen.html">Lemongrass Thai Kitchen</a></h3>
-          <p class="meta">Noodles &amp; Southeast Asian · Thai &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-lemongrass-thai-kitchen.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/lemongrass-thai-kitchen.html">Lemongrass Thai Kitchen</a></h3>
+          <p class="meta">Noodles &amp; Southeast Asian · Thai &middot; $$</p><p class="vsub">Calm and contemporary inside, this Thai kitchen sits in an unassuming Lockwood Boulevard plaza.</p>
           <p class="addr">Lemongrass Thai Kitchen, 1016 Lockwood Blvd, Oviedo, FL 32765-6027</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/pokeworks.html">PokeWorks (Oviedo)</a></h3>
-          <p class="meta">Restaurants · Poke &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/pokeworks.html">PokeWorks (Oviedo)</a></h3>
+          <p class="meta">Restaurants · Poke &middot; $</p><p class="vsub">Build-your-own poke in Oviedo, with sushi-grade ahi, salmon, albacore, shrimp and scallops over rice or greens.</p>
           <p class="addr">45 W Mitchell Hammock Rd, Oviedo, FL 32765</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/tikka-shack-indian-grub.html">Tikka Shack Indian Grub</a></h3>
-          <p class="meta">Indian &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/tikka-shack-indian-grub.html">Tikka Shack Indian Grub</a></h3>
+          <p class="meta">Indian &middot; $$</p><p class="vsub">Fast-casual Indian kitchen on Alafaya Trail that keeps flavors bold and the mood fun and casual.</p>
           <p class="addr">Tikka Shack Indian Grub, 1500 Alafaya Trl, Oviedo, FL 32765-4517, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/sushi-pop.html">Sushi Pop</a></h3>
-          <p class="meta">Japanese &amp; sushi · Sushi &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/sushi-pop.html">Sushi Pop</a></h3>
+          <p class="meta">Japanese &amp; sushi · Sushi &middot; $$</p><p class="vsub">Bold, loud sushi room with anime pop-culture decor, run like an artist&#x27;s studio.</p>
           <p class="addr">Sushi Pop, 310 W Mitchell Hammock Rd, Oviedo, FL 32765-4921</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/beirut-grill-and-deli.html">Beirut Grill and Deli</a></h3>
-          <p class="meta">Mediterranean · Lebanese &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-beirut-grill-and-deli.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/beirut-grill-and-deli.html">Beirut Grill and Deli</a></h3>
+          <p class="meta">Mediterranean · Lebanese &middot; $$</p><p class="vsub">Family-owned halal Lebanese kitchen on Alafaya Trail, where everything tastes homemade and the room feels like family.</p>
           <p class="addr">Beirut Grill and Deli, 3100 Alafaya Trl, Oviedo, FL 32765-9466, United States</p>
-        </article>
+        </div></article>
         </div>
         <div class="handoff">
           <a class="btn-ghost" href="/oviedo-finder.html">See the full Oviedo list</a>

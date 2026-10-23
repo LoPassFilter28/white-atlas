@@ -211,7 +211,14 @@
       .vcard .addr { margin: 0; color: var(--muted); font-size: .9rem; }
       @media (max-width: 640px) { .facts { grid-template-columns: 1fr; } }
     </style>
-  </head>
+  <style data-cardsys>
+/* cardsys: similar rail cards (2026-10-23 overhaul) */
+.vcard{display:flex;gap:12px;align-items:flex-start}
+.vcard .vthumb{flex:0 0 86px;width:86px;height:86px;border-radius:10px;object-fit:cover;display:block}
+.vcard .vmain{flex:1;min-width:0}
+.vcard .vsub{margin:4px 0 0;font-size:.86rem;line-height:1.45;color:var(--muted,#c6bba2)}
+@media (min-width:1000px){.vlist{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start}}
+</style></head>
   <body>
     <header class="hero">
       <div class="hero-in">
@@ -239,41 +246,41 @@
         </div>
       </section>
 
-      <section class="sec" id="similar">
+      <section class="sec" id="district-story"><p class="kicker">District Stories</p><h2>Orlando&#x27;s long memory</h2><p class="lede">The guide keeps the long memory of Orlando&#x27;s districts in one place: the names, the plats and the stories behind the streets.</p><p><a class="btn-ghost" href="/history.html">Browse the district stories &rarr;</a></p></section><section class="sec" id="similar">
         <p class="kicker">Similar Feel</p>
         <h2>More places with this feel</h2>
         <p class="lede">Matched by vibe, not by neighborhood: the places across Greater Orlando closest in spirit to Goodfella&#x27;s Pizzeria.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/dough-boyz-pizza.html">Dough Boyz Pizza</a></h3>
-          <p class="meta">Pizza &middot; Longwood &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/dough-boyz-pizza.html">Dough Boyz Pizza</a></h3>
+          <p class="meta">Pizza &middot; Longwood &middot; $</p><p class="vsub">Longwood&#x27;s old-school New York slice shop, family owned and confident: their line is it is not the water, it is the recipe.</p>
           <p class="addr">201 W State Rd 434, Longwood, FL 32750</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/pienezza-pizza.html">Pienezza Pizza</a></h3>
-          <p class="meta">Pizza &middot; Kissimmee &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/pienezza-pizza.html">Pienezza Pizza</a></h3>
+          <p class="meta">Pizza &middot; Kissimmee &middot; $$</p><p class="vsub">Family-run and no-frills on John Young Parkway in Kissimmee, where regulars say the Grandma pie brings it home.</p>
           <p class="addr">Pienezza Pizza, 3236 N John Young Pkwy, Kissimmee, FL 34741-7549, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/tomasinos-pizza-lake-nona.html">Tomasino&#x27;s Pizza</a></h3>
-          <p class="meta">Pizza &middot; Lake Nona &middot; $</p>
+          <img class="vthumb" src="/assets/venue-tomasinos-pizza-lake-nona.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/tomasinos-pizza-lake-nona.html">Tomasino&#x27;s Pizza</a></h3>
+          <p class="meta">Pizza &middot; Lake Nona &middot; $</p><p class="vsub">Lake Nona&#x27;s neighborhood slice shop is old school and family packed, with New York style pies guests call the real thing.</p>
           <p class="addr">14009 Narcoossee Rd, Suite 130, Orlando, FL 32832</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/nuris.html">Nuri&#x27;s</a></h3>
-          <p class="meta">Pizza &middot; Orlando &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/nuris.html">Nuri&#x27;s</a></h3>
+          <p class="meta">Pizza &middot; Orlando &middot; $$</p><p class="vsub">Downtown&#x27;s tavern-style pizza joint on East Pine, all cracker-crisp, paper-thin crust party-cut into squares you keep grabbing.</p>
           <p class="addr">Nuri&#x27;s, 63 E Pine St, Orlando, FL 32801-2617, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/sals-pizza-bar.html">Sal&#x27;s Pizza Bar</a></h3>
-          <p class="meta">Pizza &middot; Universal &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/sals-pizza-bar.html">Sal&#x27;s Pizza Bar</a></h3>
+          <p class="meta">Pizza &middot; Universal &middot; $$</p><p class="vsub">Family-owned on Daryl Carter Parkway, turning out Brooklyn-style pies that transplanted New Yorkers say taste just like home.</p>
           <p class="addr">Sal&#x27;s Pizza Bar, 11020 Daryl Carter Pkwy, Orlando, FL 32836, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/marios-pizza.html">Mario&#x27;s Pizza</a></h3>
-          <p class="meta">Pizza &middot; Orlando &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/marios-pizza.html">Mario&#x27;s Pizza</a></h3>
+          <p class="meta">Pizza &middot; Orlando &middot; $$</p><p class="vsub">Family-run on Curry Ford Road, where guests say the pies taste like real pizza from New York.</p>
           <p class="addr">Mario&#x27;s Pizza, 7213 Curry Ford Rd, Orlando, FL 32822-5805, United States</p>
-        </article>
+        </div></article>
         </div>
       </section>
 
@@ -283,35 +290,35 @@
         <p class="lede">Other places in University, closest to Goodfella&#x27;s Pizzeria first.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/junior-colombian-burger.html">Junior Colombian Burger</a></h3>
-          <p class="meta">Burgers &amp; sandwiches · Burgers &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/junior-colombian-burger.html">Junior Colombian Burger</a></h3>
+          <p class="meta">Burgers &amp; sandwiches · Burgers &middot; $</p><p class="vsub">On East Colonial Drive, Colombian street food meets the American burger, and nothing about it is quiet.</p>
           <p class="addr">11875 E Colonial Dr, Orlando, FL</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/viet-nomz.html">Viet-Nomz</a></h3>
-          <p class="meta">Noodles &amp; Southeast Asian · Vietnamese &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-viet-nomz.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/viet-nomz.html">Viet-Nomz</a></h3>
+          <p class="meta">Noodles &amp; Southeast Asian · Vietnamese &middot; $$</p><p class="vsub">Cute, cozy fast-casual Vietnamese spot on East Colonial Drive with a friendly, welcoming feel.</p>
           <p class="addr">11798 E Colonial Dr, Orlando, FL 32817</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/dang-boba-musubi-house.html">Dang Boba &amp; Musubi House</a></h3>
-          <p class="meta">Coffee &amp; cafes · Bubble Tea &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/dang-boba-musubi-house.html">Dang Boba &amp; Musubi House</a></h3>
+          <p class="meta">Coffee &amp; cafes · Bubble Tea &middot; $$</p><p class="vsub">Cheerful, cozy little spot near UCF pairing boba teas with Hawaiian musubi.</p>
           <p class="addr">Dang Boba &amp; Musubi House, 11772 E Colonial Dr, Orlando, FL 32817-4625</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/luminescent.html">Luminescent</a></h3>
-          <p class="meta">Bars &amp; lounges · Cocktail Bar &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/luminescent.html">Luminescent</a></h3>
+          <p class="meta">Bars &amp; lounges · Cocktail Bar &middot; $$</p><p class="vsub">A deep-green bar on East Colonial Drive, part Indian-influenced coffee bar and part craft cocktail lounge, cozy and impeccable.</p>
           <p class="addr">Luminescent, 12286 E Colonial Dr, Orlando, FL 32826-4709</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/jeremiah-s-italian-ice.html">Jeremiah&#x27;s Italian Ice</a></h3>
-          <p class="meta">Sweets · Italian Ice &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/jeremiah-s-italian-ice.html">Jeremiah&#x27;s Italian Ice</a></h3>
+          <p class="meta">Sweets · Italian Ice &middot; $</p><p class="vsub">Bright, Orlando-born walk-up stand in Waterford Lakes where the Gelati layers Italian ice with creamy soft serve.</p>
           <p class="addr">877 N Alafaya Trl, Orlando, FL</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/white-rabbit-dessert-experience.html">White Rabbit Dessert Experience</a></h3>
-          <p class="meta">Sweets · Dessert &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-white-rabbit-dessert-experience.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/white-rabbit-dessert-experience.html">White Rabbit Dessert Experience</a></h3>
+          <p class="meta">Sweets · Dessert &middot; $$</p><p class="vsub">Whimsical, Alice in Wonderland themed dessert room in Waterford Lakes where guests say the theme is pure magic.</p>
           <p class="addr">White Rabbit Dessert Experience, 875 N Alafaya Trl, Orlando, FL 32828-7049</p>
-        </article>
+        </div></article>
         </div>
         <div class="handoff">
           <a class="btn-ghost" href="/ucf-finder.html">See the full University list</a>

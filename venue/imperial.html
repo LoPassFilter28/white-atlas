@@ -211,7 +211,14 @@
       .vcard .addr { margin: 0; color: var(--muted); font-size: .9rem; }
       @media (max-width: 640px) { .facts { grid-template-columns: 1fr; } }
     </style>
-  </head>
+  <style data-cardsys>
+/* cardsys: similar rail cards (2026-10-23 overhaul) */
+.vcard{display:flex;gap:12px;align-items:flex-start}
+.vcard .vthumb{flex:0 0 86px;width:86px;height:86px;border-radius:10px;object-fit:cover;display:block}
+.vcard .vmain{flex:1;min-width:0}
+.vcard .vsub{margin:4px 0 0;font-size:.86rem;line-height:1.45;color:var(--muted,#c6bba2)}
+@media (min-width:1000px){.vlist{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start}}
+</style></head>
   <body>
     <header class="hero">
       <div class="hero-in">
@@ -236,45 +243,45 @@
         <div class="actions">
           <a class="action" href="https://www.google.com/maps/search/?api=1&amp;query=Imperial+Wine+Bar+Imperial%2C+1800+N+Orange+Ave%2C+Orlando%2C+FL+32804-6415%2C+United+States" target="_blank" rel="noopener">Directions &rarr;</a>
           <a class="action" href="/archive.html?venue=imperial">Open in the full finder</a>
-          <a class="action" href="/downtown-orlando-district-guide.html">Read the Downtown Orlando story</a>
+          <a class="action" href="/history/downtown.html">Read the Downtown Orlando story</a>
         </div>
       </section>
 
-      <section class="sec" id="similar">
+      <section class="sec" id="district-story"><p class="kicker">District Story</p><h2>The story of Orlando</h2><p class="lede">A fort, a courthouse plat and a citrus boom built it. A name nobody can prove still runs it.</p><p><a class="btn-ghost" href="/history/downtown.html">Read the Orlando story &rarr;</a></p></section><section class="sec" id="similar">
         <p class="kicker">Similar Feel</p>
         <h2>More places with this feel</h2>
         <p class="lede">Matched by vibe, not by neighborhood: the places across Greater Orlando closest in spirit to Imperial Wine Bar.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/imperial-on-park.html">The Imperial on Park</a></h3>
-          <p class="meta">Bars &amp; lounges &middot; Winter Park &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-imperial-on-park.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/imperial-on-park.html">The Imperial on Park</a></h3>
+          <p class="meta">Bars &amp; lounges &middot; Winter Park &middot; $$</p><p class="vsub">Park Avenue&#x27;s neighborhood bar, warm and laid back, with boutique wines, craft beers and cocktails built on Winter Park Distillery spirits.</p>
           <p class="addr">136 S Park Ave, Winter Park, FL 32789</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/the-caboose-bar.html">The Caboose Bar</a></h3>
-          <p class="meta">Bars &amp; lounges &middot; Ivanhoe Village &middot; $</p>
+          <img class="vthumb" src="/assets/venue-the-caboose-bar.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/the-caboose-bar.html">The Caboose Bar</a></h3>
+          <p class="meta">Bars &amp; lounges &middot; Ivanhoe Village &middot; $</p><p class="vsub">A dive on N Orange Ave in Ivanhoe Village where guests say the bartenders make you feel like a regular.</p>
           <p class="addr">The Caboose Bar, 1827 N Orange Ave, Orlando, FL 32804</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/cfh-orlando.html">CFH Orlando</a></h3>
-          <p class="meta">Markets &amp; shops &middot; Ivanhoe Village &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/cfh-orlando.html">CFH Orlando</a></h3>
+          <p class="meta">Markets &amp; shops &middot; Ivanhoe Village &middot; $$</p><p class="vsub">The central bar inside City Food Hall gives Ivanhoe Village a social, unhurried pause between food runs, with specials guests found tasty.</p>
           <p class="addr">1412 Alden Rd, Orlando, FL 32803</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/santiagos-bodega.html">Santiago&#x27;s Bodega</a></h3>
-          <p class="meta">Mediterranean &middot; Ivanhoe Village &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/santiagos-bodega.html">Santiago&#x27;s Bodega</a></h3>
+          <p class="meta">Mediterranean &middot; Ivanhoe Village &middot; $$</p><p class="vsub">Lively and eclectic on Virginia Drive, a tapas room built for sharing plates out on the patio.</p>
           <p class="addr">Santiago&#x27;s Bodega, 802 Virginia Dr, Orlando, FL 32803</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/hourglass-brewing.html">Hourglass Brewing</a></h3>
-          <p class="meta">Breweries &middot; Orlando &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-hourglass-brewing.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/hourglass-brewing.html">Hourglass Brewing</a></h3>
+          <p class="meta">Breweries &middot; Orlando &middot; $$</p><p class="vsub">Pouring inside a former church on Curry Ford, this Hourglass District taproom keeps a rotating cast of house beers flowing.</p>
           <p class="addr">Hourglass Brewing, 2500 Curry Ford Rd, Orlando, FL 32806-2506, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/grape-the-grain.html">Grape &amp; the Grain</a></h3>
-          <p class="meta">Bars &amp; lounges &middot; 1110 Virginia Dr &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-grape-the-grain.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/grape-the-grain.html">Grape &amp; the Grain</a></h3>
+          <p class="meta">Bars &amp; lounges &middot; 1110 Virginia Dr &middot; $$</p><p class="vsub">Unpretentious Mills 50 wine bar where the real draw is the covered back patio guests call the best in Orlando.</p>
           <p class="addr">Grape &amp; the Grain, 1110 Virginia Dr, Orlando, FL 32803</p>
-        </article>
+        </div></article>
         </div>
       </section>
 
@@ -284,35 +291,35 @@
         <p class="lede">Other places in Downtown Orlando, Local Picks first, then the closest to Imperial Wine Bar.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/fixtion.html">Fixtion Restaurant &amp; Bar</a> <span class="badge">Local Pick</span></h3>
-          <p class="meta">American · American Restaurant &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/fixtion.html">Fixtion Restaurant &amp; Bar</a> <span class="badge">Local Pick</span></h3>
+          <p class="meta">American · American Restaurant &middot; $$</p><p class="vsub">On Orange Avenue, comfort food and huge comfy booths early, club energy after dark, shape-shifting through the day.</p>
           <p class="addr">15 N Orange Ave, Orlando, FL 32801</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/wall-street-plaza.html">Wall Street Plaza</a> <span class="badge">Local Pick</span></h3>
-          <p class="meta">Nightlife &amp; music · Entertainment District &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/wall-street-plaza.html">Wall Street Plaza</a> <span class="badge">Local Pick</span></h3>
+          <p class="meta">Nightlife &amp; music · Entertainment District &middot; $$</p><p class="vsub">One downtown block holds the whole crawl: eight bars and patios that, on a big night, turn into a single street party.</p>
           <p class="addr">25 Wall St, Orlando, FL 32801</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/elixir-kitchen-bar.html">Elixir Kitchen and Bar</a> <span class="badge">Local Pick</span></h3>
-          <p class="meta">Bars &amp; lounges · Bar &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-elixir-kitchen-bar.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/elixir-kitchen-bar.html">Elixir Kitchen and Bar</a> <span class="badge">Local Pick</span></h3>
+          <p class="meta">Bars &amp; lounges · Bar &middot; $$</p><p class="vsub">A rustic-hip gastropub in one of downtown&#x27;s original buildings, and very much the neighborhood&#x27;s spot.</p>
           <p class="addr">9 W Washington St, Orlando, FL 32801</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/sixty-south.html">Sixty South Restaurant and Lounge</a></h3>
-          <p class="meta">American · Restaurant &amp; Lounge &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/sixty-south.html">Sixty South Restaurant and Lounge</a></h3>
+          <p class="meta">American · Restaurant &amp; Lounge &middot; $$</p><p class="vsub">Inside the DoubleTree on Ivanhoe Boulevard, a spacious, polished lounge with lots of room to meet and talk.</p>
           <p class="addr">Sixty South Restaurant and Lounge, 60 S Ivanhoe Blvd, Orlando, FL 32804</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/noir-bar.html">Noir Bar</a></h3>
-          <p class="meta">Bars &amp; lounges · Speakeasy &middot; $$$</p>
+          <img class="vthumb" src="/assets/venue-noir-bar.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/noir-bar.html">Noir Bar</a></h3>
+          <p class="meta">Bars &amp; lounges · Speakeasy &middot; $$$</p><p class="vsub">Tucked behind a hidden door inside Talay Thai on North Orange Avenue, this speakeasy stays dark, moody and blissfully uncrowded.</p>
           <p class="addr">861 N Orange Ave, Orlando, FL 32801 (inside Talay Thai)</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/reyes.html">Reyes Mezcaleria</a></h3>
-          <p class="meta">Mexican &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/reyes.html">Reyes Mezcaleria</a></h3>
+          <p class="meta">Mexican &middot; $$</p><p class="vsub">Michoacán-born chef Wendy Lopez cooks on North Orange Avenue in a room guests describe as beautiful and alive.</p>
           <p class="addr">Reyes Mezcaleria, 821 N Orange Ave, Orlando, FL 32801-1014</p>
-        </article>
+        </div></article>
         </div>
         <div class="handoff">
           <a class="btn-ghost" href="/downtown-orlando-finder.html">See the full Downtown Orlando list</a>

@@ -221,7 +221,14 @@
 .take .take-label{font-size:.72rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--accent-ink);margin:0 0 8px}
 
 </style>
-  </head>
+  <style data-cardsys>
+/* cardsys: similar rail cards (2026-10-23 overhaul) */
+.vcard{display:flex;gap:12px;align-items:flex-start}
+.vcard .vthumb{flex:0 0 86px;width:86px;height:86px;border-radius:10px;object-fit:cover;display:block}
+.vcard .vmain{flex:1;min-width:0}
+.vcard .vsub{margin:4px 0 0;font-size:.86rem;line-height:1.45;color:var(--muted,#c6bba2)}
+@media (min-width:1000px){.vlist{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start}}
+</style></head>
   <body>
     <header class="hero">
       <div class="hero-in">
@@ -246,7 +253,7 @@
         <div class="actions">
           <a class="action" href="https://www.google.com/maps/search/?api=1&amp;query=Jala+Indian+Cuisine+155+E+Morse+Blvd%2C+Winter+Park%2C+FL+32789" target="_blank" rel="noopener">Directions &rarr;</a>
           <a class="action" href="/archive.html?venue=jala-indian-winter-park">Open in the full finder</a>
-          <a class="action" href="/winter-park-district-guide.html">Read the Winter Park story</a>
+          <a class="action" href="/history/winter-park.html">Read the Winter Park story</a>
         </div>
       </section>
 
@@ -274,41 +281,41 @@
         </div>
       </section>
 
-<section class="sec" id="similar">
+<section class="sec" id="district-story"><p class="kicker">District Story</p><h2>The story of Winter Park</h2><p class="lede">A park built for the winter, drawn on paper in 1881, and still legible in every street you walk today.</p><p><a class="btn-ghost" href="/history/winter-park.html">Read the Winter Park story &rarr;</a></p></section><section class="sec" id="similar">
         <p class="kicker">Similar Feel</p>
         <h2>More places with this feel</h2>
         <p class="lede">Matched by vibe, not by neighborhood: the places across Greater Orlando closest in spirit to Jala Indian Cuisine.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/indian-pavilion.html">Indian Pavilion</a></h3>
-          <p class="meta">Indian &middot; Winter Garden &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/indian-pavilion.html">Indian Pavilion</a></h3>
+          <p class="meta">Indian &middot; Winter Garden &middot; $$</p><p class="vsub">Modern Indian cooking in Winter Garden built on bold spice and careful texture, with portions that often leave leftovers.</p>
           <p class="addr">Indian Pavilion, 13770 W Colonial Dr, Winter Garden, FL 34787-4202, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/bombay-street.html">Bombay Street Kitchen</a></h3>
-          <p class="meta">Indian &middot; South OBT &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/bombay-street.html">Bombay Street Kitchen</a></h3>
+          <p class="meta">Indian &middot; South OBT &middot; $$</p><p class="vsub">Street food from Mumbai, Delhi, Chennai and Bangalore is the draw at this bright, buzzy Orange Blossom Trail room with a Michelin Bib Gourmand.</p>
           <p class="addr">6215 S Orange Blossom Trl, Orlando</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/tikka-shack-indian-grub.html">Tikka Shack Indian Grub</a></h3>
-          <p class="meta">Indian &middot; Oviedo &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/tikka-shack-indian-grub.html">Tikka Shack Indian Grub</a></h3>
+          <p class="meta">Indian &middot; Oviedo &middot; $$</p><p class="vsub">Fast-casual Indian kitchen on Alafaya Trail that keeps flavors bold and the mood fun and casual.</p>
           <p class="addr">Tikka Shack Indian Grub, 1500 Alafaya Trl, Oviedo, FL 32765-4517, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/thai-place.html">Thai Place</a></h3>
-          <p class="meta">Noodles &amp; Southeast Asian &middot; Winter Park &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/thai-place.html">Thai Place</a></h3>
+          <p class="meta">Noodles &amp; Southeast Asian &middot; Winter Park &middot; $$</p><p class="vsub">Family-run since 1999, this calm, cozy Winter Park Village room is where longtime regulars bring everyone they love.</p>
           <p class="addr">Thai Place, 501 N Orlando Ave Ste 319, Winter Park, FL 32789</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/briarpatch.html">Briarpatch</a></h3>
-          <p class="meta">Breakfast &amp; brunch &middot; Winter Park &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-briarpatch.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/briarpatch.html">Briarpatch</a></h3>
+          <p class="meta">Breakfast &amp; brunch &middot; Winter Park &middot; $$</p><p class="vsub">Park Avenue&#x27;s breakfast room is chill and charming, cozy and bustling in equal measure.</p>
           <p class="addr">Briarpatch Restaurant, 252 N Park Ave, Winter Park, FL 32789-3814</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/omo.html">Ômo by Jônt</a></h3>
-          <p class="meta">Fine dining &amp; steak &middot; Winter Park &middot; $$$$</p>
+          <div class="vmain"><h3><a href="/venue/omo.html">Ômo by Jônt</a></h3>
+          <p class="meta">Fine dining &amp; steak &middot; Winter Park &middot; $$$$</p><p class="vsub">Winter Park&#x27;s Michelin-starred splurge, a tasting menu staged as a journey through a series of intimate rooms.</p>
           <p class="addr">Omo by Jont, 115 E Lyman Ave, Winter Park, FL 32789-4311</p>
-        </article>
+        </div></article>
         </div>
       </section>
 
@@ -318,35 +325,35 @@
         <p class="lede">Other places in Winter Park, Local Picks first, then the closest to Jala Indian Cuisine.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/ava.html">AVA Mediterranean</a> <span class="badge">Local Pick</span></h3>
-          <p class="meta">Mediterranean &middot; $$$</p>
+          <img class="vthumb" src="/assets/venue-ava.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/ava.html">AVA Mediterranean</a> <span class="badge">Local Pick</span></h3>
+          <p class="meta">Mediterranean &middot; $$$</p><p class="vsub">A glamorous Greek agora on Park Avenue, sophisticated and high-energy from the moment you sit down.</p>
           <p class="addr">290 S Park Ave, Winter Park, FL 32789</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/imperial-on-park.html">The Imperial on Park</a> <span class="badge">Local Pick</span></h3>
-          <p class="meta">Bars &amp; lounges · Wine Bar &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-imperial-on-park.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/imperial-on-park.html">The Imperial on Park</a> <span class="badge">Local Pick</span></h3>
+          <p class="meta">Bars &amp; lounges · Wine Bar &middot; $$</p><p class="vsub">Park Avenue&#x27;s neighborhood bar, warm and laid back, with boutique wines, craft beers and cocktails built on Winter Park Distillery spirits.</p>
           <p class="addr">136 S Park Ave, Winter Park, FL 32789</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/prato.html">Prato</a> <span class="badge">Local Pick</span></h3>
-          <p class="meta">Italian &middot; $$$</p>
+          <div class="vmain"><h3><a href="/venue/prato.html">Prato</a> <span class="badge">Local Pick</span></h3>
+          <p class="meta">Italian &middot; $$$</p><p class="vsub">Italian the Park Avenue way: rustic yet upscale, exposed brick and warm light, house-made pastas and wood-fired pizzas.</p>
           <p class="addr">Prato, 124 N Park Ave, Winter Park, FL 32789</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/kilwins-ice-cream-chocolate-fudge.html">Kilwins Ice Cream - Chocolate - Fudge</a></h3>
-          <p class="meta">Sweets · Ice Cream &middot; $</p>
+          <img class="vthumb" src="/assets/venue-kilwins-ice-cream-chocolate-fudge.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/kilwins-ice-cream-chocolate-fudge.html">Kilwins Ice Cream - Chocolate - Fudge</a></h3>
+          <p class="meta">Sweets · Ice Cream &middot; $</p><p class="vsub">Fresh waffle cone smell finds you first on Park Avenue, where fudge is paddled on marble and caramel apples are dipped in the open.</p>
           <p class="addr">122 N Park Ave, Winter Park, FL 32789</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/rome-s-flavours.html">Rome&#x27;s Flavours</a></h3>
-          <p class="meta">Italian · Trattoria &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/rome-s-flavours.html">Rome&#x27;s Flavours</a></h3>
+          <p class="meta">Italian · Trattoria &middot; $$</p><p class="vsub">Cozy, family-owned trattoria on Morse Boulevard near Park Avenue, quiet and intimate, where guests say the food tastes like Italy.</p>
           <p class="addr">Rome&#x27;s Flavours, 124 E Morse Blvd, Winter Park, FL 32789-3819</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/croissant-gourmet.html">Croissant Gourmet</a></h3>
-          <p class="meta">Bakeries · Bakery &middot; $</p>
+          <img class="vthumb" src="/assets/venue-croissant-gourmet.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/croissant-gourmet.html">Croissant Gourmet</a></h3>
+          <p class="meta">Bakeries · Bakery &middot; $</p><p class="vsub">Cozy, spotless little bakery on Morse Boulevard that guests describe as a piece of France in Winter Park.</p>
           <p class="addr">120 E Morse Blvd, Winter Park, FL 32789</p>
-        </article>
+        </div></article>
         </div>
         <div class="handoff">
           <a class="btn-ghost" href="/winter-park-finder.html">See the full Winter Park list</a>

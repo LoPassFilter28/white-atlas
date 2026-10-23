@@ -211,7 +211,14 @@
       .vcard .addr { margin: 0; color: var(--muted); font-size: .9rem; }
       @media (max-width: 640px) { .facts { grid-template-columns: 1fr; } }
     </style>
-  </head>
+  <style data-cardsys>
+/* cardsys: similar rail cards (2026-10-23 overhaul) */
+.vcard{display:flex;gap:12px;align-items:flex-start}
+.vcard .vthumb{flex:0 0 86px;width:86px;height:86px;border-radius:10px;object-fit:cover;display:block}
+.vcard .vmain{flex:1;min-width:0}
+.vcard .vsub{margin:4px 0 0;font-size:.86rem;line-height:1.45;color:var(--muted,#c6bba2)}
+@media (min-width:1000px){.vlist{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start}}
+</style></head>
   <body>
     <header class="hero">
       <div class="hero-in">
@@ -239,41 +246,41 @@
         </div>
       </section>
 
-      <section class="sec" id="similar">
+      <section class="sec" id="district-story"><p class="kicker">District Stories</p><h2>Orlando&#x27;s long memory</h2><p class="lede">The guide keeps the long memory of Orlando&#x27;s districts in one place: the names, the plats and the stories behind the streets.</p><p><a class="btn-ghost" href="/history.html">Browse the district stories &rarr;</a></p></section><section class="sec" id="similar">
         <p class="kicker">Similar Feel</p>
         <h2>More places with this feel</h2>
         <p class="lede">Matched by vibe, not by neighborhood: the places across Greater Orlando closest in spirit to Insomnia Cookies.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/ice-bites-cafe.html">Ice &amp; Bites Cafe</a></h3>
-          <p class="meta">Coffee &amp; cafes &middot; University &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/ice-bites-cafe.html">Ice &amp; Bites Cafe</a></h3>
+          <p class="meta">Coffee &amp; cafes &middot; University &middot; $$</p><p class="vsub">A whimsical, anime-tinged dessert cafe near UCF built around taiyaki, warm fish-shaped waffle cones filled with ice cream like taro and lavender.</p>
           <p class="addr">3402 Technological Ave Ste 220, Orlando, FL 32817</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/lazy-moon-pizza-ucf.html">Lazy Moon Pizza</a></h3>
-          <p class="meta">Pizza &middot; University &middot; $</p>
+          <img class="vthumb" src="/assets/venue-lazy-moon-pizza-ucf.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/lazy-moon-pizza-ucf.html">Lazy Moon Pizza</a></h3>
+          <p class="meta">Pizza &middot; University &middot; $</p><p class="vsub">UCF&#x27;s divey, sticker-plastered college hangout, famous for slices bigger than your head and pies guests call ginormous.</p>
           <p class="addr">11551 University Blvd, Orlando, FL 32817</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/omelet-bar.html">Omelet Bar</a></h3>
-          <p class="meta">Breakfast &amp; brunch &middot; University/Alafaya &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/omelet-bar.html">Omelet Bar</a></h3>
+          <p class="meta">Breakfast &amp; brunch &middot; University/Alafaya &middot; $</p><p class="vsub">Bright, relaxed cafe on Strategy Blvd near UCF where the omelet is the main event, built to order from a fresh filling bar.</p>
           <p class="addr">12250 Strategy Blvd Ste 401, Orlando, FL 32817</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/fujiyama-sushi.html">Fujiyama Sushi</a></h3>
-          <p class="meta">Japanese &amp; sushi &middot; 10153 University Blvd &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-fujiyama-sushi.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/fujiyama-sushi.html">Fujiyama Sushi</a></h3>
+          <p class="meta">Japanese &amp; sushi &middot; 10153 University Blvd &middot; $$</p><p class="vsub">Cozy, casual neighborhood staple on University Blvd where regulars have been coming back for years.</p>
           <p class="addr">Fujiyama Sushi, 10153 University Blvd, Orlando, FL 32817</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/kilwins-ice-cream-chocolate-fudge.html">Kilwins Ice Cream - Chocolate - Fudge</a></h3>
-          <p class="meta">Sweets &middot; Park Ave &middot; $</p>
+          <img class="vthumb" src="/assets/venue-kilwins-ice-cream-chocolate-fudge.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/kilwins-ice-cream-chocolate-fudge.html">Kilwins Ice Cream - Chocolate - Fudge</a></h3>
+          <p class="meta">Sweets &middot; Park Ave &middot; $</p><p class="vsub">Fresh waffle cone smell finds you first on Park Avenue, where fudge is paddled on marble and caramel apples are dipped in the open.</p>
           <p class="addr">122 N Park Ave, Winter Park, FL 32789</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/croissant-gourmet.html">Croissant Gourmet</a></h3>
-          <p class="meta">Bakeries &middot; Winter Park &middot; $</p>
+          <img class="vthumb" src="/assets/venue-croissant-gourmet.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/croissant-gourmet.html">Croissant Gourmet</a></h3>
+          <p class="meta">Bakeries &middot; Winter Park &middot; $</p><p class="vsub">Cozy, spotless little bakery on Morse Boulevard that guests describe as a piece of France in Winter Park.</p>
           <p class="addr">120 E Morse Blvd, Winter Park, FL 32789</p>
-        </article>
+        </div></article>
         </div>
       </section>
 
@@ -283,35 +290,35 @@
         <p class="lede">Other places in University, closest to Insomnia Cookies first.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/omelet-bar.html">Omelet Bar</a></h3>
-          <p class="meta">Breakfast &amp; brunch · Breakfast &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/omelet-bar.html">Omelet Bar</a></h3>
+          <p class="meta">Breakfast &amp; brunch · Breakfast &middot; $</p><p class="vsub">Bright, relaxed cafe on Strategy Blvd near UCF where the omelet is the main event, built to order from a fresh filling bar.</p>
           <p class="addr">12250 Strategy Blvd Ste 401, Orlando, FL 32817</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/bar-louie.html">Bar Louie (Plaza on University)</a></h3>
-          <p class="meta">Bars &amp; lounges · Bar &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/bar-louie.html">Bar Louie (Plaza on University)</a></h3>
+          <p class="meta">Bars &amp; lounges · Bar &middot; $$</p><p class="vsub">At Plaza on University, a lively, relaxed gastropub on North Alafaya Trail where the crowd feels like regulars even on a first visit.</p>
           <p class="addr">4100 N Alafaya Trail, Orlando, FL 32826</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/blaze-pizza.html">Blaze Pizza</a></h3>
-          <p class="meta">Pizza &middot; $</p>
+          <img class="vthumb" src="/assets/venue-blaze-pizza.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/blaze-pizza.html">Blaze Pizza</a></h3>
+          <p class="meta">Pizza &middot; $</p><p class="vsub">Fast-fired, assembly-line pizza on North Alafaya Trail, built and made fresh right in front of you.</p>
           <p class="addr">4100 N Alafaya Trl, Orlando, FL 32826</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/4-rivers-smokehouse-ucf.html">4 Rivers Smokehouse</a></h3>
-          <p class="meta">BBQ · BBQ &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-4-rivers-smokehouse-ucf.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/4-rivers-smokehouse-ucf.html">4 Rivers Smokehouse</a></h3>
+          <p class="meta">BBQ · BBQ &middot; $$</p><p class="vsub">The UCF outpost on University Boulevard feeds Knights fans and east Orlando families the full smokehouse lineup.</p>
           <p class="addr">4 Rivers Smokehouse, 11764 University Blvd, Orlando, FL 32817</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/the-spice-indian-grill.html">The Spice Indian Grill</a></h3>
-          <p class="meta">Indian &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/the-spice-indian-grill.html">The Spice Indian Grill</a></h3>
+          <p class="meta">Indian &middot; $$</p><p class="vsub">Alafaya Trail&#x27;s laid-back neighborhood Indian spot, where guests say the kitchen always nails it and the heat stays honest.</p>
           <p class="addr">The Spice Indian Grill, 4498 Alafaya Trl N, Orlando, FL 32826, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/bento-sushi.html">Bento Sushi</a></h3>
-          <p class="meta">Japanese &amp; sushi · Sushi &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/bento-sushi.html">Bento Sushi</a></h3>
+          <p class="meta">Japanese &amp; sushi · Sushi &middot; $$</p><p class="vsub">Quick, cafeteria-casual counter inside the UCF Student Union built for grabbing something fresh between classes.</p>
           <p class="addr">Bento Sushi, 12715 Pegasus Dr, Orlando, FL 32816-8030</p>
-        </article>
+        </div></article>
         </div>
         <div class="handoff">
           <a class="btn-ghost" href="/ucf-finder.html">See the full University list</a>

@@ -211,7 +211,14 @@
       .vcard .addr { margin: 0; color: var(--muted); font-size: .9rem; }
       @media (max-width: 640px) { .facts { grid-template-columns: 1fr; } }
     </style>
-  </head>
+  <style data-cardsys>
+/* cardsys: similar rail cards (2026-10-23 overhaul) */
+.vcard{display:flex;gap:12px;align-items:flex-start}
+.vcard .vthumb{flex:0 0 86px;width:86px;height:86px;border-radius:10px;object-fit:cover;display:block}
+.vcard .vmain{flex:1;min-width:0}
+.vcard .vsub{margin:4px 0 0;font-size:.86rem;line-height:1.45;color:var(--muted,#c6bba2)}
+@media (min-width:1000px){.vlist{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start}}
+</style></head>
   <body>
     <header class="hero">
       <div class="hero-in">
@@ -239,41 +246,41 @@
         </div>
       </section>
 
-      <section class="sec" id="similar">
+      <section class="sec" id="district-story"><p class="kicker">District Stories</p><h2>Orlando&#x27;s long memory</h2><p class="lede">The guide keeps the long memory of Orlando&#x27;s districts in one place: the names, the plats and the stories behind the streets.</p><p><a class="btn-ghost" href="/history.html">Browse the district stories &rarr;</a></p></section><section class="sec" id="similar">
         <p class="kicker">Similar Feel</p>
         <h2>More places with this feel</h2>
         <p class="lede">Matched by vibe, not by neighborhood: the places across Greater Orlando closest in spirit to Fun-Ko&#x27;s Poke Bowls and Asian Snacks.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/poke-hana.html">Poke Hana</a></h3>
-          <p class="meta">Restaurants &middot; Mills 50 &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/poke-hana.html">Poke Hana</a></h3>
+          <p class="meta">Restaurants &middot; Mills 50 &middot; $$</p><p class="vsub">A bright, laid-back Hawaiian counter on East Colonial Drive in Mills 50, where the poke bowls taste as fresh as the room feels.</p>
           <p class="addr">1225A E Colonial Dr, Orlando, FL 32803</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/kura-sushi.html">KURA SUSHI</a></h3>
-          <p class="meta">Japanese &amp; sushi &middot; Disney Area &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/kura-sushi.html">KURA SUSHI</a></h3>
+          <p class="meta">Japanese &amp; sushi &middot; Disney Area &middot; $$</p><p class="vsub">Sushi becomes a game at Vineland Pointe, with plates gliding on a revolving belt and a robot delivering drinks.</p>
           <p class="addr">KURA SUSHI, 11579 Regency Village Dr, Orlando, FL 32821, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/pokeworks.html">PokeWorks (Oviedo)</a></h3>
-          <p class="meta">Restaurants &middot; Oviedo &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/pokeworks.html">PokeWorks (Oviedo)</a></h3>
+          <p class="meta">Restaurants &middot; Oviedo &middot; $</p><p class="vsub">Build-your-own poke in Oviedo, with sushi-grade ahi, salmon, albacore, shrimp and scallops over rice or greens.</p>
           <p class="addr">45 W Mitchell Hammock Rd, Oviedo, FL 32765</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/kai-asian-street-fare.html">Kai Asian Street Fare</a></h3>
-          <p class="meta">Noodles &amp; Southeast Asian &middot; Winter Park &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/kai-asian-street-fare.html">Kai Asian Street Fare</a></h3>
+          <p class="meta">Noodles &amp; Southeast Asian &middot; Winter Park &middot; $$</p><p class="vsub">Casual, unpretentious spot on State Road 436 serving craveable Asian street food under one roof.</p>
           <p class="addr">1555 State Rd 436 Ste 1171, Winter Park, FL 32792</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/bento-sushi.html">Bento Sushi</a></h3>
-          <p class="meta">Japanese &amp; sushi &middot; 12715 Pegasus Dr &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/bento-sushi.html">Bento Sushi</a></h3>
+          <p class="meta">Japanese &amp; sushi &middot; 12715 Pegasus Dr &middot; $$</p><p class="vsub">Quick, cafeteria-casual counter inside the UCF Student Union built for grabbing something fresh between classes.</p>
           <p class="addr">Bento Sushi, 12715 Pegasus Dr, Orlando, FL 32816-8030</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/morimoto.html">Morimoto Asia</a></h3>
-          <p class="meta">Restaurants &middot; Disney Springs &middot; $$$</p>
+          <img class="vthumb" src="/assets/venue-morimoto.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/morimoto.html">Morimoto Asia</a></h3>
+          <p class="meta">Restaurants &middot; Disney Springs &middot; $$$</p><p class="vsub">At Disney Springs, this sleek, theatrical dining room is one guests call a diamond.</p>
           <p class="addr">Morimoto Asia, 1600 E Buena Vista Dr, Lake Buena Vista, FL 32830</p>
-        </article>
+        </div></article>
         </div>
       </section>
 
@@ -283,35 +290,35 @@
         <p class="lede">Other places in Day Trips, closest to Fun-Ko&#x27;s Poke Bowls and Asian Snacks first.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/the-goblin-market-restaurant.html">The Goblin Market Restaurant</a></h3>
-          <p class="meta">American · Gastropub &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-the-goblin-market-restaurant.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/the-goblin-market-restaurant.html">The Goblin Market Restaurant</a></h3>
+          <p class="meta">American · Gastropub &middot; $$</p><p class="vsub">Mount Dora&#x27;s storybook gastropub, a cozy book-lined hideaway on Dora Drawdy Way where guests love being surrounded by books.</p>
           <p class="addr">The Goblin Market Restaurant, 330 Dora Drawdy Way, Mt Dora, FL 32757-5593, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/salt-and-ember-mount-dora.html">Salt &amp; Ember</a></h3>
-          <p class="meta">Fine dining &amp; steak · Steakhouse &middot; $$$</p>
+          <img class="vthumb" src="/assets/venue-salt-and-ember-mount-dora.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/salt-and-ember-mount-dora.html">Salt &amp; Ember</a></h3>
+          <p class="meta">Fine dining &amp; steak · Steakhouse &middot; $$$</p><p class="vsub">A wood-fired steakhouse on Alexander Street in Mount Dora, relaxed and warm with a polished finish.</p>
           <p class="addr">322 N Alexander St, Mount Dora, FL 32757</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/1921-mount-dora.html">1921 Mount Dora</a></h3>
-          <p class="meta">Restaurants · Restaurant &middot; $$$</p>
+          <div class="vmain"><h3><a href="/venue/1921-mount-dora.html">1921 Mount Dora</a></h3>
+          <p class="meta">Restaurants · Restaurant &middot; $$$</p><p class="vsub">Modern Florida cooking in a historic 1921 house, and the meal feels personal rather than formal.</p>
           <p class="addr">1921 Mount Dora, 142 E 4th Ave, Mt Dora, FL 32757-5584</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/btw-burgers-tacos-waffles.html">BTW Burgers Tacos Waffles</a></h3>
-          <p class="meta">Burgers &amp; sandwiches · Burgers &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/btw-burgers-tacos-waffles.html">BTW Burgers Tacos Waffles</a></h3>
+          <p class="meta">Burgers &amp; sandwiches · Burgers &middot; $$</p><p class="vsub">On Main Street in Tavares, playful and unpretentious, doing exactly what its name promises with real imagination in each lane.</p>
           <p class="addr">115 E Main St, Tavares, FL 32778</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/kelly-park.html">Kelly Park / Rock Springs Run</a></h3>
-          <p class="meta">Parks &amp; outdoors · Park &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/kelly-park.html">Kelly Park / Rock Springs Run</a></h3>
+          <p class="meta">Parks &amp; outdoors · Park &middot; $</p><p class="vsub">The spring run is the draw here: clear, cold water from Rock Springs into a lazy channel made for tubing.</p>
           <p class="addr">400 E Kelly Park Rd, Apopka, FL 32712</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/wekiwa-springs.html">Wekiwa Springs State Park</a></h3>
-          <p class="meta">Parks &amp; outdoors · Park &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/wekiwa-springs.html">Wekiwa Springs State Park</a></h3>
+          <p class="meta">Parks &amp; outdoors · Park &middot; $</p><p class="vsub">The old-Florida counterpoint to the theme parks, an emerald Apopka spring feeding the Wekiva River with clear, cold water guests call magical.</p>
           <p class="addr">1800 Wekiwa Cir, Apopka, FL 32712</p>
-        </article>
+        </div></article>
         </div>
         <div class="handoff">
           <a class="btn-ghost" href="/day-trips-finder.html">See the full Day Trips list</a>

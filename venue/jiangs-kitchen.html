@@ -211,7 +211,14 @@
       .vcard .addr { margin: 0; color: var(--muted); font-size: .9rem; }
       @media (max-width: 640px) { .facts { grid-template-columns: 1fr; } }
     </style>
-  </head>
+  <style data-cardsys>
+/* cardsys: similar rail cards (2026-10-23 overhaul) */
+.vcard{display:flex;gap:12px;align-items:flex-start}
+.vcard .vthumb{flex:0 0 86px;width:86px;height:86px;border-radius:10px;object-fit:cover;display:block}
+.vcard .vmain{flex:1;min-width:0}
+.vcard .vsub{margin:4px 0 0;font-size:.86rem;line-height:1.45;color:var(--muted,#c6bba2)}
+@media (min-width:1000px){.vlist{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start}}
+</style></head>
   <body>
     <header class="hero">
       <div class="hero-in">
@@ -236,45 +243,45 @@
         <div class="actions">
           <a class="action" href="https://www.google.com/maps/search/?api=1&amp;query=Jiang%27s+Kitchen+27+E+Robinson+St%2C+Orlando%2C+FL+32801" target="_blank" rel="noopener">Directions &rarr;</a>
           <a class="action" href="/archive.html?venue=jiangs-kitchen">Open in the full finder</a>
-          <a class="action" href="/downtown-orlando-district-guide.html">Read the Downtown Orlando story</a>
+          <a class="action" href="/history/downtown.html">Read the Downtown Orlando story</a>
         </div>
       </section>
 
-      <section class="sec" id="similar">
+      <section class="sec" id="district-story"><p class="kicker">District Story</p><h2>The story of Downtown</h2><p class="lede">A fort, a courthouse plat and a citrus boom built it. A name nobody can prove still runs it.</p><p><a class="btn-ghost" href="/history/downtown.html">Read the Downtown story &rarr;</a></p></section><section class="sec" id="similar">
         <p class="kicker">Similar Feel</p>
         <h2>More places with this feel</h2>
         <p class="lede">Matched by vibe, not by neighborhood: the places across Greater Orlando closest in spirit to Jiang&#x27;s Kitchen.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/kung-fu.html">Kung Fu Kitchen</a></h3>
-          <p class="meta">Chinese &middot; Disney Area &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/kung-fu.html">Kung Fu Kitchen</a></h3>
+          <p class="meta">Chinese &middot; Disney Area &middot; $$</p><p class="vsub">A bustling, welcoming Chinese spot on Palm Parkway where hand-pulled and knife-cut noodles land springy and fresh.</p>
           <p class="addr">Kungfu Kitchen, 8466 Palm Pkwy, Orlando, FL 32836-6431</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/lams-garden.html">Lam&#x27;s Garden Chinese Restaurant</a></h3>
-          <p class="meta">Chinese &middot; Milk District &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-lams-garden.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/lams-garden.html">Lam&#x27;s Garden Chinese Restaurant</a></h3>
+          <p class="meta">Chinese &middot; Milk District &middot; $$</p><p class="vsub">An old-school, family-owned Cantonese room on East Colonial Drive that has served the corridor since 1975.</p>
           <p class="addr">2505 E Colonial Dr, Orlando, FL 32803</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/lucky-china.html">Lucky China</a></h3>
-          <p class="meta">Chinese &middot; University &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/lucky-china.html">Lucky China</a></h3>
+          <p class="meta">Chinese &middot; University &middot; $</p><p class="vsub">A no-frills takeout staple in Aloma Square that regulars prize for one thing above all: consistency.</p>
           <p class="addr">Lucky China, 6756 Aloma Ave, Winter Park, FL 32792</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/king-bao.html">King Bao</a></h3>
-          <p class="meta">Restaurants &middot; Mills 50 &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/king-bao.html">King Bao</a></h3>
+          <p class="meta">Restaurants &middot; Mills 50 &middot; $</p><p class="vsub">A loud, playful hole-in-the-wall on North Mills Avenue where steamed buns come loaded and the energy stays up.</p>
           <p class="addr">710 N Mills Ave, Orlando, FL 32803</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/kai-kai-bbq-dumplings.html">Kai Kai BBQ &amp; Dumplings</a></h3>
-          <p class="meta">Chinese &middot; Mills 50 &middot; $</p>
+          <img class="vthumb" src="/assets/venue-kai-kai-bbq-dumplings.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/kai-kai-bbq-dumplings.html">Kai Kai BBQ &amp; Dumplings</a></h3>
+          <p class="meta">Chinese &middot; Mills 50 &middot; $</p><p class="vsub">A no-frills Cantonese barbecue counter inside Mills Market, Chinatown-style and fast-moving.</p>
           <p class="addr">Mills Market, 1110 E Colonial Dr, Orlando, FL 32803</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/mochiry.html">Mochiry</a></h3>
-          <p class="meta">Sweets &middot; Downtown &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/mochiry.html">Mochiry</a></h3>
+          <p class="meta">Sweets &middot; Downtown &middot; $</p><p class="vsub">On South Orange Avenue downtown, Mochiry serves Korean-style mochi doughnuts with the springy, stretchy chew that sets them apart.</p>
           <p class="addr">20 S Orange Ave, Orlando, FL 32801</p>
-        </article>
+        </div></article>
         </div>
       </section>
 
@@ -284,35 +291,35 @@
         <p class="lede">Other places in Downtown Orlando, Local Picks first, then the closest to Jiang&#x27;s Kitchen.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/fixtion.html">Fixtion Restaurant &amp; Bar</a> <span class="badge">Local Pick</span></h3>
-          <p class="meta">American · American Restaurant &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/fixtion.html">Fixtion Restaurant &amp; Bar</a> <span class="badge">Local Pick</span></h3>
+          <p class="meta">American · American Restaurant &middot; $$</p><p class="vsub">On Orange Avenue, comfort food and huge comfy booths early, club energy after dark, shape-shifting through the day.</p>
           <p class="addr">15 N Orange Ave, Orlando, FL 32801</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/wall-street-plaza.html">Wall Street Plaza</a> <span class="badge">Local Pick</span></h3>
-          <p class="meta">Nightlife &amp; music · Entertainment District &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/wall-street-plaza.html">Wall Street Plaza</a> <span class="badge">Local Pick</span></h3>
+          <p class="meta">Nightlife &amp; music · Entertainment District &middot; $$</p><p class="vsub">One downtown block holds the whole crawl: eight bars and patios that, on a big night, turn into a single street party.</p>
           <p class="addr">25 Wall St, Orlando, FL 32801</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/elixir-kitchen-bar.html">Elixir Kitchen and Bar</a> <span class="badge">Local Pick</span></h3>
-          <p class="meta">Bars &amp; lounges · Bar &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-elixir-kitchen-bar.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/elixir-kitchen-bar.html">Elixir Kitchen and Bar</a> <span class="badge">Local Pick</span></h3>
+          <p class="meta">Bars &amp; lounges · Bar &middot; $$</p><p class="vsub">A rustic-hip gastropub in one of downtown&#x27;s original buildings, and very much the neighborhood&#x27;s spot.</p>
           <p class="addr">9 W Washington St, Orlando, FL 32801</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/downtown-food-tour.html">Downtown Food Tour</a></h3>
-          <p class="meta">Attractions · Food Tour &middot; $$$</p>
+          <img class="vthumb" src="/assets/venue-downtown-food-tour.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/downtown-food-tour.html">Downtown Food Tour</a></h3>
+          <p class="meta">Attractions · Food Tour &middot; $$$</p><p class="vsub">A walking food tour through the real Orlando, the downtown locals eat in, with history and art folded into the route by your guide.</p>
           <p class="addr">A La Cart - City, 274 N Orange Ave, Orlando, FL 32801</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/yaz-orlando.html">Yaz Orlando</a></h3>
-          <p class="meta">Nightlife &amp; music · Club &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/yaz-orlando.html">Yaz Orlando</a></h3>
+          <p class="meta">Nightlife &amp; music · Club &middot; $$</p><p class="vsub">On North Orange Avenue, dinner and lounge come first, then the room deepens into a club as the night goes on, low-lit and moody.</p>
           <p class="addr">114 N Orange Ave, Orlando, FL 32801</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/deeply-coffee.html">Deeply Coffee</a></h3>
-          <p class="meta">Coffee &amp; cafes · Coffee Shop &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/deeply-coffee.html">Deeply Coffee</a></h3>
+          <p class="meta">Coffee &amp; cafes · Coffee Shop &middot; $$</p><p class="vsub">A few steps off Magnolia downtown, a bright, minimalist room where the vibe stays chill and soothing.</p>
           <p class="addr">Deeply Coffee, 111 N Magnolia Ave, Orlando, FL 32801-2304, United States</p>
-        </article>
+        </div></article>
         </div>
         <div class="handoff">
           <a class="btn-ghost" href="/downtown-orlando-finder.html">See the full Downtown Orlando list</a>

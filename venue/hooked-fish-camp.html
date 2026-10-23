@@ -211,7 +211,14 @@
       .vcard .addr { margin: 0; color: var(--muted); font-size: .9rem; }
       @media (max-width: 640px) { .facts { grid-template-columns: 1fr; } }
     </style>
-  </head>
+  <style data-cardsys>
+/* cardsys: similar rail cards (2026-10-23 overhaul) */
+.vcard{display:flex;gap:12px;align-items:flex-start}
+.vcard .vthumb{flex:0 0 86px;width:86px;height:86px;border-radius:10px;object-fit:cover;display:block}
+.vcard .vmain{flex:1;min-width:0}
+.vcard .vsub{margin:4px 0 0;font-size:.86rem;line-height:1.45;color:var(--muted,#c6bba2)}
+@media (min-width:1000px){.vlist{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start}}
+</style></head>
   <body>
     <header class="hero">
       <div class="hero-in">
@@ -240,41 +247,41 @@
         </div>
       </section>
 
-      <section class="sec" id="similar">
+      <section class="sec" id="district-story"><p class="kicker">District Stories</p><h2>Orlando&#x27;s long memory</h2><p class="lede">The guide keeps the long memory of Orlando&#x27;s districts in one place: the names, the plats and the stories behind the streets.</p><p><a class="btn-ghost" href="/history.html">Browse the district stories &rarr;</a></p></section><section class="sec" id="similar">
         <p class="kicker">Similar Feel</p>
         <h2>More places with this feel</h2>
         <p class="lede">Matched by vibe, not by neighborhood: the places across Greater Orlando closest in spirit to Hooked Fish Camp.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/the-current-seafood-countersanford.html">The Current Seafood Counter-Sanford</a></h3>
-          <p class="meta">Seafood &middot; Sanford &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/the-current-seafood-countersanford.html">The Current Seafood Counter-Sanford</a></h3>
+          <p class="meta">Seafood &middot; Sanford &middot; $$</p><p class="vsub">Started inside Henry&#x27;s Depot, now serving a casual slice of New England on East 1st Street in Sanford.</p>
           <p class="addr">116 E 1st St, Sanford, FL 32771</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/paddlefish.html">Paddlefish</a></h3>
-          <p class="meta">Seafood &middot; Disney Springs &middot; $$$</p>
+          <div class="vmain"><h3><a href="/venue/paddlefish.html">Paddlefish</a></h3>
+          <p class="meta">Seafood &middot; Disney Springs &middot; $$$</p><p class="vsub">Seafood aboard a steamboat setting at Disney Springs, with waterfront views and a rooftop deck, picturesque and relaxed.</p>
           <p class="addr">1670 E Buena Vista Dr, Lake Buena Vista, FL 32830</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/the-current-seafood-counter.html">The Current Seafood Counter</a></h3>
-          <p class="meta">Seafood &middot; College Park &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/the-current-seafood-counter.html">The Current Seafood Counter</a></h3>
+          <p class="meta">Seafood &middot; College Park &middot; $$</p><p class="vsub">New England fish shack spirit comes to College Park, with counter-service ease and a clean, casual room.</p>
           <p class="addr">The Current Seafood Counter, 2425 Edgewater Dr, Orlando, FL 32804-5303, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/black-hammock-restaurant.html">Black Hammock Restaurant</a></h3>
-          <p class="meta">Restaurants &middot; Oviedo &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/black-hammock-restaurant.html">Black Hammock Restaurant</a></h3>
+          <p class="meta">Restaurants &middot; Oviedo &middot; $$</p><p class="vsub">An Old Florida fish camp on Lake Jesup, where the menu leans into the setting: gator bites, fried gator tail, catfish nuggets, a gator burger.</p>
           <p class="addr">2316 Black Hammock Fish Camp Rd, Oviedo, FL 32765</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/henrys-depot.html">Henry&#x27;s Depot</a></h3>
-          <p class="meta">Markets &amp; shops &middot; Sanford &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/henrys-depot.html">Henry&#x27;s Depot</a></h3>
+          <p class="meta">Markets &amp; shops &middot; Sanford &middot; $$</p><p class="vsub">Sanford&#x27;s historic Plant depot on West 1st Street is now an open-air food hall with something for everyone.</p>
           <p class="addr">Henry&#x27;s Depot, 212 W 1st St, Sanford, FL 32771-1204, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/bonefish-grill.html">Bonefish Grill</a></h3>
-          <p class="meta">Seafood &middot; Airport Corridor &middot; $</p>
+          <img class="vthumb" src="/assets/venue-bonefish-grill.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/bonefish-grill.html">Bonefish Grill</a></h3>
+          <p class="meta">Seafood &middot; Airport Corridor &middot; $</p><p class="vsub">At Lee Vista off Gateway Village Circle, polished and reliable, with wood-grilled seafood that suits date night.</p>
           <p class="addr">Bonefish Grill, 5463 Gateway Village Cir, Orlando, FL 32812</p>
-        </article>
+        </div></article>
         </div>
       </section>
 
@@ -284,35 +291,35 @@
         <p class="lede">Other places in Sanford, closest to Hooked Fish Camp first.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/quigley-coffee.html">Quigley Coffee</a></h3>
-          <p class="meta">Coffee &amp; cafes · Coffee Shop &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-quigley-coffee.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/quigley-coffee.html">Quigley Coffee</a></h3>
+          <p class="meta">Coffee &amp; cafes · Coffee Shop &middot; $$</p><p class="vsub">Playful, bright Sanford shop on Rinehart Road that started as a cart, roasts its own beans, and shares space with a skate shop.</p>
           <p class="addr">Quigley Coffee, 1730 Rinehart Rd, Sanford, FL 32771-6590, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/dalis-lao-thai-cafe.html">Dali&#x27;s Lao Thai Cafe</a></h3>
-          <p class="meta">Noodles &amp; Southeast Asian · Thai &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/dalis-lao-thai-cafe.html">Dali&#x27;s Lao Thai Cafe</a></h3>
+          <p class="meta">Noodles &amp; Southeast Asian · Thai &middot; $$</p><p class="vsub">Family-run in Sanford, cooking Lao and Thai food on Rinehart Road with care and fresh ingredients.</p>
           <p class="addr">Dali&#x27;s Lao Thai Cafe, 1181 Rinehart Rd, Sanford, FL 32771-7390, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/duffy-s-sports-grill.html">Duffy&#x27;s Sports Grill</a></h3>
-          <p class="meta">American · Sports Bar &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/duffy-s-sports-grill.html">Duffy&#x27;s Sports Grill</a></h3>
+          <p class="meta">American · Sports Bar &middot; $</p><p class="vsub">TVs everywhere in Lake Mary, so every seat feels close to the game.</p>
           <p class="addr">Duffy&#x27;s Sports Grill, 951 Market Promenade Ave, Lake Mary, FL 32746</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/donuts-to-go.html">Donuts To Go</a></h3>
-          <p class="meta">Sweets · Donuts &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/donuts-to-go.html">Donuts To Go</a></h3>
+          <p class="meta">Sweets · Donuts &middot; $</p><p class="vsub">Early-morning sweet spot built around a square donut made for sharing.</p>
           <p class="addr">1414 W 1st St, Sanford, FL 32771</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/donutste-doughnuts.html">Donutste Family Bakery</a></h3>
-          <p class="meta">Sweets · Donuts &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/donutste-doughnuts.html">Donutste Family Bakery</a></h3>
+          <p class="meta">Sweets · Donuts &middot; $$</p><p class="vsub">Fully plant-based donuts with no butter, milk, or eggs, in a bright pink Lake Mary room guests find cheerful and welcoming.</p>
           <p class="addr">605 Crescent Executive Ct Ste 120, Lake Mary, FL 32746</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/lighthouse-seafood.html">Lighthouse Seafood</a></h3>
-          <p class="meta">Seafood &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/lighthouse-seafood.html">Lighthouse Seafood</a></h3>
+          <p class="meta">Seafood &middot; $$</p><p class="vsub">Half market, half cafe on Country Club Road in Lake Mary, where you can buy fish to take home or have the kitchen cook it fresh.</p>
           <p class="addr">Lighthouse Seafood, 101 N Country Club Rd, Lake Mary, FL 32746, United States</p>
-        </article>
+        </div></article>
         </div>
         <div class="handoff">
           <a class="btn-ghost" href="/sanford-finder.html">See the full Sanford list</a>

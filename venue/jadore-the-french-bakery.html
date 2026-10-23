@@ -211,7 +211,14 @@
       .vcard .addr { margin: 0; color: var(--muted); font-size: .9rem; }
       @media (max-width: 640px) { .facts { grid-template-columns: 1fr; } }
     </style>
-  </head>
+  <style data-cardsys>
+/* cardsys: similar rail cards (2026-10-23 overhaul) */
+.vcard{display:flex;gap:12px;align-items:flex-start}
+.vcard .vthumb{flex:0 0 86px;width:86px;height:86px;border-radius:10px;object-fit:cover;display:block}
+.vcard .vmain{flex:1;min-width:0}
+.vcard .vsub{margin:4px 0 0;font-size:.86rem;line-height:1.45;color:var(--muted,#c6bba2)}
+@media (min-width:1000px){.vlist{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start}}
+</style></head>
   <body>
     <header class="hero">
       <div class="hero-in">
@@ -240,41 +247,41 @@
         </div>
       </section>
 
-      <section class="sec" id="similar">
+      <section class="sec" id="district-story"><p class="kicker">District Stories</p><h2>Orlando&#x27;s long memory</h2><p class="lede">The guide keeps the long memory of Orlando&#x27;s districts in one place: the names, the plats and the stories behind the streets.</p><p><a class="btn-ghost" href="/history.html">Browse the district stories &rarr;</a></p></section><section class="sec" id="similar">
         <p class="kicker">Similar Feel</p>
         <h2>More places with this feel</h2>
         <p class="lede">Matched by vibe, not by neighborhood: the places across Greater Orlando closest in spirit to J&#x27;Adore the French Bakery.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/croissant-gourmet.html">Croissant Gourmet</a></h3>
-          <p class="meta">Bakeries &middot; Winter Park &middot; $</p>
+          <img class="vthumb" src="/assets/venue-croissant-gourmet.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/croissant-gourmet.html">Croissant Gourmet</a></h3>
+          <p class="meta">Bakeries &middot; Winter Park &middot; $</p><p class="vsub">Cozy, spotless little bakery on Morse Boulevard that guests describe as a piece of France in Winter Park.</p>
           <p class="addr">120 E Morse Blvd, Winter Park, FL 32789</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/le-macaron-french-pastries-winter-park.html">Le Macaron French Pastries Winter Park</a></h3>
-          <p class="meta">Sweets &middot; Winter Park &middot; $</p>
+          <img class="vthumb" src="/assets/venue-le-macaron-french-pastries-winter-park.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/le-macaron-french-pastries-winter-park.html">Le Macaron French Pastries Winter Park</a></h3>
+          <p class="meta">Sweets &middot; Winter Park &middot; $</p><p class="vsub">Tucked into a courtyard off Park Avenue, a jewel-box pastry shop guests call a wonderful little spot.</p>
           <p class="addr">216 N Park Ave, Winter Park, FL 32789</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/buttermilk.html">Buttermilk Bakery</a></h3>
-          <p class="meta">Bakeries &middot; Winter Park &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-buttermilk.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/buttermilk.html">Buttermilk Bakery</a></h3>
+          <p class="meta">Bakeries &middot; Winter Park &middot; $$</p><p class="vsub">A cozy Winter Park bakery where the case fills fresh every morning and choosing just a few treats is the hard part.</p>
           <p class="addr">Buttermilk Bakery, 1198 N Orange Ave, Winter Park, FL 32789-4908</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/donuts-to-go.html">Donuts To Go</a></h3>
-          <p class="meta">Sweets &middot; Sanford &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/donuts-to-go.html">Donuts To Go</a></h3>
+          <p class="meta">Sweets &middot; Sanford &middot; $</p><p class="vsub">Early-morning sweet spot built around a square donut made for sharing.</p>
           <p class="addr">1414 W 1st St, Sanford, FL 32771</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/le-cafe-de-paris.html">Le Café de Paris</a></h3>
-          <p class="meta">Coffee &amp; cafes &middot; Dr. Phillips &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/le-cafe-de-paris.html">Le Café de Paris</a></h3>
+          <p class="meta">Coffee &amp; cafes &middot; Dr. Phillips &middot; $$</p><p class="vsub">A family-run French cafe holding down the quiet end of Dr Phillips, cozy and unhurried.</p>
           <p class="addr">5170 Dr Phillips Blvd, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/crepe-delicious.html">Crepe Delicious</a></h3>
-          <p class="meta">Sweets &middot; Orlando &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-crepe-delicious.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/crepe-delicious.html">Crepe Delicious</a></h3>
+          <p class="meta">Sweets &middot; Orlando &middot; $$</p><p class="vsub">A cosy little crêperie on Church Street downtown, where thin, golden crepes arrive stuffed with fresh, flavorful fillings.</p>
           <p class="addr">55 W Church St, Orlando, FL</p>
-        </article>
+        </div></article>
         </div>
       </section>
 
@@ -284,20 +291,20 @@
         <p class="lede">Other places in Altamonte Springs, closest to J&#x27;Adore the French Bakery first.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/burger-vault.html">Burger Vault</a></h3>
-          <p class="meta">Burgers &amp; sandwiches · Burgers &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-burger-vault.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/burger-vault.html">Burger Vault</a></h3>
+          <p class="meta">Burgers &amp; sandwiches · Burgers &middot; $$</p><p class="vsub">Small mom-and-pop counter on State Road 436 in Altamonte Springs, building halal burgers guests call juicy and wonderfully messy.</p>
           <p class="addr">Burger Vault, 520 W State Road 436, Altamonte Springs, FL 32714-4000, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/yummy-house.html">Yummy House</a></h3>
-          <p class="meta">Chinese · Cantonese Dim Sum &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/yummy-house.html">Yummy House</a></h3>
+          <p class="meta">Chinese · Cantonese Dim Sum &middot; $$</p><p class="vsub">An old-school Cantonese dining room in Altamonte Springs that transplanted New Englanders call the real thing.</p>
           <p class="addr">478 E Altamonte Dr #102, Altamonte Springs, FL 32701</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/soulicious-vegan-kitchen.html">Soulicious Vegan Kitchen</a></h3>
-          <p class="meta">Restaurants · Soul Food &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/soulicious-vegan-kitchen.html">Soulicious Vegan Kitchen</a></h3>
+          <p class="meta">Restaurants · Soul Food &middot; $$</p><p class="vsub">Inside Apopka&#x27;s Halls On 5th, vegan soul food with no compromise: fried oyster mushroom chick&#x27;n, sliders, and mac and cheese.</p>
           <p class="addr">Soulicious Vegan Kitchen, 15 E 5th St, Apopka, FL 32703-5244, United States</p>
-        </article>
+        </div></article>
         </div>
         <div class="handoff">
           <a class="btn-ghost" href="/altamonte-springs-finder.html">See the full Altamonte Springs list</a>

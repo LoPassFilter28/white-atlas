@@ -211,7 +211,14 @@
       .vcard .addr { margin: 0; color: var(--muted); font-size: .9rem; }
       @media (max-width: 640px) { .facts { grid-template-columns: 1fr; } }
     </style>
-  </head>
+  <style data-cardsys>
+/* cardsys: similar rail cards (2026-10-23 overhaul) */
+.vcard{display:flex;gap:12px;align-items:flex-start}
+.vcard .vthumb{flex:0 0 86px;width:86px;height:86px;border-radius:10px;object-fit:cover;display:block}
+.vcard .vmain{flex:1;min-width:0}
+.vcard .vsub{margin:4px 0 0;font-size:.86rem;line-height:1.45;color:var(--muted,#c6bba2)}
+@media (min-width:1000px){.vlist{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start}}
+</style></head>
   <body>
     <header class="hero">
       <div class="hero-in">
@@ -236,46 +243,46 @@
         <div class="actions">
           <a class="action" href="https://www.google.com/maps/search/?api=1&amp;query=Gelato+LaCarraia+7600+Dr+Phillips+Blvd+Ste+38%2C+Orlando%2C+FL+32819" target="_blank" rel="noopener">Directions &rarr;</a>
           <a class="action" href="/archive.html?venue=gelato-lacarraia">Open in the full finder</a>
-          <a class="action" href="/international-drive-district-guide.html">Read the International Drive story</a>
+          <a class="action" href="/history/i-drive.html">Read the International Drive story</a>
           <a class="action action-ig" href="https://www.instagram.com/lacarraiaflorida" target="_blank" rel="noopener"><svg class="ig-glyph" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="vertical-align:-2px;margin-right:6px"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg> Instagram</a>
         </div>
       </section>
 
-      <section class="sec" id="similar">
+      <section class="sec" id="district-story"><p class="kicker">District Story</p><h2>The story of Dr Phillips</h2><p class="lede">A hotel in the boondocks, a road paved after it and named to sound big and important, and the corridor that taught Orlando how to be a vacation.</p><p><a class="btn-ghost" href="/history/i-drive.html">Read the Dr Phillips story &rarr;</a></p></section><section class="sec" id="similar">
         <p class="kicker">Similar Feel</p>
         <h2>More places with this feel</h2>
         <p class="lede">Matched by vibe, not by neighborhood: the places across Greater Orlando closest in spirit to Gelato LaCarraia.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/vivoli-il-gelato.html">Vivoli Il Gelato</a></h3>
-          <p class="meta">Sweets &middot; Orlando &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/vivoli-il-gelato.html">Vivoli Il Gelato</a></h3>
+          <p class="meta">Sweets &middot; Orlando &middot; $$</p><p class="vsub">A Florentine gelateria at Disney Springs, old-world and creamy in a way guests call authentic.</p>
           <p class="addr">Vivoli Il Gelato, 1638 E Buena Vista Dr, Lake Buena Vista, FL 32830, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/rome-s-flavours.html">Rome&#x27;s Flavours</a></h3>
-          <p class="meta">Italian &middot; 124 E Morse Blvd &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/rome-s-flavours.html">Rome&#x27;s Flavours</a></h3>
+          <p class="meta">Italian &middot; 124 E Morse Blvd &middot; $$</p><p class="vsub">Cozy, family-owned trattoria on Morse Boulevard near Park Avenue, quiet and intimate, where guests say the food tastes like Italy.</p>
           <p class="addr">Rome&#x27;s Flavours, 124 E Morse Blvd, Winter Park, FL 32789-3819</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/maggiano-s-pointe-orlando.html">Maggiano&#x27;s Little Italy</a></h3>
-          <p class="meta">Italian &middot; Pointe Orlando &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/maggiano-s-pointe-orlando.html">Maggiano&#x27;s Little Italy</a></h3>
+          <p class="meta">Italian &middot; Pointe Orlando &middot; $$</p><p class="vsub">Family-style Italian at Pointe Orlando, built for the table that cannot agree on one dish.</p>
           <p class="addr">9101 International Dr, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/ravello.html">Ravello</a></h3>
-          <p class="meta">Italian &middot; Disney Area &middot; $$$</p>
+          <div class="vmain"><h3><a href="/venue/ravello.html">Ravello</a></h3>
+          <p class="meta">Italian &middot; Disney Area &middot; $$$</p><p class="vsub">An elegant, welcoming Italian room at the Four Seasons Resort Orlando where guests say the pasta tastes like pasta in Italy.</p>
           <p class="addr">10100 Dream Tree Blvd, Orlando, FL 32836</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/jeremiah-s-italian-ice.html">Jeremiah&#x27;s Italian Ice</a></h3>
-          <p class="meta">Sweets &middot; Orlando &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/jeremiah-s-italian-ice.html">Jeremiah&#x27;s Italian Ice</a></h3>
+          <p class="meta">Sweets &middot; Orlando &middot; $</p><p class="vsub">Bright, Orlando-born walk-up stand in Waterford Lakes where the Gelati layers Italian ice with creamy soft serve.</p>
           <p class="addr">877 N Alafaya Trl, Orlando, FL</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/peterbrooke-chocolatier.html">Peterbrooke Chocolatier</a></h3>
-          <p class="meta">Sweets &middot; Winter Park &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/peterbrooke-chocolatier.html">Peterbrooke Chocolatier</a></h3>
+          <p class="meta">Sweets &middot; Winter Park &middot; $$</p><p class="vsub">Handcrafted chocolate in the European tradition on Park Avenue since 1983, and the cocoa scent reaches the sidewalk.</p>
           <p class="addr">300 S Park Ave, Winter Park, FL 32789</p>
-        </article>
+        </div></article>
         </div>
       </section>
 
@@ -285,35 +292,35 @@
         <p class="lede">Other places in International Drive, Local Picks first, then the closest to Gelato LaCarraia.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/toms-watch-bar-orlando.html">Tom&#x27;s Watch Bar</a> <span class="badge">Local Pick</span></h3>
-          <p class="meta">Bars &amp; lounges · Bar &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-toms-watch-bar-orlando.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/toms-watch-bar-orlando.html">Tom&#x27;s Watch Bar</a> <span class="badge">Local Pick</span></h3>
+          <p class="meta">Bars &amp; lounges · Bar &middot; $$</p><p class="vsub">On International Drive, a sports bar built like a stadium, with an oversized screen and screens wrapping the room so every seat faces the action.</p>
           <p class="addr">8050 International Dr, Suite 1000, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/baires-grill-orlando.html">Baires Grill</a> <span class="badge">Local Pick</span></h3>
-          <p class="meta">Latin &amp; Caribbean · Argentinian Steakhouse &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-baires-grill-orlando.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/baires-grill-orlando.html">Baires Grill</a> <span class="badge">Local Pick</span></h3>
+          <p class="meta">Latin &amp; Caribbean · Argentinian Steakhouse &middot; $$</p><p class="vsub">The parrilla decides everything at this Argentine steakhouse just off International Drive.</p>
           <p class="addr">8050 International Dr, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/bartaco-dr-phillips.html">bartaco</a></h3>
-          <p class="meta">Mexican · Tacos &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/bartaco-dr-phillips.html">bartaco</a></h3>
+          <p class="meta">Mexican · Tacos &middot; $$</p><p class="vsub">A beachy patio spot in the Marketplace at Dr Phillips, where street-style tacos land on trays and the table grazes at its own pace.</p>
           <p class="addr">7600 Dr Phillips Blvd Ste 28, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/christini-s-ristorante-italiano.html">Christini&#x27;s Ristorante Italiano</a></h3>
-          <p class="meta">Italian &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/christini-s-ristorante-italiano.html">Christini&#x27;s Ristorante Italiano</a></h3>
+          <p class="meta">Italian &middot; $$</p><p class="vsub">On Restaurant Row since 1984, dinner staged as an old-world occasion: tuxedoed service, candlelight, and live accordion in the room.</p>
           <p class="addr">7600 Dr Phillips Blvd, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/norman-s-orlando.html">Norman&#x27;s Orlando</a></h3>
-          <p class="meta">Fine dining &amp; steak · New World Cuisine &middot; $$$$</p>
+          <img class="vthumb" src="/assets/venue-norman-s-orlando.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/norman-s-orlando.html">Norman&#x27;s Orlando</a></h3>
+          <p class="meta">Fine dining &amp; steak · New World Cuisine &middot; $$$$</p><p class="vsub">Norman Van Aken&#x27;s flagship at Dellagio, where New World cooking fuses Florida, the Caribbean, and Latin America.</p>
           <p class="addr">7924 Via Dellagio Way, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/peperoncino.html">Peperoncino</a></h3>
-          <p class="meta">Italian · Italian &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/peperoncino.html">Peperoncino</a></h3>
+          <p class="meta">Italian · Italian &middot; $$</p><p class="vsub">Tiny and homey by the Dellagio fountain, this Italian spot has guests saying it feels like Italy.</p>
           <p class="addr">7988 Via Dellagio Way Ste 108, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         </div>
         <div class="handoff">
           <a class="btn-ghost" href="/international-drive-finder.html">See the full International Drive list</a>

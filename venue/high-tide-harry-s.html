@@ -211,7 +211,14 @@
       .vcard .addr { margin: 0; color: var(--muted); font-size: .9rem; }
       @media (max-width: 640px) { .facts { grid-template-columns: 1fr; } }
     </style>
-  </head>
+  <style data-cardsys>
+/* cardsys: similar rail cards (2026-10-23 overhaul) */
+.vcard{display:flex;gap:12px;align-items:flex-start}
+.vcard .vthumb{flex:0 0 86px;width:86px;height:86px;border-radius:10px;object-fit:cover;display:block}
+.vcard .vmain{flex:1;min-width:0}
+.vcard .vsub{margin:4px 0 0;font-size:.86rem;line-height:1.45;color:var(--muted,#c6bba2)}
+@media (min-width:1000px){.vlist{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start}}
+</style></head>
   <body>
     <header class="hero">
       <div class="hero-in">
@@ -240,41 +247,41 @@
         </div>
       </section>
 
-      <section class="sec" id="similar">
+      <section class="sec" id="district-story"><p class="kicker">District Stories</p><h2>Orlando&#x27;s long memory</h2><p class="lede">The guide keeps the long memory of Orlando&#x27;s districts in one place: the names, the plats and the stories behind the streets.</p><p><a class="btn-ghost" href="/history.html">Browse the district stories &rarr;</a></p></section><section class="sec" id="similar">
         <p class="kicker">Similar Feel</p>
         <h2>More places with this feel</h2>
         <p class="lede">Matched by vibe, not by neighborhood: the places across Greater Orlando closest in spirit to High Tide Harry&#x27;s.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/the-current-seafood-counter.html">The Current Seafood Counter</a></h3>
-          <p class="meta">Seafood &middot; College Park &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/the-current-seafood-counter.html">The Current Seafood Counter</a></h3>
+          <p class="meta">Seafood &middot; College Park &middot; $$</p><p class="vsub">New England fish shack spirit comes to College Park, with counter-service ease and a clean, casual room.</p>
           <p class="addr">The Current Seafood Counter, 2425 Edgewater Dr, Orlando, FL 32804-5303, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/yh-seafood-clubhouse.html">YH Seafood Clubhouse</a></h3>
-          <p class="meta">Chinese &middot; Orlando &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/yh-seafood-clubhouse.html">YH Seafood Clubhouse</a></h3>
+          <p class="meta">Chinese &middot; Orlando &middot; $$</p><p class="vsub">Turkey Lake Road&#x27;s Cantonese room, refined and warm, where round tables fill with family-style plates.</p>
           <p class="addr">YH Seafood Clubhouse, 8081 Turkey Lake Rd, Orlando, FL 32819-7321, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/the-hampton-social-pointe-orlando.html">The Hampton Social</a></h3>
-          <p class="meta">American &middot; Pointe Orlando &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/the-hampton-social-pointe-orlando.html">The Hampton Social</a></h3>
+          <p class="meta">American &middot; Pointe Orlando &middot; $$</p><p class="vsub">A coastal escape inside Pointe Orlando, whitewashed wood and rose on the tables, with seafood towers, a lobster roll and blackened sea bass.</p>
           <p class="addr">9101 International Dr, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/atlantic-beer-oyster.html">Atlantic Beer &amp; Oyster</a></h3>
-          <p class="meta">Seafood &middot; Winter Park &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/atlantic-beer-oyster.html">Atlantic Beer &amp; Oyster</a></h3>
+          <p class="meta">Seafood &middot; Winter Park &middot; $$</p><p class="vsub">Tucked into the Hidden Garden just off Park Avenue, a cozy, laid-back oyster bar guests call hard to find and worth the search.</p>
           <p class="addr">358 N Park Ave Ste B, Winter Park, FL 32789</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/paddlefish.html">Paddlefish</a></h3>
-          <p class="meta">Seafood &middot; Disney Springs &middot; $$$</p>
+          <div class="vmain"><h3><a href="/venue/paddlefish.html">Paddlefish</a></h3>
+          <p class="meta">Seafood &middot; Disney Springs &middot; $$$</p><p class="vsub">Seafood aboard a steamboat setting at Disney Springs, with waterfront views and a rooftop deck, picturesque and relaxed.</p>
           <p class="addr">1670 E Buena Vista Dr, Lake Buena Vista, FL 32830</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/marketplace-at-avalon-park.html">Marketplace at Avalon Park</a></h3>
-          <p class="meta">Markets &amp; shops &middot; Orlando &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-marketplace-at-avalon-park.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/marketplace-at-avalon-park.html">Marketplace at Avalon Park</a></h3>
+          <p class="meta">Markets &amp; shops &middot; Orlando &middot; $$</p><p class="vsub">Avalon Park&#x27;s food hall and front porch, a lively casual hall of local vendors where the crew never has to agree on one menu.</p>
           <p class="addr">Marketplace at Avalon Park, 3801 Avalon Park East Blvd, Orlando, FL 32828, United States</p>
-        </article>
+        </div></article>
         </div>
       </section>
 
@@ -284,35 +291,35 @@
         <p class="lede">Other places in South Orlando, closest to High Tide Harry&#x27;s first.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/sazoncito-latin-food.html">Sazoncito Latin Food</a></h3>
-          <p class="meta">Latin &amp; Caribbean &middot; Dominican &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/sazoncito-latin-food.html">Sazoncito Latin Food</a></h3>
+          <p class="meta">Latin &amp; Caribbean &middot; Dominican &middot; $</p><p class="vsub">A humble Conway counter serving Dominican comfort food that guests describe as tasting like home.</p>
           <p class="addr">4542 S Semoran Blvd, Orlando, FL 32822</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/aloha-hawaiian-kitchen.html">Aloha Hawaiian Kitchen</a></h3>
-          <p class="meta">Restaurants &middot; Hawaiian &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/aloha-hawaiian-kitchen.html">Aloha Hawaiian Kitchen</a></h3>
+          <p class="meta">Restaurants &middot; Hawaiian &middot; $$</p><p class="vsub">Laid-back island counter near the airport serving the plate lunch guests call the best Hawaiian food on the mainland.</p>
           <p class="addr">Aloha Hawaiian Kitchen, 6125 S Semoran Blvd, Orlando, FL 32822-1500</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/matts-latin-bbq.html">Matt&#x27;s Latin BBQ</a></h3>
-          <p class="meta">BBQ &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/matts-latin-bbq.html">Matt&#x27;s Latin BBQ</a></h3>
+          <p class="meta">BBQ &middot; $$</p><p class="vsub">Puerto Rican comfort cooking on South Semoran, cafeteria-style and unpretentious, with decor guests say feels like the island.</p>
           <p class="addr">Matt&#x27;s Latin BBQ, 6607 S Semoran Blvd, Orlando, FL 32822</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/marlow-s-tavern.html">Marlow&#x27;s Tavern</a></h3>
-          <p class="meta">American &middot; Tavern &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-marlow-s-tavern.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/marlow-s-tavern.html">Marlow&#x27;s Tavern</a></h3>
+          <p class="meta">American &middot; Tavern &middot; $$</p><p class="vsub">Neighborhood tavern in Lee Vista treating first timers like regulars, starting with pub chips loaded with blue cheese and bacon on the house.</p>
           <p class="addr">6889 Eagle Watch Dr, Orlando, FL 32822</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/bonefish-grill.html">Bonefish Grill</a></h3>
-          <p class="meta">Seafood &middot; $</p>
+          <img class="vthumb" src="/assets/venue-bonefish-grill.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/bonefish-grill.html">Bonefish Grill</a></h3>
+          <p class="meta">Seafood &middot; $</p><p class="vsub">At Lee Vista off Gateway Village Circle, polished and reliable, with wood-grilled seafood that suits date night.</p>
           <p class="addr">Bonefish Grill, 5463 Gateway Village Cir, Orlando, FL 32812</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/agave-azul-cocina-mexicana.html">Agave Azul Cocina Mexicana</a></h3>
-          <p class="meta">Mexican &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/agave-azul-cocina-mexicana.html">Agave Azul Cocina Mexicana</a></h3>
+          <p class="meta">Mexican &middot; $$</p><p class="vsub">The Mexican dining room at Gateway Village near the airport is loud, festive and high-energy, immaculate with a lot going on.</p>
           <p class="addr">Agave Azul Cocina Mexicana, 5475 Gateway Village Cir, Orlando, FL 32812-4002, United States</p>
-        </article>
+        </div></article>
         </div>
         <div class="handoff">
           <a class="btn-ghost" href="/south-orlando-finder.html">See the full South Orlando list</a>

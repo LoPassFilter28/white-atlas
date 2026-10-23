@@ -211,7 +211,14 @@
       .vcard .addr { margin: 0; color: var(--muted); font-size: .9rem; }
       @media (max-width: 640px) { .facts { grid-template-columns: 1fr; } }
     </style>
-  </head>
+  <style data-cardsys>
+/* cardsys: similar rail cards (2026-10-23 overhaul) */
+.vcard{display:flex;gap:12px;align-items:flex-start}
+.vcard .vthumb{flex:0 0 86px;width:86px;height:86px;border-radius:10px;object-fit:cover;display:block}
+.vcard .vmain{flex:1;min-width:0}
+.vcard .vsub{margin:4px 0 0;font-size:.86rem;line-height:1.45;color:var(--muted,#c6bba2)}
+@media (min-width:1000px){.vlist{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start}}
+</style></head>
   <body>
     <header class="hero">
       <div class="hero-in">
@@ -239,41 +246,41 @@
         </div>
       </section>
 
-      <section class="sec" id="similar">
+      <section class="sec" id="district-story"><p class="kicker">District Stories</p><h2>Orlando&#x27;s long memory</h2><p class="lede">The guide keeps the long memory of Orlando&#x27;s districts in one place: the names, the plats and the stories behind the streets.</p><p><a class="btn-ghost" href="/history.html">Browse the district stories &rarr;</a></p></section><section class="sec" id="similar">
         <p class="kicker">Similar Feel</p>
         <h2>More places with this feel</h2>
         <p class="lede">Matched by vibe, not by neighborhood: the places across Greater Orlando closest in spirit to Green Papaya Thai &amp; Sushi.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/lemongrass-thai-kitchen.html">Lemongrass Thai Kitchen</a></h3>
-          <p class="meta">Noodles &amp; Southeast Asian &middot; Oviedo &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-lemongrass-thai-kitchen.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/lemongrass-thai-kitchen.html">Lemongrass Thai Kitchen</a></h3>
+          <p class="meta">Noodles &amp; Southeast Asian &middot; Oviedo &middot; $$</p><p class="vsub">Calm and contemporary inside, this Thai kitchen sits in an unassuming Lockwood Boulevard plaza.</p>
           <p class="addr">Lemongrass Thai Kitchen, 1016 Lockwood Blvd, Oviedo, FL 32765-6027</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/thai-house.html">Thai House</a></h3>
-          <p class="meta">Noodles &amp; Southeast Asian &middot; Mills 50 &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-thai-house.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/thai-house.html">Thai House</a></h3>
+          <p class="meta">Noodles &amp; Southeast Asian &middot; Mills 50 &middot; $$</p><p class="vsub">A small, cozy, old-school room on East Colonial, family owned and proudly unpretentious.</p>
           <p class="addr">Thai House, 2117 E Colonial Dr, Orlando, FL 32803-4834</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/sea-thai-restaurant.html">Sea Thai Restaurant</a></h3>
-          <p class="meta">Noodles &amp; Southeast Asian &middot; Orlando &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/sea-thai-restaurant.html">Sea Thai Restaurant</a></h3>
+          <p class="meta">Noodles &amp; Southeast Asian &middot; Orlando &middot; $$</p><p class="vsub">Tucked into a strip mall on East Colonial, cozy and unhurried, with jazz and bossa nova and summer rolls with peanut sauce.</p>
           <p class="addr">Sea Thai Restaurant, 3812 E Colonial Dr, Orlando, FL 32803-5208, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/lim-ros-thai-restaurant.html">Lim Ros Thai Restaurant</a></h3>
-          <p class="meta">Noodles &amp; Southeast Asian &middot; Maitland &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/lim-ros-thai-restaurant.html">Lim Ros Thai Restaurant</a></h3>
+          <p class="meta">Noodles &amp; Southeast Asian &middot; Maitland &middot; $$</p><p class="vsub">Lim Ros, meaning to taste in Thai, serves modern, northern-leaning Thai cooking in an elegant, warm Maitland dining room.</p>
           <p class="addr">Lim Ros Thai Restaurant, 933 Orlando Ave S, Maitland, FL 32751</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/thai-place.html">Thai Place</a></h3>
-          <p class="meta">Noodles &amp; Southeast Asian &middot; Winter Park &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/thai-place.html">Thai Place</a></h3>
+          <p class="meta">Noodles &amp; Southeast Asian &middot; Winter Park &middot; $$</p><p class="vsub">Family-run since 1999, this calm, cozy Winter Park Village room is where longtime regulars bring everyone they love.</p>
           <p class="addr">Thai Place, 501 N Orlando Ave Ste 319, Winter Park, FL 32789</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/twenty-pho-hour.html">Twenty Pho Hour</a></h3>
-          <p class="meta">Noodles &amp; Southeast Asian &middot; International Drive &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/twenty-pho-hour.html">Twenty Pho Hour</a></h3>
+          <p class="meta">Noodles &amp; Southeast Asian &middot; International Drive &middot; $$</p><p class="vsub">Black-and-white ink lines wrap this International Drive room, a playful comic-book space guests compare to a music video.</p>
           <p class="addr">11951 International Dr Ste B-2, Orlando, FL 32821</p>
-        </article>
+        </div></article>
         </div>
       </section>
 
@@ -283,35 +290,35 @@
         <p class="lede">Other places in Longwood, closest to Green Papaya Thai &amp; Sushi first.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/paddys-pub-longwood.html">Paddy&#x27;s Pub Longwood</a></h3>
-          <p class="meta">Bars &amp; lounges · Sports Pub &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/paddys-pub-longwood.html">Paddy&#x27;s Pub Longwood</a></h3>
+          <p class="meta">Bars &amp; lounges · Sports Pub &middot; $</p><p class="vsub">Longwood&#x27;s no-frills neighborhood sports pub, with Diamond pool tables, dart boards, and TVs on the games.</p>
           <p class="addr">Paddy&#x27;s Pub Longwood, 995 W State Rd 434, Longwood, FL 32750</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/dough-boyz-pizza.html">Dough Boyz Pizza</a></h3>
-          <p class="meta">Pizza &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/dough-boyz-pizza.html">Dough Boyz Pizza</a></h3>
+          <p class="meta">Pizza &middot; $</p><p class="vsub">Longwood&#x27;s old-school New York slice shop, family owned and confident: their line is it is not the water, it is the recipe.</p>
           <p class="addr">201 W State Rd 434, Longwood, FL 32750</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/aj-s-press.html">AJ&#x27;s Press</a></h3>
-          <p class="meta">Burgers &amp; sandwiches · Sandwiches &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/aj-s-press.html">AJ&#x27;s Press</a></h3>
+          <p class="meta">Burgers &amp; sandwiches · Sandwiches &middot; $</p><p class="vsub">Family-run Longwood counter built around the press, where sandwiches come off bolillo or telera soft yet crispy at the edges.</p>
           <p class="addr">182 W State Rd 434 #1008, Longwood, FL 32750</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/mohawk-bbq.html">Mohawk Smokehouse</a></h3>
-          <p class="meta">BBQ &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/mohawk-bbq.html">Mohawk Smokehouse</a></h3>
+          <p class="meta">BBQ &middot; $$</p><p class="vsub">Small-batch Longwood barbecue from Tyler Evans and his wife Sarah, built on Texas-style brisket with Southern roots.</p>
           <p class="addr">480 S Ronald Reagan Blvd, Longwood, FL 32750</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/nan-and-pops-ice-cream-shop.html">Nan and Pop&#x27;s Ice Cream Shop</a></h3>
-          <p class="meta">Sweets · Ice Cream &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-nan-and-pops-ice-cream-shop.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/nan-and-pops-ice-cream-shop.html">Nan and Pop&#x27;s Ice Cream Shop</a></h3>
+          <p class="meta">Sweets · Ice Cream &middot; $$</p><p class="vsub">Old-fashioned Longwood parlor where the sweet smell of waffle cones hits you at the door.</p>
           <p class="addr">Nan and Pop&#x27;s Ice Cream Shop, 351 N Ronald Reagan Blvd, Longwood, FL 32750-4159, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/enzos-lake.html">Enzo&#x27;s On the Lake</a></h3>
-          <p class="meta">Italian &middot; $$$$</p>
+          <div class="vmain"><h3><a href="/venue/enzos-lake.html">Enzo&#x27;s On the Lake</a></h3>
+          <p class="meta">Italian &middot; $$$$</p><p class="vsub">On Lake Kathryn in Longwood since 1980, this old-world Italian spot feels like eating in a villa, with a deck at the water for sunset.</p>
           <p class="addr">Enzo&#x27;s on the Lake, 1130 S US Highway 17 92, Longwood, FL 32750-5718</p>
-        </article>
+        </div></article>
         </div>
         <div class="handoff">
           <a class="btn-ghost" href="/longwood-finder.html">See the full Longwood list</a>

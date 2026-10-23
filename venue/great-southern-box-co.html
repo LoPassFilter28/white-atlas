@@ -211,7 +211,14 @@
       .vcard .addr { margin: 0; color: var(--muted); font-size: .9rem; }
       @media (max-width: 640px) { .facts { grid-template-columns: 1fr; } }
     </style>
-  </head>
+  <style data-cardsys>
+/* cardsys: similar rail cards (2026-10-23 overhaul) */
+.vcard{display:flex;gap:12px;align-items:flex-start}
+.vcard .vthumb{flex:0 0 86px;width:86px;height:86px;border-radius:10px;object-fit:cover;display:block}
+.vcard .vmain{flex:1;min-width:0}
+.vcard .vsub{margin:4px 0 0;font-size:.86rem;line-height:1.45;color:var(--muted,#c6bba2)}
+@media (min-width:1000px){.vlist{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start}}
+</style></head>
   <body>
     <header class="hero">
       <div class="hero-in">
@@ -236,46 +243,46 @@
         <div class="actions">
           <a class="action" href="https://www.google.com/maps/search/?api=1&amp;query=Great+Southern+Box+Co.+Food+Hall+%26+Bar+The+Great+Southern+Box+Company%2C+2105+N+Orange+Blossom+Trl%2C+Orlando%2C+FL+32804" target="_blank" rel="noopener">Directions &rarr;</a>
           <a class="action" href="/archive.html?venue=great-southern-box-co">Open in the full finder</a>
-          <a class="action" href="/college-park-district-guide.html">Read the College Park story</a>
+          <a class="action" href="/history/college-park.html">Read the College Park story</a>
           <a class="action action-ig" href="https://www.instagram.com/gsbc.foodhall" target="_blank" rel="noopener"><svg class="ig-glyph" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="vertical-align:-2px;margin-right:6px"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg> Instagram</a>
         </div>
       </section>
 
-      <section class="sec" id="similar">
+      <section class="sec" id="district-story"><p class="kicker">District Story</p><h2>The story of Packing District</h2><p class="lede">A neighborhood named for colleges it never had, branded on citrus land in 1921, and still legible in every street sign you pass today.</p><p><a class="btn-ghost" href="/history/college-park.html">Read the Packing District story &rarr;</a></p></section><section class="sec" id="similar">
         <p class="kicker">Similar Feel</p>
         <h2>More places with this feel</h2>
         <p class="lede">Matched by vibe, not by neighborhood: the places across Greater Orlando closest in spirit to Great Southern Box Co. Food Hall &amp; Bar.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/walters-tavern.html">Walter&#x27;s Tavern</a></h3>
-          <p class="meta">Bars &amp; lounges &middot; Packing District &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-walters-tavern.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/walters-tavern.html">Walter&#x27;s Tavern</a></h3>
+          <p class="meta">Bars &amp; lounges &middot; Packing District &middot; $$</p><p class="vsub">Inside the Great Southern Box Company food hall in the Packing District, a spacious, lively game day room built for lingering.</p>
           <p class="addr">2105 N Orange Blossom Trl, Orlando, FL 32804</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/market-on-south.html">Market On South</a></h3>
-          <p class="meta">Markets &amp; shops &middot; Milk District &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/market-on-south.html">Market On South</a></h3>
+          <p class="meta">Markets &amp; shops &middot; Milk District &middot; $$</p><p class="vsub">Fully plant-based food hall on East South Street, bohemian and laid-back, as much community space as place to eat.</p>
           <p class="addr">2603 E South St, Orlando, FL 32803</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/henrys-depot.html">Henry&#x27;s Depot</a></h3>
-          <p class="meta">Markets &amp; shops &middot; Sanford &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/henrys-depot.html">Henry&#x27;s Depot</a></h3>
+          <p class="meta">Markets &amp; shops &middot; Sanford &middot; $$</p><p class="vsub">Sanford&#x27;s historic Plant depot on West 1st Street is now an open-air food hall with something for everyone.</p>
           <p class="addr">Henry&#x27;s Depot, 212 W 1st St, Sanford, FL 32771-1204, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/city-food-hall.html">City Food Hall</a></h3>
-          <p class="meta">Markets &amp; shops &middot; Ivanhoe Village &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-city-food-hall.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/city-food-hall.html">City Food Hall</a></h3>
+          <p class="meta">Markets &amp; shops &middot; Ivanhoe Village &middot; $$</p><p class="vsub">Modern and bustling on Alden Road, chef-driven stalls under one roof so a group can split across smash burgers, sushi, pasta and tacos.</p>
           <p class="addr">City Food Hall, 1412 Alden Rd, Orlando, FL 32803-1862</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/marketplace-at-avalon-park.html">Marketplace at Avalon Park</a></h3>
-          <p class="meta">Markets &amp; shops &middot; Orlando &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-marketplace-at-avalon-park.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/marketplace-at-avalon-park.html">Marketplace at Avalon Park</a></h3>
+          <p class="meta">Markets &amp; shops &middot; Orlando &middot; $$</p><p class="vsub">Avalon Park&#x27;s food hall and front porch, a lively casual hall of local vendors where the crew never has to agree on one menu.</p>
           <p class="addr">Marketplace at Avalon Park, 3801 Avalon Park East Blvd, Orlando, FL 32828, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/maitland-social.html">Maitland Social</a></h3>
-          <p class="meta">Markets &amp; shops &middot; Maitland &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/maitland-social.html">Maitland Social</a></h3>
+          <p class="meta">Markets &amp; shops &middot; Maitland &middot; $$</p><p class="vsub">Locals treat this food hall like a neighborhood living room, made for lingering with friends.</p>
           <p class="addr">Maitland Social, 360 E Horatio Ave, Maitland, FL 32751-4517, United States</p>
-        </article>
+        </div></article>
         </div>
       </section>
 
@@ -285,35 +292,35 @@
         <p class="lede">Other places in College Park, Local Picks first, then the closest to Great Southern Box Co. Food Hall &amp; Bar.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/quesa-loco.html">QuesaLoco</a> <span class="badge">Local Pick</span></h3>
-          <p class="meta">Mexican · Birria Tacos &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-quesa-loco.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/quesa-loco.html">QuesaLoco</a> <span class="badge">Local Pick</span></h3>
+          <p class="meta">Mexican · Birria Tacos &middot; $$</p><p class="vsub">Birria country on Fairbanks Ave, in a colorful room with Dia de los Muertos murals and the joyful chaos of its food truck days.</p>
           <p class="addr">971 W Fairbanks Ave, Orlando, FL 32804</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/walters-tavern.html">Walter&#x27;s Tavern</a></h3>
-          <p class="meta">Bars &amp; lounges · Tavern &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-walters-tavern.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/walters-tavern.html">Walter&#x27;s Tavern</a></h3>
+          <p class="meta">Bars &amp; lounges · Tavern &middot; $$</p><p class="vsub">Inside the Great Southern Box Company food hall in the Packing District, a spacious, lively game day room built for lingering.</p>
           <p class="addr">2105 N Orange Blossom Trl, Orlando, FL 32804</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/blue-coast-burrito.html">Blue Coast Burrito</a></h3>
-          <p class="meta">Mexican · Burrito Shop &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/blue-coast-burrito.html">Blue Coast Burrito</a></h3>
+          <p class="meta">Mexican · Burrito Shop &middot; $</p><p class="vsub">On North Orange Blossom Trail, fast casual done honestly: fresh, build-your-own burritos and bowls.</p>
           <p class="addr">2311 N Orange Blossom Trl, Orlando, FL 32804</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/turci-pasta.html">Turci Pasta</a></h3>
-          <p class="meta">Italian &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-turci-pasta.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/turci-pasta.html">Turci Pasta</a></h3>
+          <p class="meta">Italian &middot; $$</p><p class="vsub">On Edgewater Drive in College Park, a cozy, romantic hole in the wall where you can watch fresh pasta made in house.</p>
           <p class="addr">Turci Pasta, 2120 Edgewater Dr, Orlando, FL 32804</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/cups-pups.html">Cups and Pups</a></h3>
-          <p class="meta">Coffee &amp; cafes · Coffee Shop &middot; $</p>
+          <img class="vthumb" src="/assets/venue-cups-pups.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/cups-pups.html">Cups and Pups</a></h3>
+          <p class="meta">Coffee &amp; cafes · Coffee Shop &middot; $</p><p class="vsub">On Edgewater Drive in College Park, this cute, cheerful coffee stop has become a neighborhood ritual.</p>
           <p class="addr">2413 Edgewater Dr, Orlando, FL 32804</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/the-current-seafood-counter.html">The Current Seafood Counter</a></h3>
-          <p class="meta">Seafood &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/the-current-seafood-counter.html">The Current Seafood Counter</a></h3>
+          <p class="meta">Seafood &middot; $$</p><p class="vsub">New England fish shack spirit comes to College Park, with counter-service ease and a clean, casual room.</p>
           <p class="addr">The Current Seafood Counter, 2425 Edgewater Dr, Orlando, FL 32804-5303, United States</p>
-        </article>
+        </div></article>
         </div>
         <div class="handoff">
           <a class="btn-ghost" href="/college-park-finder.html">See the full College Park list</a>
