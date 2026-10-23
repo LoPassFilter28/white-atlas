@@ -211,7 +211,14 @@
       .vcard .addr { margin: 0; color: var(--muted); font-size: .9rem; }
       @media (max-width: 640px) { .facts { grid-template-columns: 1fr; } }
     </style>
-  </head>
+  <style data-cardsys>
+/* cardsys: similar rail cards (2026-10-23 overhaul) */
+.vcard{display:flex;gap:12px;align-items:flex-start}
+.vcard .vthumb{flex:0 0 86px;width:86px;height:86px;border-radius:10px;object-fit:cover;display:block}
+.vcard .vmain{flex:1;min-width:0}
+.vcard .vsub{margin:4px 0 0;font-size:.86rem;line-height:1.45;color:var(--muted,#c6bba2)}
+@media (min-width:1000px){.vlist{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start}}
+</style></head>
   <body>
     <header class="hero">
       <div class="hero-in">
@@ -236,48 +243,48 @@
         <div class="actions">
           <a class="action" href="https://www.google.com/maps/search/?api=1&amp;query=Casa+Feliz+Historic+Home+Museum+656+N+Park+Ave%2C+Winter+Park%2C+FL+32789" target="_blank" rel="noopener">Directions &rarr;</a>
           <a class="action" href="/archive.html?venue=casa-feliz">Open in the full finder</a>
-          <a class="action" href="/winter-park-district-guide.html">Read the Winter Park story</a>
+          <a class="action" href="/history/winter-park.html">Read the Winter Park story</a>
           <a class="action action-ig" href="https://www.instagram.com/casafelizvenue" target="_blank" rel="noopener"><svg class="ig-glyph" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="vertical-align:-2px;margin-right:6px"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg> Instagram</a>
           <a class="action action-aff" href="https://www.viator.com/searchResults/all?text=Casa+Feliz+Historic+Home+Museum+Orlando&amp;pid=P00325046&amp;mcid=42383&amp;utm_source=407fyi&amp;utm_medium=affiliate" target="_blank" rel="noopener sponsored">Find tickets on Viator &#8599;</a>
         <p class="aff-note">Affiliate link, we may earn a commission at no extra cost to you.</p>
         </div>
       </section>
 
-      <section class="sec" id="similar">
+      <section class="sec" id="district-story"><p class="kicker">District Story</p><h2>The story of Winter Park</h2><p class="lede">A park built for the winter, drawn on paper in 1881, and still legible in every street you walk today.</p><p><a class="btn-ghost" href="/history/winter-park.html">Read the Winter Park story &rarr;</a></p></section><section class="sec" id="similar">
         <p class="kicker">Similar Feel</p>
         <h2>More places with this feel</h2>
         <p class="lede">Matched by vibe, not by neighborhood: the places across Greater Orlando closest in spirit to Casa Feliz Historic Home Museum.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/wp-history-museum.html">Winter Park History Museum</a></h3>
-          <p class="meta">Museums &amp; landmarks &middot; Winter Park &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/wp-history-museum.html">Winter Park History Museum</a></h3>
+          <p class="meta">Museums &amp; landmarks &middot; Winter Park &middot; $</p><p class="vsub">Inside its historic railroad depot, a small, charming museum telling Winter Park&#x27;s story, run with obvious care.</p>
           <p class="addr">200 W New England Ave, Winter Park, FL 32789</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/polasek-museum.html">Albin Polasek Museum &amp; Sculpture Gardens</a></h3>
-          <p class="meta">Museums &amp; landmarks &middot; Winter Park &middot; $</p>
+          <img class="vthumb" src="/assets/venue-polasek-museum.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/polasek-museum.html">Albin Polasek Museum &amp; Sculpture Gardens</a></h3>
+          <p class="meta">Museums &amp; landmarks &middot; Winter Park &middot; $</p><p class="vsub">A sculptor&#x27;s historic home paired with serene, lakeside sculpture gardens in Winter Park.</p>
           <p class="addr">633 Osceola Ave, Winter Park, FL 32789</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/play-street-museum.html">Play Street Museum</a></h3>
-          <p class="meta">Museums &amp; landmarks &middot; Winter Garden &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/play-street-museum.html">Play Street Museum</a></h3>
+          <p class="meta">Museums &amp; landmarks &middot; Winter Garden &middot; $$</p><p class="vsub">A tiny town built for young children in Winter Garden, with a doctor&#x27;s office, fire station, pet rescue and make-believe ice cream.</p>
           <p class="addr">12107 Stoneybrook West Pkwy, STE 104, Winter Garden, FL 34787</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/the-chapman.html">The Chapman</a></h3>
-          <p class="meta">Fine dining &amp; steak &middot; Winter Park &middot; $$$</p>
+          <div class="vmain"><h3><a href="/venue/the-chapman.html">The Chapman</a></h3>
+          <p class="meta">Fine dining &amp; steak &middot; Winter Park &middot; $$$</p><p class="vsub">On Park Avenue, the warm, artful dining room Winter Park kept asking for, built on a scratch kitchen and Florida ingredients.</p>
           <p class="addr">500 S Park Ave, Winter Park, FL 32789</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/casa-mezcal.html">Casa Mezcal</a></h3>
-          <p class="meta">Mexican &middot; International Drive &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/casa-mezcal.html">Casa Mezcal</a></h3>
+          <p class="meta">Mexican &middot; International Drive &middot; $$</p><p class="vsub">A festive, elegant room on International Drive built around mezcal and tequila poured with conviction.</p>
           <p class="addr">8267 International Dr, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/winter-park-boat-tour.html">Winter Park Scenic Boat Tour</a></h3>
-          <p class="meta">Attractions &middot; Winter Park &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-winter-park-boat-tour.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/winter-park-boat-tour.html">Winter Park Scenic Boat Tour</a></h3>
+          <p class="meta">Attractions &middot; Winter Park &middot; $$</p><p class="vsub">Running since 1938, a pontoon ride from the end of Morse Boulevard through the chain of lakes and narrow, tree-shaded canals.</p>
           <p class="addr">312 E Morse Blvd, Winter Park, FL 32789</p>
-        </article>
+        </div></article>
         </div>
       </section>
 
@@ -287,35 +294,35 @@
         <p class="lede">Other places in Winter Park, Local Picks first, then the closest to Casa Feliz Historic Home Museum.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/ava.html">AVA Mediterranean</a> <span class="badge">Local Pick</span></h3>
-          <p class="meta">Mediterranean &middot; $$$</p>
+          <img class="vthumb" src="/assets/venue-ava.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/ava.html">AVA Mediterranean</a> <span class="badge">Local Pick</span></h3>
+          <p class="meta">Mediterranean &middot; $$$</p><p class="vsub">A glamorous Greek agora on Park Avenue, sophisticated and high-energy from the moment you sit down.</p>
           <p class="addr">290 S Park Ave, Winter Park, FL 32789</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/imperial-on-park.html">The Imperial on Park</a> <span class="badge">Local Pick</span></h3>
-          <p class="meta">Bars &amp; lounges · Wine Bar &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-imperial-on-park.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/imperial-on-park.html">The Imperial on Park</a> <span class="badge">Local Pick</span></h3>
+          <p class="meta">Bars &amp; lounges · Wine Bar &middot; $$</p><p class="vsub">Park Avenue&#x27;s neighborhood bar, warm and laid back, with boutique wines, craft beers and cocktails built on Winter Park Distillery spirits.</p>
           <p class="addr">136 S Park Ave, Winter Park, FL 32789</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/prato.html">Prato</a> <span class="badge">Local Pick</span></h3>
-          <p class="meta">Italian &middot; $$$</p>
+          <div class="vmain"><h3><a href="/venue/prato.html">Prato</a> <span class="badge">Local Pick</span></h3>
+          <p class="meta">Italian &middot; $$$</p><p class="vsub">Italian the Park Avenue way: rustic yet upscale, exposed brick and warm light, house-made pastas and wood-fired pizzas.</p>
           <p class="addr">Prato, 124 N Park Ave, Winter Park, FL 32789</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/morse-museum.html">Charles Hosmer Morse Museum of American Art</a></h3>
-          <p class="meta">Museums &amp; landmarks · Museum &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/morse-museum.html">Charles Hosmer Morse Museum of American Art</a></h3>
+          <p class="meta">Museums &amp; landmarks · Museum &middot; $</p><p class="vsub">Guests call this small Park Avenue museum a jewel box of Louis Comfort Tiffany, with a big impact for its size.</p>
           <p class="addr">445 N Park Ave, Winter Park, FL 32789</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/atlantic-beer-oyster.html">Atlantic Beer &amp; Oyster</a></h3>
-          <p class="meta">Seafood &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/atlantic-beer-oyster.html">Atlantic Beer &amp; Oyster</a></h3>
+          <p class="meta">Seafood &middot; $$</p><p class="vsub">Tucked into the Hidden Garden just off Park Avenue, a cozy, laid-back oyster bar guests call hard to find and worth the search.</p>
           <p class="addr">358 N Park Ave Ste B, Winter Park, FL 32789</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/boca-kitchen-bar-market.html">Boca Kitchen Bar Market</a></h3>
-          <p class="meta">American &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-boca-kitchen-bar-market.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/boca-kitchen-bar-market.html">Boca Kitchen Bar Market</a></h3>
+          <p class="meta">American &middot; $$</p><p class="vsub">Park Avenue cooking built around what Florida farms deliver, a farm-to-table menu of handcrafted plates that shifts with the market.</p>
           <p class="addr">358 N Park Ave, Winter Park, FL 32789</p>
-        </article>
+        </div></article>
         </div>
         <div class="handoff">
           <a class="btn-ghost" href="/winter-park-finder.html">See the full Winter Park list</a>

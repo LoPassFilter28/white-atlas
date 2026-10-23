@@ -211,7 +211,14 @@
       .vcard .addr { margin: 0; color: var(--muted); font-size: .9rem; }
       @media (max-width: 640px) { .facts { grid-template-columns: 1fr; } }
     </style>
-  </head>
+  <style data-cardsys>
+/* cardsys: similar rail cards (2026-10-23 overhaul) */
+.vcard{display:flex;gap:12px;align-items:flex-start}
+.vcard .vthumb{flex:0 0 86px;width:86px;height:86px;border-radius:10px;object-fit:cover;display:block}
+.vcard .vmain{flex:1;min-width:0}
+.vcard .vsub{margin:4px 0 0;font-size:.86rem;line-height:1.45;color:var(--muted,#c6bba2)}
+@media (min-width:1000px){.vlist{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start}}
+</style></head>
   <body>
     <header class="hero">
       <div class="hero-in">
@@ -240,41 +247,41 @@
         </div>
       </section>
 
-      <section class="sec" id="similar">
+      <section class="sec" id="district-story"><p class="kicker">District Stories</p><h2>Orlando&#x27;s long memory</h2><p class="lede">The guide keeps the long memory of Orlando&#x27;s districts in one place: the names, the plats and the stories behind the streets.</p><p><a class="btn-ghost" href="/history.html">Browse the district stories &rarr;</a></p></section><section class="sec" id="similar">
         <p class="kicker">Similar Feel</p>
         <h2>More places with this feel</h2>
         <p class="lede">Matched by vibe, not by neighborhood: the places across Greater Orlando closest in spirit to Cress Restaurant.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/the-grove-bar-kitchen.html">The Grove Bar + Kitchen</a></h3>
-          <p class="meta">American &middot; Winter Park &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-the-grove-bar-kitchen.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/the-grove-bar-kitchen.html">The Grove Bar + Kitchen</a></h3>
+          <p class="meta">American &middot; Winter Park &middot; $$</p><p class="vsub">Citrus-grove heritage worn warmly in a golden, textured room in Winter Park Village built for lingering.</p>
           <p class="addr">480 N Orlando Ave C-134, Winter Park, FL 32789</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/crocante-restaurant.html">Crocante Restaurant</a></h3>
-          <p class="meta">Latin &amp; Caribbean &middot; Baldwin Park &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-crocante-restaurant.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/crocante-restaurant.html">Crocante Restaurant</a></h3>
+          <p class="meta">Latin &amp; Caribbean &middot; Baldwin Park &middot; $$</p><p class="vsub">Puerto Rican cooking on East Colonial Drive with a full cocktail bar and a festive take on homestyle flavors.</p>
           <p class="addr">Crocante Restaurant, 4311 E Colonial Dr, Orlando, FL 32803-5217</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/kres.html">Kres Chophouse</a></h3>
-          <p class="meta">Fine dining &amp; steak &middot; Downtown &middot; $$$$</p>
+          <img class="vthumb" src="/assets/venue-kres.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/kres.html">Kres Chophouse</a></h3>
+          <p class="meta">Fine dining &amp; steak &middot; Downtown &middot; $$$$</p><p class="vsub">Out of a 1930s Church Street landmark downtown, this steakhouse stays elegant and polished with its original architecture intact.</p>
           <p class="addr">Kres Chophouse, 17 Church St W, Orlando, FL 32801-3301</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/salt-and-ember-mount-dora.html">Salt &amp; Ember</a></h3>
-          <p class="meta">Fine dining &amp; steak &middot; Mount Dora &middot; $$$</p>
+          <img class="vthumb" src="/assets/venue-salt-and-ember-mount-dora.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/salt-and-ember-mount-dora.html">Salt &amp; Ember</a></h3>
+          <p class="meta">Fine dining &amp; steak &middot; Mount Dora &middot; $$$</p><p class="vsub">A wood-fired steakhouse on Alexander Street in Mount Dora, relaxed and warm with a polished finish.</p>
           <p class="addr">322 N Alexander St, Mount Dora, FL 32757</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/chroma-lake-nona.html">Chroma Modern Bar + Kitchen</a></h3>
-          <p class="meta">Restaurants &middot; Lake Nona &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-chroma-lake-nona.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/chroma-lake-nona.html">Chroma Modern Bar + Kitchen</a></h3>
+          <p class="meta">Restaurants &middot; Lake Nona &middot; $$</p><p class="vsub">Saturated color and a lively buzz fill this Lake Nona Town Center small-plates room, built for passing dishes around.</p>
           <p class="addr">6967 Lake Nona Blvd, Orlando, FL 32827</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/beirut-grill-and-deli.html">Beirut Grill and Deli</a></h3>
-          <p class="meta">Mediterranean &middot; Oviedo &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-beirut-grill-and-deli.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/beirut-grill-and-deli.html">Beirut Grill and Deli</a></h3>
+          <p class="meta">Mediterranean &middot; Oviedo &middot; $$</p><p class="vsub">Family-owned halal Lebanese kitchen on Alafaya Trail, where everything tastes homemade and the room feels like family.</p>
           <p class="addr">Beirut Grill and Deli, 3100 Alafaya Trl, Oviedo, FL 32765-9466, United States</p>
-        </article>
+        </div></article>
         </div>
       </section>
 
@@ -284,35 +291,35 @@
         <p class="lede">Other places in Day Trips, closest to Cress Restaurant first.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/bakechop.html">BakeChop</a></h3>
-          <p class="meta">Restaurants · Restaurant &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-bakechop.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/bakechop.html">BakeChop</a></h3>
+          <p class="meta">Restaurants · Restaurant &middot; $$</p><p class="vsub">Cozy, quirky scratch kitchen on Artisan Alley in DeLand, where staff stay sweet and welcoming even when the line is out the door.</p>
           <p class="addr">110 Artisan Aly, DeLand, FL 32720</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/the-twisted-chopstick.html">The Twisted Chopstick</a></h3>
-          <p class="meta">Japanese &amp; sushi · Sushi &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-the-twisted-chopstick.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/the-twisted-chopstick.html">The Twisted Chopstick</a></h3>
+          <p class="meta">Japanese &amp; sushi · Sushi &middot; $$</p><p class="vsub">DeLand&#x27;s cozy, Godzilla-themed sushi stop on Woodland Boulevard, family-run and relaxed as a second home.</p>
           <p class="addr">412 S Woodland Blvd, DeLand, FL 32720</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/blue-spring-manatee-kayak.html">Blue Spring Manatee Kayak Tours</a></h3>
-          <p class="meta">Attractions &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-blue-spring-manatee-kayak.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/blue-spring-manatee-kayak.html">Blue Spring Manatee Kayak Tours</a></h3>
+          <p class="meta">Attractions &middot; $$</p><p class="vsub">At Blue Spring State Park, guided kayaks slip into clear, 72-degree spring water where manatees roll and graze beneath the boat.</p>
           <p class="addr">Blue Spring State Park, 2100 W French Ave, Orange City, FL 32763</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/kelly-park.html">Kelly Park / Rock Springs Run</a></h3>
-          <p class="meta">Parks &amp; outdoors · Park &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/kelly-park.html">Kelly Park / Rock Springs Run</a></h3>
+          <p class="meta">Parks &amp; outdoors · Park &middot; $</p><p class="vsub">The spring run is the draw here: clear, cold water from Rock Springs into a lazy channel made for tubing.</p>
           <p class="addr">400 E Kelly Park Rd, Apopka, FL 32712</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/wekiwa-springs.html">Wekiwa Springs State Park</a></h3>
-          <p class="meta">Parks &amp; outdoors · Park &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/wekiwa-springs.html">Wekiwa Springs State Park</a></h3>
+          <p class="meta">Parks &amp; outdoors · Park &middot; $</p><p class="vsub">The old-Florida counterpoint to the theme parks, an emerald Apopka spring feeding the Wekiva River with clear, cold water guests call magical.</p>
           <p class="addr">1800 Wekiwa Cir, Apopka, FL 32712</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/1921-mount-dora.html">1921 Mount Dora</a></h3>
-          <p class="meta">Restaurants · Restaurant &middot; $$$</p>
+          <div class="vmain"><h3><a href="/venue/1921-mount-dora.html">1921 Mount Dora</a></h3>
+          <p class="meta">Restaurants · Restaurant &middot; $$$</p><p class="vsub">Modern Florida cooking in a historic 1921 house, and the meal feels personal rather than formal.</p>
           <p class="addr">1921 Mount Dora, 142 E 4th Ave, Mt Dora, FL 32757-5584</p>
-        </article>
+        </div></article>
         </div>
         <div class="handoff">
           <a class="btn-ghost" href="/day-trips-finder.html">See the full Day Trips list</a>

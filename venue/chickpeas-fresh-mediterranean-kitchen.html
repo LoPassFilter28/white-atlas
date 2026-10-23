@@ -211,7 +211,14 @@
       .vcard .addr { margin: 0; color: var(--muted); font-size: .9rem; }
       @media (max-width: 640px) { .facts { grid-template-columns: 1fr; } }
     </style>
-  </head>
+  <style data-cardsys>
+/* cardsys: similar rail cards (2026-10-23 overhaul) */
+.vcard{display:flex;gap:12px;align-items:flex-start}
+.vcard .vthumb{flex:0 0 86px;width:86px;height:86px;border-radius:10px;object-fit:cover;display:block}
+.vcard .vmain{flex:1;min-width:0}
+.vcard .vsub{margin:4px 0 0;font-size:.86rem;line-height:1.45;color:var(--muted,#c6bba2)}
+@media (min-width:1000px){.vlist{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start}}
+</style></head>
   <body>
     <header class="hero">
       <div class="hero-in">
@@ -239,41 +246,41 @@
         </div>
       </section>
 
-      <section class="sec" id="similar">
+      <section class="sec" id="district-story"><p class="kicker">District Story</p><h2>The story of Millenia</h2><p class="lede">A hotel in the boondocks, a road paved after it and named to sound big and important, and the corridor that taught Orlando how to be a vacation.</p><p><a class="btn-ghost" href="/history/i-drive.html">Read the Millenia story &rarr;</a></p></section><section class="sec" id="similar">
         <p class="kicker">Similar Feel</p>
         <h2>More places with this feel</h2>
         <p class="lede">Matched by vibe, not by neighborhood: the places across Greater Orlando closest in spirit to Chickpeas Fresh Mediterranean Kitchen.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/beirut-grill-and-deli.html">Beirut Grill and Deli</a></h3>
-          <p class="meta">Mediterranean &middot; Oviedo &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-beirut-grill-and-deli.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/beirut-grill-and-deli.html">Beirut Grill and Deli</a></h3>
+          <p class="meta">Mediterranean &middot; Oviedo &middot; $$</p><p class="vsub">Family-owned halal Lebanese kitchen on Alafaya Trail, where everything tastes homemade and the room feels like family.</p>
           <p class="addr">Beirut Grill and Deli, 3100 Alafaya Trl, Oviedo, FL 32765-9466, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/amar-orlando.html">Amar Orlando</a></h3>
-          <p class="meta">Mediterranean &middot; South OBT &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/amar-orlando.html">Amar Orlando</a></h3>
+          <p class="meta">Mediterranean &middot; South OBT &middot; $$</p><p class="vsub">Lebanese cooking in a calm, intimate room just outside the Florida Mall food court, a step up from its surroundings.</p>
           <p class="addr">8001 S Orange Blossom Trl, Ste #1510, Orlando, FL 32809</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/king-o-falafel.html">King O Falafel</a></h3>
-          <p class="meta">Mediterranean &middot; Kissimmee &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-king-o-falafel.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/king-o-falafel.html">King O Falafel</a></h3>
+          <p class="meta">Mediterranean &middot; Kissimmee &middot; $$</p><p class="vsub">Family-owned Kissimmee storefront on 192 since 2009, unassuming outside and all flavor inside.</p>
           <p class="addr">King O Falafel, 5045 W Irlo Bronson Memorial Hwy, Kissimmee, FL 34746-5345, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/amazonica-florida-mall.html">Amazonica</a></h3>
-          <p class="meta">Coffee &amp; cafes &middot; Florida Mall &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/amazonica-florida-mall.html">Amazonica</a></h3>
+          <p class="meta">Coffee &amp; cafes &middot; Florida Mall &middot; $$</p><p class="vsub">A bright Colombian kiosk inside The Florida Mall, turning out obleas with arequipe, acai bowls with Nutella and fruit, and a proper cortadito.</p>
           <p class="addr">8001 S Orange Blossom Trl Kiosk TT124, Orlando, FL 32809</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/shiraz-market.html">Shiraz Market</a></h3>
-          <p class="meta">Mediterranean &middot; Longwood &middot; $</p>
+          <img class="vthumb" src="/assets/venue-shiraz-market.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/shiraz-market.html">Shiraz Market</a></h3>
+          <p class="meta">Mediterranean &middot; Longwood &middot; $</p><p class="vsub">Half Persian grocery, half grill counter on 17-92 in Longwood, this spot turns a spice run into lunch.</p>
           <p class="addr">188 S US Hwy 17-92, Longwood, FL 32750</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/grape-the-grain.html">Grape &amp; the Grain</a></h3>
-          <p class="meta">Bars &amp; lounges &middot; 1110 Virginia Dr &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-grape-the-grain.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/grape-the-grain.html">Grape &amp; the Grain</a></h3>
+          <p class="meta">Bars &amp; lounges &middot; 1110 Virginia Dr &middot; $$</p><p class="vsub">Unpretentious Mills 50 wine bar where the real draw is the covered back patio guests call the best in Orlando.</p>
           <p class="addr">Grape &amp; the Grain, 1110 Virginia Dr, Orlando, FL 32803</p>
-        </article>
+        </div></article>
         </div>
       </section>
 
@@ -283,35 +290,35 @@
         <p class="lede">Other places in International Drive, closest to Chickpeas Fresh Mediterranean Kitchen first.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/the-cheesecake-factory.html">The Cheesecake Factory</a></h3>
-          <p class="meta">Restaurants &middot; Restaurant &middot; $</p>
+          <img class="vthumb" src="/assets/venue-the-cheesecake-factory.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/the-cheesecake-factory.html">The Cheesecake Factory</a></h3>
+          <p class="meta">Restaurants &middot; Restaurant &middot; $</p><p class="vsub">The Mall at Millenia outpost of the famously sprawling menu, where the move is to order across it, from avocado eggrolls to Chicken Pasta Da Vinci.</p>
           <p class="addr">4200 Conroy Rd Space A-148, Orlando, FL 32839</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/wunderbar.html">Wunderbar</a></h3>
-          <p class="meta">Coffee &amp; cafes &middot; Juice Bar &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/wunderbar.html">Wunderbar</a></h3>
+          <p class="meta">Coffee &amp; cafes &middot; Juice Bar &middot; $$</p><p class="vsub">Not a cocktail bar, but a family-owned superfood cafe in the Mall at Millenia food court, fresh fruit on display, made in front of you.</p>
           <p class="addr">Wunderbar, 4200 Conroy Rd, Orlando, FL 32839-2400, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/keke-s-breakfast-cafe.html">Keke&#x27;s Breakfast Cafe</a></h3>
-          <p class="meta">Breakfast &amp; brunch &middot; Breakfast &middot; $</p>
+          <img class="vthumb" src="/assets/venue-keke-s-breakfast-cafe.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/keke-s-breakfast-cafe.html">Keke&#x27;s Breakfast Cafe</a></h3>
+          <p class="meta">Breakfast &amp; brunch &middot; Breakfast &middot; $</p><p class="vsub">Breakfast done by hand near Millenia: coffee ground in house, eggs cracked to order, real butter and no microwave.</p>
           <p class="addr">4192 Conroy Rd, Orlando, FL</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/the-licking.html">The Licking</a></h3>
-          <p class="meta">Restaurants &middot; Soul Food &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-the-licking.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/the-licking.html">The Licking</a></h3>
+          <p class="meta">Restaurants &middot; Soul Food &middot; $$</p><p class="vsub">DJ Khaled&#x27;s soul food spot across from the Mall at Millenia: loud, lively and generous.</p>
           <p class="addr">4706 Millenia Plaza Way, Orlando, FL 32839</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/ford-s-garage-international-outlets.html">Ford&#x27;s Garage</a></h3>
-          <p class="meta">Burgers &amp; sandwiches &middot; Burger Bar &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-ford-s-garage-international-outlets.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/ford-s-garage-international-outlets.html">Ford&#x27;s Garage</a></h3>
+          <p class="meta">Burgers &amp; sandwiches &middot; Burger Bar &middot; $$</p><p class="vsub">A burger bar dressed as a 1920s service station at the outlets, with vintage Fords overhead and shop rags for napkins.</p>
           <p class="addr">4971 International Dr Ste 3D.09, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/disney-character-warehouse.html">Disney Character Warehouse</a></h3>
-          <p class="meta">Markets &amp; shops &middot; Disney Outlet Store &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/disney-character-warehouse.html">Disney Character Warehouse</a></h3>
+          <p class="meta">Markets &amp; shops &middot; Disney Outlet Store &middot; $</p><p class="vsub">Disney&#x27;s own closeout store inside the International Premium Outlets, where cleared park merchandise lands at outlet prices.</p>
           <p class="addr">4969 International Dr, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         </div>
         <div class="handoff">
           <a class="btn-ghost" href="/international-drive-finder.html">See the full International Drive list</a>

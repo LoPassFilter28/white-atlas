@@ -211,7 +211,14 @@
       .vcard .addr { margin: 0; color: var(--muted); font-size: .9rem; }
       @media (max-width: 640px) { .facts { grid-template-columns: 1fr; } }
     </style>
-  </head>
+  <style data-cardsys>
+/* cardsys: similar rail cards (2026-10-23 overhaul) */
+.vcard{display:flex;gap:12px;align-items:flex-start}
+.vcard .vthumb{flex:0 0 86px;width:86px;height:86px;border-radius:10px;object-fit:cover;display:block}
+.vcard .vmain{flex:1;min-width:0}
+.vcard .vsub{margin:4px 0 0;font-size:.86rem;line-height:1.45;color:var(--muted,#c6bba2)}
+@media (min-width:1000px){.vlist{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start}}
+</style></head>
   <body>
     <header class="hero">
       <div class="hero-in">
@@ -236,45 +243,45 @@
         <div class="actions">
           <a class="action" href="https://www.google.com/maps/search/?api=1&amp;query=Bubba+Gump+Shrimp+Co.+6000+Universal+Blvd+Ste+735%2C+Orlando%2C+FL+32819" target="_blank" rel="noopener">Directions &rarr;</a>
           <a class="action" href="/archive.html?venue=bubba-gump-shrimp-co">Open in the full finder</a>
-          <a class="action" href="/universal-district-guide.html">Read the Universal story</a>
+          <a class="action" href="/history/universal.html">Read the Universal story</a>
         </div>
       </section>
 
-      <section class="sec" id="similar">
+      <section class="sec" id="district-story"><p class="kicker">District Story</p><h2>The story of Universal CityWalk</h2><p class="lede">A district with the shortest paper trail in Orlando: land bought quietly, built fast, and later bought back.</p><p><a class="btn-ghost" href="/history/universal.html">Read the Universal CityWalk story &rarr;</a></p></section><section class="sec" id="similar">
         <p class="kicker">Similar Feel</p>
         <h2>More places with this feel</h2>
         <p class="lede">Matched by vibe, not by neighborhood: the places across Greater Orlando closest in spirit to Bubba Gump Shrimp Co..</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/the-cowfish-sushi-burger-bar.html">The Cowfish Sushi Burger Bar</a></h3>
-          <p class="meta">Burgers &amp; sandwiches &middot; Universal CityWalk &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/the-cowfish-sushi-burger-bar.html">The Cowfish Sushi Burger Bar</a></h3>
+          <p class="meta">Burgers &amp; sandwiches &middot; Universal CityWalk &middot; $$</p><p class="vsub">At Universal CityWalk, the burgushi idea: sushi rolls built from cheeseburger fixings, fresh tuna rolls and a bento box sampling both worlds.</p>
           <p class="addr">6000 Universal Blvd, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/margaritaville.html">Margaritaville (CityWalk)</a></h3>
-          <p class="meta">Latin &amp; Caribbean &middot; Universal CityWalk &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/margaritaville.html">Margaritaville (CityWalk)</a></h3>
+          <p class="meta">Latin &amp; Caribbean &middot; Universal CityWalk &middot; $$</p><p class="vsub">Full island escapism at Universal CityWalk, with kitschy tropical decor and seating sections inside and out to wander.</p>
           <p class="addr">6000 Universal Studios Plaza Ste 704, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/five-guys.html">Five Guys (CityWalk)</a></h3>
-          <p class="meta">Burgers &amp; sandwiches &middot; Universal CityWalk &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/five-guys.html">Five Guys (CityWalk)</a></h3>
+          <p class="meta">Burgers &amp; sandwiches &middot; Universal CityWalk &middot; $</p><p class="vsub">On the upper level of Universal CityWalk, burgers stacked to order with hand-cut fries piled high in the cup.</p>
           <p class="addr">6000 Universal Blvd, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/voodoo.html">Voodoo Doughnut</a></h3>
-          <p class="meta">Bakeries &middot; Universal Citywalk &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/voodoo.html">Voodoo Doughnut</a></h3>
+          <p class="meta">Bakeries &middot; Universal Citywalk &middot; $</p><p class="vsub">At Universal CityWalk, pink-box spectacle and over-the-top novelty, with a revolving display of donuts guests call ridiculous.</p>
           <p class="addr">Voodoo Doughnut, 6000 Universal Blvd, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/bonefish-grill.html">Bonefish Grill</a></h3>
-          <p class="meta">Seafood &middot; Airport Corridor &middot; $</p>
+          <img class="vthumb" src="/assets/venue-bonefish-grill.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/bonefish-grill.html">Bonefish Grill</a></h3>
+          <p class="meta">Seafood &middot; Airport Corridor &middot; $</p><p class="vsub">At Lee Vista off Gateway Village Circle, polished and reliable, with wood-grilled seafood that suits date night.</p>
           <p class="addr">Bonefish Grill, 5463 Gateway Village Cir, Orlando, FL 32812</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/the-juicy-crab.html">The Juicy Crab</a></h3>
-          <p class="meta">Seafood &middot; SoDo &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/the-juicy-crab.html">The Juicy Crab</a></h3>
+          <p class="meta">Seafood &middot; SoDo &middot; $</p><p class="vsub">Built for messy, casual seafood boils on East Michigan Street in SoDo, meant to be shared around the table.</p>
           <p class="addr">296 E Michigan St, Orlando, FL</p>
-        </article>
+        </div></article>
         </div>
       </section>
 
@@ -284,35 +291,35 @@
         <p class="lede">Other places in Universal, closest to Bubba Gump Shrimp Co. first.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/cold-stone-creamery.html">Cold Stone Creamery</a></h3>
-          <p class="meta">Sweets · Ice Cream &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/cold-stone-creamery.html">Cold Stone Creamery</a></h3>
+          <p class="meta">Sweets · Ice Cream &middot; $</p><p class="vsub">At Universal CityWalk, mix-ins fold into ice cream on a frozen granite slab, built to order at the counter.</p>
           <p class="addr">6000 Universal Blvd, Orlando, FL</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/the-cowfish-sushi-burger-bar.html">The Cowfish Sushi Burger Bar</a></h3>
-          <p class="meta">Burgers &amp; sandwiches · Burgers &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/the-cowfish-sushi-burger-bar.html">The Cowfish Sushi Burger Bar</a></h3>
+          <p class="meta">Burgers &amp; sandwiches · Burgers &middot; $$</p><p class="vsub">At Universal CityWalk, the burgushi idea: sushi rolls built from cheeseburger fixings, fresh tuna rolls and a bento box sampling both worlds.</p>
           <p class="addr">6000 Universal Blvd, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/hard-rock-cafe-orlando.html">Hard Rock Cafe Orlando</a></h3>
-          <p class="meta">American · Theme Restaurant &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-hard-rock-cafe-orlando.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/hard-rock-cafe-orlando.html">Hard Rock Cafe Orlando</a></h3>
+          <p class="meta">American · Theme Restaurant &middot; $$</p><p class="vsub">Guests call it the world&#x27;s largest Hard Rock Cafe, at Universal CityWalk, walls covered in guitars, tour jackets and memorabilia in every corner.</p>
           <p class="addr">6050 Universal Blvd, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/hard-rock-live.html">Hard Rock Live</a></h3>
-          <p class="meta">Nightlife &amp; music · Music Venue &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/hard-rock-live.html">Hard Rock Live</a></h3>
+          <p class="meta">Nightlife &amp; music · Music Venue &middot; $$</p><p class="vsub">Beside the Hard Rock Cafe at Universal CityWalk, arena-scale sound and lighting with sightlines guests say stay close from almost anywhere.</p>
           <p class="addr">6050 Universal Blvd, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/toothsome.html">The Toothsome Chocolate Emporium &amp; Savory Feast Kitchen</a></h3>
-          <p class="meta">American · Theme Restaurant &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/toothsome.html">The Toothsome Chocolate Emporium &amp; Savory Feast Kitchen</a></h3>
+          <p class="meta">American · Theme Restaurant &middot; $$</p><p class="vsub">A steampunk chocolate factory at CityWalk, all brass, gears and towering smokestacks, built on chocolate in every course.</p>
           <p class="addr">The Toothsome Chocolate Emporium &amp; Savory Feast Kitchen, 6000 Universal Blvd, Orlando, FL 32819-7611</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/voodoo.html">Voodoo Doughnut</a></h3>
-          <p class="meta">Bakeries · Bakery &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/voodoo.html">Voodoo Doughnut</a></h3>
+          <p class="meta">Bakeries · Bakery &middot; $</p><p class="vsub">At Universal CityWalk, pink-box spectacle and over-the-top novelty, with a revolving display of donuts guests call ridiculous.</p>
           <p class="addr">Voodoo Doughnut, 6000 Universal Blvd, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         </div>
         <div class="handoff">
           <a class="btn-ghost" href="/universal-finder.html">See the full Universal list</a>

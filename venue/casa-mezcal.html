@@ -211,7 +211,14 @@
       .vcard .addr { margin: 0; color: var(--muted); font-size: .9rem; }
       @media (max-width: 640px) { .facts { grid-template-columns: 1fr; } }
     </style>
-  </head>
+  <style data-cardsys>
+/* cardsys: similar rail cards (2026-10-23 overhaul) */
+.vcard{display:flex;gap:12px;align-items:flex-start}
+.vcard .vthumb{flex:0 0 86px;width:86px;height:86px;border-radius:10px;object-fit:cover;display:block}
+.vcard .vmain{flex:1;min-width:0}
+.vcard .vsub{margin:4px 0 0;font-size:.86rem;line-height:1.45;color:var(--muted,#c6bba2)}
+@media (min-width:1000px){.vlist{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start}}
+</style></head>
   <body>
     <header class="hero">
       <div class="hero-in">
@@ -236,45 +243,45 @@
         <div class="actions">
           <a class="action" href="https://www.google.com/maps/search/?api=1&amp;query=Casa+Mezcal+8267+International+Dr%2C+Orlando%2C+FL+32819" target="_blank" rel="noopener">Directions &rarr;</a>
           <a class="action" href="/archive.html?venue=casa-mezcal">Open in the full finder</a>
-          <a class="action" href="/international-drive-district-guide.html">Read the International Drive story</a>
+          <a class="action" href="/history/i-drive.html">Read the International Drive story</a>
         </div>
       </section>
 
-      <section class="sec" id="similar">
+      <section class="sec" id="district-story"><p class="kicker">District Story</p><h2>The story of International Drive</h2><p class="lede">A hotel in the boondocks, a road paved after it and named to sound big and important, and the corridor that taught Orlando how to be a vacation.</p><p><a class="btn-ghost" href="/history/i-drive.html">Read the International Drive story &rarr;</a></p></section><section class="sec" id="similar">
         <p class="kicker">Similar Feel</p>
         <h2>More places with this feel</h2>
         <p class="lede">Matched by vibe, not by neighborhood: the places across Greater Orlando closest in spirit to Casa Mezcal.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/cocina-maya-mexican-grill-mezcaleria.html">Cocina Maya Mexican Grill &amp; Mezcaleria</a></h3>
-          <p class="meta">Mexican &middot; Lake Mary &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/cocina-maya-mexican-grill-mezcaleria.html">Cocina Maya Mexican Grill &amp; Mezcaleria</a></h3>
+          <p class="meta">Mexican &middot; Lake Mary &middot; $$</p><p class="vsub">Cozy, festive Lake Mary room where Mexican cooking goes well past taco-shop basics, with a little tableside flair.</p>
           <p class="addr">3590 US-17 Ste 1026, Lake Mary, FL 32746</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/reyes.html">Reyes Mezcaleria</a></h3>
-          <p class="meta">Mexican &middot; Downtown North &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/reyes.html">Reyes Mezcaleria</a></h3>
+          <p class="meta">Mexican &middot; Downtown North &middot; $$</p><p class="vsub">Michoacán-born chef Wendy Lopez cooks on North Orange Avenue in a room guests describe as beautiful and alive.</p>
           <p class="addr">Reyes Mezcaleria, 821 N Orange Ave, Orlando, FL 32801-1014</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/agave-azul-cocina-mexicana.html">Agave Azul Cocina Mexicana</a></h3>
-          <p class="meta">Mexican &middot; Airport Corridor &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/agave-azul-cocina-mexicana.html">Agave Azul Cocina Mexicana</a></h3>
+          <p class="meta">Mexican &middot; Airport Corridor &middot; $$</p><p class="vsub">The Mexican dining room at Gateway Village near the airport is loud, festive and high-energy, immaculate with a lot going on.</p>
           <p class="addr">Agave Azul Cocina Mexicana, 5475 Gateway Village Cir, Orlando, FL 32812-4002, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/agave-azul-winter-springs.html">Agave Azul Winter Springs</a></h3>
-          <p class="meta">Mexican &middot; Winter Springs &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/agave-azul-winter-springs.html">Agave Azul Winter Springs</a></h3>
+          <p class="meta">Mexican &middot; Winter Springs &middot; $$</p><p class="vsub">The Winter Springs room is festive and high-energy, a family-owned Mexican kitchen where the noise is part of the fun.</p>
           <p class="addr">5248 Red Bug Lake Rd, Winter Springs, FL 32708</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/cafe-tu-tu-tango.html">Café Tu Tu Tango</a></h3>
-          <p class="meta">Restaurants &middot; I-Drive &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-cafe-tu-tu-tango.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/cafe-tu-tu-tango.html">Café Tu Tu Tango</a></h3>
+          <p class="meta">Restaurants &middot; I-Drive &middot; $$</p><p class="vsub">An I-Drive original since the 1990s that treats dinner like an art opening, with resident artists painting at easels, walls doubling as the gallery.</p>
           <p class="addr">8625 International Dr, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/mangos.html">Mango&#x27;s Tropical Cafe</a></h3>
-          <p class="meta">Latin &amp; Caribbean &middot; International Drive &middot; $$$</p>
+          <div class="vmain"><h3><a href="/venue/mangos.html">Mango&#x27;s Tropical Cafe</a></h3>
+          <p class="meta">Latin &amp; Caribbean &middot; International Drive &middot; $$$</p><p class="vsub">On International Drive, this is a nightclub first, with dinner and a live Latin show folded into the front of the night.</p>
           <p class="addr">Mango&#x27;s Tropical Cafe, 8126 International Dr, Orlando, FL 32819-9323</p>
-        </article>
+        </div></article>
         </div>
       </section>
 
@@ -284,35 +291,35 @@
         <p class="lede">Other places in International Drive, Local Picks first, then the closest to Casa Mezcal.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/toms-watch-bar-orlando.html">Tom&#x27;s Watch Bar</a> <span class="badge">Local Pick</span></h3>
-          <p class="meta">Bars &amp; lounges · Bar &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-toms-watch-bar-orlando.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/toms-watch-bar-orlando.html">Tom&#x27;s Watch Bar</a> <span class="badge">Local Pick</span></h3>
+          <p class="meta">Bars &amp; lounges · Bar &middot; $$</p><p class="vsub">On International Drive, a sports bar built like a stadium, with an oversized screen and screens wrapping the room so every seat faces the action.</p>
           <p class="addr">8050 International Dr, Suite 1000, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/baires-grill-orlando.html">Baires Grill</a> <span class="badge">Local Pick</span></h3>
-          <p class="meta">Latin &amp; Caribbean · Argentinian Steakhouse &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-baires-grill-orlando.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/baires-grill-orlando.html">Baires Grill</a> <span class="badge">Local Pick</span></h3>
+          <p class="meta">Latin &amp; Caribbean · Argentinian Steakhouse &middot; $$</p><p class="vsub">The parrilla decides everything at this Argentine steakhouse just off International Drive.</p>
           <p class="addr">8050 International Dr, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/aphrodisiaco.html">Aphrodisiaco</a></h3>
-          <p class="meta">Seafood · Speakeasy &middot; $$$</p>
+          <img class="vthumb" src="/assets/venue-aphrodisiaco.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/aphrodisiaco.html">Aphrodisiaco</a></h3>
+          <p class="meta">Seafood · Speakeasy &middot; $$$</p><p class="vsub">On International Drive, this low-lit speakeasy builds romance into the lighting, the music, and the plate.</p>
           <p class="addr">8267 International Dr, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/sfihas-international-drive.html">Sfiha&#x27;s International Drive</a></h3>
-          <p class="meta">Latin &amp; Caribbean · Brazilian Fast Food &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/sfihas-international-drive.html">Sfiha&#x27;s International Drive</a></h3>
+          <p class="meta">Latin &amp; Caribbean · Brazilian Fast Food &middot; $</p><p class="vsub">Sfiha&#x27;s bakes palm-sized Brazilian meat pies on International Drive, golden rounds filled with beef, chicken and catupiry cheese, or four cheeses.</p>
           <p class="addr">5640 International Dr, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/bruster-s-real-ice-cream.html">Bruster&#x27;s Real Ice Cream</a></h3>
-          <p class="meta">Sweets · Ice Cream &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/bruster-s-real-ice-cream.html">Bruster&#x27;s Real Ice Cream</a></h3>
+          <p class="meta">Sweets · Ice Cream &middot; $</p><p class="vsub">Cheerful, old-fashioned scoop stand on International Drive, with ice cream made in-store and fresh waffle cones.</p>
           <p class="addr">5584 International Dr, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/camila-s-brazilian-restaurant.html">Camila&#x27;s Brazilian Restaurant</a></h3>
-          <p class="meta">Latin &amp; Caribbean · Brazilian Buffet &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-camila-s-brazilian-restaurant.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/camila-s-brazilian-restaurant.html">Camila&#x27;s Brazilian Restaurant</a></h3>
+          <p class="meta">Latin &amp; Caribbean · Brazilian Buffet &middot; $$</p><p class="vsub">On International Drive since 1989, this festive, unpretentious buffet is where local Brazilians treat it as home.</p>
           <p class="addr">5458 International Dr, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         </div>
         <div class="handoff">
           <a class="btn-ghost" href="/international-drive-finder.html">See the full International Drive list</a>

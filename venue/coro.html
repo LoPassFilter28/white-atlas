@@ -239,6 +239,13 @@ html[data-theme="light"] .hero.has-photo{--ink:#f4efe1;--headline:#f6edd6;--mute
 .hero-plate figcaption .hero-credit{display:block;color:#5c6a58;font-size:.72rem;margin-top:2px}
 .hero-plate figcaption a{color:#7c520c}
 .has-photo .hero-in{padding-bottom:18px}
+</style><style data-cardsys>
+/* cardsys: similar rail cards (2026-10-23 overhaul) */
+.vcard{display:flex;gap:12px;align-items:flex-start}
+.vcard .vthumb{flex:0 0 86px;width:86px;height:86px;border-radius:10px;object-fit:cover;display:block}
+.vcard .vmain{flex:1;min-width:0}
+.vcard .vsub{margin:4px 0 0;font-size:.86rem;line-height:1.45;color:var(--muted,#c6bba2)}
+@media (min-width:1000px){.vlist{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start}}
 </style></head>
   <body>
     <header class="hero has-photo">
@@ -266,46 +273,46 @@ html[data-theme="light"] .hero.has-photo{--ink:#f4efe1;--headline:#f6edd6;--mute
         <div class="actions">
           <a class="action" href="https://www.google.com/maps/search/?api=1&amp;query=Coro+Coro%2C+3022+Corrine+Dr%2C+Orlando%2C+FL+32803-2204" target="_blank" rel="noopener">Directions &rarr;</a>
           <a class="action" href="/archive.html?venue=coro">Open in the full finder</a>
-          <a class="action" href="/audubon-park-district-guide.html">Read the Audubon Park story</a>
+          <a class="action" href="/history/audubon-park.html">Read the Audubon Park story</a>
           <a class="action action-ig" href="https://www.instagram.com/cororestaurant" target="_blank" rel="noopener"><svg class="ig-glyph" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="vertical-align:-2px;margin-right:6px"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg> Instagram</a>
         </div>
       </section>
 
-      <section class="sec" id="similar">
+      <section class="sec" id="district-story"><p class="kicker">District Story</p><h2>The story of Audubon Park</h2><p class="lede">Platted as Lakewood Estates in 1937, built out for the bases, and renamed, by tradition, for its birds.</p><p><a class="btn-ghost" href="/history/audubon-park.html">Read the Audubon Park story &rarr;</a></p></section><section class="sec" id="similar">
         <p class="kicker">Similar Feel</p>
         <h2>More places with this feel</h2>
         <p class="lede">Matched by vibe, not by neighborhood: the places across Greater Orlando closest in spirit to Coro.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/sushi-lolas.html">Sushi Lola&#x27;s</a></h3>
-          <p class="meta">Japanese &amp; sushi &middot; Audubon Park &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/sushi-lolas.html">Sushi Lola&#x27;s</a></h3>
+          <p class="meta">Japanese &amp; sushi &middot; Audubon Park &middot; $$</p><p class="vsub">On Corrine Drive, owner Aaron Pak runs Japanese and Korean kitchens, so a Playboy Roll can sit beside dolsot bibimbap.</p>
           <p class="addr">2902 Corrine Dr, Orlando, FL 32803, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/foreigner.html">Foreigner Restaurant</a></h3>
-          <p class="meta">Fine dining &amp; steak &middot; Audubon Park &middot; $$$$</p>
+          <div class="vmain"><h3><a href="/venue/foreigner.html">Foreigner Restaurant</a></h3>
+          <p class="meta">Fine dining &amp; steak &middot; Audubon Park &middot; $$$$</p><p class="vsub">Chef Bruno Fonseca&#x27;s counter on Corrine Drive is an intimate tasting room with a menu that changes month to month.</p>
           <p class="addr">Foreigner Restaurant, 2816 Corrine Dr, Orlando, FL 32803-2226</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/bacan.html">Bacán</a></h3>
-          <p class="meta">Latin &amp; Caribbean &middot; Lake Nona &middot; $$$$</p>
+          <img class="vthumb" src="/assets/venue-bacan.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/bacan.html">Bacán</a></h3>
+          <p class="meta">Latin &amp; Caribbean &middot; Lake Nona &middot; $$$$</p><p class="vsub">Inside Lake Nona&#x27;s Wave Hotel, the open kitchen cooks across the Americas for a special-night-out crowd.</p>
           <p class="addr">Bacán, 6100 Wave Hotel Dr, Orlando, FL 32827</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/stk-steakhouse.html">STK Steakhouse</a></h3>
-          <p class="meta">Fine dining &amp; steak &middot; Disney Springs &middot; $$$</p>
+          <img class="vthumb" src="/assets/venue-stk-steakhouse.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/stk-steakhouse.html">STK Steakhouse</a></h3>
+          <p class="meta">Fine dining &amp; steak &middot; Disney Springs &middot; $$$</p><p class="vsub">At Disney Springs, a chic steakhouse paired with club-like lounge energy, summed up by guests as vibe dining.</p>
           <p class="addr">1580 E Buena Vista Dr, Lake Buena Vista, FL 32830</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/camille.html">Camille</a></h3>
-          <p class="meta">Noodles &amp; Southeast Asian &middot; Baldwin Park &middot; $$$$</p>
+          <img class="vthumb" src="/assets/venue-camille.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/camille.html">Camille</a></h3>
+          <p class="meta">Noodles &amp; Southeast Asian &middot; Baldwin Park &middot; $$$$</p><p class="vsub">Chef Tung Phan named this Baldwin Park counter for his daughter, pairing Vietnamese flavors with French forms in an intimate room.</p>
           <p class="addr">Camille, 4962 New Broad St, Orlando, FL 32814-6415</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/tikka-shack-indian-grub.html">Tikka Shack Indian Grub</a></h3>
-          <p class="meta">Indian &middot; Oviedo &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/tikka-shack-indian-grub.html">Tikka Shack Indian Grub</a></h3>
+          <p class="meta">Indian &middot; Oviedo &middot; $$</p><p class="vsub">Fast-casual Indian kitchen on Alafaya Trail that keeps flavors bold and the mood fun and casual.</p>
           <p class="addr">Tikka Shack Indian Grub, 1500 Alafaya Trl, Oviedo, FL 32765-4517, United States</p>
-        </article>
+        </div></article>
         </div>
       </section>
 
@@ -315,35 +322,35 @@ html[data-theme="light"] .hero.has-photo{--ink:#f4efe1;--headline:#f6edd6;--mute
         <p class="lede">Other places in Audubon Park, closest to Coro first.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/kelly-s-homemade-ice-cream.html">Kelly&#x27;s Homemade Ice Cream</a></h3>
-          <p class="meta">Sweets · Ice Cream &middot; $</p>
+          <img class="vthumb" src="/assets/venue-kelly-s-homemade-ice-cream.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/kelly-s-homemade-ice-cream.html">Kelly&#x27;s Homemade Ice Cream</a></h3>
+          <p class="meta">Sweets · Ice Cream &middot; $</p><p class="vsub">Small-batch ice cream churned with monthly flavors like Cookie Monster, Mexican Chocolate, Key Lime Pie and Coquito, plus flights and Dog Pops.</p>
           <p class="addr">3114 Corrine Dr, Orlando, FL</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/domu.html">Domu</a></h3>
-          <p class="meta">Noodles &amp; Southeast Asian · Noodles &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/domu.html">Domu</a></h3>
+          <p class="meta">Noodles &amp; Southeast Asian · Noodles &middot; $$</p><p class="vsub">The East End Market original is a compact, buzzing ramen room Orlando keeps talking about.</p>
           <p class="addr">3201 Corrine Dr, Orlando, FL 32803</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/east-end-market.html">East End Market</a></h3>
-          <p class="meta">Markets &amp; shops · Food Hall &middot; $</p>
+          <img class="vthumb" src="/assets/venue-east-end-market.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/east-end-market.html">East End Market</a></h3>
+          <p class="meta">Markets &amp; shops · Food Hall &middot; $</p><p class="vsub">Local makers under one Audubon Park roof: Gideon&#x27;s Bakehouse, Olde Hearth Bread, Lineage Coffee, Domu, La Femme du Fromage, Dochi and Hinckley&#x27;s.</p>
           <p class="addr">3201 Corrine Dr, Orlando, FL 32803</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/lineage-coffee-roasting.html">Lineage Coffee Roasting</a></h3>
-          <p class="meta">Coffee &amp; cafes · Coffee Shop &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-lineage-coffee-roasting.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/lineage-coffee-roasting.html">Lineage Coffee Roasting</a></h3>
+          <p class="meta">Coffee &amp; cafes · Coffee Shop &middot; $$</p><p class="vsub">Tucked in the back of East End Market, a working roastery where the cup shows the craft, from flat whites to cold brew.</p>
           <p class="addr">3201 Corrine Dr, Orlando, FL 32803-2224, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/winter-park-biscuit-company.html">Winter Park Biscuit Company</a></h3>
-          <p class="meta">Breakfast &amp; brunch · Breakfast &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/winter-park-biscuit-company.html">Winter Park Biscuit Company</a></h3>
+          <p class="meta">Breakfast &amp; brunch · Breakfast &middot; $$</p><p class="vsub">All-vegan counter inside East End Market built around flaky, golden oat buttermilk biscuits, stacked or smothered in gravy.</p>
           <p class="addr">3201 Corrine Dr, Orlando, FL 32803-2224, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/hinckleys-fancy-meats.html">Hinckley&#x27;s Fancy Meats</a></h3>
-          <p class="meta">Markets &amp; shops · Butcher Shop &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/hinckleys-fancy-meats.html">Hinckley&#x27;s Fancy Meats</a></h3>
+          <p class="meta">Markets &amp; shops · Butcher Shop &middot; $$</p><p class="vsub">A craft butcher stall inside East End Market, old-school in the best way, with house-cured meats in the case and a deli counter.</p>
           <p class="addr">3201 Corrine Dr #104, Orlando, FL 32803</p>
-        </article>
+        </div></article>
         </div>
         <div class="handoff">
           <a class="btn-ghost" href="/audubon-park-finder.html">See the full Audubon Park list</a>

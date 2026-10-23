@@ -221,7 +221,14 @@
 .take .take-label{font-size:.72rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--accent-ink);margin:0 0 8px}
 
 </style>
-  </head>
+  <style data-cardsys>
+/* cardsys: similar rail cards (2026-10-23 overhaul) */
+.vcard{display:flex;gap:12px;align-items:flex-start}
+.vcard .vthumb{flex:0 0 86px;width:86px;height:86px;border-radius:10px;object-fit:cover;display:block}
+.vcard .vmain{flex:1;min-width:0}
+.vcard .vsub{margin:4px 0 0;font-size:.86rem;line-height:1.45;color:var(--muted,#c6bba2)}
+@media (min-width:1000px){.vlist{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start}}
+</style></head>
   <body>
     <header class="hero">
       <div class="hero-in">
@@ -246,7 +253,7 @@
         <div class="actions">
           <a class="action" href="https://www.google.com/maps/search/?api=1&amp;query=Chathams+Place+Chatham%27s+Place%2C+7575+Dr+Phillips+Blvd%2C+Orlando%2C+FL+32819-5149" target="_blank" rel="noopener">Directions &rarr;</a>
           <a class="action" href="/archive.html?venue=chathams">Open in the full finder</a>
-          <a class="action" href="/international-drive-district-guide.html">Read the International Drive story</a>
+          <a class="action" href="/history/i-drive.html">Read the International Drive story</a>
         </div>
       </section>
 
@@ -270,41 +277,41 @@
         </div>
       </section>
 
-<section class="sec" id="similar">
+<section class="sec" id="district-story"><p class="kicker">District Story</p><h2>The story of Dr. Phillips</h2><p class="lede">A hotel in the boondocks, a road paved after it and named to sound big and important, and the corridor that taught Orlando how to be a vacation.</p><p><a class="btn-ghost" href="/history/i-drive.html">Read the Dr. Phillips story &rarr;</a></p></section><section class="sec" id="similar">
         <p class="kicker">Similar Feel</p>
         <h2>More places with this feel</h2>
         <p class="lede">Matched by vibe, not by neighborhood: the places across Greater Orlando closest in spirit to Chathams Place.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/at-the-diner.html">At The Diner</a></h3>
-          <p class="meta">Breakfast &amp; brunch &middot; Dr Phillips &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/at-the-diner.html">At The Diner</a></h3>
+          <p class="meta">Breakfast &amp; brunch &middot; Dr Phillips &middot; $</p><p class="vsub">Bright, playful Dr.</p>
           <p class="addr">5072 Dr Phillips Blvd, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/vines-by-h.html">Vines by H</a></h3>
-          <p class="meta">Fine dining &amp; steak &middot; Sand Lake &middot; $$$</p>
+          <img class="vthumb" src="/assets/venue-vines-by-h.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/vines-by-h.html">Vines by H</a></h3>
+          <p class="meta">Fine dining &amp; steak &middot; Sand Lake &middot; $$$</p><p class="vsub">Restaurant Row&#x27;s long-running wine and jazz room is back under a new name at the same Sand Lake address.</p>
           <p class="addr">7533 W Sand Lake Rd, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/ruth-s-chris-steak-house-sand-lake.html">Ruth&#x27;s Chris Steak House</a></h3>
-          <p class="meta">Fine dining &amp; steak &middot; Sand Lake &middot; $$$$</p>
+          <div class="vmain"><h3><a href="/venue/ruth-s-chris-steak-house-sand-lake.html">Ruth&#x27;s Chris Steak House</a></h3>
+          <p class="meta">Fine dining &amp; steak &middot; Sand Lake &middot; $$$$</p><p class="vsub">The familiar name on Restaurant Row, recently remodeled and still doing the sizzling-platter ritual exactly to spec.</p>
           <p class="addr">7501 W Sand Lake Rd, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/the-capital-grille-pointe-orlando.html">The Capital Grille</a></h3>
-          <p class="meta">Fine dining &amp; steak &middot; Pointe Orlando &middot; $$$$</p>
+          <div class="vmain"><h3><a href="/venue/the-capital-grille-pointe-orlando.html">The Capital Grille</a></h3>
+          <p class="meta">Fine dining &amp; steak &middot; Pointe Orlando &middot; $$$$</p><p class="vsub">The default client steakhouse at Pointe Orlando, a short walk from the Rosen hotels, running the full expense-account ritual.</p>
           <p class="addr">9101 International Dr, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/fleming-s-prime-steakhouse-sand-lake.html">Fleming&#x27;s Prime Steakhouse &amp; Wine Bar</a></h3>
-          <p class="meta">Fine dining &amp; steak &middot; Dellagio &middot; $$$$</p>
+          <div class="vmain"><h3><a href="/venue/fleming-s-prime-steakhouse-sand-lake.html">Fleming&#x27;s Prime Steakhouse &amp; Wine Bar</a></h3>
+          <p class="meta">Fine dining &amp; steak &middot; Dellagio &middot; $$$$</p><p class="vsub">By the Dellagio fountains, Fleming&#x27;s does the classic steakhouse thing right: prime cuts, a deep wine list, and sharp service.</p>
           <p class="addr">8030 Via Dellagio Way, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/burntwood-tavern.html">Burntwood Tavern</a></h3>
-          <p class="meta">American &middot; Dr Phillips &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-burntwood-tavern.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/burntwood-tavern.html">Burntwood Tavern</a></h3>
+          <p class="meta">American &middot; Dr Phillips &middot; $$</p><p class="vsub">The Dr Phillips neighborhood clubhouse: a warm, rustic room with comfy booths, a big patio behind roll-up doors, and friendly, efficient staff.</p>
           <p class="addr">5078 Dr Phillips Blvd, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         </div>
       </section>
 
@@ -314,35 +321,35 @@
         <p class="lede">Other places in International Drive, Local Picks first, then the closest to Chathams Place.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/toms-watch-bar-orlando.html">Tom&#x27;s Watch Bar</a> <span class="badge">Local Pick</span></h3>
-          <p class="meta">Bars &amp; lounges · Bar &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-toms-watch-bar-orlando.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/toms-watch-bar-orlando.html">Tom&#x27;s Watch Bar</a> <span class="badge">Local Pick</span></h3>
+          <p class="meta">Bars &amp; lounges · Bar &middot; $$</p><p class="vsub">On International Drive, a sports bar built like a stadium, with an oversized screen and screens wrapping the room so every seat faces the action.</p>
           <p class="addr">8050 International Dr, Suite 1000, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/baires-grill-orlando.html">Baires Grill</a> <span class="badge">Local Pick</span></h3>
-          <p class="meta">Latin &amp; Caribbean · Argentinian Steakhouse &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-baires-grill-orlando.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/baires-grill-orlando.html">Baires Grill</a> <span class="badge">Local Pick</span></h3>
+          <p class="meta">Latin &amp; Caribbean · Argentinian Steakhouse &middot; $$</p><p class="vsub">The parrilla decides everything at this Argentine steakhouse just off International Drive.</p>
           <p class="addr">8050 International Dr, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/american-social.html">American Social</a></h3>
-          <p class="meta">American &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-american-social.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/american-social.html">American Social</a></h3>
+          <p class="meta">American &middot; $$</p><p class="vsub">Restaurant Row&#x27;s high-energy sports lounge has screens in every sightline and a room built for game day.</p>
           <p class="addr">7335 W Sand Lake Rd Ste 101, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/coco-key-water-park.html">CoCo Key Water Park</a></h3>
-          <p class="meta">Attractions · Water Park &middot; $</p>
+          <img class="vthumb" src="/assets/venue-coco-key-water-park.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/coco-key-water-park.html">CoCo Key Water Park</a></h3>
+          <p class="meta">Attractions · Water Park &middot; $</p><p class="vsub">A low-key hotel water park on International Drive that sells day passes, so no resort stay is needed.</p>
           <p class="addr">7400 International Dr, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/yh-seafood-clubhouse.html">YH Seafood Clubhouse</a></h3>
-          <p class="meta">Chinese · Cantonese &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/yh-seafood-clubhouse.html">YH Seafood Clubhouse</a></h3>
+          <p class="meta">Chinese · Cantonese &middot; $$</p><p class="vsub">Turkey Lake Road&#x27;s Cantonese room, refined and warm, where round tables fill with family-style plates.</p>
           <p class="addr">YH Seafood Clubhouse, 8081 Turkey Lake Rd, Orlando, FL 32819-7321, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/taverna-opa.html">Taverna Opa</a></h3>
-          <p class="meta">Mediterranean · Greek &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/taverna-opa.html">Taverna Opa</a></h3>
+          <p class="meta">Mediterranean · Greek &middot; $$</p><p class="vsub">A festive, high-energy Greek taverna at Pointe Orlando where dinner turns into a celebration, napkins flying as confetti.</p>
           <p class="addr">9101 International Dr, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         </div>
         <div class="handoff">
           <a class="btn-ghost" href="/international-drive-finder.html">See the full International Drive list</a>

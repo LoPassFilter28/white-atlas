@@ -211,7 +211,14 @@
       .vcard .addr { margin: 0; color: var(--muted); font-size: .9rem; }
       @media (max-width: 640px) { .facts { grid-template-columns: 1fr; } }
     </style>
-  </head>
+  <style data-cardsys>
+/* cardsys: similar rail cards (2026-10-23 overhaul) */
+.vcard{display:flex;gap:12px;align-items:flex-start}
+.vcard .vthumb{flex:0 0 86px;width:86px;height:86px;border-radius:10px;object-fit:cover;display:block}
+.vcard .vmain{flex:1;min-width:0}
+.vcard .vsub{margin:4px 0 0;font-size:.86rem;line-height:1.45;color:var(--muted,#c6bba2)}
+@media (min-width:1000px){.vlist{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start}}
+</style></head>
   <body>
     <header class="hero">
       <div class="hero-in">
@@ -240,41 +247,41 @@
         </div>
       </section>
 
-      <section class="sec" id="similar">
+      <section class="sec" id="district-story"><p class="kicker">District Stories</p><h2>Orlando&#x27;s long memory</h2><p class="lede">The guide keeps the long memory of Orlando&#x27;s districts in one place: the names, the plats and the stories behind the streets.</p><p><a class="btn-ghost" href="/history.html">Browse the district stories &rarr;</a></p></section><section class="sec" id="similar">
         <p class="kicker">Similar Feel</p>
         <h2>More places with this feel</h2>
         <p class="lede">Matched by vibe, not by neighborhood: the places across Greater Orlando closest in spirit to Cocina Maya Mexican Grill &amp; Mezcaleria.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/agave-azul-cocina-mexicana.html">Agave Azul Cocina Mexicana</a></h3>
-          <p class="meta">Mexican &middot; Airport Corridor &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/agave-azul-cocina-mexicana.html">Agave Azul Cocina Mexicana</a></h3>
+          <p class="meta">Mexican &middot; Airport Corridor &middot; $$</p><p class="vsub">The Mexican dining room at Gateway Village near the airport is loud, festive and high-energy, immaculate with a lot going on.</p>
           <p class="addr">Agave Azul Cocina Mexicana, 5475 Gateway Village Cir, Orlando, FL 32812-4002, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/reyes.html">Reyes Mezcaleria</a></h3>
-          <p class="meta">Mexican &middot; Downtown North &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/reyes.html">Reyes Mezcaleria</a></h3>
+          <p class="meta">Mexican &middot; Downtown North &middot; $$</p><p class="vsub">Michoacán-born chef Wendy Lopez cooks on North Orange Avenue in a room guests describe as beautiful and alive.</p>
           <p class="addr">Reyes Mezcaleria, 821 N Orange Ave, Orlando, FL 32801-1014</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/casa-mezcal.html">Casa Mezcal</a></h3>
-          <p class="meta">Mexican &middot; International Drive &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/casa-mezcal.html">Casa Mezcal</a></h3>
+          <p class="meta">Mexican &middot; International Drive &middot; $$</p><p class="vsub">A festive, elegant room on International Drive built around mezcal and tequila poured with conviction.</p>
           <p class="addr">8267 International Dr, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/agave-azul-winter-springs.html">Agave Azul Winter Springs</a></h3>
-          <p class="meta">Mexican &middot; Winter Springs &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/agave-azul-winter-springs.html">Agave Azul Winter Springs</a></h3>
+          <p class="meta">Mexican &middot; Winter Springs &middot; $$</p><p class="vsub">The Winter Springs room is festive and high-energy, a family-owned Mexican kitchen where the noise is part of the fun.</p>
           <p class="addr">5248 Red Bug Lake Rd, Winter Springs, FL 32708</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/quesa-loco.html">QuesaLoco</a></h3>
-          <p class="meta">Mexican &middot; College Park &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-quesa-loco.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/quesa-loco.html">QuesaLoco</a></h3>
+          <p class="meta">Mexican &middot; College Park &middot; $$</p><p class="vsub">Birria country on Fairbanks Ave, in a colorful room with Dia de los Muertos murals and the joyful chaos of its food truck days.</p>
           <p class="addr">971 W Fairbanks Ave, Orlando, FL 32804</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/bacan.html">Bacán</a></h3>
-          <p class="meta">Latin &amp; Caribbean &middot; Lake Nona &middot; $$$$</p>
+          <img class="vthumb" src="/assets/venue-bacan.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/bacan.html">Bacán</a></h3>
+          <p class="meta">Latin &amp; Caribbean &middot; Lake Nona &middot; $$$$</p><p class="vsub">Inside Lake Nona&#x27;s Wave Hotel, the open kitchen cooks across the Americas for a special-night-out crowd.</p>
           <p class="addr">Bacán, 6100 Wave Hotel Dr, Orlando, FL 32827</p>
-        </article>
+        </div></article>
         </div>
       </section>
 
@@ -284,35 +291,35 @@
         <p class="lede">Other places in Sanford, closest to Cocina Maya Mexican Grill &amp; Mezcaleria first.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/lighthouse-seafood.html">Lighthouse Seafood</a></h3>
-          <p class="meta">Seafood &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/lighthouse-seafood.html">Lighthouse Seafood</a></h3>
+          <p class="meta">Seafood &middot; $$</p><p class="vsub">Half market, half cafe on Country Club Road in Lake Mary, where you can buy fish to take home or have the kitchen cook it fresh.</p>
           <p class="addr">Lighthouse Seafood, 101 N Country Club Rd, Lake Mary, FL 32746, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/parva.html">Parva</a></h3>
-          <p class="meta">Latin &amp; Caribbean · Colombian &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/parva.html">Parva</a></h3>
+          <p class="meta">Latin &amp; Caribbean · Colombian &middot; $$</p><p class="vsub">Warm, homey Colombian bakery and cafe on West Lake Mary Boulevard in Sanford, where the pastry case leads the visit.</p>
           <p class="addr">Parva, 220 W Lake Mary Blvd, Sanford, FL 32773-5925, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/donutste-doughnuts.html">Donutste Family Bakery</a></h3>
-          <p class="meta">Sweets · Donuts &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/donutste-doughnuts.html">Donutste Family Bakery</a></h3>
+          <p class="meta">Sweets · Donuts &middot; $$</p><p class="vsub">Fully plant-based donuts with no butter, milk, or eggs, in a bright pink Lake Mary room guests find cheerful and welcoming.</p>
           <p class="addr">605 Crescent Executive Ct Ste 120, Lake Mary, FL 32746</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/dalis-lao-thai-cafe.html">Dali&#x27;s Lao Thai Cafe</a></h3>
-          <p class="meta">Noodles &amp; Southeast Asian · Thai &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/dalis-lao-thai-cafe.html">Dali&#x27;s Lao Thai Cafe</a></h3>
+          <p class="meta">Noodles &amp; Southeast Asian · Thai &middot; $$</p><p class="vsub">Family-run in Sanford, cooking Lao and Thai food on Rinehart Road with care and fresh ingredients.</p>
           <p class="addr">Dali&#x27;s Lao Thai Cafe, 1181 Rinehart Rd, Sanford, FL 32771-7390, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/duffy-s-sports-grill.html">Duffy&#x27;s Sports Grill</a></h3>
-          <p class="meta">American · Sports Bar &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/duffy-s-sports-grill.html">Duffy&#x27;s Sports Grill</a></h3>
+          <p class="meta">American · Sports Bar &middot; $</p><p class="vsub">TVs everywhere in Lake Mary, so every seat feels close to the game.</p>
           <p class="addr">Duffy&#x27;s Sports Grill, 951 Market Promenade Ave, Lake Mary, FL 32746</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/quigley-coffee.html">Quigley Coffee</a></h3>
-          <p class="meta">Coffee &amp; cafes · Coffee Shop &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-quigley-coffee.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/quigley-coffee.html">Quigley Coffee</a></h3>
+          <p class="meta">Coffee &amp; cafes · Coffee Shop &middot; $$</p><p class="vsub">Playful, bright Sanford shop on Rinehart Road that started as a cart, roasts its own beans, and shares space with a skate shop.</p>
           <p class="addr">Quigley Coffee, 1730 Rinehart Rd, Sanford, FL 32771-6590, United States</p>
-        </article>
+        </div></article>
         </div>
         <div class="handoff">
           <a class="btn-ghost" href="/sanford-finder.html">See the full Sanford list</a>

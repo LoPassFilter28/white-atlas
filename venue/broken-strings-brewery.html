@@ -221,7 +221,14 @@
 .take .take-label{font-size:.72rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--accent-ink);margin:0 0 8px}
 
 </style>
-  </head>
+  <style data-cardsys>
+/* cardsys: similar rail cards (2026-10-23 overhaul) */
+.vcard{display:flex;gap:12px;align-items:flex-start}
+.vcard .vthumb{flex:0 0 86px;width:86px;height:86px;border-radius:10px;object-fit:cover;display:block}
+.vcard .vmain{flex:1;min-width:0}
+.vcard .vsub{margin:4px 0 0;font-size:.86rem;line-height:1.45;color:var(--muted,#c6bba2)}
+@media (min-width:1000px){.vlist{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start}}
+</style></head>
   <body>
     <header class="hero">
       <div class="hero-in">
@@ -246,7 +253,7 @@
         <div class="actions">
           <a class="action" href="https://www.google.com/maps/search/?api=1&amp;query=Broken+Strings+Taproom+Broken+Strings+Brewery%2C+1012+W+Church+St%2C+Orlando%2C+FL+32805-2216" target="_blank" rel="noopener">Directions &rarr;</a>
           <a class="action" href="/archive.html?venue=broken-strings-brewery">Open in the full finder</a>
-          <a class="action" href="/downtown-orlando-district-guide.html">Read the Downtown Orlando story</a>
+          <a class="action" href="/history/downtown.html">Read the Downtown Orlando story</a>
           <a class="action action-ig" href="https://www.instagram.com/brokenstringstaproom" target="_blank" rel="noopener"><svg class="ig-glyph" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="vertical-align:-2px;margin-right:6px"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg> Instagram</a>
         </div>
       </section>
@@ -271,41 +278,41 @@
         </div>
       </section>
 
-<section class="sec" id="similar">
+<section class="sec" id="district-story"><p class="kicker">District Story</p><h2>The story of Downtown</h2><p class="lede">A fort, a courthouse plat and a citrus boom built it. A name nobody can prove still runs it.</p><p><a class="btn-ghost" href="/history/downtown.html">Read the Downtown story &rarr;</a></p></section><section class="sec" id="similar">
         <p class="kicker">Similar Feel</p>
         <h2>More places with this feel</h2>
         <p class="lede">Matched by vibe, not by neighborhood: the places across Greater Orlando closest in spirit to Broken Strings Taproom.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/wills-pub.html">Will&#x27;s Pub &amp; Lil Indie&#x27;s</a></h3>
-          <p class="meta">Nightlife &amp; music &middot; Mills 50 &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/wills-pub.html">Will&#x27;s Pub &amp; Lil Indie&#x27;s</a></h3>
+          <p class="meta">Nightlife &amp; music &middot; Mills 50 &middot; $</p><p class="vsub">On North Mills Avenue, the divey, unpretentious heart of Orlando&#x27;s independent music scene.</p>
           <p class="addr">1042 N Mills Ave, Orlando, FL 32803</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/gravity-taproom.html">Gravity Taproom</a></h3>
-          <p class="meta">Breweries &middot; Downtown &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/gravity-taproom.html">Gravity Taproom</a></h3>
+          <p class="meta">Breweries &middot; Downtown &middot; $$</p><p class="vsub">A welcoming North Quarter hangout where rotating craft taps pour beside brick-fired Neapolitan pies.</p>
           <p class="addr">Gravity Taproom, 777 N Orange Ave, Suite D, Orlando, FL 32801</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/moderne.html">The Moderne</a></h3>
-          <p class="meta">Bars &amp; lounges &middot; Mills 50 &middot; $$$</p>
+          <div class="vmain"><h3><a href="/venue/moderne.html">The Moderne</a></h3>
+          <p class="meta">Bars &amp; lounges &middot; Mills 50 &middot; $$$</p><p class="vsub">Mills 50&#x27;s art deco cocktail room, all gold lines and tableside smoke, swanky and a little theatrical.</p>
           <p class="addr">1241 E Colonial Dr, Orlando, FL 32803</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/ten10-brewing.html">Ten10 Brewing</a></h3>
-          <p class="meta">Breweries &middot; 1010 Virginia Dr &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/ten10-brewing.html">Ten10 Brewing</a></h3>
+          <p class="meta">Breweries &middot; 1010 Virginia Dr &middot; $$</p><p class="vsub">Laid-back neighborhood taproom on Virginia Drive in Mills 50, all about good beer, good tunes and good people.</p>
           <p class="addr">Ten10 Brewing, 1010 Virginia Dr, Orlando, FL 32803-2532</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/toll-road-brewing-company.html">Toll Road Brewing Company</a></h3>
-          <p class="meta">Breweries &middot; Ocoee &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/toll-road-brewing-company.html">Toll Road Brewing Company</a></h3>
+          <p class="meta">Breweries &middot; Ocoee &middot; $$</p><p class="vsub">Small Ocoee taproom with a cozy, laid-back microbrewery feel, staffed by people who treat everyone like a regular.</p>
           <p class="addr">Toll Road Brewing Company, 101 W McKey St, Ocoee, FL 34761-2616, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/hourglass-brewing.html">Hourglass Brewing</a></h3>
-          <p class="meta">Breweries &middot; Orlando &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-hourglass-brewing.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/hourglass-brewing.html">Hourglass Brewing</a></h3>
+          <p class="meta">Breweries &middot; Orlando &middot; $$</p><p class="vsub">Pouring inside a former church on Curry Ford, this Hourglass District taproom keeps a rotating cast of house beers flowing.</p>
           <p class="addr">Hourglass Brewing, 2500 Curry Ford Rd, Orlando, FL 32806-2506, United States</p>
-        </article>
+        </div></article>
         </div>
       </section>
 
@@ -315,35 +322,35 @@
         <p class="lede">Other places in Downtown Orlando, Local Picks first, then the closest to Broken Strings Taproom.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/fixtion.html">Fixtion Restaurant &amp; Bar</a> <span class="badge">Local Pick</span></h3>
-          <p class="meta">American · American Restaurant &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/fixtion.html">Fixtion Restaurant &amp; Bar</a> <span class="badge">Local Pick</span></h3>
+          <p class="meta">American · American Restaurant &middot; $$</p><p class="vsub">On Orange Avenue, comfort food and huge comfy booths early, club energy after dark, shape-shifting through the day.</p>
           <p class="addr">15 N Orange Ave, Orlando, FL 32801</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/wall-street-plaza.html">Wall Street Plaza</a> <span class="badge">Local Pick</span></h3>
-          <p class="meta">Nightlife &amp; music · Entertainment District &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/wall-street-plaza.html">Wall Street Plaza</a> <span class="badge">Local Pick</span></h3>
+          <p class="meta">Nightlife &amp; music · Entertainment District &middot; $$</p><p class="vsub">One downtown block holds the whole crawl: eight bars and patios that, on a big night, turn into a single street party.</p>
           <p class="addr">25 Wall St, Orlando, FL 32801</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/elixir-kitchen-bar.html">Elixir Kitchen and Bar</a> <span class="badge">Local Pick</span></h3>
-          <p class="meta">Bars &amp; lounges · Bar &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-elixir-kitchen-bar.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/elixir-kitchen-bar.html">Elixir Kitchen and Bar</a> <span class="badge">Local Pick</span></h3>
+          <p class="meta">Bars &amp; lounges · Bar &middot; $$</p><p class="vsub">A rustic-hip gastropub in one of downtown&#x27;s original buildings, and very much the neighborhood&#x27;s spot.</p>
           <p class="addr">9 W Washington St, Orlando, FL 32801</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/fettuccine-pasta-class.html">Fettuccine Pasta-Making Class</a></h3>
-          <p class="meta">Attractions · Cooking Class &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/fettuccine-pasta-class.html">Fettuccine Pasta-Making Class</a></h3>
+          <p class="meta">Attractions · Cooking Class &middot; $$</p><p class="vsub">In a hands-on downtown class, Chef Mark walks you through fresh fettuccine from scratch: mixing, rolling thin, slicing ribbons and cooking them off.</p>
           <p class="addr">Goblin Studios, 805 W Central Blvd, Orlando, FL 32805</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/inter-co-stadium.html">Inter&amp;Co Stadium</a></h3>
-          <p class="meta">Attractions · Soccer Stadium &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-inter-co-stadium.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/inter-co-stadium.html">Inter&amp;Co Stadium</a></h3>
+          <p class="meta">Attractions · Soccer Stadium &middot; $$</p><p class="vsub">Downtown&#x27;s soccer cathedral, home to Orlando City SC since 2017, and guests praise the atmosphere.</p>
           <p class="addr">655 W Church St, Orlando, FL 32805</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/kia-center.html">Kia Center (formerly Amway Center)</a></h3>
-          <p class="meta">Attractions · Arena &middot; $$$$</p>
+          <div class="vmain"><h3><a href="/venue/kia-center.html">Kia Center (formerly Amway Center)</a></h3>
+          <p class="meta">Attractions · Arena &middot; $$$$</p><p class="vsub">Orlando&#x27;s big room on Church Street downtown, home of the Magic and the Solar Bears, is where the city gathers loudest.</p>
           <p class="addr">400 W Church St, Orlando, FL 32801</p>
-        </article>
+        </div></article>
         </div>
         <div class="handoff">
           <a class="btn-ghost" href="/downtown-orlando-finder.html">See the full Downtown Orlando list</a>

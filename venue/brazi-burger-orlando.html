@@ -211,7 +211,14 @@
       .vcard .addr { margin: 0; color: var(--muted); font-size: .9rem; }
       @media (max-width: 640px) { .facts { grid-template-columns: 1fr; } }
     </style>
-  </head>
+  <style data-cardsys>
+/* cardsys: similar rail cards (2026-10-23 overhaul) */
+.vcard{display:flex;gap:12px;align-items:flex-start}
+.vcard .vthumb{flex:0 0 86px;width:86px;height:86px;border-radius:10px;object-fit:cover;display:block}
+.vcard .vmain{flex:1;min-width:0}
+.vcard .vsub{margin:4px 0 0;font-size:.86rem;line-height:1.45;color:var(--muted,#c6bba2)}
+@media (min-width:1000px){.vlist{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start}}
+</style></head>
   <body>
     <header class="hero">
       <div class="hero-in">
@@ -240,41 +247,41 @@
         </div>
       </section>
 
-      <section class="sec" id="similar">
+      <section class="sec" id="district-story"><p class="kicker">District Story</p><h2>The story of Orlo Vista</h2><p class="lede">A fort, a courthouse plat and a citrus boom built it. A name nobody can prove still runs it.</p><p><a class="btn-ghost" href="/history/downtown.html">Read the Orlo Vista story &rarr;</a></p></section><section class="sec" id="similar">
         <p class="kicker">Similar Feel</p>
         <h2>More places with this feel</h2>
         <p class="lede">Matched by vibe, not by neighborhood: the places across Greater Orlando closest in spirit to Brazi Burger.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/portillo-s.html">Portillo&#x27;s</a></h3>
-          <p class="meta">Burgers &amp; sandwiches &middot; Orlando &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/portillo-s.html">Portillo&#x27;s</a></h3>
+          <p class="meta">Burgers &amp; sandwiches &middot; Orlando &middot; $</p><p class="vsub">Chicago street food lands on Palm Parkway in a loud, retro room dressed like a 50s diner, all red chrome and nostalgia.</p>
           <p class="addr">7715 Palm Pkwy, Orlando, FL 32836</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/sfihas-international-drive.html">Sfiha&#x27;s International Drive</a></h3>
-          <p class="meta">Latin &amp; Caribbean &middot; International Drive &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/sfihas-international-drive.html">Sfiha&#x27;s International Drive</a></h3>
+          <p class="meta">Latin &amp; Caribbean &middot; International Drive &middot; $</p><p class="vsub">Sfiha&#x27;s bakes palm-sized Brazilian meat pies on International Drive, golden rounds filled with beef, chicken and catupiry cheese, or four cheeses.</p>
           <p class="addr">5640 International Dr, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/hunger-street.html">Hunger Street Tacos</a></h3>
-          <p class="meta">Mexican &middot; Winter Park &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-hunger-street.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/hunger-street.html">Hunger Street Tacos</a></h3>
+          <p class="meta">Mexican &middot; Winter Park &middot; $$</p><p class="vsub">A colorful, mural-covered corner on Fairbanks Avenue serving Mexico City style street tacos in the open air.</p>
           <p class="addr">Hunger Street Tacos, 2103 W Fairbanks Ave, Winter Park, FL 32789-4507</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/grocery-hermanos.html">Grocery Los Hermanos</a></h3>
-          <p class="meta">Mexican &middot; East Orlando &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/grocery-hermanos.html">Grocery Los Hermanos</a></h3>
+          <p class="meta">Mexican &middot; East Orlando &middot; $</p><p class="vsub">A family-run market and taqueria on Curry Ford where guests say the food tastes homemade and very fresh.</p>
           <p class="addr">4130 Curry Ford Rd, Orlando, FL 32806</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/el-burro-loco.html">El Burro Loco</a></h3>
-          <p class="meta">Mexican &middot; Universal &middot; $</p>
+          <img class="vthumb" src="/assets/venue-el-burro-loco.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/el-burro-loco.html">El Burro Loco</a></h3>
+          <p class="meta">Mexican &middot; Universal &middot; $</p><p class="vsub">On Carrier Drive, bold, loud street-food energy, with guests praising its good authentic flavor.</p>
           <p class="addr">6524 Carrier Dr, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/toojays.html">TooJay&#x27;s</a></h3>
-          <p class="meta">Restaurants &middot; Mills 50 &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-toojays.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/toojays.html">TooJay&#x27;s</a></h3>
+          <p class="meta">Restaurants &middot; Mills 50 &middot; $$</p><p class="vsub">New York-style deli on Colonial Drive since 1981, with hot pastrami, a corned beef Reuben, blintzes and matzo ball soup guests call the best in town.</p>
           <p class="addr">2624 E Colonial Dr, Orlando, FL 32803</p>
-        </article>
+        </div></article>
         </div>
       </section>
 
@@ -284,35 +291,35 @@
         <p class="lede">Other places in Downtown Orlando, Local Picks first, then the closest to Brazi Burger.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/fixtion.html">Fixtion Restaurant &amp; Bar</a> <span class="badge">Local Pick</span></h3>
-          <p class="meta">American &middot; American Restaurant &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/fixtion.html">Fixtion Restaurant &amp; Bar</a> <span class="badge">Local Pick</span></h3>
+          <p class="meta">American &middot; American Restaurant &middot; $$</p><p class="vsub">On Orange Avenue, comfort food and huge comfy booths early, club energy after dark, shape-shifting through the day.</p>
           <p class="addr">15 N Orange Ave, Orlando, FL 32801</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/wall-street-plaza.html">Wall Street Plaza</a> <span class="badge">Local Pick</span></h3>
-          <p class="meta">Nightlife &amp; music &middot; Entertainment District &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/wall-street-plaza.html">Wall Street Plaza</a> <span class="badge">Local Pick</span></h3>
+          <p class="meta">Nightlife &amp; music &middot; Entertainment District &middot; $$</p><p class="vsub">One downtown block holds the whole crawl: eight bars and patios that, on a big night, turn into a single street party.</p>
           <p class="addr">25 Wall St, Orlando, FL 32801</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/elixir-kitchen-bar.html">Elixir Kitchen and Bar</a> <span class="badge">Local Pick</span></h3>
-          <p class="meta">Bars &amp; lounges &middot; Bar &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-elixir-kitchen-bar.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/elixir-kitchen-bar.html">Elixir Kitchen and Bar</a> <span class="badge">Local Pick</span></h3>
+          <p class="meta">Bars &amp; lounges &middot; Bar &middot; $$</p><p class="vsub">A rustic-hip gastropub in one of downtown&#x27;s original buildings, and very much the neighborhood&#x27;s spot.</p>
           <p class="addr">9 W Washington St, Orlando, FL 32801</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/sunshine-soulfood-cafe.html">Sunshine Soulfood Cafe</a></h3>
-          <p class="meta">Restaurants &middot; Soul Food &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/sunshine-soulfood-cafe.html">Sunshine Soulfood Cafe</a></h3>
+          <p class="meta">Restaurants &middot; Soul Food &middot; $$</p><p class="vsub">Soul food with a Caribbean lean on West Colonial, cooked like home: oxtails off the bone, fried chicken, mac and cheese, cornbread.</p>
           <p class="addr">Sunshine Soulfood Cafe, 2528 W Colonial Dr, Orlando, FL 32804-8009, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/jesse-s-rib-shack.html">Jesse&#x27;s Rib Shack</a></h3>
-          <p class="meta">BBQ &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/jesse-s-rib-shack.html">Jesse&#x27;s Rib Shack</a></h3>
+          <p class="meta">BBQ &middot; $$</p><p class="vsub">Jesse&#x27;s Rib Shack is an old-school smokehouse on West Pine Street where you can see the smoke rolling off the back before you reach the door.</p>
           <p class="addr">2202 W Pine St, Orlando, FL 32805</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/broken-strings-brewery.html">Broken Strings Taproom</a></h3>
-          <p class="meta">Breweries &middot; Brewery &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/broken-strings-brewery.html">Broken Strings Taproom</a></h3>
+          <p class="meta">Breweries &middot; Brewery &middot; $$</p><p class="vsub">Music-first taproom on West Church Street, walls covered in murals of legends and a sister brewery sharing the roof.</p>
           <p class="addr">Broken Strings Brewery, 1012 W Church St, Orlando, FL 32805-2216</p>
-        </article>
+        </div></article>
         </div>
         <div class="handoff">
           <a class="btn-ghost" href="/downtown-orlando-finder.html">See the full Downtown Orlando list</a>

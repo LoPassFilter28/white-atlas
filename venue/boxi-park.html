@@ -211,7 +211,14 @@
       .vcard .addr { margin: 0; color: var(--muted); font-size: .9rem; }
       @media (max-width: 640px) { .facts { grid-template-columns: 1fr; } }
     </style>
-  </head>
+  <style data-cardsys>
+/* cardsys: similar rail cards (2026-10-23 overhaul) */
+.vcard{display:flex;gap:12px;align-items:flex-start}
+.vcard .vthumb{flex:0 0 86px;width:86px;height:86px;border-radius:10px;object-fit:cover;display:block}
+.vcard .vmain{flex:1;min-width:0}
+.vcard .vsub{margin:4px 0 0;font-size:.86rem;line-height:1.45;color:var(--muted,#c6bba2)}
+@media (min-width:1000px){.vlist{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start}}
+</style></head>
   <body>
     <header class="hero">
       <div class="hero-in">
@@ -236,7 +243,7 @@
         <div class="actions">
           <a class="action" href="https://www.google.com/maps/search/?api=1&amp;query=Boxi+Park+Lake+Nona+6877+Tavistock+Lakes+Blvd%2C+Orlando%2C+FL+32827" target="_blank" rel="noopener">Directions &rarr;</a>
           <a class="action" href="/archive.html?venue=boxi-park">Open in the full finder</a>
-          <a class="action" href="/lake-nona-district-guide.html">Read the Lake Nona story</a>
+          <a class="action" href="/history/lake-nona.html">Read the Lake Nona story</a>
           <a class="action action-ig" href="https://www.instagram.com/boxiparklakenona" target="_blank" rel="noopener"><svg class="ig-glyph" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="vertical-align:-2px;margin-right:6px"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg> Instagram</a>
         </div>
       </section>
@@ -245,41 +252,41 @@
 
 
 
-<section class="sec" id="similar">
+<section class="sec" id="district-story"><p class="kicker">District Story</p><h2>The story of Lake Nona</h2><p class="lede">A lake named on the federal survey maps long before any road led to it, and a district that arrived, all at once, in a single generation.</p><p><a class="btn-ghost" href="/history/lake-nona.html">Read the Lake Nona story &rarr;</a></p></section><section class="sec" id="similar">
         <p class="kicker">Similar Feel</p>
         <h2>More places with this feel</h2>
         <p class="lede">Matched by vibe, not by neighborhood: the places across Greater Orlando closest in spirit to Boxi Park Lake Nona.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/canonita.html">Cañonita</a></h3>
-          <p class="meta">Mexican &middot; Lake Nona &middot; $$$</p>
+          <img class="vthumb" src="/assets/venue-canonita.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/canonita.html">Cañonita</a></h3>
+          <p class="meta">Mexican &middot; Lake Nona &middot; $$$</p><p class="vsub">At Boxi Park in Lake Nona, this walk-up counter serves Mexico City style street food under the string lights.</p>
           <p class="addr">6877 Tavistock Lakes Blvd, Orlando, FL 32827</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/nona-adventure-park.html">Nona Adventure Park</a></h3>
-          <p class="meta">Attractions &middot; Lake Nona &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-nona-adventure-park.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/nona-adventure-park.html">Nona Adventure Park</a></h3>
+          <p class="meta">Attractions &middot; Lake Nona &middot; $$</p><p class="vsub">Lake Nona lake turned playground: inflatable aqua park, cable wakeboarding for every level, and a 60-foot climbing tower.</p>
           <p class="addr">14086 Centerline Drive, Orlando, FL 32827</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/bacan.html">Bacán</a></h3>
-          <p class="meta">Latin &amp; Caribbean &middot; Lake Nona &middot; $$$$</p>
+          <img class="vthumb" src="/assets/venue-bacan.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/bacan.html">Bacán</a></h3>
+          <p class="meta">Latin &amp; Caribbean &middot; Lake Nona &middot; $$$$</p><p class="vsub">Inside Lake Nona&#x27;s Wave Hotel, the open kitchen cooks across the Americas for a special-night-out crowd.</p>
           <p class="addr">Bacán, 6100 Wave Hotel Dr, Orlando, FL 32827</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/nami.html">Nami</a></h3>
-          <p class="meta">Japanese &amp; sushi &middot; Lake Nona &middot; $$$$</p>
+          <div class="vmain"><h3><a href="/venue/nami.html">Nami</a></h3>
+          <p class="meta">Japanese &amp; sushi &middot; Lake Nona &middot; $$$$</p><p class="vsub">Inside Lake Nona&#x27;s Wave Hotel, this serene, low-lit Japanese room is a safe haven for its regulars.</p>
           <p class="addr">Nami, 6004 Artist Ave, Orlando, FL 32827</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/park-pizza-brewing.html">Park Pizza &amp; Brewing Company</a></h3>
-          <p class="meta">Pizza &middot; Lake Nona &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-park-pizza-brewing.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/park-pizza-brewing.html">Park Pizza &amp; Brewing Company</a></h3>
+          <p class="meta">Pizza &middot; Lake Nona &middot; $$</p><p class="vsub">In Lake Nona Town Center, the oak-fired pies and the beer in your glass were both made just a few steps away.</p>
           <p class="addr">6941 Lake Nona Blvd, Orlando, FL 32827</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/bento-asian-kitchen-lake-nona.html">BENTO Asian Kitchen + Sushi</a></h3>
-          <p class="meta">Restaurants &middot; Lake Nona &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-bento-asian-kitchen-lake-nona.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/bento-asian-kitchen-lake-nona.html">BENTO Asian Kitchen + Sushi</a></h3>
+          <p class="meta">Restaurants &middot; Lake Nona &middot; $$</p><p class="vsub">Lake Nona&#x27;s fast-casual pan-Asian workhorse: counter ordering, food out fast, and a menu wide enough for split cravings.</p>
           <p class="addr">12851 Narcoossee Rd, Suite 100, Orlando, FL 32832</p>
-        </article>
+        </div></article>
         </div>
       </section>
 
@@ -289,35 +296,35 @@
         <p class="lede">Other places in Lake Nona, closest to Boxi Park Lake Nona first.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/canonita.html">Cañonita</a></h3>
-          <p class="meta">Mexican &middot; $$$</p>
+          <img class="vthumb" src="/assets/venue-canonita.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/canonita.html">Cañonita</a></h3>
+          <p class="meta">Mexican &middot; $$$</p><p class="vsub">At Boxi Park in Lake Nona, this walk-up counter serves Mexico City style street food under the string lights.</p>
           <p class="addr">6877 Tavistock Lakes Blvd, Orlando, FL 32827</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/park-pizza-brewing.html">Park Pizza &amp; Brewing Company</a></h3>
-          <p class="meta">Pizza &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-park-pizza-brewing.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/park-pizza-brewing.html">Park Pizza &amp; Brewing Company</a></h3>
+          <p class="meta">Pizza &middot; $$</p><p class="vsub">In Lake Nona Town Center, the oak-fired pies and the beer in your glass were both made just a few steps away.</p>
           <p class="addr">6941 Lake Nona Blvd, Orlando, FL 32827</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/bosphorous-lake-nona.html">Bosphorous Turkish Cuisine</a></h3>
-          <p class="meta">Mediterranean · Turkish &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-bosphorous-lake-nona.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/bosphorous-lake-nona.html">Bosphorous Turkish Cuisine</a></h3>
+          <p class="meta">Mediterranean · Turkish &middot; $$</p><p class="vsub">Warm and laid-back in Lake Nona Town Center, with lavas bread landing puffed from the oven to tear and share.</p>
           <p class="addr">6900 Tavistock Lakes Blvd, Suite 100, Orlando, FL 32827</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/chroma-lake-nona.html">Chroma Modern Bar + Kitchen</a></h3>
-          <p class="meta">Restaurants · Small plates &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-chroma-lake-nona.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/chroma-lake-nona.html">Chroma Modern Bar + Kitchen</a></h3>
+          <p class="meta">Restaurants · Small plates &middot; $$</p><p class="vsub">Saturated color and a lively buzz fill this Lake Nona Town Center small-plates room, built for passing dishes around.</p>
           <p class="addr">6967 Lake Nona Blvd, Orlando, FL 32827</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/bacan.html">Bacán</a></h3>
-          <p class="meta">Latin &amp; Caribbean · Latin &middot; $$$$</p>
+          <img class="vthumb" src="/assets/venue-bacan.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/bacan.html">Bacán</a></h3>
+          <p class="meta">Latin &amp; Caribbean · Latin &middot; $$$$</p><p class="vsub">Inside Lake Nona&#x27;s Wave Hotel, the open kitchen cooks across the Americas for a special-night-out crowd.</p>
           <p class="addr">Bacán, 6100 Wave Hotel Dr, Orlando, FL 32827</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/haven-kitchen.html">Garni Café</a></h3>
-          <p class="meta">Restaurants · French Bistro &middot; $$$</p>
+          <img class="vthumb" src="/assets/venue-haven-kitchen.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/haven-kitchen.html">Garni Café</a></h3>
+          <p class="meta">Restaurants · French Bistro &middot; $$$</p><p class="vsub">Up on the Wave Hotel&#x27;s second floor, a casual French bistro in a botanical room full of greenery and rattan.</p>
           <p class="addr">6100 Wave Hotel Dr, Orlando, FL 32827</p>
-        </article>
+        </div></article>
         </div>
         <div class="handoff">
           <a class="btn-ghost" href="/lake-nona-finder.html">See the full Lake Nona list</a>

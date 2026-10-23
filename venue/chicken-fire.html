@@ -211,7 +211,14 @@
       .vcard .addr { margin: 0; color: var(--muted); font-size: .9rem; }
       @media (max-width: 640px) { .facts { grid-template-columns: 1fr; } }
     </style>
-  </head>
+  <style data-cardsys>
+/* cardsys: similar rail cards (2026-10-23 overhaul) */
+.vcard{display:flex;gap:12px;align-items:flex-start}
+.vcard .vthumb{flex:0 0 86px;width:86px;height:86px;border-radius:10px;object-fit:cover;display:block}
+.vcard .vmain{flex:1;min-width:0}
+.vcard .vsub{margin:4px 0 0;font-size:.86rem;line-height:1.45;color:var(--muted,#c6bba2)}
+@media (min-width:1000px){.vlist{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start}}
+</style></head>
   <body>
     <header class="hero">
       <div class="hero-in">
@@ -236,46 +243,46 @@
         <div class="actions">
           <a class="action" href="https://www.google.com/maps/search/?api=1&amp;query=Chicken+Fire+Chicken+Fire%2C+2425+E+Colonial+Dr%2C+Orlando%2C+FL+32803-5018" target="_blank" rel="noopener">Directions &rarr;</a>
           <a class="action" href="/archive.html?venue=chicken-fire">Open in the full finder</a>
-          <a class="action" href="/milk-district-guide.html">Read the Milk District story</a>
+          <a class="action" href="/history/milk-district.html">Read the Milk District story</a>
           <a class="action action-ig" href="https://www.instagram.com/eatchickenfire" target="_blank" rel="noopener"><svg class="ig-glyph" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="vertical-align:-2px;margin-right:6px"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg> Instagram</a>
         </div>
       </section>
 
-      <section class="sec" id="similar">
+      <section class="sec" id="district-story"><p class="kicker">District Story</p><h2>The story of Milk District</h2><p class="lede">One cow, twenty acres and a dairy on the edge of town: the neighborhood that grew up around the T.G. Lee plant and took its name from the milk.</p><p><a class="btn-ghost" href="/history/milk-district.html">Read the Milk District story &rarr;</a></p></section><section class="sec" id="similar">
         <p class="kicker">Similar Feel</p>
         <h2>More places with this feel</h2>
         <p class="lede">Matched by vibe, not by neighborhood: the places across Greater Orlando closest in spirit to Chicken Fire.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/4-hens-creole-kitchen.html">4 Hens Creole Kitchen</a></h3>
-          <p class="meta">Restaurants &middot; Ivanhoe Village &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/4-hens-creole-kitchen.html">4 Hens Creole Kitchen</a></h3>
+          <p class="meta">Restaurants &middot; Ivanhoe Village &middot; $$</p><p class="vsub">Inside City Food Hall, chill and soulful cooking with a NOLA spirit, music in the air, and seasoning guests call out of this world.</p>
           <p class="addr">1412 Alden Rd, Orlando, FL 32803</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/rise-southern-biscuits-winter-park.html">Rise Southern Biscuits &amp; Righteous Chicken - Winter Park</a></h3>
-          <p class="meta">American &middot; Winter Park &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/rise-southern-biscuits-winter-park.html">Rise Southern Biscuits &amp; Righteous Chicken - Winter Park</a></h3>
+          <p class="meta">American &middot; Winter Park &middot; $$</p><p class="vsub">A casual counter-service spot where biscuits come out fresh and warm, crispy on the outside and soft inside.</p>
           <p class="addr">110 S Orlando Ave Ste 6, Winter Park, FL 32789</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/smoke-donuts.html">Smoke &amp; Donuts BBQ</a></h3>
-          <p class="meta">BBQ &middot; Milk District &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/smoke-donuts.html">Smoke &amp; Donuts BBQ</a></h3>
+          <p class="meta">BBQ &middot; Milk District &middot; $$</p><p class="vsub">Low and slow barbecue pairs with made-to-order cake donuts in this casual, family-run Milk District room.</p>
           <p class="addr">601 N Primrose Dr, Orlando, FL 32803</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/the-monroe.html">The Monroe</a></h3>
-          <p class="meta">Bars &amp; lounges &middot; Downtown &middot; $$$</p>
+          <img class="vthumb" src="/assets/venue-the-monroe.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/the-monroe.html">The Monroe</a></h3>
+          <p class="meta">Bars &amp; lounges &middot; Downtown &middot; $$$</p><p class="vsub">Good Salt&#x27;s midcentury room in Creative Village turns childhood favorites serious: famous fried chicken, popper deviled eggs, pork belly s&#x27;mores.</p>
           <p class="addr">The Monroe, 448 N Terry Ave, Orlando, FL 32801-1894</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/ole-red-orlando.html">Ole Red Orlando</a></h3>
-          <p class="meta">Bars &amp; lounges &middot; ICON Park &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-ole-red-orlando.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/ole-red-orlando.html">Ole Red Orlando</a></h3>
+          <p class="meta">Bars &amp; lounges &middot; ICON Park &middot; $$</p><p class="vsub">Blake Shelton&#x27;s honky-tonk in the middle of ICON Park, with live country on stage and scratch-made Southern cooking from the kitchen.</p>
           <p class="addr">8417 International Dr, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/seasons-52.html">Seasons 52</a></h3>
-          <p class="meta">American &middot; Sand Lake &middot; $$$</p>
+          <div class="vmain"><h3><a href="/venue/seasons-52.html">Seasons 52</a></h3>
+          <p class="meta">American &middot; Sand Lake &middot; $$$</p><p class="vsub">Oak fire and a brick oven drive the menu here, turning with the seasons and portions sized for humans.</p>
           <p class="addr">7700 W Sand Lake Rd, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         </div>
       </section>
 
@@ -285,35 +292,35 @@
         <p class="lede">Other places in Milk District, Local Picks first, then the closest to Chicken Fire.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/iron-cow.html">Iron Cow</a> <span class="badge">Local Pick</span></h3>
-          <p class="meta">Japanese &amp; sushi · Sushi &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/iron-cow.html">Iron Cow</a> <span class="badge">Local Pick</span></h3>
+          <p class="meta">Japanese &amp; sushi · Sushi &middot; $$</p><p class="vsub">Part hi-fi sushi lounge, part underground club, the Milk District&#x27;s good contradiction.</p>
           <p class="addr">2438 E Robinson St, Suite A, Orlando, FL 32803</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/lams-garden.html">Lam&#x27;s Garden Chinese Restaurant</a></h3>
-          <p class="meta">Chinese · Cantonese Dim Sum &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-lams-garden.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/lams-garden.html">Lam&#x27;s Garden Chinese Restaurant</a></h3>
+          <p class="meta">Chinese · Cantonese Dim Sum &middot; $$</p><p class="vsub">An old-school, family-owned Cantonese room on East Colonial Drive that has served the corridor since 1975.</p>
           <p class="addr">2505 E Colonial Dr, Orlando, FL 32803</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/moa-kai-hawaiian-diner.html">Moa Kai Hawaiian Diner</a></h3>
-          <p class="meta">Restaurants · Hawaiian Diner &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/moa-kai-hawaiian-diner.html">Moa Kai Hawaiian Diner</a></h3>
+          <p class="meta">Restaurants · Hawaiian Diner &middot; $$</p><p class="vsub">Retro diner comfort meets Hawaiian cooking on East Colonial Drive, all tropical color and aloha warmth.</p>
           <p class="addr">Moa Kai Hawaiian Diner, 2217 E Colonial Dr, Orlando, FL 32803-4911, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/smoke-donuts.html">Smoke &amp; Donuts BBQ</a></h3>
-          <p class="meta">BBQ &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/smoke-donuts.html">Smoke &amp; Donuts BBQ</a></h3>
+          <p class="meta">BBQ &middot; $$</p><p class="vsub">Low and slow barbecue pairs with made-to-order cake donuts in this casual, family-run Milk District room.</p>
           <p class="addr">601 N Primrose Dr, Orlando, FL 32803</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/se7en-bites.html">Se7en Bites</a></h3>
-          <p class="meta">Bakeries · Bakery &middot; $</p>
+          <img class="vthumb" src="/assets/venue-se7en-bites.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/se7en-bites.html">Se7en Bites</a></h3>
+          <p class="meta">Bakeries · Bakery &middot; $</p><p class="vsub">Bustling, homey Southern bakery cafe on Primrose Drive, owner on the floor, running like a well-oiled machine.</p>
           <p class="addr">617 N Primrose Dr, Orlando, FL 32803</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/fuwa-fuwa.html">Fluffy Fluffy Dessert Cafe</a></h3>
-          <p class="meta">Sweets · Dessert &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-fuwa-fuwa.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/fuwa-fuwa.html">Fluffy Fluffy Dessert Cafe</a></h3>
+          <p class="meta">Sweets · Dessert &middot; $$</p><p class="vsub">Japanese souffle pancakes are made the slow way here, whipped and cooked to order until each one wobbles like a cloud.</p>
           <p class="addr">2008 E Colonial Dr, Orlando, FL</p>
-        </article>
+        </div></article>
         </div>
         <div class="handoff">
           <a class="btn-ghost" href="/milk-district-finder.html">See the full Milk District list</a>

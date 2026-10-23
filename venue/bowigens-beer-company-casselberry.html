@@ -211,7 +211,14 @@
       .vcard .addr { margin: 0; color: var(--muted); font-size: .9rem; }
       @media (max-width: 640px) { .facts { grid-template-columns: 1fr; } }
     </style>
-  </head>
+  <style data-cardsys>
+/* cardsys: similar rail cards (2026-10-23 overhaul) */
+.vcard{display:flex;gap:12px;align-items:flex-start}
+.vcard .vthumb{flex:0 0 86px;width:86px;height:86px;border-radius:10px;object-fit:cover;display:block}
+.vcard .vmain{flex:1;min-width:0}
+.vcard .vsub{margin:4px 0 0;font-size:.86rem;line-height:1.45;color:var(--muted,#c6bba2)}
+@media (min-width:1000px){.vlist{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start}}
+</style></head>
   <body>
     <header class="hero">
       <div class="hero-in">
@@ -239,31 +246,31 @@
         </div>
       </section>
 
-      <section class="sec" id="similar">
+      <section class="sec" id="district-story"><p class="kicker">District Stories</p><h2>Orlando&#x27;s long memory</h2><p class="lede">The guide keeps the long memory of Orlando&#x27;s districts in one place: the names, the plats and the stories behind the streets.</p><p><a class="btn-ghost" href="/history.html">Browse the district stories &rarr;</a></p></section><section class="sec" id="similar">
         <p class="kicker">Similar Feel</p>
         <h2>More places with this feel</h2>
         <p class="lede">Matched by vibe, not by neighborhood: the places across Greater Orlando closest in spirit to Bowigens Beer Company.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/bowigens-beer-company.html">Bowigens Beer Company</a></h3>
-          <p class="meta">Breweries &middot; Avalon Park &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-bowigens-beer-company.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/bowigens-beer-company.html">Bowigens Beer Company</a></h3>
+          <p class="meta">Breweries &middot; Avalon Park &middot; $$</p><p class="vsub">The Avalon Park outpost of the Casselberry-born brewery runs a 6,000 square foot indoor-outdoor taproom inside the Marketplace hall.</p>
           <p class="addr">3801 Avalon Park East Blvd #120, Orlando, FL 32828</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/hourglass-brewing.html">Hourglass Brewing</a></h3>
-          <p class="meta">Breweries &middot; Orlando &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-hourglass-brewing.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/hourglass-brewing.html">Hourglass Brewing</a></h3>
+          <p class="meta">Breweries &middot; Orlando &middot; $$</p><p class="vsub">Pouring inside a former church on Curry Ford, this Hourglass District taproom keeps a rotating cast of house beers flowing.</p>
           <p class="addr">Hourglass Brewing, 2500 Curry Ford Rd, Orlando, FL 32806-2506, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/tactical-brewing-company.html">Tactical Brewing Company</a></h3>
-          <p class="meta">Breweries &middot; Orlando &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-tactical-brewing-company.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/tactical-brewing-company.html">Tactical Brewing Company</a></h3>
+          <p class="meta">Breweries &middot; Orlando &middot; $$</p><p class="vsub">Veteran-founded brewery on New Broad Street in Baldwin Park, pouring with a playful streak, especially in its sours.</p>
           <p class="addr">Tactical Brewing Company, 4882 New Broad St, Orlando, FL 32814-6628, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/ten10-brewing.html">Ten10 Brewing</a></h3>
-          <p class="meta">Breweries &middot; 1010 Virginia Dr &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/ten10-brewing.html">Ten10 Brewing</a></h3>
+          <p class="meta">Breweries &middot; 1010 Virginia Dr &middot; $$</p><p class="vsub">Laid-back neighborhood taproom on Virginia Drive in Mills 50, all about good beer, good tunes and good people.</p>
           <p class="addr">Ten10 Brewing, 1010 Virginia Dr, Orlando, FL 32803-2532</p>
-        </article>
+        </div></article>
         </div>
       </section>
 
@@ -273,35 +280,35 @@
         <p class="lede">Other places in Casselberry, closest to Bowigens Beer Company first.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/colorado-fondue-company.html">Colorado Fondue Company</a></h3>
-          <p class="meta">American · Fondue &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/colorado-fondue-company.html">Colorado Fondue Company</a></h3>
+          <p class="meta">American · Fondue &middot; $$</p><p class="vsub">Dressed like a Colorado ski lodge, this Casselberry room has timber, stone, and cozy booths built for lingering over a pot.</p>
           <p class="addr">Colorado Fondue Company, 1016 Semoran Blvd, Casselberry, FL 32707</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/vinzos-italian-grill.html">Vinzo&#x27;s Italian Grill &amp; Pizzeria</a></h3>
-          <p class="meta">Italian · Italian Restaurant &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/vinzos-italian-grill.html">Vinzo&#x27;s Italian Grill &amp; Pizzeria</a></h3>
+          <p class="meta">Italian · Italian Restaurant &middot; $$</p><p class="vsub">A family Italian grill running 22 years on Semoran Blvd, working from family recipes that came down from New York and New Jersey.</p>
           <p class="addr">Vinzo&#x27;s Italian Grill &amp; Pizzeria, 1006 FL-436, Casselberry, FL 32707</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/an-vi-vietnamese-kitchen.html">An Vi Vietnamese Kitchen &amp; Sandwich</a></h3>
-          <p class="meta">Noodles &amp; Southeast Asian · Vietnamese &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/an-vi-vietnamese-kitchen.html">An Vi Vietnamese Kitchen &amp; Sandwich</a></h3>
+          <p class="meta">Noodles &amp; Southeast Asian · Vietnamese &middot; $</p><p class="vsub">House-made bone broth pho, fresh rolls, banh mi, vermicelli bowls, and Cajun fried rice with catfish at this bright Semoran Blvd kitchen.</p>
           <p class="addr">An Vi Vietnamese Kitchen &amp; Sandwich, 1052 FL-436, Casselberry, FL 32707</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/aladdin-cafe.html">Aladdin Cafe</a></h3>
-          <p class="meta">Mediterranean · Lebanese &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-aladdin-cafe.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/aladdin-cafe.html">Aladdin Cafe</a></h3>
+          <p class="meta">Mediterranean · Lebanese &middot; $$</p><p class="vsub">A family owned Lebanese kitchen on Semoran Blvd, 100 percent halal, dough hand-stretched daily and eggplants charred over flame.</p>
           <p class="addr">Aladdin Cafe, 1015 FL-436, Casselberry, FL 32707</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/wa-sushi.html">WA Sushi</a></h3>
-          <p class="meta">Japanese &amp; sushi · Sushi &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/wa-sushi.html">WA Sushi</a></h3>
+          <p class="meta">Japanese &amp; sushi · Sushi &middot; $$</p><p class="vsub">A Casselberry strip plaza hides a serious sushi counter where Chef Hong flies fish in from Japan, cozy and unpretentious.</p>
           <p class="addr">Wa Sushi, 924 Semoran Blvd, Casselberry, FL 32707</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/semoran-skateway.html">Semoran Skateway</a></h3>
-          <p class="meta">Attractions · Roller Skating Rink &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/semoran-skateway.html">Semoran Skateway</a></h3>
+          <p class="meta">Attractions · Roller Skating Rink &middot; $</p><p class="vsub">Family owned since 1978, the roller rink generations of Casselberry kids grew up in, now with lessons and adult rhythm nights.</p>
           <p class="addr">Semoran Skateway, 2670 Cassel Creek Blvd, Casselberry, FL 32707</p>
-        </article>
+        </div></article>
         </div>
         <div class="handoff">
           <a class="btn-ghost" href="/casselberry-finder.html">See the full Casselberry list</a>

@@ -211,7 +211,14 @@
       .vcard .addr { margin: 0; color: var(--muted); font-size: .9rem; }
       @media (max-width: 640px) { .facts { grid-template-columns: 1fr; } }
     </style>
-  </head>
+  <style data-cardsys>
+/* cardsys: similar rail cards (2026-10-23 overhaul) */
+.vcard{display:flex;gap:12px;align-items:flex-start}
+.vcard .vthumb{flex:0 0 86px;width:86px;height:86px;border-radius:10px;object-fit:cover;display:block}
+.vcard .vmain{flex:1;min-width:0}
+.vcard .vsub{margin:4px 0 0;font-size:.86rem;line-height:1.45;color:var(--muted,#c6bba2)}
+@media (min-width:1000px){.vlist{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start}}
+</style></head>
   <body>
     <header class="hero">
       <div class="hero-in">
@@ -236,45 +243,45 @@
         <div class="actions">
           <a class="action" href="https://www.google.com/maps/search/?api=1&amp;query=Brooklyn+Water+Bagel+Brooklyn+Water+Bagel%2C+9368+Narcoossee+Rd%2C+Orlando%2C+FL+32827-5701%2C+United+States" target="_blank" rel="noopener">Directions &rarr;</a>
           <a class="action" href="/archive.html?venue=brooklyn-water-bagel">Open in the full finder</a>
-          <a class="action" href="/lake-nona-district-guide.html">Read the Lake Nona story</a>
+          <a class="action" href="/history/lake-nona.html">Read the Lake Nona story</a>
         </div>
       </section>
 
-      <section class="sec" id="similar">
+      <section class="sec" id="district-story"><p class="kicker">District Story</p><h2>The story of Lake Nona</h2><p class="lede">A lake named on the federal survey maps long before any road led to it, and a district that arrived, all at once, in a single generation.</p><p><a class="btn-ghost" href="/history/lake-nona.html">Read the Lake Nona story &rarr;</a></p></section><section class="sec" id="similar">
         <p class="kicker">Similar Feel</p>
         <h2>More places with this feel</h2>
         <p class="lede">Matched by vibe, not by neighborhood: the places across Greater Orlando closest in spirit to Brooklyn Water Bagel.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/lukes-new-york-bagels.html">Luke&#x27;s New York Bagels</a></h3>
-          <p class="meta">Bakeries &middot; Ivanhoe Village &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/lukes-new-york-bagels.html">Luke&#x27;s New York Bagels</a></h3>
+          <p class="meta">Bakeries &middot; Ivanhoe Village &middot; $$</p><p class="vsub">Gainesville-born, New York style bagels, now at a stall inside City Food Hall in Ivanhoe Village.</p>
           <p class="addr">1412 Alden Rd, Orlando, FL 32803</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/babbi-babbi-lake-nona.html">BaBbi BaBbi Korean Kitchen</a></h3>
-          <p class="meta">Restaurants &middot; Lake Nona &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/babbi-babbi-lake-nona.html">BaBbi BaBbi Korean Kitchen</a></h3>
+          <p class="meta">Restaurants &middot; Lake Nona &middot; $$</p><p class="vsub">Bright and fast casual at the Shoppes at East Park Village, where K-pop energy meets sizzling stone pots.</p>
           <p class="addr">10799 Moss Park Rd, Suite 102, Orlando, FL 32832</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/bacan.html">Bacán</a></h3>
-          <p class="meta">Latin &amp; Caribbean &middot; Lake Nona &middot; $$$$</p>
+          <img class="vthumb" src="/assets/venue-bacan.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/bacan.html">Bacán</a></h3>
+          <p class="meta">Latin &amp; Caribbean &middot; Lake Nona &middot; $$$$</p><p class="vsub">Inside Lake Nona&#x27;s Wave Hotel, the open kitchen cooks across the Americas for a special-night-out crowd.</p>
           <p class="addr">Bacán, 6100 Wave Hotel Dr, Orlando, FL 32827</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/boxi-park.html">Boxi Park Lake Nona</a></h3>
-          <p class="meta">Restaurants &middot; Lake Nona &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/boxi-park.html">Boxi Park Lake Nona</a></h3>
+          <p class="meta">Restaurants &middot; Lake Nona &middot; $$</p><p class="vsub">Shipping containers stacked into an open-air food park in Lake Nona, with a stage, a dog park, and stalls to wander.</p>
           <p class="addr">6877 Tavistock Lakes Blvd, Orlando, FL 32827</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/lake-nona-deli-and-market.html">Lake Nona Deli and Market</a></h3>
-          <p class="meta">Burgers &amp; sandwiches &middot; Lake Nona Village Walk &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/lake-nona-deli-and-market.html">Lake Nona Deli and Market</a></h3>
+          <p class="meta">Burgers &amp; sandwiches &middot; Lake Nona Village Walk &middot; $</p><p class="vsub">Village Walk&#x27;s neighborhood counter, part deli, part pizzeria, part market, built on Boar&#x27;s Head meats and Olde Hearth bread.</p>
           <p class="addr">8510 Insular Ln, Orlando, FL 32827</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/tomasinos-pizza-lake-nona.html">Tomasino&#x27;s Pizza</a></h3>
-          <p class="meta">Pizza &middot; Lake Nona &middot; $</p>
+          <img class="vthumb" src="/assets/venue-tomasinos-pizza-lake-nona.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/tomasinos-pizza-lake-nona.html">Tomasino&#x27;s Pizza</a></h3>
+          <p class="meta">Pizza &middot; Lake Nona &middot; $</p><p class="vsub">Lake Nona&#x27;s neighborhood slice shop is old school and family packed, with New York style pies guests call the real thing.</p>
           <p class="addr">14009 Narcoossee Rd, Suite 130, Orlando, FL 32832</p>
-        </article>
+        </div></article>
         </div>
       </section>
 
@@ -284,35 +291,35 @@
         <p class="lede">Other places in Lake Nona, Local Picks first, then the closest to Brooklyn Water Bagel.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/boxi-park.html">Boxi Park Lake Nona</a> <span class="badge">Local Pick</span></h3>
-          <p class="meta">Restaurants · Food Hall &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/boxi-park.html">Boxi Park Lake Nona</a> <span class="badge">Local Pick</span></h3>
+          <p class="meta">Restaurants · Food Hall &middot; $$</p><p class="vsub">Shipping containers stacked into an open-air food park in Lake Nona, with a stage, a dog park, and stalls to wander.</p>
           <p class="addr">6877 Tavistock Lakes Blvd, Orlando, FL 32827</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/hot-taco-street-taqueria.html">Hot Taco Street Taqueria</a></h3>
-          <p class="meta">Mexican · Taqueria &middot; $</p>
+          <img class="vthumb" src="/assets/venue-hot-taco-street-taqueria.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/hot-taco-street-taqueria.html">Hot Taco Street Taqueria</a></h3>
+          <p class="meta">Mexican · Taqueria &middot; $</p><p class="vsub">Street-style energy in Lake Nona Village: neon pink, agave murals, and patterned tile in a room guests call festive and spotless.</p>
           <p class="addr">9680 Narcoossee Rd, Suite 103, Orlando, FL 32827</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/sus-hi-eatstation.html">Sus Hi Eatstation</a></h3>
-          <p class="meta">Japanese &amp; sushi · Sushi &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/sus-hi-eatstation.html">Sus Hi Eatstation</a></h3>
+          <p class="meta">Japanese &amp; sushi · Sushi &middot; $$</p><p class="vsub">Playful, ninja-themed counter in Lake Nona where you build your own sushi bowl, roll, or burrito exactly how you like it.</p>
           <p class="addr">Sus Hi Eatstation, 9680 Narcoossee Rd, Orlando, FL 32827-7311, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/nona-blue-modern-tavern.html">Nona Blue Modern Tavern</a></h3>
-          <p class="meta">American · Tavern &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/nona-blue-modern-tavern.html">Nona Blue Modern Tavern</a></h3>
+          <p class="meta">American · Tavern &middot; $$</p><p class="vsub">Lake Nona&#x27;s dressed-up tavern feels upscale but comfortable, with a big center bar and a kitchen cooking from scratch.</p>
           <p class="addr">9685 Lake Nona Village Pl, Orlando, FL 32827</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/babbi-babbi-lake-nona.html">BaBbi BaBbi Korean Kitchen</a></h3>
-          <p class="meta">Restaurants · Korean BBQ &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/babbi-babbi-lake-nona.html">BaBbi BaBbi Korean Kitchen</a></h3>
+          <p class="meta">Restaurants · Korean BBQ &middot; $$</p><p class="vsub">Bright and fast casual at the Shoppes at East Park Village, where K-pop energy meets sizzling stone pots.</p>
           <p class="addr">10799 Moss Park Rd, Suite 102, Orlando, FL 32832</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/lake-nona-deli-and-market.html">Lake Nona Deli and Market</a></h3>
-          <p class="meta">Burgers &amp; sandwiches · Deli &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/lake-nona-deli-and-market.html">Lake Nona Deli and Market</a></h3>
+          <p class="meta">Burgers &amp; sandwiches · Deli &middot; $</p><p class="vsub">Village Walk&#x27;s neighborhood counter, part deli, part pizzeria, part market, built on Boar&#x27;s Head meats and Olde Hearth bread.</p>
           <p class="addr">8510 Insular Ln, Orlando, FL 32827</p>
-        </article>
+        </div></article>
         </div>
         <div class="handoff">
           <a class="btn-ghost" href="/lake-nona-finder.html">See the full Lake Nona list</a>

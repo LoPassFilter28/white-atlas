@@ -211,7 +211,14 @@
       .vcard .addr { margin: 0; color: var(--muted); font-size: .9rem; }
       @media (max-width: 640px) { .facts { grid-template-columns: 1fr; } }
     </style>
-  </head>
+  <style data-cardsys>
+/* cardsys: similar rail cards (2026-10-23 overhaul) */
+.vcard{display:flex;gap:12px;align-items:flex-start}
+.vcard .vthumb{flex:0 0 86px;width:86px;height:86px;border-radius:10px;object-fit:cover;display:block}
+.vcard .vmain{flex:1;min-width:0}
+.vcard .vsub{margin:4px 0 0;font-size:.86rem;line-height:1.45;color:var(--muted,#c6bba2)}
+@media (min-width:1000px){.vlist{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start}}
+</style></head>
   <body>
     <header class="hero">
       <div class="hero-in">
@@ -239,41 +246,41 @@
         </div>
       </section>
 
-      <section class="sec" id="similar">
+      <section class="sec" id="district-story"><p class="kicker">District Stories</p><h2>Orlando&#x27;s long memory</h2><p class="lede">The guide keeps the long memory of Orlando&#x27;s districts in one place: the names, the plats and the stories behind the streets.</p><p><a class="btn-ghost" href="/history.html">Browse the district stories &rarr;</a></p></section><section class="sec" id="similar">
         <p class="kicker">Similar Feel</p>
         <h2>More places with this feel</h2>
         <p class="lede">Matched by vibe, not by neighborhood: the places across Greater Orlando closest in spirit to BTW Burgers Tacos Waffles.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/the-tavern-bar-tacos.html">The Tavern Bar &amp; Tacos</a></h3>
-          <p class="meta">Mexican &middot; Downtown &middot; $</p>
+          <img class="vthumb" src="/assets/venue-the-tavern-bar-tacos.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/the-tavern-bar-tacos.html">The Tavern Bar &amp; Tacos</a></h3>
+          <p class="meta">Mexican &middot; Downtown &middot; $</p><p class="vsub">It calls itself a vibe bar and guests back it up, starting with birria tacos one regular said should be criminal.</p>
           <p class="addr">The Tavern Bar &amp; Tacos, 75 E Colonial Dr, Orlando, FL 32801</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/beths-burger-bar.html">Beth&#x27;s Burger Bar</a></h3>
-          <p class="meta">Burgers &amp; sandwiches &middot; Orlando &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/beths-burger-bar.html">Beth&#x27;s Burger Bar</a></h3>
+          <p class="meta">Burgers &amp; sandwiches &middot; Orlando &middot; $$</p><p class="vsub">Old-school diner feel on Universal Boulevard, built around build-your-own burgers from patty to last pickle.</p>
           <p class="addr">Beth&#x27;s Burger Bar, 9938 Universal Blvd, Orlando, FL 32819-8702, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/burger-vault.html">Burger Vault</a></h3>
-          <p class="meta">Burgers &amp; sandwiches &middot; Altamonte Springs &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-burger-vault.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/burger-vault.html">Burger Vault</a></h3>
+          <p class="meta">Burgers &amp; sandwiches &middot; Altamonte Springs &middot; $$</p><p class="vsub">Small mom-and-pop counter on State Road 436 in Altamonte Springs, building halal burgers guests call juicy and wonderfully messy.</p>
           <p class="addr">Burger Vault, 520 W State Road 436, Altamonte Springs, FL 32714-4000, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/hot-taco-street-taqueria.html">Hot Taco Street Taqueria</a></h3>
-          <p class="meta">Mexican &middot; Lake Nona &middot; $</p>
+          <img class="vthumb" src="/assets/venue-hot-taco-street-taqueria.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/hot-taco-street-taqueria.html">Hot Taco Street Taqueria</a></h3>
+          <p class="meta">Mexican &middot; Lake Nona &middot; $</p><p class="vsub">Street-style energy in Lake Nona Village: neon pink, agave murals, and patterned tile in a room guests call festive and spotless.</p>
           <p class="addr">9680 Narcoossee Rd, Suite 103, Orlando, FL 32827</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/tasty-takeover.html">Tasty Takeover</a></h3>
-          <p class="meta">Restaurants &middot; Milk District &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-tasty-takeover.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/tasty-takeover.html">Tasty Takeover</a></h3>
+          <p class="meta">Restaurants &middot; Milk District &middot; $$</p><p class="vsub">Every Tuesday night, food trucks take over the lots behind the Milk District bars for an easygoing block party.</p>
           <p class="addr">2424 E Robinson St, Orlando, FL 32803</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/five-guys.html">Five Guys (CityWalk)</a></h3>
-          <p class="meta">Burgers &amp; sandwiches &middot; Universal CityWalk &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/five-guys.html">Five Guys (CityWalk)</a></h3>
+          <p class="meta">Burgers &amp; sandwiches &middot; Universal CityWalk &middot; $</p><p class="vsub">On the upper level of Universal CityWalk, burgers stacked to order with hand-cut fries piled high in the cup.</p>
           <p class="addr">6000 Universal Blvd, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         </div>
       </section>
 
@@ -283,35 +290,35 @@
         <p class="lede">Other places in Day Trips, closest to BTW Burgers Tacos Waffles first.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/salt-and-ember-mount-dora.html">Salt &amp; Ember</a></h3>
-          <p class="meta">Fine dining &amp; steak · Steakhouse &middot; $$$</p>
+          <img class="vthumb" src="/assets/venue-salt-and-ember-mount-dora.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/salt-and-ember-mount-dora.html">Salt &amp; Ember</a></h3>
+          <p class="meta">Fine dining &amp; steak · Steakhouse &middot; $$$</p><p class="vsub">A wood-fired steakhouse on Alexander Street in Mount Dora, relaxed and warm with a polished finish.</p>
           <p class="addr">322 N Alexander St, Mount Dora, FL 32757</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/the-goblin-market-restaurant.html">The Goblin Market Restaurant</a></h3>
-          <p class="meta">American · Gastropub &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-the-goblin-market-restaurant.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/the-goblin-market-restaurant.html">The Goblin Market Restaurant</a></h3>
+          <p class="meta">American · Gastropub &middot; $$</p><p class="vsub">Mount Dora&#x27;s storybook gastropub, a cozy book-lined hideaway on Dora Drawdy Way where guests love being surrounded by books.</p>
           <p class="addr">The Goblin Market Restaurant, 330 Dora Drawdy Way, Mt Dora, FL 32757-5593, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/funkos-poke-bowls-and-asian-snacks.html">Fun-Ko&#x27;s Poke Bowls and Asian Snacks</a></h3>
-          <p class="meta">Japanese &amp; sushi · Poke &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/funkos-poke-bowls-and-asian-snacks.html">Fun-Ko&#x27;s Poke Bowls and Asian Snacks</a></h3>
+          <p class="meta">Japanese &amp; sushi · Poke &middot; $$</p><p class="vsub">Tucked inside Mount Dora Marketplace on Donnelly Street, a cheerful, low-key poke counter regulars call their go-to.</p>
           <p class="addr">Fun-Ko&#x27;s Poke Bowls and Asian Snacks, 334 N Donnelly St, Mt Dora, FL 32757-5525, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/1921-mount-dora.html">1921 Mount Dora</a></h3>
-          <p class="meta">Restaurants · Restaurant &middot; $$$</p>
+          <div class="vmain"><h3><a href="/venue/1921-mount-dora.html">1921 Mount Dora</a></h3>
+          <p class="meta">Restaurants · Restaurant &middot; $$$</p><p class="vsub">Modern Florida cooking in a historic 1921 house, and the meal feels personal rather than formal.</p>
           <p class="addr">1921 Mount Dora, 142 E 4th Ave, Mt Dora, FL 32757-5584</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/crooked-can-minneola.html">Crooked Can Minneola</a></h3>
-          <p class="meta">Breweries · Brewery &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-crooked-can-minneola.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/crooked-can-minneola.html">Crooked Can Minneola</a></h3>
+          <p class="meta">Breweries · Brewery &middot; $$</p><p class="vsub">A sprawling take on the Winter Garden brewery: production brewery and taproom fronting a food hall in Minneola.</p>
           <p class="addr">1600 Crooked Can Loop, Minneola, FL 34715</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/kelly-park.html">Kelly Park / Rock Springs Run</a></h3>
-          <p class="meta">Parks &amp; outdoors · Park &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/kelly-park.html">Kelly Park / Rock Springs Run</a></h3>
+          <p class="meta">Parks &amp; outdoors · Park &middot; $</p><p class="vsub">The spring run is the draw here: clear, cold water from Rock Springs into a lazy channel made for tubing.</p>
           <p class="addr">400 E Kelly Park Rd, Apopka, FL 32712</p>
-        </article>
+        </div></article>
         </div>
         <div class="handoff">
           <a class="btn-ghost" href="/day-trips-finder.html">See the full Day Trips list</a>

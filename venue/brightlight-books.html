@@ -211,7 +211,14 @@
       .vcard .addr { margin: 0; color: var(--muted); font-size: .9rem; }
       @media (max-width: 640px) { .facts { grid-template-columns: 1fr; } }
     </style>
-  </head>
+  <style data-cardsys>
+/* cardsys: similar rail cards (2026-10-23 overhaul) */
+.vcard{display:flex;gap:12px;align-items:flex-start}
+.vcard .vthumb{flex:0 0 86px;width:86px;height:86px;border-radius:10px;object-fit:cover;display:block}
+.vcard .vmain{flex:1;min-width:0}
+.vcard .vsub{margin:4px 0 0;font-size:.86rem;line-height:1.45;color:var(--muted,#c6bba2)}
+@media (min-width:1000px){.vlist{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start}}
+</style></head>
   <body>
     <header class="hero">
       <div class="hero-in">
@@ -239,31 +246,31 @@
         </div>
       </section>
 
-      <section class="sec" id="similar">
+      <section class="sec" id="district-story"><p class="kicker">District Stories</p><h2>Orlando&#x27;s long memory</h2><p class="lede">The guide keeps the long memory of Orlando&#x27;s districts in one place: the names, the plats and the stories behind the streets.</p><p><a class="btn-ghost" href="/history.html">Browse the district stories &rarr;</a></p></section><section class="sec" id="similar">
         <p class="kicker">Similar Feel</p>
         <h2>More places with this feel</h2>
         <p class="lede">Matched by vibe, not by neighborhood: the places across Greater Orlando closest in spirit to Brightlight Books.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/east-end-market.html">East End Market</a></h3>
-          <p class="meta">Markets &amp; shops &middot; Audubon Park &middot; $</p>
+          <img class="vthumb" src="/assets/venue-east-end-market.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/east-end-market.html">East End Market</a></h3>
+          <p class="meta">Markets &amp; shops &middot; Audubon Park &middot; $</p><p class="vsub">Local makers under one Audubon Park roof: Gideon&#x27;s Bakehouse, Olde Hearth Bread, Lineage Coffee, Domu, La Femme du Fromage, Dochi and Hinckley&#x27;s.</p>
           <p class="addr">3201 Corrine Dr, Orlando, FL 32803</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/winter-park-farmers-market.html">Winter Park Farmers Market</a></h3>
-          <p class="meta">Markets &amp; shops &middot; Winter Park &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/winter-park-farmers-market.html">Winter Park Farmers Market</a></h3>
+          <p class="meta">Markets &amp; shops &middot; Winter Park &middot; $$</p><p class="vsub">Every Saturday morning, Central Park West Meadow fills with a laid-back, strollable market locals treat as a tradition.</p>
           <p class="addr">150 N New York Ave, Winter Park, FL 32789</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/everoak.html">Everoak Farm</a></h3>
-          <p class="meta">Markets &amp; shops &middot; University &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/everoak.html">Everoak Farm</a></h3>
+          <p class="meta">Markets &amp; shops &middot; University &middot; $</p><p class="vsub">A family-run regenerative farm on Carrington Drive growing Certified Naturally Grown produce with no sprays in living soil.</p>
           <p class="addr">Everoak Farm, 2335 Carrington Dr, Orlando, FL 32807</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/market-on-south.html">Market On South</a></h3>
-          <p class="meta">Markets &amp; shops &middot; Milk District &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/market-on-south.html">Market On South</a></h3>
+          <p class="meta">Markets &amp; shops &middot; Milk District &middot; $$</p><p class="vsub">Fully plant-based food hall on East South Street, bohemian and laid-back, as much community space as place to eat.</p>
           <p class="addr">2603 E South St, Orlando, FL 32803</p>
-        </article>
+        </div></article>
         </div>
       </section>
 
@@ -273,35 +280,35 @@
         <p class="lede">Other places in Casselberry, closest to Brightlight Books first.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/sourdough-bread-house.html">Sourdough Bread House</a></h3>
-          <p class="meta">Bakeries · Bakery &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/sourdough-bread-house.html">Sourdough Bread House</a></h3>
+          <p class="meta">Bakeries · Bakery &middot; $$</p><p class="vsub">Cozy, family-owned Turkish bakery cafe in Casselberry built around slow-fermented sourdough guests say melts in your mouth.</p>
           <p class="addr">Sourdough Bread House, 5761 US-17-92, Casselberry, FL 32707-3819, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/zocalo-436-mexican-grill.html">Zocalo 436 Mexican Grill</a></h3>
-          <p class="meta">Mexican · Mexican and Colombian &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-zocalo-436-mexican-grill.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/zocalo-436-mexican-grill.html">Zocalo 436 Mexican Grill</a></h3>
+          <p class="meta">Mexican · Mexican and Colombian &middot; $$</p><p class="vsub">A Mexicolombian grill and bar on 436, where birria tacos share the menu with a Burrito Paisa and a parrillada for the table.</p>
           <p class="addr">Zocalo 436 Mexican Grill, 505 FL-436, Casselberry, FL 32707</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/lake-concord-park.html">Lake Concord Park</a></h3>
-          <p class="meta">Parks &amp; outdoors · Park &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/lake-concord-park.html">Lake Concord Park</a></h3>
+          <p class="meta">Parks &amp; outdoors · Park &middot; $</p><p class="vsub">Casselberry&#x27;s event front yard since 2010: a lakefront park with old oaks, an amphitheater, a sculpture garden, and a playground.</p>
           <p class="addr">Lake Concord Park, 95 Triplet Lake Drive, Casselberry, FL 32707</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/casselberry-art-house.html">Casselberry Art House</a></h3>
-          <p class="meta">Attractions · Art Gallery &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/casselberry-art-house.html">Casselberry Art House</a></h3>
+          <p class="meta">Attractions · Art Gallery &middot; $</p><p class="vsub">The city&#x27;s art house since 2002, a former lake house on Lake Concord turned gallery and classroom with rotating exhibitions.</p>
           <p class="addr">Casselberry Art House, 127 Quail Pond Circle, Casselberry, FL 32707</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/poblanos-cocina-mexicana.html">Poblano&#x27;s Cocina Mexicana</a></h3>
-          <p class="meta">Mexican · Mexican &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-poblanos-cocina-mexicana.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/poblanos-cocina-mexicana.html">Poblano&#x27;s Cocina Mexicana</a></h3>
+          <p class="meta">Mexican · Mexican &middot; $$</p><p class="vsub">A family owned Mexican kitchen on 436 built around the poblano pepper, with chile rellenos and a full vegetarian section.</p>
           <p class="addr">Poblano&#x27;s Cocina Mexicana, 908 FL-436, Casselberry, FL 32707</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/wa-sushi.html">WA Sushi</a></h3>
-          <p class="meta">Japanese &amp; sushi · Sushi &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/wa-sushi.html">WA Sushi</a></h3>
+          <p class="meta">Japanese &amp; sushi · Sushi &middot; $$</p><p class="vsub">A Casselberry strip plaza hides a serious sushi counter where Chef Hong flies fish in from Japan, cozy and unpretentious.</p>
           <p class="addr">Wa Sushi, 924 Semoran Blvd, Casselberry, FL 32707</p>
-        </article>
+        </div></article>
         </div>
         <div class="handoff">
           <a class="btn-ghost" href="/casselberry-finder.html">See the full Casselberry list</a>

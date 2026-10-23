@@ -211,7 +211,14 @@
       .vcard .addr { margin: 0; color: var(--muted); font-size: .9rem; }
       @media (max-width: 640px) { .facts { grid-template-columns: 1fr; } }
     </style>
-  </head>
+  <style data-cardsys>
+/* cardsys: similar rail cards (2026-10-23 overhaul) */
+.vcard{display:flex;gap:12px;align-items:flex-start}
+.vcard .vthumb{flex:0 0 86px;width:86px;height:86px;border-radius:10px;object-fit:cover;display:block}
+.vcard .vmain{flex:1;min-width:0}
+.vcard .vsub{margin:4px 0 0;font-size:.86rem;line-height:1.45;color:var(--muted,#c6bba2)}
+@media (min-width:1000px){.vlist{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start}}
+</style></head>
   <body>
     <header class="hero">
       <div class="hero-in">
@@ -236,46 +243,46 @@
         <div class="actions">
           <a class="action" href="https://www.google.com/maps/search/?api=1&amp;query=Chef+Art+Smith%27s+Homecomin%27+1602+E+Buena+Vista+Dr%2C+Lake+Buena+Vista%2C+FL+32830" target="_blank" rel="noopener">Directions &rarr;</a>
           <a class="action" href="/archive.html?venue=chef-art-smith-s-homecomin">Open in the full finder</a>
-          <a class="action" href="/disney-springs-district-guide.html">Read the Disney Springs story</a>
+          <a class="action" href="/history/disney-springs.html">Read the Disney Springs story</a>
           <a class="action action-ig" href="https://www.instagram.com/homecominfl" target="_blank" rel="noopener"><svg class="ig-glyph" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="vertical-align:-2px;margin-right:6px"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg> Instagram</a>
         </div>
       </section>
 
-      <section class="sec" id="similar">
+      <section class="sec" id="district-story"><p class="kicker">District Story</p><h2>The story of Disney Springs</h2><p class="lede">A shopping village opened in 1975, a town history written for a 2015 rebrand, and springs built to match the story. This is the documented version, told straight.</p><p><a class="btn-ghost" href="/history/disney-springs.html">Read the Disney Springs story &rarr;</a></p></section><section class="sec" id="similar">
         <p class="kicker">Similar Feel</p>
         <h2>More places with this feel</h2>
         <p class="lede">Matched by vibe, not by neighborhood: the places across Greater Orlando closest in spirit to Chef Art Smith&#x27;s Homecomin&#x27;.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/house-of-blues.html">House of Blues</a></h3>
-          <p class="meta">Nightlife &amp; music &middot; Disney Springs &middot; $$$</p>
+          <div class="vmain"><h3><a href="/venue/house-of-blues.html">House of Blues</a></h3>
+          <p class="meta">Nightlife &amp; music &middot; Disney Springs &middot; $$$</p><p class="vsub">At Disney Springs, a Southern-leaning restaurant pairs with a music hall wrapped in folk art.</p>
           <p class="addr">1490 E Buena Vista Dr, Lake Buena Vista, FL 32830</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/stk-steakhouse.html">STK Steakhouse</a></h3>
-          <p class="meta">Fine dining &amp; steak &middot; Disney Springs &middot; $$$</p>
+          <img class="vthumb" src="/assets/venue-stk-steakhouse.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/stk-steakhouse.html">STK Steakhouse</a></h3>
+          <p class="meta">Fine dining &amp; steak &middot; Disney Springs &middot; $$$</p><p class="vsub">At Disney Springs, a chic steakhouse paired with club-like lounge energy, summed up by guests as vibe dining.</p>
           <p class="addr">1580 E Buena Vista Dr, Lake Buena Vista, FL 32830</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/the-polite-pig.html">The Polite Pig</a></h3>
-          <p class="meta">BBQ &middot; Disney Springs &middot; $$$</p>
+          <div class="vmain"><h3><a href="/venue/the-polite-pig.html">The Polite Pig</a></h3>
+          <p class="meta">BBQ &middot; Disney Springs &middot; $$$</p><p class="vsub">Modern barbecue done fast-casual at Disney Springs, lively and chill with counter service that keeps things moving.</p>
           <p class="addr">1536 E Buena Vista Dr, Lake Buena Vista, FL 32830</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/raglan-road.html">Raglan Road</a></h3>
-          <p class="meta">Bars &amp; lounges &middot; Disney Springs &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-raglan-road.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/raglan-road.html">Raglan Road</a></h3>
+          <p class="meta">Bars &amp; lounges &middot; Disney Springs &middot; $$</p><p class="vsub">A lively Irish pub at Disney Springs where live music and Irish dancers keep the room energetic.</p>
           <p class="addr">1640 E Buena Vista Dr, Lake Buena Vista, FL 32830</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/jaleo.html">Jaleo</a></h3>
-          <p class="meta">Mediterranean &middot; Disney Springs &middot; $$$</p>
+          <div class="vmain"><h3><a href="/venue/jaleo.html">Jaleo</a></h3>
+          <p class="meta">Mediterranean &middot; Disney Springs &middot; $$$</p><p class="vsub">A festive Spanish tapas room at Disney Springs that guests describe as a non-stop party of flavors.</p>
           <p class="addr">Jaleo, 1482 E Buena Vista Dr, Lake Buena Vista, FL 32830-8518</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/chef-mickeys.html">Chef Mickey&#x27;s</a></h3>
-          <p class="meta">American &middot; Disney Area &middot; $$$</p>
+          <div class="vmain"><h3><a href="/venue/chef-mickeys.html">Chef Mickey&#x27;s</a></h3>
+          <p class="meta">American &middot; Disney Area &middot; $$$</p><p class="vsub">The Fab Five work the tables in chef costumes at this bustling character buffet in the Contemporary, with the monorail gliding overhead.</p>
           <p class="addr">Chef Mickey&#x27;s, 4600 N World Dr, Lake Buena Vista, FL 32830-8413</p>
-        </article>
+        </div></article>
         </div>
       </section>
 
@@ -285,35 +292,35 @@
         <p class="lede">Other places in Disney Springs, Local Picks first, then the closest to Chef Art Smith&#x27;s Homecomin&#x27;.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/disney-springs-district.html">Disney Springs</a> <span class="badge">Local Pick</span></h3>
-          <p class="meta">Markets &amp; shops · Shopping District &middot; $$$</p>
+          <div class="vmain"><h3><a href="/venue/disney-springs-district.html">Disney Springs</a> <span class="badge">Local Pick</span></h3>
+          <p class="meta">Markets &amp; shops · Shopping District &middot; $$$</p><p class="vsub">Disney&#x27;s open-air waterfront promenade, no park ticket and no turnstile, just an evening on the water.</p>
           <p class="addr">1486 E Buena Vista Dr, Lake Buena Vista, FL 32830</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/stk-steakhouse.html">STK Steakhouse</a></h3>
-          <p class="meta">Fine dining &amp; steak · Steakhouse &middot; $$$</p>
+          <img class="vthumb" src="/assets/venue-stk-steakhouse.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/stk-steakhouse.html">STK Steakhouse</a></h3>
+          <p class="meta">Fine dining &amp; steak · Steakhouse &middot; $$$</p><p class="vsub">At Disney Springs, a chic steakhouse paired with club-like lounge energy, summed up by guests as vibe dining.</p>
           <p class="addr">1580 E Buena Vista Dr, Lake Buena Vista, FL 32830</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/jaleo.html">Jaleo</a></h3>
-          <p class="meta">Mediterranean · Spanish Tapas &middot; $$$</p>
+          <div class="vmain"><h3><a href="/venue/jaleo.html">Jaleo</a></h3>
+          <p class="meta">Mediterranean · Spanish Tapas &middot; $$$</p><p class="vsub">A festive Spanish tapas room at Disney Springs that guests describe as a non-stop party of flavors.</p>
           <p class="addr">Jaleo, 1482 E Buena Vista Dr, Lake Buena Vista, FL 32830-8518</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/level-99.html">Level 99</a></h3>
-          <p class="meta">Attractions · Attraction &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/level-99.html">Level 99</a></h3>
+          <p class="meta">Attractions · Attraction &middot; $$</p><p class="vsub">At Disney Springs, the former NBA Experience building now holds life-sized challenge rooms for games and puzzles, tracked by wristband.</p>
           <p class="addr">1486 E Buena Vista Dr, Lake Buena Vista, FL 32830</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/boathouse.html">The Boathouse &amp; Vintage Amphicars</a></h3>
-          <p class="meta">Seafood · Seafood &middot; $$$</p>
+          <img class="vthumb" src="/assets/venue-boathouse.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/boathouse.html">The Boathouse &amp; Vintage Amphicars</a></h3>
+          <p class="meta">Seafood · Seafood &middot; $$$</p><p class="vsub">A lively, classic waterfront room at Disney Springs where guests sit by the water for steaks, a raw bar, filet sliders and lobster bisque.</p>
           <p class="addr">1620 E Buena Vista Dr, Lake Buena Vista, FL 32830</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/wine-bar-george.html">Wine Bar George</a></h3>
-          <p class="meta">Bars &amp; lounges · Wine Bar &middot; $$$</p>
+          <img class="vthumb" src="/assets/venue-wine-bar-george.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/wine-bar-george.html">Wine Bar George</a></h3>
+          <p class="meta">Bars &amp; lounges · Wine Bar &middot; $$$</p><p class="vsub">A calm escape from the Disney Springs crowds, cozy and welcoming, with knowledgeable guidance at the table.</p>
           <p class="addr">1610 E Buena Vista Dr, Lake Buena Vista, FL 32830</p>
-        </article>
+        </div></article>
         </div>
         <div class="handoff">
           <a class="btn-ghost" href="/disney-springs-finder.html">See the full Disney Springs list</a>

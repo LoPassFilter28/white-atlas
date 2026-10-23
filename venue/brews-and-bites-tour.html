@@ -211,7 +211,14 @@
       .vcard .addr { margin: 0; color: var(--muted); font-size: .9rem; }
       @media (max-width: 640px) { .facts { grid-template-columns: 1fr; } }
     </style>
-  </head>
+  <style data-cardsys>
+/* cardsys: similar rail cards (2026-10-23 overhaul) */
+.vcard{display:flex;gap:12px;align-items:flex-start}
+.vcard .vthumb{flex:0 0 86px;width:86px;height:86px;border-radius:10px;object-fit:cover;display:block}
+.vcard .vmain{flex:1;min-width:0}
+.vcard .vsub{margin:4px 0 0;font-size:.86rem;line-height:1.45;color:var(--muted,#c6bba2)}
+@media (min-width:1000px){.vlist{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start}}
+</style></head>
   <body>
     <header class="hero">
       <div class="hero-in">
@@ -236,7 +243,7 @@
         <div class="actions">
           <a class="action" href="https://www.google.com/maps/search/?api=1&amp;query=Brews+and+Bites+Walking+Tour+Ten10+Brewing+Company%2C+1010+Virginia+Dr%2C+Orlando%2C+FL+32803" target="_blank" rel="noopener">Directions &rarr;</a>
           <a class="action" href="/archive.html?venue=brews-and-bites-tour">Open in the full finder</a>
-          <a class="action" href="/ivanhoe-village-district-guide.html">Read the Ivanhoe Village story</a>
+          <a class="action" href="/history/ivanhoe-village.html">Read the Ivanhoe Village story</a>
           <a class="action action-ig" href="https://www.instagram.com/wanderingpalmfoodtours" target="_blank" rel="noopener"><svg class="ig-glyph" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="vertical-align:-2px;margin-right:6px"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg> Instagram</a>
           <a class="action action-aff" href="https://www.getyourguide.com/orlando-l191/orlando-brews-and-bites-brewery-walking-tour-t859296/?partner_id=FJC4IAU&amp;utm_source=407fyi&amp;utm_medium=affiliate&amp;mkt_cmp=true" target="_blank" rel="noopener sponsored">GetYourGuide &#8599;</a>
           <a class="action action-aff" href="https://www.viator.com/searchResults/all?text=Brews+and+Bites+Walking+Tour+Orlando&amp;pid=P00325046&amp;mcid=42383&amp;utm_source=407fyi&amp;utm_medium=affiliate" target="_blank" rel="noopener sponsored">Find tickets on Viator &#8599;</a>
@@ -244,41 +251,41 @@
         </div>
       </section>
 
-      <section class="sec" id="similar">
+      <section class="sec" id="district-story"><p class="kicker">District Story</p><h2>The story of Ivanhoe Village</h2><p class="lede">A lake named for a novel, a shore of cotton, pineapples and amusement rides, and a main street that kept reinventing itself around the water.</p><p><a class="btn-ghost" href="/history/ivanhoe-village.html">Read the Ivanhoe Village story &rarr;</a></p></section><section class="sec" id="similar">
         <p class="kicker">Similar Feel</p>
         <h2>More places with this feel</h2>
         <p class="lede">Matched by vibe, not by neighborhood: the places across Greater Orlando closest in spirit to Brews and Bites Walking Tour.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/ivanhoe-village-food-tour.html">Ivanhoe Village Food Tour</a></h3>
-          <p class="meta">Attractions &middot; Ivanhoe Village &middot; $$$</p>
+          <img class="vthumb" src="/assets/venue-ivanhoe-village-food-tour.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/ivanhoe-village-food-tour.html">Ivanhoe Village Food Tour</a></h3>
+          <p class="meta">Attractions &middot; Ivanhoe Village &middot; $$$</p><p class="vsub">A knowledgeable local guide leads this well-organized walk through a lakefront vintage district of shops and cafes, stop by tasting stop.</p>
           <p class="addr">1211 N Orange Ave, Orlando, FL 32804</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/ivanhoe-park-brewing-company.html">Ivanhoe Park Brewing Company</a></h3>
-          <p class="meta">Breweries &middot; Ivanhoe Village &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/ivanhoe-park-brewing-company.html">Ivanhoe Park Brewing Company</a></h3>
+          <p class="meta">Breweries &middot; Ivanhoe Village &middot; $$</p><p class="vsub">Relaxed and cozy on Alden Road, with indoor and outdoor room and a taproom guests call super dog friendly.</p>
           <p class="addr">1300 Alden Rd, Orlando, FL 32803</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/cfh-orlando.html">CFH Orlando</a></h3>
-          <p class="meta">Markets &amp; shops &middot; Ivanhoe Village &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/cfh-orlando.html">CFH Orlando</a></h3>
+          <p class="meta">Markets &amp; shops &middot; Ivanhoe Village &middot; $$</p><p class="vsub">The central bar inside City Food Hall gives Ivanhoe Village a social, unhurried pause between food runs, with specials guests found tasty.</p>
           <p class="addr">1412 Alden Rd, Orlando, FL 32803</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/the-caboose-bar.html">The Caboose Bar</a></h3>
-          <p class="meta">Bars &amp; lounges &middot; Ivanhoe Village &middot; $</p>
+          <img class="vthumb" src="/assets/venue-the-caboose-bar.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/the-caboose-bar.html">The Caboose Bar</a></h3>
+          <p class="meta">Bars &amp; lounges &middot; Ivanhoe Village &middot; $</p><p class="vsub">A dive on N Orange Ave in Ivanhoe Village where guests say the bartenders make you feel like a regular.</p>
           <p class="addr">The Caboose Bar, 1827 N Orange Ave, Orlando, FL 32804</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/the-lucky-lure.html">The Lucky Lure</a></h3>
-          <p class="meta">Bars &amp; lounges &middot; Ivanhoe Village &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/the-lucky-lure.html">The Lucky Lure</a></h3>
+          <p class="meta">Bars &amp; lounges &middot; Ivanhoe Village &middot; $</p><p class="vsub">On the Lake Ivanhoe shore, an open-air dive guests call their best local watering hole.</p>
           <p class="addr">The Lucky Lure, 1427 N Orange Ave, Orlando, FL 32804</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/imperial.html">Imperial Wine Bar</a></h3>
-          <p class="meta">Bars &amp; lounges &middot; Orlando &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/imperial.html">Imperial Wine Bar</a></h3>
+          <p class="meta">Bars &amp; lounges &middot; Orlando &middot; $$</p><p class="vsub">Inside a vintage furniture store on North Orange Avenue sits Ivanhoe Village&#x27;s wine bar, Imperial.</p>
           <p class="addr">Imperial, 1800 N Orange Ave, Orlando, FL 32804-6415, United States</p>
-        </article>
+        </div></article>
         </div>
       </section>
 
@@ -288,35 +295,35 @@
         <p class="lede">Other places in Ivanhoe Village, closest to Brews and Bites Walking Tour first.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/the-pinery.html">The Pinery</a></h3>
-          <p class="meta">American &middot; $$$</p>
+          <img class="vthumb" src="/assets/venue-the-pinery.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/the-pinery.html">The Pinery</a></h3>
+          <p class="meta">American &middot; $$$</p><p class="vsub">Warm and lakeside on Lake Ivanhoe, Florida cooking in a rustic, elegant room guests call fabulous.</p>
           <p class="addr">The Pinery, 295 NE Ivanhoe Blvd, Orlando, FL 32804-6434</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/the-lucky-lure.html">The Lucky Lure</a></h3>
-          <p class="meta">Bars &amp; lounges · Dive Bar &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/the-lucky-lure.html">The Lucky Lure</a></h3>
+          <p class="meta">Bars &amp; lounges · Dive Bar &middot; $</p><p class="vsub">On the Lake Ivanhoe shore, an open-air dive guests call their best local watering hole.</p>
           <p class="addr">The Lucky Lure, 1427 N Orange Ave, Orlando, FL 32804</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/4-hens-creole-kitchen.html">4 Hens Creole Kitchen</a></h3>
-          <p class="meta">Restaurants · Creole Kitchen &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/4-hens-creole-kitchen.html">4 Hens Creole Kitchen</a></h3>
+          <p class="meta">Restaurants · Creole Kitchen &middot; $$</p><p class="vsub">Inside City Food Hall, chill and soulful cooking with a NOLA spirit, music in the air, and seasoning guests call out of this world.</p>
           <p class="addr">1412 Alden Rd, Orlando, FL 32803</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/cfh-orlando.html">CFH Orlando</a></h3>
-          <p class="meta">Markets &amp; shops · Food Hall &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/cfh-orlando.html">CFH Orlando</a></h3>
+          <p class="meta">Markets &amp; shops · Food Hall &middot; $$</p><p class="vsub">The central bar inside City Food Hall gives Ivanhoe Village a social, unhurried pause between food runs, with specials guests found tasty.</p>
           <p class="addr">1412 Alden Rd, Orlando, FL 32803</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/city-food-hall.html">City Food Hall</a></h3>
-          <p class="meta">Markets &amp; shops · Food Hall &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-city-food-hall.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/city-food-hall.html">City Food Hall</a></h3>
+          <p class="meta">Markets &amp; shops · Food Hall &middot; $$</p><p class="vsub">Modern and bustling on Alden Road, chef-driven stalls under one roof so a group can split across smash burgers, sushi, pasta and tacos.</p>
           <p class="addr">City Food Hall, 1412 Alden Rd, Orlando, FL 32803-1862</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/egg-dose.html">Egg Dose</a></h3>
-          <p class="meta">Breakfast &amp; brunch · Breakfast Sandwiches &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/egg-dose.html">Egg Dose</a></h3>
+          <p class="meta">Breakfast &amp; brunch · Breakfast Sandwiches &middot; $$</p><p class="vsub">Guests call them perfect: the Maple Dose stacks thick-cut bacon, soft scrambled eggs, cheddar and maple syrup on brioche French toast.</p>
           <p class="addr">1412 Alden Rd, Orlando, FL 32803</p>
-        </article>
+        </div></article>
         </div>
         <div class="handoff">
           <a class="btn-ghost" href="/ivanhoe-village-finder.html">See the full Ivanhoe Village list</a>

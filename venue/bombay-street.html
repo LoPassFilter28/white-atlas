@@ -211,7 +211,14 @@
       .vcard .addr { margin: 0; color: var(--muted); font-size: .9rem; }
       @media (max-width: 640px) { .facts { grid-template-columns: 1fr; } }
     </style>
-  </head>
+  <style data-cardsys>
+/* cardsys: similar rail cards (2026-10-23 overhaul) */
+.vcard{display:flex;gap:12px;align-items:flex-start}
+.vcard .vthumb{flex:0 0 86px;width:86px;height:86px;border-radius:10px;object-fit:cover;display:block}
+.vcard .vmain{flex:1;min-width:0}
+.vcard .vsub{margin:4px 0 0;font-size:.86rem;line-height:1.45;color:var(--muted,#c6bba2)}
+@media (min-width:1000px){.vlist{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start}}
+</style></head>
   <body>
     <header class="hero">
       <div class="hero-in">
@@ -240,41 +247,41 @@
         </div>
       </section>
 
-      <section class="sec" id="similar">
+      <section class="sec" id="district-story"><p class="kicker">District Stories</p><h2>Orlando&#x27;s long memory</h2><p class="lede">The guide keeps the long memory of Orlando&#x27;s districts in one place: the names, the plats and the stories behind the streets.</p><p><a class="btn-ghost" href="/history.html">Browse the district stories &rarr;</a></p></section><section class="sec" id="similar">
         <p class="kicker">Similar Feel</p>
         <h2>More places with this feel</h2>
         <p class="lede">Matched by vibe, not by neighborhood: the places across Greater Orlando closest in spirit to Bombay Street Kitchen.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/tikka-shack-indian-grub.html">Tikka Shack Indian Grub</a></h3>
-          <p class="meta">Indian &middot; Oviedo &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/tikka-shack-indian-grub.html">Tikka Shack Indian Grub</a></h3>
+          <p class="meta">Indian &middot; Oviedo &middot; $$</p><p class="vsub">Fast-casual Indian kitchen on Alafaya Trail that keeps flavors bold and the mood fun and casual.</p>
           <p class="addr">Tikka Shack Indian Grub, 1500 Alafaya Trl, Oviedo, FL 32765-4517, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/jala-indian-winter-park.html">Jala Indian Cuisine</a></h3>
-          <p class="meta">Indian &middot; Winter Park &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/jala-indian-winter-park.html">Jala Indian Cuisine</a></h3>
+          <p class="meta">Indian &middot; Winter Park &middot; $$</p><p class="vsub">Founder Manish Nagar&#x27;s Ahmedabad roots come to Morse Boulevard, in a serene, intimate room of slow-simmered, tandoor-fired cooking.</p>
           <p class="addr">155 E Morse Blvd, Winter Park, FL 32789</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/indian-pavilion.html">Indian Pavilion</a></h3>
-          <p class="meta">Indian &middot; Winter Garden &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/indian-pavilion.html">Indian Pavilion</a></h3>
+          <p class="meta">Indian &middot; Winter Garden &middot; $$</p><p class="vsub">Modern Indian cooking in Winter Garden built on bold spice and careful texture, with portions that often leave leftovers.</p>
           <p class="addr">Indian Pavilion, 13770 W Colonial Dr, Winter Garden, FL 34787-4202, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/the-spice-indian-grill.html">The Spice Indian Grill</a></h3>
-          <p class="meta">Indian &middot; Orlando &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/the-spice-indian-grill.html">The Spice Indian Grill</a></h3>
+          <p class="meta">Indian &middot; Orlando &middot; $$</p><p class="vsub">Alafaya Trail&#x27;s laid-back neighborhood Indian spot, where guests say the kitchen always nails it and the heat stays honest.</p>
           <p class="addr">The Spice Indian Grill, 4498 Alafaya Trl N, Orlando, FL 32826, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/juice-bar.html">Juice Bar</a></h3>
-          <p class="meta">Coffee &amp; cafes &middot; Milk District &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/juice-bar.html">Juice Bar</a></h3>
+          <p class="meta">Coffee &amp; cafes &middot; Milk District &middot; $$</p><p class="vsub">Cute, unpretentious counter on East South Street where everything is pressed and blended in front of you, even the fresh almond mylk.</p>
           <p class="addr">Juice Bar, 2413 E South St, Orlando, FL 32803-6324</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/shaka-donuts.html">Shaka Donuts</a></h3>
-          <p class="meta">Sweets &middot; Hourglass District &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-shaka-donuts.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/shaka-donuts.html">Shaka Donuts</a></h3>
+          <p class="meta">Sweets &middot; Hourglass District &middot; $$</p><p class="vsub">Aloha spirit in a cozy Curry Ford shop where every donut is made to order and served warm, and regulars call them Orlando&#x27;s best.</p>
           <p class="addr">2641 Curry Ford Rd, Orlando, FL 32806</p>
-        </article>
+        </div></article>
         </div>
       </section>
 
@@ -284,35 +291,35 @@
         <p class="lede">Other places in South Orlando, closest to Bombay Street Kitchen first.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/el-cilantrillo.html">El Cilantrillo</a></h3>
-          <p class="meta">Latin &amp; Caribbean · Latin &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/el-cilantrillo.html">El Cilantrillo</a></h3>
+          <p class="meta">Latin &amp; Caribbean · Latin &middot; $$</p><p class="vsub">South Orlando&#x27;s big Puerto Rican table near the Florida Mall is lively and salsa-filled, with generous portions.</p>
           <p class="addr">El Cilantrillo Restaurant, 1301 Florida Mall Ave, Orlando, FL 32809-7731</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/amar-orlando.html">Amar Orlando</a></h3>
-          <p class="meta">Mediterranean &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/amar-orlando.html">Amar Orlando</a></h3>
+          <p class="meta">Mediterranean &middot; $$</p><p class="vsub">Lebanese cooking in a calm, intimate room just outside the Florida Mall food court, a step up from its surroundings.</p>
           <p class="addr">8001 S Orange Blossom Trl, Ste #1510, Orlando, FL 32809</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/amazonica-florida-mall.html">Amazonica</a></h3>
-          <p class="meta">Coffee &amp; cafes · Coffee Shop &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/amazonica-florida-mall.html">Amazonica</a></h3>
+          <p class="meta">Coffee &amp; cafes · Coffee Shop &middot; $$</p><p class="vsub">A bright Colombian kiosk inside The Florida Mall, turning out obleas with arequipe, acai bowls with Nutella and fruit, and a proper cortadito.</p>
           <p class="addr">8001 S Orange Blossom Trl Kiosk TT124, Orlando, FL 32809</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/crayola-experience-orlando.html">Crayola Experience</a></h3>
-          <p class="meta">Attractions · Attraction &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-crayola-experience-orlando.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/crayola-experience-orlando.html">Crayola Experience</a></h3>
+          <p class="meta">Attractions · Attraction &middot; $$</p><p class="vsub">Hands-on color playground inside The Florida Mall, built for younger kids.</p>
           <p class="addr">8001 S Orange Blossom Trl, Orlando, FL 32809</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/el-para-so-del-marisco.html">El Paraíso Del Marisco</a></h3>
-          <p class="meta">Seafood &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/el-para-so-del-marisco.html">El Paraíso Del Marisco</a></h3>
+          <p class="meta">Seafood &middot; $$</p><p class="vsub">Ecuadorian and Peruvian seafood that Orlando&#x27;s Latin families describe as tasting like home.</p>
           <p class="addr">8421 S Orange Blossom Trl Ste 156, Orlando, FL 32809</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/happy-snapper-seafood-restaurant.html">Happy Snapper Seafood Restaurant</a></h3>
-          <p class="meta">Seafood &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-happy-snapper-seafood-restaurant.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/happy-snapper-seafood-restaurant.html">Happy Snapper Seafood Restaurant</a></h3>
+          <p class="meta">Seafood &middot; $$</p><p class="vsub">Tiny, family-run hole-in-the-wall seafood joint on South Orange Avenue that guests keep coming back to.</p>
           <p class="addr">Happy Snapper Seafood Restaurant, 6327 Orange Ave S, Orlando, FL 32809-5109, United States</p>
-        </article>
+        </div></article>
         </div>
         <div class="handoff">
           <a class="btn-ghost" href="/south-orlando-finder.html">See the full South Orlando list</a>

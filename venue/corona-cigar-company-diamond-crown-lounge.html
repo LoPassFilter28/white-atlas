@@ -211,7 +211,14 @@
       .vcard .addr { margin: 0; color: var(--muted); font-size: .9rem; }
       @media (max-width: 640px) { .facts { grid-template-columns: 1fr; } }
     </style>
-  </head>
+  <style data-cardsys>
+/* cardsys: similar rail cards (2026-10-23 overhaul) */
+.vcard{display:flex;gap:12px;align-items:flex-start}
+.vcard .vthumb{flex:0 0 86px;width:86px;height:86px;border-radius:10px;object-fit:cover;display:block}
+.vcard .vmain{flex:1;min-width:0}
+.vcard .vsub{margin:4px 0 0;font-size:.86rem;line-height:1.45;color:var(--muted,#c6bba2)}
+@media (min-width:1000px){.vlist{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start}}
+</style></head>
   <body>
     <header class="hero">
       <div class="hero-in">
@@ -236,45 +243,45 @@
         <div class="actions">
           <a class="action" href="https://www.google.com/maps/search/?api=1&amp;query=Corona+Cigar+Company+%26+Diamond+Crown+Lounge+127+S+Orange+Ave%2C+Orlando%2C+FL+32801" target="_blank" rel="noopener">Directions &rarr;</a>
           <a class="action" href="/archive.html?venue=corona-cigar-company-diamond-crown-lounge">Open in the full finder</a>
-          <a class="action" href="/downtown-orlando-district-guide.html">Read the Downtown Orlando story</a>
+          <a class="action" href="/history/downtown.html">Read the Downtown Orlando story</a>
         </div>
       </section>
 
-      <section class="sec" id="similar">
+      <section class="sec" id="district-story"><p class="kicker">District Story</p><h2>The story of Downtown Orlando</h2><p class="lede">A fort, a courthouse plat and a citrus boom built it. A name nobody can prove still runs it.</p><p><a class="btn-ghost" href="/history/downtown.html">Read the Downtown Orlando story &rarr;</a></p></section><section class="sec" id="similar">
         <p class="kicker">Similar Feel</p>
         <h2>More places with this feel</h2>
         <p class="lede">Matched by vibe, not by neighborhood: the places across Greater Orlando closest in spirit to Corona Cigar Company &amp; Diamond Crown Lounge.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/proper-orlando.html">Proper Orlando</a></h3>
-          <p class="meta">Bars &amp; lounges &middot; Downtown Orlando &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-proper-orlando.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/proper-orlando.html">Proper Orlando</a></h3>
+          <p class="meta">Bars &amp; lounges &middot; Downtown Orlando &middot; $$</p><p class="vsub">A mid-century cocktail lounge on South Orange Avenue where vinyl is the whole point, DJs spinning records only on an analog sound system.</p>
           <p class="addr">112 S Orange Ave, Orlando, FL 32801</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/celine.html">Celine Orlando</a></h3>
-          <p class="meta">Nightlife &amp; music &middot; Downtown &middot; $$$</p>
+          <div class="vmain"><h3><a href="/venue/celine.html">Celine Orlando</a></h3>
+          <p class="meta">Nightlife &amp; music &middot; Downtown &middot; $$$</p><p class="vsub">Downtown on Magnolia Avenue, it stacks a Prohibition-era speakeasy, a grand main room, and a rooftop guests call their favorite in Orlando.</p>
           <p class="addr">22 S Magnolia Ave, Orlando, FL 32801</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/cuba-libre-pointe-orlando.html">Cuba Libre</a></h3>
-          <p class="meta">Latin &amp; Caribbean &middot; Pointe Orlando &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/cuba-libre-pointe-orlando.html">Cuba Libre</a></h3>
+          <p class="meta">Latin &amp; Caribbean &middot; Pointe Orlando &middot; $$</p><p class="vsub">A two-story Old Havana courtyard rebuilt inside Pointe Orlando, all palm shadows, live Latin music, and rum.</p>
           <p class="addr">9101 International Dr #1004, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/luminescent.html">Luminescent</a></h3>
-          <p class="meta">Bars &amp; lounges &middot; East Orlando &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/luminescent.html">Luminescent</a></h3>
+          <p class="meta">Bars &amp; lounges &middot; East Orlando &middot; $$</p><p class="vsub">A deep-green bar on East Colonial Drive, part Indian-influenced coffee bar and part craft cocktail lounge, cozy and impeccable.</p>
           <p class="addr">Luminescent, 12286 E Colonial Dr, Orlando, FL 32826-4709</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/sparrow.html">Sparrow Orlando</a></h3>
-          <p class="meta">Bars &amp; lounges &middot; Mills 50 &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-sparrow.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/sparrow.html">Sparrow Orlando</a></h3>
+          <p class="meta">Bars &amp; lounges &middot; Mills 50 &middot; $$</p><p class="vsub">An intimate, moody wine bar on North Orange Avenue, all low light, vinyl in the air and an unhurried pace.</p>
           <p class="addr">807 N Orange Ave, Orlando, FL 32801</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/noir-bar.html">Noir Bar</a></h3>
-          <p class="meta">Bars &amp; lounges &middot; Downtown &middot; $$$</p>
+          <img class="vthumb" src="/assets/venue-noir-bar.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/noir-bar.html">Noir Bar</a></h3>
+          <p class="meta">Bars &amp; lounges &middot; Downtown &middot; $$$</p><p class="vsub">Tucked behind a hidden door inside Talay Thai on North Orange Avenue, this speakeasy stays dark, moody and blissfully uncrowded.</p>
           <p class="addr">861 N Orange Ave, Orlando, FL 32801 (inside Talay Thai)</p>
-        </article>
+        </div></article>
         </div>
       </section>
 
@@ -284,35 +291,35 @@
         <p class="lede">Other places in Downtown Orlando, Local Picks first, then the closest to Corona Cigar Company &amp; Diamond Crown Lounge.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/fixtion.html">Fixtion Restaurant &amp; Bar</a> <span class="badge">Local Pick</span></h3>
-          <p class="meta">American · American Restaurant &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/fixtion.html">Fixtion Restaurant &amp; Bar</a> <span class="badge">Local Pick</span></h3>
+          <p class="meta">American · American Restaurant &middot; $$</p><p class="vsub">On Orange Avenue, comfort food and huge comfy booths early, club energy after dark, shape-shifting through the day.</p>
           <p class="addr">15 N Orange Ave, Orlando, FL 32801</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/wall-street-plaza.html">Wall Street Plaza</a> <span class="badge">Local Pick</span></h3>
-          <p class="meta">Nightlife &amp; music · Entertainment District &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/wall-street-plaza.html">Wall Street Plaza</a> <span class="badge">Local Pick</span></h3>
+          <p class="meta">Nightlife &amp; music · Entertainment District &middot; $$</p><p class="vsub">One downtown block holds the whole crawl: eight bars and patios that, on a big night, turn into a single street party.</p>
           <p class="addr">25 Wall St, Orlando, FL 32801</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/elixir-kitchen-bar.html">Elixir Kitchen and Bar</a> <span class="badge">Local Pick</span></h3>
-          <p class="meta">Bars &amp; lounges · Bar &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-elixir-kitchen-bar.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/elixir-kitchen-bar.html">Elixir Kitchen and Bar</a> <span class="badge">Local Pick</span></h3>
+          <p class="meta">Bars &amp; lounges · Bar &middot; $$</p><p class="vsub">A rustic-hip gastropub in one of downtown&#x27;s original buildings, and very much the neighborhood&#x27;s spot.</p>
           <p class="addr">9 W Washington St, Orlando, FL 32801</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/proper-orlando.html">Proper Orlando</a></h3>
-          <p class="meta">Bars &amp; lounges · Cocktail Bar &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-proper-orlando.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/proper-orlando.html">Proper Orlando</a></h3>
+          <p class="meta">Bars &amp; lounges · Cocktail Bar &middot; $$</p><p class="vsub">A mid-century cocktail lounge on South Orange Avenue where vinyl is the whole point, DJs spinning records only on an analog sound system.</p>
           <p class="addr">112 S Orange Ave, Orlando, FL 32801</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/euphoria-downtown.html">Euphoria Downtown</a></h3>
-          <p class="meta">Bars &amp; lounges · Bar &middot; $$$</p>
+          <div class="vmain"><h3><a href="/venue/euphoria-downtown.html">Euphoria Downtown</a></h3>
+          <p class="meta">Bars &amp; lounges · Bar &middot; $$$</p><p class="vsub">On South Orange Avenue, brunch with bottomless mimosas and lamb chops gives way to Techno Euphoria nights on a big sound system.</p>
           <p class="addr">110 S Orange Ave, Orlando, FL 32801</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/mochiry.html">Mochiry</a></h3>
-          <p class="meta">Sweets · Dessert &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/mochiry.html">Mochiry</a></h3>
+          <p class="meta">Sweets · Dessert &middot; $</p><p class="vsub">On South Orange Avenue downtown, Mochiry serves Korean-style mochi doughnuts with the springy, stretchy chew that sets them apart.</p>
           <p class="addr">20 S Orange Ave, Orlando, FL 32801</p>
-        </article>
+        </div></article>
         </div>
         <div class="handoff">
           <a class="btn-ghost" href="/downtown-orlando-finder.html">See the full Downtown Orlando list</a>

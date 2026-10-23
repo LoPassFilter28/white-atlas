@@ -211,7 +211,14 @@
       .vcard .addr { margin: 0; color: var(--muted); font-size: .9rem; }
       @media (max-width: 640px) { .facts { grid-template-columns: 1fr; } }
     </style>
-  </head>
+  <style data-cardsys>
+/* cardsys: similar rail cards (2026-10-23 overhaul) */
+.vcard{display:flex;gap:12px;align-items:flex-start}
+.vcard .vthumb{flex:0 0 86px;width:86px;height:86px;border-radius:10px;object-fit:cover;display:block}
+.vcard .vmain{flex:1;min-width:0}
+.vcard .vsub{margin:4px 0 0;font-size:.86rem;line-height:1.45;color:var(--muted,#c6bba2)}
+@media (min-width:1000px){.vlist{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start}}
+</style></head>
   <body>
     <header class="hero">
       <div class="hero-in">
@@ -236,46 +243,46 @@
         <div class="actions">
           <a class="action" href="https://www.google.com/maps/search/?api=1&amp;query=Cavo%27s+Bar+%26+Kitchen+Cavo%27s+Bar+%26+Kitchen%2C+900+E+Washington+St%2C+Orlando%2C+FL+32801-2906%2C+United+States" target="_blank" rel="noopener">Directions &rarr;</a>
           <a class="action" href="/archive.html?venue=cavos-bar-kitchen">Open in the full finder</a>
-          <a class="action" href="/thornton-park-district-guide.html">Read the Thornton Park story</a>
+          <a class="action" href="/history/thornton-park.html">Read the Thornton Park story</a>
           <a class="action action-ig" href="https://www.instagram.com/cavos_bar" target="_blank" rel="noopener"><svg class="ig-glyph" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="vertical-align:-2px;margin-right:6px"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg> Instagram</a>
         </div>
       </section>
 
-      <section class="sec" id="similar">
+      <section class="sec" id="district-story"><p class="kicker">District Story</p><h2>The story of Thornton Park</h2><p class="lede">A name written on a plat in 1913, east of Lake Eola, and still carried by brick streets and bungalows today.</p><p><a class="btn-ghost" href="/history/thornton-park.html">Read the Thornton Park story &rarr;</a></p></section><section class="sec" id="similar">
         <p class="kicker">Similar Feel</p>
         <h2>More places with this feel</h2>
         <p class="lede">Matched by vibe, not by neighborhood: the places across Greater Orlando closest in spirit to Cavo&#x27;s Bar &amp; Kitchen.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/reeves-sports-bar.html">Reeves Sports Bar</a></h3>
-          <p class="meta">Bars &amp; lounges &middot; Downtown &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-reeves-sports-bar.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/reeves-sports-bar.html">Reeves Sports Bar</a></h3>
+          <p class="meta">Bars &amp; lounges &middot; Downtown &middot; $$</p><p class="vsub">A polished downtown sports bar on Central Boulevard, with screens everywhere, jerseys on the walls and a chef-driven take on game-day food.</p>
           <p class="addr">50 E Central Blvd, Orlando, FL 32801</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/wine-corks.html">Wine &amp; Corks</a></h3>
-          <p class="meta">Bars &amp; lounges &middot; Thornton Park &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/wine-corks.html">Wine &amp; Corks</a></h3>
+          <p class="meta">Bars &amp; lounges &middot; Thornton Park &middot; $$</p><p class="vsub">Locally owned bottle shop on East Church Street with a real sushi kitchen inside, an odd pairing that actually works.</p>
           <p class="addr">420 E Church St Ste 108, Orlando, FL 32801</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/outpost-neighborhood-tavern.html">Outpost Neighborhood Tavern</a></h3>
-          <p class="meta">American &middot; Thornton Park &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-outpost-neighborhood-tavern.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/outpost-neighborhood-tavern.html">Outpost Neighborhood Tavern</a></h3>
+          <p class="meta">American &middot; Thornton Park &middot; $$</p><p class="vsub">Two blocks off Lake Eola, a welcoming room guests call a cross between a sports bar and a boutique restaurant, with a lively patio and trivia leagues.</p>
           <p class="addr">227 N Eola Dr, Orlando, FL 32801</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/f-d-cantina.html">F&amp;D Cantina</a></h3>
-          <p class="meta">Mexican &middot; Thornton Park &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-f-d-cantina.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/f-d-cantina.html">F&amp;D Cantina</a></h3>
+          <p class="meta">Mexican &middot; Thornton Park &middot; $$</p><p class="vsub">On East Central, Thornton Park&#x27;s festive cantina, a dog-friendly patio room where regulars dream about birria tacos and the watermelon margarita.</p>
           <p class="addr">617 E Central Blvd, Orlando, FL 32801</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/fleming-s-prime-steakhouse-sand-lake.html">Fleming&#x27;s Prime Steakhouse &amp; Wine Bar</a></h3>
-          <p class="meta">Fine dining &amp; steak &middot; Dellagio &middot; $$$$</p>
+          <div class="vmain"><h3><a href="/venue/fleming-s-prime-steakhouse-sand-lake.html">Fleming&#x27;s Prime Steakhouse &amp; Wine Bar</a></h3>
+          <p class="meta">Fine dining &amp; steak &middot; Dellagio &middot; $$$$</p><p class="vsub">By the Dellagio fountains, Fleming&#x27;s does the classic steakhouse thing right: prime cuts, a deep wine list, and sharp service.</p>
           <p class="addr">8030 Via Dellagio Way, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/winter-park-biscuit-company.html">Winter Park Biscuit Company</a></h3>
-          <p class="meta">Breakfast &amp; brunch &middot; Audubon Park &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/winter-park-biscuit-company.html">Winter Park Biscuit Company</a></h3>
+          <p class="meta">Breakfast &amp; brunch &middot; Audubon Park &middot; $$</p><p class="vsub">All-vegan counter inside East End Market built around flaky, golden oat buttermilk biscuits, stacked or smothered in gravy.</p>
           <p class="addr">3201 Corrine Dr, Orlando, FL 32803-2224, United States</p>
-        </article>
+        </div></article>
         </div>
       </section>
 
@@ -285,35 +292,35 @@
         <p class="lede">Other places in Thornton Park, Local Picks first, then the closest to Cavo&#x27;s Bar &amp; Kitchen.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/rusteak-thornton-park.html">Rusteak</a> <span class="badge">Local Pick</span></h3>
-          <p class="meta">American · New American &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-rusteak-thornton-park.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/rusteak-thornton-park.html">Rusteak</a> <span class="badge">Local Pick</span></h3>
+          <p class="meta">American · New American &middot; $$</p><p class="vsub">On the Lake Eola corner in Thornton Park, a neighborhood spot cooking like it has something to prove, polished, relaxed but never stiff.</p>
           <p class="addr">101 S Eola Dr, Suite 103, Orlando, FL 32801</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/jinya-ramen-bar.html">Jinya Ramen Bar</a></h3>
-          <p class="meta">Noodles &amp; Southeast Asian · Ramen &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-jinya-ramen-bar.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/jinya-ramen-bar.html">Jinya Ramen Bar</a></h3>
+          <p class="meta">Noodles &amp; Southeast Asian · Ramen &middot; $$</p><p class="vsub">Lights stay dim and bowls run deep on North Summerlin, with broth simmered the slow way and a sleek room that fills fast.</p>
           <p class="addr">Jinya Ramen Bar, 8 N Summerlin Ave, Orlando, FL 32801-2930, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/osteria-ester.html">Osteria Ester</a></h3>
-          <p class="meta">Italian &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/osteria-ester.html">Osteria Ester</a></h3>
+          <p class="meta">Italian &middot; $$</p><p class="vsub">The Good Salt group brings its touch to Italian American cooking on East Central, a warm room that reads as a neighborhood red sauce joint.</p>
           <p class="addr">629 E Central Blvd, Orlando, FL</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/f-d-cantina.html">F&amp;D Cantina</a></h3>
-          <p class="meta">Mexican &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-f-d-cantina.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/f-d-cantina.html">F&amp;D Cantina</a></h3>
+          <p class="meta">Mexican &middot; $$</p><p class="vsub">On East Central, Thornton Park&#x27;s festive cantina, a dog-friendly patio room where regulars dream about birria tacos and the watermelon margarita.</p>
           <p class="addr">617 E Central Blvd, Orlando, FL 32801</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/orlando-farmers-market.html">Orlando Farmers Market</a></h3>
-          <p class="meta">Markets &amp; shops · Farmers Market &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/orlando-farmers-market.html">Orlando Farmers Market</a></h3>
+          <p class="meta">Markets &amp; shops · Farmers Market &middot; $</p><p class="vsub">Every Sunday, the Lake Eola lakefront becomes a shaded, dog-friendly stretch of vendors with live music and a wine and beer garden.</p>
           <p class="addr">20 N Eola Dr, Orlando, FL 32801</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/outpost-neighborhood-tavern.html">Outpost Neighborhood Tavern</a></h3>
-          <p class="meta">American · Tavern &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-outpost-neighborhood-tavern.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/outpost-neighborhood-tavern.html">Outpost Neighborhood Tavern</a></h3>
+          <p class="meta">American · Tavern &middot; $$</p><p class="vsub">Two blocks off Lake Eola, a welcoming room guests call a cross between a sports bar and a boutique restaurant, with a lively patio and trivia leagues.</p>
           <p class="addr">227 N Eola Dr, Orlando, FL 32801</p>
-        </article>
+        </div></article>
         </div>
         <div class="handoff">
           <a class="btn-ghost" href="/thornton-park-finder.html">See the full Thornton Park list</a>

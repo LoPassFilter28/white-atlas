@@ -211,7 +211,14 @@
       .vcard .addr { margin: 0; color: var(--muted); font-size: .9rem; }
       @media (max-width: 640px) { .facts { grid-template-columns: 1fr; } }
     </style>
-  </head>
+  <style data-cardsys>
+/* cardsys: similar rail cards (2026-10-23 overhaul) */
+.vcard{display:flex;gap:12px;align-items:flex-start}
+.vcard .vthumb{flex:0 0 86px;width:86px;height:86px;border-radius:10px;object-fit:cover;display:block}
+.vcard .vmain{flex:1;min-width:0}
+.vcard .vsub{margin:4px 0 0;font-size:.86rem;line-height:1.45;color:var(--muted,#c6bba2)}
+@media (min-width:1000px){.vlist{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start}}
+</style></head>
   <body>
     <header class="hero">
       <div class="hero-in">
@@ -241,41 +248,41 @@
         </div>
       </section>
 
-      <section class="sec" id="similar">
+      <section class="sec" id="district-story"><p class="kicker">District Stories</p><h2>Orlando&#x27;s long memory</h2><p class="lede">The guide keeps the long memory of Orlando&#x27;s districts in one place: the names, the plats and the stories behind the streets.</p><p><a class="btn-ghost" href="/history.html">Browse the district stories &rarr;</a></p></section><section class="sec" id="similar">
         <p class="kicker">Similar Feel</p>
         <h2>More places with this feel</h2>
         <p class="lede">Matched by vibe, not by neighborhood: the places across Greater Orlando closest in spirit to Boggy Creek Airboat Adventures.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/wild-florida.html">Wild Florida</a></h3>
-          <p class="meta">Attractions &middot; Kenansville &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/wild-florida.html">Wild Florida</a></h3>
+          <p class="meta">Attractions &middot; Kenansville &middot; $$</p><p class="vsub">At the Headwaters of the Everglades, airboats skim protected marsh and captains know exactly where the gators bask.</p>
           <p class="addr">3301 Lake Cypress Rd, Kenansville, FL 34739</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/green-meadows-petting-farm.html">Green Meadows Petting Farm</a></h3>
-          <p class="meta">Attractions &middot; Kissimmee &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/green-meadows-petting-farm.html">Green Meadows Petting Farm</a></h3>
+          <p class="meta">Attractions &middot; Kissimmee &middot; $$</p><p class="vsub">Under the live oaks at Lancaster Ranch Park in Kissimmee, this petting farm is all open air and hands-on.</p>
           <p class="addr">1881 Jack Calhoun Dr, Kissimmee, FL 34741</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/reunion-resort-golf-club.html">Reunion Resort &amp; Golf Club</a></h3>
-          <p class="meta">Hotels &middot; Kissimmee &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-reunion-resort-golf-club.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/reunion-resort-golf-club.html">Reunion Resort &amp; Golf Club</a></h3>
+          <p class="meta">Hotels &middot; Kissimmee &middot; $$</p><p class="vsub">Full resort scale in Kissimmee: golf by Palmer, Watson and Nicklaus, a water park with lazy river, tennis and pickleball, plus rooftop Eleven.</p>
           <p class="addr">7593 Gathering Dr, Kissimmee, FL 34747</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/aquatica-orlando.html">Aquatica Orlando</a></h3>
-          <p class="meta">Attractions &middot; International Drive &middot; $$$</p>
+          <img class="vthumb" src="/assets/venue-aquatica-orlando.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/aquatica-orlando.html">Aquatica Orlando</a></h3>
+          <p class="meta">Attractions &middot; International Drive &middot; $$$</p><p class="vsub">At SeaWorld&#x27;s water park, the Dolphin Plunge clear tube passes Commerson&#x27;s dolphins, and Roa&#x27;s Rapids runs faster than a lazy river should.</p>
           <p class="addr">5800 Water Play Way, Orlando, FL 32821</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/gatorland.html">Gatorland</a></h3>
-          <p class="meta">Attractions &middot; South Orlando &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/gatorland.html">Gatorland</a></h3>
+          <p class="meta">Attractions &middot; South Orlando &middot; $$</p><p class="vsub">Old Florida, unpolished and proud: gators launch for chicken at the Gator Jumparoo Show while handlers work the sand nearby.</p>
           <p class="addr">14501 S Orange Blossom Trl, Orlando, FL 32837</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/polynesian-fire-luau-kissimmee.html">Polynesian Fire Luau</a></h3>
-          <p class="meta">Attractions &middot; Kissimmee &middot; $$$</p>
+          <div class="vmain"><h3><a href="/venue/polynesian-fire-luau-kissimmee.html">Polynesian Fire Luau</a></h3>
+          <p class="meta">Attractions &middot; Kissimmee &middot; $$$</p><p class="vsub">On 192 in Kissimmee, drums, hula and fast Tahitian dancing build toward the fire knife performers at this festive tropical dinner show.</p>
           <p class="addr">4740 W Irlo Bronson Memorial Hwy, Kissimmee, FL 34746</p>
-        </article>
+        </div></article>
         </div>
       </section>
 
@@ -285,35 +292,35 @@
         <p class="lede">Other places in Kissimmee, closest to Boggy Creek Airboat Adventures first.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/green-meadows-petting-farm.html">Green Meadows Petting Farm</a></h3>
-          <p class="meta">Attractions · Petting Farm &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/green-meadows-petting-farm.html">Green Meadows Petting Farm</a></h3>
+          <p class="meta">Attractions · Petting Farm &middot; $$</p><p class="vsub">Under the live oaks at Lancaster Ranch Park in Kissimmee, this petting farm is all open air and hands-on.</p>
           <p class="addr">1881 Jack Calhoun Dr, Kissimmee, FL 34741</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/medieval-times-orlando.html">Medieval Times Dinner &amp; Tournament</a></h3>
-          <p class="meta">Attractions &middot; $$$</p>
+          <img class="vthumb" src="/assets/venue-medieval-times-orlando.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/medieval-times-orlando.html">Medieval Times Dinner &amp; Tournament</a></h3>
+          <p class="meta">Attractions &middot; $$$</p><p class="vsub">In a castle arena on Vine Street in Kissimmee, knights joust, falconry flies, and the cheering crowd eats with its hands, no utensils.</p>
           <p class="addr">4510 W Vine St, Kissimmee, FL 34746</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/main-street-pizza.html">Main Street Pizza</a></h3>
-          <p class="meta">Pizza &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/main-street-pizza.html">Main Street Pizza</a></h3>
+          <p class="meta">Pizza &middot; $$</p><p class="vsub">Downtown Kissimmee&#x27;s old-school New York style joint, family oriented, with slices guests swear are bigger than their face.</p>
           <p class="addr">16 Broadway, Kissimmee, FL 34741</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/1881-restaurant.html">1881 Restaurant &amp; Bar</a></h3>
-          <p class="meta">Mediterranean · Middle Eastern &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-1881-restaurant.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/1881-restaurant.html">1881 Restaurant &amp; Bar</a></h3>
+          <p class="meta">Mediterranean · Middle Eastern &middot; $$</p><p class="vsub">In downtown Kissimmee&#x27;s historic Makinson Hardware building, old-Florida bones and lively bar energy, and guests say the walls tell the story.</p>
           <p class="addr">1881 Restaurant, 308 Broadway, Kissimmee, FL 34741-5718</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/polynesian-fire-luau-kissimmee.html">Polynesian Fire Luau</a></h3>
-          <p class="meta">Attractions &middot; $$$</p>
+          <div class="vmain"><h3><a href="/venue/polynesian-fire-luau-kissimmee.html">Polynesian Fire Luau</a></h3>
+          <p class="meta">Attractions &middot; $$$</p><p class="vsub">On 192 in Kissimmee, drums, hula and fast Tahitian dancing build toward the fire knife performers at this festive tropical dinner show.</p>
           <p class="addr">4740 W Irlo Bronson Memorial Hwy, Kissimmee, FL 34746</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/the-jersey-spot-pizza-and-pasta.html">The Jersey Spot Pizza and Pasta</a></h3>
-          <p class="meta">Pizza &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/the-jersey-spot-pizza-and-pasta.html">The Jersey Spot Pizza and Pasta</a></h3>
+          <p class="meta">Pizza &middot; $$</p><p class="vsub">Small, family-run Kissimmee joint on Columbia Avenue serving thin-crust, New Jersey-style pies transplants say taste like home.</p>
           <p class="addr">The Jersey Spot Pizza and Pasta, 1137 W Columbia Ave, Kissimmee, FL 34741-3202, United States</p>
-        </article>
+        </div></article>
         </div>
         <div class="handoff">
           <a class="btn-ghost" href="/kissimmee-finder.html">See the full Kissimmee list</a>
