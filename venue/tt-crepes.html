@@ -211,7 +211,14 @@
       .vcard .addr { margin: 0; color: var(--muted); font-size: .9rem; }
       @media (max-width: 640px) { .facts { grid-template-columns: 1fr; } }
     </style>
-  </head>
+  <style data-cardsys>
+/* cardsys: similar rail cards (2026-10-23 overhaul) */
+.vcard{display:flex;gap:12px;align-items:flex-start}
+.vcard .vthumb{flex:0 0 86px;width:86px;height:86px;border-radius:10px;object-fit:cover;display:block}
+.vcard .vmain{flex:1;min-width:0}
+.vcard .vsub{margin:4px 0 0;font-size:.86rem;line-height:1.45;color:var(--muted,#c6bba2)}
+@media (min-width:1000px){.vlist{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start}}
+</style></head>
   <body>
     <header class="hero">
       <div class="hero-in">
@@ -239,41 +246,41 @@
         </div>
       </section>
 
-      <section class="sec" id="similar">
+      <section class="sec" id="district-story"><p class="kicker">District Stories</p><h2>Orlando&#x27;s long memory</h2><p class="lede">The guide keeps the long memory of Orlando&#x27;s districts in one place: the names, the plats and the stories behind the streets.</p><p><a class="btn-ghost" href="/history.html">Browse the district stories &rarr;</a></p></section><section class="sec" id="similar">
         <p class="kicker">Similar Feel</p>
         <h2>More places with this feel</h2>
         <p class="lede">Matched by vibe, not by neighborhood: the places across Greater Orlando closest in spirit to TT Crepes.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/fuwa-fuwa.html">Fluffy Fluffy Dessert Cafe</a></h3>
-          <p class="meta">Sweets &middot; Milk District &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-fuwa-fuwa.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/fuwa-fuwa.html">Fluffy Fluffy Dessert Cafe</a></h3>
+          <p class="meta">Sweets &middot; Milk District &middot; $$</p><p class="vsub">Japanese souffle pancakes are made the slow way here, whipped and cooked to order until each one wobbles like a cloud.</p>
           <p class="addr">2008 E Colonial Dr, Orlando, FL</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/crepe-delicious.html">Crepe Delicious</a></h3>
-          <p class="meta">Sweets &middot; Orlando &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-crepe-delicious.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/crepe-delicious.html">Crepe Delicious</a></h3>
+          <p class="meta">Sweets &middot; Orlando &middot; $$</p><p class="vsub">A cosy little crêperie on Church Street downtown, where thin, golden crepes arrive stuffed with fresh, flavorful fillings.</p>
           <p class="addr">55 W Church St, Orlando, FL</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/jiangs-kitchen.html">Jiang&#x27;s Kitchen</a></h3>
-          <p class="meta">Chinese &middot; Downtown &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/jiangs-kitchen.html">Jiang&#x27;s Kitchen</a></h3>
+          <p class="meta">Chinese &middot; Downtown &middot; $$</p><p class="vsub">A new downtown spot on East Robinson Street where soup dumplings are folded by hand in view of the dining room.</p>
           <p class="addr">27 E Robinson St, Orlando, FL 32801</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/banh-mi-cali.html">Banh Mi Cali</a></h3>
-          <p class="meta">Noodles &amp; Southeast Asian &middot; Mills 50 &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/banh-mi-cali.html">Banh Mi Cali</a></h3>
+          <p class="meta">Noodles &amp; Southeast Asian &middot; Mills 50 &middot; $</p><p class="vsub">An old-school, no-frills counter on West Colonial where the baguettes come out soft and crisp with pate and pickled vegetables.</p>
           <p class="addr">Banh Mi Cali, 5210 W Colonial Dr, Orlando, FL 32808-7606</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/mengs.html">Mengs Kitchen</a></h3>
-          <p class="meta">Noodles &amp; Southeast Asian &middot; Colonial &middot; $</p>
+          <img class="vthumb" src="/assets/venue-mengs.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/mengs.html">Mengs Kitchen</a></h3>
+          <p class="meta">Noodles &amp; Southeast Asian &middot; Colonial &middot; $</p><p class="vsub">Tucked into the back of iFresh Market on East Colonial, this tiny, no-frills stall cooks Southeast Asian comfort food that tastes like home.</p>
           <p class="addr">Meng&#x27;s Kitchen, 2415 E Colonial Dr, Orlando, FL 32803-5018</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/croissant-gourmet.html">Croissant Gourmet</a></h3>
-          <p class="meta">Bakeries &middot; Winter Park &middot; $</p>
+          <img class="vthumb" src="/assets/venue-croissant-gourmet.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/croissant-gourmet.html">Croissant Gourmet</a></h3>
+          <p class="meta">Bakeries &middot; Winter Park &middot; $</p><p class="vsub">Cozy, spotless little bakery on Morse Boulevard that guests describe as a piece of France in Winter Park.</p>
           <p class="addr">120 E Morse Blvd, Winter Park, FL 32789</p>
-        </article>
+        </div></article>
         </div>
       </section>
 
@@ -283,35 +290,35 @@
         <p class="lede">Other places in University, closest to TT Crepes first.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/taqueria-las-cazuelas.html">Taqueria las Cazuelas</a></h3>
-          <p class="meta">Mexican &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/taqueria-las-cazuelas.html">Taqueria las Cazuelas</a></h3>
+          <p class="meta">Mexican &middot; $$</p><p class="vsub">No-frills and home-style on East Colonial, the taco outpost of the Las Cazuelas family, with portions that are famously not shy.</p>
           <p class="addr">Taqueria las Cazuelas, 10360 E Colonial Dr, Orlando, FL 32817-4364, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/dang-boba-musubi-house.html">Dang Boba &amp; Musubi House</a></h3>
-          <p class="meta">Coffee &amp; cafes · Bubble Tea &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/dang-boba-musubi-house.html">Dang Boba &amp; Musubi House</a></h3>
+          <p class="meta">Coffee &amp; cafes · Bubble Tea &middot; $$</p><p class="vsub">Cheerful, cozy little spot near UCF pairing boba teas with Hawaiian musubi.</p>
           <p class="addr">Dang Boba &amp; Musubi House, 11772 E Colonial Dr, Orlando, FL 32817-4625</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/viet-nomz.html">Viet-Nomz</a></h3>
-          <p class="meta">Noodles &amp; Southeast Asian · Vietnamese &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-viet-nomz.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/viet-nomz.html">Viet-Nomz</a></h3>
+          <p class="meta">Noodles &amp; Southeast Asian · Vietnamese &middot; $$</p><p class="vsub">Cute, cozy fast-casual Vietnamese spot on East Colonial Drive with a friendly, welcoming feel.</p>
           <p class="addr">11798 E Colonial Dr, Orlando, FL 32817</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/junior-colombian-burger.html">Junior Colombian Burger</a></h3>
-          <p class="meta">Burgers &amp; sandwiches · Burgers &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/junior-colombian-burger.html">Junior Colombian Burger</a></h3>
+          <p class="meta">Burgers &amp; sandwiches · Burgers &middot; $</p><p class="vsub">On East Colonial Drive, Colombian street food meets the American burger, and nothing about it is quiet.</p>
           <p class="addr">11875 E Colonial Dr, Orlando, FL</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/goodfella-s-pizzeria.html">Goodfella&#x27;s Pizzeria</a></h3>
-          <p class="meta">Pizza &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/goodfella-s-pizzeria.html">Goodfella&#x27;s Pizzeria</a></h3>
+          <p class="meta">Pizza &middot; $$</p><p class="vsub">An old-school, no-frills slice shop on East Colonial Drive serving New York-style pies guests say taste like the kind they grew up eating.</p>
           <p class="addr">11873 E Colonial Dr, Orlando, FL 32826</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/smokey-jays-bbq.html">Smokey Jay&#x27;s BBQ</a></h3>
-          <p class="meta">BBQ &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-smokey-jays-bbq.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/smokey-jays-bbq.html">Smokey Jay&#x27;s BBQ</a></h3>
+          <p class="meta">BBQ &middot; $$</p><p class="vsub">Mom-and-pop smokehouse on East Colonial where guests say you can taste the family-run care in every plate.</p>
           <p class="addr">Smokey Jay&#x27;s BBQ, 9318 E Colonial Dr, Orlando, FL 32817-4100</p>
-        </article>
+        </div></article>
         </div>
         <div class="handoff">
           <a class="btn-ghost" href="/ucf-finder.html">See the full University list</a>

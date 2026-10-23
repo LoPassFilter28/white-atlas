@@ -211,7 +211,14 @@
       .vcard .addr { margin: 0; color: var(--muted); font-size: .9rem; }
       @media (max-width: 640px) { .facts { grid-template-columns: 1fr; } }
     </style>
-  </head>
+  <style data-cardsys>
+/* cardsys: similar rail cards (2026-10-23 overhaul) */
+.vcard{display:flex;gap:12px;align-items:flex-start}
+.vcard .vthumb{flex:0 0 86px;width:86px;height:86px;border-radius:10px;object-fit:cover;display:block}
+.vcard .vmain{flex:1;min-width:0}
+.vcard .vsub{margin:4px 0 0;font-size:.86rem;line-height:1.45;color:var(--muted,#c6bba2)}
+@media (min-width:1000px){.vlist{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start}}
+</style></head>
   <body>
     <header class="hero">
       <div class="hero-in">
@@ -236,46 +243,46 @@
         <div class="actions">
           <a class="action" href="https://www.google.com/maps/search/?api=1&amp;query=The+Stubborn+Mule+100+S+Eola+Dr+%23103%2C+Orlando%2C+FL+32801" target="_blank" rel="noopener">Directions &rarr;</a>
           <a class="action" href="/archive.html?venue=the-stubborn-mule">Open in the full finder</a>
-          <a class="action" href="/thornton-park-district-guide.html">Read the Thornton Park story</a>
+          <a class="action" href="/history/thornton-park.html">Read the Thornton Park story</a>
           <a class="action action-ig" href="https://www.instagram.com/thestubbornmuleorlando" target="_blank" rel="noopener"><svg class="ig-glyph" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="vertical-align:-2px;margin-right:6px"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg> Instagram</a>
         </div>
       </section>
 
-      <section class="sec" id="similar">
+      <section class="sec" id="district-story"><p class="kicker">District Story</p><h2>The story of Lake Eola</h2><p class="lede">A name written on a plat in 1913, east of Lake Eola, and still carried by brick streets and bungalows today.</p><p><a class="btn-ghost" href="/history/thornton-park.html">Read the Lake Eola story &rarr;</a></p></section><section class="sec" id="similar">
         <p class="kicker">Similar Feel</p>
         <h2>More places with this feel</h2>
         <p class="lede">Matched by vibe, not by neighborhood: the places across Greater Orlando closest in spirit to The Stubborn Mule.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/rusteak-thornton-park.html">Rusteak</a></h3>
-          <p class="meta">American &middot; Downtown &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-rusteak-thornton-park.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/rusteak-thornton-park.html">Rusteak</a></h3>
+          <p class="meta">American &middot; Downtown &middot; $$</p><p class="vsub">On the Lake Eola corner in Thornton Park, a neighborhood spot cooking like it has something to prove, polished, relaxed but never stiff.</p>
           <p class="addr">101 S Eola Dr, Suite 103, Orlando, FL 32801</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/outpost-neighborhood-tavern.html">Outpost Neighborhood Tavern</a></h3>
-          <p class="meta">American &middot; Thornton Park &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-outpost-neighborhood-tavern.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/outpost-neighborhood-tavern.html">Outpost Neighborhood Tavern</a></h3>
+          <p class="meta">American &middot; Thornton Park &middot; $$</p><p class="vsub">Two blocks off Lake Eola, a welcoming room guests call a cross between a sports bar and a boutique restaurant, with a lively patio and trivia leagues.</p>
           <p class="addr">227 N Eola Dr, Orlando, FL 32801</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/delaneys-tavern.html">Delaney&#x27;s Tavern</a></h3>
-          <p class="meta">American &middot; Orlando &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/delaneys-tavern.html">Delaney&#x27;s Tavern</a></h3>
+          <p class="meta">American &middot; Orlando &middot; $$</p><p class="vsub">Warm and stylish on the ground floor of the Delaney Hotel in SoDo, the room the neighborhood saves for special occasions.</p>
           <p class="addr">Delaney&#x27;s Tavern, 1315 S Orange Ave, Orlando, FL 32806, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/lake-eola.html">Lake Eola Park &amp; Linton E. Allen Memorial Fountain</a></h3>
-          <p class="meta">Parks &amp; outdoors &middot; Downtown &middot; $</p>
+          <img class="vthumb" src="/assets/venue-lake-eola.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/lake-eola.html">Lake Eola Park &amp; Linton E. Allen Memorial Fountain</a></h3>
+          <p class="meta">Parks &amp; outdoors &middot; Downtown &middot; $</p><p class="vsub">Downtown&#x27;s lake is the city&#x27;s front porch, with swans, pedal boats, a lit fountain, and a shaded loop around the shore.</p>
           <p class="addr">Lake Eola Park, 512 E Washington St, Orlando, FL 32801-1941</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/fixtion.html">Fixtion Restaurant &amp; Bar</a></h3>
-          <p class="meta">American &middot; Downtown &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/fixtion.html">Fixtion Restaurant &amp; Bar</a></h3>
+          <p class="meta">American &middot; Downtown &middot; $$</p><p class="vsub">On Orange Avenue, comfort food and huge comfy booths early, club energy after dark, shape-shifting through the day.</p>
           <p class="addr">15 N Orange Ave, Orlando, FL 32801</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/nona-blue-modern-tavern.html">Nona Blue Modern Tavern</a></h3>
-          <p class="meta">American &middot; Lake Nona &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/nona-blue-modern-tavern.html">Nona Blue Modern Tavern</a></h3>
+          <p class="meta">American &middot; Lake Nona &middot; $$</p><p class="vsub">Lake Nona&#x27;s dressed-up tavern feels upscale but comfortable, with a big center bar and a kitchen cooking from scratch.</p>
           <p class="addr">9685 Lake Nona Village Pl, Orlando, FL 32827</p>
-        </article>
+        </div></article>
         </div>
       </section>
 
@@ -285,35 +292,35 @@
         <p class="lede">Other places in Thornton Park, Local Picks first, then the closest to The Stubborn Mule.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/rusteak-thornton-park.html">Rusteak</a> <span class="badge">Local Pick</span></h3>
-          <p class="meta">American · New American &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-rusteak-thornton-park.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/rusteak-thornton-park.html">Rusteak</a> <span class="badge">Local Pick</span></h3>
+          <p class="meta">American · New American &middot; $$</p><p class="vsub">On the Lake Eola corner in Thornton Park, a neighborhood spot cooking like it has something to prove, polished, relaxed but never stiff.</p>
           <p class="addr">101 S Eola Dr, Suite 103, Orlando, FL 32801</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/f-d-cantina.html">F&amp;D Cantina</a></h3>
-          <p class="meta">Mexican &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-f-d-cantina.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/f-d-cantina.html">F&amp;D Cantina</a></h3>
+          <p class="meta">Mexican &middot; $$</p><p class="vsub">On East Central, Thornton Park&#x27;s festive cantina, a dog-friendly patio room where regulars dream about birria tacos and the watermelon margarita.</p>
           <p class="addr">617 E Central Blvd, Orlando, FL 32801</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/osteria-ester.html">Osteria Ester</a></h3>
-          <p class="meta">Italian &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/osteria-ester.html">Osteria Ester</a></h3>
+          <p class="meta">Italian &middot; $$</p><p class="vsub">The Good Salt group brings its touch to Italian American cooking on East Central, a warm room that reads as a neighborhood red sauce joint.</p>
           <p class="addr">629 E Central Blvd, Orlando, FL</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/the-escobar-kitchen.html">The Escobar Kitchen</a></h3>
-          <p class="meta">Japanese &amp; sushi · Sushi &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-the-escobar-kitchen.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/the-escobar-kitchen.html">The Escobar Kitchen</a></h3>
+          <p class="meta">Japanese &amp; sushi · Sushi &middot; $$</p><p class="vsub">Family-run sushi inside a wine shop on East Church Street, rolling Latin-flavored rolls regulars say they dream about.</p>
           <p class="addr">The Escobar Kitchen, 420 E Church St, Orlando, FL 32801-2775</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/wine-corks.html">Wine &amp; Corks</a></h3>
-          <p class="meta">Bars &amp; lounges · Wine Bar &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/wine-corks.html">Wine &amp; Corks</a></h3>
+          <p class="meta">Bars &amp; lounges · Wine Bar &middot; $$</p><p class="vsub">Locally owned bottle shop on East Church Street with a real sushi kitchen inside, an odd pairing that actually works.</p>
           <p class="addr">420 E Church St Ste 108, Orlando, FL 32801</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/orlando-farmers-market.html">Orlando Farmers Market</a></h3>
-          <p class="meta">Markets &amp; shops · Farmers Market &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/orlando-farmers-market.html">Orlando Farmers Market</a></h3>
+          <p class="meta">Markets &amp; shops · Farmers Market &middot; $</p><p class="vsub">Every Sunday, the Lake Eola lakefront becomes a shaded, dog-friendly stretch of vendors with live music and a wine and beer garden.</p>
           <p class="addr">20 N Eola Dr, Orlando, FL 32801</p>
-        </article>
+        </div></article>
         </div>
         <div class="handoff">
           <a class="btn-ghost" href="/thornton-park-finder.html">See the full Thornton Park list</a>

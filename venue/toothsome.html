@@ -221,7 +221,14 @@
 .take .take-label{font-size:.72rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--accent-ink);margin:0 0 8px}
 
 </style>
-  </head>
+  <style data-cardsys>
+/* cardsys: similar rail cards (2026-10-23 overhaul) */
+.vcard{display:flex;gap:12px;align-items:flex-start}
+.vcard .vthumb{flex:0 0 86px;width:86px;height:86px;border-radius:10px;object-fit:cover;display:block}
+.vcard .vmain{flex:1;min-width:0}
+.vcard .vsub{margin:4px 0 0;font-size:.86rem;line-height:1.45;color:var(--muted,#c6bba2)}
+@media (min-width:1000px){.vlist{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start}}
+</style></head>
   <body>
     <header class="hero">
       <div class="hero-in">
@@ -246,7 +253,7 @@
         <div class="actions">
           <a class="action" href="https://www.google.com/maps/search/?api=1&amp;query=The+Toothsome+Chocolate+Emporium+%26+Savory+Feast+Kitchen+The+Toothsome+Chocolate+Emporium+%26+Savory+Feast+Kitchen%2C+6000+Universal+Blvd%2C+Orlando%2C+FL+32819-7611" target="_blank" rel="noopener">Directions &rarr;</a>
           <a class="action" href="/archive.html?venue=toothsome">Open in the full finder</a>
-          <a class="action" href="/universal-district-guide.html">Read the Universal story</a>
+          <a class="action" href="/history/universal.html">Read the Universal story</a>
         </div>
       </section>
 
@@ -274,41 +281,41 @@
         </div>
       </section>
 
-<section class="sec" id="similar">
+<section class="sec" id="district-story"><p class="kicker">District Story</p><h2>The story of Universal Citywalk</h2><p class="lede">A district with the shortest paper trail in Orlando: land bought quietly, built fast, and later bought back.</p><p><a class="btn-ghost" href="/history/universal.html">Read the Universal Citywalk story &rarr;</a></p></section><section class="sec" id="similar">
         <p class="kicker">Similar Feel</p>
         <h2>More places with this feel</h2>
         <p class="lede">Matched by vibe, not by neighborhood: the places across Greater Orlando closest in spirit to The Toothsome Chocolate Emporium &amp; Savory Feast Kitchen.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/cold-stone-creamery.html">Cold Stone Creamery</a></h3>
-          <p class="meta">Sweets &middot; CityWalk &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/cold-stone-creamery.html">Cold Stone Creamery</a></h3>
+          <p class="meta">Sweets &middot; CityWalk &middot; $</p><p class="vsub">At Universal CityWalk, mix-ins fold into ice cream on a frozen granite slab, built to order at the counter.</p>
           <p class="addr">6000 Universal Blvd, Orlando, FL</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/aj-chocolate-house.html">AJ Chocolate House</a></h3>
-          <p class="meta">Sweets &middot; Winter Park &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-aj-chocolate-house.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/aj-chocolate-house.html">AJ Chocolate House</a></h3>
+          <p class="meta">Sweets &middot; Winter Park &middot; $$</p><p class="vsub">Old-world Europe lands on Park Avenue here, with low lighting, cozy elegance, and chocolate treated as an occasion.</p>
           <p class="addr">AJ Chocolate House, 552 S Park Ave, Winter Park, FL 32789-4322, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/peterbrooke-chocolatier.html">Peterbrooke Chocolatier</a></h3>
-          <p class="meta">Sweets &middot; Winter Park &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/peterbrooke-chocolatier.html">Peterbrooke Chocolatier</a></h3>
+          <p class="meta">Sweets &middot; Winter Park &middot; $$</p><p class="vsub">Handcrafted chocolate in the European tradition on Park Avenue since 1983, and the cocoa scent reaches the sidewalk.</p>
           <p class="addr">300 S Park Ave, Winter Park, FL 32789</p>
-        </article>
+        </div></article>
                 <article class="vcard">
-          <h3><a href="/venue/bruster-s-real-ice-cream.html">Bruster's Real Ice Cream</a></h3>
-          <p class="meta">Sweets &middot; Orlando &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/bruster-s-real-ice-cream.html">Bruster's Real Ice Cream</a></h3>
+          <p class="meta">Sweets &middot; Orlando &middot; $</p><p class="vsub">Cheerful, old-fashioned scoop stand on International Drive, with ice cream made in-store and fresh waffle cones.</p>
           <p class="addr">5584 International Dr, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/voodoo.html">Voodoo Doughnut</a></h3>
-          <p class="meta">Bakeries &middot; Universal Citywalk &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/voodoo.html">Voodoo Doughnut</a></h3>
+          <p class="meta">Bakeries &middot; Universal Citywalk &middot; $</p><p class="vsub">At Universal CityWalk, pink-box spectacle and over-the-top novelty, with a revolving display of donuts guests call ridiculous.</p>
           <p class="addr">Voodoo Doughnut, 6000 Universal Blvd, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/schakolad-chocolate-factory.html">Schakolad Chocolate Factory</a></h3>
-          <p class="meta">Sweets &middot; Orlando &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/schakolad-chocolate-factory.html">Schakolad Chocolate Factory</a></h3>
+          <p class="meta">Sweets &middot; Orlando &middot; $$</p><p class="vsub">Old-world chocolaterie on Hawaiian Court, where European-style chocolates are made fresh right on the premises.</p>
           <p class="addr">Schakolad Chocolate Factory, 9901 Hawaiian Ct, Orlando, FL 32819-8102, United States</p>
-        </article>
+        </div></article>
         </div>
       </section>
 
@@ -318,35 +325,35 @@
         <p class="lede">Other places in Universal, closest to The Toothsome Chocolate Emporium &amp; Savory Feast Kitchen first.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/voodoo.html">Voodoo Doughnut</a></h3>
-          <p class="meta">Bakeries · Bakery &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/voodoo.html">Voodoo Doughnut</a></h3>
+          <p class="meta">Bakeries · Bakery &middot; $</p><p class="vsub">At Universal CityWalk, pink-box spectacle and over-the-top novelty, with a revolving display of donuts guests call ridiculous.</p>
           <p class="addr">Voodoo Doughnut, 6000 Universal Blvd, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/fat-ones.html">Fat One&#x27;s Hot Dogs &amp; Italian Ice</a></h3>
-          <p class="meta">Burgers &amp; sandwiches · Hot Dogs &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/fat-ones.html">Fat One&#x27;s Hot Dogs &amp; Italian Ice</a></h3>
+          <p class="meta">Burgers &amp; sandwiches · Hot Dogs &middot; $</p><p class="vsub">Joey Fatone&#x27;s CityWalk counter serves loaded hot dogs that go well past ballpark fare.</p>
           <p class="addr">6000 Universal Blvd, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/bubba-gump-shrimp-co.html">Bubba Gump Shrimp Co.</a></h3>
-          <p class="meta">Seafood &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/bubba-gump-shrimp-co.html">Bubba Gump Shrimp Co.</a></h3>
+          <p class="meta">Seafood &middot; $</p><p class="vsub">At Universal CityWalk, full movie theme with trivia at the table and a room guests say makes you feel like you are in the film.</p>
           <p class="addr">6000 Universal Blvd Ste 735, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/cold-stone-creamery.html">Cold Stone Creamery</a></h3>
-          <p class="meta">Sweets · Ice Cream &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/cold-stone-creamery.html">Cold Stone Creamery</a></h3>
+          <p class="meta">Sweets · Ice Cream &middot; $</p><p class="vsub">At Universal CityWalk, mix-ins fold into ice cream on a frozen granite slab, built to order at the counter.</p>
           <p class="addr">6000 Universal Blvd, Orlando, FL</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/the-cowfish-sushi-burger-bar.html">The Cowfish Sushi Burger Bar</a></h3>
-          <p class="meta">Burgers &amp; sandwiches · Burgers &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/the-cowfish-sushi-burger-bar.html">The Cowfish Sushi Burger Bar</a></h3>
+          <p class="meta">Burgers &amp; sandwiches · Burgers &middot; $$</p><p class="vsub">At Universal CityWalk, the burgushi idea: sushi rolls built from cheeseburger fixings, fresh tuna rolls and a bento box sampling both worlds.</p>
           <p class="addr">6000 Universal Blvd, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/hard-rock-cafe-orlando.html">Hard Rock Cafe Orlando</a></h3>
-          <p class="meta">American · Theme Restaurant &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-hard-rock-cafe-orlando.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/hard-rock-cafe-orlando.html">Hard Rock Cafe Orlando</a></h3>
+          <p class="meta">American · Theme Restaurant &middot; $$</p><p class="vsub">Guests call it the world&#x27;s largest Hard Rock Cafe, at Universal CityWalk, walls covered in guitars, tour jackets and memorabilia in every corner.</p>
           <p class="addr">6050 Universal Blvd, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         </div>
         <div class="handoff">
           <a class="btn-ghost" href="/universal-finder.html">See the full Universal list</a>

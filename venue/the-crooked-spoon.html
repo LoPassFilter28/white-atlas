@@ -211,7 +211,14 @@
       .vcard .addr { margin: 0; color: var(--muted); font-size: .9rem; }
       @media (max-width: 640px) { .facts { grid-template-columns: 1fr; } }
     </style>
-  </head>
+  <style data-cardsys>
+/* cardsys: similar rail cards (2026-10-23 overhaul) */
+.vcard{display:flex;gap:12px;align-items:flex-start}
+.vcard .vthumb{flex:0 0 86px;width:86px;height:86px;border-radius:10px;object-fit:cover;display:block}
+.vcard .vmain{flex:1;min-width:0}
+.vcard .vsub{margin:4px 0 0;font-size:.86rem;line-height:1.45;color:var(--muted,#c6bba2)}
+@media (min-width:1000px){.vlist{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start}}
+</style></head>
   <body>
     <header class="hero">
       <div class="hero-in">
@@ -239,41 +246,41 @@
         </div>
       </section>
 
-      <section class="sec" id="similar">
+      <section class="sec" id="district-story"><p class="kicker">District Stories</p><h2>Orlando&#x27;s long memory</h2><p class="lede">The guide keeps the long memory of Orlando&#x27;s districts in one place: the names, the plats and the stories behind the streets.</p><p><a class="btn-ghost" href="/history.html">Browse the district stories &rarr;</a></p></section><section class="sec" id="similar">
         <p class="kicker">Similar Feel</p>
         <h2>More places with this feel</h2>
         <p class="lede">Matched by vibe, not by neighborhood: the places across Greater Orlando closest in spirit to The Crooked Spoon.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/knife-spoon.html">Knife &amp; Spoon</a></h3>
-          <p class="meta">Fine dining &amp; steak &middot; Grande Lakes &middot; $$$$</p>
+          <div class="vmain"><h3><a href="/venue/knife-spoon.html">Knife &amp; Spoon</a></h3>
+          <p class="meta">Fine dining &amp; steak &middot; Grande Lakes &middot; $$$$</p><p class="vsub">The Ritz-Carlton Grande Lakes steakhouse is built on a simple split, knife for beef and spoon for seafood, in a polished room.</p>
           <p class="addr">Knife &amp; Spoon, 4012 Central Florida Pkwy, Orlando, FL 32837-7662</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/over-the-top-pita.html">Over The Top Pita</a></h3>
-          <p class="meta">Mediterranean &middot; Clermont &middot; $</p>
+          <img class="vthumb" src="/assets/venue-over-the-top-pita.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/over-the-top-pita.html">Over The Top Pita</a></h3>
+          <p class="meta">Mediterranean &middot; Clermont &middot; $</p><p class="vsub">Family-run, no-frills counter on Citrus Tower Boulevard in Clermont where every wrap is made to order.</p>
           <p class="addr">Over the Top Pita, 240 Citrus Tower Blvd, Clermont, FL 34711-2704</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/at-the-diner.html">At The Diner</a></h3>
-          <p class="meta">Breakfast &amp; brunch &middot; Dr Phillips &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/at-the-diner.html">At The Diner</a></h3>
+          <p class="meta">Breakfast &amp; brunch &middot; Dr Phillips &middot; $</p><p class="vsub">Bright, playful Dr.</p>
           <p class="addr">5072 Dr Phillips Blvd, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/crooked-can-minneola.html">Crooked Can Minneola</a></h3>
-          <p class="meta">Breweries &middot; Minneola &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-crooked-can-minneola.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/crooked-can-minneola.html">Crooked Can Minneola</a></h3>
+          <p class="meta">Breweries &middot; Minneola &middot; $$</p><p class="vsub">A sprawling take on the Winter Garden brewery: production brewery and taproom fronting a food hall in Minneola.</p>
           <p class="addr">1600 Crooked Can Loop, Minneola, FL 34715</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/the-goblin-market-restaurant.html">The Goblin Market Restaurant</a></h3>
-          <p class="meta">American &middot; Mount Dora &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-the-goblin-market-restaurant.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/the-goblin-market-restaurant.html">The Goblin Market Restaurant</a></h3>
+          <p class="meta">American &middot; Mount Dora &middot; $$</p><p class="vsub">Mount Dora&#x27;s storybook gastropub, a cozy book-lined hideaway on Dora Drawdy Way where guests love being surrounded by books.</p>
           <p class="addr">The Goblin Market Restaurant, 330 Dora Drawdy Way, Mt Dora, FL 32757-5593, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/yh-seafood-clubhouse.html">YH Seafood Clubhouse</a></h3>
-          <p class="meta">Chinese &middot; Orlando &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/yh-seafood-clubhouse.html">YH Seafood Clubhouse</a></h3>
+          <p class="meta">Chinese &middot; Orlando &middot; $$</p><p class="vsub">Turkey Lake Road&#x27;s Cantonese room, refined and warm, where round tables fill with family-style plates.</p>
           <p class="addr">YH Seafood Clubhouse, 8081 Turkey Lake Rd, Orlando, FL 32819-7321, United States</p>
-        </article>
+        </div></article>
         </div>
       </section>
 
@@ -283,35 +290,35 @@
         <p class="lede">Other places in Day Trips, closest to The Crooked Spoon first.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/over-the-top-pita.html">Over The Top Pita</a></h3>
-          <p class="meta">Mediterranean &middot; $</p>
+          <img class="vthumb" src="/assets/venue-over-the-top-pita.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/over-the-top-pita.html">Over The Top Pita</a></h3>
+          <p class="meta">Mediterranean &middot; $</p><p class="vsub">Family-run, no-frills counter on Citrus Tower Boulevard in Clermont where every wrap is made to order.</p>
           <p class="addr">Over the Top Pita, 240 Citrus Tower Blvd, Clermont, FL 34711-2704</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/crooked-can-minneola.html">Crooked Can Minneola</a></h3>
-          <p class="meta">Breweries · Brewery &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-crooked-can-minneola.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/crooked-can-minneola.html">Crooked Can Minneola</a></h3>
+          <p class="meta">Breweries · Brewery &middot; $$</p><p class="vsub">A sprawling take on the Winter Garden brewery: production brewery and taproom fronting a food hall in Minneola.</p>
           <p class="addr">1600 Crooked Can Loop, Minneola, FL 34715</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/revolution-off-road-atv.html">Revolution Adventures</a></h3>
-          <p class="meta">Attractions &middot; $$$</p>
+          <img class="vthumb" src="/assets/venue-revolution-off-road-atv.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/revolution-off-road-atv.html">Revolution Adventures</a></h3>
+          <p class="meta">Attractions &middot; $$$</p><p class="vsub">In Clermont, trade park lines for mud: guided ATV rides, side-by-side buggies and the Mucky Duck, which splashes from trail into water.</p>
           <p class="addr">4000 FL-33, Clermont, FL 34714</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/btw-burgers-tacos-waffles.html">BTW Burgers Tacos Waffles</a></h3>
-          <p class="meta">Burgers &amp; sandwiches · Burgers &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/btw-burgers-tacos-waffles.html">BTW Burgers Tacos Waffles</a></h3>
+          <p class="meta">Burgers &amp; sandwiches · Burgers &middot; $$</p><p class="vsub">On Main Street in Tavares, playful and unpretentious, doing exactly what its name promises with real imagination in each lane.</p>
           <p class="addr">115 E Main St, Tavares, FL 32778</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/salt-and-ember-mount-dora.html">Salt &amp; Ember</a></h3>
-          <p class="meta">Fine dining &amp; steak · Steakhouse &middot; $$$</p>
+          <img class="vthumb" src="/assets/venue-salt-and-ember-mount-dora.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/salt-and-ember-mount-dora.html">Salt &amp; Ember</a></h3>
+          <p class="meta">Fine dining &amp; steak · Steakhouse &middot; $$$</p><p class="vsub">A wood-fired steakhouse on Alexander Street in Mount Dora, relaxed and warm with a polished finish.</p>
           <p class="addr">322 N Alexander St, Mount Dora, FL 32757</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/the-goblin-market-restaurant.html">The Goblin Market Restaurant</a></h3>
-          <p class="meta">American · Gastropub &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-the-goblin-market-restaurant.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/the-goblin-market-restaurant.html">The Goblin Market Restaurant</a></h3>
+          <p class="meta">American · Gastropub &middot; $$</p><p class="vsub">Mount Dora&#x27;s storybook gastropub, a cozy book-lined hideaway on Dora Drawdy Way where guests love being surrounded by books.</p>
           <p class="addr">The Goblin Market Restaurant, 330 Dora Drawdy Way, Mt Dora, FL 32757-5593, United States</p>
-        </article>
+        </div></article>
         </div>
         <div class="handoff">
           <a class="btn-ghost" href="/day-trips-finder.html">See the full Day Trips list</a>

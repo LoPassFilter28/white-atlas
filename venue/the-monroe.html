@@ -249,6 +249,13 @@ html[data-theme="light"] .hero.has-photo{--ink:#f4efe1;--headline:#f6edd6;--mute
 .hero-plate figcaption .hero-credit{display:block;color:#5c6a58;font-size:.72rem;margin-top:2px}
 .hero-plate figcaption a{color:#7c520c}
 .has-photo .hero-in{padding-bottom:18px}
+</style><style data-cardsys>
+/* cardsys: similar rail cards (2026-10-23 overhaul) */
+.vcard{display:flex;gap:12px;align-items:flex-start}
+.vcard .vthumb{flex:0 0 86px;width:86px;height:86px;border-radius:10px;object-fit:cover;display:block}
+.vcard .vmain{flex:1;min-width:0}
+.vcard .vsub{margin:4px 0 0;font-size:.86rem;line-height:1.45;color:var(--muted,#c6bba2)}
+@media (min-width:1000px){.vlist{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start}}
 </style></head>
   <body>
     <header class="hero has-photo">
@@ -276,7 +283,7 @@ html[data-theme="light"] .hero.has-photo{--ink:#f4efe1;--headline:#f6edd6;--mute
         <div class="actions">
           <a class="action" href="https://www.google.com/maps/search/?api=1&amp;query=The+Monroe+The+Monroe%2C+448+N+Terry+Ave%2C+Orlando%2C+FL+32801-1894" target="_blank" rel="noopener">Directions &rarr;</a>
           <a class="action" href="/archive.html?venue=the-monroe">Open in the full finder</a>
-          <a class="action" href="/downtown-orlando-district-guide.html">Read the Downtown Orlando story</a>
+          <a class="action" href="/history/downtown.html">Read the Downtown Orlando story</a>
           <a class="action action-ig" href="https://www.instagram.com/themonroeorlando" target="_blank" rel="noopener"><svg class="ig-glyph" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="vertical-align:-2px;margin-right:6px"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg> Instagram</a>
         </div>
       </section>
@@ -305,41 +312,41 @@ html[data-theme="light"] .hero.has-photo{--ink:#f4efe1;--headline:#f6edd6;--mute
         </div>
       </section>
 
-<section class="sec" id="similar">
+<section class="sec" id="district-story"><p class="kicker">District Story</p><h2>The story of Downtown</h2><p class="lede">A fort, a courthouse plat and a citrus boom built it. A name nobody can prove still runs it.</p><p><a class="btn-ghost" href="/history/downtown.html">Read the Downtown story &rarr;</a></p></section><section class="sec" id="similar">
         <p class="kicker">Similar Feel</p>
         <h2>More places with this feel</h2>
         <p class="lede">Matched by vibe, not by neighborhood: the places across Greater Orlando closest in spirit to The Monroe.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/osteria-ester.html">Osteria Ester</a></h3>
-          <p class="meta">Italian &middot; Thornton Park &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/osteria-ester.html">Osteria Ester</a></h3>
+          <p class="meta">Italian &middot; Thornton Park &middot; $$</p><p class="vsub">The Good Salt group brings its touch to Italian American cooking on East Central, a warm room that reads as a neighborhood red sauce joint.</p>
           <p class="addr">629 E Central Blvd, Orlando, FL</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/outpost-neighborhood-tavern.html">Outpost Neighborhood Tavern</a></h3>
-          <p class="meta">American &middot; Thornton Park &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-outpost-neighborhood-tavern.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/outpost-neighborhood-tavern.html">Outpost Neighborhood Tavern</a></h3>
+          <p class="meta">American &middot; Thornton Park &middot; $$</p><p class="vsub">Two blocks off Lake Eola, a welcoming room guests call a cross between a sports bar and a boutique restaurant, with a lively patio and trivia leagues.</p>
           <p class="addr">227 N Eola Dr, Orlando, FL 32801</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/santiagos-bodega.html">Santiago&#x27;s Bodega</a></h3>
-          <p class="meta">Mediterranean &middot; Ivanhoe Village &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/santiagos-bodega.html">Santiago&#x27;s Bodega</a></h3>
+          <p class="meta">Mediterranean &middot; Ivanhoe Village &middot; $$</p><p class="vsub">Lively and eclectic on Virginia Drive, a tapas room built for sharing plates out on the patio.</p>
           <p class="addr">Santiago&#x27;s Bodega, 802 Virginia Dr, Orlando, FL 32803</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/vines-by-h.html">Vines by H</a></h3>
-          <p class="meta">Fine dining &amp; steak &middot; Sand Lake &middot; $$$</p>
+          <img class="vthumb" src="/assets/venue-vines-by-h.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/vines-by-h.html">Vines by H</a></h3>
+          <p class="meta">Fine dining &amp; steak &middot; Sand Lake &middot; $$$</p><p class="vsub">Restaurant Row&#x27;s long-running wine and jazz room is back under a new name at the same Sand Lake address.</p>
           <p class="addr">7533 W Sand Lake Rd, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/the-hampton-social-pointe-orlando.html">The Hampton Social</a></h3>
-          <p class="meta">American &middot; Pointe Orlando &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/the-hampton-social-pointe-orlando.html">The Hampton Social</a></h3>
+          <p class="meta">American &middot; Pointe Orlando &middot; $$</p><p class="vsub">A coastal escape inside Pointe Orlando, whitewashed wood and rose on the tables, with seafood towers, a lobster roll and blackened sea bass.</p>
           <p class="addr">9101 International Dr, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/living-room-bar.html">The Living Room Bar</a></h3>
-          <p class="meta">Bars &amp; lounges &middot; Lake Nona &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-living-room-bar.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/living-room-bar.html">The Living Room Bar</a></h3>
+          <p class="meta">Bars &amp; lounges &middot; Lake Nona &middot; $$</p><p class="vsub">The Wave Hotel&#x27;s Lake Nona lounge is eclectic and art-filled, arranged around a pink dogwood tree with low chairs.</p>
           <p class="addr">6100 Wave Hotel Dr, Orlando, FL 32827</p>
-        </article>
+        </div></article>
         </div>
       </section>
 
@@ -349,35 +356,35 @@ html[data-theme="light"] .hero.has-photo{--ink:#f4efe1;--headline:#f6edd6;--mute
         <p class="lede">Other places in Downtown Orlando, Local Picks first, then the closest to The Monroe.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/fixtion.html">Fixtion Restaurant &amp; Bar</a> <span class="badge">Local Pick</span></h3>
-          <p class="meta">American · American Restaurant &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/fixtion.html">Fixtion Restaurant &amp; Bar</a> <span class="badge">Local Pick</span></h3>
+          <p class="meta">American · American Restaurant &middot; $$</p><p class="vsub">On Orange Avenue, comfort food and huge comfy booths early, club energy after dark, shape-shifting through the day.</p>
           <p class="addr">15 N Orange Ave, Orlando, FL 32801</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/wall-street-plaza.html">Wall Street Plaza</a> <span class="badge">Local Pick</span></h3>
-          <p class="meta">Nightlife &amp; music · Entertainment District &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/wall-street-plaza.html">Wall Street Plaza</a> <span class="badge">Local Pick</span></h3>
+          <p class="meta">Nightlife &amp; music · Entertainment District &middot; $$</p><p class="vsub">One downtown block holds the whole crawl: eight bars and patios that, on a big night, turn into a single street party.</p>
           <p class="addr">25 Wall St, Orlando, FL 32801</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/elixir-kitchen-bar.html">Elixir Kitchen and Bar</a> <span class="badge">Local Pick</span></h3>
-          <p class="meta">Bars &amp; lounges · Bar &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-elixir-kitchen-bar.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/elixir-kitchen-bar.html">Elixir Kitchen and Bar</a> <span class="badge">Local Pick</span></h3>
+          <p class="meta">Bars &amp; lounges · Bar &middot; $$</p><p class="vsub">A rustic-hip gastropub in one of downtown&#x27;s original buildings, and very much the neighborhood&#x27;s spot.</p>
           <p class="addr">9 W Washington St, Orlando, FL 32801</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/sushi-saint.html">Sushi Saint</a></h3>
-          <p class="meta">Japanese &amp; sushi · Sushi &middot; $$$</p>
+          <img class="vthumb" src="/assets/venue-sushi-saint.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/sushi-saint.html">Sushi Saint</a></h3>
+          <p class="meta">Japanese &amp; sushi · Sushi &middot; $$$</p><p class="vsub">Chef Michael Collantes&#x27; playful handroll bar in Creative Village has temaki built in front of you and handed over one by one.</p>
           <p class="addr">400 Pittman St Ste A, Orlando, FL 32801</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/fettuccine-pasta-class.html">Fettuccine Pasta-Making Class</a></h3>
-          <p class="meta">Attractions · Cooking Class &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/fettuccine-pasta-class.html">Fettuccine Pasta-Making Class</a></h3>
+          <p class="meta">Attractions · Cooking Class &middot; $$</p><p class="vsub">In a hands-on downtown class, Chef Mark walks you through fresh fettuccine from scratch: mixing, rolling thin, slicing ribbons and cooking them off.</p>
           <p class="addr">Goblin Studios, 805 W Central Blvd, Orlando, FL 32805</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/vanguard.html">The Vanguard</a></h3>
-          <p class="meta">Nightlife &amp; music · Music Venue &middot; $$$</p>
+          <div class="vmain"><h3><a href="/venue/vanguard.html">The Vanguard</a></h3>
+          <p class="meta">Nightlife &amp; music · Music Venue &middot; $$$</p><p class="vsub">Inside the historic Firestone Tire Building on Orange Avenue, chest-felt sound, ceiling lasers and a dance floor that packs tight on popular nights.</p>
           <p class="addr">The Vanguard, 578 N Orange Ave, Orlando, FL 32801-1341</p>
-        </article>
+        </div></article>
         </div>
         <div class="handoff">
           <a class="btn-ghost" href="/downtown-orlando-finder.html">See the full Downtown Orlando list</a>

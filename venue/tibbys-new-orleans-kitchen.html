@@ -211,7 +211,14 @@
       .vcard .addr { margin: 0; color: var(--muted); font-size: .9rem; }
       @media (max-width: 640px) { .facts { grid-template-columns: 1fr; } }
     </style>
-  </head>
+  <style data-cardsys>
+/* cardsys: similar rail cards (2026-10-23 overhaul) */
+.vcard{display:flex;gap:12px;align-items:flex-start}
+.vcard .vthumb{flex:0 0 86px;width:86px;height:86px;border-radius:10px;object-fit:cover;display:block}
+.vcard .vmain{flex:1;min-width:0}
+.vcard .vsub{margin:4px 0 0;font-size:.86rem;line-height:1.45;color:var(--muted,#c6bba2)}
+@media (min-width:1000px){.vlist{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start}}
+</style></head>
   <body>
     <header class="hero">
       <div class="hero-in">
@@ -240,41 +247,41 @@
         </div>
       </section>
 
-      <section class="sec" id="similar">
+      <section class="sec" id="district-story"><p class="kicker">District Stories</p><h2>Orlando&#x27;s long memory</h2><p class="lede">The guide keeps the long memory of Orlando&#x27;s districts in one place: the names, the plats and the stories behind the streets.</p><p><a class="btn-ghost" href="/history.html">Browse the district stories &rarr;</a></p></section><section class="sec" id="similar">
         <p class="kicker">Similar Feel</p>
         <h2>More places with this feel</h2>
         <p class="lede">Matched by vibe, not by neighborhood: the places across Greater Orlando closest in spirit to Tibby&#x27;s New Orleans Kitchen.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/the-chapman.html">The Chapman</a></h3>
-          <p class="meta">Fine dining &amp; steak &middot; Winter Park &middot; $$$</p>
+          <div class="vmain"><h3><a href="/venue/the-chapman.html">The Chapman</a></h3>
+          <p class="meta">Fine dining &amp; steak &middot; Winter Park &middot; $$$</p><p class="vsub">On Park Avenue, the warm, artful dining room Winter Park kept asking for, built on a scratch kitchen and Florida ingredients.</p>
           <p class="addr">500 S Park Ave, Winter Park, FL 32789</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/pepes-cantina.html">Pepe&#x27;s Cantina</a></h3>
-          <p class="meta">Mexican &middot; Winter Park &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-pepes-cantina.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/pepes-cantina.html">Pepe&#x27;s Cantina</a></h3>
+          <p class="meta">Mexican &middot; Winter Park &middot; $$</p><p class="vsub">A festive cantina feel in Winter Park, with a beautiful bar and a dining room partly open to the air.</p>
           <p class="addr">433 W New England Ave, Winter Park, FL 32789</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/the-grove-bar-kitchen.html">The Grove Bar + Kitchen</a></h3>
-          <p class="meta">American &middot; Winter Park &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-the-grove-bar-kitchen.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/the-grove-bar-kitchen.html">The Grove Bar + Kitchen</a></h3>
+          <p class="meta">American &middot; Winter Park &middot; $$</p><p class="vsub">Citrus-grove heritage worn warmly in a golden, textured room in Winter Park Village built for lingering.</p>
           <p class="addr">480 N Orlando Ave C-134, Winter Park, FL 32789</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/sixty-vines.html">Sixty Vines</a></h3>
-          <p class="meta">American &middot; Winter Park &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/sixty-vines.html">Sixty Vines</a></h3>
+          <p class="meta">American &middot; Winter Park &middot; $$</p><p class="vsub">A wine-country room transplanted to Winter Park, with wines on tap by the glass, carafe or bottle and a greenhouse patio that glows after dark.</p>
           <p class="addr">110 S Orlando Ave Ste 12, Winter Park, FL 32789</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/wine-room-park-avenue.html">The Wine Room on Park Avenue</a></h3>
-          <p class="meta">Bars &amp; lounges &middot; Winter Park &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-wine-room-park-avenue.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/wine-room-park-avenue.html">The Wine Room on Park Avenue</a></h3>
+          <p class="meta">Bars &amp; lounges &middot; Winter Park &middot; $$</p><p class="vsub">Wine tasting without the intimidation: load a Tasting Card and pour your own tastes, from a sip to a full glass, off a wall of wines.</p>
           <p class="addr">270 S Park Ave, Winter Park, FL 32789</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/agave-azul-winter-springs.html">Agave Azul Winter Springs</a></h3>
-          <p class="meta">Mexican &middot; Winter Springs &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/agave-azul-winter-springs.html">Agave Azul Winter Springs</a></h3>
+          <p class="meta">Mexican &middot; Winter Springs &middot; $$</p><p class="vsub">The Winter Springs room is festive and high-energy, a family-owned Mexican kitchen where the noise is part of the fun.</p>
           <p class="addr">5248 Red Bug Lake Rd, Winter Springs, FL 32708</p>
-        </article>
+        </div></article>
         </div>
       </section>
 
@@ -284,35 +291,35 @@
         <p class="lede">Other places in University, closest to Tibby&#x27;s New Orleans Kitchen first.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/toasted.html">Toasted</a></h3>
-          <p class="meta">Burgers &amp; sandwiches · Grilled Cheese &amp; Burgers &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/toasted.html">Toasted</a></h3>
+          <p class="meta">Burgers &amp; sandwiches · Grilled Cheese &amp; Burgers &middot; $</p><p class="vsub">Everything here starts with grilled cheese, artisan bread pressed crisp around fillings like the Fig and Goat.</p>
           <p class="addr">Toasted, 1945 Aloma Ave, Winter Park, FL 32792</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/aloma-bowl.html">Aloma Bowl</a></h3>
-          <p class="meta">Attractions · Bowling &amp; Arcade &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-aloma-bowl.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/aloma-bowl.html">Aloma Bowl</a></h3>
+          <p class="meta">Attractions · Bowling &amp; Arcade &middot; $$</p><p class="vsub">A 32-lane bowling house on Aloma Ave run by a local family group that has operated Central Florida lanes for decades.</p>
           <p class="addr">2530 Aloma Ave, Winter Park, FL 32792</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/dutch-bros-coffee-winter-park.html">Dutch Bros Coffee</a></h3>
-          <p class="meta">Coffee &amp; cafes · Coffee Shop &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/dutch-bros-coffee-winter-park.html">Dutch Bros Coffee</a></h3>
+          <p class="meta">Coffee &amp; cafes · Coffee Shop &middot; $</p><p class="vsub">On Semoran Boulevard, a high-energy, genuinely friendly drive-thru where the crew remembers regulars and sings to birthday windows.</p>
           <p class="addr">116 S Semoran Blvd, Winter Park, FL 32792</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/zackleys.html">Zackleys</a></h3>
-          <p class="meta">Pizza &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/zackleys.html">Zackleys</a></h3>
+          <p class="meta">Pizza &middot; $</p><p class="vsub">Family owned since 2000 and tucked inside the Full Sail campus, with wood oven pizzas, paninis, and Jamaican beef empanadas.</p>
           <p class="addr">3260 University Blvd, Winter Park, FL 32792</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/lucky-china.html">Lucky China</a></h3>
-          <p class="meta">Chinese · Chinese Takeout &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/lucky-china.html">Lucky China</a></h3>
+          <p class="meta">Chinese · Chinese Takeout &middot; $</p><p class="vsub">A no-frills takeout staple in Aloma Square that regulars prize for one thing above all: consistency.</p>
           <p class="addr">Lucky China, 6756 Aloma Ave, Winter Park, FL 32792</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/alexandria-market.html">Alexandria Market</a></h3>
-          <p class="meta">Markets &amp; shops · Middle Eastern Grocery &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/alexandria-market.html">Alexandria Market</a></h3>
+          <p class="meta">Markets &amp; shops · Middle Eastern Grocery &middot; $</p><p class="vsub">A Middle Eastern grocery on Hanging Moss Rd stocking halal meats, fresh fateer and pita, baklava, and za&#x27;atar.</p>
           <p class="addr">6148 Hanging Moss Rd, Orlando, FL 32814</p>
-        </article>
+        </div></article>
         </div>
         <div class="handoff">
           <a class="btn-ghost" href="/ucf-finder.html">See the full University list</a>

@@ -221,7 +221,14 @@
 .take .take-label{font-size:.72rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--accent-ink);margin:0 0 8px}
 
 </style>
-  </head>
+  <style data-cardsys>
+/* cardsys: similar rail cards (2026-10-23 overhaul) */
+.vcard{display:flex;gap:12px;align-items:flex-start}
+.vcard .vthumb{flex:0 0 86px;width:86px;height:86px;border-radius:10px;object-fit:cover;display:block}
+.vcard .vmain{flex:1;min-width:0}
+.vcard .vsub{margin:4px 0 0;font-size:.86rem;line-height:1.45;color:var(--muted,#c6bba2)}
+@media (min-width:1000px){.vlist{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start}}
+</style></head>
   <body>
     <header class="hero">
       <div class="hero-in">
@@ -246,7 +253,7 @@
         <div class="actions">
           <a class="action" href="https://www.google.com/maps/search/?api=1&amp;query=The+Chapman+500+S+Park+Ave%2C+Winter+Park%2C+FL+32789" target="_blank" rel="noopener">Directions &rarr;</a>
           <a class="action" href="/archive.html?venue=the-chapman">Open in the full finder</a>
-          <a class="action" href="/winter-park-district-guide.html">Read the Winter Park story</a>
+          <a class="action" href="/history/winter-park.html">Read the Winter Park story</a>
           <a class="action action-ig" href="https://www.instagram.com/thechapmanrestaurant" target="_blank" rel="noopener"><svg class="ig-glyph" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="vertical-align:-2px;margin-right:6px"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg> Instagram</a>
         </div>
       </section>
@@ -275,41 +282,41 @@
         </div>
       </section>
 
-<section class="sec" id="similar">
+<section class="sec" id="district-story"><p class="kicker">District Story</p><h2>The story of Winter Park</h2><p class="lede">A park built for the winter, drawn on paper in 1881, and still legible in every street you walk today.</p><p><a class="btn-ghost" href="/history/winter-park.html">Read the Winter Park story &rarr;</a></p></section><section class="sec" id="similar">
         <p class="kicker">Similar Feel</p>
         <h2>More places with this feel</h2>
         <p class="lede">Matched by vibe, not by neighborhood: the places across Greater Orlando closest in spirit to The Chapman.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/the-grove-bar-kitchen.html">The Grove Bar + Kitchen</a></h3>
-          <p class="meta">American &middot; Winter Park &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-the-grove-bar-kitchen.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/the-grove-bar-kitchen.html">The Grove Bar + Kitchen</a></h3>
+          <p class="meta">American &middot; Winter Park &middot; $$</p><p class="vsub">Citrus-grove heritage worn warmly in a golden, textured room in Winter Park Village built for lingering.</p>
           <p class="addr">480 N Orlando Ave C-134, Winter Park, FL 32789</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/ava.html">AVA Mediterranean</a></h3>
-          <p class="meta">Mediterranean &middot; Winter Park &middot; $$$</p>
+          <img class="vthumb" src="/assets/venue-ava.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/ava.html">AVA Mediterranean</a></h3>
+          <p class="meta">Mediterranean &middot; Winter Park &middot; $$$</p><p class="vsub">A glamorous Greek agora on Park Avenue, sophisticated and high-energy from the moment you sit down.</p>
           <p class="addr">290 S Park Ave, Winter Park, FL 32789</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/boca-kitchen-bar-market.html">Boca Kitchen Bar Market</a></h3>
-          <p class="meta">American &middot; Winter Park &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-boca-kitchen-bar-market.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/boca-kitchen-bar-market.html">Boca Kitchen Bar Market</a></h3>
+          <p class="meta">American &middot; Winter Park &middot; $$</p><p class="vsub">Park Avenue cooking built around what Florida farms deliver, a farm-to-table menu of handcrafted plates that shifts with the market.</p>
           <p class="addr">358 N Park Ave, Winter Park, FL 32789</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/wine-room-park-avenue.html">The Wine Room on Park Avenue</a></h3>
-          <p class="meta">Bars &amp; lounges &middot; Winter Park &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-wine-room-park-avenue.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/wine-room-park-avenue.html">The Wine Room on Park Avenue</a></h3>
+          <p class="meta">Bars &amp; lounges &middot; Winter Park &middot; $$</p><p class="vsub">Wine tasting without the intimidation: load a Tasting Card and pour your own tastes, from a sip to a full glass, off a wall of wines.</p>
           <p class="addr">270 S Park Ave, Winter Park, FL 32789</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/imperial-on-park.html">The Imperial on Park</a></h3>
-          <p class="meta">Bars &amp; lounges &middot; Winter Park &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-imperial-on-park.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/imperial-on-park.html">The Imperial on Park</a></h3>
+          <p class="meta">Bars &amp; lounges &middot; Winter Park &middot; $$</p><p class="vsub">Park Avenue&#x27;s neighborhood bar, warm and laid back, with boutique wines, craft beers and cocktails built on Winter Park Distillery spirits.</p>
           <p class="addr">136 S Park Ave, Winter Park, FL 32789</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/atlantic-beer-oyster.html">Atlantic Beer &amp; Oyster</a></h3>
-          <p class="meta">Seafood &middot; Winter Park &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/atlantic-beer-oyster.html">Atlantic Beer &amp; Oyster</a></h3>
+          <p class="meta">Seafood &middot; Winter Park &middot; $$</p><p class="vsub">Tucked into the Hidden Garden just off Park Avenue, a cozy, laid-back oyster bar guests call hard to find and worth the search.</p>
           <p class="addr">358 N Park Ave Ste B, Winter Park, FL 32789</p>
-        </article>
+        </div></article>
         </div>
       </section>
 
@@ -319,35 +326,35 @@
         <p class="lede">Other places in Winter Park, Local Picks first, then the closest to The Chapman.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/ava.html">AVA Mediterranean</a> <span class="badge">Local Pick</span></h3>
-          <p class="meta">Mediterranean &middot; $$$</p>
+          <img class="vthumb" src="/assets/venue-ava.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/ava.html">AVA Mediterranean</a> <span class="badge">Local Pick</span></h3>
+          <p class="meta">Mediterranean &middot; $$$</p><p class="vsub">A glamorous Greek agora on Park Avenue, sophisticated and high-energy from the moment you sit down.</p>
           <p class="addr">290 S Park Ave, Winter Park, FL 32789</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/imperial-on-park.html">The Imperial on Park</a> <span class="badge">Local Pick</span></h3>
-          <p class="meta">Bars &amp; lounges · Wine Bar &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-imperial-on-park.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/imperial-on-park.html">The Imperial on Park</a> <span class="badge">Local Pick</span></h3>
+          <p class="meta">Bars &amp; lounges · Wine Bar &middot; $$</p><p class="vsub">Park Avenue&#x27;s neighborhood bar, warm and laid back, with boutique wines, craft beers and cocktails built on Winter Park Distillery spirits.</p>
           <p class="addr">136 S Park Ave, Winter Park, FL 32789</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/prato.html">Prato</a> <span class="badge">Local Pick</span></h3>
-          <p class="meta">Italian &middot; $$$</p>
+          <div class="vmain"><h3><a href="/venue/prato.html">Prato</a> <span class="badge">Local Pick</span></h3>
+          <p class="meta">Italian &middot; $$$</p><p class="vsub">Italian the Park Avenue way: rustic yet upscale, exposed brick and warm light, house-made pastas and wood-fired pizzas.</p>
           <p class="addr">Prato, 124 N Park Ave, Winter Park, FL 32789</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/lale-mediterranean.html">Lale Mediterranean Cuisine</a></h3>
-          <p class="meta">Mediterranean &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/lale-mediterranean.html">Lale Mediterranean Cuisine</a></h3>
+          <p class="meta">Mediterranean &middot; $$</p><p class="vsub">A cozy, family-run Turkish room on Park Avenue in Winter Park, warm and intimate.</p>
           <p class="addr">521 S Park Ave, Winter Park, FL 32789</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/aj-chocolate-house.html">AJ Chocolate House</a></h3>
-          <p class="meta">Sweets · Chocolatier &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-aj-chocolate-house.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/aj-chocolate-house.html">AJ Chocolate House</a></h3>
+          <p class="meta">Sweets · Chocolatier &middot; $$</p><p class="vsub">Old-world Europe lands on Park Avenue here, with low lighting, cozy elegance, and chocolate treated as an occasion.</p>
           <p class="addr">AJ Chocolate House, 552 S Park Ave, Winter Park, FL 32789-4322, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/park-avenue-pizza.html">Park Avenue Pizza</a></h3>
-          <p class="meta">Pizza &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/park-avenue-pizza.html">Park Avenue Pizza</a></h3>
+          <p class="meta">Pizza &middot; $$</p><p class="vsub">A no-frills, old-school counter on Lyman Avenue, where guests go for a quick slice done right.</p>
           <p class="addr">119 E Lyman Ave, Winter Park, FL 32789</p>
-        </article>
+        </div></article>
         </div>
         <div class="handoff">
           <a class="btn-ghost" href="/winter-park-finder.html">See the full Winter Park list</a>

@@ -211,7 +211,14 @@
       .vcard .addr { margin: 0; color: var(--muted); font-size: .9rem; }
       @media (max-width: 640px) { .facts { grid-template-columns: 1fr; } }
     </style>
-  </head>
+  <style data-cardsys>
+/* cardsys: similar rail cards (2026-10-23 overhaul) */
+.vcard{display:flex;gap:12px;align-items:flex-start}
+.vcard .vthumb{flex:0 0 86px;width:86px;height:86px;border-radius:10px;object-fit:cover;display:block}
+.vcard .vmain{flex:1;min-width:0}
+.vcard .vsub{margin:4px 0 0;font-size:.86rem;line-height:1.45;color:var(--muted,#c6bba2)}
+@media (min-width:1000px){.vlist{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start}}
+</style></head>
   <body>
     <header class="hero">
       <div class="hero-in">
@@ -240,41 +247,41 @@
         </div>
       </section>
 
-      <section class="sec" id="similar">
+      <section class="sec" id="district-story"><p class="kicker">District Stories</p><h2>Orlando&#x27;s long memory</h2><p class="lede">The guide keeps the long memory of Orlando&#x27;s districts in one place: the names, the plats and the stories behind the streets.</p><p><a class="btn-ghost" href="/history.html">Browse the district stories &rarr;</a></p></section><section class="sec" id="similar">
         <p class="kicker">Similar Feel</p>
         <h2>More places with this feel</h2>
         <p class="lede">Matched by vibe, not by neighborhood: the places across Greater Orlando closest in spirit to Toll Road Brewing Company.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/rockpit-brewing.html">Rockpit Brewing</a></h3>
-          <p class="meta">Breweries &middot; SoDo &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/rockpit-brewing.html">Rockpit Brewing</a></h3>
+          <p class="meta">Breweries &middot; SoDo &middot; $$</p><p class="vsub">Regulars treat this SoDo taproom on West Illiana Street as Orlando&#x27;s neighborhood brewery, cozy and welcoming to newcomers.</p>
           <p class="addr">Rockpit Brewing, 10 W Illiana St, Orlando, FL 32806-4408, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/ten10-brewing.html">Ten10 Brewing</a></h3>
-          <p class="meta">Breweries &middot; 1010 Virginia Dr &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/ten10-brewing.html">Ten10 Brewing</a></h3>
+          <p class="meta">Breweries &middot; 1010 Virginia Dr &middot; $$</p><p class="vsub">Laid-back neighborhood taproom on Virginia Drive in Mills 50, all about good beer, good tunes and good people.</p>
           <p class="addr">Ten10 Brewing, 1010 Virginia Dr, Orlando, FL 32803-2532</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/broken-strings-brewery.html">Broken Strings Taproom</a></h3>
-          <p class="meta">Breweries &middot; Downtown &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/broken-strings-brewery.html">Broken Strings Taproom</a></h3>
+          <p class="meta">Breweries &middot; Downtown &middot; $$</p><p class="vsub">Music-first taproom on West Church Street, walls covered in murals of legends and a sister brewery sharing the roof.</p>
           <p class="addr">Broken Strings Brewery, 1012 W Church St, Orlando, FL 32805-2216</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/qreate-coffee.html">Qreate Coffee</a></h3>
-          <p class="meta">Coffee &amp; cafes &middot; Orlando &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-qreate-coffee.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/qreate-coffee.html">Qreate Coffee</a></h3>
+          <p class="meta">Coffee &amp; cafes &middot; Orlando &middot; $$</p><p class="vsub">Just off Mills on Woodward Street, part coffee lab and part creative studio, with a small-town feel guests do not expect.</p>
           <p class="addr">1212 Woodward St #1, Orlando, FL 32803</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/half-barrel-beer-project.html">Half Barrel Beer Project</a></h3>
-          <p class="meta">Breweries &middot; Orlando &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/half-barrel-beer-project.html">Half Barrel Beer Project</a></h3>
+          <p class="meta">Breweries &middot; Orlando &middot; $$</p><p class="vsub">Small, family-owned brewery on Universal Boulevard with a chill, welcoming feel guests keep mentioning.</p>
           <p class="addr">Half Barrel Beer Project, 9650 Universal Blvd, Orlando, FL 32819-8766, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/sideward-brewing-co.html">Sideward Brewing Co.</a></h3>
-          <p class="meta">Breweries &middot; Milk District &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/sideward-brewing-co.html">Sideward Brewing Co.</a></h3>
+          <p class="meta">Breweries &middot; Milk District &middot; $$</p><p class="vsub">A laid-back, unpretentious taproom on Bumby Avenue where beer is brewed clean and the kitchen is, in guests&#x27; words, severely underrated.</p>
           <p class="addr">210 N Bumby Ave, Orlando, FL 32803</p>
-        </article>
+        </div></article>
         </div>
       </section>
 
@@ -284,35 +291,35 @@
         <p class="lede">Other places in Winter Garden, closest to Toll Road Brewing Company first.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/southern-steer-butcher.html">Southern Steer Butcher (Orlando)</a></h3>
-          <p class="meta">Markets &amp; shops · Butcher Shop &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/southern-steer-butcher.html">Southern Steer Butcher (Orlando)</a></h3>
+          <p class="meta">Markets &amp; shops · Butcher Shop &middot; $</p><p class="vsub">Family-run butcher on West Colonial Drive in Ocoee, where staff guide you through the case and how to cook it.</p>
           <p class="addr">11024 W Colonial Dr, Ocoee, FL 34761</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/ispirazione.html">Ispirazione</a></h3>
-          <p class="meta">Burgers &amp; sandwiches · Sandwiches &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/ispirazione.html">Ispirazione</a></h3>
+          <p class="meta">Burgers &amp; sandwiches · Sandwiches &middot; $$</p><p class="vsub">In Ocoee, the focus is tigelle, small round Italian breads baked fresh to order, crunchy outside and soft in the center.</p>
           <p class="addr">Ispirazione, 1711 Amazing Way, Ocoee, FL 34761-3279, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/lake-meadow-naturals.html">Lake Meadow Naturals</a></h3>
-          <p class="meta">Markets &amp; shops · Farm Store &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/lake-meadow-naturals.html">Lake Meadow Naturals</a></h3>
+          <p class="meta">Markets &amp; shops · Farm Store &middot; $$</p><p class="vsub">Working farm in Ocoee whose store sells what the land makes: eggs you pick yourself, uncured bacon, turkeys raised on site.</p>
           <p class="addr">Lake Meadow Naturals, 10000 Mark Adam Rd, Ocoee, FL 34761-3246, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/schweinis-delicatessen.html">Schweini&#x27;s Delicatessen</a></h3>
-          <p class="meta">Burgers &amp; sandwiches · Deli &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/schweinis-delicatessen.html">Schweini&#x27;s Delicatessen</a></h3>
+          <p class="meta">Burgers &amp; sandwiches · Deli &middot; $$</p><p class="vsub">A German deli on Main Street in Winter Garden, built straight from the owner&#x27;s heart.</p>
           <p class="addr">Schweini&#x27;s Delicatessen, 108 S Main St, Winter Garden, FL 34787-3556, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/harlow-grove.html">Harlow Grove</a></h3>
-          <p class="meta">American · American Restaurant &middot; $$$</p>
+          <div class="vmain"><h3><a href="/venue/harlow-grove.html">Harlow Grove</a></h3>
+          <p class="meta">American · American Restaurant &middot; $$$</p><p class="vsub">Beneath a century-old oak in Winter Garden, an elegant room and open-air terrace overlook town.</p>
           <p class="addr">186 S Main St, Winter Garden, FL 34787</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/harrell-s-hot-dogs-and-cold-cones.html">Harrell&#x27;s Hot Dogs and Cold Cones</a></h3>
-          <p class="meta">Burgers &amp; sandwiches · Hot Dogs &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/harrell-s-hot-dogs-and-cold-cones.html">Harrell&#x27;s Hot Dogs and Cold Cones</a></h3>
+          <p class="meta">Burgers &amp; sandwiches · Hot Dogs &middot; $</p><p class="vsub">Narrow little Plant Street hideaway for grilled all-beef dogs that guests say make a simple hot dog better.</p>
           <p class="addr">54 W Plant St, Winter Garden, FL 34787</p>
-        </article>
+        </div></article>
         </div>
         <div class="handoff">
           <a class="btn-ghost" href="/winter-garden-finder.html">See the full Winter Garden list</a>

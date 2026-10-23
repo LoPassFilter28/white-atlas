@@ -211,7 +211,14 @@
       .vcard .addr { margin: 0; color: var(--muted); font-size: .9rem; }
       @media (max-width: 640px) { .facts { grid-template-columns: 1fr; } }
     </style>
-  </head>
+  <style data-cardsys>
+/* cardsys: similar rail cards (2026-10-23 overhaul) */
+.vcard{display:flex;gap:12px;align-items:flex-start}
+.vcard .vthumb{flex:0 0 86px;width:86px;height:86px;border-radius:10px;object-fit:cover;display:block}
+.vcard .vmain{flex:1;min-width:0}
+.vcard .vsub{margin:4px 0 0;font-size:.86rem;line-height:1.45;color:var(--muted,#c6bba2)}
+@media (min-width:1000px){.vlist{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start}}
+</style></head>
   <body>
     <header class="hero">
       <div class="hero-in">
@@ -239,31 +246,31 @@
         </div>
       </section>
 
-      <section class="sec" id="similar">
+      <section class="sec" id="district-story"><p class="kicker">District Stories</p><h2>Orlando&#x27;s long memory</h2><p class="lede">The guide keeps the long memory of Orlando&#x27;s districts in one place: the names, the plats and the stories behind the streets.</p><p><a class="btn-ghost" href="/history.html">Browse the district stories &rarr;</a></p></section><section class="sec" id="similar">
         <p class="kicker">Similar Feel</p>
         <h2>More places with this feel</h2>
         <p class="lede">Matched by vibe, not by neighborhood: the places across Greater Orlando closest in spirit to Vivahealthy Pink House.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/the-smoothie-room.html">The Smoothie Room</a></h3>
-          <p class="meta">Coffee &amp; cafes &middot; SoDo &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/the-smoothie-room.html">The Smoothie Room</a></h3>
+          <p class="meta">Coffee &amp; cafes &middot; SoDo &middot; $$</p><p class="vsub">Bright, clean, and calm on West Crystal Lake Street in SoDo, built around all-natural blends with nothing hidden in the cup.</p>
           <p class="addr">The Smoothie Room, 25 W Crystal Lake St, Orlando, FL 32806-4403, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/amazonica-florida-mall.html">Amazonica</a></h3>
-          <p class="meta">Coffee &amp; cafes &middot; Florida Mall &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/amazonica-florida-mall.html">Amazonica</a></h3>
+          <p class="meta">Coffee &amp; cafes &middot; Florida Mall &middot; $$</p><p class="vsub">A bright Colombian kiosk inside The Florida Mall, turning out obleas with arequipe, acai bowls with Nutella and fruit, and a proper cortadito.</p>
           <p class="addr">8001 S Orange Blossom Trl Kiosk TT124, Orlando, FL 32809</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/ice-bites-cafe.html">Ice &amp; Bites Cafe</a></h3>
-          <p class="meta">Coffee &amp; cafes &middot; University &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/ice-bites-cafe.html">Ice &amp; Bites Cafe</a></h3>
+          <p class="meta">Coffee &amp; cafes &middot; University &middot; $$</p><p class="vsub">A whimsical, anime-tinged dessert cafe near UCF built around taiyaki, warm fish-shaped waffle cones filled with ice cream like taro and lavender.</p>
           <p class="addr">3402 Technological Ave Ste 220, Orlando, FL 32817</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/dang-boba-musubi-house.html">Dang Boba &amp; Musubi House</a></h3>
-          <p class="meta">Coffee &amp; cafes &middot; University &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/dang-boba-musubi-house.html">Dang Boba &amp; Musubi House</a></h3>
+          <p class="meta">Coffee &amp; cafes &middot; University &middot; $$</p><p class="vsub">Cheerful, cozy little spot near UCF pairing boba teas with Hawaiian musubi.</p>
           <p class="addr">Dang Boba &amp; Musubi House, 11772 E Colonial Dr, Orlando, FL 32817-4625</p>
-        </article>
+        </div></article>
         </div>
       </section>
 
@@ -273,35 +280,35 @@
         <p class="lede">Other places in University, closest to Vivahealthy Pink House first.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/pereira-latin-products.html">Pereira Latin Products</a></h3>
-          <p class="meta">Markets &amp; shops · Latin Grocery &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/pereira-latin-products.html">Pereira Latin Products</a></h3>
+          <p class="meta">Markets &amp; shops · Latin Grocery &middot; $</p><p class="vsub">A Latin grocery on Forsyth Rd carrying the pantry staples, snacks, and drinks the big supermarkets skim past.</p>
           <p class="addr">2914 Forsyth Rd, Winter Park, FL 32792</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/lucky-china.html">Lucky China</a></h3>
-          <p class="meta">Chinese · Chinese Takeout &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/lucky-china.html">Lucky China</a></h3>
+          <p class="meta">Chinese · Chinese Takeout &middot; $</p><p class="vsub">A no-frills takeout staple in Aloma Square that regulars prize for one thing above all: consistency.</p>
           <p class="addr">Lucky China, 6756 Aloma Ave, Winter Park, FL 32792</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/zackleys.html">Zackleys</a></h3>
-          <p class="meta">Pizza &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/zackleys.html">Zackleys</a></h3>
+          <p class="meta">Pizza &middot; $</p><p class="vsub">Family owned since 2000 and tucked inside the Full Sail campus, with wood oven pizzas, paninis, and Jamaican beef empanadas.</p>
           <p class="addr">3260 University Blvd, Winter Park, FL 32792</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/dutch-bros-coffee-winter-park.html">Dutch Bros Coffee</a></h3>
-          <p class="meta">Coffee &amp; cafes · Coffee Shop &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/dutch-bros-coffee-winter-park.html">Dutch Bros Coffee</a></h3>
+          <p class="meta">Coffee &amp; cafes · Coffee Shop &middot; $</p><p class="vsub">On Semoran Boulevard, a high-energy, genuinely friendly drive-thru where the crew remembers regulars and sings to birthday windows.</p>
           <p class="addr">116 S Semoran Blvd, Winter Park, FL 32792</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/alexandria-market.html">Alexandria Market</a></h3>
-          <p class="meta">Markets &amp; shops · Middle Eastern Grocery &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/alexandria-market.html">Alexandria Market</a></h3>
+          <p class="meta">Markets &amp; shops · Middle Eastern Grocery &middot; $</p><p class="vsub">A Middle Eastern grocery on Hanging Moss Rd stocking halal meats, fresh fateer and pita, baklava, and za&#x27;atar.</p>
           <p class="addr">6148 Hanging Moss Rd, Orlando, FL 32814</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/everoak.html">Everoak Farm</a></h3>
-          <p class="meta">Markets &amp; shops · Farmstand &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/everoak.html">Everoak Farm</a></h3>
+          <p class="meta">Markets &amp; shops · Farmstand &middot; $</p><p class="vsub">A family-run regenerative farm on Carrington Drive growing Certified Naturally Grown produce with no sprays in living soil.</p>
           <p class="addr">Everoak Farm, 2335 Carrington Dr, Orlando, FL 32807</p>
-        </article>
+        </div></article>
         </div>
         <div class="handoff">
           <a class="btn-ghost" href="/ucf-finder.html">See the full University list</a>

@@ -211,7 +211,14 @@
       .vcard .addr { margin: 0; color: var(--muted); font-size: .9rem; }
       @media (max-width: 640px) { .facts { grid-template-columns: 1fr; } }
     </style>
-  </head>
+  <style data-cardsys>
+/* cardsys: similar rail cards (2026-10-23 overhaul) */
+.vcard{display:flex;gap:12px;align-items:flex-start}
+.vcard .vthumb{flex:0 0 86px;width:86px;height:86px;border-radius:10px;object-fit:cover;display:block}
+.vcard .vmain{flex:1;min-width:0}
+.vcard .vsub{margin:4px 0 0;font-size:.86rem;line-height:1.45;color:var(--muted,#c6bba2)}
+@media (min-width:1000px){.vlist{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start}}
+</style></head>
   <body>
     <header class="hero">
       <div class="hero-in">
@@ -236,46 +243,46 @@
         <div class="actions">
           <a class="action" href="https://www.google.com/maps/search/?api=1&amp;query=The+Current+Seafood+Counter+The+Current+Seafood+Counter%2C+2425+Edgewater+Dr%2C+Orlando%2C+FL+32804-5303%2C+United+States" target="_blank" rel="noopener">Directions &rarr;</a>
           <a class="action" href="/archive.html?venue=the-current-seafood-counter">Open in the full finder</a>
-          <a class="action" href="/college-park-district-guide.html">Read the College Park story</a>
+          <a class="action" href="/history/college-park.html">Read the College Park story</a>
           <a class="action action-ig" href="https://www.instagram.com/thecurrentseafoodcounterorl" target="_blank" rel="noopener"><svg class="ig-glyph" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="vertical-align:-2px;margin-right:6px"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg> Instagram</a>
         </div>
       </section>
 
-      <section class="sec" id="similar">
+      <section class="sec" id="district-story"><p class="kicker">District Story</p><h2>The story of College Park</h2><p class="lede">A neighborhood named for colleges it never had, branded on citrus land in 1921, and still legible in every street sign you pass today.</p><p><a class="btn-ghost" href="/history/college-park.html">Read the College Park story &rarr;</a></p></section><section class="sec" id="similar">
         <p class="kicker">Similar Feel</p>
         <h2>More places with this feel</h2>
         <p class="lede">Matched by vibe, not by neighborhood: the places across Greater Orlando closest in spirit to The Current Seafood Counter.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/the-current-seafood-countersanford.html">The Current Seafood Counter-Sanford</a></h3>
-          <p class="meta">Seafood &middot; Sanford &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/the-current-seafood-countersanford.html">The Current Seafood Counter-Sanford</a></h3>
+          <p class="meta">Seafood &middot; Sanford &middot; $$</p><p class="vsub">Started inside Henry&#x27;s Depot, now serving a casual slice of New England on East 1st Street in Sanford.</p>
           <p class="addr">116 E 1st St, Sanford, FL 32771</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/lombardi-s-seafood.html">Lombardi&#x27;s Seafood</a></h3>
-          <p class="meta">Seafood &middot; Winter Park &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-lombardi-s-seafood.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/lombardi-s-seafood.html">Lombardi&#x27;s Seafood</a></h3>
+          <p class="meta">Seafood &middot; Winter Park &middot; $$</p><p class="vsub">Old-school, family-run fish market on Fairbanks Avenue in Winter Park, the counter guests call the freshest fish in town.</p>
           <p class="addr">1888 W Fairbanks Ave, Winter Park, FL 32789</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/hooked-fish-camp.html">Hooked Fish Camp</a></h3>
-          <p class="meta">Seafood &middot; Sanford &middot; $$$$</p>
+          <div class="vmain"><h3><a href="/venue/hooked-fish-camp.html">Hooked Fish Camp</a></h3>
+          <p class="meta">Seafood &middot; Sanford &middot; $$$$</p><p class="vsub">Relaxed, coastal fish camp cooking comes to Towne Center Circle in Sanford.</p>
           <p class="addr">550 Towne Center Cir, Sanford, FL 32771</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/laspada-s-original-cheesesteaks-and-hoagies.html">LaSpada&#x27;s Original Cheesesteaks and Hoagies</a></h3>
-          <p class="meta">Burgers &amp; sandwiches &middot; College Park &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-laspada-s-original-cheesesteaks-and-hoagies.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/laspada-s-original-cheesesteaks-and-hoagies.html">LaSpada&#x27;s Original Cheesesteaks and Hoagies</a></h3>
+          <p class="meta">Burgers &amp; sandwiches &middot; College Park &middot; $$</p><p class="vsub">On Lee Road, Delco standards come to College Park with an old-school, no-frills, family-run counter.</p>
           <p class="addr">1010 Lee Rd, Orlando, FL 32810</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/rions-ocean.html">Rion&#x27;s Ocean Room</a></h3>
-          <p class="meta">Seafood &middot; Winter Park &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/rions-ocean.html">Rion&#x27;s Ocean Room</a></h3>
+          <p class="meta">Seafood &middot; Winter Park &middot; $$</p><p class="vsub">Inside East End Market, this no-frills poke counter is built on freshness, with fish cut to order and piled over rice.</p>
           <p class="addr">Rion&#x27;s Ocean Room, 3201 Corrine Dr, Orlando, FL 32803</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/bento-sushi.html">Bento Sushi</a></h3>
-          <p class="meta">Japanese &amp; sushi &middot; 12715 Pegasus Dr &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/bento-sushi.html">Bento Sushi</a></h3>
+          <p class="meta">Japanese &amp; sushi &middot; 12715 Pegasus Dr &middot; $$</p><p class="vsub">Quick, cafeteria-casual counter inside the UCF Student Union built for grabbing something fresh between classes.</p>
           <p class="addr">Bento Sushi, 12715 Pegasus Dr, Orlando, FL 32816-8030</p>
-        </article>
+        </div></article>
         </div>
       </section>
 
@@ -285,35 +292,35 @@
         <p class="lede">Other places in College Park, Local Picks first, then the closest to The Current Seafood Counter.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/quesa-loco.html">QuesaLoco</a> <span class="badge">Local Pick</span></h3>
-          <p class="meta">Mexican · Birria Tacos &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-quesa-loco.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/quesa-loco.html">QuesaLoco</a> <span class="badge">Local Pick</span></h3>
+          <p class="meta">Mexican · Birria Tacos &middot; $$</p><p class="vsub">Birria country on Fairbanks Ave, in a colorful room with Dia de los Muertos murals and the joyful chaos of its food truck days.</p>
           <p class="addr">971 W Fairbanks Ave, Orlando, FL 32804</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/cups-pups.html">Cups and Pups</a></h3>
-          <p class="meta">Coffee &amp; cafes · Coffee Shop &middot; $</p>
+          <img class="vthumb" src="/assets/venue-cups-pups.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/cups-pups.html">Cups and Pups</a></h3>
+          <p class="meta">Coffee &amp; cafes · Coffee Shop &middot; $</p><p class="vsub">On Edgewater Drive in College Park, this cute, cheerful coffee stop has become a neighborhood ritual.</p>
           <p class="addr">2413 Edgewater Dr, Orlando, FL 32804</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/turci-pasta.html">Turci Pasta</a></h3>
-          <p class="meta">Italian &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-turci-pasta.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/turci-pasta.html">Turci Pasta</a></h3>
+          <p class="meta">Italian &middot; $$</p><p class="vsub">On Edgewater Drive in College Park, a cozy, romantic hole in the wall where you can watch fresh pasta made in house.</p>
           <p class="addr">Turci Pasta, 2120 Edgewater Dr, Orlando, FL 32804</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/ollies-public-house.html">Ollie&#x27;s Public House</a></h3>
-          <p class="meta">Bars &amp; lounges · Pub &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/ollies-public-house.html">Ollie&#x27;s Public House</a></h3>
+          <p class="meta">Bars &amp; lounges · Pub &middot; $$</p><p class="vsub">Easy neighborhood-pub rhythm on Edgewater Drive, with a lively dog-friendly patio and rotating craft taps.</p>
           <p class="addr">Ollie&#x27;s Public House, 3400 Edgewater Dr, Orlando, FL 32804-3602, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/shakers-american-cafe.html">Shakers American Cafe</a></h3>
-          <p class="meta">American &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-shakers-american-cafe.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/shakers-american-cafe.html">Shakers American Cafe</a></h3>
+          <p class="meta">American &middot; $$</p><p class="vsub">Cozy College Park cottage lined with donated salt and pepper shakers, where the breakfast crowd treats it like a clubhouse.</p>
           <p class="addr">Shakers American Cafe, 1308 Edgewater Dr, Orlando, FL 32804-6351, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/walters-tavern.html">Walter&#x27;s Tavern</a></h3>
-          <p class="meta">Bars &amp; lounges · Tavern &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-walters-tavern.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/walters-tavern.html">Walter&#x27;s Tavern</a></h3>
+          <p class="meta">Bars &amp; lounges · Tavern &middot; $$</p><p class="vsub">Inside the Great Southern Box Company food hall in the Packing District, a spacious, lively game day room built for lingering.</p>
           <p class="addr">2105 N Orange Blossom Trl, Orlando, FL 32804</p>
-        </article>
+        </div></article>
         </div>
         <div class="handoff">
           <a class="btn-ghost" href="/college-park-finder.html">See the full College Park list</a>

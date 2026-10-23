@@ -211,7 +211,14 @@
       .vcard .addr { margin: 0; color: var(--muted); font-size: .9rem; }
       @media (max-width: 640px) { .facts { grid-template-columns: 1fr; } }
     </style>
-  </head>
+  <style data-cardsys>
+/* cardsys: similar rail cards (2026-10-23 overhaul) */
+.vcard{display:flex;gap:12px;align-items:flex-start}
+.vcard .vthumb{flex:0 0 86px;width:86px;height:86px;border-radius:10px;object-fit:cover;display:block}
+.vcard .vmain{flex:1;min-width:0}
+.vcard .vsub{margin:4px 0 0;font-size:.86rem;line-height:1.45;color:var(--muted,#c6bba2)}
+@media (min-width:1000px){.vlist{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start}}
+</style></head>
   <body>
     <header class="hero">
       <div class="hero-in">
@@ -239,41 +246,41 @@
         </div>
       </section>
 
-      <section class="sec" id="similar">
+      <section class="sec" id="district-story"><p class="kicker">District Stories</p><h2>Orlando&#x27;s long memory</h2><p class="lede">The guide keeps the long memory of Orlando&#x27;s districts in one place: the names, the plats and the stories behind the streets.</p><p><a class="btn-ghost" href="/history.html">Browse the district stories &rarr;</a></p></section><section class="sec" id="similar">
         <p class="kicker">Similar Feel</p>
         <h2>More places with this feel</h2>
         <p class="lede">Matched by vibe, not by neighborhood: the places across Greater Orlando closest in spirit to Vanbarry&#x27;s Public House.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/the-porch-south-orange.html">The Porch South Orange</a></h3>
-          <p class="meta">American &middot; SoDo &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/the-porch-south-orange.html">The Porch South Orange</a></h3>
+          <p class="meta">American &middot; SoDo &middot; $$</p><p class="vsub">Front porch energy on South Orange Avenue, in a welcoming neighborhood room guests choose over touristy spots.</p>
           <p class="addr">The Porch South Orange, 4757 S Orange Ave, Orlando, FL 32806</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/4-rivers-smokehouse-sodo.html">4 Rivers Smokehouse</a></h3>
-          <p class="meta">BBQ &middot; SoDo &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-4-rivers-smokehouse-sodo.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/4-rivers-smokehouse-sodo.html">4 Rivers Smokehouse</a></h3>
+          <p class="meta">BBQ &middot; SoDo &middot; $$</p><p class="vsub">On South Orange Avenue, Signature Angus brisket guests call A+, alongside burnt ends, the Messy Pig, and the Texas Destroyer.</p>
           <p class="addr">4 Rivers Smokehouse, 3200 S Orange Ave, Orlando, FL 32806</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/cecils-texas-style-bar-b-q.html">Cecil&#x27;s Texas Style Bar-B-Q</a></h3>
-          <p class="meta">BBQ &middot; SoDo &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/cecils-texas-style-bar-b-q.html">Cecil&#x27;s Texas Style Bar-B-Q</a></h3>
+          <p class="meta">BBQ &middot; SoDo &middot; $$</p><p class="vsub">Cafeteria style since 1992 on South Orange Avenue, an old-school roadhouse where trays move down a fast, friendly line.</p>
           <p class="addr">Cecil&#x27;s Texas Style Bar-B-Q, 2800 S Orange Ave, Orlando, FL 32806</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/formaggio-and-friends.html">Formaggio and Friends</a></h3>
-          <p class="meta">Italian &middot; SoDo &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/formaggio-and-friends.html">Formaggio and Friends</a></h3>
+          <p class="meta">Italian &middot; SoDo &middot; $$</p><p class="vsub">Cozy in SoDo, an Italian grocery and wine bar where cheese cases, pantry shelves, and a communal table share one room.</p>
           <p class="addr">Formaggio and Friends, 4745 S Orange Ave, Orlando, FL 32806</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/clean-eatz.html">Clean Eatz</a></h3>
-          <p class="meta">Restaurants &middot; SoDo &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-clean-eatz.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/clean-eatz.html">Clean Eatz</a></h3>
+          <p class="meta">Restaurants &middot; SoDo &middot; $$</p><p class="vsub">Neat, welcoming health-focused cafe on South Orange Avenue in SoDo, where bowls and wraps keep their macros front and center.</p>
           <p class="addr">Clean Eatz, 2205 Orange Ave S, Orlando, FL 32806-3038</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/delaneys-tavern.html">Delaney&#x27;s Tavern</a></h3>
-          <p class="meta">American &middot; Orlando &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/delaneys-tavern.html">Delaney&#x27;s Tavern</a></h3>
+          <p class="meta">American &middot; Orlando &middot; $$</p><p class="vsub">Warm and stylish on the ground floor of the Delaney Hotel in SoDo, the room the neighborhood saves for special occasions.</p>
           <p class="addr">Delaney&#x27;s Tavern, 1315 S Orange Ave, Orlando, FL 32806, United States</p>
-        </article>
+        </div></article>
         </div>
       </section>
 
@@ -283,35 +290,35 @@
         <p class="lede">Other places in SoDo, closest to Vanbarry&#x27;s Public House first.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/formaggio-and-friends.html">Formaggio and Friends</a></h3>
-          <p class="meta">Italian · Italian Grocery &amp; Wine &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/formaggio-and-friends.html">Formaggio and Friends</a></h3>
+          <p class="meta">Italian · Italian Grocery &amp; Wine &middot; $$</p><p class="vsub">Cozy in SoDo, an Italian grocery and wine bar where cheese cases, pantry shelves, and a communal table share one room.</p>
           <p class="addr">Formaggio and Friends, 4745 S Orange Ave, Orlando, FL 32806</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/the-porch-south-orange.html">The Porch South Orange</a></h3>
-          <p class="meta">American · Sports Bar &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/the-porch-south-orange.html">The Porch South Orange</a></h3>
+          <p class="meta">American · Sports Bar &middot; $$</p><p class="vsub">Front porch energy on South Orange Avenue, in a welcoming neighborhood room guests choose over touristy spots.</p>
           <p class="addr">The Porch South Orange, 4757 S Orange Ave, Orlando, FL 32806</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/palm-beach.html">Palm Beach Meats</a></h3>
-          <p class="meta">Markets &amp; shops · Butcher Shop &middot; $$$</p>
+          <div class="vmain"><h3><a href="/venue/palm-beach.html">Palm Beach Meats</a></h3>
+          <p class="meta">Markets &amp; shops · Butcher Shop &middot; $$$</p><p class="vsub">A butcher shop and counter on South Orange Avenue built on one obsession: Wagyu, done every way.</p>
           <p class="addr">Palm Beach Meats, 3421 Orange Ave S, Orlando, FL 32806-6127</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/4-rivers-smokehouse-sodo.html">4 Rivers Smokehouse</a></h3>
-          <p class="meta">BBQ · BBQ &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-4-rivers-smokehouse-sodo.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/4-rivers-smokehouse-sodo.html">4 Rivers Smokehouse</a></h3>
+          <p class="meta">BBQ · BBQ &middot; $$</p><p class="vsub">On South Orange Avenue, Signature Angus brisket guests call A+, alongside burnt ends, the Messy Pig, and the Texas Destroyer.</p>
           <p class="addr">4 Rivers Smokehouse, 3200 S Orange Ave, Orlando, FL 32806</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/mooyah-burgers-fries-shakes.html">MOOYAH Burgers, Fries &amp; Shakes</a></h3>
-          <p class="meta">Burgers &amp; sandwiches · Burgers &middot; $</p>
+          <img class="vthumb" src="/assets/venue-mooyah-burgers-fries-shakes.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/mooyah-burgers-fries-shakes.html">MOOYAH Burgers, Fries &amp; Shakes</a></h3>
+          <p class="meta">Burgers &amp; sandwiches · Burgers &middot; $</p><p class="vsub">On South Orange Avenue in SoDo, a simple promise: burgers built to order, hand-cut fries and hand-spun shakes made with real ice cream.</p>
           <p class="addr">3155 S Orange Ave, Orlando, FL 32806</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/cecils-texas-style-bar-b-q.html">Cecil&#x27;s Texas Style Bar-B-Q</a></h3>
-          <p class="meta">BBQ · BBQ &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/cecils-texas-style-bar-b-q.html">Cecil&#x27;s Texas Style Bar-B-Q</a></h3>
+          <p class="meta">BBQ · BBQ &middot; $$</p><p class="vsub">Cafeteria style since 1992 on South Orange Avenue, an old-school roadhouse where trays move down a fast, friendly line.</p>
           <p class="addr">Cecil&#x27;s Texas Style Bar-B-Q, 2800 S Orange Ave, Orlando, FL 32806</p>
-        </article>
+        </div></article>
         </div>
         <div class="handoff">
           <a class="btn-ghost" href="/sodo-finder.html">See the full SoDo list</a>

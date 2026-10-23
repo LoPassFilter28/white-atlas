@@ -211,7 +211,14 @@
       .vcard .addr { margin: 0; color: var(--muted); font-size: .9rem; }
       @media (max-width: 640px) { .facts { grid-template-columns: 1fr; } }
     </style>
-  </head>
+  <style data-cardsys>
+/* cardsys: similar rail cards (2026-10-23 overhaul) */
+.vcard{display:flex;gap:12px;align-items:flex-start}
+.vcard .vthumb{flex:0 0 86px;width:86px;height:86px;border-radius:10px;object-fit:cover;display:block}
+.vcard .vmain{flex:1;min-width:0}
+.vcard .vsub{margin:4px 0 0;font-size:.86rem;line-height:1.45;color:var(--muted,#c6bba2)}
+@media (min-width:1000px){.vlist{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start}}
+</style></head>
   <body>
     <header class="hero">
       <div class="hero-in">
@@ -239,41 +246,41 @@
         </div>
       </section>
 
-      <section class="sec" id="similar">
+      <section class="sec" id="district-story"><p class="kicker">District Stories</p><h2>Orlando&#x27;s long memory</h2><p class="lede">The guide keeps the long memory of Orlando&#x27;s districts in one place: the names, the plats and the stories behind the streets.</p><p><a class="btn-ghost" href="/history.html">Browse the district stories &rarr;</a></p></section><section class="sec" id="similar">
         <p class="kicker">Similar Feel</p>
         <h2>More places with this feel</h2>
         <p class="lede">Matched by vibe, not by neighborhood: the places across Greater Orlando closest in spirit to The Spice Indian Grill.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/tikka-shack-indian-grub.html">Tikka Shack Indian Grub</a></h3>
-          <p class="meta">Indian &middot; Oviedo &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/tikka-shack-indian-grub.html">Tikka Shack Indian Grub</a></h3>
+          <p class="meta">Indian &middot; Oviedo &middot; $$</p><p class="vsub">Fast-casual Indian kitchen on Alafaya Trail that keeps flavors bold and the mood fun and casual.</p>
           <p class="addr">Tikka Shack Indian Grub, 1500 Alafaya Trl, Oviedo, FL 32765-4517, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/bombay-street.html">Bombay Street Kitchen</a></h3>
-          <p class="meta">Indian &middot; South OBT &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/bombay-street.html">Bombay Street Kitchen</a></h3>
+          <p class="meta">Indian &middot; South OBT &middot; $$</p><p class="vsub">Street food from Mumbai, Delhi, Chennai and Bangalore is the draw at this bright, buzzy Orange Blossom Trail room with a Michelin Bib Gourmand.</p>
           <p class="addr">6215 S Orange Blossom Trl, Orlando</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/cowboy-curry.html">Cowboy Curry</a></h3>
-          <p class="meta">Japanese &amp; sushi &middot; Mills 50 &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/cowboy-curry.html">Cowboy Curry</a></h3>
+          <p class="meta">Japanese &amp; sushi &middot; Mills 50 &middot; $$</p><p class="vsub">Inside Mills Market, the Japanese curry is built the slow way, a 40-hour beef curry guests call comfort food with soul.</p>
           <p class="addr">1110 E Colonial Dr, Orlando, FL 32803</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/beirut-grill-and-deli.html">Beirut Grill and Deli</a></h3>
-          <p class="meta">Mediterranean &middot; Oviedo &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-beirut-grill-and-deli.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/beirut-grill-and-deli.html">Beirut Grill and Deli</a></h3>
+          <p class="meta">Mediterranean &middot; Oviedo &middot; $$</p><p class="vsub">Family-owned halal Lebanese kitchen on Alafaya Trail, where everything tastes homemade and the room feels like family.</p>
           <p class="addr">Beirut Grill and Deli, 3100 Alafaya Trl, Oviedo, FL 32765-9466, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/beef-bae.html">Beef Bae</a></h3>
-          <p class="meta">BBQ &middot; South Orlando &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/beef-bae.html">Beef Bae</a></h3>
+          <p class="meta">BBQ &middot; South Orlando &middot; $$</p><p class="vsub">Formerly Charcoal Zyka, this South Orlando spot runs American barbecue through a Zabiha halal kitchen, and regulars say it works.</p>
           <p class="addr">10249 S John Young Pkwy Ste 109, Orlando, FL 32837</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/grocery-hermanos.html">Grocery Los Hermanos</a></h3>
-          <p class="meta">Mexican &middot; East Orlando &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/grocery-hermanos.html">Grocery Los Hermanos</a></h3>
+          <p class="meta">Mexican &middot; East Orlando &middot; $</p><p class="vsub">A family-run market and taqueria on Curry Ford where guests say the food tastes homemade and very fresh.</p>
           <p class="addr">4130 Curry Ford Rd, Orlando, FL 32806</p>
-        </article>
+        </div></article>
         </div>
       </section>
 
@@ -283,35 +290,35 @@
         <p class="lede">Other places in University, closest to The Spice Indian Grill first.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/omelet-bar.html">Omelet Bar</a></h3>
-          <p class="meta">Breakfast &amp; brunch · Breakfast &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/omelet-bar.html">Omelet Bar</a></h3>
+          <p class="meta">Breakfast &amp; brunch · Breakfast &middot; $</p><p class="vsub">Bright, relaxed cafe on Strategy Blvd near UCF where the omelet is the main event, built to order from a fresh filling bar.</p>
           <p class="addr">12250 Strategy Blvd Ste 401, Orlando, FL 32817</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/bar-louie.html">Bar Louie (Plaza on University)</a></h3>
-          <p class="meta">Bars &amp; lounges · Bar &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/bar-louie.html">Bar Louie (Plaza on University)</a></h3>
+          <p class="meta">Bars &amp; lounges · Bar &middot; $$</p><p class="vsub">At Plaza on University, a lively, relaxed gastropub on North Alafaya Trail where the crowd feels like regulars even on a first visit.</p>
           <p class="addr">4100 N Alafaya Trail, Orlando, FL 32826</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/blaze-pizza.html">Blaze Pizza</a></h3>
-          <p class="meta">Pizza &middot; $</p>
+          <img class="vthumb" src="/assets/venue-blaze-pizza.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/blaze-pizza.html">Blaze Pizza</a></h3>
+          <p class="meta">Pizza &middot; $</p><p class="vsub">Fast-fired, assembly-line pizza on North Alafaya Trail, built and made fresh right in front of you.</p>
           <p class="addr">4100 N Alafaya Trl, Orlando, FL 32826</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/insomnia-cookies.html">Insomnia Cookies</a></h3>
-          <p class="meta">Bakeries · Bakery &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/insomnia-cookies.html">Insomnia Cookies</a></h3>
+          <p class="meta">Bakeries · Bakery &middot; $</p><p class="vsub">Cozy, delivery-first cookie shop near UCF built around one simple pleasure: cookies served warm.</p>
           <p class="addr">12101 University Blvd, Orlando, FL</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/bento-sushi.html">Bento Sushi</a></h3>
-          <p class="meta">Japanese &amp; sushi · Sushi &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/bento-sushi.html">Bento Sushi</a></h3>
+          <p class="meta">Japanese &amp; sushi · Sushi &middot; $$</p><p class="vsub">Quick, cafeteria-casual counter inside the UCF Student Union built for grabbing something fresh between classes.</p>
           <p class="addr">Bento Sushi, 12715 Pegasus Dr, Orlando, FL 32816-8030</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/4-rivers-smokehouse-ucf.html">4 Rivers Smokehouse</a></h3>
-          <p class="meta">BBQ · BBQ &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-4-rivers-smokehouse-ucf.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/4-rivers-smokehouse-ucf.html">4 Rivers Smokehouse</a></h3>
+          <p class="meta">BBQ · BBQ &middot; $$</p><p class="vsub">The UCF outpost on University Boulevard feeds Knights fans and east Orlando families the full smokehouse lineup.</p>
           <p class="addr">4 Rivers Smokehouse, 11764 University Blvd, Orlando, FL 32817</p>
-        </article>
+        </div></article>
         </div>
         <div class="handoff">
           <a class="btn-ghost" href="/ucf-finder.html">See the full University list</a>
