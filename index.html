@@ -739,24 +739,32 @@ html[data-tier="full"] .home-nav a.nearest-prized:hover{transform:translateY(-1p
    title block is the 1px hairline + 12px + its lines; the hook block is
    its lines at 17.74px. Ranges follow the shelf's own column breaks
    (1080px, 760px) plus the points where the measured content changes
-   (1350px: titles stop wrapping; 375px: hooks stop needing a 5th line). */
-#sectionCovers .district-name{height:42.02px;flex:none}
-#sectionCovers .section-hook{height:35.47px;flex:none}
+   (1350px: titles stop wrapping; 375px: hooks stop needing a 5th line).
+   2026-10-23 fix: the block heights are MIN-heights, not fixed heights.
+   As fixed heights, any title that wrapped past its measured budget in a
+   real browser (different font metrics, narrower column, zoom) painted
+   over the hook text below it; seen live on the home Cards and reproduced
+   under a wider title rendering (40px overlap on the two-line titles).
+   Min-height keeps the shared hairline/title/hook lines wherever the
+   measured budget holds, and the block grows instead of overlapping
+   wherever it does not. */
+#sectionCovers .district-name{min-height:42.02px;flex:none}
+#sectionCovers .section-hook{min-height:35.47px;flex:none}
 @media (max-width:1349px){
-  #sectionCovers .district-name{height:71.03px}
-  #sectionCovers .section-hook{height:70.94px}
+  #sectionCovers .district-name{min-height:71.03px}
+  #sectionCovers .section-hook{min-height:70.94px}
 }
 @media (max-width:1079px){
-  #sectionCovers .district-name{height:36.31px}
-  #sectionCovers .section-hook{height:53.2px}
+  #sectionCovers .district-name{min-height:36.31px}
+  #sectionCovers .section-hook{min-height:53.2px}
 }
 @media (max-width:759px){
-  #sectionCovers .district-name{height:59.63px}
-  #sectionCovers .section-hook{height:70.94px}
+  #sectionCovers .district-name{min-height:59.63px}
+  #sectionCovers .section-hook{min-height:70.94px}
 }
 @media (max-width:374px){
-  #sectionCovers .district-name{height:59.63px}
-  #sectionCovers .section-hook{height:88.67px}
+  #sectionCovers .district-name{min-height:59.63px}
+  #sectionCovers .section-hook{min-height:88.67px}
 }
 /* Consistency fix for a pre-existing defect (present in the shipped page,
    found in this pass): the Browse All pill takes var(--surface), which flips
