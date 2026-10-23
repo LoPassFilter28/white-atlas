@@ -609,7 +609,26 @@ html:not([data-theme="dark"]) .upd-tag{color:#7c520c;background:rgba(124,82,12,.
 .photo-band figcaption a{color:#d4b573}
 @media (max-width:640px){.photo-band figcaption{left:14px;max-width:72%;bottom:12px}}
 </style>
-</head>
+<style data-cardsys>
+/* cardsys: finder cards (2026-10-23 overhaul) */
+.photo-band{height:132px !important}
+.venue{border:1px solid var(--line);border-radius:14px;background:var(--surface);overflow:hidden;margin:0 0 14px;contain-intrinsic-size:auto 280px}
+.venue-row{display:grid;grid-template-columns:186px minmax(0,1fr);grid-template-areas:"photo toggle" "photo actions";align-items:stretch}
+.venue-photo{grid-area:photo;position:relative;display:block;background:linear-gradient(150deg,#1e3c41,#0c232b 60%,#06181d);min-height:172px}
+.venue-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.venue-plate{position:absolute;left:12px;bottom:10px;font-family:Urbanist,system-ui,sans-serif;font-weight:800;font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(240,232,213,.78)}
+.venue-toggle{grid-area:toggle;padding:16px 18px 4px}
+.venue-quick-actions{grid-area:actions;display:flex;flex-wrap:wrap;gap:7px;margin:6px 18px 15px;align-self:auto}
+@media (min-width:1150px){
+  #venueList,.district-cards{display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:start}
+  #venueList>:not(.venue),.district-cards>:not(.venue){grid-column:1/-1}
+  .venue{margin:0}
+}
+@media (max-width:759px){
+  .venue-row{grid-template-columns:1fr;grid-template-areas:"photo" "toggle" "actions"}
+  .venue-photo{min-height:150px}
+}
+</style></head>
 <body><a class="skip-link" href="#venueList">Skip to places</a>
   <a class="skip-link" href="#venueList">Skip to venue list</a>
   <main class="app">
@@ -1251,7 +1270,7 @@ function detail(p){
     const shownPrice=displayPrice(p);
     const facts=`<span class="venue-facts">${shownPrice?`<span class="price-signal" aria-label="Price range ${esc(shownPrice)}">${esc(shownPrice)}</span>`:''}${away?`<span class="distance">${esc(away)}</span>`:''}</span>`;
     const primaryMeta=`<span class="venue-meta-primary"><span class="venue-category">${esc(p.category)}</span><span class="venue-district">${esc(specificArea(p))}</span></span>`;
-    return `<article class="venue${isOpen?' open':''}" data-id="${esc(p.id)}"><div class="venue-row"><button class="venue-toggle" aria-expanded="${isOpen}" data-toggle="${esc(p.id)}"><span class="index">${String(i+1).padStart(3,'0')}</span><span><span class="venue-title"><h2>${esc(p.name)}</h2>${badges(p)}</span>${primaryMeta}${facts}<span class="description">${esc(publicDescription(p))}</span><span class="description-affordance">${isOpen?'Less':'More'} <span class="description-chevron" aria-hidden="true">⌄</span></span></span></button><span class="venue-quick-actions"><a class="quick-directions" href="${directionsUrl(p)}" target="_blank" rel="noopener" aria-label="Directions to ${esc(p.name)}">Directions</a><a class="quick-page" href="/venue/${esc(p.id)}.html" aria-label="Venue page for ${esc(p.name)}">Venue page</a>${p.instagram?`<a class="quick-ig" href="${esc(p.instagram)}" target="_blank" rel="noopener" aria-label="${esc(p.name)} on Instagram"><svg class="ig-glyph" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg> Instagram</a>`:``}<button class="copy-place" type="button" data-copy-place="${esc(p.id)}" aria-label="Copy ${esc(p.name)}">Copy</button><a class="flag-closure" href="${closureUrl(p)}" aria-label="Report a change for ${esc(p.name)}">Report a change</a></span></div>${historyTease(p)}<div class="venue-detail">${isOpen?detail(p):''}</div></article>`;
+    return `<article class="venue${isOpen?' open':''}" data-id="${esc(p.id)}"><div class="venue-row">${p.photo?`<a class="venue-photo" href="/venue/${esc(p.id)}.html" tabindex="-1" aria-hidden="true"><img src="/assets/venue-${esc(p.id)}.webp" alt="" loading="lazy"></a>`:`<a class="venue-photo no-photo" href="/venue/${esc(p.id)}.html" tabindex="-1" aria-hidden="true"><span class="venue-plate">${esc(p.district||'')}</span></a>`}<button class="venue-toggle" aria-expanded="${isOpen}" data-toggle="${esc(p.id)}"><span class="index">${String(i+1).padStart(3,'0')}</span><span><span class="venue-title"><h2>${esc(p.name)}</h2>${badges(p)}</span>${primaryMeta}${facts}<span class="description">${esc(publicDescription(p))}</span><span class="description-affordance">${isOpen?'Less':'More'} <span class="description-chevron" aria-hidden="true">⌄</span></span></span></button><span class="venue-quick-actions"><a class="quick-directions" href="${directionsUrl(p)}" target="_blank" rel="noopener" aria-label="Directions to ${esc(p.name)}">Directions</a><a class="quick-page" href="/venue/${esc(p.id)}.html" aria-label="Venue page for ${esc(p.name)}">Venue page</a>${p.instagram?`<a class="quick-ig" href="${esc(p.instagram)}" target="_blank" rel="noopener" aria-label="${esc(p.name)} on Instagram"><svg class="ig-glyph" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg> Instagram</a>`:``}<button class="copy-place" type="button" data-copy-place="${esc(p.id)}" aria-label="Copy ${esc(p.name)}">Copy</button><a class="flag-closure" href="${closureUrl(p)}" aria-label="Report a change for ${esc(p.name)}">Report a change</a></span></div>${historyTease(p)}<div class="venue-detail">${isOpen?detail(p):''}</div></article>`;
   }
   function districtMatches(p,key){if(key==='all')return true;const k=districtKeyOf(p);return k===key;}
 function filtered(){
