@@ -684,11 +684,20 @@ html[data-tier="full"] .home-nav a.nearest-prized:hover{transform:translateY(-1p
 /* Cards: Beveled Plate (variant B). Bronze keyline inset 5px at 15px radius,
    domed sheen over the unchanged card gradient, inner shadow pooled at the
    bottom edge, whisper of outer shadow. Fully static at every tier. */
-#sectionCovers .district-card{background:radial-gradient(120% 95% at 50% -12%,rgba(247,240,219,.11) 0%,rgba(247,240,219,0) 54%),linear-gradient(160deg,var(--dg1) 0%,var(--dg2) 58%,var(--dg3) 135%);box-shadow:0 4px 12px rgba(1,6,3,.26),inset 0 -16px 24px -14px rgba(0,0,0,.50),inset 0 12px 20px -16px rgba(0,0,0,.26),inset 0 1px 0 rgba(246,237,214,.14)}
+#sectionCovers .district-card{background:radial-gradient(120% 95% at 50% -12%,rgba(247,240,219,.11) 0%,rgba(247,240,219,0) 54%),linear-gradient(160deg,var(--dg1) 0%,var(--dg2) 58%,var(--dg3) 135%);box-shadow:0 4px 12px rgba(1,6,3,.26),inset 0 -12px 20px -16px rgba(0,0,0,.30),inset 0 12px 20px -16px rgba(0,0,0,.26),inset 0 1px 0 rgba(246,237,214,.14)}
+/* Centered composition rebalances the plate: the base card scrim darkens only
+   the bottom (legibility aid for bottom-anchored text). On the covers, where
+   the text group now sits centered, that reads as bottom weight, so the
+   covers get an even scrim: the same depth at both ends, clear in the middle. */
+#sectionCovers .district-card::after{background:linear-gradient(180deg,rgba(8,16,10,.32) 0%,transparent 34%,transparent 66%,rgba(8,16,10,.32) 100%)}
 #sectionCovers .district-card::before{content:"";position:absolute;inset:5px;z-index:1;pointer-events:none;border-radius:15px;border:1px solid color-mix(in srgb,var(--dg3) 30%,transparent)}
-/* Cards composition (PiK0, 2026-10-22): hairline + title + hook sentence,
-   bottom-anchored as one block. No kicker, no index numbers. */
-#sectionCovers .district-filter.cover-link{justify-content:flex-end;gap:2px}
+/* Cards composition (PiK0, 2026-10-22): hairline + title + hook sentence
+   as one vertically CENTERED block, symmetrical in the card: equal space
+   above the hairline and below the hook, identical geometry on all six
+   cards. Equal top/bottom padding (18px) keeps the centered group true at
+   every size, including mobile's taller cards and two-line titles, which
+   center as a block. No kicker, no index numbers. */
+#sectionCovers .district-filter.cover-link{justify-content:center;gap:2px;padding:18px 16px}
 /* Consistency fix for a pre-existing defect (present in the shipped page,
    found in this pass): the Browse All pill takes var(--surface), which flips
    near-white in the light theme, while its label keeps the on-accent white
