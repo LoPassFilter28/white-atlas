@@ -211,7 +211,14 @@
       .vcard .addr { margin: 0; color: var(--muted); font-size: .9rem; }
       @media (max-width: 640px) { .facts { grid-template-columns: 1fr; } }
     </style>
-  </head>
+  <style data-cardsys>
+/* cardsys: similar rail cards (2026-10-23 overhaul) */
+.vcard{display:flex;gap:12px;align-items:flex-start}
+.vcard .vthumb{flex:0 0 86px;width:86px;height:86px;border-radius:10px;object-fit:cover;display:block}
+.vcard .vmain{flex:1;min-width:0}
+.vcard .vsub{margin:4px 0 0;font-size:.86rem;line-height:1.45;color:var(--muted,#c6bba2)}
+@media (min-width:1000px){.vlist{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start}}
+</style></head>
   <body>
     <header class="hero">
       <div class="hero-in">
@@ -239,41 +246,41 @@
         </div>
       </section>
 
-      <section class="sec" id="similar">
+      <section class="sec" id="district-story"><p class="kicker">District Stories</p><h2>Orlando&#x27;s long memory</h2><p class="lede">The guide keeps the long memory of Orlando&#x27;s districts in one place: the names, the plats and the stories behind the streets.</p><p><a class="btn-ghost" href="/history.html">Browse the district stories &rarr;</a></p></section><section class="sec" id="similar">
         <p class="kicker">Similar Feel</p>
         <h2>More places with this feel</h2>
         <p class="lede">Matched by vibe, not by neighborhood: the places across Greater Orlando closest in spirit to Dutch Bros Coffee.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/barnies-coffee-tea.html">Barnie&#x27;s Coffee &amp; Tea Co.</a></h3>
-          <p class="meta">Coffee &amp; cafes &middot; Winter Park &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/barnies-coffee-tea.html">Barnie&#x27;s Coffee &amp; Tea Co.</a></h3>
+          <p class="meta">Coffee &amp; cafes &middot; Winter Park &middot; $$</p><p class="vsub">Tucked along a cute little lane by Park Avenue, a European-style courtyard cafe guests say feels reminiscent of a cafe overseas.</p>
           <p class="addr">118 S Park Ave, Winter Park, FL 32789</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/cfs-coffee.html">CFS Coffee</a></h3>
-          <p class="meta">Coffee &amp; cafes &middot; Winter Park &middot; $</p>
+          <img class="vthumb" src="/assets/venue-cfs-coffee.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/cfs-coffee.html">CFS Coffee</a></h3>
+          <p class="meta">Coffee &amp; cafes &middot; Winter Park &middot; $</p><p class="vsub">Short for Coffee for the Soul, a Colombian-hearted cafe on New England Avenue with a cozy room and a comfy sofa corner.</p>
           <p class="addr">CFS Coffee, 430 W New England Ave, Winter Park, FL 32789-4230</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/cups-pups.html">Cups and Pups</a></h3>
-          <p class="meta">Coffee &amp; cafes &middot; College Park &middot; $</p>
+          <img class="vthumb" src="/assets/venue-cups-pups.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/cups-pups.html">Cups and Pups</a></h3>
+          <p class="meta">Coffee &amp; cafes &middot; College Park &middot; $</p><p class="vsub">On Edgewater Drive in College Park, this cute, cheerful coffee stop has become a neighborhood ritual.</p>
           <p class="addr">2413 Edgewater Dr, Orlando, FL 32804</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/new-general.html">New General</a></h3>
-          <p class="meta">Coffee &amp; cafes &middot; Winter Park &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/new-general.html">New General</a></h3>
+          <p class="meta">Coffee &amp; cafes &middot; Winter Park &middot; $$</p><p class="vsub">Part cafe, part modern general store just off Park Avenue, in a bright, plant-filled room with sleek polished wood.</p>
           <p class="addr">New General, 155 E New England Ave, Winter Park, FL 32789-4330</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/glass-knife.html">The Glass Knife</a></h3>
-          <p class="meta">Bakeries &middot; Winter Park &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-glass-knife.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/glass-knife.html">The Glass Knife</a></h3>
+          <p class="meta">Bakeries &middot; Winter Park &middot; $$</p><p class="vsub">A pretty, polished Winter Park cafe named for the antique glass cake knives on its walls, all chic light and careful detail.</p>
           <p class="addr">The Glass Knife, 276 S Orlando Ave, Winter Park, FL 32789</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/ford-s-garage-international-outlets.html">Ford&#x27;s Garage</a></h3>
-          <p class="meta">Burgers &amp; sandwiches &middot; I-Drive &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-ford-s-garage-international-outlets.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/ford-s-garage-international-outlets.html">Ford&#x27;s Garage</a></h3>
+          <p class="meta">Burgers &amp; sandwiches &middot; I-Drive &middot; $$</p><p class="vsub">A burger bar dressed as a 1920s service station at the outlets, with vintage Fords overhead and shop rags for napkins.</p>
           <p class="addr">4971 International Dr Ste 3D.09, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         </div>
       </section>
 
@@ -283,35 +290,35 @@
         <p class="lede">Other places in University, closest to Dutch Bros Coffee first.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/zackleys.html">Zackleys</a></h3>
-          <p class="meta">Pizza &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/zackleys.html">Zackleys</a></h3>
+          <p class="meta">Pizza &middot; $</p><p class="vsub">Family owned since 2000 and tucked inside the Full Sail campus, with wood oven pizzas, paninis, and Jamaican beef empanadas.</p>
           <p class="addr">3260 University Blvd, Winter Park, FL 32792</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/aloma-bowl.html">Aloma Bowl</a></h3>
-          <p class="meta">Attractions · Bowling &amp; Arcade &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-aloma-bowl.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/aloma-bowl.html">Aloma Bowl</a></h3>
+          <p class="meta">Attractions · Bowling &amp; Arcade &middot; $$</p><p class="vsub">A 32-lane bowling house on Aloma Ave run by a local family group that has operated Central Florida lanes for decades.</p>
           <p class="addr">2530 Aloma Ave, Winter Park, FL 32792</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/lucky-china.html">Lucky China</a></h3>
-          <p class="meta">Chinese · Chinese Takeout &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/lucky-china.html">Lucky China</a></h3>
+          <p class="meta">Chinese · Chinese Takeout &middot; $</p><p class="vsub">A no-frills takeout staple in Aloma Square that regulars prize for one thing above all: consistency.</p>
           <p class="addr">Lucky China, 6756 Aloma Ave, Winter Park, FL 32792</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/tibbys-new-orleans-kitchen.html">Tibby&#x27;s New Orleans Kitchen</a></h3>
-          <p class="meta">Restaurants · Cajun &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/tibbys-new-orleans-kitchen.html">Tibby&#x27;s New Orleans Kitchen</a></h3>
+          <p class="meta">Restaurants · Cajun &middot; $$</p><p class="vsub">A Mardi Gras room on Aloma Avenue in Winter Park, lively and colorful, with an atmosphere guests say feels like being back in Louisiana.</p>
           <p class="addr">2203 Aloma Ave, Winter Park, FL 32792</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/pereira-latin-products.html">Pereira Latin Products</a></h3>
-          <p class="meta">Markets &amp; shops · Latin Grocery &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/pereira-latin-products.html">Pereira Latin Products</a></h3>
+          <p class="meta">Markets &amp; shops · Latin Grocery &middot; $</p><p class="vsub">A Latin grocery on Forsyth Rd carrying the pantry staples, snacks, and drinks the big supermarkets skim past.</p>
           <p class="addr">2914 Forsyth Rd, Winter Park, FL 32792</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/toasted.html">Toasted</a></h3>
-          <p class="meta">Burgers &amp; sandwiches · Grilled Cheese &amp; Burgers &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/toasted.html">Toasted</a></h3>
+          <p class="meta">Burgers &amp; sandwiches · Grilled Cheese &amp; Burgers &middot; $</p><p class="vsub">Everything here starts with grilled cheese, artisan bread pressed crisp around fillings like the Fig and Goat.</p>
           <p class="addr">Toasted, 1945 Aloma Ave, Winter Park, FL 32792</p>
-        </article>
+        </div></article>
         </div>
         <div class="handoff">
           <a class="btn-ghost" href="/ucf-finder.html">See the full University list</a>

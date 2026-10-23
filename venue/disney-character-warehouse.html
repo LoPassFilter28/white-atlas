@@ -211,7 +211,14 @@
       .vcard .addr { margin: 0; color: var(--muted); font-size: .9rem; }
       @media (max-width: 640px) { .facts { grid-template-columns: 1fr; } }
     </style>
-  </head>
+  <style data-cardsys>
+/* cardsys: similar rail cards (2026-10-23 overhaul) */
+.vcard{display:flex;gap:12px;align-items:flex-start}
+.vcard .vthumb{flex:0 0 86px;width:86px;height:86px;border-radius:10px;object-fit:cover;display:block}
+.vcard .vmain{flex:1;min-width:0}
+.vcard .vsub{margin:4px 0 0;font-size:.86rem;line-height:1.45;color:var(--muted,#c6bba2)}
+@media (min-width:1000px){.vlist{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start}}
+</style></head>
   <body>
     <header class="hero">
       <div class="hero-in">
@@ -236,45 +243,45 @@
         <div class="actions">
           <a class="action" href="https://www.google.com/maps/search/?api=1&amp;query=Disney+Character+Warehouse+4969+International+Dr%2C+Orlando%2C+FL+32819" target="_blank" rel="noopener">Directions &rarr;</a>
           <a class="action" href="/archive.html?venue=disney-character-warehouse">Open in the full finder</a>
-          <a class="action" href="/international-drive-district-guide.html">Read the International Drive story</a>
+          <a class="action" href="/history/i-drive.html">Read the International Drive story</a>
         </div>
       </section>
 
-      <section class="sec" id="similar">
+      <section class="sec" id="district-story"><p class="kicker">District Story</p><h2>The story of I-Drive</h2><p class="lede">A hotel in the boondocks, a road paved after it and named to sound big and important, and the corridor that taught Orlando how to be a vacation.</p><p><a class="btn-ghost" href="/history/i-drive.html">Read the I-Drive story &rarr;</a></p></section><section class="sec" id="similar">
         <p class="kicker">Similar Feel</p>
         <h2>More places with this feel</h2>
         <p class="lede">Matched by vibe, not by neighborhood: the places across Greater Orlando closest in spirit to Disney Character Warehouse.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/orlando-international-premium-outlets.html">Orlando International Premium Outlets</a></h3>
-          <p class="meta">Markets &amp; shops &middot; I-Drive &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/orlando-international-premium-outlets.html">Orlando International Premium Outlets</a></h3>
+          <p class="meta">Markets &amp; shops &middot; I-Drive &middot; $$</p><p class="vsub">An open-air outlet village at the north end of International Drive, and a full afternoon by design.</p>
           <p class="addr">4951 International Dr, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/orlando-vineland-premium-outlets.html">Orlando Vineland Premium Outlets</a></h3>
-          <p class="meta">Markets &amp; shops &middot; Vineland &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/orlando-vineland-premium-outlets.html">Orlando Vineland Premium Outlets</a></h3>
+          <p class="meta">Markets &amp; shops &middot; Vineland &middot; $$</p><p class="vsub">Minutes from Disney, a Mediterranean-inspired outdoor outlet village anchored by Prada, Bottega Veneta, Burberry, Gucci and Tory Burch.</p>
           <p class="addr">8200 Vineland Ave, Orlando, FL 32821</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/orlando-outlet-marketplace.html">Orlando Outlet Marketplace</a></h3>
-          <p class="meta">Markets &amp; shops &middot; I-Drive &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/orlando-outlet-marketplace.html">Orlando Outlet Marketplace</a></h3>
+          <p class="meta">Markets &amp; shops &middot; I-Drive &middot; $$</p><p class="vsub">The quieter outlet run on north I-Drive is a smaller open-air center anchored by Nike Clearance, with Levi&#x27;s and Adidas behind it.</p>
           <p class="addr">5269 International Dr, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/lake-buena-vista-factory-stores.html">Lake Buena Vista Factory Stores</a></h3>
-          <p class="meta">Markets &amp; shops &middot; Lake Buena Vista &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/lake-buena-vista-factory-stores.html">Lake Buena Vista Factory Stores</a></h3>
+          <p class="meta">Markets &amp; shops &middot; Lake Buena Vista &middot; $$</p><p class="vsub">Near Disney on SR 535, this compact open-air outlet center keeps things low-stress with Nike, Gap, and Tommy Hilfiger.</p>
           <p class="addr">15657 S Apopka Vineland Rd, Orlando, FL 32821</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/ford-s-garage-international-outlets.html">Ford&#x27;s Garage</a></h3>
-          <p class="meta">Burgers &amp; sandwiches &middot; I-Drive &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-ford-s-garage-international-outlets.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/ford-s-garage-international-outlets.html">Ford&#x27;s Garage</a></h3>
+          <p class="meta">Burgers &amp; sandwiches &middot; I-Drive &middot; $$</p><p class="vsub">A burger bar dressed as a 1920s service station at the outlets, with vintage Fords overhead and shop rags for napkins.</p>
           <p class="addr">4971 International Dr Ste 3D.09, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/disney-springs-district.html">Disney Springs</a></h3>
-          <p class="meta">Markets &amp; shops &middot; Disney Springs &middot; $$$</p>
+          <div class="vmain"><h3><a href="/venue/disney-springs-district.html">Disney Springs</a></h3>
+          <p class="meta">Markets &amp; shops &middot; Disney Springs &middot; $$$</p><p class="vsub">Disney&#x27;s open-air waterfront promenade, no park ticket and no turnstile, just an evening on the water.</p>
           <p class="addr">1486 E Buena Vista Dr, Lake Buena Vista, FL 32830</p>
-        </article>
+        </div></article>
         </div>
       </section>
 
@@ -284,35 +291,35 @@
         <p class="lede">Other places in International Drive, Local Picks first, then the closest to Disney Character Warehouse.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/toms-watch-bar-orlando.html">Tom&#x27;s Watch Bar</a> <span class="badge">Local Pick</span></h3>
-          <p class="meta">Bars &amp; lounges · Bar &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-toms-watch-bar-orlando.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/toms-watch-bar-orlando.html">Tom&#x27;s Watch Bar</a> <span class="badge">Local Pick</span></h3>
+          <p class="meta">Bars &amp; lounges · Bar &middot; $$</p><p class="vsub">On International Drive, a sports bar built like a stadium, with an oversized screen and screens wrapping the room so every seat faces the action.</p>
           <p class="addr">8050 International Dr, Suite 1000, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/baires-grill-orlando.html">Baires Grill</a> <span class="badge">Local Pick</span></h3>
-          <p class="meta">Latin &amp; Caribbean · Argentinian Steakhouse &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-baires-grill-orlando.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/baires-grill-orlando.html">Baires Grill</a> <span class="badge">Local Pick</span></h3>
+          <p class="meta">Latin &amp; Caribbean · Argentinian Steakhouse &middot; $$</p><p class="vsub">The parrilla decides everything at this Argentine steakhouse just off International Drive.</p>
           <p class="addr">8050 International Dr, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/ford-s-garage-international-outlets.html">Ford&#x27;s Garage</a></h3>
-          <p class="meta">Burgers &amp; sandwiches · Burger Bar &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-ford-s-garage-international-outlets.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/ford-s-garage-international-outlets.html">Ford&#x27;s Garage</a></h3>
+          <p class="meta">Burgers &amp; sandwiches · Burger Bar &middot; $$</p><p class="vsub">A burger bar dressed as a 1920s service station at the outlets, with vintage Fords overhead and shop rags for napkins.</p>
           <p class="addr">4971 International Dr Ste 3D.09, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/orlando-international-premium-outlets.html">Orlando International Premium Outlets</a></h3>
-          <p class="meta">Markets &amp; shops · Outlet Mall &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/orlando-international-premium-outlets.html">Orlando International Premium Outlets</a></h3>
+          <p class="meta">Markets &amp; shops · Outlet Mall &middot; $$</p><p class="vsub">An open-air outlet village at the north end of International Drive, and a full afternoon by design.</p>
           <p class="addr">4951 International Dr, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/dezerland-park-orlando.html">Dezerland Park Orlando</a></h3>
-          <p class="meta">Attractions · Attraction &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/dezerland-park-orlando.html">Dezerland Park Orlando</a></h3>
+          <p class="meta">Attractions · Attraction &middot; $$</p><p class="vsub">Guests keep landing on the same word for this International Drive indoor complex: huge.</p>
           <p class="addr">5250 International Dr, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/orlando-outlet-marketplace.html">Orlando Outlet Marketplace</a></h3>
-          <p class="meta">Markets &amp; shops · Outlet Mall &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/orlando-outlet-marketplace.html">Orlando Outlet Marketplace</a></h3>
+          <p class="meta">Markets &amp; shops · Outlet Mall &middot; $$</p><p class="vsub">The quieter outlet run on north I-Drive is a smaller open-air center anchored by Nike Clearance, with Levi&#x27;s and Adidas behind it.</p>
           <p class="addr">5269 International Dr, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         </div>
         <div class="handoff">
           <a class="btn-ghost" href="/international-drive-finder.html">See the full International Drive list</a>

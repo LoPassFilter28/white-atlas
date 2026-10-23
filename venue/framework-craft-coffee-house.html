@@ -211,7 +211,14 @@
       .vcard .addr { margin: 0; color: var(--muted); font-size: .9rem; }
       @media (max-width: 640px) { .facts { grid-template-columns: 1fr; } }
     </style>
-  </head>
+  <style data-cardsys>
+/* cardsys: similar rail cards (2026-10-23 overhaul) */
+.vcard{display:flex;gap:12px;align-items:flex-start}
+.vcard .vthumb{flex:0 0 86px;width:86px;height:86px;border-radius:10px;object-fit:cover;display:block}
+.vcard .vmain{flex:1;min-width:0}
+.vcard .vsub{margin:4px 0 0;font-size:.86rem;line-height:1.45;color:var(--muted,#c6bba2)}
+@media (min-width:1000px){.vlist{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start}}
+</style></head>
   <body>
     <header class="hero">
       <div class="hero-in">
@@ -236,46 +243,46 @@
         <div class="actions">
           <a class="action" href="https://www.google.com/maps/search/?api=1&amp;query=Framework+Craft+Coffee+House+1201+N+Mills+Ave%2C+Orlando%2C+FL+32803" target="_blank" rel="noopener">Directions &rarr;</a>
           <a class="action" href="/archive.html?venue=framework-craft-coffee-house">Open in the full finder</a>
-          <a class="action" href="/mills-50-district-guide.html">Read the Mills 50 story</a>
+          <a class="action" href="/history/mills-50.html">Read the Mills 50 story</a>
           <a class="action action-ig" href="https://www.instagram.com/frameworkcoffeehouse" target="_blank" rel="noopener"><svg class="ig-glyph" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="vertical-align:-2px;margin-right:6px"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg> Instagram</a>
         </div>
       </section>
 
-      <section class="sec" id="similar">
+      <section class="sec" id="district-story"><p class="kicker">District Story</p><h2>The story of Mills 50</h2><p class="lede">A district named for its own crossroads, platted as front porches in 1883 and remade twice by the people who moved in.</p><p><a class="btn-ghost" href="/history/mills-50.html">Read the Mills 50 story &rarr;</a></p></section><section class="sec" id="similar">
         <p class="kicker">Similar Feel</p>
         <h2>More places with this feel</h2>
         <p class="lede">Matched by vibe, not by neighborhood: the places across Greater Orlando closest in spirit to Framework Craft Coffee House.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/deeply-coffee.html">Deeply Coffee</a></h3>
-          <p class="meta">Coffee &amp; cafes &middot; Orlando &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/deeply-coffee.html">Deeply Coffee</a></h3>
+          <p class="meta">Coffee &amp; cafes &middot; Orlando &middot; $$</p><p class="vsub">A few steps off Magnolia downtown, a bright, minimalist room where the vibe stays chill and soothing.</p>
           <p class="addr">Deeply Coffee, 111 N Magnolia Ave, Orlando, FL 32801-2304, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/premium-matcha-cafe-maiko.html">Premium Matcha Cafe Maiko</a></h3>
-          <p class="meta">Coffee &amp; cafes &middot; Orlando &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/premium-matcha-cafe-maiko.html">Premium Matcha Cafe Maiko</a></h3>
+          <p class="meta">Coffee &amp; cafes &middot; Orlando &middot; $$</p><p class="vsub">Cute, cozy counter on Mills Ave devoted to real matcha, whisked to order.</p>
           <p class="addr">Premium Matcha Cafe Maiko, 639 Mills Ave N, Orlando, FL 32803-4640, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/the-burrow-cafe-and-play.html">The Burrow Cafe and Play</a></h3>
-          <p class="meta">Coffee &amp; cafes &middot; Mills 50 &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/the-burrow-cafe-and-play.html">The Burrow Cafe and Play</a></h3>
+          <p class="meta">Coffee &amp; cafes &middot; Mills 50 &middot; $$</p><p class="vsub">In Mills 50, kids get a supervised indoor playground while adults get a cafe that actually takes its drinks seriously.</p>
           <p class="addr">618 N Mills Ave, Orlando, FL 32803</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/qreate-coffee.html">Qreate Coffee</a></h3>
-          <p class="meta">Coffee &amp; cafes &middot; Orlando &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-qreate-coffee.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/qreate-coffee.html">Qreate Coffee</a></h3>
+          <p class="meta">Coffee &amp; cafes &middot; Orlando &middot; $$</p><p class="vsub">Just off Mills on Woodward Street, part coffee lab and part creative studio, with a small-town feel guests do not expect.</p>
           <p class="addr">1212 Woodward St #1, Orlando, FL 32803</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/cfs-coffee.html">CFS Coffee</a></h3>
-          <p class="meta">Coffee &amp; cafes &middot; Winter Park &middot; $</p>
+          <img class="vthumb" src="/assets/venue-cfs-coffee.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/cfs-coffee.html">CFS Coffee</a></h3>
+          <p class="meta">Coffee &amp; cafes &middot; Winter Park &middot; $</p><p class="vsub">Short for Coffee for the Soul, a Colombian-hearted cafe on New England Avenue with a cozy room and a comfy sofa corner.</p>
           <p class="addr">CFS Coffee, 430 W New England Ave, Winter Park, FL 32789-4230</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/paloma-coffee-co.html">Paloma Parlor</a></h3>
-          <p class="meta">Coffee &amp; cafes &middot; Windermere &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/paloma-coffee-co.html">Paloma Parlor</a></h3>
+          <p class="meta">Coffee &amp; cafes &middot; Windermere &middot; $</p><p class="vsub">Windermere regulars treat this as their own; now trading as Paloma Parlor, it is small, plant-filled and contemporary.</p>
           <p class="addr">625 Main St, Windermere, FL 34786</p>
-        </article>
+        </div></article>
         </div>
       </section>
 
@@ -285,35 +292,35 @@
         <p class="lede">Other places in Mills 50, Local Picks first, then the closest to Framework Craft Coffee House.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/the-guesthouse.html">The Guesthouse</a> <span class="badge">Local Pick</span></h3>
-          <p class="meta">Bars &amp; lounges · Cocktail Bar &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/the-guesthouse.html">The Guesthouse</a> <span class="badge">Local Pick</span></h3>
+          <p class="meta">Bars &amp; lounges · Cocktail Bar &middot; $$</p><p class="vsub">Mills 50&#x27;s plant-filled living room, greenery trailing over white walls around a square bar.</p>
           <p class="addr">1321 N Mills Ave, Orlando, FL 32803</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/black-rooster-taqueria.html">Black Rooster Taqueria</a></h3>
-          <p class="meta">Mexican &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/black-rooster-taqueria.html">Black Rooster Taqueria</a></h3>
+          <p class="meta">Mexican &middot; $$</p><p class="vsub">A small, lively Mills 50 room with a dive-bar soul and a chef&#x27;s hand on the tacos.</p>
           <p class="addr">1323 N Mills Ave, Orlando, FL 32803</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/wills-pub.html">Will&#x27;s Pub &amp; Lil Indie&#x27;s</a></h3>
-          <p class="meta">Nightlife &amp; music · Live Music Venue &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/wills-pub.html">Will&#x27;s Pub &amp; Lil Indie&#x27;s</a></h3>
+          <p class="meta">Nightlife &amp; music · Live Music Venue &middot; $</p><p class="vsub">On North Mills Avenue, the divey, unpretentious heart of Orlando&#x27;s independent music scene.</p>
           <p class="addr">1042 N Mills Ave, Orlando, FL 32803</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/grape-the-grain.html">Grape &amp; the Grain</a></h3>
-          <p class="meta">Bars &amp; lounges · Bar &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-grape-the-grain.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/grape-the-grain.html">Grape &amp; the Grain</a></h3>
+          <p class="meta">Bars &amp; lounges · Bar &middot; $$</p><p class="vsub">Unpretentious Mills 50 wine bar where the real draw is the covered back patio guests call the best in Orlando.</p>
           <p class="addr">Grape &amp; the Grain, 1110 Virginia Dr, Orlando, FL 32803</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/ten10-brewing.html">Ten10 Brewing</a></h3>
-          <p class="meta">Breweries · Brewery &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/ten10-brewing.html">Ten10 Brewing</a></h3>
+          <p class="meta">Breweries · Brewery &middot; $$</p><p class="vsub">Laid-back neighborhood taproom on Virginia Drive in Mills 50, all about good beer, good tunes and good people.</p>
           <p class="addr">Ten10 Brewing, 1010 Virginia Dr, Orlando, FL 32803-2532</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/sparrow.html">Sparrow Orlando</a></h3>
-          <p class="meta">Bars &amp; lounges · Wine Bar &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-sparrow.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/sparrow.html">Sparrow Orlando</a></h3>
+          <p class="meta">Bars &amp; lounges · Wine Bar &middot; $$</p><p class="vsub">An intimate, moody wine bar on North Orange Avenue, all low light, vinyl in the air and an unhurried pace.</p>
           <p class="addr">807 N Orange Ave, Orlando, FL 32801</p>
-        </article>
+        </div></article>
         </div>
         <div class="handoff">
           <a class="btn-ghost" href="/mills-50-finder.html">See the full Mills 50 list</a>

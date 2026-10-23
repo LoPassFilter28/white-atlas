@@ -211,7 +211,14 @@
       .vcard .addr { margin: 0; color: var(--muted); font-size: .9rem; }
       @media (max-width: 640px) { .facts { grid-template-columns: 1fr; } }
     </style>
-  </head>
+  <style data-cardsys>
+/* cardsys: similar rail cards (2026-10-23 overhaul) */
+.vcard{display:flex;gap:12px;align-items:flex-start}
+.vcard .vthumb{flex:0 0 86px;width:86px;height:86px;border-radius:10px;object-fit:cover;display:block}
+.vcard .vmain{flex:1;min-width:0}
+.vcard .vsub{margin:4px 0 0;font-size:.86rem;line-height:1.45;color:var(--muted,#c6bba2)}
+@media (min-width:1000px){.vlist{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start}}
+</style></head>
   <body>
     <header class="hero">
       <div class="hero-in">
@@ -236,45 +243,45 @@
         <div class="actions">
           <a class="action" href="https://www.google.com/maps/search/?api=1&amp;query=El+Colmadon+743+N+Magnolia+Ave%2C+Orlando%2C+FL+32803" target="_blank" rel="noopener">Directions &rarr;</a>
           <a class="action" href="/archive.html?venue=el-colmadon">Open in the full finder</a>
-          <a class="action" href="/downtown-orlando-district-guide.html">Read the Downtown Orlando story</a>
+          <a class="action" href="/history/downtown.html">Read the Downtown Orlando story</a>
         </div>
       </section>
 
-      <section class="sec" id="similar">
+      <section class="sec" id="district-story"><p class="kicker">District Story</p><h2>The story of Downtown North</h2><p class="lede">A fort, a courthouse plat and a citrus boom built it. A name nobody can prove still runs it.</p><p><a class="btn-ghost" href="/history/downtown.html">Read the Downtown North story &rarr;</a></p></section><section class="sec" id="similar">
         <p class="kicker">Similar Feel</p>
         <h2>More places with this feel</h2>
         <p class="lede">Matched by vibe, not by neighborhood: the places across Greater Orlando closest in spirit to El Colmadon.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/el-bloque-407.html">El Bloque 407</a></h3>
-          <p class="meta">Latin & Caribbean &middot; Sand Lake &middot; $</p>
+          <img class="vthumb" src="/assets/venue-el-bloque-407.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/el-bloque-407.html">El Bloque 407</a></h3>
+          <p class="meta">Latin & Caribbean &middot; Sand Lake &middot; $</p><p class="vsub">A corner of Sherman Avenue transplanted to Sand Lake Road, with the same griddle, recipes, and people from Upper Manhattan.</p>
           <p class="addr">730 W Sand Lake Rd, Unit 30, Orlando, FL 32809</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/sazoncito-latin-food.html">Sazoncito Latin Food</a></h3>
-          <p class="meta">Latin & Caribbean &middot; Conway &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/sazoncito-latin-food.html">Sazoncito Latin Food</a></h3>
+          <p class="meta">Latin & Caribbean &middot; Conway &middot; $</p><p class="vsub">A humble Conway counter serving Dominican comfort food that guests describe as tasting like home.</p>
           <p class="addr">4542 S Semoran Blvd, Orlando, FL 32822</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/bachata-breeze.html">Bachata Breeze Restaurant</a></h3>
-          <p class="meta">Latin & Caribbean &middot; Curry Ford &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/bachata-breeze.html">Bachata Breeze Restaurant</a></h3>
+          <p class="meta">Latin & Caribbean &middot; Curry Ford &middot; $$</p><p class="vsub">On Curry Ford Road, a Dominican buffet and full menu by day, then live Latin music and dancing after dark.</p>
           <p class="addr">5773 Curry Ford Rd, Orlando, FL 32822</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/zaza-cuban-comfort-food.html">Zaza Cuban Comfort Food</a></h3>
-          <p class="meta">Latin & Caribbean &middot; SoDo &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/zaza-cuban-comfort-food.html">Zaza Cuban Comfort Food</a></h3>
+          <p class="meta">Latin & Caribbean &middot; SoDo &middot; $</p><p class="vsub">A family-run neighborhood diner in SoDo, on South Orange Avenue, built around cafecito culture and pressed sandwiches.</p>
           <p class="addr">1621 S Orange Ave, Orlando, FL 32806</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/el-coqui-ninja-restaurant.html">El Coqui Ninja Restaurant</a></h3>
-          <p class="meta">Latin & Caribbean &middot; Orlando &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-el-coqui-ninja-restaurant.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/el-coqui-ninja-restaurant.html">El Coqui Ninja Restaurant</a></h3>
+          <p class="meta">Latin & Caribbean &middot; Orlando &middot; $$</p><p class="vsub">Puerto Rican soul meets Asian comfort on Curry Ford, and the mashup is the whole point.</p>
           <p class="addr">El Coqui Ninja Restaurant, 3097 Curry Ford Rd, Orlando, FL 32806-3301, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/pio-pio-latin-cuisine.html">Pio Pio Latin Cuisine</a></h3>
-          <p class="meta">Latin & Caribbean &middot; Orlando &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-pio-pio-latin-cuisine.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/pio-pio-latin-cuisine.html">Pio Pio Latin Cuisine</a></h3>
+          <p class="meta">Latin & Caribbean &middot; Orlando &middot; $$</p><p class="vsub">On South Semoran, the Colombian staple locals lean on, a warm, family-style room where plates land generous and homestyle.</p>
           <p class="addr">2259 S Semoran Blvd, Orlando, FL 32822</p>
-        </article>
+        </div></article>
         </div>
       </section>
 
@@ -284,35 +291,35 @@
         <p class="lede">Other places in Downtown Orlando, Local Picks first, then the closest to El Colmadon.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/fixtion.html">Fixtion Restaurant &amp; Bar</a> <span class="badge">Local Pick</span></h3>
-          <p class="meta">American · American Restaurant &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/fixtion.html">Fixtion Restaurant &amp; Bar</a> <span class="badge">Local Pick</span></h3>
+          <p class="meta">American · American Restaurant &middot; $$</p><p class="vsub">On Orange Avenue, comfort food and huge comfy booths early, club energy after dark, shape-shifting through the day.</p>
           <p class="addr">15 N Orange Ave, Orlando, FL 32801</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/wall-street-plaza.html">Wall Street Plaza</a> <span class="badge">Local Pick</span></h3>
-          <p class="meta">Nightlife &amp; music · Entertainment District &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/wall-street-plaza.html">Wall Street Plaza</a> <span class="badge">Local Pick</span></h3>
+          <p class="meta">Nightlife &amp; music · Entertainment District &middot; $$</p><p class="vsub">One downtown block holds the whole crawl: eight bars and patios that, on a big night, turn into a single street party.</p>
           <p class="addr">25 Wall St, Orlando, FL 32801</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/elixir-kitchen-bar.html">Elixir Kitchen and Bar</a> <span class="badge">Local Pick</span></h3>
-          <p class="meta">Bars &amp; lounges · Bar &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-elixir-kitchen-bar.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/elixir-kitchen-bar.html">Elixir Kitchen and Bar</a> <span class="badge">Local Pick</span></h3>
+          <p class="meta">Bars &amp; lounges · Bar &middot; $$</p><p class="vsub">A rustic-hip gastropub in one of downtown&#x27;s original buildings, and very much the neighborhood&#x27;s spot.</p>
           <p class="addr">9 W Washington St, Orlando, FL 32801</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/the-tavern-bar-tacos.html">The Tavern Bar &amp; Tacos</a></h3>
-          <p class="meta">Mexican · Taco Bar &middot; $</p>
+          <img class="vthumb" src="/assets/venue-the-tavern-bar-tacos.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/the-tavern-bar-tacos.html">The Tavern Bar &amp; Tacos</a></h3>
+          <p class="meta">Mexican · Taco Bar &middot; $</p><p class="vsub">It calls itself a vibe bar and guests back it up, starting with birria tacos one regular said should be criminal.</p>
           <p class="addr">The Tavern Bar &amp; Tacos, 75 E Colonial Dr, Orlando, FL 32801</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/reyes.html">Reyes Mezcaleria</a></h3>
-          <p class="meta">Mexican &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/reyes.html">Reyes Mezcaleria</a></h3>
+          <p class="meta">Mexican &middot; $$</p><p class="vsub">Michoacán-born chef Wendy Lopez cooks on North Orange Avenue in a room guests describe as beautiful and alive.</p>
           <p class="addr">Reyes Mezcaleria, 821 N Orange Ave, Orlando, FL 32801-1014</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/gravity-taproom.html">Gravity Taproom</a></h3>
-          <p class="meta">Breweries · Taproom &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/gravity-taproom.html">Gravity Taproom</a></h3>
+          <p class="meta">Breweries · Taproom &middot; $$</p><p class="vsub">A welcoming North Quarter hangout where rotating craft taps pour beside brick-fired Neapolitan pies.</p>
           <p class="addr">Gravity Taproom, 777 N Orange Ave, Suite D, Orlando, FL 32801</p>
-        </article>
+        </div></article>
         </div>
         <div class="handoff">
           <a class="btn-ghost" href="/downtown-orlando-finder.html">See the full Downtown Orlando list</a>

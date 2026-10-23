@@ -211,7 +211,14 @@
       .vcard .addr { margin: 0; color: var(--muted); font-size: .9rem; }
       @media (max-width: 640px) { .facts { grid-template-columns: 1fr; } }
     </style>
-  </head>
+  <style data-cardsys>
+/* cardsys: similar rail cards (2026-10-23 overhaul) */
+.vcard{display:flex;gap:12px;align-items:flex-start}
+.vcard .vthumb{flex:0 0 86px;width:86px;height:86px;border-radius:10px;object-fit:cover;display:block}
+.vcard .vmain{flex:1;min-width:0}
+.vcard .vsub{margin:4px 0 0;font-size:.86rem;line-height:1.45;color:var(--muted,#c6bba2)}
+@media (min-width:1000px){.vlist{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start}}
+</style></head>
   <body>
     <header class="hero">
       <div class="hero-in">
@@ -240,41 +247,41 @@
         </div>
       </section>
 
-      <section class="sec" id="similar">
+      <section class="sec" id="district-story"><p class="kicker">District Stories</p><h2>Orlando&#x27;s long memory</h2><p class="lede">The guide keeps the long memory of Orlando&#x27;s districts in one place: the names, the plats and the stories behind the streets.</p><p><a class="btn-ghost" href="/history.html">Browse the district stories &rarr;</a></p></section><section class="sec" id="similar">
         <p class="kicker">Similar Feel</p>
         <h2>More places with this feel</h2>
         <p class="lede">Matched by vibe, not by neighborhood: the places across Greater Orlando closest in spirit to Donutste Family Bakery.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/donuts-to-go.html">Donuts To Go</a></h3>
-          <p class="meta">Sweets &middot; Sanford &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/donuts-to-go.html">Donuts To Go</a></h3>
+          <p class="meta">Sweets &middot; Sanford &middot; $</p><p class="vsub">Early-morning sweet spot built around a square donut made for sharing.</p>
           <p class="addr">1414 W 1st St, Sanford, FL 32771</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/the-salty-donut.html">The Salty Donut</a></h3>
-          <p class="meta">Sweets &middot; Disney Area &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-the-salty-donut.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/the-salty-donut.html">The Salty Donut</a></h3>
+          <p class="meta">Sweets &middot; Disney Area &middot; $$</p><p class="vsub">At Vineland Pointe, the donut case is treated like a pastry case, cute and bright with an artisanal streak.</p>
           <p class="addr">The Salty Donut, 11585 Regency Village Dr, Orlando, FL 32821, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/donut-king-of-winter-park.html">The Donut King</a></h3>
-          <p class="meta">Sweets &middot; Winter Park &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/donut-king-of-winter-park.html">The Donut King</a></h3>
+          <p class="meta">Sweets &middot; Winter Park &middot; $</p><p class="vsub">Family-run, no-frills shop on Howell Branch Road where donuts come out bigger than chain versions and heavy on icing flavor.</p>
           <p class="addr">3716 Howell Branch Rd, Winter Park, FL 32792</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/kelly-s-homemade-ice-cream.html">Kelly&#x27;s Homemade Ice Cream</a></h3>
-          <p class="meta">Sweets &middot; Audubon Park &middot; $</p>
+          <img class="vthumb" src="/assets/venue-kelly-s-homemade-ice-cream.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/kelly-s-homemade-ice-cream.html">Kelly&#x27;s Homemade Ice Cream</a></h3>
+          <p class="meta">Sweets &middot; Audubon Park &middot; $</p><p class="vsub">Small-batch ice cream churned with monthly flavors like Cookie Monster, Mexican Chocolate, Key Lime Pie and Coquito, plus flights and Dog Pops.</p>
           <p class="addr">3114 Corrine Dr, Orlando, FL</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/shaka-donuts.html">Shaka Donuts</a></h3>
-          <p class="meta">Sweets &middot; Hourglass District &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-shaka-donuts.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/shaka-donuts.html">Shaka Donuts</a></h3>
+          <p class="meta">Sweets &middot; Hourglass District &middot; $$</p><p class="vsub">Aloha spirit in a cozy Curry Ford shop where every donut is made to order and served warm, and regulars call them Orlando&#x27;s best.</p>
           <p class="addr">2641 Curry Ford Rd, Orlando, FL 32806</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/lighthouse-seafood.html">Lighthouse Seafood</a></h3>
-          <p class="meta">Seafood &middot; Lake Mary &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/lighthouse-seafood.html">Lighthouse Seafood</a></h3>
+          <p class="meta">Seafood &middot; Lake Mary &middot; $$</p><p class="vsub">Half market, half cafe on Country Club Road in Lake Mary, where you can buy fish to take home or have the kitchen cook it fresh.</p>
           <p class="addr">Lighthouse Seafood, 101 N Country Club Rd, Lake Mary, FL 32746, United States</p>
-        </article>
+        </div></article>
         </div>
       </section>
 
@@ -284,35 +291,35 @@
         <p class="lede">Other places in Sanford, closest to Donutste Family Bakery first.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/duffy-s-sports-grill.html">Duffy&#x27;s Sports Grill</a></h3>
-          <p class="meta">American · Sports Bar &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/duffy-s-sports-grill.html">Duffy&#x27;s Sports Grill</a></h3>
+          <p class="meta">American · Sports Bar &middot; $</p><p class="vsub">TVs everywhere in Lake Mary, so every seat feels close to the game.</p>
           <p class="addr">Duffy&#x27;s Sports Grill, 951 Market Promenade Ave, Lake Mary, FL 32746</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/lighthouse-seafood.html">Lighthouse Seafood</a></h3>
-          <p class="meta">Seafood &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/lighthouse-seafood.html">Lighthouse Seafood</a></h3>
+          <p class="meta">Seafood &middot; $$</p><p class="vsub">Half market, half cafe on Country Club Road in Lake Mary, where you can buy fish to take home or have the kitchen cook it fresh.</p>
           <p class="addr">Lighthouse Seafood, 101 N Country Club Rd, Lake Mary, FL 32746, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/dalis-lao-thai-cafe.html">Dali&#x27;s Lao Thai Cafe</a></h3>
-          <p class="meta">Noodles &amp; Southeast Asian · Thai &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/dalis-lao-thai-cafe.html">Dali&#x27;s Lao Thai Cafe</a></h3>
+          <p class="meta">Noodles &amp; Southeast Asian · Thai &middot; $$</p><p class="vsub">Family-run in Sanford, cooking Lao and Thai food on Rinehart Road with care and fresh ingredients.</p>
           <p class="addr">Dali&#x27;s Lao Thai Cafe, 1181 Rinehart Rd, Sanford, FL 32771-7390, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/hooked-fish-camp.html">Hooked Fish Camp</a></h3>
-          <p class="meta">Seafood &middot; $$$$</p>
+          <div class="vmain"><h3><a href="/venue/hooked-fish-camp.html">Hooked Fish Camp</a></h3>
+          <p class="meta">Seafood &middot; $$$$</p><p class="vsub">Relaxed, coastal fish camp cooking comes to Towne Center Circle in Sanford.</p>
           <p class="addr">550 Towne Center Cir, Sanford, FL 32771</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/quigley-coffee.html">Quigley Coffee</a></h3>
-          <p class="meta">Coffee &amp; cafes · Coffee Shop &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-quigley-coffee.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/quigley-coffee.html">Quigley Coffee</a></h3>
+          <p class="meta">Coffee &amp; cafes · Coffee Shop &middot; $$</p><p class="vsub">Playful, bright Sanford shop on Rinehart Road that started as a cart, roasts its own beans, and shares space with a skate shop.</p>
           <p class="addr">Quigley Coffee, 1730 Rinehart Rd, Sanford, FL 32771-6590, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/cocina-maya-mexican-grill-mezcaleria.html">Cocina Maya Mexican Grill &amp; Mezcaleria</a></h3>
-          <p class="meta">Mexican &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/cocina-maya-mexican-grill-mezcaleria.html">Cocina Maya Mexican Grill &amp; Mezcaleria</a></h3>
+          <p class="meta">Mexican &middot; $$</p><p class="vsub">Cozy, festive Lake Mary room where Mexican cooking goes well past taco-shop basics, with a little tableside flair.</p>
           <p class="addr">3590 US-17 Ste 1026, Lake Mary, FL 32746</p>
-        </article>
+        </div></article>
         </div>
         <div class="handoff">
           <a class="btn-ghost" href="/sanford-finder.html">See the full Sanford list</a>

@@ -221,7 +221,14 @@
 .take .take-label{font-size:.72rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--accent-ink);margin:0 0 8px}
 
 </style>
-  </head>
+  <style data-cardsys>
+/* cardsys: similar rail cards (2026-10-23 overhaul) */
+.vcard{display:flex;gap:12px;align-items:flex-start}
+.vcard .vthumb{flex:0 0 86px;width:86px;height:86px;border-radius:10px;object-fit:cover;display:block}
+.vcard .vmain{flex:1;min-width:0}
+.vcard .vsub{margin:4px 0 0;font-size:.86rem;line-height:1.45;color:var(--muted,#c6bba2)}
+@media (min-width:1000px){.vlist{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start}}
+</style></head>
   <body>
     <header class="hero">
       <div class="hero-in">
@@ -246,7 +253,7 @@
         <div class="actions">
           <a class="action" href="https://www.google.com/maps/search/?api=1&amp;query=Dragonfly+Robata+Grill+%26+Sushi+7972+Via+Dellagio+Way%2C+Orlando%2C+FL+32819" target="_blank" rel="noopener">Directions &rarr;</a>
           <a class="action" href="/archive.html?venue=dragonfly-robata-grill-sushi">Open in the full finder</a>
-          <a class="action" href="/international-drive-district-guide.html">Read the International Drive story</a>
+          <a class="action" href="/history/i-drive.html">Read the International Drive story</a>
           <a class="action action-ig" href="https://www.instagram.com/dragonfly_orlando" target="_blank" rel="noopener"><svg class="ig-glyph" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="vertical-align:-2px;margin-right:6px"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg> Instagram</a>
         </div>
       </section>
@@ -275,41 +282,41 @@
         </div>
       </section>
 
-<section class="sec" id="similar">
+<section class="sec" id="district-story"><p class="kicker">District Story</p><h2>The story of Dellagio</h2><p class="lede">A hotel in the boondocks, a road paved after it and named to sound big and important, and the corridor that taught Orlando how to be a vacation.</p><p><a class="btn-ghost" href="/history/i-drive.html">Read the Dellagio story &rarr;</a></p></section><section class="sec" id="similar">
         <p class="kicker">Similar Feel</p>
         <h2>More places with this feel</h2>
         <p class="lede">Matched by vibe, not by neighborhood: the places across Greater Orlando closest in spirit to Dragonfly Robata Grill &amp; Sushi.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/kura-sushi.html">KURA SUSHI</a></h3>
-          <p class="meta">Japanese &amp; sushi &middot; Disney Area &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/kura-sushi.html">KURA SUSHI</a></h3>
+          <p class="meta">Japanese &amp; sushi &middot; Disney Area &middot; $$</p><p class="vsub">Sushi becomes a game at Vineland Pointe, with plates gliding on a revolving belt and a robot delivering drinks.</p>
           <p class="addr">KURA SUSHI, 11579 Regency Village Dr, Orlando, FL 32821, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/take-a-sushi.html">Take A Sushi</a></h3>
-          <p class="meta">Japanese &amp; sushi &middot; Disney Area &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-take-a-sushi.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/take-a-sushi.html">Take A Sushi</a></h3>
+          <p class="meta">Japanese &amp; sushi &middot; Disney Area &middot; $$</p><p class="vsub">Japanese cooking gets a Latin twist on Sand Lake Road, sunny, breezy, and unpretentious.</p>
           <p class="addr">4725 W Sand Lake Rd #101, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/the-escobar-kitchen.html">The Escobar Kitchen</a></h3>
-          <p class="meta">Japanese &amp; sushi &middot; South Eola &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-the-escobar-kitchen.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/the-escobar-kitchen.html">The Escobar Kitchen</a></h3>
+          <p class="meta">Japanese &amp; sushi &middot; South Eola &middot; $$</p><p class="vsub">Family-run sushi inside a wine shop on East Church Street, rolling Latin-flavored rolls regulars say they dream about.</p>
           <p class="addr">The Escobar Kitchen, 420 E Church St, Orlando, FL 32801-2775</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/kobe-japanese-steakhouse.html">Kobe Japanese Steakhouse</a></h3>
-          <p class="meta">Japanese &amp; sushi &middot; International Drive &middot; $</p>
+          <img class="vthumb" src="/assets/venue-kobe-japanese-steakhouse.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/kobe-japanese-steakhouse.html">Kobe Japanese Steakhouse</a></h3>
+          <p class="meta">Japanese &amp; sushi &middot; International Drive &middot; $</p><p class="vsub">Dinner becomes theater on International Drive, with teppanyaki chefs, onion volcanoes, flying shrimp and tricks guests had not seen before.</p>
           <p class="addr">8148 International Dr, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/kadence.html">Kadence</a></h3>
-          <p class="meta">Japanese &amp; sushi &middot; Winter Park Rd &middot; $$$$</p>
+          <div class="vmain"><h3><a href="/venue/kadence.html">Kadence</a></h3>
+          <p class="meta">Japanese &amp; sushi &middot; Winter Park Rd &middot; $$$$</p><p class="vsub">A tiny, minimalist counter on Winter Park Road where a Michelin-starred omakase unfolds course by course in front of you.</p>
           <p class="addr">1809 Winter Park Rd, Orlando, FL 32803</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/divina-carne.html">Divina Carne</a></h3>
-          <p class="meta">Latin &amp; Caribbean &middot; International Drive &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/divina-carne.html">Divina Carne</a></h3>
+          <p class="meta">Latin &amp; Caribbean &middot; International Drive &middot; $$</p><p class="vsub">A polished Brazilian rodizio on Carrier Drive, minutes from the Convention Center, where gauchos carve picanha, ribeye and lamb at the table.</p>
           <p class="addr">6424 Carrier Dr, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         </div>
       </section>
 
@@ -319,35 +326,35 @@
         <p class="lede">Other places in International Drive, Local Picks first, then the closest to Dragonfly Robata Grill &amp; Sushi.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/toms-watch-bar-orlando.html">Tom&#x27;s Watch Bar</a> <span class="badge">Local Pick</span></h3>
-          <p class="meta">Bars &amp; lounges · Bar &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-toms-watch-bar-orlando.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/toms-watch-bar-orlando.html">Tom&#x27;s Watch Bar</a> <span class="badge">Local Pick</span></h3>
+          <p class="meta">Bars &amp; lounges · Bar &middot; $$</p><p class="vsub">On International Drive, a sports bar built like a stadium, with an oversized screen and screens wrapping the room so every seat faces the action.</p>
           <p class="addr">8050 International Dr, Suite 1000, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/baires-grill-orlando.html">Baires Grill</a> <span class="badge">Local Pick</span></h3>
-          <p class="meta">Latin &amp; Caribbean · Argentinian Steakhouse &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-baires-grill-orlando.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/baires-grill-orlando.html">Baires Grill</a> <span class="badge">Local Pick</span></h3>
+          <p class="meta">Latin &amp; Caribbean · Argentinian Steakhouse &middot; $$</p><p class="vsub">The parrilla decides everything at this Argentine steakhouse just off International Drive.</p>
           <p class="addr">8050 International Dr, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/peperoncino.html">Peperoncino</a></h3>
-          <p class="meta">Italian · Italian &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/peperoncino.html">Peperoncino</a></h3>
+          <p class="meta">Italian · Italian &middot; $$</p><p class="vsub">Tiny and homey by the Dellagio fountain, this Italian spot has guests saying it feels like Italy.</p>
           <p class="addr">7988 Via Dellagio Way Ste 108, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/fleming-s-prime-steakhouse-sand-lake.html">Fleming&#x27;s Prime Steakhouse &amp; Wine Bar</a></h3>
-          <p class="meta">Fine dining &amp; steak · Steakhouse &middot; $$$$</p>
+          <div class="vmain"><h3><a href="/venue/fleming-s-prime-steakhouse-sand-lake.html">Fleming&#x27;s Prime Steakhouse &amp; Wine Bar</a></h3>
+          <p class="meta">Fine dining &amp; steak · Steakhouse &middot; $$$$</p><p class="vsub">By the Dellagio fountains, Fleming&#x27;s does the classic steakhouse thing right: prime cuts, a deep wine list, and sharp service.</p>
           <p class="addr">8030 Via Dellagio Way, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/norman-s-orlando.html">Norman&#x27;s Orlando</a></h3>
-          <p class="meta">Fine dining &amp; steak · New World Cuisine &middot; $$$$</p>
+          <img class="vthumb" src="/assets/venue-norman-s-orlando.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/norman-s-orlando.html">Norman&#x27;s Orlando</a></h3>
+          <p class="meta">Fine dining &amp; steak · New World Cuisine &middot; $$$$</p><p class="vsub">Norman Van Aken&#x27;s flagship at Dellagio, where New World cooking fuses Florida, the Caribbean, and Latin America.</p>
           <p class="addr">7924 Via Dellagio Way, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/bartaco-dr-phillips.html">bartaco</a></h3>
-          <p class="meta">Mexican · Tacos &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/bartaco-dr-phillips.html">bartaco</a></h3>
+          <p class="meta">Mexican · Tacos &middot; $$</p><p class="vsub">A beachy patio spot in the Marketplace at Dr Phillips, where street-style tacos land on trays and the table grazes at its own pace.</p>
           <p class="addr">7600 Dr Phillips Blvd Ste 28, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         </div>
         <div class="handoff">
           <a class="btn-ghost" href="/international-drive-finder.html">See the full International Drive list</a>

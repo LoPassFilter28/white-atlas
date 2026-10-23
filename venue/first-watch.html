@@ -221,7 +221,14 @@
 .take .take-label{font-size:.72rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--accent-ink);margin:0 0 8px}
 
 </style>
-  </head>
+  <style data-cardsys>
+/* cardsys: similar rail cards (2026-10-23 overhaul) */
+.vcard{display:flex;gap:12px;align-items:flex-start}
+.vcard .vthumb{flex:0 0 86px;width:86px;height:86px;border-radius:10px;object-fit:cover;display:block}
+.vcard .vmain{flex:1;min-width:0}
+.vcard .vsub{margin:4px 0 0;font-size:.86rem;line-height:1.45;color:var(--muted,#c6bba2)}
+@media (min-width:1000px){.vlist{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start}}
+</style></head>
   <body>
     <header class="hero">
       <div class="hero-in">
@@ -246,7 +253,7 @@
         <div class="actions">
           <a class="action" href="https://www.google.com/maps/search/?api=1&amp;query=First+Watch+11951+International+Drive+South+Ste+A%2C+Orlando%2C+FL+32821" target="_blank" rel="noopener">Directions &rarr;</a>
           <a class="action" href="/archive.html?venue=first-watch">Open in the full finder</a>
-          <a class="action" href="/international-drive-district-guide.html">Read the International Drive story</a>
+          <a class="action" href="/history/i-drive.html">Read the International Drive story</a>
         </div>
       </section>
 
@@ -274,41 +281,41 @@
         </div>
       </section>
 
-<section class="sec" id="similar">
+<section class="sec" id="district-story"><p class="kicker">District Story</p><h2>The story of International Drive</h2><p class="lede">A hotel in the boondocks, a road paved after it and named to sound big and important, and the corridor that taught Orlando how to be a vacation.</p><p><a class="btn-ghost" href="/history/i-drive.html">Read the International Drive story &rarr;</a></p></section><section class="sec" id="similar">
         <p class="kicker">Similar Feel</p>
         <h2>More places with this feel</h2>
         <p class="lede">Matched by vibe, not by neighborhood: the places across Greater Orlando closest in spirit to First Watch.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/bb-hotel-orlando-idrive.html">B&amp;B HOTEL Orlando International Drive</a></h3>
-          <p class="meta">Hotels &middot; International Drive &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/bb-hotel-orlando-idrive.html">B&amp;B HOTEL Orlando International Drive</a></h3>
+          <p class="meta">Hotels &middot; International Drive &middot; $$</p><p class="vsub">On International Drive, the European budget formula stateside: newly renovated, spacious rooms, breakfast buffet, pool and free lobby popcorn.</p>
           <p class="addr">6323 International Dr, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/cafe-tu-tu-tango.html">Café Tu Tu Tango</a></h3>
-          <p class="meta">Restaurants &middot; I-Drive &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-cafe-tu-tu-tango.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/cafe-tu-tu-tango.html">Café Tu Tu Tango</a></h3>
+          <p class="meta">Restaurants &middot; I-Drive &middot; $$</p><p class="vsub">An I-Drive original since the 1990s that treats dinner like an art opening, with resident artists painting at easels, walls doubling as the gallery.</p>
           <p class="addr">8625 International Dr, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/sfihas-international-drive.html">Sfiha&#x27;s International Drive</a></h3>
-          <p class="meta">Latin &amp; Caribbean &middot; International Drive &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/sfihas-international-drive.html">Sfiha&#x27;s International Drive</a></h3>
+          <p class="meta">Latin &amp; Caribbean &middot; International Drive &middot; $</p><p class="vsub">Sfiha&#x27;s bakes palm-sized Brazilian meat pies on International Drive, golden rounds filled with beef, chicken and catupiry cheese, or four cheeses.</p>
           <p class="addr">5640 International Dr, Orlando, FL 32819</p>
-        </article>
+        </div></article>
                 <article class="vcard">
-          <h3><a href="/venue/maple-street-biscuit-company.html">Maple Street Biscuit Company</a></h3>
-          <p class="meta">Breakfast &amp; brunch &middot; Disney Area &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-maple-street-biscuit-company.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/maple-street-biscuit-company.html">Maple Street Biscuit Company</a></h3>
+          <p class="meta">Breakfast &amp; brunch &middot; Disney Area &middot; $$</p><p class="vsub">Scratch-baked biscuits carry the Southern comfort at this Glass House Lane counter, and guests describe a warm, family vibe.</p>
           <p class="addr">Maple Street Biscuit Company, 11810 Glass House Ln, Orlando, FL 32836-3794</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/moon-wok.html">Moon Wok Kitchen &amp; Lounge</a></h3>
-          <p class="meta">Chinese &middot; I-Drive &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-moon-wok.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/moon-wok.html">Moon Wok Kitchen &amp; Lounge</a></h3>
+          <p class="meta">Chinese &middot; I-Drive &middot; $$</p><p class="vsub">International Drive has plenty of Chinese takeout, but this one has a moonlit lounge attached, all glow and dressed-up energy.</p>
           <p class="addr">11701 International Dr Ste 300, Orlando, FL 32821</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/nikitta-orlando.html">Nikitta</a></h3>
-          <p class="meta">Japanese &amp; sushi &middot; International Drive &middot; $$$</p>
+          <img class="vthumb" src="/assets/venue-nikitta-orlando.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/nikitta-orlando.html">Nikitta</a></h3>
+          <p class="meta">Japanese &amp; sushi &middot; International Drive &middot; $$$</p><p class="vsub">Orlando&#x27;s first serious Nikkei room pairs Peruvian ingredients with Japanese technique in a deep purple, elegant space on I-Drive.</p>
           <p class="addr">8255 International Dr, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         </div>
       </section>
 
@@ -318,35 +325,35 @@
         <p class="lede">Other places in International Drive, Local Picks first, then the closest to First Watch.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/toms-watch-bar-orlando.html">Tom&#x27;s Watch Bar</a> <span class="badge">Local Pick</span></h3>
-          <p class="meta">Bars &amp; lounges · Bar &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-toms-watch-bar-orlando.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/toms-watch-bar-orlando.html">Tom&#x27;s Watch Bar</a> <span class="badge">Local Pick</span></h3>
+          <p class="meta">Bars &amp; lounges · Bar &middot; $$</p><p class="vsub">On International Drive, a sports bar built like a stadium, with an oversized screen and screens wrapping the room so every seat faces the action.</p>
           <p class="addr">8050 International Dr, Suite 1000, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/baires-grill-orlando.html">Baires Grill</a> <span class="badge">Local Pick</span></h3>
-          <p class="meta">Latin &amp; Caribbean · Argentinian Steakhouse &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-baires-grill-orlando.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/baires-grill-orlando.html">Baires Grill</a> <span class="badge">Local Pick</span></h3>
+          <p class="meta">Latin &amp; Caribbean · Argentinian Steakhouse &middot; $$</p><p class="vsub">The parrilla decides everything at this Argentine steakhouse just off International Drive.</p>
           <p class="addr">8050 International Dr, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/twenty-pho-hour.html">Twenty Pho Hour</a></h3>
-          <p class="meta">Noodles &amp; Southeast Asian · Vietnamese &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/twenty-pho-hour.html">Twenty Pho Hour</a></h3>
+          <p class="meta">Noodles &amp; Southeast Asian · Vietnamese &middot; $$</p><p class="vsub">Black-and-white ink lines wrap this International Drive room, a playful comic-book space guests compare to a music video.</p>
           <p class="addr">11951 International Dr Ste B-2, Orlando, FL 32821</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/moon-wok.html">Moon Wok Kitchen &amp; Lounge</a></h3>
-          <p class="meta">Chinese · Cantonese &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-moon-wok.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/moon-wok.html">Moon Wok Kitchen &amp; Lounge</a></h3>
+          <p class="meta">Chinese · Cantonese &middot; $$</p><p class="vsub">International Drive has plenty of Chinese takeout, but this one has a moonlit lounge attached, all glow and dressed-up energy.</p>
           <p class="addr">11701 International Dr Ste 300, Orlando, FL 32821</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/discovery-cove.html">Discovery Cove</a></h3>
-          <p class="meta">Attractions · Theme Park &middot; $$$$</p>
+          <img class="vthumb" src="/assets/venue-discovery-cove.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/discovery-cove.html">Discovery Cove</a></h3>
+          <p class="meta">Attractions · Theme Park &middot; $$$$</p><p class="vsub">The calm splurge on I-Drive: a reservation-only day resort where attendance is capped and the water stays clear.</p>
           <p class="addr">6000 Discovery Cove Way, Orlando, FL 32821</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/selam.html">Selam Ethiopian</a></h3>
-          <p class="meta">Restaurants · Ethiopian &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-selam.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/selam.html">Selam Ethiopian</a></h3>
+          <p class="meta">Restaurants · Ethiopian &middot; $$</p><p class="vsub">A warm, calm, family-run room on Central Florida Parkway serving Ethiopian and Eritrean cooking built for sharing.</p>
           <p class="addr">Selam, 5494 Central Florida Pkwy, Orlando, FL 32821-8774</p>
-        </article>
+        </div></article>
         </div>
         <div class="handoff">
           <a class="btn-ghost" href="/international-drive-finder.html">See the full International Drive list</a>

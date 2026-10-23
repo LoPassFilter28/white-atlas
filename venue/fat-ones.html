@@ -211,7 +211,14 @@
       .vcard .addr { margin: 0; color: var(--muted); font-size: .9rem; }
       @media (max-width: 640px) { .facts { grid-template-columns: 1fr; } }
     </style>
-  </head>
+  <style data-cardsys>
+/* cardsys: similar rail cards (2026-10-23 overhaul) */
+.vcard{display:flex;gap:12px;align-items:flex-start}
+.vcard .vthumb{flex:0 0 86px;width:86px;height:86px;border-radius:10px;object-fit:cover;display:block}
+.vcard .vmain{flex:1;min-width:0}
+.vcard .vsub{margin:4px 0 0;font-size:.86rem;line-height:1.45;color:var(--muted,#c6bba2)}
+@media (min-width:1000px){.vlist{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start}}
+</style></head>
   <body>
     <header class="hero">
       <div class="hero-in">
@@ -236,46 +243,46 @@
         <div class="actions">
           <a class="action" href="https://www.google.com/maps/search/?api=1&amp;query=Fat+One%27s+Hot+Dogs+%26+Italian+Ice+6000+Universal+Blvd%2C+Orlando%2C+FL+32819" target="_blank" rel="noopener">Directions &rarr;</a>
           <a class="action" href="/archive.html?venue=fat-ones">Open in the full finder</a>
-          <a class="action" href="/universal-district-guide.html">Read the Universal story</a>
+          <a class="action" href="/history/universal.html">Read the Universal story</a>
           <a class="action action-ig" href="https://www.instagram.com/fatonedogs" target="_blank" rel="noopener"><svg class="ig-glyph" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="vertical-align:-2px;margin-right:6px"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg> Instagram</a>
         </div>
       </section>
 
-      <section class="sec" id="similar">
+      <section class="sec" id="district-story"><p class="kicker">District Story</p><h2>The story of Universal CityWalk</h2><p class="lede">A district with the shortest paper trail in Orlando: land bought quietly, built fast, and later bought back.</p><p><a class="btn-ghost" href="/history/universal.html">Read the Universal CityWalk story &rarr;</a></p></section><section class="sec" id="similar">
         <p class="kicker">Similar Feel</p>
         <h2>More places with this feel</h2>
         <p class="lede">Matched by vibe, not by neighborhood: the places across Greater Orlando closest in spirit to Fat One&#x27;s Hot Dogs &amp; Italian Ice.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/five-guys.html">Five Guys (CityWalk)</a></h3>
-          <p class="meta">Burgers &amp; sandwiches &middot; Universal CityWalk &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/five-guys.html">Five Guys (CityWalk)</a></h3>
+          <p class="meta">Burgers &amp; sandwiches &middot; Universal CityWalk &middot; $</p><p class="vsub">On the upper level of Universal CityWalk, burgers stacked to order with hand-cut fries piled high in the cup.</p>
           <p class="addr">6000 Universal Blvd, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/the-cowfish-sushi-burger-bar.html">The Cowfish Sushi Burger Bar</a></h3>
-          <p class="meta">Burgers &amp; sandwiches &middot; Universal CityWalk &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/the-cowfish-sushi-burger-bar.html">The Cowfish Sushi Burger Bar</a></h3>
+          <p class="meta">Burgers &amp; sandwiches &middot; Universal CityWalk &middot; $$</p><p class="vsub">At Universal CityWalk, the burgushi idea: sushi rolls built from cheeseburger fixings, fresh tuna rolls and a bento box sampling both worlds.</p>
           <p class="addr">6000 Universal Blvd, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/cold-stone-creamery.html">Cold Stone Creamery</a></h3>
-          <p class="meta">Sweets &middot; CityWalk &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/cold-stone-creamery.html">Cold Stone Creamery</a></h3>
+          <p class="meta">Sweets &middot; CityWalk &middot; $</p><p class="vsub">At Universal CityWalk, mix-ins fold into ice cream on a frozen granite slab, built to order at the counter.</p>
           <p class="addr">6000 Universal Blvd, Orlando, FL</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/bubba-gump-shrimp-co.html">Bubba Gump Shrimp Co.</a></h3>
-          <p class="meta">Seafood &middot; Universal CityWalk &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/bubba-gump-shrimp-co.html">Bubba Gump Shrimp Co.</a></h3>
+          <p class="meta">Seafood &middot; Universal CityWalk &middot; $</p><p class="vsub">At Universal CityWalk, full movie theme with trivia at the table and a room guests say makes you feel like you are in the film.</p>
           <p class="addr">6000 Universal Blvd Ste 735, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/harrell-s-hot-dogs-and-cold-cones.html">Harrell&#x27;s Hot Dogs and Cold Cones</a></h3>
-          <p class="meta">Burgers &amp; sandwiches &middot; Winter Garden &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/harrell-s-hot-dogs-and-cold-cones.html">Harrell&#x27;s Hot Dogs and Cold Cones</a></h3>
+          <p class="meta">Burgers &amp; sandwiches &middot; Winter Garden &middot; $</p><p class="vsub">Narrow little Plant Street hideaway for grilled all-beef dogs that guests say make a simple hot dog better.</p>
           <p class="addr">54 W Plant St, Winter Garden, FL 34787</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/beefy-king.html">Beefy King</a></h3>
-          <p class="meta">Burgers &amp; sandwiches &middot; Milk District &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/beefy-king.html">Beefy King</a></h3>
+          <p class="meta">Burgers &amp; sandwiches &middot; Milk District &middot; $</p><p class="vsub">Orlando&#x27;s old-school roast beef counter, steaming since 1968 and proudly no-frills about it.</p>
           <p class="addr">Beefy King, 424 N Bumby Ave, Orlando, FL 32803-6028</p>
-        </article>
+        </div></article>
         </div>
       </section>
 
@@ -285,35 +292,35 @@
         <p class="lede">Other places in Universal, closest to Fat One&#x27;s Hot Dogs &amp; Italian Ice first.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/toothsome.html">The Toothsome Chocolate Emporium &amp; Savory Feast Kitchen</a></h3>
-          <p class="meta">American · Theme Restaurant &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/toothsome.html">The Toothsome Chocolate Emporium &amp; Savory Feast Kitchen</a></h3>
+          <p class="meta">American · Theme Restaurant &middot; $$</p><p class="vsub">A steampunk chocolate factory at CityWalk, all brass, gears and towering smokestacks, built on chocolate in every course.</p>
           <p class="addr">The Toothsome Chocolate Emporium &amp; Savory Feast Kitchen, 6000 Universal Blvd, Orlando, FL 32819-7611</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/voodoo.html">Voodoo Doughnut</a></h3>
-          <p class="meta">Bakeries · Bakery &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/voodoo.html">Voodoo Doughnut</a></h3>
+          <p class="meta">Bakeries · Bakery &middot; $</p><p class="vsub">At Universal CityWalk, pink-box spectacle and over-the-top novelty, with a revolving display of donuts guests call ridiculous.</p>
           <p class="addr">Voodoo Doughnut, 6000 Universal Blvd, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/bubba-gump-shrimp-co.html">Bubba Gump Shrimp Co.</a></h3>
-          <p class="meta">Seafood &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/bubba-gump-shrimp-co.html">Bubba Gump Shrimp Co.</a></h3>
+          <p class="meta">Seafood &middot; $</p><p class="vsub">At Universal CityWalk, full movie theme with trivia at the table and a room guests say makes you feel like you are in the film.</p>
           <p class="addr">6000 Universal Blvd Ste 735, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/cold-stone-creamery.html">Cold Stone Creamery</a></h3>
-          <p class="meta">Sweets · Ice Cream &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/cold-stone-creamery.html">Cold Stone Creamery</a></h3>
+          <p class="meta">Sweets · Ice Cream &middot; $</p><p class="vsub">At Universal CityWalk, mix-ins fold into ice cream on a frozen granite slab, built to order at the counter.</p>
           <p class="addr">6000 Universal Blvd, Orlando, FL</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/the-cowfish-sushi-burger-bar.html">The Cowfish Sushi Burger Bar</a></h3>
-          <p class="meta">Burgers &amp; sandwiches · Burgers &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/the-cowfish-sushi-burger-bar.html">The Cowfish Sushi Burger Bar</a></h3>
+          <p class="meta">Burgers &amp; sandwiches · Burgers &middot; $$</p><p class="vsub">At Universal CityWalk, the burgushi idea: sushi rolls built from cheeseburger fixings, fresh tuna rolls and a bento box sampling both worlds.</p>
           <p class="addr">6000 Universal Blvd, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/universal-studios.html">Universal Studios Florida</a></h3>
-          <p class="meta">Parks &amp; outdoors · Park &middot; $$$$</p>
+          <img class="vthumb" src="/assets/venue-universal-studios.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/universal-studios.html">Universal Studios Florida</a></h3>
+          <p class="meta">Parks &amp; outdoors · Park &middot; $$$$</p><p class="vsub">The original Universal park, open since 1990, where the movie magic feels personal, and Diagon Alley is the reason guests give most.</p>
           <p class="addr">6000 Universal Blvd, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         </div>
         <div class="handoff">
           <a class="btn-ghost" href="/universal-finder.html">See the full Universal list</a>

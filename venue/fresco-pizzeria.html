@@ -211,7 +211,14 @@
       .vcard .addr { margin: 0; color: var(--muted); font-size: .9rem; }
       @media (max-width: 640px) { .facts { grid-template-columns: 1fr; } }
     </style>
-  </head>
+  <style data-cardsys>
+/* cardsys: similar rail cards (2026-10-23 overhaul) */
+.vcard{display:flex;gap:12px;align-items:flex-start}
+.vcard .vthumb{flex:0 0 86px;width:86px;height:86px;border-radius:10px;object-fit:cover;display:block}
+.vcard .vmain{flex:1;min-width:0}
+.vcard .vsub{margin:4px 0 0;font-size:.86rem;line-height:1.45;color:var(--muted,#c6bba2)}
+@media (min-width:1000px){.vlist{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start}}
+</style></head>
   <body>
     <header class="hero">
       <div class="hero-in">
@@ -239,31 +246,31 @@
         </div>
       </section>
 
-      <section class="sec" id="similar">
+      <section class="sec" id="district-story"><p class="kicker">District Stories</p><h2>Orlando&#x27;s long memory</h2><p class="lede">The guide keeps the long memory of Orlando&#x27;s districts in one place: the names, the plats and the stories behind the streets.</p><p><a class="btn-ghost" href="/history.html">Browse the district stories &rarr;</a></p></section><section class="sec" id="similar">
         <p class="kicker">Similar Feel</p>
         <h2>More places with this feel</h2>
         <p class="lede">Matched by vibe, not by neighborhood: the places across Greater Orlando closest in spirit to Fresco Pizzeria.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/seo-basilico-pizzeria.html">SEO Basilico Pizzeria</a></h3>
-          <p class="meta">Pizza &middot; Winter Garden &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/seo-basilico-pizzeria.html">SEO Basilico Pizzeria</a></h3>
+          <p class="meta">Pizza &middot; Winter Garden &middot; $</p><p class="vsub">In Winter Garden&#x27;s Stoneybrook area, artigianale pizza rooted in Sao Paulo Italian tradition, with founders from Mooca shaping the menu.</p>
           <p class="addr">12107 Stoneybrook W Pkwy Suite 105, Winter Garden, FL 34787</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/sals-pizza-bar.html">Sal's Pizza Bar</a></h3>
-          <p class="meta">Pizza &middot; Universal &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/sals-pizza-bar.html">Sal's Pizza Bar</a></h3>
+          <p class="meta">Pizza &middot; Universal &middot; $$</p><p class="vsub">Family-owned on Daryl Carter Parkway, turning out Brooklyn-style pies that transplanted New Yorkers say taste just like home.</p>
           <p class="addr">Sal's Pizza Bar, 11020 Daryl Carter Pkwy, Orlando, FL 32836, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/nuris.html">Nuri's</a></h3>
-          <p class="meta">Pizza &middot; Orlando &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/nuris.html">Nuri's</a></h3>
+          <p class="meta">Pizza &middot; Orlando &middot; $$</p><p class="vsub">Downtown&#x27;s tavern-style pizza joint on East Pine, all cracker-crisp, paper-thin crust party-cut into squares you keep grabbing.</p>
           <p class="addr">Nuri's, 63 E Pine St, Orlando, FL 32801-2617, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/sodough.html">Sodough Square</a></h3>
-          <p class="meta">Pizza &middot; Milk District &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-sodough.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/sodough.html">Sodough Square</a></h3>
+          <p class="meta">Pizza &middot; Milk District &middot; $$</p><p class="vsub">Detroit-style pizza from its original Michigan Street shop, all crispy, cheesy edges over pillowy soft dough.</p>
           <p class="addr">Sodough Square, 419 E Michigan St, Orlando, FL 32806-4511</p>
-        </article>
+        </div></article>
         </div>
       </section>
 
@@ -273,35 +280,35 @@
         <p class="lede">Other places in Windermere, closest to Fresco Pizzeria first.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/windermere-farmers-market.html">Windermere Farmers Market</a></h3>
-          <p class="meta">Markets &amp; shops · Farmers Market &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/windermere-farmers-market.html">Windermere Farmers Market</a></h3>
+          <p class="meta">Markets &amp; shops · Farmers Market &middot; $</p><p class="vsub">Every Friday, Town Square Park fills with a small hometown market: fresh produce, seafood, breads, local honey, and plants.</p>
           <p class="addr">520 Main St, Windermere, FL 34786</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/paloma-coffee-co.html">Paloma Parlor</a></h3>
-          <p class="meta">Coffee &amp; cafes · Coffee Shop &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/paloma-coffee-co.html">Paloma Parlor</a></h3>
+          <p class="meta">Coffee &amp; cafes · Coffee Shop &middot; $</p><p class="vsub">Windermere regulars treat this as their own; now trading as Paloma Parlor, it is small, plant-filled and contemporary.</p>
           <p class="addr">625 Main St, Windermere, FL 34786</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/dixie-cream-cafe.html">Dixie Cream Cafe</a></h3>
-          <p class="meta">Coffee &amp; cafes · Breakfast Cafe &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/dixie-cream-cafe.html">Dixie Cream Cafe</a></h3>
+          <p class="meta">Coffee &amp; cafes · Breakfast Cafe &middot; $$</p><p class="vsub">An independently owned Main Street room with 1950s diner warmth and a from-scratch Southern kitchen.</p>
           <p class="addr">434 Main St, Windermere, FL 34786</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/windermere-brewing-company.html">Windermere Brewing Company</a></h3>
-          <p class="meta">Breweries · Brewery &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-windermere-brewing-company.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/windermere-brewing-company.html">Windermere Brewing Company</a></h3>
+          <p class="meta">Breweries · Brewery &middot; $$</p><p class="vsub">Windermere&#x27;s hometown brewery, a block off Main Street with a dog-friendly backyard and rotating food trucks.</p>
           <p class="addr">111 W 5th Ave, Windermere, FL 34786</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/tims-wine-market.html">Tim&#x27;s Wine Market</a></h3>
-          <p class="meta">Markets &amp; shops · Wine Shop &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/tims-wine-market.html">Tim&#x27;s Wine Market</a></h3>
+          <p class="meta">Markets &amp; shops · Wine Shop &middot; $$</p><p class="vsub">The Windermere storefront of Orlando&#x27;s long-running independent wine shop, with siblings on Orange Avenue and in Sanford.</p>
           <p class="addr">428 Main St, Windermere, FL 34786</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/bella-tuscany.html">Bella Tuscany</a></h3>
-          <p class="meta">Italian · Tuscan &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-bella-tuscany.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/bella-tuscany.html">Bella Tuscany</a></h3>
+          <p class="meta">Italian · Tuscan &middot; $$</p><p class="vsub">A family-owned Tuscan room in Summerport with a wine list past 700 bottles and Wine Spectator recognition.</p>
           <p class="addr">13424 Summerport Village Pkwy, Windermere, FL 34786</p>
-        </article>
+        </div></article>
         </div>
         <div class="handoff">
           <a class="btn-ghost" href="/windermere-finder.html">See the full Windermere list</a>

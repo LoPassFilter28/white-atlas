@@ -211,7 +211,14 @@
       .vcard .addr { margin: 0; color: var(--muted); font-size: .9rem; }
       @media (max-width: 640px) { .facts { grid-template-columns: 1fr; } }
     </style>
-  </head>
+  <style data-cardsys>
+/* cardsys: similar rail cards (2026-10-23 overhaul) */
+.vcard{display:flex;gap:12px;align-items:flex-start}
+.vcard .vthumb{flex:0 0 86px;width:86px;height:86px;border-radius:10px;object-fit:cover;display:block}
+.vcard .vmain{flex:1;min-width:0}
+.vcard .vsub{margin:4px 0 0;font-size:.86rem;line-height:1.45;color:var(--muted,#c6bba2)}
+@media (min-width:1000px){.vlist{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start}}
+</style></head>
   <body>
     <header class="hero">
       <div class="hero-in">
@@ -239,31 +246,31 @@
         </div>
       </section>
 
-      <section class="sec" id="similar">
+      <section class="sec" id="district-story"><p class="kicker">District Stories</p><h2>Orlando&#x27;s long memory</h2><p class="lede">The guide keeps the long memory of Orlando&#x27;s districts in one place: the names, the plats and the stories behind the streets.</p><p><a class="btn-ghost" href="/history.html">Browse the district stories &rarr;</a></p></section><section class="sec" id="similar">
         <p class="kicker">Similar Feel</p>
         <h2>More places with this feel</h2>
         <p class="lede">Matched by vibe, not by neighborhood: the places across Greater Orlando closest in spirit to The Cuban Sandwich Cafe.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/cubans-on-the-run.html">Cubans On The Run</a></h3>
-          <p class="meta">Latin &amp; Caribbean &middot; Casselberry &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/cubans-on-the-run.html">Cubans On The Run</a></h3>
+          <p class="meta">Latin &amp; Caribbean &middot; Casselberry &middot; $</p><p class="vsub">A small mom-and-pop Cuban counter on 17-92 where the owner greets regulars by name.</p>
           <p class="addr">Cubans On The Run, 2956 S US 17-92, Casselberry, FL 32707</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/black-bean-deli.html">Black Bean Deli</a></h3>
-          <p class="meta">Latin &amp; Caribbean &middot; Mills 50 &middot; $</p>
+          <img class="vthumb" src="/assets/venue-black-bean-deli.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/black-bean-deli.html">Black Bean Deli</a></h3>
+          <p class="meta">Latin &amp; Caribbean &middot; Mills 50 &middot; $</p><p class="vsub">An airy, plant-filled Mills 50 cafe where Cuban family recipes anchor the menu and regulars say it reminds them of home.</p>
           <p class="addr">1835 E Colonial Dr, Orlando, FL 32803</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/la-revancha-cuban-cafe.html">La Revancha Cuban Cafe</a></h3>
-          <p class="meta">Latin &amp; Caribbean &middot; Orlando &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/la-revancha-cuban-cafe.html">La Revancha Cuban Cafe</a></h3>
+          <p class="meta">Latin &amp; Caribbean &middot; Orlando &middot; $$</p><p class="vsub">Pressing Cubans on East Colonial Drive since 1998, with salsa on the speakers and an unpretentious, relaxed room.</p>
           <p class="addr">7339 E Colonial Dr, Orlando, FL 32807</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/pio-pio-latin-cuisine.html">Pio Pio Latin Cuisine</a></h3>
-          <p class="meta">Latin &amp; Caribbean &middot; Orlando &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-pio-pio-latin-cuisine.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/pio-pio-latin-cuisine.html">Pio Pio Latin Cuisine</a></h3>
+          <p class="meta">Latin &amp; Caribbean &middot; Orlando &middot; $$</p><p class="vsub">On South Semoran, the Colombian staple locals lean on, a warm, family-style room where plates land generous and homestyle.</p>
           <p class="addr">2259 S Semoran Blvd, Orlando, FL 32822</p>
-        </article>
+        </div></article>
         </div>
       </section>
 
@@ -273,35 +280,35 @@
         <p class="lede">Other places in Winter Springs, closest to The Cuban Sandwich Cafe first.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/taiwan-cafe.html">Taiwan Cafe</a></h3>
-          <p class="meta">Chinese · Chinese &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/taiwan-cafe.html">Taiwan Cafe</a></h3>
+          <p class="meta">Chinese · Chinese &middot; $$</p><p class="vsub">A family Chinese kitchen on west 434 doing classic stir fries, noodles, and rice plates with fresh ingredients.</p>
           <p class="addr">Taiwan Cafe, 158 W State Rd 434, Winter Springs, FL 32708</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/napolis-pizza.html">Napoli&#x27;s Pizza &amp; Italian Restaurant</a></h3>
-          <p class="meta">Italian · Pizzeria &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/napolis-pizza.html">Napoli&#x27;s Pizza &amp; Italian Restaurant</a></h3>
+          <p class="meta">Italian · Pizzeria &middot; $</p><p class="vsub">A simple family pizzeria on west 434, with garlic knots, baked mussels, and eggplant Campania beside the pies.</p>
           <p class="addr">Napoli&#x27;s Pizza &amp; Italian Restaurant, 122 W State Rd 434, Winter Springs, FL 32708</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/taqueria-las-cazuelas-winter-springs.html">Taqueria Las Cazuelas Winter Springs</a></h3>
-          <p class="meta">Mexican &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/taqueria-las-cazuelas-winter-springs.html">Taqueria Las Cazuelas Winter Springs</a></h3>
+          <p class="meta">Mexican &middot; $</p><p class="vsub">Tacos, milanesa de res and pollo, chips and guacamole, and queso dip at counter prices, a second room for the East Colonial taqueria.</p>
           <p class="addr">Taqueria Las Cazuelas Winter Springs, 162 W State Rd 434, Winter Springs, FL 32708</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/khaos-sports-bar.html">Khaos Sports Bar and Grill</a></h3>
-          <p class="meta">Bars &amp; lounges · Sports Bar &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/khaos-sports-bar.html">Khaos Sports Bar and Grill</a></h3>
+          <p class="meta">Bars &amp; lounges · Sports Bar &middot; $</p><p class="vsub">A lively dive sports hub on west 434 that expanded in 2026 with a new kitchen, more pool tables, and a smoke-free interior.</p>
           <p class="addr">Khaos Sports Bar and Grill, 178 W State Rd 434, Winter Springs, FL 32708</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/victorios-ii.html">Victorio&#x27;s II Italian Restaurant &amp; Pizzeria</a></h3>
-          <p class="meta">Italian · Pizzeria &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/victorios-ii.html">Victorio&#x27;s II Italian Restaurant &amp; Pizzeria</a></h3>
+          <p class="meta">Italian · Pizzeria &middot; $$</p><p class="vsub">Serving Winter Springs since 1989, this spot is known for Detroit style deep dish baked in Detroit pans, sauce ladled on after.</p>
           <p class="addr">Victorio&#x27;s II Italian Restaurant &amp; Pizzeria, 200 E State Rd 434, Winter Springs, FL 32708</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/senor-tequila.html">Senor Tequila Mexican Grill</a></h3>
-          <p class="meta">Mexican · Mexican &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/senor-tequila.html">Senor Tequila Mexican Grill</a></h3>
+          <p class="meta">Mexican · Mexican &middot; $$</p><p class="vsub">A spacious, family friendly Mexican grill in the Villaggio plaza on 434, with a big local following in Winter Springs.</p>
           <p class="addr">Senor Tequila Mexican Grill, 855 E State Rd 434, Winter Springs, FL 32708</p>
-        </article>
+        </div></article>
         </div>
         <div class="handoff">
           <a class="btn-ghost" href="/winter-springs-finder.html">See the full Winter Springs list</a>

@@ -211,7 +211,14 @@
       .vcard .addr { margin: 0; color: var(--muted); font-size: .9rem; }
       @media (max-width: 640px) { .facts { grid-template-columns: 1fr; } }
     </style>
-  </head>
+  <style data-cardsys>
+/* cardsys: similar rail cards (2026-10-23 overhaul) */
+.vcard{display:flex;gap:12px;align-items:flex-start}
+.vcard .vthumb{flex:0 0 86px;width:86px;height:86px;border-radius:10px;object-fit:cover;display:block}
+.vcard .vmain{flex:1;min-width:0}
+.vcard .vsub{margin:4px 0 0;font-size:.86rem;line-height:1.45;color:var(--muted,#c6bba2)}
+@media (min-width:1000px){.vlist{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start}}
+</style></head>
   <body>
     <header class="hero">
       <div class="hero-in">
@@ -240,41 +247,41 @@
         </div>
       </section>
 
-      <section class="sec" id="similar">
+      <section class="sec" id="district-story"><p class="kicker">District Stories</p><h2>Orlando&#x27;s long memory</h2><p class="lede">The guide keeps the long memory of Orlando&#x27;s districts in one place: the names, the plats and the stories behind the streets.</p><p><a class="btn-ghost" href="/history.html">Browse the district stories &rarr;</a></p></section><section class="sec" id="similar">
         <p class="kicker">Similar Feel</p>
         <h2>More places with this feel</h2>
         <p class="lede">Matched by vibe, not by neighborhood: the places across Greater Orlando closest in spirit to Enzo&#x27;s On the Lake.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/peperoncino.html">Peperoncino</a></h3>
-          <p class="meta">Italian &middot; Dellagio &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/peperoncino.html">Peperoncino</a></h3>
+          <p class="meta">Italian &middot; Dellagio &middot; $$</p><p class="vsub">Tiny and homey by the Dellagio fountain, this Italian spot has guests saying it feels like Italy.</p>
           <p class="addr">7988 Via Dellagio Way Ste 108, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/christini-s-ristorante-italiano.html">Christini&#x27;s Ristorante Italiano</a></h3>
-          <p class="meta">Italian &middot; Dr Phillips &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/christini-s-ristorante-italiano.html">Christini&#x27;s Ristorante Italiano</a></h3>
+          <p class="meta">Italian &middot; Dr Phillips &middot; $$</p><p class="vsub">On Restaurant Row since 1984, dinner staged as an old-world occasion: tuxedoed service, candlelight, and live accordion in the room.</p>
           <p class="addr">7600 Dr Phillips Blvd, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/haven-kitchen.html">Garni Café</a></h3>
-          <p class="meta">Mediterranean &middot; Lake Nona &middot; $$$</p>
+          <img class="vthumb" src="/assets/venue-haven-kitchen.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/haven-kitchen.html">Garni Café</a></h3>
+          <p class="meta">Mediterranean &middot; Lake Nona &middot; $$$</p><p class="vsub">Up on the Wave Hotel&#x27;s second floor, a casual French bistro in a botanical room full of greenery and rattan.</p>
           <p class="addr">6100 Wave Hotel Dr, Orlando, FL 32827</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/maggiano-s-pointe-orlando.html">Maggiano&#x27;s Little Italy</a></h3>
-          <p class="meta">Italian &middot; Pointe Orlando &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/maggiano-s-pointe-orlando.html">Maggiano&#x27;s Little Italy</a></h3>
+          <p class="meta">Italian &middot; Pointe Orlando &middot; $$</p><p class="vsub">Family-style Italian at Pointe Orlando, built for the table that cannot agree on one dish.</p>
           <p class="addr">9101 International Dr, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/antonios-maitland.html">Antonio&#x27;s</a></h3>
-          <p class="meta">Italian &middot; Maitland &middot; $$$</p>
+          <img class="vthumb" src="/assets/venue-antonios-maitland.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/antonios-maitland.html">Antonio&#x27;s</a></h3>
+          <p class="meta">Italian &middot; Maitland &middot; $$$</p><p class="vsub">Upstairs at Antonio&#x27;s, Maitland&#x27;s old-school special-occasion room has white tablecloths overlooking Lake Lily.</p>
           <p class="addr">611 S Orlando Ave, Maitland, FL 32751</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/tomasinos-pizza-lake-nona.html">Tomasino&#x27;s Pizza</a></h3>
-          <p class="meta">Pizza &middot; Lake Nona &middot; $</p>
+          <img class="vthumb" src="/assets/venue-tomasinos-pizza-lake-nona.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/tomasinos-pizza-lake-nona.html">Tomasino&#x27;s Pizza</a></h3>
+          <p class="meta">Pizza &middot; Lake Nona &middot; $</p><p class="vsub">Lake Nona&#x27;s neighborhood slice shop is old school and family packed, with New York style pies guests call the real thing.</p>
           <p class="addr">14009 Narcoossee Rd, Suite 130, Orlando, FL 32832</p>
-        </article>
+        </div></article>
         </div>
       </section>
 
@@ -284,35 +291,35 @@
         <p class="lede">Other places in Longwood, closest to Enzo&#x27;s On the Lake first.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/shiraz-market.html">Shiraz Market</a></h3>
-          <p class="meta">Mediterranean · Persian &middot; $</p>
+          <img class="vthumb" src="/assets/venue-shiraz-market.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/shiraz-market.html">Shiraz Market</a></h3>
+          <p class="meta">Mediterranean · Persian &middot; $</p><p class="vsub">Half Persian grocery, half grill counter on 17-92 in Longwood, this spot turns a spice run into lunch.</p>
           <p class="addr">188 S US Hwy 17-92, Longwood, FL 32750</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/mohawk-bbq.html">Mohawk Smokehouse</a></h3>
-          <p class="meta">BBQ &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/mohawk-bbq.html">Mohawk Smokehouse</a></h3>
+          <p class="meta">BBQ &middot; $$</p><p class="vsub">Small-batch Longwood barbecue from Tyler Evans and his wife Sarah, built on Texas-style brisket with Southern roots.</p>
           <p class="addr">480 S Ronald Reagan Blvd, Longwood, FL 32750</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/aj-s-press.html">AJ&#x27;s Press</a></h3>
-          <p class="meta">Burgers &amp; sandwiches · Sandwiches &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/aj-s-press.html">AJ&#x27;s Press</a></h3>
+          <p class="meta">Burgers &amp; sandwiches · Sandwiches &middot; $</p><p class="vsub">Family-run Longwood counter built around the press, where sandwiches come off bolillo or telera soft yet crispy at the edges.</p>
           <p class="addr">182 W State Rd 434 #1008, Longwood, FL 32750</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/nan-and-pops-ice-cream-shop.html">Nan and Pop&#x27;s Ice Cream Shop</a></h3>
-          <p class="meta">Sweets · Ice Cream &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-nan-and-pops-ice-cream-shop.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/nan-and-pops-ice-cream-shop.html">Nan and Pop&#x27;s Ice Cream Shop</a></h3>
+          <p class="meta">Sweets · Ice Cream &middot; $$</p><p class="vsub">Old-fashioned Longwood parlor where the sweet smell of waffle cones hits you at the door.</p>
           <p class="addr">Nan and Pop&#x27;s Ice Cream Shop, 351 N Ronald Reagan Blvd, Longwood, FL 32750-4159, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/dough-boyz-pizza.html">Dough Boyz Pizza</a></h3>
-          <p class="meta">Pizza &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/dough-boyz-pizza.html">Dough Boyz Pizza</a></h3>
+          <p class="meta">Pizza &middot; $</p><p class="vsub">Longwood&#x27;s old-school New York slice shop, family owned and confident: their line is it is not the water, it is the recipe.</p>
           <p class="addr">201 W State Rd 434, Longwood, FL 32750</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/paddys-pub-longwood.html">Paddy&#x27;s Pub Longwood</a></h3>
-          <p class="meta">Bars &amp; lounges · Sports Pub &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/paddys-pub-longwood.html">Paddy&#x27;s Pub Longwood</a></h3>
+          <p class="meta">Bars &amp; lounges · Sports Pub &middot; $</p><p class="vsub">Longwood&#x27;s no-frills neighborhood sports pub, with Diamond pool tables, dart boards, and TVs on the games.</p>
           <p class="addr">Paddy&#x27;s Pub Longwood, 995 W State Rd 434, Longwood, FL 32750</p>
-        </article>
+        </div></article>
         </div>
         <div class="handoff">
           <a class="btn-ghost" href="/longwood-finder.html">See the full Longwood list</a>

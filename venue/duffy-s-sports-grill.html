@@ -211,7 +211,14 @@
       .vcard .addr { margin: 0; color: var(--muted); font-size: .9rem; }
       @media (max-width: 640px) { .facts { grid-template-columns: 1fr; } }
     </style>
-  </head>
+  <style data-cardsys>
+/* cardsys: similar rail cards (2026-10-23 overhaul) */
+.vcard{display:flex;gap:12px;align-items:flex-start}
+.vcard .vthumb{flex:0 0 86px;width:86px;height:86px;border-radius:10px;object-fit:cover;display:block}
+.vcard .vmain{flex:1;min-width:0}
+.vcard .vsub{margin:4px 0 0;font-size:.86rem;line-height:1.45;color:var(--muted,#c6bba2)}
+@media (min-width:1000px){.vlist{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start}}
+</style></head>
   <body>
     <header class="hero">
       <div class="hero-in">
@@ -239,41 +246,41 @@
         </div>
       </section>
 
-      <section class="sec" id="similar">
+      <section class="sec" id="district-story"><p class="kicker">District Stories</p><h2>Orlando&#x27;s long memory</h2><p class="lede">The guide keeps the long memory of Orlando&#x27;s districts in one place: the names, the plats and the stories behind the streets.</p><p><a class="btn-ghost" href="/history.html">Browse the district stories &rarr;</a></p></section><section class="sec" id="similar">
         <p class="kicker">Similar Feel</p>
         <h2>More places with this feel</h2>
         <p class="lede">Matched by vibe, not by neighborhood: the places across Greater Orlando closest in spirit to Duffy&#x27;s Sports Grill.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/paddys-pub-longwood.html">Paddy&#x27;s Pub Longwood</a></h3>
-          <p class="meta">Bars &amp; lounges &middot; Longwood &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/paddys-pub-longwood.html">Paddy&#x27;s Pub Longwood</a></h3>
+          <p class="meta">Bars &amp; lounges &middot; Longwood &middot; $</p><p class="vsub">Longwood&#x27;s no-frills neighborhood sports pub, with Diamond pool tables, dart boards, and TVs on the games.</p>
           <p class="addr">Paddy&#x27;s Pub Longwood, 995 W State Rd 434, Longwood, FL 32750</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/toms-watch-bar-orlando.html">Tom&#x27;s Watch Bar</a></h3>
-          <p class="meta">Bars &amp; lounges &middot; I-Drive &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-toms-watch-bar-orlando.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/toms-watch-bar-orlando.html">Tom&#x27;s Watch Bar</a></h3>
+          <p class="meta">Bars &amp; lounges &middot; I-Drive &middot; $$</p><p class="vsub">On International Drive, a sports bar built like a stadium, with an oversized screen and screens wrapping the room so every seat faces the action.</p>
           <p class="addr">8050 International Dr, Suite 1000, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/lighthouse-seafood.html">Lighthouse Seafood</a></h3>
-          <p class="meta">Seafood &middot; Lake Mary &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/lighthouse-seafood.html">Lighthouse Seafood</a></h3>
+          <p class="meta">Seafood &middot; Lake Mary &middot; $$</p><p class="vsub">Half market, half cafe on Country Club Road in Lake Mary, where you can buy fish to take home or have the kitchen cook it fresh.</p>
           <p class="addr">Lighthouse Seafood, 101 N Country Club Rd, Lake Mary, FL 32746, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/the-porch-winter-park.html">The Porch Winter Park</a></h3>
-          <p class="meta">American &middot; Winter Park &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-the-porch-winter-park.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/the-porch-winter-park.html">The Porch Winter Park</a></h3>
+          <p class="meta">American &middot; Winter Park &middot; $$</p><p class="vsub">A converted garage on Orange Avenue turned lively, open sports bar for game day, with big screens, games and a menu for any crew.</p>
           <p class="addr">643 N Orange Ave, Winter Park, FL 32789</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/american-social.html">American Social</a></h3>
-          <p class="meta">American &middot; Dr. Phillips &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-american-social.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/american-social.html">American Social</a></h3>
+          <p class="meta">American &middot; Dr. Phillips &middot; $$</p><p class="vsub">Restaurant Row&#x27;s high-energy sports lounge has screens in every sightline and a room built for game day.</p>
           <p class="addr">7335 W Sand Lake Rd Ste 101, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/stadium-club.html">Stadium Club</a></h3>
-          <p class="meta">Bars &amp; lounges &middot; Lake Buena Vista &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/stadium-club.html">Stadium Club</a></h3>
+          <p class="meta">Bars &amp; lounges &middot; Lake Buena Vista &middot; $$</p><p class="vsub">Game day gets the full stadium treatment inside Caribe Royale, with a wraparound ribbon screen keeping every matchup in view.</p>
           <p class="addr">8101 World Center Dr, Orlando, FL 32821</p>
-        </article>
+        </div></article>
         </div>
       </section>
 
@@ -283,35 +290,35 @@
         <p class="lede">Other places in Sanford, closest to Duffy&#x27;s Sports Grill first.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/dalis-lao-thai-cafe.html">Dali&#x27;s Lao Thai Cafe</a></h3>
-          <p class="meta">Noodles &amp; Southeast Asian · Thai &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/dalis-lao-thai-cafe.html">Dali&#x27;s Lao Thai Cafe</a></h3>
+          <p class="meta">Noodles &amp; Southeast Asian · Thai &middot; $$</p><p class="vsub">Family-run in Sanford, cooking Lao and Thai food on Rinehart Road with care and fresh ingredients.</p>
           <p class="addr">Dali&#x27;s Lao Thai Cafe, 1181 Rinehart Rd, Sanford, FL 32771-7390, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/hooked-fish-camp.html">Hooked Fish Camp</a></h3>
-          <p class="meta">Seafood &middot; $$$$</p>
+          <div class="vmain"><h3><a href="/venue/hooked-fish-camp.html">Hooked Fish Camp</a></h3>
+          <p class="meta">Seafood &middot; $$$$</p><p class="vsub">Relaxed, coastal fish camp cooking comes to Towne Center Circle in Sanford.</p>
           <p class="addr">550 Towne Center Cir, Sanford, FL 32771</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/donutste-doughnuts.html">Donutste Family Bakery</a></h3>
-          <p class="meta">Sweets · Donuts &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/donutste-doughnuts.html">Donutste Family Bakery</a></h3>
+          <p class="meta">Sweets · Donuts &middot; $$</p><p class="vsub">Fully plant-based donuts with no butter, milk, or eggs, in a bright pink Lake Mary room guests find cheerful and welcoming.</p>
           <p class="addr">605 Crescent Executive Ct Ste 120, Lake Mary, FL 32746</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/quigley-coffee.html">Quigley Coffee</a></h3>
-          <p class="meta">Coffee &amp; cafes · Coffee Shop &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-quigley-coffee.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/quigley-coffee.html">Quigley Coffee</a></h3>
+          <p class="meta">Coffee &amp; cafes · Coffee Shop &middot; $$</p><p class="vsub">Playful, bright Sanford shop on Rinehart Road that started as a cart, roasts its own beans, and shares space with a skate shop.</p>
           <p class="addr">Quigley Coffee, 1730 Rinehart Rd, Sanford, FL 32771-6590, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/lighthouse-seafood.html">Lighthouse Seafood</a></h3>
-          <p class="meta">Seafood &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/lighthouse-seafood.html">Lighthouse Seafood</a></h3>
+          <p class="meta">Seafood &middot; $$</p><p class="vsub">Half market, half cafe on Country Club Road in Lake Mary, where you can buy fish to take home or have the kitchen cook it fresh.</p>
           <p class="addr">Lighthouse Seafood, 101 N Country Club Rd, Lake Mary, FL 32746, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/parva.html">Parva</a></h3>
-          <p class="meta">Latin &amp; Caribbean · Colombian &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/parva.html">Parva</a></h3>
+          <p class="meta">Latin &amp; Caribbean · Colombian &middot; $$</p><p class="vsub">Warm, homey Colombian bakery and cafe on West Lake Mary Boulevard in Sanford, where the pastry case leads the visit.</p>
           <p class="addr">Parva, 220 W Lake Mary Blvd, Sanford, FL 32773-5925, United States</p>
-        </article>
+        </div></article>
         </div>
         <div class="handoff">
           <a class="btn-ghost" href="/sanford-finder.html">See the full Sanford list</a>

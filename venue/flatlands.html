@@ -211,7 +211,14 @@
       .vcard .addr { margin: 0; color: var(--muted); font-size: .9rem; }
       @media (max-width: 640px) { .facts { grid-template-columns: 1fr; } }
     </style>
-  </head>
+  <style data-cardsys>
+/* cardsys: similar rail cards (2026-10-23 overhaul) */
+.vcard{display:flex;gap:12px;align-items:flex-start}
+.vcard .vthumb{flex:0 0 86px;width:86px;height:86px;border-radius:10px;object-fit:cover;display:block}
+.vcard .vmain{flex:1;min-width:0}
+.vcard .vsub{margin:4px 0 0;font-size:.86rem;line-height:1.45;color:var(--muted,#c6bba2)}
+@media (min-width:1000px){.vlist{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start}}
+</style></head>
   <body>
     <header class="hero">
       <div class="hero-in">
@@ -239,41 +246,41 @@
         </div>
       </section>
 
-      <section class="sec" id="similar">
+      <section class="sec" id="district-story"><p class="kicker">District Stories</p><h2>Orlando&#x27;s long memory</h2><p class="lede">The guide keeps the long memory of Orlando&#x27;s districts in one place: the names, the plats and the stories behind the streets.</p><p><a class="btn-ghost" href="/history.html">Browse the district stories &rarr;</a></p></section><section class="sec" id="similar">
         <p class="kicker">Similar Feel</p>
         <h2>More places with this feel</h2>
         <p class="lede">Matched by vibe, not by neighborhood: the places across Greater Orlando closest in spirit to Flatlands Bar &amp; Grill.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/the-grove-bar-kitchen.html">The Grove Bar + Kitchen</a></h3>
-          <p class="meta">American &middot; Winter Park &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-the-grove-bar-kitchen.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/the-grove-bar-kitchen.html">The Grove Bar + Kitchen</a></h3>
+          <p class="meta">American &middot; Winter Park &middot; $$</p><p class="vsub">Citrus-grove heritage worn warmly in a golden, textured room in Winter Park Village built for lingering.</p>
           <p class="addr">480 N Orlando Ave C-134, Winter Park, FL 32789</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/capa.html">Capa</a></h3>
-          <p class="meta">Fine dining &amp; steak &middot; Disney Area &middot; $$$$</p>
+          <div class="vmain"><h3><a href="/venue/capa.html">Capa</a></h3>
+          <p class="meta">Fine dining &amp; steak &middot; Disney Area &middot; $$$$</p><p class="vsub">Seventeen floors above the Four Seasons, this steakhouse has a Spanish accent, a wood-burning grill, and fireworks views.</p>
           <p class="addr">10100 Dream Tree Blvd, Orlando, FL 32836</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/four-flamingos.html">Four Flamingos</a></h3>
-          <p class="meta">Fine dining &amp; steak &middot; Disney Area &middot; $$$</p>
+          <img class="vthumb" src="/assets/venue-four-flamingos.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/four-flamingos.html">Four Flamingos</a></h3>
+          <p class="meta">Fine dining &amp; steak &middot; Disney Area &middot; $$$</p><p class="vsub">Richard Blais&#x27;s tropical kitchen at the Hyatt Regency Grand Cypress centers on an open kitchen, a raw bar, and a lobster tank.</p>
           <p class="addr">Four Flamingos, 1 Grand Cypress Blvd, Orlando, FL 32836</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/atlantic-beer-oyster.html">Atlantic Beer &amp; Oyster</a></h3>
-          <p class="meta">Seafood &middot; Winter Park &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/atlantic-beer-oyster.html">Atlantic Beer &amp; Oyster</a></h3>
+          <p class="meta">Seafood &middot; Winter Park &middot; $$</p><p class="vsub">Tucked into the Hidden Garden just off Park Avenue, a cozy, laid-back oyster bar guests call hard to find and worth the search.</p>
           <p class="addr">358 N Park Ave Ste B, Winter Park, FL 32789</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/boca-kitchen-bar-market.html">Boca Kitchen Bar Market</a></h3>
-          <p class="meta">American &middot; Winter Park &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-boca-kitchen-bar-market.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/boca-kitchen-bar-market.html">Boca Kitchen Bar Market</a></h3>
+          <p class="meta">American &middot; Winter Park &middot; $$</p><p class="vsub">Park Avenue cooking built around what Florida farms deliver, a farm-to-table menu of handcrafted plates that shifts with the market.</p>
           <p class="addr">358 N Park Ave, Winter Park, FL 32789</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/marketplace-at-avalon-park.html">Marketplace at Avalon Park</a></h3>
-          <p class="meta">Markets &amp; shops &middot; Orlando &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-marketplace-at-avalon-park.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/marketplace-at-avalon-park.html">Marketplace at Avalon Park</a></h3>
+          <p class="meta">Markets &amp; shops &middot; Orlando &middot; $$</p><p class="vsub">Avalon Park&#x27;s food hall and front porch, a lively casual hall of local vendors where the crew never has to agree on one menu.</p>
           <p class="addr">Marketplace at Avalon Park, 3801 Avalon Park East Blvd, Orlando, FL 32828, United States</p>
-        </article>
+        </div></article>
         </div>
       </section>
 
@@ -283,35 +290,35 @@
         <p class="lede">Other places in Disney Area, Local Picks first, then the closest to Flatlands Bar &amp; Grill.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/fogo-orlando-vineland.html">Fogo de Chão, Vineland Pointe</a> <span class="badge">Local Pick</span></h3>
-          <p class="meta">Fine dining &amp; steak · Brazilian Steakhouse &middot; $$$</p>
+          <div class="vmain"><h3><a href="/venue/fogo-orlando-vineland.html">Fogo de Chão, Vineland Pointe</a> <span class="badge">Local Pick</span></h3>
+          <p class="meta">Fine dining &amp; steak · Brazilian Steakhouse &middot; $$$</p><p class="vsub">Brazilian churrasco staged tableside at Vineland Pointe, where gaucho chefs carve fire-roasted cuts one slice at a time.</p>
           <p class="addr">11543 Regency Village Dr, Orlando, FL 32821</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/evermore-orlando-resort.html">Evermore Orlando Resort</a> <span class="badge">Local Pick</span></h3>
-          <p class="meta">Hotels · Hotel &middot; $$$</p>
+          <img class="vthumb" src="/assets/venue-evermore-orlando-resort.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/evermore-orlando-resort.html">Evermore Orlando Resort</a> <span class="badge">Local Pick</span></h3>
+          <p class="meta">Hotels · Hotel &middot; $$$</p><p class="vsub">The centerpiece is Evermore Bay, a crystal lagoon with its own beach that leaves guests saying the resort feels like it is out of the country.</p>
           <p class="addr">1590 Evermore Way, Orlando, FL 32836</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/orlando-vineland-premium-outlets.html">Orlando Vineland Premium Outlets</a> <span class="badge">Local Pick</span></h3>
-          <p class="meta">Markets &amp; shops · Outlet Mall &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/orlando-vineland-premium-outlets.html">Orlando Vineland Premium Outlets</a> <span class="badge">Local Pick</span></h3>
+          <p class="meta">Markets &amp; shops · Outlet Mall &middot; $$</p><p class="vsub">Minutes from Disney, a Mediterranean-inspired outdoor outlet village anchored by Prada, Bottega Veneta, Burberry, Gucci and Tory Burch.</p>
           <p class="addr">8200 Vineland Ave, Orlando, FL 32821</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/simply-capri.html">Simply Capri</a></h3>
-          <p class="meta">Italian &middot; $$$</p>
+          <img class="vthumb" src="/assets/venue-simply-capri.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/simply-capri.html">Simply Capri</a></h3>
+          <p class="meta">Italian &middot; $$$</p><p class="vsub">From Flamingo Crossings, a straight aim at the Amalfi Coast, and guests say it works: sunny, warm and transporting, like a quick trip to Italy.</p>
           <p class="addr">114 Ruby Red Place, Winter Garden, FL 34787</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/zootopia-better-zoogether.html">Zootopia: Better Zoogether!</a></h3>
-          <p class="meta">Attractions &middot; $$$$</p>
+          <div class="vmain"><h3><a href="/venue/zootopia-better-zoogether.html">Zootopia: Better Zoogether!</a></h3>
+          <p class="meta">Attractions &middot; $$$$</p><p class="vsub">Inside the Tree of Life theater at Animal Kingdom, Judy Hopps and Nick Wilde host a cheerful 4D celebration.</p>
           <p class="addr">Disney&#x27;s Animal Kingdom, 2901 Osceola Pkwy, Lake Buena Vista, FL 32830</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/victoria-alberts.html">Victoria &amp; Albert&#x27;s</a></h3>
-          <p class="meta">American · Tasting Menu &middot; $$$$</p>
+          <img class="vthumb" src="/assets/venue-victoria-alberts.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/victoria-alberts.html">Victoria &amp; Albert&#x27;s</a></h3>
+          <p class="meta">American · Tasting Menu &middot; $$$$</p><p class="vsub">Inside Disney&#x27;s Grand Floridian, a hushed, old-world room where a Michelin-starred tasting menu turns dinner into ceremony.</p>
           <p class="addr">Victoria &amp; Albert&#x27;s, 4401 Floridian Way, Lake Buena Vista, FL 32830</p>
-        </article>
+        </div></article>
         </div>
         <div class="handoff">
           <a class="btn-ghost" href="/disney-area-finder.html">See the full Disney Area list</a>

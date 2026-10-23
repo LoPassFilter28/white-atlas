@@ -211,7 +211,14 @@
       .vcard .addr { margin: 0; color: var(--muted); font-size: .9rem; }
       @media (max-width: 640px) { .facts { grid-template-columns: 1fr; } }
     </style>
-  </head>
+  <style data-cardsys>
+/* cardsys: similar rail cards (2026-10-23 overhaul) */
+.vcard{display:flex;gap:12px;align-items:flex-start}
+.vcard .vthumb{flex:0 0 86px;width:86px;height:86px;border-radius:10px;object-fit:cover;display:block}
+.vcard .vmain{flex:1;min-width:0}
+.vcard .vsub{margin:4px 0 0;font-size:.86rem;line-height:1.45;color:var(--muted,#c6bba2)}
+@media (min-width:1000px){.vlist{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start}}
+</style></head>
   <body>
     <header class="hero">
       <div class="hero-in">
@@ -236,46 +243,46 @@
         <div class="actions">
           <a class="action" href="https://www.google.com/maps/search/?api=1&amp;query=Delaney%27s+Tavern+Delaney%27s+Tavern%2C+1315+S+Orange+Ave%2C+Orlando%2C+FL+32806%2C+United+States" target="_blank" rel="noopener">Directions &rarr;</a>
           <a class="action" href="/archive.html?venue=delaneys-tavern">Open in the full finder</a>
-          <a class="action" href="/downtown-orlando-district-guide.html">Read the Downtown Orlando story</a>
+          <a class="action" href="/history/downtown.html">Read the Downtown Orlando story</a>
           <a class="action action-ig" href="https://www.instagram.com/delaneystavern" target="_blank" rel="noopener"><svg class="ig-glyph" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="vertical-align:-2px;margin-right:6px"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg> Instagram</a>
         </div>
       </section>
 
-      <section class="sec" id="similar">
+      <section class="sec" id="district-story"><p class="kicker">District Story</p><h2>The story of Orlando</h2><p class="lede">A fort, a courthouse plat and a citrus boom built it. A name nobody can prove still runs it.</p><p><a class="btn-ghost" href="/history/downtown.html">Read the Orlando story &rarr;</a></p></section><section class="sec" id="similar">
         <p class="kicker">Similar Feel</p>
         <h2>More places with this feel</h2>
         <p class="lede">Matched by vibe, not by neighborhood: the places across Greater Orlando closest in spirit to Delaney&#x27;s Tavern.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/vanbarrys-public-house.html">Vanbarry&#x27;s Public House</a></h3>
-          <p class="meta">Bars &amp; lounges &middot; SoDo &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/vanbarrys-public-house.html">Vanbarry&#x27;s Public House</a></h3>
+          <p class="meta">Bars &amp; lounges &middot; SoDo &middot; $$</p><p class="vsub">On South Orange Avenue in SoDo, it starts with house pickles on the table and a covered patio facing Lake Jennie Jewel.</p>
           <p class="addr">Vanbarry&#x27;s Public House, 4120 S Orange Ave, Orlando, FL 32806</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/nona-blue-modern-tavern.html">Nona Blue Modern Tavern</a></h3>
-          <p class="meta">American &middot; Lake Nona &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/nona-blue-modern-tavern.html">Nona Blue Modern Tavern</a></h3>
+          <p class="meta">American &middot; Lake Nona &middot; $$</p><p class="vsub">Lake Nona&#x27;s dressed-up tavern feels upscale but comfortable, with a big center bar and a kitchen cooking from scratch.</p>
           <p class="addr">9685 Lake Nona Village Pl, Orlando, FL 32827</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/the-juicy-crab.html">The Juicy Crab</a></h3>
-          <p class="meta">Seafood &middot; SoDo &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/the-juicy-crab.html">The Juicy Crab</a></h3>
+          <p class="meta">Seafood &middot; SoDo &middot; $</p><p class="vsub">Built for messy, casual seafood boils on East Michigan Street in SoDo, meant to be shared around the table.</p>
           <p class="addr">296 E Michigan St, Orlando, FL</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/the-grove-bar-kitchen.html">The Grove Bar + Kitchen</a></h3>
-          <p class="meta">American &middot; Winter Park &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-the-grove-bar-kitchen.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/the-grove-bar-kitchen.html">The Grove Bar + Kitchen</a></h3>
+          <p class="meta">American &middot; Winter Park &middot; $$</p><p class="vsub">Citrus-grove heritage worn warmly in a golden, textured room in Winter Park Village built for lingering.</p>
           <p class="addr">480 N Orlando Ave C-134, Winter Park, FL 32789</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/the-hampton-social-pointe-orlando.html">The Hampton Social</a></h3>
-          <p class="meta">American &middot; Pointe Orlando &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/the-hampton-social-pointe-orlando.html">The Hampton Social</a></h3>
+          <p class="meta">American &middot; Pointe Orlando &middot; $$</p><p class="vsub">A coastal escape inside Pointe Orlando, whitewashed wood and rose on the tables, with seafood towers, a lobster roll and blackened sea bass.</p>
           <p class="addr">9101 International Dr, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/taffers-tavern.html">Taffer&#x27;s Tavern</a></h3>
-          <p class="meta">American &middot; Pointe Orlando &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-taffers-tavern.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/taffers-tavern.html">Taffer&#x27;s Tavern</a></h3>
+          <p class="meta">American &middot; Pointe Orlando &middot; $$</p><p class="vsub">Jon Taffer&#x27;s old-world tavern warmth comes to Pointe Orlando, cozy and lively with a sports-bar hum.</p>
           <p class="addr">Pointe Orlando, 9101 International Dr, Orlando, FL 32819</p>
-        </article>
+        </div></article>
         </div>
       </section>
 
@@ -285,35 +292,35 @@
         <p class="lede">Other places in Downtown Orlando, Local Picks first, then the closest to Delaney&#x27;s Tavern.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/fixtion.html">Fixtion Restaurant &amp; Bar</a> <span class="badge">Local Pick</span></h3>
-          <p class="meta">American · American Restaurant &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/fixtion.html">Fixtion Restaurant &amp; Bar</a> <span class="badge">Local Pick</span></h3>
+          <p class="meta">American · American Restaurant &middot; $$</p><p class="vsub">On Orange Avenue, comfort food and huge comfy booths early, club energy after dark, shape-shifting through the day.</p>
           <p class="addr">15 N Orange Ave, Orlando, FL 32801</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/wall-street-plaza.html">Wall Street Plaza</a> <span class="badge">Local Pick</span></h3>
-          <p class="meta">Nightlife &amp; music · Entertainment District &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/wall-street-plaza.html">Wall Street Plaza</a> <span class="badge">Local Pick</span></h3>
+          <p class="meta">Nightlife &amp; music · Entertainment District &middot; $$</p><p class="vsub">One downtown block holds the whole crawl: eight bars and patios that, on a big night, turn into a single street party.</p>
           <p class="addr">25 Wall St, Orlando, FL 32801</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/elixir-kitchen-bar.html">Elixir Kitchen and Bar</a> <span class="badge">Local Pick</span></h3>
-          <p class="meta">Bars &amp; lounges · Bar &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-elixir-kitchen-bar.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/elixir-kitchen-bar.html">Elixir Kitchen and Bar</a> <span class="badge">Local Pick</span></h3>
+          <p class="meta">Bars &amp; lounges · Bar &middot; $$</p><p class="vsub">A rustic-hip gastropub in one of downtown&#x27;s original buildings, and very much the neighborhood&#x27;s spot.</p>
           <p class="addr">9 W Washington St, Orlando, FL 32801</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/dr-phillips-center.html">Dr. Phillips Center</a></h3>
-          <p class="meta">Attractions · Performing Arts Center &middot; $$$</p>
+          <img class="vthumb" src="/assets/venue-dr-phillips-center.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/dr-phillips-center.html">Dr. Phillips Center</a></h3>
+          <p class="meta">Attractions · Performing Arts Center &middot; $$$</p><p class="vsub">Downtown on Magnolia Avenue, this glass performing arts center anchors Orlando&#x27;s cultural life, and guests praise its sound first.</p>
           <p class="addr">445 S Magnolia Ave, Orlando, FL 32801</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/solita-tacos-margaritas.html">Solita Tacos &amp; Margaritas</a></h3>
-          <p class="meta">Mexican · Tacos &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/solita-tacos-margaritas.html">Solita Tacos &amp; Margaritas</a></h3>
+          <p class="meta">Mexican · Tacos &middot; $$</p><p class="vsub">A lively downtown cantina built around wood-grilled Baja-style tacos and margaritas.</p>
           <p class="addr">222 S Orange Ave, Orlando, FL 32801</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/kres.html">Kres Chophouse</a></h3>
-          <p class="meta">Fine dining &amp; steak · Steakhouse &middot; $$$$</p>
+          <img class="vthumb" src="/assets/venue-kres.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/kres.html">Kres Chophouse</a></h3>
+          <p class="meta">Fine dining &amp; steak · Steakhouse &middot; $$$$</p><p class="vsub">Out of a 1930s Church Street landmark downtown, this steakhouse stays elegant and polished with its original architecture intact.</p>
           <p class="addr">Kres Chophouse, 17 Church St W, Orlando, FL 32801-3301</p>
-        </article>
+        </div></article>
         </div>
         <div class="handoff">
           <a class="btn-ghost" href="/downtown-orlando-finder.html">See the full Downtown Orlando list</a>

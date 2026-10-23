@@ -211,7 +211,14 @@
       .vcard .addr { margin: 0; color: var(--muted); font-size: .9rem; }
       @media (max-width: 640px) { .facts { grid-template-columns: 1fr; } }
     </style>
-  </head>
+  <style data-cardsys>
+/* cardsys: similar rail cards (2026-10-23 overhaul) */
+.vcard{display:flex;gap:12px;align-items:flex-start}
+.vcard .vthumb{flex:0 0 86px;width:86px;height:86px;border-radius:10px;object-fit:cover;display:block}
+.vcard .vmain{flex:1;min-width:0}
+.vcard .vsub{margin:4px 0 0;font-size:.86rem;line-height:1.45;color:var(--muted,#c6bba2)}
+@media (min-width:1000px){.vlist{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start}}
+</style></head>
   <body>
     <header class="hero">
       <div class="hero-in">
@@ -236,46 +243,46 @@
         <div class="actions">
           <a class="action" href="https://www.google.com/maps/search/?api=1&amp;query=Deeply+Coffee+Deeply+Coffee%2C+111+N+Magnolia+Ave%2C+Orlando%2C+FL+32801-2304%2C+United+States" target="_blank" rel="noopener">Directions &rarr;</a>
           <a class="action" href="/archive.html?venue=deeply-coffee">Open in the full finder</a>
-          <a class="action" href="/downtown-orlando-district-guide.html">Read the Downtown Orlando story</a>
+          <a class="action" href="/history/downtown.html">Read the Downtown Orlando story</a>
           <a class="action action-ig" href="https://www.instagram.com/deeplycoffee" target="_blank" rel="noopener"><svg class="ig-glyph" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="vertical-align:-2px;margin-right:6px"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg> Instagram</a>
         </div>
       </section>
 
-      <section class="sec" id="similar">
+      <section class="sec" id="district-story"><p class="kicker">District Story</p><h2>The story of Orlando</h2><p class="lede">A fort, a courthouse plat and a citrus boom built it. A name nobody can prove still runs it.</p><p><a class="btn-ghost" href="/history/downtown.html">Read the Orlando story &rarr;</a></p></section><section class="sec" id="similar">
         <p class="kicker">Similar Feel</p>
         <h2>More places with this feel</h2>
         <p class="lede">Matched by vibe, not by neighborhood: the places across Greater Orlando closest in spirit to Deeply Coffee.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/qreate-coffee.html">Qreate Coffee</a></h3>
-          <p class="meta">Coffee &amp; cafes &middot; Orlando &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-qreate-coffee.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/qreate-coffee.html">Qreate Coffee</a></h3>
+          <p class="meta">Coffee &amp; cafes &middot; Orlando &middot; $$</p><p class="vsub">Just off Mills on Woodward Street, part coffee lab and part creative studio, with a small-town feel guests do not expect.</p>
           <p class="addr">1212 Woodward St #1, Orlando, FL 32803</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/premium-matcha-cafe-maiko.html">Premium Matcha Cafe Maiko</a></h3>
-          <p class="meta">Coffee &amp; cafes &middot; Orlando &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/premium-matcha-cafe-maiko.html">Premium Matcha Cafe Maiko</a></h3>
+          <p class="meta">Coffee &amp; cafes &middot; Orlando &middot; $$</p><p class="vsub">Cute, cozy counter on Mills Ave devoted to real matcha, whisked to order.</p>
           <p class="addr">Premium Matcha Cafe Maiko, 639 Mills Ave N, Orlando, FL 32803-4640, United States</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/framework-craft-coffee-house.html">Framework Craft Coffee House</a></h3>
-          <p class="meta">Coffee &amp; cafes &middot; Mills 50 &middot; $</p>
+          <div class="vmain"><h3><a href="/venue/framework-craft-coffee-house.html">Framework Craft Coffee House</a></h3>
+          <p class="meta">Coffee &amp; cafes &middot; Mills 50 &middot; $</p><p class="vsub">What grew from the Vita Luna coffee cart is now a cozy, artsy Mills 50 hub built on a pay-what-you-can welcome.</p>
           <p class="addr">1201 N Mills Ave, Orlando, FL 32803</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/cups-pups.html">Cups and Pups</a></h3>
-          <p class="meta">Coffee &amp; cafes &middot; College Park &middot; $</p>
+          <img class="vthumb" src="/assets/venue-cups-pups.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/cups-pups.html">Cups and Pups</a></h3>
+          <p class="meta">Coffee &amp; cafes &middot; College Park &middot; $</p><p class="vsub">On Edgewater Drive in College Park, this cute, cheerful coffee stop has become a neighborhood ritual.</p>
           <p class="addr">2413 Edgewater Dr, Orlando, FL 32804</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/foxtail-coffee.html">Foxtail Coffee</a></h3>
-          <p class="meta">Coffee &amp; cafes &middot; Orlando &middot; $</p>
+          <img class="vthumb" src="/assets/venue-foxtail-coffee.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/foxtail-coffee.html">Foxtail Coffee</a></h3>
+          <p class="meta">Coffee &amp; cafes &middot; Orlando &middot; $</p><p class="vsub">Orlando-born chain that still pours like a neighborhood shop, with a peaceful, low-key room in the Hourglass District.</p>
           <p class="addr">2401 Curry Ford Rd, Orlando, FL 32806</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/lineage-coffee-roasting.html">Lineage Coffee Roasting</a></h3>
-          <p class="meta">Coffee &amp; cafes &middot; Audubon Park &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-lineage-coffee-roasting.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/lineage-coffee-roasting.html">Lineage Coffee Roasting</a></h3>
+          <p class="meta">Coffee &amp; cafes &middot; Audubon Park &middot; $$</p><p class="vsub">Tucked in the back of East End Market, a working roastery where the cup shows the craft, from flat whites to cold brew.</p>
           <p class="addr">3201 Corrine Dr, Orlando, FL 32803-2224, United States</p>
-        </article>
+        </div></article>
         </div>
       </section>
 
@@ -285,35 +292,35 @@
         <p class="lede">Other places in Downtown Orlando, Local Picks first, then the closest to Deeply Coffee.</p>
         <div class="vlist">
         <article class="vcard">
-          <h3><a href="/venue/fixtion.html">Fixtion Restaurant &amp; Bar</a> <span class="badge">Local Pick</span></h3>
-          <p class="meta">American · American Restaurant &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/fixtion.html">Fixtion Restaurant &amp; Bar</a> <span class="badge">Local Pick</span></h3>
+          <p class="meta">American · American Restaurant &middot; $$</p><p class="vsub">On Orange Avenue, comfort food and huge comfy booths early, club energy after dark, shape-shifting through the day.</p>
           <p class="addr">15 N Orange Ave, Orlando, FL 32801</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/wall-street-plaza.html">Wall Street Plaza</a> <span class="badge">Local Pick</span></h3>
-          <p class="meta">Nightlife &amp; music · Entertainment District &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/wall-street-plaza.html">Wall Street Plaza</a> <span class="badge">Local Pick</span></h3>
+          <p class="meta">Nightlife &amp; music · Entertainment District &middot; $$</p><p class="vsub">One downtown block holds the whole crawl: eight bars and patios that, on a big night, turn into a single street party.</p>
           <p class="addr">25 Wall St, Orlando, FL 32801</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/elixir-kitchen-bar.html">Elixir Kitchen and Bar</a> <span class="badge">Local Pick</span></h3>
-          <p class="meta">Bars &amp; lounges · Bar &middot; $$</p>
+          <img class="vthumb" src="/assets/venue-elixir-kitchen-bar.webp" alt="" loading="lazy"><div class="vmain"><h3><a href="/venue/elixir-kitchen-bar.html">Elixir Kitchen and Bar</a> <span class="badge">Local Pick</span></h3>
+          <p class="meta">Bars &amp; lounges · Bar &middot; $$</p><p class="vsub">A rustic-hip gastropub in one of downtown&#x27;s original buildings, and very much the neighborhood&#x27;s spot.</p>
           <p class="addr">9 W Washington St, Orlando, FL 32801</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/rivals-activity-bar.html">The Villa</a></h3>
-          <p class="meta">Bars &amp; lounges · Bar &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/rivals-activity-bar.html">The Villa</a></h3>
+          <p class="meta">Bars &amp; lounges · Bar &middot; $$</p><p class="vsub">Now The Villa, a playful, high-energy Wall Street Plaza hangout built around arcade cabinets, board games and video game stations.</p>
           <p class="addr">25 Wall St Bldg B, Orlando, FL 32801</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/sly-fox.html">Sly Fox</a></h3>
-          <p class="meta">Bars &amp; lounges · Dive Bar &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/sly-fox.html">Sly Fox</a></h3>
+          <p class="meta">Bars &amp; lounges · Dive Bar &middot; $$</p><p class="vsub">Gritty, punk-rock dive on North Orange Avenue where the regulars call themselves a built-in family.</p>
           <p class="addr">Sly Fox, 63 N Orange Ave, Orlando, FL 32801-2425</p>
-        </article>
+        </div></article>
         <article class="vcard">
-          <h3><a href="/venue/aura-night-club.html">Aura Night Club</a></h3>
-          <p class="meta">Nightlife &amp; music · Club &middot; $$</p>
+          <div class="vmain"><h3><a href="/venue/aura-night-club.html">Aura Night Club</a></h3>
+          <p class="meta">Nightlife &amp; music · Club &middot; $$</p><p class="vsub">About the floor here: an LED-lit room in the Beacham complex on North Orange, hopping between EDM, hip-hop and reggaeton.</p>
           <p class="addr">49 N Orange Ave, Orlando, FL 32801</p>
-        </article>
+        </div></article>
         </div>
         <div class="handoff">
           <a class="btn-ghost" href="/downtown-orlando-finder.html">See the full Downtown Orlando list</a>
