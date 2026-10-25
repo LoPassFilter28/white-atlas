@@ -7793,7 +7793,7 @@
    "name": "Paloma Parlor",
    "category": "Coffee & cafes",
    "district": "Windermere",
-   "address": "625 Main St, Windermere, FL 34786",
+   "address": "507 Main St, Windermere, FL 34786",
    "lat": 28.4954,
    "lng": -81.53468,
    "price": "$",
@@ -20505,6 +20505,151 @@
    ],
    "added": "2026-10-21",
    "photo": true
+  },
+  {
+   "id": "joffreys-coffee",
+   "name": "Joffrey's Coffee & Tea Company",
+   "category": "Coffee & cafes",
+   "district": "Disney Springs",
+   "address": "1638A E Buena Vista Dr, Lake Buena Vista, FL 32830",
+   "lat": 28.37159,
+   "lng": -81.51785,
+   "price": "$",
+   "tags": [
+    "coffee",
+    "espresso",
+    "cold-brew",
+    "latte-art",
+    "pastries",
+    "tea",
+    "iced-coffee"
+   ],
+   "description": "Joffrey's Coffee and Tea Company runs the coffee across Walt Disney World, and this big Landing storefront is its flagship, with a full espresso bar, character latte art and the Shakin' Jamaican cold brew guests plan around. The case adds pastries and bags of Joffrey's own beans to take home, and the room stays calmer than the crowds outside once the morning rush clears.",
+   "zone": "disney-area",
+   "added": "2026-10-25",
+   "primary": "coffee",
+   "categoryDetail": "Coffee Shop",
+   "district_id": "disney-springs",
+   "occasions": [
+    "family",
+    "friends",
+    "solo"
+   ],
+   "dayparts": [
+    "breakfast",
+    "brunch",
+    "lunch"
+   ]
+  },
+  {
+   "id": "everglazed-donuts-cold-brew",
+   "name": "Everglazed Donuts & Cold Brew",
+   "category": "Sweets",
+   "district": "Disney Springs",
+   "address": "1504 E Buena Vista Dr, Lake Buena Vista, FL 32830",
+   "lat": 28.36986,
+   "lng": -81.52122,
+   "price": "$",
+   "tags": [
+    "donuts",
+    "coffee",
+    "cold-brew",
+    "nitro-cold-brew",
+    "dessert",
+    "sweets",
+    "breakfast"
+   ],
+   "description": "Everglazed Donuts and Cold Brew at Disney Springs is the West Side's sugar stop, a bright shop turning out oversized donuts behind glass, from the Peanut Butter Explosion and Brooklyn Blackout to a Fruity Pebbles ring under vanilla icing and cereal milk. Guests pair them with the Reese's nitro cold brew and watch the next batch come out of the show kitchen.",
+   "zone": "disney-area",
+   "added": "2026-10-25",
+   "primary": "coffee",
+   "categoryDetail": "Donuts",
+   "district_id": "disney-springs",
+   "occasions": [
+    "family",
+    "friends",
+    "solo"
+   ],
+   "dayparts": [
+    "breakfast",
+    "brunch",
+    "lunch"
+   ]
+  },
+  {
+   "id": "le-petit-cafe",
+   "name": "Le Petit Café",
+   "category": "Coffee & cafes",
+   "district": "Disney Area",
+   "address": "1080 Esplanade Ave, Lake Buena Vista, FL 32830",
+   "lat": 28.36579,
+   "lng": -81.54191,
+   "price": "$",
+   "tags": [
+    "coffee",
+    "cafe",
+    "french",
+    "pastries",
+    "croissants",
+    "macarons",
+    "cold-brew",
+    "breakfast",
+    "resort"
+   ],
+   "description": "Le Petit Café is the Riviera Resort's lobby cafe, a small Parisian room pouring espresso beside the morning rush for the Skyliner. Guests come for croissants, macarons and jewel-like entremets, plus a cinnamon cold brew and an almond cold brew, a café glacé and lavender iced tea lemonade. In the evening it shifts gears to wine and small plates.",
+   "zone": "disney-area",
+   "added": "2026-10-25",
+   "primary": "coffee",
+   "categoryDetail": "French Cafe",
+   "district_id": "disney-area",
+   "occasions": [
+    "family",
+    "friends",
+    "solo",
+    "date"
+   ],
+   "dayparts": [
+    "breakfast",
+    "brunch",
+    "lunch"
+   ]
+  },
+  {
+   "id": "world-of-coffee",
+   "name": "World of Coffee",
+   "category": "Coffee & cafes",
+   "district": "Lake Buena Vista",
+   "address": "15533 S Apopka Vineland Rd, Orlando, FL 32821",
+   "lat": 28.35023,
+   "lng": -81.48864,
+   "price": "$",
+   "tags": [
+    "coffee",
+    "espresso",
+    "turkish-coffee",
+    "baklava",
+    "mediterranean",
+    "patio",
+    "garden",
+    "cake",
+    "spanakopita"
+   ],
+   "description": "World of Coffee is the independent outlier on the 535 strip, a low-key coffee house pouring espresso and Turkish-style coffee beside a tropical garden patio that is home to a resident parrot. Guests settle in with baklava, spanakopita, falafel and a pistachio muffin, plus cakes by the slice that regulars swear by. It reads as a neighborhood cafe that happens to sit minutes from the parks.",
+   "zone": "disney-area",
+   "added": "2026-10-25",
+   "primary": "coffee",
+   "categoryDetail": "Coffee Shop",
+   "district_id": "disney-area",
+   "occasions": [
+    "friends",
+    "solo",
+    "family"
+   ],
+   "dayparts": [
+    "breakfast",
+    "brunch",
+    "lunch"
+   ]
   }
  ],
  "viator": {
