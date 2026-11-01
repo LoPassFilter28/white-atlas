@@ -509,7 +509,22 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://407.fyi/venue/diadem-pickleball-sanford.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://407.fyi/venue/green-meadows-petting-farm.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://407.fyi/venue/hayashi-taro.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://407.fyi/venue/hurly-burly.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -1040,6 +1055,11 @@
   </url>
   <url>
     <loc>https://407.fyi/venue/toothsome.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://407.fyi/venue/udon-fifty.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -3119,11 +3139,6 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://407.fyi/venue/solita-tacos-margaritas.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://407.fyi/venue/saigon-snow.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -3903,4 +3918,9 @@
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
-</urlset>
+</urlset>  <url>
+    <loc>https://407.fyi/venue/zukku-san-orlando.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+

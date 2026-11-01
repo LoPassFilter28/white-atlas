@@ -14998,39 +14998,6 @@
   },
   {
    "added": "2026-inkind",
-   "address": "222 S Orange Ave, Orlando, FL 32801",
-   "category": "Mexican",
-   "categoryDetail": "Tacos",
-   "description": "A lively downtown cantina built around wood-grilled Baja-style tacos and margaritas. The Vampiro taco and Queso Al Forno lead a lineup that runs to skirt steak asada and huge quesadillas, with the watermelon margarita and the Cadillac margarita doing the rounds. Guests call the margaritas amazing and the room a fun night out; on event nights downtown, service can take its time, so order with a little patience.",
-   "district": "Downtown Orlando",
-   "id": "solita-tacos-margaritas",
-   "inkind_note": "Could not confirm a dedicated inKind page via search.",
-   "inkind_verified": false,
-   "lat": 28.54,
-   "lng": -81.37924,
-   "name": "Solita Tacos & Margaritas",
-   "price": "$$",
-   "primary": "eat",
-   "tags": [
-    "dining",
-    "downtown",
-    "groups",
-    "margaritas",
-    "tacos"
-   ],
-   "zone": "downtown-eola",
-   "district_id": "downtown",
-   "occasions": [
-    "friends"
-   ],
-   "dayparts": [
-    "brunch",
-    "lunch",
-    "dinner"
-   ]
-  },
-  {
-   "added": "2026-inkind",
    "address": "1110 E Colonial Dr, Orlando, FL 32803",
    "category": "Sweets",
    "categoryDetail": "Shaved Ice",
@@ -20658,6 +20625,155 @@
     "breakfast",
     "brunch",
     "lunch"
+   ]
+  },
+  {
+   "id": "udon-fifty",
+   "name": "Udon Fifty",
+   "category": "Japanese & sushi",
+   "categoryDetail": "Udon",
+   "district": "Mills 50",
+   "address": "1222 E Colonial Dr, Ste B, Orlando, FL 32803",
+   "lat": 28.5528,
+   "lng": -81.3634,
+   "price": "$$",
+   "tags": [
+    "dining",
+    "japanese",
+    "local-eats",
+    "mills-50",
+    "noodles",
+    "udon",
+    "chef-led",
+    "counter-seating",
+    "housemade-noodles",
+    "kanto-style"
+   ],
+   "description": "A 10-seat udon counter in the former Dochi space on Colonial, from chef Sean \"Sonny\" Nguyen (Domu, Tori Tori). The draw is housemade Kanto-style udon. Small room, focused menu: this is the Mills 50 stop for a bowl built around the noodle itself.",
+   "zone": "mills-50",
+   "primary": "eat",
+   "district_id": "mills-50",
+   "occasions": [
+    "friends"
+   ],
+   "added": "2026-freshness-nov"
+  },
+  {
+   "id": "hayashi-taro",
+   "name": "Hayashi Taro",
+   "category": "Japanese & sushi",
+   "categoryDetail": "Bento",
+   "district": "Mills 50",
+   "address": "714 N Mills Ave, Orlando, FL 32803",
+   "lat": 28.55376,
+   "lng": -81.36465,
+   "price": "$$",
+   "tags": [
+    "bento",
+    "dining",
+    "japanese",
+    "local-eats",
+    "matcha",
+    "mills-50",
+    "chef-led",
+    "toyosu"
+   ],
+   "description": "Chef Lewis Lin (JUJU, Susuru) with David Tsan, opened Oct 29, 2026 on Mills Ave. The format is chef's-choice bento built on Toyosu Market fish, with matcha alongside. A precise, small-format Japanese lunch and dinner option in the middle of Mills 50.",
+   "zone": "mills-50",
+   "primary": "eat",
+   "district_id": "mills-50",
+   "occasions": [
+    "friends"
+   ],
+   "added": "2026-freshness-nov"
+  },
+  {
+   "id": "hurly-burly",
+   "name": "Hurly Burly",
+   "category": "Bars & lounges",
+   "categoryDetail": "Lounge",
+   "district": "Disney Area",
+   "address": "2101 Epcot Resorts Blvd, Lake Buena Vista, FL 32830",
+   "lat": 28.36545,
+   "lng": -81.55243,
+   "price": "$$",
+   "tags": [
+    "boardwalk",
+    "disney",
+    "entertainment",
+    "games",
+    "nightlife",
+    "live-entertainment",
+    "family-games",
+    "lounge"
+   ],
+   "description": "Disney's BoardWalk's new lounge and family entertainment spot, open since Oct 4, 2026. Family games and bites give way to a 21-plus room with live entertainment as the night goes on. It fills the BoardWalk nightlife slot left by Atlantic Dance Hall and Jellyrolls, neither of which is in the dataset.",
+   "zone": "disney-area",
+   "primary": "drink",
+   "district_id": "disney-area",
+   "occasions": [
+    "family",
+    "friends"
+   ],
+   "added": "2026-freshness-nov"
+  },
+  {
+   "id": "diadem-pickleball-sanford",
+   "name": "Diadem Pickleball Complex",
+   "category": "Attractions",
+   "categoryDetail": "Pickleball Complex",
+   "district": "Sanford",
+   "address": "120 N Entrance Rd, Sanford, FL 32771",
+   "lat": 28.80881,
+   "lng": -81.33722,
+   "price": "$$",
+   "tags": [
+    "pickleball",
+    "sanford",
+    "sports",
+    "indoor-courts",
+    "simulators",
+    "pro-shop"
+   ],
+   "description": "Diadem's Sanford complex, open since July 2026 in a former retail space near Seminole Towne Center: 11 indoor courts, two simulators, and a pro shop. Indoor courts make it a weather-proof sports stop on the Sanford side.",
+   "zone": "other",
+   "primary": "do",
+   "district_id": "sanford",
+   "occasions": [
+    "family",
+    "friends"
+   ],
+   "added": "2026-freshness-nov"
+  },
+  {
+   "id": "zukku-san-orlando",
+   "name": "Zukku-San Sushi Bar & Grill",
+   "category": "Japanese & sushi",
+   "categoryDetail": "Sushi",
+   "district": "International Drive",
+   "address": "9101 International Dr, Suite 1164, Orlando, FL 32819",
+   "lat": 28.43299,
+   "lng": -81.47087,
+   "price": "$$$",
+   "tags": [
+    "dining",
+    "i-drive",
+    "japanese",
+    "pointe-orlando",
+    "sushi",
+    "universal-idrive",
+    "robata",
+    "skewers",
+    "small-plates",
+    "pre-show"
+   ],
+   "description": "Tampa-born Zukku-San is open at Pointe Orlando, bringing polished sushi and robata cooking to International Drive. The restaurant, from the Majestic Restaurant Group, centers its draw on the sushi program, while grilled skewers and small plates give non sushi eaters real options at the same table. That balance matters for mixed groups heading to the Pointe theaters or I-Drive nightlife nearby. Choose it for a pre show dinner that feels composed without narrowing the menu to raw fish alone.",
+   "zone": "universal-idrive",
+   "primary": "eat",
+   "district_id": "i-drive",
+   "occasions": [
+    "date",
+    "friends"
    ]
   }
  ],
