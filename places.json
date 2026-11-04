@@ -20775,6 +20775,50 @@
     "date",
     "friends"
    ]
+  },
+  {
+   "id": "mi-bandera-supermarket",
+   "name": "Mi Bandera Supermarket",
+   "category": "Markets & shops",
+   "categoryDetail": "Caribbean Grocery",
+   "district": "South Orlando",
+   "address": "2935 W Oak Ridge Rd, Orlando, FL 32809",
+   "lat": 28.472925,
+   "lng": -81.416242,
+   "price": "$",
+   "tags": [
+    "budget",
+    "cafeteria-style",
+    "caribbean",
+    "cheap-eats",
+    "dining",
+    "dominican",
+    "grocery",
+    "hot-food",
+    "latin-flavors",
+    "latin-grocery",
+    "local-eats",
+    "lunch-counter",
+    "market",
+    "pantry-staples",
+    "prepared-foods",
+    "south-orlando"
+   ],
+   "description": "A family-owned Caribbean supermarket on West Oak Ridge Road, stocking the groceries South Orlando's Caribbean kitchens run on: pantry staples, produce, meats and seafood alongside major-brand groceries, with a Dominican lean. The hot food counter is the second draw, turning out inexpensive cafeteria-style plates that make the market as much a lunch stop as a grocery run. Shop the aisles, then eat like the neighborhood does.",
+   "zone": "other",
+   "primary": "shop",
+   "district_id": "south-orlando",
+   "occasions": [
+    "family",
+    "friends",
+    "solo"
+   ],
+   "dayparts": [
+    "lunch",
+    "dinner"
+   ],
+   "instagram": "https://www.instagram.com/mibanderasupermarketfl",
+   "added": "2026-freshness-nov"
   }
  ],
  "viator": {
