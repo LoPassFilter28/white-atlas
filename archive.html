@@ -894,8 +894,6 @@ html:not([data-theme="dark"]) .upd-tag{color:#7c520c;background:rgba(124,82,12,.
     captureEvent('venue_open',{venue_id:id,district_id:p?districtKeyOf(p):'',view:view});
   }
   function outboundKind(href){
-    if(/viator\.com/.test(href))return 'viator';
-    if(/getyourguide\.com/.test(href))return 'gyg';
     if(/inkind\.com/.test(href))return 'inkind';
     if(/google\.com\/maps\/dir/.test(href))return 'directions';
     if(/google\.com\/maps/.test(href))return 'place_details';
@@ -1246,23 +1244,18 @@ html:not([data-theme="dark"]) .upd-tag{color:#7c520c;background:rgba(124,82,12,.
     const keys=String(p.district||'').toLowerCase()==='winter park'?[key,'knowles-chapel']:[key];
     return `<div class="venue-history">${keys.map(historyKey=>`<button type="button" data-history-link="${esc(historyKey)}"><strong>Did you know?</strong> ${esc(HISTORY_TITLES[historyKey])}<span>Read the flashback →</span></button>`).join('')}</div>`;
   }
-  const VIATOR_PID='P00325046',VIATOR_MCID='42383';
-const TICKETABLE_CATS=['Attractions','Parks & outdoors','Museums & landmarks'];
-function viatorUrl(p){const u=new URL(p.indexOf('http')===0?p:'https://www.viator.com'+p);u.searchParams.set('pid',VIATOR_PID);u.searchParams.set('mcid',VIATOR_MCID);u.searchParams.set('utm_source','407fyi');u.searchParams.set('utm_medium','affiliate');return u.toString();}
-let VIATOR_DEEP_LINKS={};function bookUrl(p){var d=VIATOR_DEEP_LINKS[p.id];if(d)return viatorUrl(d);const n=p.name.replace(/\s+Orlando$/i,'');return viatorUrl('/searchResults/all?text='+encodeURIComponent(n+' Orlando'));}
-const GYG_PID="FJC4IAU";let GYG_DEEP_LINKS={};function gygUrl(p){const u=new URL("https://www.getyourguide.com"+p);u.searchParams.set("partner_id",GYG_PID);u.searchParams.set("utm_source","407fyi");u.searchParams.set("utm_medium","affiliate");u.searchParams.set("mkt_cmp","true");return u.toString();}let SOVRN_LINKS={};
+let SOVRN_LINKS={};
 const INKIND_URL="https://app.inkind.com/refer/35QIXCKS";
 const INKIND_VENUES=new Set(["the-escobar-kitchen","rusteak-thornton-park","the-stubborn-mule","euphoria-downtown","kaya","lazy-moon-pizza-ucf","banh-mi-boy","kai-kai-bbq-dumplings","black-rooster-taqueria","smoke-donuts","foreigner","pizza-bruno","the-salty-donut","palm-beach","hunger-street","ravenous-pig","aji-ceviche-bar-casselberry","moa-kai-hawaiian-diner","nic-luc","outpost-neighborhood-tavern","bento-asian-kitchen-downtown","bento-asian-kitchen-lake-nona","noodle-shawty","proper-orlando","solita-tacos-margaritas","saigon-snow","chi-kin","4-hens-creole-kitchen","cfh-orlando","egg-dose","lukes-new-york-bagels","smash-dunk","yakuza-sushi","framework-craft-coffee-house","bites-and-bubbles","lams-garden","blue-coast-burrito","garp-and-fuss","sazoncito-latin-food","jazz-tastings","brazi-burger-orlando","brazi-burger-kissimmee","chickpeas-fresh-mediterranean-kitchen","antonios-maitland","antonios-market-cafe","the-licking","pine-and-oak-tavern","amazonica-florida-mall","sfihas-international-drive","burntwood-tavern","yummy-house","divina-carne","saigon-flavors"]);
 function inkindButton(p){if(!INKIND_VENUES.has(p.id))return "";return `<a class="action action-aff" href="${INKIND_URL}" target="_blank" rel="noopener sponsored">Get $25 off with inKind &#8599;</a><p class="aff-note">Referral link, we may earn dining credit at no extra cost to you.</p>`;}
 function inkindBanner(){if(state.category!=='eat')return "";return `<div class="inkind-banner"><p><strong>Dining out?</strong> Get $25 off your first $50+ meal at 50+ Orlando restaurants with inKind.</p><a class="action action-aff" href="${INKIND_URL}" target="_blank" rel="noopener sponsored">Claim $25 &#8599;</a><p class="aff-note">Referral link, we may earn dining credit at no extra cost to you.</p></div>`;}
 function hotelButton(p){var s=SOVRN_LINKS[p.id];if(!s)return "";return `<a class="action action-aff" href="${s}" target="_blank" rel="noopener sponsored">Book your stay &#8599;</a><p class="aff-note">Affiliate link, we may earn a commission at no extra cost to you.</p>`;}
-function affButton(p){if(!TICKETABLE_CATS.includes(p.category))return "";var g=GYG_DEEP_LINKS[p.id];var gyg=g?`<a class="action action-aff" href="${gygUrl(g)}" target="_blank" rel="noopener sponsored">GetYourGuide &#8599;</a>`:"";var deep=VIATOR_DEEP_LINKS[p.id];var label=deep?"Book tickets":"Find tickets on Viator";return `<a class="action action-aff" href="${bookUrl(p)}" target="_blank" rel="noopener sponsored">${label} &#8599;</a>${gyg}<p class="aff-note">Affiliate link, we may earn a commission at no extra cost to you.</p>`;}
 function detail(p){
     const faqs=(p.faqs||[]).map(f=>`<div class="faq"><b>${esc(f.q)}</b><p>${esc(f.a)}</p></div>`).join('');
     const whyGo=p.whyGo||p.why_go||'',description=publicDescription(p);
     const normalizeCopy=value=>String(value||'').toLowerCase().replace(/[^a-z0-9]+/g,' ').trim();
     const uniqueWhyGo=whyGo&&normalizeCopy(whyGo)!==normalizeCopy(description)?`<div class="detail-block wide"><h3>Why go</h3><p>${esc(whyGo)}</p></div>`:'';
-    return `<div class="detail-grid"><div class="detail-block"><h3>Address</h3><p>${esc(p.address||p.district)}</p></div>${uniqueWhyGo}${faqs?`<div class="detail-block wide"><h3>Visitor FAQs</h3>${faqs}</div>`:''}</div><div class="actions"><a class="action" href="${directionsUrl(p)}" target="_blank" rel="noopener">Directions ↗</a><a class="action" href="${mapUrl(p)}" target="_blank" rel="noopener">Place details ↗</a>${p.source_url?`<a class="action" href="${esc(p.source_url)}" target="_blank" rel="noopener">Official site ↗</a>`:''}${affButton(p)}${hotelButton(p)}${inkindButton(p)}</div>`;
+    return `<div class="detail-grid"><div class="detail-block"><h3>Address</h3><p>${esc(p.address||p.district)}</p></div>${uniqueWhyGo}${faqs?`<div class="detail-block wide"><h3>Visitor FAQs</h3>${faqs}</div>`:''}</div><div class="actions"><a class="action" href="${directionsUrl(p)}" target="_blank" rel="noopener">Directions ↗</a><a class="action" href="${mapUrl(p)}" target="_blank" rel="noopener">Place details ↗</a>${p.source_url?`<a class="action" href="${esc(p.source_url)}" target="_blank" rel="noopener">Official site ↗</a>`:''}${hotelButton(p)}${inkindButton(p)}</div>`;
   }
   function card(p,i){
     const isOpen=state.open===p.id;
@@ -1765,7 +1758,7 @@ function render(){
     if(bootParams.get('export')==='1')openExportCenter();
     if(bootParams.get('flashbacks')==='1')openFlashbacks();
   }
-  window.__placesReady=fetch('places.json?v=20261104p1').then(r=>{if(!r.ok)throw new Error('places.json HTTP '+r.status);return r.json()}).then(d=>{PLACES=d.places||[];VIATOR_DEEP_LINKS=d.viator||{};GYG_DEEP_LINKS=d.gyg||{};SOVRN_LINKS=d.sovrn||{};startApp();});
+  window.__placesReady=fetch('places.json?v=20261104p1').then(r=>{if(!r.ok)throw new Error('places.json HTTP '+r.status);return r.json()}).then(d=>{PLACES=d.places||[];SOVRN_LINKS=d.sovrn||{};startApp();});
   window.__placesReady.catch(err=>{const rc=$('#resultCount');if(rc)rc.textContent='The place list could not load. Check your connection, then reload this page.';const vl=$('#venueList');if(vl)vl.innerHTML='';if(window.console)console.error(err);});
   </script>
 

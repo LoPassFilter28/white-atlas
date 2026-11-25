@@ -960,8 +960,8 @@ document.addEventListener('click',e=>{
     if(id){const p=PLACES.find(x=>x.id===id);try{if(window.posthog&&typeof window.posthog.capture==='function')window.posthog.capture('venue_open',{venue_id:id,district_id:p?(p.district_id||''):'',view:'home'})}catch(error){}}
     return;
   }
-  if(/viator\.com|getyourguide\.com|inkind\.com/.test(href)){
-    const kind=/viator\.com/.test(href)?'viator':/getyourguide\.com/.test(href)?'gyg':'inkind';
+  if(/inkind\.com/.test(href)){
+    const kind='inkind';
     try{if(window.posthog&&typeof window.posthog.capture==='function')window.posthog.capture('outbound_click',{venue_id:'none',kind:kind,destination_url:href})}catch(error){}
   }
 });
